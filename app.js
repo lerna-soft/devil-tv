@@ -217,6 +217,7 @@ function openPlayerModal(embedUrl) {
   if (!modal || !iframe) return;
   iframe.src = embedUrl;
   modal.hidden = false;
+  document.body.classList.add('player-active');
   requestNativeFullscreen(card);
   syncRoute();
 }
@@ -227,6 +228,7 @@ function closePlayerModal() {
   if (!modal || !iframe) return;
   modal.hidden = true;
   iframe.src = 'about:blank';
+  document.body.classList.remove('player-active');
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
 }
@@ -476,18 +478,22 @@ function syncRoute() {
   const type = elements.typeFilter.value;
   if (q) params.set('q', q);
   if (type && type !== 'all') params.set('type', type);
+
+  let routePath = '/browse';
+  const modal = document.querySelector('#playerModal');
   if (state.selected) {
     const id = state.selected.imdbId || state.selected.tmdbId;
-    if (id) params.set('id', id);
-    if (state.selected.type) params.set('media', state.selected.type);
-    if (isSeriesLike(state.selected)) {
-      params.set('season', String(state.playback.season || 1));
-      params.set('episode', String(state.playback.episode || 1));
+    const media = state.selected.type === 'movie' ? 'movie' : 'series';
+    if (id) {
+      if (modal && !modal.hidden) {
+        routePath = `/watch/${encodeURIComponent(media)}/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+      } else {
+        routePath = `/title/${encodeURIComponent(media)}/${encodeURIComponent(id)}`;
+      }
     }
   }
-  const modal = document.querySelector('#playerModal');
-  if (modal && !modal.hidden) params.set('player', '1');
-  const nextHash = `#/browse${params.toString() ? `?${params.toString()}` : ''}`;
+
+  const nextHash = `#${routePath}${params.toString() ? `?${params.toString()}` : ''}`;
   if (window.location.hash !== nextHash) {
     window.location.hash = nextHash;
   }
@@ -496,14 +502,15 @@ function syncRoute() {
 async function handleRouteChange() {
   suppressRouteSync = true;
   try {
-    const params = getRouteParams();
+    const route = parseHashRoute();
+    const params = route.params;
     const q = params.get('q') || '';
     const type = params.get('type') || 'all';
-    const id = params.get('id') || '';
-    const media = params.get('media') || '';
-    const season = positiveInteger(params.get('season'), 1);
-    const episode = positiveInteger(params.get('episode'), 1);
-    const shouldOpenPlayer = params.get('player') === '1';
+    const id = route.id || '';
+    const media = route.media || '';
+    const season = positiveInteger(route.season, 1);
+    const episode = positiveInteger(route.episode, 1);
+    const shouldOpenPlayer = route.mode === 'watch';
 
     elements.search.value = q;
     elements.typeFilter.value = ['all', 'movie', 'series'].includes(type) ? type : 'all';
@@ -533,28 +540,61 @@ async function handleRouteChange() {
         renderDetail();
       }
       if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
+      else closePlayerModal();
     } else {
       state.selected = null;
       state.seriesEpisodes = null;
       renderDetail();
+      closePlayerModal();
     }
   } finally {
     suppressRouteSync = false;
   }
 }
 
-function getRouteParams() {
+function parseHashRoute() {
   const hash = window.location.hash || '';
   if (hash.startsWith('#/')) {
-    const queryIndex = hash.indexOf('?');
-    if (queryIndex >= 0) {
-      return new URLSearchParams(hash.slice(queryIndex + 1));
+    const noHash = hash.slice(1);
+    const [pathPart, queryPart = ''] = noHash.split('?');
+    const parts = pathPart.split('/').filter(Boolean);
+    const params = new URLSearchParams(queryPart);
+
+    if (parts[0] === 'watch') {
+      return {
+        mode: 'watch',
+        media: decodeURIComponent(parts[1] || ''),
+        id: decodeURIComponent(parts[2] || ''),
+        season: parts[3] || '1',
+        episode: parts[4] || '1',
+        params
+      };
     }
-    return new URLSearchParams();
+
+    if (parts[0] === 'title') {
+      return {
+        mode: 'title',
+        media: decodeURIComponent(parts[1] || ''),
+        id: decodeURIComponent(parts[2] || ''),
+        season: '1',
+        episode: '1',
+        params
+      };
+    }
+
+    return { mode: 'browse', media: '', id: '', season: '1', episode: '1', params };
   }
 
-  // Backward compatibility for old ?query links.
-  return new URLSearchParams(window.location.search);
+  // Backward compatibility with legacy query-based routes.
+  const params = new URLSearchParams(window.location.search);
+  return {
+    mode: params.get('player') === '1' ? 'watch' : (params.get('id') ? 'title' : 'browse'),
+    media: params.get('media') || '',
+    id: params.get('id') || '',
+    season: params.get('season') || '1',
+    episode: params.get('episode') || '1',
+    params
+  };
 }
 
 function escapeHtml(value) { return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;'); }

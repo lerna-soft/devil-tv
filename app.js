@@ -196,12 +196,14 @@ function renderDetail(options = {}) {
   const episodeCards = hasEpisodes ? getEpisodesForSeason(state.playback.season).map((entry) => {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
-    return `<button class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}">
-      <span class="episode-code">E${entry.episode}</span>
-      <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
-      ${watched ? '<span class="episode-status">Visto</span>' : ''}
-      ${!watched ? `<span class="episode-play-row"><button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">${inProgress ? 'Continuar' : 'Play'}</button></span>` : ''}
-    </button>`;
+    return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
+      <div class="episode-copy">
+        <span class="episode-code">E${entry.episode}</span>
+        <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
+        ${watched ? '<span class="episode-status">Visto</span>' : ''}
+      </div>
+      ${!watched ? `<button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">${inProgress ? 'Continuar' : 'Play'}</button>` : ''}
+    </article>`;
   }).join('') : '';
 
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
@@ -247,10 +249,16 @@ function renderDetail(options = {}) {
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   // Selecting an episode should not auto-play; only the explicit Play button does.
   document.querySelectorAll('[data-episode]').forEach((button) => {
-    button.addEventListener('click', () => {
+    const onSelect = () => {
       state.playback.episode = positiveInteger(button.dataset.episode, 1);
       renderDetail();
       syncRoute();
+    };
+    button.addEventListener('click', onSelect);
+    button.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      onSelect();
     });
   });
 

@@ -197,7 +197,10 @@ function renderDetail(options = {}) {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
     return `<button class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}">
-      <span class="episode-code">E${entry.episode}</span><span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>${watched ? '<span class="episode-status">Visto</span>' : ''}${!watched ? `<span class="episode-play-pill">${inProgress ? 'Continuar' : 'Play'}</span>` : ''}
+      <span class="episode-code">E${entry.episode}</span>
+      <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
+      ${watched ? '<span class="episode-status">Visto</span>' : ''}
+      ${!watched ? `<span class="episode-play-row"><button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">${inProgress ? 'Continuar' : 'Play'}</button></span>` : ''}
     </button>`;
   }).join('') : '';
 
@@ -242,8 +245,20 @@ function renderDetail(options = {}) {
     syncRoute();
   });
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
-  document.querySelectorAll('[data-episode]').forEach((button) => bindTap(button, () => {
-    state.playback.episode = positiveInteger(button.dataset.episode, 1);
+  // Selecting an episode should not auto-play; only the explicit Play button does.
+  document.querySelectorAll('[data-episode]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.playback.episode = positiveInteger(button.dataset.episode, 1);
+      renderDetail();
+      syncRoute();
+    });
+  });
+
+  document.querySelectorAll('[data-episode-play]').forEach((playBtn) => bindTap(playBtn, (event) => {
+    // Prevent the click from also selecting the parent episode card.
+    event?.stopPropagation?.();
+    const episode = positiveInteger(playBtn.dataset.episodePlay, 1);
+    state.playback.episode = episode;
     openPlayerForCurrentSelection();
   }));
 }

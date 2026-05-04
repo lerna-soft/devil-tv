@@ -7,7 +7,8 @@ const state = {
   remoteSearchTimer: null,
   lastRemoteQuery: '',
   isSearching: false,
-  playback: { season: 1, episode: 1 }
+  playback: { season: 1, episode: 1 },
+  playerOpening: false
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
@@ -211,12 +212,11 @@ function renderDetail() {
     </div>
   </div>`;
 
-  document.querySelector('#loadPlayer')?.addEventListener('click', () => openPlayerModal(getCurrentEmbedUrl(baseEmbed)));
+  document.querySelector('#loadPlayer')?.addEventListener('click', () => navigateToWatchRoute());
   document.querySelector('#resumeSeries')?.addEventListener('click', () => {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
-    openPlayerModal(getCurrentEmbedUrl(baseEmbed));
-    syncRoute();
+    navigateToWatchRoute();
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
@@ -232,19 +232,28 @@ function renderDetail() {
   document.querySelector('#nextEpisode')?.addEventListener('click', () => jumpEpisode(1, baseEmbed));
   document.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
-  document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => { state.playback.episode = positiveInteger(button.dataset.episode, 1); openPlayerModal(getCurrentEmbedUrl(baseEmbed)); syncRoute(); }));
+  document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => {
+    state.playback.episode = positiveInteger(button.dataset.episode, 1);
+    navigateToWatchRoute();
+  }));
 }
 
 function openPlayerModal(embedUrl) {
+  if (state.playerOpening) return;
+  state.playerOpening = true;
   persistLastSelection();
   const modal = document.querySelector('#playerModal');
   const card = document.querySelector('.player-modal-card');
   const iframe = document.querySelector('#player');
-  if (!modal || !iframe) return;
+  if (!modal || !iframe) {
+    state.playerOpening = false;
+    return;
+  }
   iframe.src = embedUrl;
   modal.hidden = false;
   document.body.classList.add('player-active');
   requestNativeFullscreen(card);
+  state.playerOpening = false;
   syncRoute();
 }
 
@@ -257,6 +266,29 @@ function closePlayerModal() {
   document.body.classList.remove('player-active');
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
+}
+
+function navigateToWatchRoute() {
+  const modal = document.querySelector('#playerModal');
+  if (modal && !modal.hidden) return;
+  const params = new URLSearchParams();
+  const q = elements.search.value.trim();
+  const type = elements.typeFilter.value;
+  if (q) params.set('q', q);
+  if (type && type !== 'all') params.set('type', type);
+
+  if (!state.selected) return;
+  const id = state.selected.imdbId || state.selected.tmdbId;
+  const media = state.selected.type === 'movie' ? 'movie' : 'series';
+  if (!id) return;
+
+  let path = '';
+  if (media === 'movie') {
+    path = `/watch/movie/${encodeURIComponent(id)}`;
+  } else {
+    path = `/watch/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+  }
+  window.location.hash = `#${path}${params.toString() ? `?${params.toString()}` : ''}`;
 }
 
 function jumpEpisode(direction, baseEmbed) {

@@ -28,6 +28,10 @@ body {
   font-family: "Aptos", "Avenir Next", "Segoe UI", sans-serif;
 }
 
+body.player-active {
+  overflow: hidden;
+}
+
 button,
 input,
 select {

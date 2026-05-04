@@ -383,6 +383,17 @@ h1 {
   padding: 0.62rem 0.95rem;
 }
 
+.back-chip {
+  background: rgba(12, 12, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  min-height: 2.2rem;
+  padding: 0.48rem 0.9rem;
+}
+
 .title-hero {
   background:
     linear-gradient(90deg, rgba(5, 5, 9, 0.96) 0%, rgba(5, 5, 9, 0.72) 42%, rgba(5, 5, 9, 0.16) 100%),

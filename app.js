@@ -175,7 +175,7 @@ function renderDetail() {
   }).join('') : '';
 
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
-    <button class="overlay-close" id="closeDetail">Volver al home</button>
+    <button class="overlay-close back-chip" id="closeDetail" aria-label="Volver al inicio">← Inicio</button>
     <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>
@@ -448,14 +448,23 @@ function persistLastSelection() {
 function getSeriesProgress(title) { try { return JSON.parse(localStorage.getItem(`mep_series_progress_${title.imdbId || title.tmdbId}`) || '{"watched":{}}'); } catch { return { watched: {} }; } }
 function loadCachedSeriesEpisodes(imdbId) {
   try {
-    return JSON.parse(localStorage.getItem(`mep_series_eps_${imdbId}`) || 'null');
+    const cached = JSON.parse(localStorage.getItem(`mep_series_eps_${imdbId}`) || 'null');
+    if (!cached) return null;
+    const createdAt = Number(cached.cachedAt || 0);
+    const ageMs = Date.now() - createdAt;
+    const ttlMs = 1000 * 60 * 60 * 24 * 14;
+    if (!createdAt || ageMs > ttlMs) return null;
+    return cached.payload || null;
   } catch {
     return null;
   }
 }
 function cacheSeriesEpisodes(imdbId, payload) {
   try {
-    localStorage.setItem(`mep_series_eps_${imdbId}`, JSON.stringify(payload));
+    localStorage.setItem(`mep_series_eps_${imdbId}`, JSON.stringify({
+      cachedAt: Date.now(),
+      payload
+    }));
   } catch {
     // ignore storage write issues
   }

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Evaluation Platform</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-mark">MEP</div>
+        <nav class="content-tabs" aria-label="Content type">
+          <button class="tab active" data-type-tab="all">Home</button>
+          <button class="tab" data-type-tab="movie">Movies</button>
+          <button class="tab" data-type-tab="series">Series</button>
+          <button class="tab" data-type-tab="episode">Episodes</button>
+        </nav>
+        <div class="service-state">Frontend-only mode</div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Lerna Soft</p>
+          <h1>Streaming Search</h1>
+          <p class="lede">Search titles in real time, review metadata first, then play with episode and subtitle controls.</p>
+        </div>
+        <div class="stats" id="stats">
+          <strong>Status</strong><br />
+          Static mode enabled<br />
+          No local catalog persistence
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="filters">
+          <input id="search" type="search" placeholder="Search title, IMDb, TMDB..." />
+          <select id="typeFilter" aria-label="Content type">
+            <option value="all">All</option>
+            <option value="movie">Movies</option>
+            <option value="series">Series</option>
+            <option value="episode">Episodes</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="layout">
+        <section class="catalog">
+          <div class="catalog-header">
+            <h2>Results</h2>
+            <span id="count">0 items</span>
+          </div>
+          <div id="items" class="items"></div>
+        </section>
+
+        <section class="detail" id="detail">
+          <div class="empty">Search and select a title to preview.</div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

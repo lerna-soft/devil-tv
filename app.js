@@ -150,9 +150,12 @@ function renderRemoteResults(query) {
 function renderDetail() {
   const title = state.selected;
   if (!title) {
+    document.body.classList.remove('detail-active');
     elements.detail.innerHTML = '<div class="empty">Search and select a title to preview.</div>';
     return;
   }
+
+  document.body.classList.add('detail-active');
 
   const baseEmbed = buildEmbedUrl(title);
   state.playback.season = title.season || state.playback.season || 1;
@@ -172,7 +175,7 @@ function renderDetail() {
   }).join('') : '';
 
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
-    <button class="overlay-close" id="closeDetail">Back to results</button>
+    <button class="overlay-close" id="closeDetail">Volver al home</button>
     <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>
@@ -202,7 +205,14 @@ function renderDetail() {
     openPlayerModal(getCurrentEmbedUrl(baseEmbed));
     syncRoute();
   });
-  document.querySelector('#closeDetail')?.addEventListener('click', () => { state.selected = null; state.seriesEpisodes = null; renderCatalog(); renderDetail(); syncRoute(); });
+  document.querySelector('#closeDetail')?.addEventListener('click', () => {
+    state.selected = null;
+    state.seriesEpisodes = null;
+    document.body.classList.remove('detail-active');
+    renderCatalog();
+    renderDetail();
+    syncRoute();
+  });
   document.querySelector('#closePlayer')?.addEventListener('click', closePlayerModal);
   document.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));

@@ -462,7 +462,7 @@ h1 {
 
 @media (max-width: 980px) {
   .shell {
-    padding: 1rem;
+    padding: 0.7rem 0.7rem 1.2rem;
   }
 
   .topbar,
@@ -471,9 +471,52 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .topbar {
+    background: linear-gradient(180deg, rgba(5, 5, 9, 0.94), rgba(5, 5, 9, 0.76));
+    border-bottom: 1px solid var(--line);
+    margin: -0.7rem -0.7rem 0;
+    padding: 0.65rem 0.7rem 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
   .service-state,
   .filters {
     justify-content: space-between;
+  }
+
+  .content-tabs {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.18rem;
+    width: 100%;
+  }
+
+  .content-tabs .tab {
+    flex: 1 0 0;
+    font-size: 0.82rem;
+    min-height: 2.2rem;
+    padding: 0.48rem 0.55rem;
+    text-align: center;
+  }
+
+  .toolbar {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    margin: 0.65rem 0 1rem;
+    padding: 0.55rem;
+    position: sticky;
+    top: 5.1rem;
+    z-index: 45;
+  }
+
+  .filters {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 6.4rem;
   }
 
   #search {
@@ -481,8 +524,45 @@ h1 {
     width: 100%;
   }
 
+  #search,
+  #typeFilter {
+    min-height: 2.6rem;
+  }
+
   .items {
-    grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .item strong {
+    font-size: 0.82rem;
+  }
+
+  .meta {
+    font-size: 0.72rem;
+  }
+
+  .item-poster {
+    border-radius: 0.62rem;
+  }
+
+  .title-hero {
+    min-height: 14.4rem;
+    padding: 0.8rem;
+  }
+
+  .title-copy {
+    min-height: 0;
+  }
+
+  .title-copy h2 {
+    font-size: clamp(1.45rem, 7vw, 2.1rem);
+    line-height: 0.95;
+  }
+
+  .title-description {
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .form-grid {

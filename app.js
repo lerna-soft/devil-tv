@@ -267,7 +267,17 @@ function openPlayerForCurrentSelection() {
   const embedUrl = media === 'movie'
     ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
     : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+  // Try to open within the user gesture; hash route will keep state/restores working.
   openPlayerModal(embedUrl);
+
+  // Keep hash route in sync with the intended playback target.
+  let path = '';
+  if (media === 'movie') {
+    path = `/view/movie/${encodeURIComponent(id)}`;
+  } else {
+    path = `/view/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+  }
+  window.location.hash = `#${path}`;
 }
 
 function jumpEpisode(direction, baseEmbed) {
@@ -642,9 +652,9 @@ function syncRoute() {
     if (id) {
       if (modal && !modal.hidden) {
         if (media === 'movie') {
-          routePath = `/watch/movie/${encodeURIComponent(id)}`;
+          routePath = `/view/movie/${encodeURIComponent(id)}`;
         } else {
-          routePath = `/watch/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+          routePath = `/view/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
         }
       } else {
         routePath = `/title/${encodeURIComponent(media)}/${encodeURIComponent(id)}`;
@@ -706,7 +716,10 @@ async function handleRouteChange() {
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isSeriesLike(state.selected);
       renderDetail({ skipHydratePlayback: shouldOpenPlayer });
-      if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
+      if (shouldOpenPlayer) {
+        // Open immediately on route change for deep links; keep it idempotent.
+        openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
+      }
       if (isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
@@ -735,7 +748,7 @@ function parseHashRoute() {
     const parts = pathPart.split('/').filter(Boolean);
     const params = new URLSearchParams(queryPart);
 
-    if (parts[0] === 'watch') {
+    if (parts[0] === 'view') {
       return {
         mode: 'watch',
         media: decodeURIComponent(parts[1] || ''),

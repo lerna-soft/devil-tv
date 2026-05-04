@@ -66,10 +66,10 @@ function scheduleRemoteSearch() {
 
 async function searchRemoteCatalog(query) {
   try {
-    const providerResults = await searchVidapiListings(query, elements.typeFilter.value);
+    const { items: providerResults, limited } = await searchVidapiListings(query, elements.typeFilter.value);
     const playableResults = await filterPlayable(providerResults);
     state.remoteResults = playableResults;
-    renderRemoteResults(query);
+    renderRemoteResults(query, { limited });
   } catch (error) {
     elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
     elements.count.textContent = '0 items';
@@ -80,14 +80,16 @@ async function searchVidapiListings(query, typeFilter) {
   const normalizedQuery = query.trim().toLowerCase();
   const kinds = resolveKinds(typeFilter);
   const results = [];
+  let limited = false;
 
   for (const kind of kinds) {
     const maxPages = kind === 'episode' ? 20 : 80;
     const found = await searchKind(kind, normalizedQuery, maxPages);
+    if (found.limited) limited = true;
     results.push(...found);
   }
 
-  return dedupe(results);
+  return { items: dedupe(results), limited };
 }
 
 function resolveKinds(typeFilter) {
@@ -99,9 +101,14 @@ function resolveKinds(typeFilter) {
 
 async function searchKind(kind, query, maxPages) {
   const matches = [];
+  let limited = false;
 
   for (let page = 1; page <= maxPages; page++) {
     const payload = await fetchVidapiPage(kind, page);
+    if (payload.limited) {
+      limited = true;
+      break;
+    }
     const items = payload.items ?? [];
 
     for (const item of items) {
@@ -118,8 +125,10 @@ async function searchKind(kind, query, maxPages) {
 
     if (matches.length >= 60) break;
     if (page >= Number(payload.total_pages ?? page)) break;
+    await sleep(120);
   }
 
+  matches.limited = limited;
   return matches;
 }
 
@@ -131,9 +140,11 @@ async function fetchVidapiPage(kind, page) {
       : `https://vidapi.ru/episodes/latest/page-${page}.json`;
 
   const response = await fetch(endpoint, { headers: { accept: 'application/json' } });
-  if (!response.ok) {
-    throw new Error(`VidAPI ${kind} request failed with HTTP ${response.status}`);
+  if (response.status === 429) {
+    return { limited: true, items: [] };
   }
+
+  if (!response.ok) throw new Error(`VidAPI ${kind} request failed with HTTP ${response.status}`);
 
   return response.json();
 }
@@ -227,7 +238,8 @@ async function isPlayable(embedUrl) {
   }
 }
 
-function renderRemoteResults(query) {
+function renderRemoteResults(query, options = {}) {
+  const limited = Boolean(options.limited);
   const cards = state.remoteResults
     .map((title, index) => {
       const poster = title.posterUrl;
@@ -245,7 +257,7 @@ function renderRemoteResults(query) {
     .join('');
 
   elements.items.innerHTML = cards || '<div class="empty">No playable results found for this query.</div>';
-  elements.count.textContent = `${state.remoteResults.length} matches for "${query}"`;
+  elements.count.textContent = `${state.remoteResults.length} matches for "${query}"${limited ? ' (provider rate-limited)' : ''}`;
 
   elements.items.querySelectorAll('[data-remote-index]').forEach((item) => {
     item.addEventListener('click', () => {
@@ -254,6 +266,10 @@ function renderRemoteResults(query) {
       renderDetail();
     });
   });
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function normalizeSelection(remote) {

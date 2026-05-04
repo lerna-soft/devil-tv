@@ -189,13 +189,14 @@ function renderDetail(options = {}) {
   const poster = title.posterUrl || '';
   const progress = getSeriesProgress(title);
   const hasEpisodes = isSeriesLike(title) && (state.seriesEpisodes?.seasons?.length ?? 0) > 0;
-  const hasWatchHistory = Boolean(Object.keys(progress?.watched ?? {}).length);
-  const resumeTarget = hasEpisodes ? getNextEpisodeTarget(progress, state.seriesEpisodes) : null;
+  const hasWatchHistory = Boolean(Object.keys(progress?.watched ?? {}).length) || Boolean(progress?.lastSeason && progress?.lastEpisode);
+  const resumeTarget = hasEpisodes ? getResumeTarget(progress, state.seriesEpisodes) : null;
   const seasonsTabs = hasEpisodes ? state.seriesEpisodes.seasons.map((entry) => `<button class="season-tab${entry.seasonNumber === state.playback.season ? ' active' : ''}" data-season="${entry.seasonNumber}">T${entry.seasonNumber}</button>`).join('') : '';
   const episodeCards = hasEpisodes ? getEpisodesForSeason(state.playback.season).map((entry) => {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
+    const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
     return `<button class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}">
-      <span class="episode-code">E${entry.episode}</span><span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>${watched ? '<span class="episode-status">Visto</span>' : ''}
+      <span class="episode-code">E${entry.episode}</span><span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>${watched ? '<span class="episode-status">Visto</span>' : ''}${!watched ? `<span class="episode-play-pill">${inProgress ? 'Continuar' : 'Play'}</span>` : ''}
     </button>`;
   }).join('') : '';
 
@@ -211,8 +212,8 @@ function renderDetail(options = {}) {
         <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         <div class="actions hero-actions">
-          ${!isSeriesLike(title) ? '<button id="loadPlayer">Play</button>' : '<button id="playSeries">Play</button>'}
-          ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">Reanudar T${resumeTarget.season}E${resumeTarget.episode}</button>` : ''}
+          ${!isSeriesLike(title) ? '<button id="loadPlayer">Play</button>' : ''}
+          ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
         </div>
       </div>
     </section>
@@ -220,7 +221,6 @@ function renderDetail(options = {}) {
   </div>`;
 
   bindTap(document.querySelector('#loadPlayer'), () => openPlayerForCurrentSelection());
-  bindTap(document.querySelector('#playSeries'), () => openPlayerForCurrentSelection());
   bindTap(document.querySelector('#resumeSeries'), () => {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
@@ -235,7 +235,7 @@ function renderDetail(options = {}) {
     syncRoute();
   });
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
-  document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => {
+  document.querySelectorAll('[data-episode]').forEach((button) => bindTap(button, () => {
     state.playback.episode = positiveInteger(button.dataset.episode, 1);
     openPlayerForCurrentSelection();
   }));
@@ -546,17 +546,41 @@ function cacheSeriesEpisodes(imdbId, payload) {
     // ignore storage write issues
   }
 }
-function isEpisodeWatched(progress, season, episode) { return Boolean(progress?.watched?.[`s${season}e${episode}`]); }
-function getNextEpisodeTarget(progress, seriesEpisodes) {
+function isEpisodeWatched(progress, season, episode) {
+  const entry = progress?.watched?.[`s${season}e${episode}`];
+  if (!entry) return false;
+  if (entry === true) return true;
+  return Boolean(entry.completedAt);
+}
+
+function isEpisodeInProgress(progress, season, episode) {
+  const entry = progress?.watched?.[`s${season}e${episode}`];
+  return Boolean(entry && entry !== true && entry.startedAt && !entry.completedAt);
+}
+
+function getResumeTarget(progress, seriesEpisodes) {
   const seasons = seriesEpisodes?.seasons ?? [];
   if (!seasons.length) return null;
   const lastSeason = positiveInteger(progress?.lastSeason, seasons[0].seasonNumber);
-  const lastEpisode = positiveInteger(progress?.lastEpisode, 0);
+  const lastEpisode = positiveInteger(progress?.lastEpisode, 1);
+
+  const lastKey = `s${lastSeason}e${lastEpisode}`;
+  const lastEntry = progress?.watched?.[lastKey];
+  const lastCompleted = lastEntry === true ? true : Boolean(lastEntry?.completedAt);
+
+  if (!lastCompleted) {
+    return { season: lastSeason, episode: lastEpisode, label: `Reanudar T${lastSeason}E${lastEpisode}` };
+  }
+
   const nextInSeason = (seasons.find((s) => s.seasonNumber === lastSeason)?.episodes ?? []).find((ep) => ep.episode > lastEpisode);
-  if (nextInSeason) return { season: lastSeason, episode: nextInSeason.episode };
+  if (nextInSeason) return { season: lastSeason, episode: nextInSeason.episode, label: `Reanudar T${lastSeason}E${nextInSeason.episode}` };
+
   const nextSeason = seasons.find((s) => s.seasonNumber > lastSeason && s.episodes.length > 0);
-  if (nextSeason) return { season: nextSeason.seasonNumber, episode: nextSeason.episodes[0].episode };
-  return { season: seasons[0].seasonNumber, episode: seasons[0].episodes[0]?.episode ?? 1 };
+  if (nextSeason) return { season: nextSeason.seasonNumber, episode: nextSeason.episodes[0].episode, label: `Reanudar T${nextSeason.seasonNumber}E${nextSeason.episodes[0].episode}` };
+
+  const firstSeason = seasons[0];
+  const firstEpisode = firstSeason?.episodes?.[0]?.episode ?? 1;
+  return { season: firstSeason.seasonNumber, episode: firstEpisode, label: `Reanudar T${firstSeason.seasonNumber}E${firstEpisode}` };
 }
 function applySavedWatchState(title) {
   const currentId = title.imdbId || title.tmdbId;
@@ -601,7 +625,20 @@ function persistProgressFromPlayerEvent(data) {
   const key = `mep_series_progress_${snapshot.imdbId || snapshot.tmdbId}`;
   const existing = JSON.parse(localStorage.getItem(key) || '{"watched":{}}');
   const watched = existing.watched || {};
-  if (snapshot.progress > 60 || data.player_status === 'completed') watched[`s${snapshot.season}e${snapshot.episode}`] = true;
+  const epKey = `s${snapshot.season}e${snapshot.episode}`;
+  const prev = watched[epKey];
+  const now = Date.now();
+
+  // Backward-compatible upgrade: previously stored `true`.
+  const record = (prev && prev !== true)
+    ? { startedAt: prev.startedAt || null, completedAt: prev.completedAt || null, lastProgress: Number(prev.lastProgress || 0) }
+    : { startedAt: null, completedAt: null, lastProgress: 0 };
+
+  record.lastProgress = snapshot.progress;
+  if (!record.startedAt) record.startedAt = now;
+  if (snapshot.progress > 60 || data.player_status === 'completed') record.completedAt = record.completedAt || now;
+
+  watched[epKey] = record.completedAt ? { ...record } : record;
   localStorage.setItem(key, JSON.stringify({ ...existing, lastSeason: snapshot.season, lastEpisode: snapshot.episode, watched }));
 }
 

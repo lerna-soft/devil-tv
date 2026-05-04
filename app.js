@@ -76,8 +76,11 @@ async function searchRemoteCatalog(query) {
     }
 
     const sorted = sortByRelevance(dedupe(combined), query);
-    const playableResults = await filterPlayable(sorted.slice(0, 36), 6);
-    state.remoteResults = playableResults;
+    // In static hosting, cross-origin checks can falsely fail. Show results first.
+    state.remoteResults = sorted.slice(0, 36).map((item) => ({
+      ...item,
+      embedUrl: buildEmbedUrl(item)
+    }));
     renderRemoteResults(query, { limited });
   } catch (error) {
     elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
@@ -262,25 +265,6 @@ function dedupe(items) {
   return unique;
 }
 
-async function filterPlayable(results) {
-  return filterPlayableWithConcurrency(results, 6);
-}
-
-async function isPlayable(embedUrl) {
-  try {
-    const head = await fetch(embedUrl, { method: 'HEAD', redirect: 'follow' });
-    if (head.status !== 405) return head.ok && head.status !== 404;
-  } catch {
-    // ignore and try GET
-  }
-
-  try {
-    const get = await fetch(embedUrl, { method: 'GET', redirect: 'follow' });
-    return get.ok && get.status !== 404;
-  } catch {
-    return false;
-  }
-}
 
 function renderRemoteResults(query, options = {}) {
   const limited = Boolean(options.limited);
@@ -357,25 +341,6 @@ function relevanceScore(item, query) {
   return score;
 }
 
-async function filterPlayableWithConcurrency(results, concurrency) {
-  const playable = [];
-  let cursor = 0;
-
-  async function worker() {
-    while (cursor < results.length) {
-      const i = cursor++;
-      const result = results[i];
-      const embedUrl = buildEmbedUrl(result);
-      if (!embedUrl) continue;
-      if (await isPlayable(embedUrl)) {
-        playable.push({ ...result, embedUrl });
-      }
-    }
-  }
-
-  await Promise.all(Array.from({ length: concurrency }, () => worker()));
-  return playable;
-}
 
 function renderDetail() {
   const title = state.selected;

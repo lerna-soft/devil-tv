@@ -200,7 +200,7 @@ function renderDetail(options = {}) {
   }).join('') : '';
 
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
-    <button class="overlay-close back-chip" id="closeDetail" aria-label="Volver al inicio">
+    <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
       <span class="back-chip-icon" aria-hidden="true">←</span>
       <span class="back-chip-label">Inicio</span>
     </button>

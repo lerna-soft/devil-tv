@@ -271,31 +271,69 @@ async function loadSeriesEpisodes() {
   if (!state.selected || !isSeriesLike(state.selected)) return;
   state.seriesEpisodesLoading = true;
   try {
-    const imdbId = state.selected.imdbId;
-    const response = await fetch('https://vidapi.ru/ids/eps_list_imdb.txt', { headers: { accept: 'text/plain' } });
-    if (!response.ok) throw new Error('episodes list unavailable');
-    const text = await response.text();
-    const bySeason = new Map();
-    const prefix = `${imdbId}_`;
-    for (const line of text.split('\n')) {
-      const value = line.trim();
-      if (!value.startsWith(prefix)) continue;
-      const [seasonRaw, episodeRaw] = value.slice(prefix.length).split('x');
-      const season = Number(seasonRaw);
-      const episode = Number(episodeRaw);
-      if (!Number.isInteger(season) || !Number.isInteger(episode)) continue;
-      const entries = bySeason.get(season) ?? [];
-      entries.push({ season, episode, title: `Episode ${episode}` });
-      bySeason.set(season, entries);
+    const imdbId = state.selected.imdbId || '';
+    if (!imdbId) throw new Error('missing imdb id');
+
+    const cached = loadCachedSeriesEpisodes(imdbId);
+    if (cached?.seasons?.length) {
+      state.seriesEpisodes = cached;
+      state.seriesEpisodesLoading = false;
+      return;
     }
-    state.seriesEpisodes = {
-      seasons: [...bySeason.entries()].sort((a, b) => a[0] - b[0]).map(([seasonNumber, episodes]) => ({ seasonNumber, episodes: episodes.sort((a, b) => a.episode - b.episode) }))
-    };
+
+    const text = await fetchEpisodeIdListText();
+    state.seriesEpisodes = buildEpisodesFromIdList(imdbId, text);
+    if ((state.seriesEpisodes?.seasons?.length ?? 0) > 0) {
+      cacheSeriesEpisodes(imdbId, state.seriesEpisodes);
+    }
   } catch {
     state.seriesEpisodes = { seasons: [] };
   } finally {
     state.seriesEpisodesLoading = false;
   }
+}
+
+async function fetchEpisodeIdListText() {
+  const direct = await fetch('https://vidapi.ru/ids/eps_list_imdb.txt', { headers: { accept: 'text/plain' } }).catch(() => null);
+  if (direct?.ok) return direct.text();
+
+  const proxy = await fetch('https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt').catch(() => null);
+  if (!proxy?.ok) throw new Error('episodes list unavailable');
+  const raw = await proxy.text();
+  return normalizeJinaPayload(raw);
+}
+
+function normalizeJinaPayload(text) {
+  const lines = String(text ?? '').split('\n');
+  const startIndex = lines.findIndex((line) => /^tt\d+_\d+x\d+/.test(line.trim()));
+  if (startIndex === -1) return String(text ?? '');
+  return lines.slice(startIndex).join('\n');
+}
+
+function buildEpisodesFromIdList(imdbId, text) {
+  const bySeason = new Map();
+  const prefix = `${imdbId}_`;
+
+  for (const line of String(text ?? '').split('\n')) {
+    const value = line.trim();
+    if (!value.startsWith(prefix)) continue;
+    const [seasonRaw, episodeRaw] = value.slice(prefix.length).split('x');
+    const season = Number(seasonRaw);
+    const episode = Number(episodeRaw);
+    if (!Number.isInteger(season) || !Number.isInteger(episode)) continue;
+    const entries = bySeason.get(season) ?? [];
+    entries.push({ season, episode, title: `Episode ${episode}` });
+    bySeason.set(season, entries);
+  }
+
+  return {
+    seasons: [...bySeason.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([seasonNumber, episodes]) => ({
+        seasonNumber,
+        episodes: episodes.sort((a, b) => a.episode - b.episode)
+      }))
+  };
 }
 
 function loadLocalCatalog() {
@@ -344,6 +382,20 @@ function persistLastSelection() {
   localStorage.setItem('mep_last_selection', JSON.stringify({ imdbId: state.selected.imdbId || '', tmdbId: state.selected.tmdbId || '', season: state.playback.season, episode: state.playback.episode }));
 }
 function getSeriesProgress(title) { try { return JSON.parse(localStorage.getItem(`mep_series_progress_${title.imdbId || title.tmdbId}`) || '{"watched":{}}'); } catch { return { watched: {} }; } }
+function loadCachedSeriesEpisodes(imdbId) {
+  try {
+    return JSON.parse(localStorage.getItem(`mep_series_eps_${imdbId}`) || 'null');
+  } catch {
+    return null;
+  }
+}
+function cacheSeriesEpisodes(imdbId, payload) {
+  try {
+    localStorage.setItem(`mep_series_eps_${imdbId}`, JSON.stringify(payload));
+  } catch {
+    // ignore storage write issues
+  }
+}
 function isEpisodeWatched(progress, season, episode) { return Boolean(progress?.watched?.[`s${season}e${episode}`]); }
 function getNextEpisodeTarget(progress, seriesEpisodes) {
   const seasons = seriesEpisodes?.seasons ?? [];

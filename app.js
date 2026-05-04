@@ -67,7 +67,15 @@ function scheduleRemoteSearch() {
 async function searchRemoteCatalog(query) {
   try {
     const { items: providerResults, limited } = await searchVidapiListings(query, elements.typeFilter.value);
-    const playableResults = await filterPlayable(providerResults);
+    let combined = providerResults;
+
+    // Fallback for older titles not present in "latest" listings or when provider rate-limits.
+    if (providerResults.length < 5 || limited) {
+      const imdbFallback = await searchImdbSuggestionsViaJina(query, elements.typeFilter.value);
+      combined = dedupe([...providerResults, ...imdbFallback]);
+    }
+
+    const playableResults = await filterPlayable(combined);
     state.remoteResults = playableResults;
     renderRemoteResults(query, { limited });
   } catch (error) {
@@ -147,6 +155,49 @@ async function fetchVidapiPage(kind, page) {
   if (!response.ok) throw new Error(`VidAPI ${kind} request failed with HTTP ${response.status}`);
 
   return response.json();
+}
+
+async function searchImdbSuggestionsViaJina(query, typeFilter) {
+  const normalized = query
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+
+  const url = `https://r.jina.ai/http://v3.sg.media-imdb.com/suggestion/x/${encodeURIComponent(normalized)}.json`;
+  const response = await fetch(url);
+  if (!response.ok) return [];
+
+  const text = await response.text();
+  const start = text.indexOf('{');
+  if (start === -1) return [];
+
+  let payload;
+  try {
+    payload = JSON.parse(text.slice(start));
+  } catch {
+    return [];
+  }
+
+  const mapped = (payload.d ?? [])
+    .filter((item) => item.id?.startsWith('tt'))
+    .map((item) => ({
+      provider: 'imdb-jina-fallback',
+      imdbId: item.id,
+      tmdbId: '',
+      title: item.l ?? '',
+      year: Number.isInteger(Number(item.y)) ? Number(item.y) : null,
+      type: item.qid === 'tvSeries' || item.q === 'TV series' ? 'series' : 'movie',
+      posterUrl: item.i?.imageUrl ?? '',
+      description: item.s ?? ''
+    }));
+
+  return filterByType(mapped, typeFilter);
+}
+
+function filterByType(results, type) {
+  if (type === 'all') return results;
+  return results.filter((result) => result.type === type);
 }
 
 function normalizeVidapiItem(kind, item) {

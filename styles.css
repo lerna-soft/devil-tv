@@ -580,6 +580,7 @@ h1 {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
 }
 
 .player-close {
@@ -609,6 +610,7 @@ h1 {
   border: 0;
   flex: 1 1 auto;
   width: 100%;
+  height: auto;
 }
 
 .player {

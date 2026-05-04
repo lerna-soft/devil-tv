@@ -47,6 +47,23 @@ window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
 handleRouteChange();
 
+function bindTap(element, handler) {
+  if (!element) return;
+  let pointerHandledAt = 0;
+  const onTap = (event) => {
+    event.preventDefault?.();
+    handler(event);
+  };
+  element.addEventListener('pointerup', (event) => {
+    pointerHandledAt = Date.now();
+    onTap(event);
+  }, { passive: false });
+  element.addEventListener('click', (event) => {
+    if (Date.now() - pointerHandledAt < 600) return;
+    onTap(event);
+  });
+}
+
 function renderCatalog() {
   const query = elements.search.value.trim();
   const filtered = getFilteredLocalTitles();
@@ -202,9 +219,9 @@ function renderDetail(options = {}) {
     ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
   </div>`;
 
-  document.querySelector('#loadPlayer')?.addEventListener('click', () => openPlayerForCurrentSelection());
-  document.querySelector('#playSeries')?.addEventListener('click', () => openPlayerForCurrentSelection());
-  document.querySelector('#resumeSeries')?.addEventListener('click', () => {
+  bindTap(document.querySelector('#loadPlayer'), () => openPlayerForCurrentSelection());
+  bindTap(document.querySelector('#playSeries'), () => openPlayerForCurrentSelection());
+  bindTap(document.querySelector('#resumeSeries'), () => {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
     openPlayerForCurrentSelection();
@@ -263,12 +280,6 @@ function openPlayerForCurrentSelection() {
   const id = state.selected.imdbId || state.selected.tmdbId;
   const media = state.selected.type === 'movie' ? 'movie' : 'series';
   if (!id) return;
-
-  const embedUrl = media === 'movie'
-    ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
-    : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
-  // Try to open within the user gesture; hash route will keep state/restores working.
-  openPlayerModal(embedUrl);
 
   // Keep hash route in sync with the intended playback target.
   let path = '';
@@ -717,8 +728,10 @@ async function handleRouteChange() {
       state.seriesEpisodesLoading = isSeriesLike(state.selected);
       renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       if (shouldOpenPlayer) {
-        // Open immediately on route change for deep links; keep it idempotent.
-        openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
+        // iOS Safari can be flaky about repainting fixed overlays immediately;
+        // deferring a tick makes the modal+hash transition more reliable.
+        const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+        setTimeout(() => openPlayerModal(target), 0);
       }
       if (isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();

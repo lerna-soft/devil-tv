@@ -175,7 +175,10 @@ function renderDetail() {
   }).join('') : '';
 
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
-    <button class="overlay-close back-chip" id="closeDetail" aria-label="Volver al inicio">← Inicio</button>
+    <button class="overlay-close back-chip" id="closeDetail" aria-label="Volver al inicio">
+      <span class="back-chip-icon" aria-hidden="true">←</span>
+      <span class="back-chip-label">Inicio</span>
+    </button>
     <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>

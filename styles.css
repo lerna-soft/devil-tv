@@ -140,17 +140,23 @@ label {
 }
 
 .brand-mark {
-  color: var(--brand);
-  font-size: 1.7rem;
-  font-weight: 950;
-  letter-spacing: -0.14em;
+  align-items: center;
+  display: flex;
+  gap: 0.55rem;
 }
 
 .brand-logo {
   display: block;
-  height: 2.1rem;
-  width: 2.1rem;
+  height: 2.15rem;
+  width: 2.15rem;
   object-fit: contain;
+}
+
+.brand-word {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
 }
 
 .content-tabs {

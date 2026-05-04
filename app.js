@@ -9,6 +9,7 @@ const state = {
   isSearching: false,
   playback: { season: 1, episode: 1 }
 };
+let suppressRouteSync = false;
 
 const elements = {
   search: document.querySelector('#search'),
@@ -37,7 +38,9 @@ elements.tabs.forEach((tab) => {
   });
 });
 
-renderCatalog();
+window.addEventListener('popstate', handleRouteChange);
+window.addEventListener('hashchange', handleRouteChange);
+handleRouteChange();
 
 function renderCatalog() {
   const query = elements.search.value.trim();
@@ -84,6 +87,7 @@ function bindLocalCardEvents() {
       renderCatalog();
       renderDetail();
       if (isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
+      syncRoute();
     });
   });
 }
@@ -99,6 +103,7 @@ function scheduleRemoteSearch() {
     state.lastRemoteQuery = query.toLowerCase();
     await searchRemoteCatalog(query);
     state.isSearching = false;
+    syncRoute();
   }, 450);
 }
 
@@ -137,6 +142,7 @@ function renderRemoteResults(query) {
       renderRemoteResults(elements.search.value.trim());
       renderDetail();
       if (isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
+      syncRoute();
     });
   });
   bindLocalCardEvents();
@@ -195,12 +201,13 @@ function renderDetail() {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
     openPlayerModal(getCurrentEmbedUrl(baseEmbed));
+    syncRoute();
   });
-  document.querySelector('#closeDetail')?.addEventListener('click', () => { state.selected = null; state.seriesEpisodes = null; renderCatalog(); renderDetail(); });
+  document.querySelector('#closeDetail')?.addEventListener('click', () => { state.selected = null; state.seriesEpisodes = null; renderCatalog(); renderDetail(); syncRoute(); });
   document.querySelector('#closePlayer')?.addEventListener('click', closePlayerModal);
   document.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
-  document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); }));
-  document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => { state.playback.episode = positiveInteger(button.dataset.episode, 1); openPlayerModal(getCurrentEmbedUrl(baseEmbed)); }));
+  document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
+  document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => { state.playback.episode = positiveInteger(button.dataset.episode, 1); openPlayerModal(getCurrentEmbedUrl(baseEmbed)); syncRoute(); }));
 }
 
 function openPlayerModal(embedUrl) {
@@ -212,6 +219,7 @@ function openPlayerModal(embedUrl) {
   iframe.src = embedUrl;
   modal.hidden = false;
   requestNativeFullscreen(card);
+  syncRoute();
 }
 
 function closePlayerModal() {
@@ -221,6 +229,7 @@ function closePlayerModal() {
   modal.hidden = true;
   iframe.src = 'about:blank';
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+  syncRoute();
 }
 
 async function searchViaListingsAndImdb(query, typeFilter) {
@@ -438,6 +447,7 @@ window.addEventListener('message', (event) => {
   const iframe = document.querySelector('#player');
   const nextUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
   if (modal && iframe && !modal.hidden) iframe.src = nextUrl;
+  syncRoute();
 });
 
 function persistProgressFromPlayerEvent(data) {
@@ -458,6 +468,79 @@ function requestNativeFullscreen(element) {
   if (!element || document.fullscreenElement) return;
   const fn = element.requestFullscreen || element.webkitRequestFullscreen || element.msRequestFullscreen;
   if (typeof fn === 'function') fn.call(element).catch?.(() => {});
+}
+
+function syncRoute() {
+  if (suppressRouteSync) return;
+  const params = new URLSearchParams();
+  const q = elements.search.value.trim();
+  const type = elements.typeFilter.value;
+  if (q) params.set('q', q);
+  if (type && type !== 'all') params.set('type', type);
+  if (state.selected) {
+    const id = state.selected.imdbId || state.selected.tmdbId;
+    if (id) params.set('id', id);
+    if (state.selected.type) params.set('media', state.selected.type);
+    if (isSeriesLike(state.selected)) {
+      params.set('season', String(state.playback.season || 1));
+      params.set('episode', String(state.playback.episode || 1));
+    }
+  }
+  const modal = document.querySelector('#playerModal');
+  if (modal && !modal.hidden) params.set('player', '1');
+  const next = `${window.location.pathname}?${params.toString()}`;
+  const current = `${window.location.pathname}${window.location.search}`;
+  if (next !== current) window.history.replaceState({}, '', next);
+}
+
+async function handleRouteChange() {
+  suppressRouteSync = true;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q') || '';
+    const type = params.get('type') || 'all';
+    const id = params.get('id') || '';
+    const media = params.get('media') || '';
+    const season = positiveInteger(params.get('season'), 1);
+    const episode = positiveInteger(params.get('episode'), 1);
+    const shouldOpenPlayer = params.get('player') === '1';
+
+    elements.search.value = q;
+    elements.typeFilter.value = ['all', 'movie', 'series'].includes(type) ? type : 'all';
+    syncTabs(elements.typeFilter.value);
+
+    renderCatalog();
+    if (q.length >= 3) await searchRemoteCatalog(q);
+
+    if (id) {
+      const fromLocal = loadLocalCatalog().find((entry) => entry.imdbId === id || entry.tmdbId === id);
+      state.selected = fromLocal || normalizeSelection({
+        imdbId: id.startsWith('tt') ? id : '',
+        tmdbId: id.startsWith('tt') ? '' : id,
+        title: fromLocal?.title || id,
+        year: fromLocal?.year || null,
+        type: media === 'movie' ? 'movie' : 'series',
+        posterUrl: fromLocal?.posterUrl || '',
+        description: fromLocal?.description || 'Cargado desde ruta'
+      });
+      state.playback.season = season;
+      state.playback.episode = episode;
+      state.seriesEpisodes = null;
+      state.seriesEpisodesLoading = isSeriesLike(state.selected);
+      renderDetail();
+      if (isSeriesLike(state.selected)) {
+        await loadSeriesEpisodes();
+        renderDetail();
+      }
+      if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
+    } else {
+      state.selected = null;
+      state.seriesEpisodes = null;
+      renderDetail();
+    }
+  } finally {
+    suppressRouteSync = false;
+  }
 }
 
 function escapeHtml(value) { return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;'); }

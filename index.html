@@ -44,5 +44,20 @@
     </main>
 
     <script type="module" src="./app.js"></script>
+
+    <div id="playerModal" class="player-modal" hidden>
+      <div class="player-modal-backdrop" data-close-player></div>
+      <div class="player-modal-card">
+        <div class="player-controls" id="playerControls"></div>
+        <iframe
+          id="player"
+          src="about:blank"
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          sandbox="allow-scripts allow-same-origin allow-presentation"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
   </body>
 </html>

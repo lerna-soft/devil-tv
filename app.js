@@ -75,7 +75,8 @@ async function searchRemoteCatalog(query) {
       combined = dedupe([...providerResults, ...imdbFallback]);
     }
 
-    const playableResults = await filterPlayable(combined);
+    const sorted = sortByRelevance(dedupe(combined), query);
+    const playableResults = await filterPlayable(sorted.slice(0, 36), 6);
     state.remoteResults = playableResults;
     renderRemoteResults(query, { limited });
   } catch (error) {
@@ -91,7 +92,7 @@ async function searchVidapiListings(query, typeFilter) {
   let limited = false;
 
   for (const kind of kinds) {
-    const maxPages = kind === 'episode' ? 20 : 80;
+    const maxPages = kind === 'episode' ? 8 : 18;
     const found = await searchKind(kind, normalizedQuery, maxPages);
     if (found.limited) limited = true;
     results.push(...found);
@@ -110,6 +111,7 @@ function resolveKinds(typeFilter) {
 async function searchKind(kind, query, maxPages) {
   const matches = [];
   let limited = false;
+  let lowProgressCount = 0;
 
   for (let page = 1; page <= maxPages; page++) {
     const payload = await fetchVidapiPage(kind, page);
@@ -131,9 +133,13 @@ async function searchKind(kind, query, maxPages) {
       if (haystack.includes(query)) matches.push(normalized);
     }
 
-    if (matches.length >= 60) break;
+    const before = matches.length;
+    if (matches.length >= 30) break;
     if (page >= Number(payload.total_pages ?? page)) break;
-    await sleep(120);
+    const delta = matches.length - before;
+    lowProgressCount = delta === 0 ? lowProgressCount + 1 : 0;
+    if (lowProgressCount >= 4 && page >= 6) break;
+    await sleep(80);
   }
 
   matches.limited = limited;
@@ -257,20 +263,7 @@ function dedupe(items) {
 }
 
 async function filterPlayable(results) {
-  const playable = [];
-
-  for (const result of results) {
-    const embedUrl = buildEmbedUrl(result);
-    if (!embedUrl) continue;
-    if (await isPlayable(embedUrl)) {
-      playable.push({
-        ...result,
-        embedUrl
-      });
-    }
-  }
-
-  return playable;
+  return filterPlayableWithConcurrency(results, 6);
 }
 
 async function isPlayable(embedUrl) {
@@ -344,6 +337,44 @@ function normalizeSelection(remote) {
     },
     externalPages: [{ label: 'vidapi', url: embedUrl }]
   };
+}
+
+function sortByRelevance(items, query) {
+  const q = query.trim().toLowerCase();
+  return [...items].sort((a, b) => relevanceScore(b, q) - relevanceScore(a, q));
+}
+
+function relevanceScore(item, query) {
+  const title = (item.title || '').toLowerCase();
+  const desc = (item.description || '').toLowerCase();
+  let score = 0;
+  if (title === query) score += 200;
+  if (title.startsWith(query)) score += 120;
+  if (title.includes(query)) score += 80;
+  if (desc.includes(query)) score += 20;
+  if (item.type === 'series') score += 8;
+  if (item.posterUrl) score += 5;
+  return score;
+}
+
+async function filterPlayableWithConcurrency(results, concurrency) {
+  const playable = [];
+  let cursor = 0;
+
+  async function worker() {
+    while (cursor < results.length) {
+      const i = cursor++;
+      const result = results[i];
+      const embedUrl = buildEmbedUrl(result);
+      if (!embedUrl) continue;
+      if (await isPlayable(embedUrl)) {
+        playable.push({ ...result, embedUrl });
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  return playable;
 }
 
 function renderDetail() {

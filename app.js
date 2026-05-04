@@ -66,9 +66,8 @@ function scheduleRemoteSearch() {
 
 async function searchRemoteCatalog(query) {
   try {
-    const suggestionResults = await searchImdbSuggestions(query);
-    const filteredByType = filterByType(suggestionResults, elements.typeFilter.value);
-    const playableResults = await filterPlayable(filteredByType);
+    const providerResults = await searchVidapiListings(query, elements.typeFilter.value);
+    const playableResults = await filterPlayable(providerResults);
     state.remoteResults = playableResults;
     renderRemoteResults(query);
   } catch (error) {
@@ -77,36 +76,122 @@ async function searchRemoteCatalog(query) {
   }
 }
 
-async function searchImdbSuggestions(query) {
-  const normalized = query
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '_')
-    .replace(/^_+|_+$/g, '');
+async function searchVidapiListings(query, typeFilter) {
+  const normalizedQuery = query.trim().toLowerCase();
+  const kinds = resolveKinds(typeFilter);
+  const results = [];
 
-  const response = await fetch(`https://v3.sg.media-imdb.com/suggestion/x/${encodeURIComponent(normalized)}.json`);
-  if (!response.ok) {
-    throw new Error(`IMDb suggestion request failed with HTTP ${response.status}`);
+  for (const kind of kinds) {
+    const maxPages = kind === 'episode' ? 20 : 80;
+    const found = await searchKind(kind, normalizedQuery, maxPages);
+    results.push(...found);
   }
 
-  const payload = await response.json();
-  return (payload.d ?? [])
-    .filter((item) => item.id?.startsWith('tt'))
-    .map((item) => ({
-      provider: 'imdb-suggestions',
-      imdbId: item.id,
-      tmdbId: '',
-      title: item.l ?? '',
-      year: Number.isInteger(Number(item.y)) ? Number(item.y) : null,
-      type: item.qid === 'tvSeries' || item.q === 'TV series' ? 'series' : 'movie',
-      posterUrl: item.i?.imageUrl ?? '',
-      description: item.s ?? ''
-    }));
+  return dedupe(results);
 }
 
-function filterByType(results, type) {
-  if (type === 'all') return results;
-  return results.filter((entry) => entry.type === type);
+function resolveKinds(typeFilter) {
+  if (typeFilter === 'movie') return ['movie'];
+  if (typeFilter === 'series') return ['series'];
+  if (typeFilter === 'episode') return ['episode'];
+  return ['movie', 'series'];
+}
+
+async function searchKind(kind, query, maxPages) {
+  const matches = [];
+
+  for (let page = 1; page <= maxPages; page++) {
+    const payload = await fetchVidapiPage(kind, page);
+    const items = payload.items ?? [];
+
+    for (const item of items) {
+      const normalized = normalizeVidapiItem(kind, item);
+      if (!normalized) continue;
+      const haystack = [
+        normalized.title,
+        normalized.description,
+        normalized.imdbId,
+        normalized.tmdbId
+      ].join(' ').toLowerCase();
+      if (haystack.includes(query)) matches.push(normalized);
+    }
+
+    if (matches.length >= 60) break;
+    if (page >= Number(payload.total_pages ?? page)) break;
+  }
+
+  return matches;
+}
+
+async function fetchVidapiPage(kind, page) {
+  const endpoint = kind === 'movie'
+    ? `https://vidapi.ru/movies/latest/page-${page}.json`
+    : kind === 'series'
+      ? `https://vidapi.ru/tvshows/latest/page-${page}.json`
+      : `https://vidapi.ru/episodes/latest/page-${page}.json`;
+
+  const response = await fetch(endpoint, { headers: { accept: 'application/json' } });
+  if (!response.ok) {
+    throw new Error(`VidAPI ${kind} request failed with HTTP ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function normalizeVidapiItem(kind, item) {
+  if (kind === 'movie') {
+    return {
+      provider: 'vidapi',
+      imdbId: item.imdb_id ?? '',
+      tmdbId: item.tmdb_id === null || item.tmdb_id === undefined ? '' : String(item.tmdb_id),
+      title: item.title ?? '',
+      year: Number.isInteger(Number(item.year)) ? Number(item.year) : null,
+      type: 'movie',
+      posterUrl: item.poster_url ?? '',
+      description: item.genre ?? ''
+    };
+  }
+
+  if (kind === 'series') {
+    return {
+      provider: 'vidapi',
+      imdbId: item.imdb_id ?? '',
+      tmdbId: item.tmdb_id === null || item.tmdb_id === undefined ? '' : String(item.tmdb_id),
+      title: item.title ?? '',
+      year: Number.isInteger(Number(item.year)) ? Number(item.year) : null,
+      type: 'series',
+      posterUrl: item.poster_url ?? '',
+      description: item.genre ?? ''
+    };
+  }
+
+  return {
+    provider: 'vidapi',
+    imdbId: item.show_imdb_id ?? '',
+    tmdbId: item.show_tmdb_id === null || item.show_tmdb_id === undefined ? '' : String(item.show_tmdb_id),
+    title: item.episode_title ?? '',
+    showTitle: item.show_title ?? '',
+    year: item.air_date ? Number(String(item.air_date).slice(0, 4)) : null,
+    type: 'episode',
+    posterUrl: '',
+    season: Number(item.season_number) || 1,
+    episode: Number(item.episode_number) || 1,
+    description: `${item.show_title ?? 'Series'} S${item.season_number}E${item.episode_number}`
+  };
+}
+
+function dedupe(items) {
+  const seen = new Set();
+  const unique = [];
+
+  for (const item of items) {
+    const key = `${item.type}:${item.imdbId || ''}:${item.tmdbId || ''}:${item.season || ''}:${item.episode || ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(item);
+  }
+
+  return unique;
 }
 
 async function filterPlayable(results) {
@@ -180,7 +265,10 @@ function normalizeSelection(remote) {
     imdbId: remote.imdbId || '',
     tmdbId: remote.tmdbId || '',
     title: remote.title,
+    showTitle: remote.showTitle || '',
     year: remote.year,
+    season: remote.season || 1,
+    episode: remote.episode || 1,
     description: remote.description,
     posterUrl: remote.posterUrl,
     metadata: {

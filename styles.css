@@ -146,6 +146,13 @@ label {
   letter-spacing: -0.14em;
 }
 
+.brand-logo {
+  display: block;
+  height: 2.1rem;
+  width: 2.1rem;
+  object-fit: contain;
+}
+
 .content-tabs {
   display: flex;
   gap: 0.35rem;

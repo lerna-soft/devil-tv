@@ -655,6 +655,21 @@ async function handleRouteChange() {
     syncTabs(elements.typeFilter.value);
 
     if (id) {
+      const currentId = state.selected ? (state.selected.imdbId || state.selected.tmdbId) : '';
+      const isSameSelected = currentId && currentId === id;
+      const modalNow = document.querySelector('#playerModal');
+      const iframeNow = document.querySelector('#player');
+
+      if (route.mode === 'watch' && isSameSelected && modalNow && !modalNow.hidden && iframeNow) {
+        state.playback.season = season;
+        state.playback.episode = episode;
+        const targetUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+        if (iframeNow.src !== targetUrl) {
+          iframeNow.src = targetUrl;
+        }
+        return;
+      }
+
       const fromLocal = loadLocalCatalog().find((entry) => entry.imdbId === id || entry.tmdbId === id);
       state.selected = fromLocal || normalizeSelection({
         imdbId: id.startsWith('tt') ? id : '',

@@ -19,7 +19,10 @@ const elements = {
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
   count: document.querySelector('#count'),
-  detail: document.querySelector('#detail')
+  detail: document.querySelector('#detail'),
+  playerModal: document.querySelector('#playerModal'),
+  playerIframe: document.querySelector('#player'),
+  playerControls: document.querySelector('#playerControls')
 };
 
 elements.search.addEventListener('input', () => {
@@ -41,6 +44,7 @@ elements.tabs.forEach((tab) => {
 });
 
 window.addEventListener('hashchange', handleRouteChange);
+bindPlayerModalEvents();
 handleRouteChange();
 
 function renderCatalog() {
@@ -150,7 +154,8 @@ function renderRemoteResults(query) {
   bindLocalCardEvents();
 }
 
-function renderDetail() {
+function renderDetail(options = {}) {
+  const { skipHydratePlayback = false } = options;
   const title = state.selected;
   if (!title) {
     document.body.classList.remove('detail-active');
@@ -163,7 +168,7 @@ function renderDetail() {
   const baseEmbed = buildEmbedUrl(title);
   state.playback.season = title.season || state.playback.season || 1;
   state.playback.episode = title.episode || state.playback.episode || 1;
-  applySavedWatchState(title);
+  if (!skipHydratePlayback) applySavedWatchState(title);
   const poster = title.posterUrl || '';
   const progress = getSeriesProgress(title);
   const hasEpisodes = isSeriesLike(title) && (state.seriesEpisodes?.seasons?.length ?? 0) > 0;
@@ -189,34 +194,20 @@ function renderDetail() {
         <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         <div class="actions hero-actions">
-          ${!isSeriesLike(title) ? '<button id="loadPlayer">Play</button>' : ''}
+          ${!isSeriesLike(title) ? '<button id="loadPlayer">Play</button>' : '<button id="playSeries">Play</button>'}
           ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">Reanudar T${resumeTarget.season}E${resumeTarget.episode}</button>` : ''}
         </div>
       </div>
     </section>
     ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
-    <div id="playerModal" class="player-modal" hidden>
-      <div class="player-modal-backdrop" data-close-player></div>
-      <div class="player-modal-card">
-        <div class="player-controls">
-          ${isSeriesLike(title) ? `
-            <button class="player-nav" id="backToDetail">Volver a la serie</button>
-            <button class="player-nav" id="prevEpisode">Capítulo anterior</button>
-            <button class="player-nav" id="nextEpisode">Siguiente capítulo</button>
-          ` : `
-            <button class="player-nav" id="closePlayer">Cerrar</button>
-          `}
-        </div>
-        <iframe id="player" src="about:blank" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
   </div>`;
 
-  document.querySelector('#loadPlayer')?.addEventListener('click', () => navigateToWatchRoute());
+  document.querySelector('#loadPlayer')?.addEventListener('click', () => openPlayerForCurrentSelection());
+  document.querySelector('#playSeries')?.addEventListener('click', () => openPlayerForCurrentSelection());
   document.querySelector('#resumeSeries')?.addEventListener('click', () => {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
-    navigateToWatchRoute();
+    openPlayerForCurrentSelection();
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
@@ -226,15 +217,10 @@ function renderDetail() {
     renderDetail();
     syncRoute();
   });
-  document.querySelector('#closePlayer')?.addEventListener('click', closePlayerModal);
-  document.querySelector('#backToDetail')?.addEventListener('click', closePlayerModal);
-  document.querySelector('#prevEpisode')?.addEventListener('click', () => jumpEpisode(-1, baseEmbed));
-  document.querySelector('#nextEpisode')?.addEventListener('click', () => jumpEpisode(1, baseEmbed));
-  document.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => {
     state.playback.episode = positiveInteger(button.dataset.episode, 1);
-    navigateToWatchRoute();
+    openPlayerForCurrentSelection();
   }));
 }
 
@@ -242,13 +228,15 @@ function openPlayerModal(embedUrl) {
   if (state.playerOpening) return;
   state.playerOpening = true;
   persistLastSelection();
-  const modal = document.querySelector('#playerModal');
-  const card = document.querySelector('.player-modal-card');
-  const iframe = document.querySelector('#player');
-  if (!modal || !iframe) {
+  const modal = elements.playerModal;
+  const card = modal?.querySelector('.player-modal-card');
+  const iframe = elements.playerIframe;
+  if (!modal || !iframe || !card) {
     state.playerOpening = false;
     return;
   }
+
+  renderPlayerControls();
   iframe.src = embedUrl;
   modal.hidden = false;
   document.body.classList.add('player-active');
@@ -258,8 +246,8 @@ function openPlayerModal(embedUrl) {
 }
 
 function closePlayerModal() {
-  const modal = document.querySelector('#playerModal');
-  const iframe = document.querySelector('#player');
+  const modal = elements.playerModal;
+  const iframe = elements.playerIframe;
   if (!modal || !iframe) return;
   modal.hidden = true;
   iframe.src = 'about:blank';
@@ -268,27 +256,18 @@ function closePlayerModal() {
   syncRoute();
 }
 
-function navigateToWatchRoute() {
-  const modal = document.querySelector('#playerModal');
+function openPlayerForCurrentSelection() {
+  const modal = elements.playerModal;
   if (modal && !modal.hidden) return;
-  const params = new URLSearchParams();
-  const q = elements.search.value.trim();
-  const type = elements.typeFilter.value;
-  if (q) params.set('q', q);
-  if (type && type !== 'all') params.set('type', type);
-
   if (!state.selected) return;
   const id = state.selected.imdbId || state.selected.tmdbId;
   const media = state.selected.type === 'movie' ? 'movie' : 'series';
   if (!id) return;
 
-  let path = '';
-  if (media === 'movie') {
-    path = `/watch/movie/${encodeURIComponent(id)}`;
-  } else {
-    path = `/watch/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
-  }
-  window.location.hash = `#${path}${params.toString() ? `?${params.toString()}` : ''}`;
+  const embedUrl = media === 'movie'
+    ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
+    : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+  openPlayerModal(embedUrl);
 }
 
 function jumpEpisode(direction, baseEmbed) {
@@ -364,7 +343,12 @@ async function searchImdbSuggestionsViaJina(query, typeFilter) {
   try { payload = JSON.parse(text.slice(start)); } catch { return []; }
   return (payload.d ?? [])
     .filter((item) => item.id?.startsWith('tt'))
-    .map((item) => ({ imdbId: item.id, tmdbId: '', title: item.l || '', year: Number(item.y) || null, type: (item.qid === 'tvSeries' || item.q === 'TV series') ? 'series' : 'movie', posterUrl: item.i?.imageUrl || '', description: item.s || '' }))
+    .map((item) => {
+      const qid = String(item.qid || '');
+      const q = String(item.q || '');
+      const isSeries = qid.toLowerCase().includes('tv') || q.toLowerCase().includes('tv');
+      return { imdbId: item.id, tmdbId: '', title: item.l || '', year: Number(item.y) || null, type: isSeries ? 'series' : 'movie', posterUrl: item.i?.imageUrl || '', description: item.s || '' };
+    })
     .filter((result) => typeFilter === 'all' || result.type === typeFilter);
 }
 
@@ -406,6 +390,7 @@ async function fetchEpisodeIdListText() {
 
 async function filterUnavailableSeries(results) {
   const index = await getEpisodeSeriesIndex();
+  if (!index || index.size === 0) return results;
   return results.filter((item) => {
     if (item.type !== 'series') return true;
     const imdbId = String(item.imdbId || '').trim();
@@ -578,8 +563,8 @@ window.addEventListener('message', (event) => {
     if (!first) return;
     state.playback.episode = first.episode;
   }
-  const modal = document.querySelector('#playerModal');
-  const iframe = document.querySelector('#player');
+  const modal = elements.playerModal;
+  const iframe = elements.playerIframe;
   const nextUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
   if (modal && iframe && !modal.hidden) iframe.src = nextUrl;
   syncRoute();
@@ -605,6 +590,42 @@ function requestNativeFullscreen(element) {
   if (typeof fn === 'function') fn.call(element).catch?.(() => {});
 }
 
+function bindPlayerModalEvents() {
+  const modal = elements.playerModal;
+  if (!modal) return;
+  modal.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
+}
+
+function renderPlayerControls() {
+  if (!elements.playerControls) return;
+  if (isSeriesLike(state.selected)) {
+    elements.playerControls.innerHTML = `
+      <button class="player-nav" data-player-action="back">Volver a la serie</button>
+      <button class="player-nav" data-player-action="prev">Capítulo anterior</button>
+      <button class="player-nav" data-player-action="next">Siguiente capítulo</button>
+    `;
+  } else {
+    elements.playerControls.innerHTML = `<button class="player-nav" data-player-action="close">Cerrar</button>`;
+  }
+
+  elements.playerControls.querySelectorAll('[data-player-action]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const action = button.dataset.playerAction;
+      if (action === 'close' || action === 'back') {
+        closePlayerModal();
+        return;
+      }
+      if (action === 'prev') {
+        jumpEpisode(-1, buildEmbedUrl(state.selected));
+        return;
+      }
+      if (action === 'next') {
+        jumpEpisode(1, buildEmbedUrl(state.selected));
+      }
+    });
+  });
+}
+
 function syncRoute() {
   if (suppressRouteSync) return;
   const params = new URLSearchParams();
@@ -614,7 +635,7 @@ function syncRoute() {
   if (type && type !== 'all') params.set('type', type);
 
   let routePath = '/browse';
-  const modal = document.querySelector('#playerModal');
+  const modal = elements.playerModal;
   if (state.selected) {
     const id = state.selected.imdbId || state.selected.tmdbId;
     const media = state.selected.type === 'movie' ? 'movie' : 'series';
@@ -657,8 +678,8 @@ async function handleRouteChange() {
     if (id) {
       const currentId = state.selected ? (state.selected.imdbId || state.selected.tmdbId) : '';
       const isSameSelected = currentId && currentId === id;
-      const modalNow = document.querySelector('#playerModal');
-      const iframeNow = document.querySelector('#player');
+      const modalNow = elements.playerModal;
+      const iframeNow = elements.playerIframe;
 
       if (route.mode === 'watch' && isSameSelected && modalNow && !modalNow.hidden && iframeNow) {
         state.playback.season = season;
@@ -684,11 +705,11 @@ async function handleRouteChange() {
       state.playback.episode = episode;
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isSeriesLike(state.selected);
-      renderDetail();
+      renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
       if (isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();
-        renderDetail();
+        renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
       renderCatalog();
       if (q.length >= 3) searchRemoteCatalog(q);

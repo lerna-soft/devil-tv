@@ -588,7 +588,11 @@ function syncRoute() {
     const media = state.selected.type === 'movie' ? 'movie' : 'series';
     if (id) {
       if (modal && !modal.hidden) {
-        routePath = `/watch/${encodeURIComponent(media)}/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+        if (media === 'movie') {
+          routePath = `/watch/movie/${encodeURIComponent(id)}`;
+        } else {
+          routePath = `/watch/series/${encodeURIComponent(id)}/${state.playback.season || 1}/${state.playback.episode || 1}`;
+        }
       } else {
         routePath = `/title/${encodeURIComponent(media)}/${encodeURIComponent(id)}`;
       }
@@ -618,9 +622,6 @@ async function handleRouteChange() {
     elements.typeFilter.value = ['all', 'movie', 'series'].includes(type) ? type : 'all';
     syncTabs(elements.typeFilter.value);
 
-    renderCatalog();
-    if (q.length >= 3) await searchRemoteCatalog(q);
-
     if (id) {
       const fromLocal = loadLocalCatalog().find((entry) => entry.imdbId === id || entry.tmdbId === id);
       state.selected = fromLocal || normalizeSelection({
@@ -637,13 +638,17 @@ async function handleRouteChange() {
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isSeriesLike(state.selected);
       renderDetail();
+      if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
       if (isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();
         renderDetail();
       }
-      if (shouldOpenPlayer) openPlayerModal(getCurrentEmbedUrl(buildEmbedUrl(state.selected)));
-      else closePlayerModal();
+      renderCatalog();
+      if (q.length >= 3) searchRemoteCatalog(q);
+      if (!shouldOpenPlayer) closePlayerModal();
     } else {
+      renderCatalog();
+      if (q.length >= 3) await searchRemoteCatalog(q);
       state.selected = null;
       state.seriesEpisodes = null;
       renderDetail();

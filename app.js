@@ -10,6 +10,7 @@ const state = {
   playback: { season: 1, episode: 1 }
 };
 let suppressRouteSync = false;
+let episodeIndexPromise = null;
 
 const elements = {
   search: document.querySelector('#search'),
@@ -109,7 +110,8 @@ function scheduleRemoteSearch() {
 async function searchRemoteCatalog(query) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
-    state.remoteResults = sortByRelevance(dedupe(results), query).slice(0, 36).map(normalizeSelection);
+    const filtered = await filterUnavailableSeries(results);
+    state.remoteResults = sortByRelevance(dedupe(filtered), query).slice(0, 36).map(normalizeSelection);
     cacheSearchResults(state.remoteResults);
     renderRemoteResults(query);
   } catch (error) {
@@ -368,6 +370,40 @@ async function fetchEpisodeIdListText() {
   if (!proxy?.ok) throw new Error('episodes list unavailable');
   const raw = await proxy.text();
   return normalizeJinaPayload(raw);
+}
+
+async function filterUnavailableSeries(results) {
+  const index = await getEpisodeSeriesIndex();
+  return results.filter((item) => {
+    if (item.type !== 'series') return true;
+    const imdbId = String(item.imdbId || '').trim();
+    if (!imdbId) return false;
+    return index.has(imdbId);
+  });
+}
+
+async function getEpisodeSeriesIndex() {
+  if (episodeIndexPromise) return episodeIndexPromise;
+
+  episodeIndexPromise = (async () => {
+    try {
+      const text = await fetchEpisodeIdListText();
+      const set = new Set();
+      for (const line of String(text || '').split('\n')) {
+        const value = line.trim();
+        if (!value.startsWith('tt')) continue;
+        const sep = value.indexOf('_');
+        if (sep <= 2) continue;
+        const id = value.slice(0, sep);
+        if (id.startsWith('tt')) set.add(id);
+      }
+      return set;
+    } catch {
+      return new Set();
+    }
+  })();
+
+  return episodeIndexPromise;
 }
 
 function normalizeJinaPayload(text) {

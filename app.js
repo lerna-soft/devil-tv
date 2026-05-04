@@ -192,7 +192,15 @@ function renderDetail() {
     <div id="playerModal" class="player-modal" hidden>
       <div class="player-modal-backdrop" data-close-player></div>
       <div class="player-modal-card">
-        <button class="player-close" id="closePlayer">Close</button>
+        <div class="player-controls">
+          ${isSeriesLike(title) ? `
+            <button class="player-nav" id="backToDetail">Volver a la serie</button>
+            <button class="player-nav" id="prevEpisode">Capítulo anterior</button>
+            <button class="player-nav" id="nextEpisode">Siguiente capítulo</button>
+          ` : `
+            <button class="player-nav" id="closePlayer">Cerrar</button>
+          `}
+        </div>
         <iframe id="player" src="about:blank" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" sandbox="allow-scripts allow-same-origin allow-presentation" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
@@ -214,6 +222,9 @@ function renderDetail() {
     syncRoute();
   });
   document.querySelector('#closePlayer')?.addEventListener('click', closePlayerModal);
+  document.querySelector('#backToDetail')?.addEventListener('click', closePlayerModal);
+  document.querySelector('#prevEpisode')?.addEventListener('click', () => jumpEpisode(-1, baseEmbed));
+  document.querySelector('#nextEpisode')?.addEventListener('click', () => jumpEpisode(1, baseEmbed));
   document.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => button.addEventListener('click', () => { state.playback.episode = positiveInteger(button.dataset.episode, 1); openPlayerModal(getCurrentEmbedUrl(baseEmbed)); syncRoute(); }));
@@ -241,6 +252,39 @@ function closePlayerModal() {
   document.body.classList.remove('player-active');
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
+}
+
+function jumpEpisode(direction, baseEmbed) {
+  if (!isSeriesLike(state.selected)) return;
+  const episodes = getEpisodesForSeason(state.playback.season);
+  const currentIndex = episodes.findIndex((entry) => entry.episode === state.playback.episode);
+
+  if (currentIndex >= 0) {
+    const target = episodes[currentIndex + direction];
+    if (target) {
+      state.playback.episode = target.episode;
+      openPlayerModal(getCurrentEmbedUrl(baseEmbed));
+      return;
+    }
+  }
+
+  if (direction > 0) {
+    const nextSeason = state.playback.season + 1;
+    const first = getEpisodesForSeason(nextSeason)[0];
+    if (!first) return;
+    state.playback.season = nextSeason;
+    state.playback.episode = first.episode;
+  } else {
+    const previousSeason = state.playback.season - 1;
+    if (previousSeason < 1) return;
+    const previousEpisodes = getEpisodesForSeason(previousSeason);
+    const last = previousEpisodes[previousEpisodes.length - 1];
+    if (!last) return;
+    state.playback.season = previousSeason;
+    state.playback.episode = last.episode;
+  }
+
+  openPlayerModal(getCurrentEmbedUrl(baseEmbed));
 }
 
 async function searchViaListingsAndImdb(query, typeFilter) {

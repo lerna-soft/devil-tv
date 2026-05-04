@@ -38,7 +38,6 @@ elements.tabs.forEach((tab) => {
   });
 });
 
-window.addEventListener('popstate', handleRouteChange);
 window.addEventListener('hashchange', handleRouteChange);
 handleRouteChange();
 
@@ -488,15 +487,16 @@ function syncRoute() {
   }
   const modal = document.querySelector('#playerModal');
   if (modal && !modal.hidden) params.set('player', '1');
-  const next = `${window.location.pathname}?${params.toString()}`;
-  const current = `${window.location.pathname}${window.location.search}`;
-  if (next !== current) window.history.replaceState({}, '', next);
+  const nextHash = `#/browse${params.toString() ? `?${params.toString()}` : ''}`;
+  if (window.location.hash !== nextHash) {
+    window.location.hash = nextHash;
+  }
 }
 
 async function handleRouteChange() {
   suppressRouteSync = true;
   try {
-    const params = new URLSearchParams(window.location.search);
+    const params = getRouteParams();
     const q = params.get('q') || '';
     const type = params.get('type') || 'all';
     const id = params.get('id') || '';
@@ -541,6 +541,20 @@ async function handleRouteChange() {
   } finally {
     suppressRouteSync = false;
   }
+}
+
+function getRouteParams() {
+  const hash = window.location.hash || '';
+  if (hash.startsWith('#/')) {
+    const queryIndex = hash.indexOf('?');
+    if (queryIndex >= 0) {
+      return new URLSearchParams(hash.slice(queryIndex + 1));
+    }
+    return new URLSearchParams();
+  }
+
+  // Backward compatibility for old ?query links.
+  return new URLSearchParams(window.location.search);
 }
 
 function escapeHtml(value) { return String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;'); }

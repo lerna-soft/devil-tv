@@ -387,11 +387,31 @@ h1 {
   background: rgba(12, 12, 16, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
+  color: var(--text) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.36rem;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   min-height: 2.2rem;
   padding: 0.48rem 0.9rem;
+  text-decoration: none;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.back-chip:hover {
+  background: rgba(20, 20, 26, 0.92);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.back-chip-icon {
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.back-chip-label {
+  line-height: 1;
 }
 
 .title-hero {

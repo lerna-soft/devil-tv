@@ -367,6 +367,7 @@ h1 {
 .detail-inner {
   display: grid;
   gap: 1rem;
+  align-items: start;
 }
 
 .detail-inner.overlay-open {
@@ -385,7 +386,7 @@ h1 {
   border-radius: 999px;
   color: var(--text) !important;
   display: inline-flex;
-  justify-self: start;
+  place-self: start;
   align-items: center;
   gap: 0.36rem;
   font-size: 0.82rem;

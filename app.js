@@ -249,18 +249,22 @@ function renderDetail(options = {}) {
     syncRoute();
   });
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
-  // Selecting an episode should not auto-play; only the explicit Play button does.
   document.querySelectorAll('[data-episode]').forEach((button) => {
-    const onSelect = () => {
+    const onSelect = (playNow = false) => {
       state.playback.episode = positiveInteger(button.dataset.episode, 1);
+      if (playNow) {
+        openPlayerForCurrentSelection();
+        return;
+      }
       renderDetail();
       syncRoute();
     };
-    button.addEventListener('click', onSelect);
+    // Direct episode jump: clicking an episode starts playback immediately.
+    button.addEventListener('click', () => onSelect(true));
     button.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
-      onSelect();
+      onSelect(true);
     });
   });
 

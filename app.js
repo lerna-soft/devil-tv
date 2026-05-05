@@ -202,7 +202,9 @@ function renderDetail(options = {}) {
         <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
         ${watched ? '<span class="episode-status">Visto</span>' : ''}
       </div>
-      ${!watched ? `<button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">${inProgress ? 'Continuar' : 'Play'}</button>` : ''}
+      <button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">
+        ${inProgress ? 'Continuar' : 'Play'}
+      </button>
     </article>`;
   }).join('') : '';
 

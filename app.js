@@ -8,7 +8,8 @@ const state = {
   lastRemoteQuery: '',
   isSearching: false,
   playback: { season: 1, episode: 1 },
-  playerOpening: false
+  playerOpening: false,
+  homeSectionView: null
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
@@ -94,19 +95,23 @@ function bindAuth() {
 bindAuth();
 
 elements.search.addEventListener('input', () => {
+  if (elements.search.value.trim().length > 0) state.homeSectionView = null;
   renderCatalog();
   scheduleRemoteSearch();
 });
 elements.typeFilter.addEventListener('change', () => {
+  state.homeSectionView = null;
   syncTabs(elements.typeFilter.value);
   renderCatalog();
   scheduleRemoteSearch();
 });
 elements.genreFilter?.addEventListener('change', () => {
+  state.homeSectionView = null;
   renderCatalog();
   scheduleRemoteSearch();
 });
 elements.sortFilter?.addEventListener('change', () => {
+  if (elements.search.value.trim().length > 0) state.homeSectionView = null;
   renderCatalog();
   if (state.remoteResults.length > 0 && elements.search.value.trim().length >= 3) {
     renderRemoteResults(elements.search.value.trim());
@@ -114,6 +119,7 @@ elements.sortFilter?.addEventListener('change', () => {
 });
 elements.tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
+    state.homeSectionView = null;
     elements.typeFilter.value = tab.dataset.typeTab;
     syncTabs(tab.dataset.typeTab);
     renderCatalog();
@@ -427,6 +433,10 @@ function renderCatalog() {
   const shouldShowHome = query.length === 0 && !state.selected;
 
   if (shouldShowHome) {
+    if (state.homeSectionView) {
+      renderHomeSectionList(baseFiltered, state.homeSectionView);
+      return;
+    }
     renderHomeCatalog(baseFiltered);
     return;
   }
@@ -442,27 +452,74 @@ function renderCatalog() {
 
 function renderHomeCatalog(baseFiltered) {
   const watch = buildWatchInsights();
-  const continueItems = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).slice(0, 18);
-  const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch)).slice(0, 18);
-  const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch)).slice(0, 18);
+  const continueItems = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
 
-  const section = (title, subtitle, items) => `
+  const section = (key, title, subtitle, items) => {
+    const preview = items.slice(0, 5);
+    const showMore = items.length > preview.length;
+    return `
     <section class="home-section">
       <div class="home-section-head">
         <h3>${escapeHtml(title)}</h3>
         <span>${escapeHtml(subtitle)}</span>
       </div>
-      <div class="home-rail">${items.length ? renderLocalCards(items) : '<div class="empty">Sin resultados por ahora.</div>'}</div>
+      <div class="home-rail">
+        ${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}
+        ${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><strong>Ver todo</strong><span>${escapeHtml(title)}</span></article>` : ''}
+      </div>
     </section>
   `;
+  };
 
   elements.count.textContent = `${baseFiltered.length} items`;
   elements.items.innerHTML = [
-    section('Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
-    section('Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
-    section('Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
+    section('continue', 'Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
+    section('movies_recommended', 'Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
+    section('series_recommended', 'Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
   ].join('');
   bindLocalCardEvents();
+  bindHomeSectionEvents();
+}
+
+function renderHomeSectionList(baseFiltered, sectionKey) {
+  const watch = buildWatchInsights();
+  let title = 'Listado';
+  let items = [];
+  if (sectionKey === 'continue') {
+    title = 'Continuar viendo';
+    items = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  } else if (sectionKey === 'movies_recommended') {
+    title = 'Peliculas que podrian gustarte';
+    items = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  } else if (sectionKey === 'series_recommended') {
+    title = 'Series que podrian gustarte';
+    items = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  }
+  elements.count.textContent = `${items.length} items`;
+  elements.items.innerHTML = `
+    <section class="home-section-list">
+      <div class="home-section-list-head">
+        <h3>${escapeHtml(title)}</h3>
+        <button type="button" id="homeBack">Volver al Home</button>
+      </div>
+      <div class="items">${items.length ? renderLocalCards(items) : '<div class="empty">Sin resultados por ahora.</div>'}</div>
+    </section>`;
+  bindLocalCardEvents();
+  document.querySelector('#homeBack')?.addEventListener('click', () => {
+    state.homeSectionView = null;
+    renderCatalog();
+  });
+}
+
+function bindHomeSectionEvents() {
+  elements.items.querySelectorAll('[data-home-seeall]').forEach((entry) => {
+    entry.addEventListener('click', () => {
+      state.homeSectionView = entry.dataset.homeSeeall || null;
+      renderCatalog();
+    });
+  });
 }
 
 function getFilteredLocalTitles() {

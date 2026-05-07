@@ -316,55 +316,7 @@ h1 {
   accent-color: #f3c84b;
 }
 
-.toggle-switch {
-  gap: 0.6rem;
-  padding: 0.5rem 0.65rem;
-}
-
-.toggle-switch input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  pointer-events: none;
-}
-
-.toggle-switch .toggle-text {
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.toggle-switch .toggle-ui {
-  width: 2.15rem;
-  height: 1.15rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.toggle-switch .toggle-ui::after {
-  content: "";
-  position: absolute;
-  top: 0.1rem;
-  left: 0.12rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  transition: transform 140ms ease, background 140ms ease;
-}
-
-.toggle-switch input[type="checkbox"]:checked ~ .toggle-ui {
-  background: rgba(243, 200, 75, 0.22);
-  border-color: rgba(243, 200, 75, 0.42);
-}
-
-.toggle-switch input[type="checkbox"]:checked ~ .toggle-ui::after {
-  transform: translateX(0.98rem);
-  background: rgba(243, 200, 75, 0.95);
-}
+/* Removed custom switch UI; keep simple checkbox toggle. */
 
 .auth-gate {
   position: fixed;

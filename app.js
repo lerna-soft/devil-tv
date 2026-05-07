@@ -21,8 +21,6 @@ const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const elements = {
   search: document.querySelector('#search'),
   typeFilter: document.querySelector('#typeFilter'),
-  playableOnly: document.querySelector('#playableOnly'),
-  playableOnlyWrap: document.querySelector('#playableOnlyWrap'),
   logoutBtn: document.querySelector('#logoutBtn'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
@@ -100,10 +98,6 @@ elements.typeFilter.addEventListener('change', () => {
   renderCatalog();
   scheduleRemoteSearch();
 });
-elements.playableOnly?.addEventListener('change', () => {
-  renderCatalog();
-  scheduleRemoteSearch();
-});
 elements.tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     elements.typeFilter.value = tab.dataset.typeTab;
@@ -124,9 +118,6 @@ function updateAuthUi() {
   if (!elements.logoutBtn) return;
   elements.logoutBtn.textContent = isAuthenticated() ? 'Salir' : 'Login';
   elements.logoutBtn.title = isAuthenticated() ? 'Cerrar sesión' : 'Iniciar sesión';
-  if (elements.playableOnlyWrap) {
-    elements.playableOnlyWrap.hidden = !isAuthenticated();
-  }
 }
 
 updateAuthUi();
@@ -379,8 +370,7 @@ function scheduleRemoteSearch() {
   if (!isAuthenticated()) return;
   const remoteKey = [
     query.toLowerCase(),
-    elements.typeFilter.value || 'all',
-    elements.playableOnly?.checked ? 'playable' : 'all'
+    elements.typeFilter.value || 'all'
   ].join('|');
   state.isSearching = true;
   renderCatalog();
@@ -403,9 +393,7 @@ async function searchRemoteCatalog(query) {
       if (!imdbId) return { ...item, playable: false };
       return { ...item, playable: playableIndex.has(imdbId) };
     });
-    const onlyPlayable = Boolean(elements.playableOnly?.checked);
-    const filtered = onlyPlayable ? withPlayable.filter((item) => item.playable !== false) : withPlayable;
-    state.remoteResults = sortByRelevance(dedupe(filtered), query).slice(0, 36).map(normalizeSelection);
+    state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     cacheSearchResults(state.remoteResults);
     renderRemoteResults(query);
   } catch (error) {
@@ -429,7 +417,7 @@ function renderRemoteResults(query) {
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
-  }).join('') || `<div class="empty">${elements.playableOnly?.checked ? 'No playable results found for this query.' : 'No results found for this query.'}</div>`;
+  }).join('') || '<div class="empty">No results found for this query.</div>';
 
   elements.items.querySelectorAll('[data-remote-index]').forEach((item) => {
     item.addEventListener('click', () => {

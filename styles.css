@@ -432,6 +432,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.85rem;
+  gap: 0.65rem;
 }
 
 .catalog-header h2 {
@@ -440,6 +441,17 @@ h1 {
 
 .catalog-header span {
   color: var(--muted);
+}
+
+.catalog-header-tools {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+#sortFilter {
+  min-height: 2.1rem;
+  padding: 0.48rem 0.7rem;
 }
 
 .items {
@@ -1128,6 +1140,16 @@ code {
   .items {
     gap: 0.8rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .catalog-header-tools {
+    justify-content: space-between;
+    width: 100%;
   }
 
   .item strong {

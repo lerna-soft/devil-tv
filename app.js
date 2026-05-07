@@ -24,6 +24,7 @@ const elements = {
   search: document.querySelector('#search'),
   typeFilter: document.querySelector('#typeFilter'),
   genreFilter: document.querySelector('#genreFilter'),
+  sortFilter: document.querySelector('#sortFilter'),
   logoutBtn: document.querySelector('#logoutBtn'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
@@ -104,6 +105,12 @@ elements.typeFilter.addEventListener('change', () => {
 elements.genreFilter?.addEventListener('change', () => {
   renderCatalog();
   scheduleRemoteSearch();
+});
+elements.sortFilter?.addEventListener('change', () => {
+  renderCatalog();
+  if (state.remoteResults.length > 0 && elements.search.value.trim().length >= 3) {
+    renderRemoteResults(elements.search.value.trim());
+  }
 });
 elements.tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -415,7 +422,7 @@ function bindTap(element, handler) {
 function renderCatalog() {
   const query = elements.search.value.trim();
   populateGenreFilter();
-  const filtered = getFilteredLocalTitles();
+  const filtered = sortTitles(getFilteredLocalTitles());
   elements.count.textContent = `${filtered.length} items`;
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
@@ -530,7 +537,7 @@ async function searchRemoteCatalog(query) {
 
 function renderRemoteResults(query) {
   const localResults = getFilteredLocalTitles();
-  const merged = mergeAndRankResults(localResults, state.remoteResults, query);
+  const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, query));
   elements.count.textContent = `${merged.length} matches for "${query}"`;
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
@@ -562,6 +569,45 @@ function renderRemoteResults(query) {
     });
   });
   bindLocalCardEvents();
+}
+
+function getSortMode() {
+  return elements.sortFilter?.value || 'relevance';
+}
+
+function sortTitles(titles) {
+  const mode = getSortMode();
+  const items = [...titles];
+  if (mode === 'az') return items.sort((a, b) => String(a.title || '').localeCompare(String(b.title || ''), 'es', { sensitivity: 'base' }));
+  if (mode === 'za') return items.sort((a, b) => String(b.title || '').localeCompare(String(a.title || ''), 'es', { sensitivity: 'base' }));
+  if (mode === 'year_desc') return items.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
+  if (mode === 'year_asc') return items.sort((a, b) => {
+    const ay = Number(a.year) || 0;
+    const by = Number(b.year) || 0;
+    if (!ay && !by) return 0;
+    if (!ay) return 1;
+    if (!by) return -1;
+    return ay - by;
+  });
+  return items;
+}
+
+function sortResultEntries(entries) {
+  const mode = getSortMode();
+  if (mode === 'relevance') return entries;
+  const items = [...entries];
+  if (mode === 'az') return items.sort((a, b) => String(a.title?.title || '').localeCompare(String(b.title?.title || ''), 'es', { sensitivity: 'base' }));
+  if (mode === 'za') return items.sort((a, b) => String(b.title?.title || '').localeCompare(String(a.title?.title || ''), 'es', { sensitivity: 'base' }));
+  if (mode === 'year_desc') return items.sort((a, b) => (Number(b.title?.year) || 0) - (Number(a.title?.year) || 0));
+  if (mode === 'year_asc') return items.sort((a, b) => {
+    const ay = Number(a.title?.year) || 0;
+    const by = Number(b.title?.year) || 0;
+    if (!ay && !by) return 0;
+    if (!ay) return 1;
+    if (!by) return -1;
+    return ay - by;
+  });
+  return items;
 }
 
 function renderDetail(options = {}) {

@@ -123,7 +123,7 @@ function getTmdbReadToken() {
 async function tmdbFetchJson(path, params) {
   const token = getTmdbReadToken();
   if (!token) throw new Error('missing TMDB read token');
-  const url = new URL(`https://api.themoviedb.org/3/${String(path).replace(/^\\//, '')}`);
+  const url = new URL(`https://api.themoviedb.org/3/${String(path).replace(/^\/+/, '')}`);
   for (const [k, v] of Object.entries(params || {})) {
     if (v === undefined || v === null || v === '') continue;
     url.searchParams.set(k, String(v));

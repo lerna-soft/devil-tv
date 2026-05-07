@@ -1093,7 +1093,7 @@ code {
   }
 
   .title-hero {
-    min-height: 14.4rem;
+    min-height: 0;
     padding: 0.8rem;
   }
 

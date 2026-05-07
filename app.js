@@ -556,7 +556,8 @@ function renderDetail(options = {}) {
         <span class="back-chip-icon" aria-hidden="true">←</span>
         <span class="back-chip-label">Inicio</span>
       </button>
-      <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
+      <section class="title-hero">
+        <div class="title-hero-bg" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}"></div>
         <div class="title-copy">
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
@@ -631,7 +632,8 @@ function renderDetail(options = {}) {
       <span class="back-chip-icon" aria-hidden="true">←</span>
       <span class="back-chip-label">Inicio</span>
     </button>
-    <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
+    <section class="title-hero">
+      <div class="title-hero-bg" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}"></div>
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>

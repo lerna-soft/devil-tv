@@ -530,18 +530,28 @@ body.detail-active .toolbar {
 }
 
 .title-hero {
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow);
+  min-height: 31rem;
+  overflow: visible;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  position: relative;
+}
+
+.title-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
   background:
     linear-gradient(90deg, rgba(5, 5, 9, 0.96) 0%, rgba(5, 5, 9, 0.72) 42%, rgba(5, 5, 9, 0.16) 100%),
     var(--poster),
     var(--surface);
   background-position: center;
   background-size: cover;
-  border: 1px solid var(--line);
-  border-radius: 1.4rem;
-  box-shadow: var(--shadow);
-  min-height: 31rem;
-  overflow: hidden;
-  padding: clamp(1.5rem, 5vw, 4rem);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .title-copy {
@@ -551,6 +561,8 @@ body.detail-active .toolbar {
   justify-content: flex-end;
   min-height: 0;
   max-width: 46rem;
+  position: relative;
+  z-index: 1;
 }
 
 .title-copy h2 {

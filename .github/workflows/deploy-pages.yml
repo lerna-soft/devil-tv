@@ -44,6 +44,25 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prefetch episode index (local asset for runtime speed)
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p assets
+          tmp_file="$(mktemp)"
+          if curl -fsSL --max-time 25 "https://vidapi.ru/ids/eps_list_imdb.txt" -o "$tmp_file"; then
+            :
+          elif curl -fsSL --max-time 35 "https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt" -o "$tmp_file"; then
+            :
+          else
+            echo "Could not fetch episode index from remote sources"
+            exit 1
+          fi
+          # Normalize potential jina prefix and keep only imdb episode ids lines.
+          awk '/^tt[0-9]+_[0-9]+x[0-9]+/ {print}' "$tmp_file" > assets/eps_list_imdb.txt
+          test -s assets/eps_list_imdb.txt
+          echo "Episode index lines: $(wc -l < assets/eps_list_imdb.txt)"
+
       - name: Upload Pages Artifact (site root)
         uses: actions/upload-pages-artifact@v3
         with:

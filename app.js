@@ -1290,6 +1290,17 @@ async function fetchEpisodeIdListText(options = {}) {
   }
 
   episodeListTextPromise = (async () => {
+    const local = await fetchWithTimeout('./assets/eps_list_imdb.txt', {
+      headers: { accept: 'text/plain' }
+    }, 2500).catch(() => null);
+    if (local?.ok) {
+      const text = await local.text();
+      if (String(text || '').trim()) {
+        saveEpisodeListCache(text);
+        return text;
+      }
+    }
+
     const direct = await fetchWithTimeout('https://vidapi.ru/ids/eps_list_imdb.txt', {
       headers: { accept: 'text/plain' }
     }, 5000).catch(() => null);

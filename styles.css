@@ -258,10 +258,14 @@ h1 {
 
 .toolbar {
   align-items: center;
+  background: #11131a;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr auto;
   margin: 1.1rem 0 1.4rem;
+  padding: 0.7rem;
 }
 
 .imports {
@@ -1083,7 +1087,7 @@ code {
   }
 
   .toolbar {
-    background: rgba(255, 255, 255, 0.03);
+    background: #11131a;
     border: 1px solid var(--line);
     border-radius: 0.9rem;
     margin: 0.65rem 0 1rem;

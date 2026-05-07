@@ -10,10 +10,14 @@ const state = {
   isSearching: false,
   playback: { season: 1, episode: 1 },
   playerOpening: false,
-  homeSectionView: null
+  homeSectionView: null,
+  playerFallbackTimer: null,
+  playerFallbackUrls: [],
+  playerEventAt: 0
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
+let episodeListTextPromise = null;
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
@@ -21,6 +25,9 @@ const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
+const EPS_LIST_CACHE_KEY = 'mep_eps_list_cache_v1';
+const EPS_LIST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
+const PLAYER_FALLBACK_DELAY_MS = 6500;
 
 const elements = {
   search: document.querySelector('#search'),
@@ -698,13 +705,7 @@ function scheduleSearchCommit() {
 async function searchRemoteCatalog(query) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
-    const playableIndex = await getEpisodeSeriesIndex();
-    const withPlayable = results.map((item) => {
-      if (item.type !== 'series') return { ...item, playable: true };
-      const imdbId = String(item.imdbId || '').trim();
-      if (!imdbId) return { ...item, playable: false };
-      return { ...item, playable: playableIndex.has(imdbId) };
-    });
+    const withPlayable = results.map((item) => ({ ...item, playable: true }));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     cacheSearchResults(state.remoteResults);
     renderRemoteResults(query);
@@ -1071,6 +1072,7 @@ function renderDetail(options = {}) {
 function openPlayerModal(embedUrl) {
   if (state.playerOpening) return;
   state.playerOpening = true;
+  clearPlayerFallback();
   persistLastSelection();
   const modal = elements.playerModal;
   const card = modal?.querySelector('.player-modal-card');
@@ -1082,6 +1084,7 @@ function openPlayerModal(embedUrl) {
 
   renderPlayerControls();
   iframe.src = embedUrl;
+  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
   modal.hidden = false;
   document.body.classList.add('player-active');
   requestNativeFullscreen(card);
@@ -1093,6 +1096,7 @@ function closePlayerModal() {
   const modal = elements.playerModal;
   const iframe = elements.playerIframe;
   if (!modal || !iframe) return;
+  clearPlayerFallback();
   modal.hidden = true;
   iframe.src = 'about:blank';
   document.body.classList.remove('player-active');
@@ -1240,7 +1244,7 @@ async function loadSeriesEpisodes(options = {}) {
       }
     }
 
-    const text = await fetchEpisodeIdListText();
+    const text = await fetchEpisodeIdListText({ forceRefresh });
     state.seriesEpisodes = buildEpisodesFromIdList(imdbId, text);
     if ((state.seriesEpisodes?.seasons?.length ?? 0) > 0) {
       cacheSeriesEpisodes(imdbId, state.seriesEpisodes);
@@ -1252,14 +1256,62 @@ async function loadSeriesEpisodes(options = {}) {
   }
 }
 
-async function fetchEpisodeIdListText() {
-  const direct = await fetch('https://vidapi.ru/ids/eps_list_imdb.txt', { headers: { accept: 'text/plain' } }).catch(() => null);
-  if (direct?.ok) return direct.text();
+function loadEpisodeListCache() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(EPS_LIST_CACHE_KEY) || 'null');
+    if (!cached || typeof cached !== 'object') return null;
+    const createdAt = Number(cached.createdAt || 0);
+    const text = String(cached.text || '');
+    if (!createdAt || !text) return null;
+    if ((Date.now() - createdAt) > EPS_LIST_CACHE_TTL_MS) return null;
+    return text;
+  } catch {
+    return null;
+  }
+}
 
-  const proxy = await fetch('https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt').catch(() => null);
-  if (!proxy?.ok) throw new Error('episodes list unavailable');
-  const raw = await proxy.text();
-  return normalizeJinaPayload(raw);
+function saveEpisodeListCache(text) {
+  try {
+    const normalized = String(text || '');
+    if (!normalized) return;
+    localStorage.setItem(EPS_LIST_CACHE_KEY, JSON.stringify({
+      createdAt: Date.now(),
+      text: normalized
+    }));
+  } catch {}
+}
+
+async function fetchEpisodeIdListText(options = {}) {
+  const { forceRefresh = false } = options;
+  if (!forceRefresh) {
+    const cached = loadEpisodeListCache();
+    if (cached) return cached;
+    if (episodeListTextPromise) return episodeListTextPromise;
+  }
+
+  episodeListTextPromise = (async () => {
+    const direct = await fetchWithTimeout('https://vidapi.ru/ids/eps_list_imdb.txt', {
+      headers: { accept: 'text/plain' }
+    }, 5000).catch(() => null);
+    if (direct?.ok) {
+      const text = await direct.text();
+      saveEpisodeListCache(text);
+      return text;
+    }
+
+    const proxy = await fetchWithTimeout('https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt', {}, 7000).catch(() => null);
+    if (!proxy?.ok) throw new Error('episodes list unavailable');
+    const raw = await proxy.text();
+    const normalized = normalizeJinaPayload(raw);
+    saveEpisodeListCache(normalized);
+    return normalized;
+  })();
+
+  try {
+    return await episodeListTextPromise;
+  } finally {
+    episodeListTextPromise = null;
+  }
 }
 
 async function filterUnavailableSeries(results) {
@@ -1397,11 +1449,60 @@ function getPlaybackId(entry) {
   }
   return /^tt\d+$/i.test(imdb) ? imdb : (imdb || tmdb);
 }
+function getPlaybackCandidateIds(entry) {
+  const imdb = String(entry?.imdbId || '').trim();
+  const tmdb = String(entry?.tmdbId || '').trim();
+  const ids = [];
+  if (entry?.type === 'series') {
+    if (/^tt\d+$/i.test(imdb)) ids.push(imdb);
+    if (tmdb) ids.push(tmdb);
+    if (imdb && !ids.includes(imdb)) ids.push(imdb);
+  } else {
+    if (/^tt\d+$/i.test(imdb)) ids.push(imdb);
+    if (imdb && !ids.includes(imdb)) ids.push(imdb);
+    if (tmdb && !ids.includes(tmdb)) ids.push(tmdb);
+  }
+  return ids.filter(Boolean);
+}
 function buildEmbedUrl(entry) {
   const id = getPlaybackId(entry);
   return entry.type === 'movie'
     ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
     : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`;
+}
+function getPlaybackUrlsForCurrentSelection(primaryUrl) {
+  if (!state.selected) return [primaryUrl];
+  const ids = getPlaybackCandidateIds(state.selected);
+  if (!ids.length) return [primaryUrl];
+  const media = state.selected.type === 'movie' ? 'movie' : 'tv';
+  const suffix = media === 'movie'
+    ? ''
+    : `/${state.playback.season || 1}/${state.playback.episode || 1}`;
+  const urls = ids.map((id) => `https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
+  if (primaryUrl && !urls.includes(primaryUrl)) urls.unshift(primaryUrl);
+  return [...new Set(urls)];
+}
+function clearPlayerFallback() {
+  if (state.playerFallbackTimer) {
+    clearTimeout(state.playerFallbackTimer);
+    state.playerFallbackTimer = null;
+  }
+  state.playerFallbackUrls = [];
+}
+function schedulePlayerFallback(urls) {
+  clearPlayerFallback();
+  const candidates = Array.isArray(urls) ? urls.filter(Boolean) : [];
+  if (candidates.length < 2) return;
+  state.playerFallbackUrls = candidates;
+  state.playerFallbackTimer = setTimeout(() => {
+    const modal = elements.playerModal;
+    const iframe = elements.playerIframe;
+    if (!modal || !iframe || modal.hidden) return;
+    if (state.playerEventAt > 0 && (Date.now() - state.playerEventAt) <= PLAYER_FALLBACK_DELAY_MS) return;
+    const current = String(iframe.src || '');
+    const next = candidates.find((url) => String(url) !== current);
+    if (next) iframe.src = next;
+  }, PLAYER_FALLBACK_DELAY_MS);
 }
 function isSeriesLike(title) { return title.type === 'series' || title.type === 'episode'; }
 function getCurrentEmbedUrl(baseEmbed) {
@@ -1499,6 +1600,7 @@ function applySavedWatchState(title) {
 
 window.addEventListener('message', (event) => {
   if (event.data?.type !== 'PLAYER_EVENT') return;
+  state.playerEventAt = Date.now();
   const data = event.data.data || {};
   persistProgressFromPlayerEvent(data);
   if (data.player_status !== 'completed' || !isSeriesLike(state.selected)) return;

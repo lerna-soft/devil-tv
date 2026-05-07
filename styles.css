@@ -519,6 +519,11 @@ body.detail-active .catalog {
   display: none;
 }
 
+body.detail-active .topbar,
+body.detail-active .toolbar {
+  display: none;
+}
+
 .back-chip {
   background: rgba(12, 12, 16, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.16);

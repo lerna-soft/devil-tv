@@ -60,9 +60,9 @@ function bindAuth() {
 
   elements.authForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const email = String(elements.authEmail.value || '').trim();
-    const password = String(elements.authPassword.value || '');
-    if (email === AUTH_EMAIL && password === AUTH_PASSWORD) {
+    const email = String(elements.authEmail.value || '').trim().toLowerCase();
+    const password = String(elements.authPassword.value || '').trim();
+    if (email === AUTH_EMAIL.toLowerCase() && password === AUTH_PASSWORD) {
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
       hideAuthGate();
       updateAuthUi();
@@ -354,11 +354,11 @@ function bindLocalCardEvents() {
     item.addEventListener('click', async () => {
       state.selected = loadLocalCatalog().find((title) => title.catalogKey === item.dataset.key);
       state.seriesEpisodes = null;
-      state.seriesEpisodesLoading = isSeriesLike(state.selected);
+      state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       state.hydratedProgressId = '';
       renderCatalog();
       renderDetail();
-      if (isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
+      if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute();
     });
   });
@@ -406,7 +406,6 @@ async function searchRemoteCatalog(query) {
 }
 
 function renderRemoteResults(query) {
-  if (!isAuthenticated()) return;
   const localResults = getFilteredLocalTitles();
   const merged = mergeAndRankResults(localResults, state.remoteResults, query);
   elements.count.textContent = `${merged.length} matches for "${query}"`;
@@ -638,6 +637,10 @@ function closePlayerModal() {
 }
 
 function openPlayerForCurrentSelection() {
+  if (!isAuthenticated()) {
+    showAuthGate();
+    return;
+  }
   const modal = elements.playerModal;
   if (modal && !modal.hidden) return;
   if (!state.selected) return;

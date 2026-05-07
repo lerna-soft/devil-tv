@@ -748,8 +748,15 @@ async function searchVidapiListings(query, typeFilter) {
 }
 
 async function searchImdbSuggestionsViaJina(query, typeFilter) {
-  const normalized = query.trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
-  const response = await fetch(`https://r.jina.ai/http://v3.sg.media-imdb.com/suggestion/x/${encodeURIComponent(normalized)}.json`);
+  const normalized = query
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+  const bucket = normalized[0] || 'x';
+  const response = await fetch(`https://r.jina.ai/http://v3.sg.media-imdb.com/suggestion/${encodeURIComponent(bucket)}/${encodeURIComponent(normalized)}.json`);
   if (!response.ok) return [];
   const text = await response.text();
   const start = text.indexOf('{');

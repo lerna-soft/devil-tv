@@ -460,6 +460,34 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(9.2rem, 1fr));
 }
 
+.home-section {
+  margin-bottom: 1.1rem;
+}
+
+.home-section-head {
+  align-items: baseline;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: space-between;
+  margin: 0 0 0.55rem;
+}
+
+.home-section-head h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.home-section-head span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.home-rail {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fill, minmax(9.2rem, 1fr));
+}
+
 .item {
   background: transparent;
   color: var(--text);
@@ -1138,6 +1166,11 @@ code {
   }
 
   .items {
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-rail {
     gap: 0.8rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

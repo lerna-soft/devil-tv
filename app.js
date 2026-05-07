@@ -422,7 +422,15 @@ function bindTap(element, handler) {
 function renderCatalog() {
   const query = elements.search.value.trim();
   populateGenreFilter();
-  const filtered = sortTitles(getFilteredLocalTitles());
+  const baseFiltered = getFilteredLocalTitles();
+  const filtered = sortTitles(baseFiltered);
+  const shouldShowHome = query.length === 0 && !state.selected;
+
+  if (shouldShowHome) {
+    renderHomeCatalog(baseFiltered);
+    return;
+  }
+
   elements.count.textContent = `${filtered.length} items`;
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
@@ -430,6 +438,31 @@ function renderCatalog() {
   if (filtered.length === 0 && query.length >= 3 && state.isSearching) {
     elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Searching IMDb/TMDB</strong><p>Looking for playable titles...</p></div>`;
   }
+}
+
+function renderHomeCatalog(baseFiltered) {
+  const watch = buildWatchInsights();
+  const continueItems = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).slice(0, 18);
+  const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch)).slice(0, 18);
+  const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch)).slice(0, 18);
+
+  const section = (title, subtitle, items) => `
+    <section class="home-section">
+      <div class="home-section-head">
+        <h3>${escapeHtml(title)}</h3>
+        <span>${escapeHtml(subtitle)}</span>
+      </div>
+      <div class="home-rail">${items.length ? renderLocalCards(items) : '<div class="empty">Sin resultados por ahora.</div>'}</div>
+    </section>
+  `;
+
+  elements.count.textContent = `${baseFiltered.length} items`;
+  elements.items.innerHTML = [
+    section('Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
+    section('Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
+    section('Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
+  ].join('');
+  bindLocalCardEvents();
 }
 
 function getFilteredLocalTitles() {
@@ -578,6 +611,7 @@ function getSortMode() {
 function sortTitles(titles) {
   const mode = getSortMode();
   const items = [...titles];
+  const watch = buildWatchInsights();
   if (mode === 'az') return items.sort((a, b) => String(a.title || '').localeCompare(String(b.title || ''), 'es', { sensitivity: 'base' }));
   if (mode === 'za') return items.sort((a, b) => String(b.title || '').localeCompare(String(a.title || ''), 'es', { sensitivity: 'base' }));
   if (mode === 'year_desc') return items.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
@@ -589,12 +623,15 @@ function sortTitles(titles) {
     if (!by) return -1;
     return ay - by;
   });
+  if (mode === 'most_watched') return items.sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  if (mode === 'recommended') return items.sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   return items;
 }
 
 function sortResultEntries(entries) {
   const mode = getSortMode();
   if (mode === 'relevance') return entries;
+  const watch = buildWatchInsights();
   const items = [...entries];
   if (mode === 'az') return items.sort((a, b) => String(a.title?.title || '').localeCompare(String(b.title?.title || ''), 'es', { sensitivity: 'base' }));
   if (mode === 'za') return items.sort((a, b) => String(b.title?.title || '').localeCompare(String(a.title?.title || ''), 'es', { sensitivity: 'base' }));
@@ -607,7 +644,67 @@ function sortResultEntries(entries) {
     if (!by) return -1;
     return ay - by;
   });
+  if (mode === 'most_watched') return items.sort((a, b) => (watch.scores[getTitleId(b.title)] || 0) - (watch.scores[getTitleId(a.title)] || 0));
+  if (mode === 'recommended') return items.sort((a, b) => recommendationScore(b.title, watch) - recommendationScore(a.title, watch));
   return items;
+}
+
+function buildWatchInsights() {
+  const scores = {};
+  const genreWeights = {};
+  const actorWeights = {};
+  const catalog = loadLocalCatalog();
+  const byId = {};
+  for (const title of catalog) {
+    const id = getTitleId(title);
+    if (id) byId[id] = title;
+  }
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i) || '';
+    if (!key.startsWith('mep_series_progress_')) continue;
+    const id = key.replace('mep_series_progress_', '');
+    const data = safeJson(localStorage.getItem(key));
+    const watched = data?.watched || {};
+    let score = 0;
+    for (const record of Object.values(watched)) {
+      if (record === true) { score += 1; continue; }
+      if (!record || typeof record !== 'object') continue;
+      score += record.completedAt ? 1.5 : 0.5;
+      score += Number(record.lastProgress || 0) / 120;
+    }
+    if (score <= 0) continue;
+    scores[id] = (scores[id] || 0) + score;
+    const title = byId[id];
+    const genres = title?.metadata?.genres || [];
+    const cast = title?.metadata?.cast || [];
+    for (const g of genres) genreWeights[g] = (genreWeights[g] || 0) + score;
+    for (const c of cast.slice(0, 8)) actorWeights[c] = (actorWeights[c] || 0) + score;
+  }
+
+  const lastWatch = safeJson(localStorage.getItem('mep_last_watch'));
+  if (lastWatch) {
+    const id = lastWatch.imdbId || lastWatch.tmdbId;
+    if (id) scores[id] = (scores[id] || 0) + 2;
+  }
+  return { scores, genreWeights, actorWeights };
+}
+
+function recommendationScore(title, watch) {
+  const id = getTitleId(title);
+  const watchBoost = watch.scores[id] || 0;
+  const genres = title?.metadata?.genres || [];
+  const cast = title?.metadata?.cast || [];
+  let score = watchBoost * 2;
+  for (const g of genres) score += watch.genreWeights[g] || 0;
+  for (const c of cast.slice(0, 8)) score += (watch.actorWeights[c] || 0) * 0.5;
+  if (title.posterUrl) score += 1;
+  if (title.type === 'series') score += 0.25;
+  return score;
+}
+
+function safeJson(text) {
+  try { return JSON.parse(text || 'null'); } catch { return null; }
 }
 
 function renderDetail(options = {}) {

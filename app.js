@@ -369,11 +369,16 @@ function scheduleRemoteSearch() {
   const query = elements.search.value.trim();
   if (query.length < 3) return;
   if (!isAuthenticated()) return;
+  const remoteKey = [
+    query.toLowerCase(),
+    elements.typeFilter.value || 'all',
+    elements.playableOnly?.checked ? 'playable' : 'all'
+  ].join('|');
   state.isSearching = true;
   renderCatalog();
   state.remoteSearchTimer = setTimeout(async () => {
-    if (state.lastRemoteQuery === query.toLowerCase()) return;
-    state.lastRemoteQuery = query.toLowerCase();
+    if (state.lastRemoteQuery === remoteKey) return;
+    state.lastRemoteQuery = remoteKey;
     await searchRemoteCatalog(query);
     state.isSearching = false;
     syncRoute();

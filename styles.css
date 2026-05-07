@@ -266,6 +266,9 @@ h1 {
   grid-template-columns: 1fr auto;
   margin: 1.1rem 0 1.4rem;
   padding: 0.7rem;
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
 .imports {
@@ -1092,7 +1095,9 @@ code {
     border-radius: 0.9rem;
     margin: 0.65rem 0 1rem;
     padding: 0.55rem;
-    position: static;
+    position: sticky;
+    top: 5.1rem;
+    z-index: 45;
   }
 
   .filters {

@@ -1388,9 +1388,27 @@ function normalizeSelection(remote) {
   const id = remote.imdbId || remote.tmdbId;
   return { catalogKey: `${remote.type}:${remote.imdbId ? 'imdb' : 'tmdb'}:${id}`, ...remote };
 }
-function buildEmbedUrl(entry) { const id = entry.imdbId || entry.tmdbId; return entry.type === 'movie' ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}` : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`; }
+function getPlaybackId(entry) {
+  const imdb = String(entry?.imdbId || '').trim();
+  const tmdb = String(entry?.tmdbId || '').trim();
+  if (entry?.type === 'series') {
+    if (/^tt\d+$/i.test(imdb)) return imdb;
+    return tmdb || imdb;
+  }
+  return /^tt\d+$/i.test(imdb) ? imdb : (imdb || tmdb);
+}
+function buildEmbedUrl(entry) {
+  const id = getPlaybackId(entry);
+  return entry.type === 'movie'
+    ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
+    : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`;
+}
 function isSeriesLike(title) { return title.type === 'series' || title.type === 'episode'; }
-function getCurrentEmbedUrl(baseEmbed) { if (!isSeriesLike(state.selected)) return baseEmbed; const id = state.selected.imdbId || state.selected.tmdbId; return `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season}/${state.playback.episode}`; }
+function getCurrentEmbedUrl(baseEmbed) {
+  if (!isSeriesLike(state.selected)) return baseEmbed;
+  const id = getPlaybackId(state.selected);
+  return `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season}/${state.playback.episode}`;
+}
 function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisodes?.seasons ?? []).find((entry) => entry.seasonNumber === seasonNumber); return season?.episodes ?? []; }
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }
 function syncTabs(type) { elements.tabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.typeTab === type)); }

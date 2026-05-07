@@ -821,11 +821,15 @@ function renderDetail(options = {}) {
   const title = state.selected;
   if (!title) {
     document.body.classList.remove('detail-active');
-    elements.detail.innerHTML = '<div class="empty">Search and select a title to preview.</div>';
+    if (elements.detail) {
+      elements.detail.hidden = true;
+      elements.detail.innerHTML = '';
+    }
     return;
   }
 
   document.body.classList.add('detail-active');
+  if (elements.detail) elements.detail.hidden = false;
 
   if (!isAuthenticated()) {
     const poster = title.posterUrl || '';

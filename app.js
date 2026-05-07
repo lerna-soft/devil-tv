@@ -5,6 +5,7 @@ const state = {
   hydratedProgressId: '',
   remoteResults: [],
   remoteSearchTimer: null,
+  searchCommitTimer: null,
   lastRemoteQuery: '',
   isSearching: false,
   playback: { season: 1, episode: 1 },
@@ -98,6 +99,7 @@ elements.search.addEventListener('input', () => {
   if (elements.search.value.trim().length > 0) state.homeSectionView = null;
   renderCatalog();
   scheduleRemoteSearch();
+  scheduleSearchCommit();
 });
 elements.typeFilter.addEventListener('change', () => {
   state.homeSectionView = null;
@@ -657,6 +659,18 @@ function scheduleRemoteSearch() {
     state.isSearching = false;
     syncRoute();
   }, 450);
+}
+
+function scheduleSearchCommit() {
+  clearTimeout(state.searchCommitTimer);
+  state.searchCommitTimer = setTimeout(async () => {
+    const query = elements.search.value.trim();
+    state.lastRemoteQuery = '';
+    syncRoute();
+    if (!isAuthenticated()) return;
+    if (query.length < 3) return;
+    await searchRemoteCatalog(query);
+  }, 2000);
 }
 
 async function searchRemoteCatalog(query) {

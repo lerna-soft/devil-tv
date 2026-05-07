@@ -489,7 +489,11 @@ h1 {
   overflow-y: auto;
   padding: 1rem clamp(1rem, 4vw, 2.4rem) 2rem;
   position: fixed;
-  z-index: 70;
+  z-index: 40;
+}
+
+body.detail-active .toolbar {
+  display: none;
 }
 
 .back-chip {

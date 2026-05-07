@@ -540,6 +540,7 @@ function renderDetail(options = {}) {
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
           ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
           ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
+          ${isSeriesLike(title) && isAuthenticated() ? `<button id="refreshEpisodes"${state.seriesEpisodesLoading ? ' disabled' : ''}>Actualizar capítulos</button>` : ''}
         </div>
       </div>
     </section>
@@ -559,6 +560,17 @@ function renderDetail(options = {}) {
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
     openPlayerForCurrentSelection();
+  });
+  bindTap(document.querySelector('#refreshEpisodes'), async () => {
+    const imdbId = state.selected?.imdbId || '';
+    if (!imdbId) return;
+    try { localStorage.removeItem(`mep_series_eps_${imdbId}`); } catch {}
+    episodeIndexPromise = null;
+    state.seriesEpisodes = null;
+    state.seriesEpisodesLoading = true;
+    renderDetail({ skipHydratePlayback: true });
+    await loadSeriesEpisodes({ forceRefresh: true });
+    renderDetail({ skipHydratePlayback: true });
   });
   bindTap(document.querySelector('#requestTitle'), () => {
     const id = title.imdbId || title.tmdbId || '';
@@ -774,18 +786,21 @@ async function searchImdbSuggestionsViaJina(query, typeFilter) {
     .filter((result) => typeFilter === 'all' || result.type === typeFilter);
 }
 
-async function loadSeriesEpisodes() {
+async function loadSeriesEpisodes(options = {}) {
+  const { forceRefresh = false } = options;
   if (!state.selected || !isSeriesLike(state.selected)) return;
   state.seriesEpisodesLoading = true;
   try {
     const imdbId = state.selected.imdbId || '';
     if (!imdbId) throw new Error('missing imdb id');
 
-    const cached = loadCachedSeriesEpisodes(imdbId);
-    if (cached?.seasons?.length) {
-      state.seriesEpisodes = cached;
-      state.seriesEpisodesLoading = false;
-      return;
+    if (!forceRefresh) {
+      const cached = loadCachedSeriesEpisodes(imdbId);
+      if (cached?.seasons?.length) {
+        state.seriesEpisodes = cached;
+        state.seriesEpisodesLoading = false;
+        return;
+      }
     }
 
     const text = await fetchEpisodeIdListText();

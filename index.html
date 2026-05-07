@@ -15,6 +15,25 @@
     </script>
   </head>
   <body>
+    <div id="authGate" class="auth-gate" hidden>
+      <div class="auth-card" role="dialog" aria-modal="true" aria-label="Login">
+        <h2>Login</h2>
+        <p class="auth-hint">Acceso restringido.</p>
+        <form id="authForm" class="auth-form">
+          <label>
+            <span>Email</span>
+            <input id="authEmail" type="email" autocomplete="username" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input id="authPassword" type="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Entrar</button>
+          <p id="authError" class="auth-error" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
     <main class="shell">
       <header class="topbar">
         <div class="brand-mark" aria-label="Devil TV">
@@ -36,6 +55,11 @@
             <option value="movie">Movies</option>
             <option value="series">Series</option>
           </select>
+          <label class="toggle" title="ON: solo muestra títulos reproducibles por la fuente actual. OFF: también muestra títulos que existen pero que no están disponibles para ver en este momento.">
+            <input id="playableOnly" type="checkbox" checked />
+            <span>Solo reproducibles</span>
+          </label>
+          <button id="logoutBtn" class="ghost" type="button" title="Cerrar sesión">Salir</button>
         </div>
       </section>
 

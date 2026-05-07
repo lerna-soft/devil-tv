@@ -14,7 +14,8 @@ const state = {
   playerFallbackTimer: null,
   playerFallbackUrls: [],
   playerEventAt: 0,
-  searchIntentId: 0
+  searchIntentId: 0,
+  lastCountLabel: '0 items'
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
@@ -105,8 +106,11 @@ bindAuth();
 
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
-  if (elements.search.value.trim().length > 0) state.homeSectionView = null;
-  renderCatalog();
+  if (elements.search.value.trim().length > 0) {
+    state.homeSectionView = null;
+    state.isSearching = true;
+    setCatalogCount(state.lastCountLabel || '0 items');
+  }
   scheduleSearchCommit();
 });
 elements.typeFilter.addEventListener('change', () => {
@@ -475,7 +479,7 @@ function renderCatalog() {
     return;
   }
 
-  elements.count.textContent = `${filtered.length} items`;
+  setCatalogCount(`${filtered.length} items`);
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
 
@@ -513,7 +517,7 @@ function renderHomeCatalog(baseFiltered) {
   `;
   };
 
-  elements.count.textContent = `${baseFiltered.length} items`;
+  setCatalogCount(`${baseFiltered.length} items`);
   elements.items.innerHTML = [
     section('continue', 'Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
     section('movies_recommended', 'Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
@@ -538,7 +542,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
     title = 'Series que podrian gustarte';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   }
-  elements.count.textContent = `${items.length} items`;
+  setCatalogCount(`${items.length} items`);
   elements.items.innerHTML = `
     <section class="home-section-list">
       <div class="home-section-list-head">
@@ -677,7 +681,11 @@ function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
   const intentId = state.searchIntentId;
   const query = elements.search.value.trim();
-  if (query.length < 3) return;
+  if (query.length < 3) {
+    state.isSearching = false;
+    renderCatalog();
+    return;
+  }
   if (!isAuthenticated()) return;
   const remoteKey = [
     query.toLowerCase(),
@@ -703,8 +711,18 @@ function scheduleSearchCommit() {
     const query = elements.search.value.trim();
     state.lastRemoteQuery = '';
     syncRoute();
-    if (!isAuthenticated()) return;
-    if (query.length < 3) return;
+    if (!isAuthenticated()) {
+      state.isSearching = false;
+      renderCatalog();
+      return;
+    }
+    if (query.length < 3) {
+      state.isSearching = false;
+      renderCatalog();
+      return;
+    }
+    state.isSearching = true;
+    setCatalogCount(state.lastCountLabel || '0 items');
     await searchRemoteCatalog(query, intentId);
   }, 1200);
 }
@@ -721,13 +739,15 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
   } catch (error) {
     if (intentId !== state.searchIntentId) return;
     elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
+  } finally {
+    if (intentId === state.searchIntentId) state.isSearching = false;
   }
 }
 
 function renderRemoteResults(query) {
   const localResults = getFilteredLocalTitles();
   const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, query));
-  elements.count.textContent = `${merged.length} matches for "${query}"`;
+  setCatalogCount(`${merged.length} matches for "${query}"`);
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
     const poster = title.posterUrl || '';
@@ -762,6 +782,17 @@ function renderRemoteResults(query) {
 
 function getSortMode() {
   return elements.sortFilter?.value || 'relevance';
+}
+
+function setCatalogCount(baseText) {
+  const text = String(baseText || '');
+  state.lastCountLabel = text;
+  const searching = state.isSearching && elements.search.value.trim().length >= 3;
+  if (!searching) {
+    elements.count.textContent = text;
+    return;
+  }
+  elements.count.innerHTML = `${escapeHtml(text)} <span class="count-searching" aria-live="polite"><span class="count-pulse" aria-hidden="true"></span>Buscando…</span>`;
 }
 
 function sortTitles(titles) {

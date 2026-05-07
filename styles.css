@@ -477,9 +477,9 @@ h1 {
 }
 
 .detail-inner {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  align-items: start;
 }
 
 .detail-inner.overlay-open {
@@ -535,7 +535,7 @@ h1 {
   border-radius: 1.4rem;
   box-shadow: var(--shadow);
   min-height: 31rem;
-  overflow: visible;
+  overflow: hidden;
   padding: clamp(1.5rem, 5vw, 4rem);
 }
 

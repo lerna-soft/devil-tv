@@ -437,11 +437,11 @@ function renderRemoteResults(query) {
       if (!remote) return;
       state.selected = remote;
       state.seriesEpisodes = null;
-      state.seriesEpisodesLoading = isSeriesLike(state.selected);
+      state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       state.hydratedProgressId = '';
       renderRemoteResults(elements.search.value.trim());
       renderDetail();
-      if (isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
+      if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute();
     });
   });

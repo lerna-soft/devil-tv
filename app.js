@@ -1168,8 +1168,10 @@ async function searchVidapiListings(query, typeFilter) {
   for (const kind of kinds) {
     for (let page = 1; page <= 12; page++) {
       const endpoint = kind === 'movie' ? `https://vidapi.ru/movies/latest/page-${page}.json` : `https://vidapi.ru/tvshows/latest/page-${page}.json`;
-      const response = await fetch(endpoint, { headers: { accept: 'application/json' } });
-      if (!response.ok) break;
+      const response = await fetchWithTimeout(endpoint, {
+        headers: { accept: 'application/json' }
+      }, 4500).catch(() => null);
+      if (!response?.ok) break;
       const data = await response.json();
       for (const item of data.items ?? []) {
         const normalized = kind === 'movie'
@@ -1182,6 +1184,16 @@ async function searchVidapiListings(query, typeFilter) {
     }
   }
   return results;
+}
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = 4500) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function searchImdbSuggestionsViaJina(query, typeFilter) {

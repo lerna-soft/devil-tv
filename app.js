@@ -740,7 +740,10 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
     if (intentId !== state.searchIntentId) return;
     elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
   } finally {
-    if (intentId === state.searchIntentId) state.isSearching = false;
+    if (intentId === state.searchIntentId) {
+      state.isSearching = false;
+      setCatalogCount(state.lastCountLabel || '0 items');
+    }
   }
 }
 

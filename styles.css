@@ -461,6 +461,7 @@ h1 {
 }
 
 .home-section {
+  grid-column: 1 / -1;
   margin-bottom: 1.1rem;
 }
 
@@ -524,6 +525,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.75rem;
+}
+
+.home-section-list {
+  grid-column: 1 / -1;
 }
 
 .home-section-list-head h3 {

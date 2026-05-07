@@ -18,21 +18,49 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout (main)
         uses: actions/checkout@v4
+
+      - name: Preflight (log context)
+        shell: bash
+        run: |
+          set -euxo pipefail
+          echo "ref=${GITHUB_REF}"
+          echo "sha=${GITHUB_SHA}"
+          echo "actor=${GITHUB_ACTOR}"
+          echo "runner=$(uname -a)"
+          echo "pwd=$(pwd)"
+          ls -la
+          du -sh . || true
+          test -f index.html
+          test -f app.js
+          test -f styles.css
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Pages Artifact (site root)
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (may take a while)
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Summary (deployed URL)
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Deploy summary"
+            echo ""
+            echo "- Status: \`${{ job.status }}\`"
+            echo "- Page URL: \`${{ steps.deployment.outputs.page_url }}\`"
+            echo "- SHA: \`${GITHUB_SHA}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -461,6 +461,7 @@ function renderDetail(options = {}) {
 
   if (!isAuthenticated()) {
     const poster = title.posterUrl || '';
+    const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
     elements.detail.innerHTML = `<div class="detail-inner overlay-open">
       <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
         <span class="back-chip-icon" aria-hidden="true">←</span>
@@ -471,6 +472,7 @@ function renderDetail(options = {}) {
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
           <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
+          ${isBareRoute ? '<p class="title-description">Metadata no disponible para este ID. Busca por nombre para obtener información.</p>' : ''}
           ${renderEvaluationPanel(title)}
         </div>
       </section>
@@ -524,6 +526,15 @@ function renderDetail(options = {}) {
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
 
+  const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
+  const metadataBlock = isBareRoute ? `<div class="availability">
+    <div class="availability-copy">
+      <strong>Metadata no disponible</strong>
+      <span>Este ID no devolvió poster/descripcion en las fuentes actuales. Prueba buscar por nombre.</span>
+    </div>
+    <button id="requestMetadata" type="button">Solicitar</button>
+  </div>` : '';
+
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
     <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
       <span class="back-chip-icon" aria-hidden="true">←</span>
@@ -536,6 +547,7 @@ function renderDetail(options = {}) {
         <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${renderEvaluationPanel(title)}
+        ${metadataBlock}
         ${availabilityBlock}
         <div class="actions hero-actions">
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
@@ -573,6 +585,23 @@ function renderDetail(options = {}) {
       id ? `- id: ${id}` : '',
       '',
       'Seen in static app but not playable with current source.',
+      '',
+      `Page: ${window.location.href}`
+    ].filter(Boolean).join('\n'));
+    window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+  });
+  bindTap(document.querySelector('#requestMetadata'), () => {
+    const id = title.imdbId || title.tmdbId || '';
+    const type = title.type || 'unknown';
+    const label = title.title || id || 'Metadata request';
+    const issueTitle = encodeURIComponent(`Metadata request: ${label} (${type})`);
+    const issueBody = encodeURIComponent([
+      'Requesting metadata for:',
+      `- title: ${label}`,
+      `- type: ${type}`,
+      id ? `- id: ${id}` : '',
+      '',
+      'Opened via direct route or missing metadata in current sources.',
       '',
       `Page: ${window.location.href}`
     ].filter(Boolean).join('\n'));

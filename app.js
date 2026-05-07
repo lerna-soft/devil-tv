@@ -60,9 +60,9 @@ function bindAuth() {
 
   elements.authForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const email = String(elements.authEmail.value || '').trim();
-    const password = String(elements.authPassword.value || '');
-    if (email === AUTH_EMAIL && password === AUTH_PASSWORD) {
+    const email = String(elements.authEmail.value || '').trim().toLowerCase();
+    const password = String(elements.authPassword.value || '').trim();
+    if (email === AUTH_EMAIL.toLowerCase() && password === AUTH_PASSWORD) {
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
       hideAuthGate();
       updateAuthUi();

@@ -459,7 +459,7 @@ function renderHomeCatalog(baseFiltered) {
   const section = (key, title, subtitle, items) => {
     const preview = items.slice(0, 10);
     const showMore = items.length > preview.length;
-    const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><strong>Ver todo</strong><span>${escapeHtml(title)}</span></article>` : ''}`;
+    const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
     return `
     <section class="home-section">
       <div class="home-section-head">

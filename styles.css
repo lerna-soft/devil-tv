@@ -483,9 +483,51 @@ h1 {
 }
 
 .home-rail {
-  display: grid;
+  display: flex;
   gap: 0.9rem;
-  grid-template-columns: repeat(auto-fill, minmax(9.2rem, 1fr));
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scroll-snap-type: x proximity;
+}
+
+.home-rail .item,
+.home-rail .home-more {
+  flex: 0 0 10rem;
+  max-width: 10rem;
+  scroll-snap-align: start;
+}
+
+.home-more {
+  align-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 0.95rem;
+  cursor: pointer;
+  display: grid;
+  gap: 0.35rem;
+  min-height: 14.8rem;
+  padding: 0.9rem;
+  text-align: left;
+}
+
+.home-more strong {
+  font-size: 0.98rem;
+}
+
+.home-more span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.home-section-list-head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.home-section-list-head h3 {
+  margin: 0;
 }
 
 .item {
@@ -1172,7 +1214,12 @@ code {
 
   .home-rail {
     gap: 0.8rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-rail .item,
+  .home-rail .home-more {
+    flex-basis: 8.7rem;
+    max-width: 8.7rem;
   }
 
   .catalog-header {

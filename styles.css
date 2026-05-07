@@ -534,24 +534,30 @@ body.detail-active .toolbar {
   border-radius: 1.4rem;
   box-shadow: var(--shadow);
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
   padding: clamp(1.5rem, 5vw, 4rem);
   position: relative;
 }
 
-.title-hero::before {
+.title-hero-bg {
+  border-radius: inherit;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.title-hero-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
   background:
     linear-gradient(90deg, rgba(5, 5, 9, 0.96) 0%, rgba(5, 5, 9, 0.72) 42%, rgba(5, 5, 9, 0.16) 100%),
     var(--poster),
     var(--surface);
   background-position: center;
   background-size: cover;
-  z-index: 0;
-  pointer-events: none;
 }
 
 .title-copy {

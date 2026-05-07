@@ -493,7 +493,7 @@ h1 {
 }
 
 body.detail-active .toolbar {
-  display: none;
+  z-index: 1;
 }
 
 .back-chip {

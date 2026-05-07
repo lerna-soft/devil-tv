@@ -535,14 +535,16 @@ h1 {
   border-radius: 1.4rem;
   box-shadow: var(--shadow);
   min-height: 31rem;
-  overflow: hidden;
+  overflow: visible;
   padding: clamp(1.5rem, 5vw, 4rem);
 }
 
 .title-copy {
-  align-content: end;
-  display: grid;
-  min-height: 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  justify-content: flex-end;
+  min-height: 0;
   max-width: 46rem;
 }
 

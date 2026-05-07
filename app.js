@@ -13,7 +13,8 @@ const state = {
   homeSectionView: null,
   playerFallbackTimer: null,
   playerFallbackUrls: [],
-  playerEventAt: 0
+  playerEventAt: 0,
+  searchIntentId: 0
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
@@ -103,18 +104,20 @@ function bindAuth() {
 bindAuth();
 
 elements.search.addEventListener('input', () => {
+  state.searchIntentId += 1;
   if (elements.search.value.trim().length > 0) state.homeSectionView = null;
   renderCatalog();
-  scheduleRemoteSearch();
   scheduleSearchCommit();
 });
 elements.typeFilter.addEventListener('change', () => {
+  state.searchIntentId += 1;
   state.homeSectionView = null;
   syncTabs(elements.typeFilter.value);
   renderCatalog();
   scheduleRemoteSearch();
 });
 elements.genreFilter?.addEventListener('change', () => {
+  state.searchIntentId += 1;
   state.homeSectionView = null;
   renderCatalog();
   scheduleRemoteSearch();
@@ -672,6 +675,7 @@ function bindLocalCardEvents() {
 
 function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
+  const intentId = state.searchIntentId;
   const query = elements.search.value.trim();
   if (query.length < 3) return;
   if (!isAuthenticated()) return;
@@ -682,34 +686,40 @@ function scheduleRemoteSearch() {
   state.isSearching = true;
   renderCatalog();
   state.remoteSearchTimer = setTimeout(async () => {
+    if (intentId !== state.searchIntentId) return;
     if (state.lastRemoteQuery === remoteKey) return;
     state.lastRemoteQuery = remoteKey;
-    await searchRemoteCatalog(query);
+    await searchRemoteCatalog(query, intentId);
     state.isSearching = false;
     syncRoute();
-  }, 450);
+  }, 700);
 }
 
 function scheduleSearchCommit() {
   clearTimeout(state.searchCommitTimer);
+  const intentId = state.searchIntentId;
   state.searchCommitTimer = setTimeout(async () => {
+    if (intentId !== state.searchIntentId) return;
     const query = elements.search.value.trim();
     state.lastRemoteQuery = '';
     syncRoute();
     if (!isAuthenticated()) return;
     if (query.length < 3) return;
-    await searchRemoteCatalog(query);
-  }, 2000);
+    await searchRemoteCatalog(query, intentId);
+  }, 1200);
 }
 
-async function searchRemoteCatalog(query) {
+async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
+    if (intentId !== state.searchIntentId) return;
     const withPlayable = results.map((item) => ({ ...item, playable: true }));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     cacheSearchResults(state.remoteResults);
+    if (intentId !== state.searchIntentId) return;
     renderRemoteResults(query);
   } catch (error) {
+    if (intentId !== state.searchIntentId) return;
     elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
   }
 }

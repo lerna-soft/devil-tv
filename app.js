@@ -457,7 +457,7 @@ function renderHomeCatalog(baseFiltered) {
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
 
   const section = (key, title, subtitle, items) => {
-    const preview = items.slice(0, 5);
+    const preview = items.slice(0, 10);
     const showMore = items.length > preview.length;
     const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><strong>Ver todo</strong><span>${escapeHtml(title)}</span></article>` : ''}`;
     return `

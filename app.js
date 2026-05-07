@@ -15,7 +15,8 @@ const state = {
   playerFallbackUrls: [],
   playerEventAt: 0,
   searchIntentId: 0,
-  lastCountLabel: '0 items'
+  lastCountLabel: '0 items',
+  searchingTerm: ''
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
@@ -106,6 +107,7 @@ bindAuth();
 
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
+  state.searchingTerm = elements.search.value.trim();
   if (elements.search.value.trim().length > 0) {
     state.homeSectionView = null;
     state.isSearching = true;
@@ -681,6 +683,7 @@ function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
   const intentId = state.searchIntentId;
   const query = elements.search.value.trim();
+  state.searchingTerm = query;
   if (query.length < 3) {
     state.isSearching = false;
     renderCatalog();
@@ -709,6 +712,7 @@ function scheduleSearchCommit() {
   state.searchCommitTimer = setTimeout(async () => {
     if (intentId !== state.searchIntentId) return;
     const query = elements.search.value.trim();
+    state.searchingTerm = query;
     state.lastRemoteQuery = '';
     syncRoute();
     if (!isAuthenticated()) {
@@ -795,7 +799,9 @@ function setCatalogCount(baseText) {
     elements.count.textContent = text;
     return;
   }
-  elements.count.innerHTML = `${escapeHtml(text)} <span class="count-searching" aria-live="polite"><span class="count-pulse" aria-hidden="true"></span>Buscando…</span>`;
+  const term = String(state.searchingTerm || elements.search.value || '').trim();
+  const label = term ? `Buscando "${term}"...` : 'Buscando...';
+  elements.count.innerHTML = `${escapeHtml(text)} <span class="count-searching" aria-live="polite"><span class="count-pulse" aria-hidden="true"></span>${escapeHtml(label)}</span>`;
 }
 
 function sortTitles(titles) {

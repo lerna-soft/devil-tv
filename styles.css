@@ -483,19 +483,44 @@ h1 {
   font-size: 0.78rem;
 }
 
-.home-rail {
-  display: flex;
-  gap: 0.9rem;
-  overflow-x: auto;
-  padding-bottom: 0.35rem;
-  scroll-snap-type: x proximity;
+.home-carousel {
+  align-items: stretch;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto 1fr auto;
 }
 
-.home-rail .item,
-.home-rail .home-more {
+.home-viewport {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.home-track {
+  display: flex;
+  gap: 0.9rem;
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+
+.home-track .item,
+.home-track .home-more {
   flex: 0 0 10rem;
   max-width: 10rem;
-  scroll-snap-align: start;
+}
+
+.home-nav {
+  align-self: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  color: var(--text);
+  min-height: 2.2rem;
+  min-width: 2.2rem;
+  padding: 0;
+}
+
+.home-nav:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .home-more {
@@ -1217,14 +1242,22 @@ code {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .home-rail {
+  .home-track {
     gap: 0.8rem;
   }
 
-  .home-rail .item,
-  .home-rail .home-more {
+  .home-track .item,
+  .home-track .home-more {
     flex-basis: 8.7rem;
     max-width: 8.7rem;
+  }
+
+  .home-carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .home-nav {
+    display: none;
   }
 
   .catalog-header {

@@ -459,15 +459,21 @@ function renderHomeCatalog(baseFiltered) {
   const section = (key, title, subtitle, items) => {
     const preview = items.slice(0, 5);
     const showMore = items.length > preview.length;
+    const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><strong>Ver todo</strong><span>${escapeHtml(title)}</span></article>` : ''}`;
     return `
     <section class="home-section">
       <div class="home-section-head">
         <h3>${escapeHtml(title)}</h3>
         <span>${escapeHtml(subtitle)}</span>
       </div>
-      <div class="home-rail">
-        ${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}
-        ${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><strong>Ver todo</strong><span>${escapeHtml(title)}</span></article>` : ''}
+      <div class="home-carousel" data-home-carousel="${escapeAttribute(key)}">
+        <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
+        <div class="home-viewport">
+          <div class="home-track">
+            ${cards}
+          </div>
+        </div>
+        <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
       </div>
     </section>
   `;
@@ -481,6 +487,7 @@ function renderHomeCatalog(baseFiltered) {
   ].join('');
   bindLocalCardEvents();
   bindHomeSectionEvents();
+  bindHomeCarouselEvents();
 }
 
 function renderHomeSectionList(baseFiltered, sectionKey) {
@@ -519,6 +526,51 @@ function bindHomeSectionEvents() {
       state.homeSectionView = entry.dataset.homeSeeall || null;
       renderCatalog();
     });
+  });
+}
+
+function bindHomeCarouselEvents() {
+  const carousels = elements.items.querySelectorAll('[data-home-carousel]');
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector('.home-viewport');
+    const track = carousel.querySelector('.home-track');
+    const prevBtn = carousel.querySelector('[data-home-prev]');
+    const nextBtn = carousel.querySelector('[data-home-next]');
+    if (!viewport || !track || !prevBtn || !nextBtn) return;
+
+    const cards = [...track.children];
+    let page = 0;
+
+    const metrics = () => {
+      if (cards.length === 0) return { perPage: 1, maxPage: 0, step: 0 };
+      const cardWidth = cards[0].getBoundingClientRect().width || 1;
+      const secondLeft = cards[1]?.offsetLeft ?? cards[0].offsetLeft;
+      const gap = Math.max(0, secondLeft - cards[0].offsetLeft - cardWidth);
+      const perPage = Math.max(1, Math.floor((viewport.clientWidth + gap) / (cardWidth + gap)));
+      const maxPage = Math.max(0, Math.ceil(cards.length / perPage) - 1);
+      const step = perPage * (cardWidth + gap);
+      return { perPage, maxPage, step };
+    };
+
+    const apply = () => {
+      const { maxPage, step } = metrics();
+      page = Math.min(Math.max(0, page), maxPage);
+      track.style.transform = `translateX(${-page * step}px)`;
+      prevBtn.disabled = page <= 0;
+      nextBtn.disabled = page >= maxPage;
+    };
+
+    prevBtn.addEventListener('click', () => {
+      page -= 1;
+      apply();
+    });
+    nextBtn.addEventListener('click', () => {
+      page += 1;
+      apply();
+    });
+
+    window.addEventListener('resize', apply);
+    apply();
   });
 }
 

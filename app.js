@@ -121,9 +121,31 @@ elements.sortFilter?.addEventListener('change', () => {
 });
 elements.tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
+    const nextType = tab.dataset.typeTab;
+    if (nextType === 'all') {
+      clearTimeout(state.remoteSearchTimer);
+      clearTimeout(state.searchCommitTimer);
+      state.homeSectionView = null;
+      state.remoteResults = [];
+      state.lastRemoteQuery = '';
+      state.isSearching = false;
+      elements.search.value = '';
+      elements.typeFilter.value = 'all';
+      if (elements.genreFilter) elements.genreFilter.value = 'all';
+      if (elements.sortFilter) elements.sortFilter.value = 'relevance';
+      syncTabs('all');
+      state.selected = null;
+      state.seriesEpisodes = null;
+      closePlayerModal();
+      renderCatalog();
+      renderDetail();
+      syncRoute();
+      return;
+    }
+
     state.homeSectionView = null;
-    elements.typeFilter.value = tab.dataset.typeTab;
-    syncTabs(tab.dataset.typeTab);
+    elements.typeFilter.value = nextType;
+    syncTabs(nextType);
     renderCatalog();
     scheduleRemoteSearch();
   });

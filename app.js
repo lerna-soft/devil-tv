@@ -1189,11 +1189,11 @@ async function handleRouteChange() {
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
       renderCatalog();
-      if (q.length >= 3) searchRemoteCatalog(q);
+      if (isAuthenticated() && q.length >= 3) searchRemoteCatalog(q);
       if (!shouldOpenPlayer) closePlayerModal();
     } else {
       renderCatalog();
-      if (q.length >= 3) await searchRemoteCatalog(q);
+      if (isAuthenticated() && q.length >= 3) await searchRemoteCatalog(q);
       state.selected = null;
       state.seriesEpisodes = null;
       renderDetail();

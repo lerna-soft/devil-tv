@@ -533,8 +533,8 @@ body.detail-active .toolbar {
   border: 1px solid var(--line);
   border-radius: 1.4rem;
   box-shadow: var(--shadow);
-  min-height: 31rem;
-  overflow: visible;
+  min-height: 0;
+  overflow: hidden;
   padding: clamp(1.5rem, 5vw, 4rem);
   position: relative;
 }
@@ -558,7 +558,7 @@ body.detail-active .toolbar {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 0;
   max-width: 46rem;
   position: relative;

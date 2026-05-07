@@ -546,7 +546,6 @@ function renderDetail(options = {}) {
         <h2>${escapeHtml(title.title)}</h2>
         <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
-        ${renderEvaluationPanel(title)}
         ${metadataBlock}
         ${availabilityBlock}
         <div class="actions hero-actions">
@@ -607,7 +606,6 @@ function renderDetail(options = {}) {
     ].filter(Boolean).join('\n'));
     window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
   });
-  bindEvaluationPanel(title);
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
     state.seriesEpisodes = null;
@@ -1178,7 +1176,7 @@ async function handleRouteChange() {
       state.playback.season = season;
       state.playback.episode = episode;
       state.seriesEpisodes = null;
-      state.seriesEpisodesLoading = isSeriesLike(state.selected);
+      state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       if (shouldOpenPlayer) {
         // iOS Safari can be flaky about repainting fixed overlays immediately;
@@ -1186,7 +1184,7 @@ async function handleRouteChange() {
         const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
         setTimeout(() => openPlayerModal(target), 0);
       }
-      if (isSeriesLike(state.selected)) {
+      if (isAuthenticated() && isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }

@@ -567,6 +567,7 @@ body.detail-active .toolbar {
   justify-content: flex-start;
   min-height: 0;
   max-width: 46rem;
+  padding-bottom: 0.75rem;
   position: relative;
   z-index: 1;
 }
@@ -730,7 +731,10 @@ body.detail-active .toolbar {
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid var(--line);
   border-radius: 1rem;
+  margin-top: 0.75rem;
   padding: 1rem;
+  position: relative;
+  z-index: 0;
 }
 
 .seasons-tabs {

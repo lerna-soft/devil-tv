@@ -344,7 +344,7 @@ function renderLocalCards(titles) {
   return titles.map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = title.posterUrl || title.metadata?.posterUrl || '';
-    const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
+    const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
@@ -420,7 +420,7 @@ function renderRemoteResults(query) {
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
     const poster = title.posterUrl || '';
-    const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
+    const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';

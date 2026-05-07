@@ -55,9 +55,10 @@
             <option value="movie">Movies</option>
             <option value="series">Series</option>
           </select>
-          <label class="toggle" title="ON: solo muestra títulos reproducibles por la fuente actual. OFF: también muestra títulos que existen pero que no están disponibles para ver en este momento.">
+          <label id="playableOnlyWrap" class="toggle toggle-switch" hidden title="ON: solo muestra títulos reproducibles por la fuente actual. OFF: también muestra títulos que existen pero que no están disponibles para ver en este momento.">
             <input id="playableOnly" type="checkbox" checked />
-            <span>Solo reproducibles</span>
+            <span class="toggle-text">Solo reproducibles</span>
+            <span class="toggle-ui" aria-hidden="true"></span>
           </label>
           <button id="logoutBtn" class="ghost" type="button" title="Cerrar sesión">Salir</button>
         </div>

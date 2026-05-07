@@ -22,6 +22,7 @@ const elements = {
   search: document.querySelector('#search'),
   typeFilter: document.querySelector('#typeFilter'),
   playableOnly: document.querySelector('#playableOnly'),
+  playableOnlyWrap: document.querySelector('#playableOnlyWrap'),
   logoutBtn: document.querySelector('#logoutBtn'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
@@ -123,6 +124,9 @@ function updateAuthUi() {
   if (!elements.logoutBtn) return;
   elements.logoutBtn.textContent = isAuthenticated() ? 'Salir' : 'Login';
   elements.logoutBtn.title = isAuthenticated() ? 'Cerrar sesión' : 'Iniciar sesión';
+  if (elements.playableOnlyWrap) {
+    elements.playableOnlyWrap.hidden = !isAuthenticated();
+  }
 }
 
 updateAuthUi();

@@ -485,16 +485,17 @@ h1 {
 .detail-inner.overlay-open {
   backdrop-filter: blur(12px);
   background: rgba(3, 3, 7, 0.78);
-  inset: 0;
-  overflow-y: auto;
+  overflow: visible;
   padding: 1rem clamp(1rem, 4vw, 2.4rem) 2rem;
-  position: fixed;
-  z-index: 40;
+  position: relative;
 }
 
-body.detail-active .toolbar {
-  position: static;
-  top: auto;
+body.detail-active .layout {
+  display: block;
+}
+
+body.detail-active .catalog {
+  display: none;
 }
 
 .back-chip {

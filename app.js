@@ -17,6 +17,8 @@ const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
+const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
+const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 
 const elements = {
   search: document.querySelector('#search'),
@@ -113,6 +115,103 @@ handleRouteChange();
 hydrateSeedCatalog().then(() => renderCatalog()).catch(() => {});
 
 hideAuthGate();
+
+function getTmdbReadToken() {
+  return String(localStorage.getItem(TMDB_READ_TOKEN_KEY) || '').trim();
+}
+
+async function tmdbFetchJson(path, params) {
+  const token = getTmdbReadToken();
+  if (!token) throw new Error('missing TMDB read token');
+  const url = new URL(`https://api.themoviedb.org/3/${String(path).replace(/^\\//, '')}`);
+  for (const [k, v] of Object.entries(params || {})) {
+    if (v === undefined || v === null || v === '') continue;
+    url.searchParams.set(k, String(v));
+  }
+  const res = await fetch(url.toString(), {
+    headers: {
+      accept: 'application/json',
+      authorization: `Bearer ${token}`
+    }
+  });
+  if (!res.ok) throw new Error(`tmdb ${res.status}`);
+  return res.json();
+}
+
+function loadTmdbMetaCache() {
+  try { return JSON.parse(localStorage.getItem(TMDB_META_CACHE_KEY) || '{}'); } catch { return {}; }
+}
+
+function saveTmdbMetaCache(cache) {
+  try { localStorage.setItem(TMDB_META_CACHE_KEY, JSON.stringify(cache || {})); } catch {}
+}
+
+function getMetaCacheKey(title) {
+  const id = title?.imdbId || title?.tmdbId || '';
+  return `${title?.type || 'unknown'}:${id}`;
+}
+
+async function hydrateSelectedFromTmdb() {
+  const title = state.selected;
+  if (!title) return;
+  if (!title.imdbId && !title.tmdbId) return;
+
+  const token = getTmdbReadToken();
+  if (!token) return;
+
+  const cache = loadTmdbMetaCache();
+  const key = getMetaCacheKey(title);
+  const cached = cache[key];
+  if (cached && cached.payload) {
+    Object.assign(title, cached.payload);
+    return;
+  }
+
+  try {
+    let tmdbType = title.type === 'series' ? 'tv' : 'movie';
+    let tmdbId = title.tmdbId ? String(title.tmdbId) : '';
+
+    if (!tmdbId && title.imdbId) {
+      const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' });
+      const pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
+      if (pick?.id) tmdbId = String(pick.id);
+      if (pick?.poster_path && !title.posterUrl) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
+      if (pick?.overview && (!title.description || title.description === 'IMDb result')) title.description = pick.overview;
+    }
+
+    if (!tmdbId) return;
+
+    const details = await tmdbFetchJson(`/${tmdbType}/${encodeURIComponent(tmdbId)}`, { language: 'es-ES' });
+    const credits = await tmdbFetchJson(`/${tmdbType}/${encodeURIComponent(tmdbId)}/credits`, { language: 'es-ES' });
+
+    const genres = (details.genres || []).map((g) => g.name).filter(Boolean);
+    const castNames = (credits.cast || []).slice(0, 10).map((c) => c.name).filter(Boolean);
+    const endYear = tmdbType === 'tv' && details.last_air_date ? String(details.last_air_date).slice(0, 4) : '';
+    const backdropUrl = details.backdrop_path ? `https://image.tmdb.org/t/p/w780${details.backdrop_path}` : '';
+    const posterUrl = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '';
+
+    const payload = {
+      tmdbId,
+      title: title.title || details.name || details.title || title.title,
+      year: title.year || Number(String((details.first_air_date || details.release_date || '')).slice(0, 4)) || title.year,
+      description: details.overview || title.description,
+      posterUrl: title.posterUrl || posterUrl,
+      metadata: {
+        ...(title.metadata || {}),
+        genres,
+        cast: castNames,
+        endYear: endYear || (title.metadata?.endYear ?? ''),
+        backdropUrl: backdropUrl || (title.metadata?.backdropUrl ?? null)
+      }
+    };
+
+    Object.assign(title, payload);
+    cache[key] = { cachedAt: Date.now(), payload };
+    saveTmdbMetaCache(cache);
+  } catch {
+    // Ignore TMDB failures; keep existing metadata.
+  }
+}
 
 function updateAuthUi() {
   if (!elements.logoutBtn) return;
@@ -359,6 +458,7 @@ function bindLocalCardEvents() {
       renderDetail();
       if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute();
+      hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
     });
   });
 }
@@ -431,6 +531,7 @@ function renderRemoteResults(query) {
       renderDetail();
       if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute();
+      hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
     });
   });
   bindLocalCardEvents();
@@ -485,6 +586,8 @@ function renderDetail(options = {}) {
   if (!skipHydratePlayback) applySavedWatchState(title);
   const poster = title.posterUrl || '';
   const progress = getSeriesProgress(title);
+  const genres = (title.metadata?.genres ?? []).filter(Boolean);
+  const castNames = (title.metadata?.cast ?? []).filter(Boolean);
   const hasEpisodes = isSeriesLike(title) && (state.seriesEpisodes?.seasons?.length ?? 0) > 0;
   const hasWatchHistory = Boolean(Object.keys(progress?.watched ?? {}).length) || Boolean(progress?.lastSeason && progress?.lastEpisode);
   const resumeTarget = hasEpisodes ? getResumeTarget(progress, state.seriesEpisodes) : null;
@@ -532,8 +635,9 @@ function renderDetail(options = {}) {
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>
-        <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
+        <p class="title-meta">${escapeHtml([title.year, genres.length ? genres.slice(0, 3).join(', ') : ''].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
+        ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
         ${metadataBlock}
         ${availabilityBlock}
         <div class="actions hero-actions">

@@ -329,6 +329,10 @@ h1 {
   backdrop-filter: blur(8px);
 }
 
+.auth-gate[hidden] {
+  display: none !important;
+}
+
 .auth-card {
   width: min(28rem, 100%);
   border-radius: 1.25rem;

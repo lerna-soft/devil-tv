@@ -341,9 +341,13 @@ function renderLocalCards(titles) {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = title.posterUrl || title.metadata?.posterUrl || '';
     const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
+    const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
+    const startYear = title.year ?? '';
+    const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
+    const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
-      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
+      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('');
 }
@@ -413,9 +417,13 @@ function renderRemoteResults(query) {
     const title = entry.title;
     const poster = title.posterUrl || '';
     const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
+    const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
+    const startYear = title.year ?? '';
+    const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
+    const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
     return `<article class="item" ${entry.source === 'remote' ? `data-remote-index="${index}"` : `data-key="${escapeHtml(title.catalogKey)}"`}>
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
-      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
+      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('') || `<div class="empty">${elements.playableOnly?.checked ? 'No playable results found for this query.' : 'No results found for this query.'}</div>`;
 

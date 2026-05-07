@@ -13,17 +13,82 @@ const state = {
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
 
+const AUTH_EMAIL = 'usuario@mail.com';
+const AUTH_PASSWORD = 'movieValidator2026*';
+const AUTH_STORAGE_KEY = 'mep_auth_ok';
+const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
+
 const elements = {
   search: document.querySelector('#search'),
   typeFilter: document.querySelector('#typeFilter'),
+  playableOnly: document.querySelector('#playableOnly'),
+  logoutBtn: document.querySelector('#logoutBtn'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
   count: document.querySelector('#count'),
   detail: document.querySelector('#detail'),
   playerModal: document.querySelector('#playerModal'),
   playerIframe: document.querySelector('#player'),
-  playerControls: document.querySelector('#playerControls')
+  playerControls: document.querySelector('#playerControls'),
+  authGate: document.querySelector('#authGate'),
+  authForm: document.querySelector('#authForm'),
+  authEmail: document.querySelector('#authEmail'),
+  authPassword: document.querySelector('#authPassword'),
+  authError: document.querySelector('#authError')
 };
+
+function isAuthenticated() {
+  return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
+}
+
+function showAuthGate() {
+  if (!elements.authGate) return;
+  elements.authGate.hidden = false;
+  elements.authError.textContent = '';
+  elements.authEmail.value = '';
+  elements.authPassword.value = '';
+  elements.authEmail.focus();
+}
+
+function hideAuthGate() {
+  if (!elements.authGate) return;
+  elements.authGate.hidden = true;
+}
+
+function bindAuth() {
+  if (!elements.authForm) return;
+
+  elements.authForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = String(elements.authEmail.value || '').trim();
+    const password = String(elements.authPassword.value || '');
+    if (email === AUTH_EMAIL && password === AUTH_PASSWORD) {
+      localStorage.setItem(AUTH_STORAGE_KEY, '1');
+      hideAuthGate();
+      updateAuthUi();
+      renderCatalog();
+      return;
+    }
+    elements.authError.textContent = 'Credenciales incorrectas.';
+  });
+
+  elements.logoutBtn?.addEventListener('click', () => {
+    if (!isAuthenticated()) {
+      showAuthGate();
+      return;
+    }
+    localStorage.removeItem(AUTH_STORAGE_KEY);
+    state.selected = null;
+    state.seriesEpisodes = null;
+    closePlayerModal();
+    hideAuthGate();
+    updateAuthUi();
+    renderCatalog();
+    renderDetail();
+  });
+}
+
+bindAuth();
 
 elements.search.addEventListener('input', () => {
   renderCatalog();
@@ -31,6 +96,10 @@ elements.search.addEventListener('input', () => {
 });
 elements.typeFilter.addEventListener('change', () => {
   syncTabs(elements.typeFilter.value);
+  renderCatalog();
+  scheduleRemoteSearch();
+});
+elements.playableOnly?.addEventListener('change', () => {
   renderCatalog();
   scheduleRemoteSearch();
 });
@@ -46,6 +115,186 @@ elements.tabs.forEach((tab) => {
 window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
 handleRouteChange();
+hydrateSeedCatalog().then(() => renderCatalog()).catch(() => {});
+
+hideAuthGate();
+
+function updateAuthUi() {
+  if (!elements.logoutBtn) return;
+  elements.logoutBtn.textContent = isAuthenticated() ? 'Salir' : 'Login';
+  elements.logoutBtn.title = isAuthenticated() ? 'Cerrar sesión' : 'Iniciar sesión';
+}
+
+updateAuthUi();
+
+async function hydrateSeedCatalog() {
+  const seedUrl = `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
+  const response = await fetch(seedUrl, { cache: 'no-store' }).catch(() => null);
+  if (!response?.ok) return;
+  const seed = await response.json().catch(() => null);
+  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) return;
+
+  const seedVersion = Number(seed.version || 0);
+  const appliedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
+  if (seedVersion && appliedVersion === seedVersion) return;
+
+  const items = [];
+  for (const entry of seed.movies ?? []) {
+    items.push(normalizeSeedEntry(entry, 'movie'));
+  }
+  for (const entry of seed.series ?? []) {
+    items.push(normalizeSeedEntry(entry, 'series'));
+  }
+
+  const current = loadLocalCatalog();
+  const merged = dedupe([...current, ...items]);
+  saveLocalCatalog(merged);
+  if (seedVersion) localStorage.setItem('mep_seed_version', String(seedVersion));
+}
+
+function normalizeSeedEntry(entry, defaultType) {
+  const type = entry?.type || defaultType;
+  const tmdbId = entry?.tmdbId ? String(entry.tmdbId) : '';
+  const imdbId = entry?.imdbId ? String(entry.imdbId) : '';
+  const id = imdbId || tmdbId;
+  const title = entry?.title || '';
+  const year = Number(entry?.year) || null;
+  const description = entry?.overview || entry?.description || '';
+  const posterUrl = entry?.posterUrl || '';
+  const playable = type === 'series' ? (entry?.playable ?? true) : true;
+  return {
+    catalogKey: `${type}:${imdbId ? 'imdb' : 'tmdb'}:${id}`,
+    type,
+    imdbId,
+    tmdbId,
+    title,
+    year,
+    description,
+    posterUrl,
+    playable,
+    metadata: {
+      releaseDate: entry?.releaseDate || null,
+      genres: entry?.genres || [],
+      backdropUrl: entry?.backdropUrl || null
+    }
+  };
+}
+
+function loadEvaluations() {
+  try { return JSON.parse(localStorage.getItem(EVAL_STORAGE_KEY) || '{}'); } catch { return {}; }
+}
+
+function saveEvaluations(evals) {
+  localStorage.setItem(EVAL_STORAGE_KEY, JSON.stringify(evals || {}));
+}
+
+function getTitleId(title) {
+  return title?.imdbId || title?.tmdbId || title?.catalogKey || '';
+}
+
+function hash32(input) {
+  // FNV-1a 32-bit
+  let h = 0x811c9dc5;
+  for (let i = 0; i < input.length; i++) {
+    h ^= input.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+function pseudoRandom01(seed) {
+  // xorshift32
+  let x = seed >>> 0;
+  x ^= x << 13;
+  x ^= x >>> 17;
+  x ^= x << 5;
+  return ((x >>> 0) % 10000) / 10000;
+}
+
+function getSyntheticStats(title) {
+  const id = getTitleId(title);
+  const seed = hash32(String(id || title?.title || 'mep'));
+  const r1 = pseudoRandom01(seed);
+  const r2 = pseudoRandom01(seed ^ 0x9e3779b9);
+  const votes = 120 + Math.floor(r1 * 9800);
+  const rating = Math.round((5.4 + r2 * 3.9) * 10) / 10;
+  return { votes, rating };
+}
+
+function renderEvaluationPanel(title) {
+  const id = getTitleId(title);
+  const evals = loadEvaluations();
+  const current = evals[id] || {};
+  const stats = getSyntheticStats(title);
+  const myVote = Number(current.vote) || '';
+  const myComment = String(current.comment || '');
+
+  return `<section class="eval-panel">
+    <h3>Evaluación</h3>
+    <div class="eval-stats">
+      <span class="eval-chip">Calificación: <strong>${stats.rating}</strong></span>
+      <span class="eval-chip">Votos: <strong>${stats.votes}</strong></span>
+    </div>
+    <div class="eval-form">
+      <label class="eval-field">
+        <span>Tu voto (1-10)</span>
+        <input id="evalVote" type="number" min="1" max="10" step="1" value="${escapeAttribute(String(myVote))}" placeholder="7" />
+      </label>
+      <label class="eval-field">
+        <span>Comentario</span>
+        <textarea id="evalComment" rows="3" placeholder="Escribe tu comentario...">${escapeHtml(myComment)}</textarea>
+      </label>
+      <div class="eval-actions">
+        <button id="evalSave" type="button">Guardar</button>
+        <button id="evalSend" type="button" class="ghost">Enviar</button>
+        ${isAuthenticated() ? '' : '<span class="eval-note">Modo invitado: solo evaluación</span>'}
+      </div>
+      <p id="evalMsg" class="eval-msg" aria-live="polite"></p>
+    </div>
+  </section>`;
+}
+
+function bindEvaluationPanel(title) {
+  const id = getTitleId(title);
+  const msg = document.querySelector('#evalMsg');
+  const voteEl = document.querySelector('#evalVote');
+  const commentEl = document.querySelector('#evalComment');
+  const saveBtn = document.querySelector('#evalSave');
+  const sendBtn = document.querySelector('#evalSend');
+  if (!voteEl || !commentEl || !saveBtn || !sendBtn) return;
+
+  const save = () => {
+    const voteRaw = String(voteEl.value || '').trim();
+    const voteNum = voteRaw ? Number(voteRaw) : null;
+    const vote = Number.isFinite(voteNum) ? Math.min(10, Math.max(1, Math.round(voteNum))) : null;
+    const comment = String(commentEl.value || '').trim();
+    const evals = loadEvaluations();
+    evals[id] = { vote, comment, updatedAt: new Date().toISOString() };
+    saveEvaluations(evals);
+    if (msg) msg.textContent = 'Guardado.';
+  };
+
+  saveBtn.addEventListener('click', () => save());
+  sendBtn.addEventListener('click', () => {
+    save();
+    const evals = loadEvaluations();
+    const payload = evals[id] || {};
+    const subject = encodeURIComponent(`Evaluación: ${title.title || id}`);
+    const body = encodeURIComponent([
+      `Título: ${title.title || ''}`,
+      `Tipo: ${title.type || ''}`,
+      title.imdbId ? `IMDb: ${title.imdbId}` : '',
+      title.tmdbId ? `TMDB: ${title.tmdbId}` : '',
+      '',
+      `Voto: ${payload.vote ?? ''}`,
+      `Comentario: ${payload.comment ?? ''}`,
+      `Actualizado: ${payload.updatedAt ?? ''}`,
+      '',
+      `Página: ${window.location.href}`
+    ].filter(Boolean).join('\n'));
+    window.location.href = `mailto:${AUTH_EMAIL}?subject=${subject}&body=${body}`;
+  });
+}
 
 function bindTap(element, handler) {
   if (!element) return;
@@ -91,9 +340,10 @@ function renderLocalCards(titles) {
   return titles.map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = title.posterUrl || title.metadata?.posterUrl || '';
+    const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
-      <div><strong>${escapeHtml(title.title)}</strong><span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
+      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
     </article>`;
   }).join('');
 }
@@ -118,6 +368,7 @@ function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
   const query = elements.search.value.trim();
   if (query.length < 3) return;
+  if (!isAuthenticated()) return;
   state.isSearching = true;
   renderCatalog();
   state.remoteSearchTimer = setTimeout(async () => {
@@ -132,7 +383,15 @@ function scheduleRemoteSearch() {
 async function searchRemoteCatalog(query) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
-    const filtered = await filterUnavailableSeries(results);
+    const playableIndex = await getEpisodeSeriesIndex();
+    const withPlayable = results.map((item) => {
+      if (item.type !== 'series') return { ...item, playable: true };
+      const imdbId = String(item.imdbId || '').trim();
+      if (!imdbId) return { ...item, playable: false };
+      return { ...item, playable: playableIndex.has(imdbId) };
+    });
+    const onlyPlayable = Boolean(elements.playableOnly?.checked);
+    const filtered = onlyPlayable ? withPlayable.filter((item) => item.playable !== false) : withPlayable;
     state.remoteResults = sortByRelevance(dedupe(filtered), query).slice(0, 36).map(normalizeSelection);
     cacheSearchResults(state.remoteResults);
     renderRemoteResults(query);
@@ -142,17 +401,19 @@ async function searchRemoteCatalog(query) {
 }
 
 function renderRemoteResults(query) {
+  if (!isAuthenticated()) return;
   const localResults = getFilteredLocalTitles();
   const merged = mergeAndRankResults(localResults, state.remoteResults, query);
   elements.count.textContent = `${merged.length} matches for "${query}"`;
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
     const poster = title.posterUrl || '';
+    const unavailable = title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     return `<article class="item" ${entry.source === 'remote' ? `data-remote-index="${index}"` : `data-key="${escapeHtml(title.catalogKey)}"`}>
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
-      <div><strong>${escapeHtml(title.title)}</strong><span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
+      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml(title.type)} | IMDb: ${escapeHtml(title.imdbId || '-')} | ${escapeHtml(title.year ?? '')}</span><span class="meta">${escapeHtml(title.description || 'IMDb result')}</span></div>
     </article>`;
-  }).join('') || '<div class="empty">No playable results found for this query.</div>';
+  }).join('') || `<div class="empty">${elements.playableOnly?.checked ? 'No playable results found for this query.' : 'No results found for this query.'}</div>`;
 
   elements.items.querySelectorAll('[data-remote-index]').forEach((item) => {
     item.addEventListener('click', () => {
@@ -182,6 +443,36 @@ function renderDetail(options = {}) {
 
   document.body.classList.add('detail-active');
 
+  if (!isAuthenticated()) {
+    const poster = title.posterUrl || '';
+    elements.detail.innerHTML = `<div class="detail-inner overlay-open">
+      <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
+        <span class="back-chip-icon" aria-hidden="true">←</span>
+        <span class="back-chip-label">Inicio</span>
+      </button>
+      <section class="title-hero" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
+        <div class="title-copy">
+          <span class="pill">${escapeHtml(title.type)}</span>
+          <h2>${escapeHtml(title.title)}</h2>
+          <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
+          ${renderEvaluationPanel(title)}
+        </div>
+      </section>
+    </div>`;
+
+    document.querySelector('#closeDetail')?.addEventListener('click', () => {
+      state.selected = null;
+      state.seriesEpisodes = null;
+      document.body.classList.remove('detail-active');
+      renderCatalog();
+      renderDetail();
+      syncRoute();
+    });
+
+    bindEvaluationPanel(title);
+    return;
+  }
+
   const baseEmbed = buildEmbedUrl(title);
   state.playback.season = title.season || state.playback.season || 1;
   state.playback.episode = title.episode || state.playback.episode || 1;
@@ -192,6 +483,7 @@ function renderDetail(options = {}) {
   const hasWatchHistory = Boolean(Object.keys(progress?.watched ?? {}).length) || Boolean(progress?.lastSeason && progress?.lastEpisode);
   const resumeTarget = hasEpisodes ? getResumeTarget(progress, state.seriesEpisodes) : null;
   const startTarget = hasEpisodes ? getStartTarget(state.seriesEpisodes) : null;
+  const isPlayable = title.playable !== false;
   const seasonsTabs = hasEpisodes ? state.seriesEpisodes.seasons.map((entry) => `<button class="season-tab${entry.seasonNumber === state.playback.season ? ' active' : ''}" data-season="${entry.seasonNumber}">T${entry.seasonNumber}</button>`).join('') : '';
   const episodeCards = hasEpisodes ? getEpisodesForSeason(state.playback.season).map((entry) => {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
@@ -208,6 +500,14 @@ function renderDetail(options = {}) {
     </article>`;
   }).join('') : '';
 
+  const availabilityBlock = isPlayable ? '' : `<div class="availability">
+    <div class="availability-copy">
+      <strong>No disponible en el momento</strong>
+      <span>Este título existe, pero no está disponible para reproducir con la fuente actual.</span>
+    </div>
+    <button id="requestTitle" type="button">Solicitar</button>
+  </div>`;
+
   elements.detail.innerHTML = `<div class="detail-inner overlay-open">
     <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
       <span class="back-chip-icon" aria-hidden="true">←</span>
@@ -219,8 +519,10 @@ function renderDetail(options = {}) {
         <h2>${escapeHtml(title.title)}</h2>
         <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
+        ${renderEvaluationPanel(title)}
+        ${availabilityBlock}
         <div class="actions hero-actions">
-          ${!isSeriesLike(title) ? '<button id="loadPlayer">Play</button>' : ''}
+          ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
           ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
           ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
         </div>
@@ -229,7 +531,10 @@ function renderDetail(options = {}) {
     ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
   </div>`;
 
-  bindTap(document.querySelector('#loadPlayer'), () => openPlayerForCurrentSelection());
+  bindTap(document.querySelector('#loadPlayer'), () => {
+    if (!isPlayable) return;
+    openPlayerForCurrentSelection();
+  });
   bindTap(document.querySelector('#startSeries'), () => {
     state.playback.season = startTarget.season;
     state.playback.episode = startTarget.episode;
@@ -240,6 +545,24 @@ function renderDetail(options = {}) {
     state.playback.episode = resumeTarget.episode;
     openPlayerForCurrentSelection();
   });
+  bindTap(document.querySelector('#requestTitle'), () => {
+    const id = title.imdbId || title.tmdbId || '';
+    const type = title.type || 'unknown';
+    const label = title.title || id || 'Title request';
+    const issueTitle = encodeURIComponent(`Title request: ${label} (${type})`);
+    const issueBody = encodeURIComponent([
+      'Requesting availability for:',
+      `- title: ${label}`,
+      `- type: ${type}`,
+      id ? `- id: ${id}` : '',
+      '',
+      'Seen in static app but not playable with current source.',
+      '',
+      `Page: ${window.location.href}`
+    ].filter(Boolean).join('\n'));
+    window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+  });
+  bindEvaluationPanel(title);
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
     state.seriesEpisodes = null;

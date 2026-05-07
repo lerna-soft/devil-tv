@@ -278,9 +278,16 @@ h1 {
 }
 
 .filters {
-  display: flex;
+  display: grid;
   gap: 0.65rem;
-  justify-content: end;
+  grid-template-columns: minmax(14rem, 1fr) repeat(2, minmax(8.5rem, auto)) auto;
+  align-items: center;
+}
+
+#search,
+#typeFilter,
+#genreFilter {
+  min-height: 2.5rem;
 }
 
 .ghost {
@@ -1070,12 +1077,22 @@ code {
   .filters {
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 1fr 6.4rem;
+    grid-template-columns: 1fr 1fr;
   }
 
   #search,
-  #typeFilter {
+  #typeFilter,
+  #genreFilter {
     min-height: 2.6rem;
+  }
+
+  #search {
+    grid-column: 1 / -1;
+  }
+
+  #logoutBtn {
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .imports {

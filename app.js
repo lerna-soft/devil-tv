@@ -23,6 +23,7 @@ const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 const elements = {
   search: document.querySelector('#search'),
   typeFilter: document.querySelector('#typeFilter'),
+  genreFilter: document.querySelector('#genreFilter'),
   logoutBtn: document.querySelector('#logoutBtn'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
@@ -97,6 +98,10 @@ elements.search.addEventListener('input', () => {
 });
 elements.typeFilter.addEventListener('change', () => {
   syncTabs(elements.typeFilter.value);
+  renderCatalog();
+  scheduleRemoteSearch();
+});
+elements.genreFilter?.addEventListener('change', () => {
   renderCatalog();
   scheduleRemoteSearch();
 });
@@ -409,6 +414,7 @@ function bindTap(element, handler) {
 
 function renderCatalog() {
   const query = elements.search.value.trim();
+  populateGenreFilter();
   const filtered = getFilteredLocalTitles();
   elements.count.textContent = `${filtered.length} items`;
   elements.items.innerHTML = renderLocalCards(filtered);
@@ -422,12 +428,33 @@ function renderCatalog() {
 function getFilteredLocalTitles() {
   const query = elements.search.value.trim().toLowerCase();
   const type = elements.typeFilter.value;
+  const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
   return titles.filter((title) => {
     if (title.type === 'episode') return false;
-    const haystack = [title.title, title.showTitle, title.imdbId, title.tmdbId].join(' ').toLowerCase();
-    return (type === 'all' || title.type === type) && (!query || haystack.includes(query));
+    const genres = (title.metadata?.genres || title.categories || []).map((g) => String(g).toLowerCase());
+    const haystack = [title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres].join(' ').toLowerCase();
+    const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
+    return (type === 'all' || title.type === type) && genreMatches && (!query || haystack.includes(query));
   });
+}
+
+function populateGenreFilter() {
+  const select = elements.genreFilter;
+  if (!select) return;
+  const current = select.value || 'all';
+  const genres = new Set();
+  for (const title of loadLocalCatalog()) {
+    const list = title.metadata?.genres || title.categories || [];
+    for (const genre of list) {
+      const value = String(genre || '').trim();
+      if (value) genres.add(value);
+    }
+  }
+  const sorted = [...genres].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
+  select.innerHTML = `<option value="all">Todos los generos</option>${sorted.map((g) => `<option value="${escapeAttribute(g.toLowerCase())}">${escapeHtml(g)}</option>`).join('')}`;
+  const next = [...select.options].some((opt) => opt.value === current) ? current : 'all';
+  select.value = next;
 }
 
 function renderLocalCards(titles) {
@@ -1006,23 +1033,48 @@ function saveLocalCatalog(items) { localStorage.setItem('mep_static_catalog', JS
 
 function cacheSearchResults(results) {
   const current = loadLocalCatalog();
-  const merged = dedupe([...current, ...results]);
+  const merged = dedupe([...current, ...results], { consolidateEquivalent: true });
   saveLocalCatalog(merged);
 }
 
-function dedupe(items) {
-  const seen = new Set();
-  const unique = [];
+function dedupe(items, options = {}) {
+  const { consolidateEquivalent = false } = options;
+  const map = new Map();
   for (const item of items) {
-    const key = `${item.type}:${item.imdbId || ''}:${item.tmdbId || ''}:${item.season || ''}:${item.episode || ''}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    unique.push(item);
+    const primaryKey = `${item.type}:${item.imdbId || ''}:${item.tmdbId || ''}:${item.season || ''}:${item.episode || ''}`;
+    const fallbackKey = `${item.type}:title:${String(item.title || '').trim().toLowerCase()}:${String(item.year || '')}`;
+    const key = consolidateEquivalent ? (item.imdbId ? `${item.type}:imdb:${item.imdbId}` : item.tmdbId ? `${item.type}:tmdb:${item.tmdbId}` : fallbackKey) : primaryKey;
+    const existing = map.get(key);
+    if (!existing) {
+      map.set(key, item);
+      continue;
+    }
+    map.set(key, mergeEquivalentTitles(existing, item));
   }
-  return unique;
+  return [...map.values()];
+}
+
+function mergeEquivalentTitles(a, b) {
+  const choose = (first, second) => (first !== undefined && first !== null && String(first) !== '' ? first : second);
+  return {
+    ...a,
+    ...b,
+    imdbId: choose(a.imdbId, b.imdbId) || choose(b.imdbId, a.imdbId),
+    tmdbId: choose(a.tmdbId, b.tmdbId) || choose(b.tmdbId, a.tmdbId),
+    title: choose(a.title, b.title),
+    year: choose(a.year, b.year),
+    description: choose(a.description, b.description),
+    posterUrl: choose(a.posterUrl, b.posterUrl),
+    playable: a.playable === false && b.playable !== false ? b.playable : (b.playable === false && a.playable !== false ? a.playable : (a.playable === false || b.playable === false ? false : true)),
+    metadata: {
+      ...(a.metadata || {}),
+      ...(b.metadata || {}),
+      genres: [...new Set([...(a.metadata?.genres || []), ...(b.metadata?.genres || []), ...(a.categories || []), ...(b.categories || [])])]
+    }
+  };
 }
 function mergeAndRankResults(localResults, remoteResults, query) {
-  return sortByRelevance(dedupe([...localResults.map((title) => ({ ...title, source: 'local' })), ...remoteResults.map((title) => ({ ...title, source: 'remote' }))]), query)
+  return sortByRelevance(dedupe([...localResults.map((title) => ({ ...title, source: 'local' })), ...remoteResults.map((title) => ({ ...title, source: 'remote' }))], { consolidateEquivalent: true }), query)
     .map((title) => ({ source: title.source || 'remote', title }));
 }
 function sortByRelevance(items, query) { const q = query.toLowerCase(); return [...items].sort((a, b) => relevanceScore(b, q) - relevanceScore(a, q)); }

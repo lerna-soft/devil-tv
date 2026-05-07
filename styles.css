@@ -101,6 +101,20 @@ select {
   padding: 0.82rem 1rem;
 }
 
+select {
+  color-scheme: dark;
+}
+
+select option {
+  background: #11131a;
+  color: #f6f7fb;
+}
+
+select option:checked {
+  background: #2a2d38;
+  color: #ffffff;
+}
+
 input::placeholder {
   color: rgba(246, 247, 251, 0.54);
 }

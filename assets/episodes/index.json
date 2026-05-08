@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:34:09.579Z",
+  "generatedAt": "2026-05-08T05:35:43.020Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -54,6 +54,13 @@
       "file": "tt15765670.txt",
       "seasonCount": 2,
       "episodeCount": 24
+    },
+    "tt17069148": {
+      "title": "Sakamoto Days",
+      "tvmazeId": 77383,
+      "file": "tt17069148.txt",
+      "seasonCount": 1,
+      "episodeCount": 22
     },
     "tt0367409": {
       "title": "Shaman King",

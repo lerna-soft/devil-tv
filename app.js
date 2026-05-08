@@ -456,6 +456,12 @@ function showIssueFeedback({ kind, title, html, text, confirmText = 'OK' }) {
 async function notifyIssueCreated({ reloadMs = 35000 } = {}) {
   const swal = window.Swal;
   const waitSeconds = Math.max(0, Math.ceil(Number(reloadMs || 0) / 1000));
+  const hardReload = () => {
+    clearEpisodeLookupCaches();
+    const url = new URL(window.location.href);
+    url.searchParams.set('mep_reload', String(Date.now()));
+    window.location.replace(url.toString());
+  };
   if (swal?.fire) {
     let timerId = null;
     let endAt = Date.now() + reloadMs;
@@ -489,15 +495,15 @@ async function notifyIssueCreated({ reloadMs = 35000 } = {}) {
       }
     });
     if (result.dismiss === swal.DismissReason.timer) {
-      window.location.reload();
+      hardReload();
     } else if (reloadMs > 0) {
-      window.setTimeout(() => window.location.reload(), Math.max(0, reloadMs));
+      window.setTimeout(hardReload, Math.max(0, reloadMs));
     }
     return;
   }
 
   window.alert(`Solucionando capítulos faltantes.\n\nEspera ${waitSeconds} segundos.\n\nCuando llegue a 0, la página se recargará automáticamente.`);
-  window.setTimeout(() => window.location.reload(), Math.max(0, reloadMs));
+  window.setTimeout(hardReload, Math.max(0, reloadMs));
 }
 
 async function notifyIssueCreationError(error) {
@@ -1600,25 +1606,32 @@ function saveEpisodeManifestCache(payload) {
   } catch {}
 }
 
-async function fetchEpisodeManifest() {
-  const cached = loadEpisodeManifestCache();
-  if (cached) return cached;
-  if (episodeManifestPromise) return episodeManifestPromise;
+async function fetchEpisodeManifest(options = {}) {
+  const { forceRefresh = false } = options;
+  if (!forceRefresh) {
+    const cached = loadEpisodeManifestCache();
+    if (cached) return cached;
+    if (episodeManifestPromise) return episodeManifestPromise;
+  }
 
-  episodeManifestPromise = (async () => {
-    const local = await fetchWithTimeout('./assets/episodes/index.json', {
-      headers: { accept: 'application/json' }
+  const cacheBuster = forceRefresh ? `?v=${Date.now()}` : '';
+  const request = (async () => {
+    const local = await fetchWithTimeout(`./assets/episodes/index.json${cacheBuster}`, {
+      headers: { accept: 'application/json' },
+      cache: forceRefresh ? 'no-store' : 'default'
     }, 2500).catch(() => null);
     if (!local?.ok) throw new Error('episode manifest unavailable');
     const payload = await local.json();
-    saveEpisodeManifestCache(payload);
+    if (!forceRefresh) saveEpisodeManifestCache(payload);
     return payload;
   })();
 
+  if (!forceRefresh) episodeManifestPromise = request;
+
   try {
-    return await episodeManifestPromise;
+    return await request;
   } finally {
-    episodeManifestPromise = null;
+    if (!forceRefresh) episodeManifestPromise = null;
   }
 }
 
@@ -1631,14 +1644,16 @@ async function fetchSeriesEpisodeText(imdbId, options = {}) {
   const promise = (async () => {
     let fileName = `${id}.txt`;
     try {
-      const manifest = await fetchEpisodeManifest();
+      const manifest = await fetchEpisodeManifest({ forceRefresh });
       fileName = String(manifest?.series?.[id]?.file || fileName).trim() || fileName;
     } catch {
       // Fall back to the canonical filename if the manifest is unavailable.
     }
 
-    const local = await fetchWithTimeout(`./assets/episodes/${encodeURIComponent(fileName)}`, {
-      headers: { accept: 'text/plain' }
+    const cacheBuster = forceRefresh ? `?v=${Date.now()}` : '';
+    const local = await fetchWithTimeout(`./assets/episodes/${encodeURIComponent(fileName)}${cacheBuster}`, {
+      headers: { accept: 'text/plain' },
+      cache: forceRefresh ? 'no-store' : 'default'
     }, 2500).catch(() => null);
     if (local?.ok) {
       const text = await local.text();
@@ -1653,6 +1668,22 @@ async function fetchSeriesEpisodeText(imdbId, options = {}) {
   } finally {
     episodeTextPromises.delete(id);
   }
+}
+
+function clearEpisodeLookupCaches() {
+  try {
+    localStorage.removeItem(EPISODE_MANIFEST_CACHE_KEY);
+  } catch {}
+  try {
+    const keys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('mep_series_eps_')) keys.push(key);
+    }
+    for (const key of keys) localStorage.removeItem(key);
+  } catch {}
+  episodeManifestPromise = null;
+  episodeTextPromises.clear();
 }
 
 function buildEpisodesFromIdList(imdbId, text) {

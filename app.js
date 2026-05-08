@@ -1109,16 +1109,12 @@ function renderDetail(options = {}) {
   );
   const syncRemaining = syncActive ? Math.max(0, state.episodeSyncUntil - Date.now()) : 0;
   const syncText = syncActive ? formatCountdown(syncRemaining) : '02:00';
-  const reportIssueBlock = isSeriesLike(title)
-    ? `<div class="report-issue">
-    <button id="reportIssue" type="button" ${syncActive ? 'disabled' : ''}>Solucionar problema de episodios faltantes</button>
-    <span>${syncActive ? `Sincronizando episodios. Reintentando en ${syncText}.` : 'Crea un issue y reintenta cargar capítulos en 2 minutos.'}</span>
-    <span id="episodeSyncCountdown" class="episode-sync-countdown"${syncActive ? '' : ' hidden'}>Reintento en ${syncText}</span>
-  </div>`
-    : `<div class="report-issue">
-    <button id="reportIssue" type="button">Reportar problema</button>
-    <span>Abre un issue con esta ficha y la ruta actual.</span>
-  </div>`;
+  const issueActionLabel = isSeriesLike(title)
+    ? (syncActive ? `Sincronizando (${syncText})` : 'Solucionar capítulos faltantes')
+    : 'Reportar problema';
+  const issueActionHint = isSeriesLike(title)
+    ? (syncActive ? `Reintentando en ${syncText}.` : 'Crea un issue y vuelve a cargar los capítulos.')
+    : 'Abre un issue con esta ficha y la ruta actual.';
 
   const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
   const metadataBlock = isBareRoute ? `<div class="availability">
@@ -1142,15 +1138,16 @@ function renderDetail(options = {}) {
         <p class="title-meta">${escapeHtml([title.year, genres.length ? genres.slice(0, 3).join(', ') : ''].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
-        ${reportIssueBlock}
         ${metadataBlock}
         ${availabilityBlock}
         <div class="actions hero-actions">
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
           ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
           ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
+          <button id="reportIssue" type="button"${syncActive ? ' disabled' : ''}>${escapeHtml(issueActionLabel)}</button>
           ${isSeriesLike(title) && isAuthenticated() ? `<button id="refreshEpisodes"${state.seriesEpisodesLoading ? ' disabled' : ''}>Actualizar capítulos</button>` : ''}
         </div>
+        <p class="hero-actions-hint">${escapeHtml(issueActionHint)}</p>
       </div>
     </section>
     ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
@@ -1220,7 +1217,29 @@ function renderDetail(options = {}) {
     });
   });
   bindTap(document.querySelector('#reportIssue'), () => {
-    if (!isSeriesLike(title)) return;
+    if (!isSeriesLike(title)) {
+      const id = title.imdbId || title.tmdbId || '';
+      const type = title.type || 'unknown';
+      const label = title.title || id || 'Title issue';
+      void openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
+        'Describe the problem here:',
+        '- no links',
+        '- playback fails',
+        '- chapters missing',
+        '- metadata wrong',
+        '',
+        'Observed issue:',
+        '',
+        'Expected behavior:',
+        ''
+      ]), ['episode-sync']).then((issue) => {
+        void notifyIssueCreated(issue);
+      }).catch((error) => {
+        console.error(error);
+        void notifyIssueCreationError(error);
+      });
+      return;
+    }
     const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
     const type = title.type || 'unknown';
     const seasons = Array.isArray(state.seriesEpisodes?.seasons) ? state.seriesEpisodes.seasons.length : 0;

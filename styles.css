@@ -515,6 +515,7 @@ h1 {
 .home-viewport {
   min-width: 0;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .home-track {
@@ -522,6 +523,18 @@ h1 {
   gap: 0.9rem;
   transition: transform 220ms ease;
   will-change: transform;
+}
+
+.home-carousel.is-dragging .home-track {
+  transition: none;
+}
+
+.home-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.home-viewport {
+  cursor: grab;
 }
 
 .home-track .item,

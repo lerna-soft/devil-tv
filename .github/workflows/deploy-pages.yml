@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   pages: write
   id-token: write
 
@@ -48,6 +49,7 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          node tools/sync-episode-targets-from-issues.mjs
           node tools/build-episode-assets.mjs
 
       - name: Upload Pages Artifact (site root)
@@ -58,6 +60,13 @@ jobs:
       - name: Deploy to GitHub Pages (may take a while)
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Close synced episode issues
+        if: success()
+        shell: bash
+        run: |
+          set -euxo pipefail
+          node tools/close-episode-sync-issues.mjs
 
       - name: Summary (deployed URL)
         if: always()

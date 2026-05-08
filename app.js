@@ -29,7 +29,6 @@ const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
-const PLAYBACK_SOURCE_PREFS_KEY = 'mep_playback_source_prefs_v1';
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
@@ -342,41 +341,8 @@ function saveEvaluations(evals) {
   localStorage.setItem(EVAL_STORAGE_KEY, JSON.stringify(evals || {}));
 }
 
-function loadPlaybackSourcePrefs() {
-  try {
-    const prefs = JSON.parse(localStorage.getItem(PLAYBACK_SOURCE_PREFS_KEY) || '{}');
-    return prefs && typeof prefs === 'object' ? prefs : {};
-  } catch {
-    return {};
-  }
-}
-
-function savePlaybackSourcePrefs(prefs) {
-  try {
-    localStorage.setItem(PLAYBACK_SOURCE_PREFS_KEY, JSON.stringify(prefs || {}));
-  } catch {}
-}
-
 function getPlaybackTitleKey(entry) {
   return String(entry?.imdbId || entry?.tmdbId || '').trim();
-}
-
-function getPlaybackSourceMode(entry) {
-  const key = getPlaybackTitleKey(entry);
-  if (!key) return 'auto';
-  const prefs = loadPlaybackSourcePrefs();
-  const mode = prefs[key];
-  return ['auto', 'imdb', 'tmdb'].includes(mode) ? mode : 'auto';
-}
-
-function setPlaybackSourceMode(entry, mode) {
-  const key = getPlaybackTitleKey(entry);
-  if (!key) return;
-  const nextMode = ['auto', 'imdb', 'tmdb'].includes(mode) ? mode : 'auto';
-  const prefs = loadPlaybackSourcePrefs();
-  if (nextMode === 'auto') delete prefs[key];
-  else prefs[key] = nextMode;
-  savePlaybackSourcePrefs(prefs);
 }
 
 function getTitleId(title) {
@@ -445,14 +411,12 @@ function renderEvaluationPanel(title) {
   </section>`;
 }
 
-function openGitHubIssue(title, body) {
+function openGitHubIssue(title, body, labels = '') {
   const issueTitle = encodeURIComponent(title);
   const issueBody = encodeURIComponent(body);
-  const url = `https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`;
-  window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues`, '_blank', 'noopener');
-  window.setTimeout(() => {
-    window.open(url, '_blank', 'noopener');
-  }, 250);
+  const issueLabels = labels ? `&labels=${encodeURIComponent(labels)}` : '';
+  const url = `https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}${issueLabels}`;
+  window.open(url, '_blank', 'noopener');
 }
 
 function buildIssueBody(title, lines) {
@@ -1049,7 +1013,6 @@ function renderDetail(options = {}) {
     </div>
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
-  const playbackSourceBlock = renderPlaybackSourceControls(title);
   const reportIssueBlock = `<div class="report-issue">
     <button id="reportIssue" type="button">Reportar problema</button>
     <span>Abre un issue con esta ficha y la ruta actual.</span>
@@ -1080,7 +1043,6 @@ function renderDetail(options = {}) {
         ${reportIssueBlock}
         ${metadataBlock}
         ${availabilityBlock}
-        ${playbackSourceBlock}
         <div class="actions hero-actions">
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
           ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
@@ -1148,6 +1110,11 @@ function renderDetail(options = {}) {
   bindTap(document.querySelector('#reportIssue'), () => {
     const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
     const type = title.type || 'unknown';
+    const seasons = Array.isArray(state.seriesEpisodes?.seasons) ? state.seriesEpisodes.seasons.length : 0;
+    const episodeTotal = Array.isArray(state.seriesEpisodes?.seasons)
+      ? state.seriesEpisodes.seasons.reduce((count, season) => count + (season?.episodes?.length || 0), 0)
+      : 0;
+    const chaptersListed = isSeriesLike(title) && seasons > 0 ? 'yes' : 'no';
     openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
       'Describe the problem here:',
       '- no links',
@@ -1155,11 +1122,17 @@ function renderDetail(options = {}) {
       '- chapters missing',
       '- metadata wrong',
       '',
+      'Episode status:',
+      `- Chapters listed in app: ${chaptersListed}`,
+      `- Seasons loaded: ${seasons}`,
+      `- Episodes loaded: ${episodeTotal}`,
+      `- Episode asset present: ${isSeriesLike(title) && episodeTotal > 0 ? 'yes' : 'no'}`,
+      '',
       'Observed issue:',
       '',
       'Expected behavior:',
       ''
-    ]));
+    ]), 'episode-sync');
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
@@ -1196,7 +1169,6 @@ function renderDetail(options = {}) {
     state.playback.episode = episode;
     openPlayerForCurrentSelection();
   }));
-  bindPlaybackSourceControls(elements.detail);
 }
 
 function openPlayerModal(embedUrl) {
@@ -1706,7 +1678,7 @@ function getPlaybackId(entry) {
   return getPlaybackCandidateIds(entry)[0] || '';
 }
 
-function getPlaybackCandidateIds(entry, mode = getPlaybackSourceMode(entry)) {
+function getPlaybackCandidateIds(entry) {
   const imdb = String(entry?.imdbId || '').trim();
   const tmdb = String(entry?.tmdbId || '').trim();
   const ids = [];
@@ -1715,13 +1687,7 @@ function getPlaybackCandidateIds(entry, mode = getPlaybackSourceMode(entry)) {
     if (id && !ids.includes(id)) ids.push(id);
   };
 
-  if (mode === 'imdb') {
-    pushUnique(imdb);
-    pushUnique(tmdb);
-  } else if (mode === 'tmdb') {
-    pushUnique(tmdb);
-    pushUnique(imdb);
-  } else if (entry?.type === 'series') {
+  if (entry?.type === 'series') {
     if (/^tt\d+$/i.test(imdb)) pushUnique(imdb);
     pushUnique(tmdb);
     pushUnique(imdb);
@@ -1782,48 +1748,6 @@ function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisod
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }
 function syncTabs(type) { elements.tabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.typeTab === type)); }
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
-
-function renderPlaybackSourceControls(title) {
-  if (!isAuthenticated()) return '';
-  const ids = getPlaybackCandidateIds(title);
-  if (ids.length < 2) return '';
-  const mode = getPlaybackSourceMode(title);
-  const label = mode === 'imdb' ? 'IMDb' : mode === 'tmdb' ? 'TMDB' : 'Auto';
-  return `
-    <div class="source-switcher">
-      <div class="source-switcher-head">
-        <span class="source-switcher-label">Fuente de reproduccion</span>
-        <span class="source-switcher-value">${escapeHtml(label)}</span>
-      </div>
-      <div class="source-switcher-group" role="group" aria-label="Fuente de reproduccion">
-        <button type="button" class="source-switcher-btn${mode === 'auto' ? ' active' : ''}" data-playback-source="auto">Auto</button>
-        <button type="button" class="source-switcher-btn${mode === 'imdb' ? ' active' : ''}" data-playback-source="imdb">IMDb</button>
-        <button type="button" class="source-switcher-btn${mode === 'tmdb' ? ' active' : ''}" data-playback-source="tmdb">TMDB</button>
-      </div>
-    </div>`;
-}
-
-function bindPlaybackSourceControls(root = document) {
-  root.querySelectorAll('[data-playback-source]').forEach((button) => {
-    button.addEventListener('click', () => {
-      if (!state.selected) return;
-      setPlaybackSourceMode(state.selected, button.dataset.playbackSource || 'auto');
-      renderDetail({ skipHydratePlayback: true });
-      renderPlayerControls();
-      refreshPlayerSource();
-    });
-  });
-}
-
-function refreshPlayerSource() {
-  if (!state.selected) return;
-  const modal = elements.playerModal;
-  const iframe = elements.playerIframe;
-  if (!modal || !iframe || modal.hidden) return;
-  const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
-  iframe.src = target;
-  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(target));
-}
 
 function persistLastSelection() {
   if (!state.selected) return;
@@ -1974,7 +1898,6 @@ function renderPlayerControls() {
   if (!elements.playerControls) return;
   if (isSeriesLike(state.selected)) {
     elements.playerControls.innerHTML = `
-      ${renderPlaybackSourceControls(state.selected)}
       <div class="player-nav-row">
         <button class="player-nav" data-player-action="back">Volver a la serie</button>
         <button class="player-nav" data-player-action="prev">Capítulo anterior</button>
@@ -1984,8 +1907,6 @@ function renderPlayerControls() {
   } else {
     elements.playerControls.innerHTML = `<button class="player-nav" data-player-action="close">Cerrar</button>`;
   }
-
-  bindPlaybackSourceControls(elements.playerControls);
   elements.playerControls.querySelectorAll('[data-player-action]').forEach((button) => {
     button.addEventListener('click', () => {
       const action = button.dataset.playerAction;

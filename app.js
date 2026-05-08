@@ -2,6 +2,9 @@ const state = {
   selected: null,
   seriesEpisodes: null,
   seriesEpisodesLoading: false,
+  episodeSyncUntil: 0,
+  episodeSyncTitleId: '',
+  episodeSyncTimer: null,
   hydratedProgressId: '',
   remoteResults: [],
   remoteSearchTimer: null,
@@ -98,6 +101,10 @@ function bindAuth() {
     localStorage.removeItem(AUTH_STORAGE_KEY);
     state.selected = null;
     state.seriesEpisodes = null;
+    state.episodeSyncUntil = 0;
+    state.episodeSyncTitleId = '';
+    clearInterval(state.episodeSyncTimer);
+    state.episodeSyncTimer = null;
     closePlayerModal();
     hideAuthGate();
     updateAuthUi();
@@ -155,6 +162,10 @@ elements.tabs.forEach((tab) => {
       syncTabs('all');
       state.selected = null;
       state.seriesEpisodes = null;
+      state.episodeSyncUntil = 0;
+      state.episodeSyncTitleId = '';
+      clearInterval(state.episodeSyncTimer);
+      state.episodeSyncTimer = null;
       closePlayerModal();
       renderCatalog();
       renderDetail();
@@ -1052,7 +1063,23 @@ function renderDetail(options = {}) {
     </div>
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
-  const reportIssueBlock = `<div class="report-issue">
+  const currentSyncTitleId = getTitleId(title);
+  const syncActive = Boolean(
+    state.episodeSyncTitleId &&
+    currentSyncTitleId &&
+    state.episodeSyncTitleId === currentSyncTitleId &&
+    state.episodeSyncUntil &&
+    Date.now() < state.episodeSyncUntil
+  );
+  const syncRemaining = syncActive ? Math.max(0, state.episodeSyncUntil - Date.now()) : 0;
+  const syncText = syncActive ? formatCountdown(syncRemaining) : '02:00';
+  const reportIssueBlock = isSeriesLike(title)
+    ? `<div class="report-issue">
+    <button id="reportIssue" type="button" ${syncActive ? 'disabled' : ''}>Solucionar problema de episodios faltantes</button>
+    <span>${syncActive ? `Sincronizando episodios. Reintentando en ${syncText}.` : 'Crea un issue y reintenta cargar capítulos en 2 minutos.'}</span>
+    <span id="episodeSyncCountdown" class="episode-sync-countdown"${syncActive ? '' : ' hidden'}>Reintento en ${syncText}</span>
+  </div>`
+    : `<div class="report-issue">
     <button id="reportIssue" type="button">Reportar problema</button>
     <span>Abre un issue con esta ficha y la ruta actual.</span>
   </div>`;
@@ -1157,40 +1184,50 @@ function renderDetail(options = {}) {
     });
   });
   bindTap(document.querySelector('#reportIssue'), () => {
+    if (!isSeriesLike(title)) return;
     const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
     const type = title.type || 'unknown';
     const seasons = Array.isArray(state.seriesEpisodes?.seasons) ? state.seriesEpisodes.seasons.length : 0;
     const episodeTotal = Array.isArray(state.seriesEpisodes?.seasons)
       ? state.seriesEpisodes.seasons.reduce((count, season) => count + (season?.episodes?.length || 0), 0)
       : 0;
-    const chaptersListed = isSeriesLike(title) && seasons > 0 ? 'yes' : 'no';
-    void openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
-      'Describe the problem here:',
-      '- no links',
-      '- playback fails',
-      '- chapters missing',
-      '- metadata wrong',
+    const chaptersListed = seasons > 0 ? 'yes' : 'no';
+    const button = document.querySelector('#reportIssue');
+    if (button) button.disabled = true;
+    void openGitHubIssue(`Solution request: missing episodes for ${label} (${type})`, buildIssueBody(title, [
+      'Problem type: missing episodes',
       '',
       'Episode status:',
       `- Chapters listed in app: ${chaptersListed}`,
       `- Seasons loaded: ${seasons}`,
       `- Episodes loaded: ${episodeTotal}`,
-      `- Episode asset present: ${isSeriesLike(title) && episodeTotal > 0 ? 'yes' : 'no'}`,
+      `- Episode asset present: ${episodeTotal > 0 ? 'yes' : 'no'}`,
       '',
       'Observed issue:',
+      'Series opens but chapters are missing or incomplete.',
       '',
       'Expected behavior:',
+      'Series should list the available seasons and episodes after sync.',
+      '',
+      'Action requested:',
+      'Sync missing episode assets from the public source and mark the issue as resolved.',
       ''
     ]), ['episode-sync']).then((issue) => {
-      window.alert(`Issue creado: #${issue.number}`);
+      beginEpisodeSyncCountdown();
+      window.alert(`Issue creado: #${issue.number}. Se reintentará en 2 minutos.`);
     }).catch((error) => {
       console.error(error);
+      if (button) button.disabled = false;
       window.alert(`No se pudo crear el issue: ${error.message}`);
     });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;
     state.seriesEpisodes = null;
+    state.episodeSyncUntil = 0;
+    state.episodeSyncTitleId = '';
+    clearInterval(state.episodeSyncTimer);
+    state.episodeSyncTimer = null;
     document.body.classList.remove('detail-active');
     renderCatalog();
     renderDetail();
@@ -1462,6 +1499,47 @@ async function filterUnavailableSeries(results) {
     if (!imdbId) return false;
     return index.has(imdbId);
   });
+}
+
+function formatCountdown(ms) {
+  const totalSeconds = Math.max(0, Math.ceil(Number(ms || 0) / 1000));
+  const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+  const seconds = String(totalSeconds % 60).padStart(2, '0');
+  return `${minutes}:${seconds}`;
+}
+
+function beginEpisodeSyncCountdown() {
+  state.episodeSyncTitleId = String(getTitleId(state.selected) || '').trim();
+  state.episodeSyncUntil = Date.now() + 120000;
+  clearInterval(state.episodeSyncTimer);
+  state.episodeSyncTimer = setInterval(() => {
+    if (!state.episodeSyncUntil || Date.now() >= state.episodeSyncUntil) {
+      finishEpisodeSyncCountdown();
+      return;
+    }
+    renderDetail({ skipHydratePlayback: true });
+  }, 1000);
+  renderDetail({ skipHydratePlayback: true });
+}
+
+async function finishEpisodeSyncCountdown() {
+  clearInterval(state.episodeSyncTimer);
+  state.episodeSyncTimer = null;
+  state.episodeSyncUntil = 0;
+  const expectedTitleId = String(state.episodeSyncTitleId || '').trim();
+  state.episodeSyncTitleId = '';
+  if (!state.selected || !isSeriesLike(state.selected)) return;
+  const currentTitleId = String(getTitleId(state.selected) || '').trim();
+  if (expectedTitleId && currentTitleId && expectedTitleId !== currentTitleId) return;
+  const cacheId = state.selected.imdbId || state.selected.tmdbId || '';
+  if (cacheId) {
+    try { localStorage.removeItem(`mep_series_eps_${cacheId}`); } catch {}
+  }
+  episodeIndexPromise = null;
+  state.seriesEpisodes = null;
+  renderDetail({ skipHydratePlayback: true });
+  await loadSeriesEpisodes({ forceRefresh: true });
+  renderDetail({ skipHydratePlayback: true });
 }
 
 async function getEpisodeSeriesIndex() {

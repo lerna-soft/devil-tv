@@ -453,29 +453,51 @@ function showIssueFeedback({ kind, title, html, text, confirmText = 'OK' }) {
   return Promise.resolve();
 }
 
-async function notifyIssueCreated() {
-  await showIssueFeedback({
-    kind: 'success',
-    title: 'Solucionando capítulos faltantes',
-    html: [
-      `<p>Se está actualizando el archivo de episodios.</p>`,
-      `<p>Cuando termine el deploy, vuelve a abrir la serie y los capítulos aparecerán si ya están disponibles.</p>`
-    ].join('')
-  });
-}
-
-async function refreshEpisodesAfterIssue() {
-  if (!state.selected || !isSeriesLike(state.selected)) return;
-  const cacheId = state.selected.imdbId || state.selected.tmdbId || '';
-  if (cacheId) {
-    try { localStorage.removeItem(`mep_series_eps_${cacheId}`); } catch {}
+async function notifyIssueCreated({ reloadMs = 35000 } = {}) {
+  const swal = window.Swal;
+  const waitSeconds = Math.max(0, Math.ceil(Number(reloadMs || 0) / 1000));
+  if (swal?.fire) {
+    let timerId = null;
+    let endAt = Date.now() + reloadMs;
+    const result = await swal.fire({
+      icon: 'success',
+      title: 'Solucionando capítulos faltantes',
+      html: `
+        <p>Se está actualizando el archivo de episodios.</p>
+        <p class="swal-sync-countdown">Espera <strong id="episodeSyncCountdown">${waitSeconds}</strong> segundos.</p>
+        <p>Cuando llegue a 0, la página se recargará automáticamente y leerá el archivo nuevo.</p>
+      `,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      timer: reloadMs,
+      timerProgressBar: true,
+      didOpen: () => {
+        const countdownEl = swal.getHtmlContainer()?.querySelector('#episodeSyncCountdown');
+        timerId = window.setInterval(() => {
+          const remaining = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+          if (countdownEl) countdownEl.textContent = String(remaining);
+          if (remaining <= 0 && timerId) {
+            window.clearInterval(timerId);
+            timerId = null;
+          }
+        }, 250);
+      },
+      willClose: () => {
+        if (timerId) window.clearInterval(timerId);
+        timerId = null;
+      }
+    });
+    if (result.dismiss === swal.DismissReason.timer) {
+      window.location.reload();
+    } else if (reloadMs > 0) {
+      window.setTimeout(() => window.location.reload(), Math.max(0, reloadMs));
+    }
+    return;
   }
-  episodeIndexPromise = null;
-  state.seriesEpisodes = null;
-  state.seriesEpisodesLoading = true;
-  renderDetail({ skipHydratePlayback: true });
-  await loadSeriesEpisodes({ forceRefresh: true });
-  renderDetail({ skipHydratePlayback: true });
+
+  window.alert(`Solucionando capítulos faltantes.\n\nEspera ${waitSeconds} segundos.\n\nCuando llegue a 0, la página se recargará automáticamente.`);
+  window.setTimeout(() => window.location.reload(), Math.max(0, reloadMs));
 }
 
 async function notifyIssueCreationError(error) {
@@ -1253,7 +1275,7 @@ function renderDetail(options = {}) {
       'Sync missing episode assets from the public source and mark the issue as resolved.',
       ''
     ]), ['episode-sync']).then((issue) => {
-      void refreshEpisodesAfterIssue().finally(() => notifyIssueCreated(issue));
+      void notifyIssueCreated({ reloadMs: 35000 });
     }).catch((error) => {
       console.error(error);
       if (button) button.disabled = false;

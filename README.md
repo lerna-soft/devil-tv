@@ -10,7 +10,28 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - URL pública: `https://lerna-admin.github.io/media-evaluation-platform-static/`
 - Publicación activa desde rama: `gh-pages`
 - Rama de desarrollo: `main`
-- Reproductor: VidAPI (`https://vaplayer.ru/embed/...`)
+- Reproductor primario: VidAPI (`https://vaplayer.ru/embed/...`)
+- Los episodios se publican como assets estáticos por serie:
+  - `assets/episodes/index.json`
+  - `assets/episodes/<imdbId>.txt`
+
+## Assets de episodios
+
+- El catálogo de episodios no se carga como un solo archivo grande en runtime.
+- La app consulta un manifest liviano en `assets/episodes/index.json`.
+- Cada serie tiene su propio archivo en `assets/episodes/<imdbId>.txt`.
+- El generador está en [`tools/build-episode-assets.mjs`](/home/xanadu/media-evaluation-platform-static/tools/build-episode-assets.mjs).
+- El pipeline de Pages sincroniza issues con label `episode-sync` antes de reconstruir episodios.
+- El sincronizador está en [`tools/sync-episode-targets-from-issues.mjs`](/home/xanadu/media-evaluation-platform-static/tools/sync-episode-targets-from-issues.mjs).
+- Después del deploy, el workflow cierra automáticamente los issues ya procesados para no reprocesarlos.
+- Cada issue con label `episode-sync` también dispara un workflow dedicado que intenta resolverlo de inmediato y deja los assets actualizados en `main`.
+- Los targets actuales están en [`assets/episodes/targets.json`](/home/xanadu/media-evaluation-platform-static/assets/episodes/targets.json).
+- El workflow de Pages ejecuta ese script antes de publicar.
+- Fuente usada para construir los assets: TVMaze.
+- El botón de reporte puede crear issues directo por API si defines un token ofuscado en `app.js`:
+  - `GITHUB_ISSUE_TOKEN_CIPHER`
+  - `GITHUB_ISSUE_TOKEN_SEED`
+  - El token se decodifica en el cliente y ya no pide prompt ni abre una pestaña nueva.
 
 ## Estado por plataforma
 
@@ -65,7 +86,7 @@ TTL actual de episodios por serie: 14 días.
 ## Limitaciones (por ser estático)
 
 - Sin backend no hay verificación server-side robusta de disponibilidad por URL.
-- Dependencia de endpoints públicos: puede haber CORS/rate-limit intermitente.
+- Dependencia de endpoints públicos para búsqueda, metadata y build de episodios: puede haber CORS/rate-limit intermitente.
 - Calidad de metadata depende de lo que entreguen las fuentes.
 
 ## Flujo de trabajo recomendado

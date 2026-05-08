@@ -621,6 +621,54 @@ h1 {
   gap: 0.65rem;
   padding: 0;
   text-align: left;
+  position: relative;
+}
+
+.item-play {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 941px) {
+  .item-play {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.92);
+    cursor: pointer;
+    display: inline-flex;
+    height: 3.1rem;
+    justify-content: center;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 4.7rem;
+    transform: translate(-50%, -50%) scale(0.98);
+    transition: opacity 140ms ease, transform 140ms ease, background 140ms ease;
+    width: 3.1rem;
+    z-index: 5;
+  }
+
+  .item:hover .item-play {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .item-play:hover {
+    background: rgba(0, 0, 0, 0.40);
+  }
+
+  .item-play:active {
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+
+  .item-play-icon {
+    font-size: 1.05rem;
+    line-height: 1;
+    margin-left: 2px;
+  }
 }
 
 .item:hover .item-poster,

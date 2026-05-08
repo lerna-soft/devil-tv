@@ -1747,14 +1747,19 @@ function buildVidCoreEmbedUrl(entry, id) {
   const episode = Number(entry.episode || 1) || 1;
   return `https://vidcore.net/tv/${encodeURIComponent(id)}/${season}/${episode}`;
 }
+function buildVidApiProbeUrl(entry) {
+  if (!entry) return '';
+  const id = getPlaybackId(entry);
+  if (!id) return '';
+  if (entry.type === 'movie') {
+    return `https://brightpathsignals.com/embed/movie/${encodeURIComponent(id)}`;
+  }
+  return `https://brightpathsignals.com/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`;
+}
 function buildProxiedProbeUrl(url) {
   const normalized = String(url || '').trim();
   if (!normalized) return '';
   return `https://r.jina.ai/http://${normalized.replace(/^https?:\/\//i, '')}`;
-}
-function extractIframeSrc(text) {
-  const match = String(text || '').match(/<iframe[^>]+src="([^"]+)"/i);
-  return match ? String(match[1] || '').trim() : '';
 }
 function looksLikeNotFoundPage(text) {
   const value = String(text || '');
@@ -1763,8 +1768,9 @@ function looksLikeNotFoundPage(text) {
     || /Title:\s*404\b/i.test(value)
     || /<title>\s*404\b/i.test(value);
 }
-async function probePlaybackAvailability(url) {
-  const probeUrl = buildProxiedProbeUrl(url);
+async function probePlaybackAvailability(entry) {
+  const targetUrl = buildVidApiProbeUrl(entry);
+  const probeUrl = buildProxiedProbeUrl(targetUrl);
   if (!probeUrl) return { status: 'unknown' };
 
   const response = await fetchWithTimeout(probeUrl, {
@@ -1774,22 +1780,7 @@ async function probePlaybackAvailability(url) {
 
   const text = await response.text().catch(() => '');
   if (looksLikeNotFoundPage(text)) return { status: '404', probeUrl };
-
-  const iframeSrc = extractIframeSrc(text);
-  if (!iframeSrc) return { status: 'ok', probeUrl };
-
-  const nestedProbeUrl = buildProxiedProbeUrl(iframeSrc);
-  if (!nestedProbeUrl) return { status: 'ok', probeUrl, iframeSrc };
-
-  const nestedResponse = await fetchWithTimeout(nestedProbeUrl, {
-    headers: { accept: 'text/plain' }
-  }, 7000).catch(() => null);
-  if (!nestedResponse?.ok) return { status: 'unknown', probeUrl, iframeSrc };
-
-  const nestedText = await nestedResponse.text().catch(() => '');
-  if (looksLikeNotFoundPage(nestedText)) return { status: '404', probeUrl, iframeSrc };
-
-  return { status: 'ok', probeUrl, iframeSrc };
+  return { status: 'ok', probeUrl };
 }
 function getPlaybackUrlsForCurrentSelection(primaryUrl, provider = state.playerProvider || 'vidapi') {
   if (!state.selected) return [primaryUrl];
@@ -1849,11 +1840,10 @@ function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
 async function resolvePreferredPlaybackProvider() {
   if (!state.selected) return 'vidapi';
-  const primaryUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected), 'vidapi');
-  const probe = await probePlaybackAvailability(primaryUrl);
+  const probe = await probePlaybackAvailability(state.selected);
   console.debug('[mep] playback probe', {
     title: state.selected.title,
-    primaryUrl,
+    primaryUrl: buildVidApiProbeUrl(state.selected),
     probe: probe.status
   });
   if (probe.status === '404' && isSeriesLike(state.selected)) return 'vidcore';

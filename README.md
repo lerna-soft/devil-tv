@@ -28,6 +28,7 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - Los targets actuales están en [`assets/episodes/targets.json`](/home/xanadu/media-evaluation-platform-static/assets/episodes/targets.json).
 - El workflow de Pages ejecuta ese script antes de publicar.
 - Fuente usada para construir los assets: TVMaze.
+- El botón de reporte puede crear issues directo por API si guardas un token de GitHub en `localStorage` bajo `mep_github_issue_token_v1`.
 
 ## Estado por plataforma
 

@@ -27,6 +27,7 @@ const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
+const GITHUB_ISSUE_TOKEN_KEY = 'mep_github_issue_token_v1';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
@@ -411,12 +412,46 @@ function renderEvaluationPanel(title) {
   </section>`;
 }
 
-function openGitHubIssue(title, body, labels = '') {
-  const issueTitle = encodeURIComponent(title);
-  const issueBody = encodeURIComponent(body);
-  const issueLabels = labels ? `&labels=${encodeURIComponent(labels)}` : '';
-  const url = `https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}${issueLabels}`;
-  window.open(url, '_blank', 'noopener');
+async function openGitHubIssue(title, body, labels = []) {
+  const token = await getGitHubIssueToken();
+  const response = await fetch('https://api.github.com/repos/lerna-admin/media-evaluation-platform-static/issues', {
+    method: 'POST',
+    headers: {
+      accept: 'application/vnd.github+json',
+      authorization: `Bearer ${token}`,
+      'content-type': 'application/json',
+      'x-github-api-version': '2022-11-28'
+    },
+    body: JSON.stringify({
+      title,
+      body,
+      labels: Array.isArray(labels) ? labels : [labels].filter(Boolean)
+    })
+  });
+
+  if (!response.ok) {
+    if (response.status === 401 || response.status === 403) {
+      localStorage.removeItem(GITHUB_ISSUE_TOKEN_KEY);
+    }
+    const text = await response.text().catch(() => '');
+    throw new Error(`GitHub issue create failed (${response.status} ${response.statusText})${text ? `: ${text}` : ''}`);
+  }
+
+  return response.json();
+}
+
+async function getGitHubIssueToken() {
+  const cached = String(localStorage.getItem(GITHUB_ISSUE_TOKEN_KEY) || '').trim();
+  if (cached) return cached;
+
+  const token = window.prompt('Pega un GitHub token con permiso para crear issues en este repo:');
+  if (token === null) throw new Error('Issue creation canceled.');
+
+  const trimmed = String(token || '').trim();
+  if (!trimmed) throw new Error('Missing GitHub token.');
+
+  localStorage.setItem(GITHUB_ISSUE_TOKEN_KEY, trimmed);
+  return trimmed;
 }
 
 function buildIssueBody(title, lines) {
@@ -1083,8 +1118,8 @@ function renderDetail(options = {}) {
     const id = title.imdbId || title.tmdbId || '';
     const type = title.type || 'unknown';
     const label = title.title || id || 'Title request';
-    const issueTitle = encodeURIComponent(`Title request: ${label} (${type})`);
-    const issueBody = encodeURIComponent([
+    const issueTitle = `Title request: ${label} (${type})`;
+    const issueBody = [
       'Requesting availability for:',
       `- title: ${label}`,
       `- type: ${type}`,
@@ -1093,19 +1128,29 @@ function renderDetail(options = {}) {
       'Seen in static app but not playable with current source.',
       '',
       `Page: ${window.location.href}`
-    ].filter(Boolean).join('\n'));
-    window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+    ].filter(Boolean).join('\n');
+    void openGitHubIssue(issueTitle, issueBody).then((issue) => {
+      window.alert(`Issue creado: #${issue.number}`);
+    }).catch((error) => {
+      console.error(error);
+      window.alert(`No se pudo crear el issue: ${error.message}`);
+    });
   });
   bindTap(document.querySelector('#requestMetadata'), () => {
     const id = title.imdbId || title.tmdbId || '';
     const type = title.type || 'unknown';
     const label = title.title || id || 'Metadata request';
-    openGitHubIssue(`Metadata request: ${label} (${type})`, buildIssueBody(title, [
+    void openGitHubIssue(`Metadata request: ${label} (${type})`, buildIssueBody(title, [
       'Requesting metadata for this title.',
       '',
       'Context:',
       `- opened via direct route or missing metadata in current sources`
-    ]));
+    ])).then((issue) => {
+      window.alert(`Issue creado: #${issue.number}`);
+    }).catch((error) => {
+      console.error(error);
+      window.alert(`No se pudo crear el issue: ${error.message}`);
+    });
   });
   bindTap(document.querySelector('#reportIssue'), () => {
     const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
@@ -1115,7 +1160,7 @@ function renderDetail(options = {}) {
       ? state.seriesEpisodes.seasons.reduce((count, season) => count + (season?.episodes?.length || 0), 0)
       : 0;
     const chaptersListed = isSeriesLike(title) && seasons > 0 ? 'yes' : 'no';
-    openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
+    void openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
       'Describe the problem here:',
       '- no links',
       '- playback fails',
@@ -1132,7 +1177,12 @@ function renderDetail(options = {}) {
       '',
       'Expected behavior:',
       ''
-    ]), 'episode-sync');
+    ]), ['episode-sync']).then((issue) => {
+      window.alert(`Issue creado: #${issue.number}`);
+    }).catch((error) => {
+      console.error(error);
+      window.alert(`No se pudo crear el issue: ${error.message}`);
+    });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;

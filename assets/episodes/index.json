@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:16:25.327Z",
+  "generatedAt": "2026-05-08T05:20:16.194Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -12,6 +12,13 @@
       "file": "tt8050740.txt",
       "seasonCount": 3,
       "episodeCount": 106
+    },
+    "tt1528406": {
+      "title": "Fairy Tail",
+      "tvmazeId": 2069,
+      "file": "tt1528406.txt",
+      "seasonCount": 8,
+      "episodeCount": 328
     },
     "tt0486171": {
       "title": "Ikki Tousen",

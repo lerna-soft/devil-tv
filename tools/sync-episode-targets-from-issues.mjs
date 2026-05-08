@@ -57,8 +57,21 @@ async function loadTargets() {
 
 async function loadTargetsFromIssues() {
   const issues = await fetchAllIssues();
+  const eventIssue = await loadEventIssue();
   const targets = [];
   const processedIssues = [];
+  if (eventIssue) {
+    const target = parseIssue(eventIssue);
+    if (target) {
+      targets.push(target);
+      processedIssues.push({
+        number: eventIssue.number,
+        htmlUrl: eventIssue.html_url,
+        imdbId: target.imdbId,
+        title: target.title
+      });
+    }
+  }
   for (const issue of issues) {
     const target = parseIssue(issue);
     if (target) {
@@ -72,6 +85,19 @@ async function loadTargetsFromIssues() {
     }
   }
   return { targets: normalizeTargets(targets), processedIssues };
+}
+
+async function loadEventIssue() {
+  const eventPath = String(process.env.GITHUB_EVENT_PATH || '').trim();
+  if (!eventPath) return null;
+  const raw = await fs.readFile(eventPath, 'utf8').catch(() => '');
+  if (!raw.trim()) return null;
+  const event = JSON.parse(raw);
+  const issue = event?.issue;
+  if (!issue || issue.pull_request) return null;
+  const labels = Array.isArray(issue.labels) ? issue.labels.map((label) => String(label?.name || '').trim()) : [];
+  if (!labels.includes(LABEL)) return null;
+  return issue;
 }
 
 function parseIssue(issue) {

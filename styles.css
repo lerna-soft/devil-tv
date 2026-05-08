@@ -813,6 +813,53 @@ body.detail-active .toolbar {
   line-height: 1.35;
 }
 
+.source-switcher {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.85rem;
+  justify-content: space-between;
+  margin-top: 0.85rem;
+  padding: 0.85rem 0.95rem;
+}
+
+.source-switcher-head {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.source-switcher-label {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.source-switcher-value {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.82rem;
+}
+
+.source-switcher-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.source-switcher-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  min-height: 2.3rem;
+  padding: 0.5rem 0.82rem;
+}
+
+.source-switcher-btn.active {
+  background: var(--brand);
+  color: white;
+}
+
 .eval-panel {
   margin-top: 1.1rem;
   padding: 0.95rem 1rem;
@@ -1044,12 +1091,44 @@ body.detail-active .toolbar {
 }
 
 .player-controls {
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
   display: flex;
-  gap: 0.5rem;
-  padding: max(0.8rem, env(safe-area-inset-top)) 0.8rem 0.6rem;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: max(0.8rem, env(safe-area-inset-top)) 0.8rem 0.7rem;
   position: relative;
   z-index: 3;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+}
+
+.player-nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-nav-row .player-nav {
+  flex: 0 1 auto;
+}
+
+.player-controls .source-switcher {
+  margin-top: 0;
+  width: 100%;
+}
+
+.player-controls .source-switcher-group {
+  justify-content: center;
+}
+
+.player-controls .source-switcher {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.player-controls .source-switcher-label,
+.player-controls .source-switcher-value {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .player-nav {

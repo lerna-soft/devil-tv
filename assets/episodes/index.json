@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T17:39:38.885Z",
+  "generatedAt": "2026-05-08T17:58:40.442Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -19,6 +19,13 @@
       "file": "tt0417299.txt",
       "seasonCount": 3,
       "episodeCount": 61
+    },
+    "tt8050756": {
+      "title": "The Owl House",
+      "tvmazeId": 35073,
+      "file": "tt8050756.txt",
+      "seasonCount": 3,
+      "episodeCount": 43
     },
     "tt0481256": {
       "title": "Hajime no Ippo",

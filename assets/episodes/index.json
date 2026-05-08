@@ -1,11 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T04:38:40.875Z",
+  "generatedAt": "2026-05-08T04:39:55.567Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
   },
   "series": {
+    "tt8050740": {
+      "title": "Amphibia",
+      "tvmazeId": 35072,
+      "file": "tt8050740.txt",
+      "seasonCount": 3,
+      "episodeCount": 106
+    },
+    "tt15765670": {
+      "title": "My Dress-Up Darling",
+      "tvmazeId": 59412,
+      "file": "tt15765670.txt",
+      "seasonCount": 2,
+      "episodeCount": 24
+    },
     "tt0367409": {
       "title": "Shaman King",
       "tvmazeId": 4097,
@@ -19,13 +33,6 @@
       "file": "tt0233127.txt",
       "seasonCount": 1,
       "episodeCount": 169
-    },
-    "tt15765670": {
-      "title": "My Dress-Up Darling",
-      "tvmazeId": 59412,
-      "file": "tt15765670.txt",
-      "seasonCount": 2,
-      "episodeCount": 24
     }
   }
 }

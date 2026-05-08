@@ -44,60 +44,11 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prefetch episode assets (manifest + per-series files)
+      - name: Build episode assets (manifest + per-series files)
         shell: bash
         run: |
           set -euxo pipefail
-          mkdir -p assets/episodes
-          tmp_file="$(mktemp)"
-          if curl -fsSL --max-time 25 "https://vidapi.ru/ids/eps_list_imdb.txt" -o "$tmp_file"; then
-            :
-          elif curl -fsSL --max-time 35 "https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt" -o "$tmp_file"; then
-            :
-          else
-            echo "Could not fetch episode index from remote sources"
-            exit 1
-          fi
-          awk '/^tt[0-9]+_[0-9]+x[0-9]+/ {print}' "$tmp_file" > /tmp/eps_list_imdb_normalized.txt
-          test -s /tmp/eps_list_imdb_normalized.txt
-
-          python3 - <<'PY'
-          from collections import defaultdict
-          from pathlib import Path
-          import json
-
-          source = Path('/tmp/eps_list_imdb_normalized.txt')
-          out_dir = Path('assets/episodes')
-          out_dir.mkdir(parents=True, exist_ok=True)
-
-          by_series = defaultdict(list)
-          for raw in source.read_text(encoding='utf-8').splitlines():
-              line = raw.strip()
-              if not line.startswith('tt'):
-                  continue
-              prefix, _, rest = line.partition('_')
-              if not prefix or 'x' not in rest:
-                  continue
-              by_series[prefix].append(line)
-
-          manifest = {
-              'version': 1,
-              'generatedAt': __import__('datetime').datetime.utcnow().isoformat() + 'Z',
-              'series': {}
-          }
-
-          for imdb_id, lines in sorted(by_series.items()):
-              file_name = f'{imdb_id}.txt'
-              (out_dir / file_name).write_text('\n'.join(lines) + '\n', encoding='utf-8')
-              manifest['series'][imdb_id] = {
-                  'file': file_name,
-                  'count': len(lines)
-              }
-
-          (out_dir / 'index.json').write_text(json.dumps(manifest, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-          print(f"Episode series: {len(manifest['series'])}")
-          print(f"Episode files: {len(by_series)}")
-          PY
+          node tools/build-episode-assets.mjs
 
       - name: Upload Pages Artifact (site root)
         uses: actions/upload-pages-artifact@v3

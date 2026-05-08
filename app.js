@@ -1471,7 +1471,15 @@ async function fetchSeriesEpisodeText(imdbId, options = {}) {
   if (!forceRefresh && episodeTextPromises.has(id)) return episodeTextPromises.get(id);
 
   const promise = (async () => {
-    const local = await fetchWithTimeout(`./assets/episodes/${encodeURIComponent(id)}.txt`, {
+    let fileName = `${id}.txt`;
+    try {
+      const manifest = await fetchEpisodeManifest();
+      fileName = String(manifest?.series?.[id]?.file || fileName).trim() || fileName;
+    } catch {
+      // Fall back to the canonical filename if the manifest is unavailable.
+    }
+
+    const local = await fetchWithTimeout(`./assets/episodes/${encodeURIComponent(fileName)}`, {
       headers: { accept: 'text/plain' }
     }, 2500).catch(() => null);
     if (local?.ok) {

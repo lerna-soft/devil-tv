@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T16:55:13.426Z",
+  "generatedAt": "2026-05-08T17:23:49.739Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -124,6 +124,13 @@
       "file": "tt1424037.txt",
       "seasonCount": 1,
       "episodeCount": 50
+    },
+    "tt0965547": {
+      "title": "Slam Dunk",
+      "tvmazeId": 4254,
+      "file": "tt0965547.txt",
+      "seasonCount": 1,
+      "episodeCount": 101
     },
     "tt13706018": {
       "title": "Spy×Family",

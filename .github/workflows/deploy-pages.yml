@@ -47,6 +47,9 @@ jobs:
 
       - name: Build episode assets (manifest + per-series files)
         shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           set -euxo pipefail
           node tools/sync-episode-targets-from-issues.mjs
@@ -64,6 +67,9 @@ jobs:
       - name: Close synced episode issues
         if: success()
         shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           set -euxo pipefail
           node tools/close-episode-sync-issues.mjs

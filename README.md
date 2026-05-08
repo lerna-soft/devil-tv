@@ -15,6 +15,16 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
   - `assets/episodes/index.json`
   - `assets/episodes/<imdbId>.txt`
 
+## Assets de episodios
+
+- El catálogo de episodios no se carga como un solo archivo grande en runtime.
+- La app consulta un manifest liviano en `assets/episodes/index.json`.
+- Cada serie tiene su propio archivo en `assets/episodes/<imdbId>.txt`.
+- El generador está en [`tools/build-episode-assets.mjs`](/home/xanadu/media-evaluation-platform-static/tools/build-episode-assets.mjs).
+- Los targets actuales están en [`assets/episodes/targets.json`](/home/xanadu/media-evaluation-platform-static/assets/episodes/targets.json).
+- El workflow de Pages ejecuta ese script antes de publicar.
+- Fuente usada para construir los assets: TVMaze.
+
 ## Estado por plataforma
 
 ### Mobile

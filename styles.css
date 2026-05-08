@@ -831,24 +831,6 @@ body.detail-active .toolbar {
   line-height: 1.35;
 }
 
-.hero-actions {
-  align-items: flex-start;
-  gap: 0.55rem;
-  flex-wrap: wrap;
-}
-
-.hero-actions #reportIssue {
-  min-height: 2.55rem;
-  padding-inline: 0.95rem;
-}
-
-.hero-actions-hint {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.8rem;
-  line-height: 1.3;
-  margin: 0.2rem 0 0;
-}
-
 .source-switcher {
   align-items: center;
   background: rgba(255, 255, 255, 0.05);

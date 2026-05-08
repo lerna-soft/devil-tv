@@ -22,6 +22,7 @@ let suppressRouteSync = false;
 let episodeIndexPromise = null;
 let episodeManifestPromise = null;
 const episodeTextPromises = new Map();
+const homeCarouselLastDragAt = new WeakMap();
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
@@ -753,10 +754,7 @@ function bindHomeCarouselEvents() {
       carousel.classList.remove('is-dragging');
       apply();
       if (wasDragged) {
-        carousel.dataset.dragging = '1';
-        window.setTimeout(() => {
-          delete carousel.dataset.dragging;
-        }, 0);
+        homeCarouselLastDragAt.set(carousel, Date.now());
       }
     };
 
@@ -780,7 +778,6 @@ function bindHomeCarouselEvents() {
       const rawTranslate = dragState.startTranslate + deltaX;
       dragState.currentTranslate = Math.min(maxTranslate, Math.max(minTranslate, rawTranslate));
       track.style.transform = `translateX(${dragState.currentTranslate}px)`;
-      if (dragState.moved) carousel.dataset.dragging = '1';
       if (dragState.moved && step > 0) {
         page = Math.min(Math.max(0, Math.round(-dragState.currentTranslate / step)), maxPage);
       }
@@ -807,26 +804,34 @@ function bindHomeCarouselEvents() {
         startY: event.clientY,
         startTranslate: -page * step,
         currentTranslate: -page * step,
-        moved: false
+        moved: false,
+        captured: false
       };
-      carousel.classList.add('is-dragging');
-      try {
-        viewport.setPointerCapture(event.pointerId);
-      } catch {}
-      apply();
     });
 
     viewport.addEventListener('pointermove', (event) => {
       if (!dragState || event.pointerId !== dragState.pointerId) return;
-      if (event.cancelable) event.preventDefault();
+      const beforeMoved = dragState.moved;
       updateDrag(event.clientX, event.clientY);
+      if (!beforeMoved && dragState.moved) {
+        carousel.classList.add('is-dragging');
+        if (!dragState.captured) {
+          try {
+            viewport.setPointerCapture(event.pointerId);
+            dragState.captured = true;
+          } catch {}
+        }
+      }
+      if (dragState.moved && event.cancelable) event.preventDefault();
     }, { passive: false });
 
     const endDrag = (event) => {
       if (!dragState || event.pointerId !== dragState.pointerId) return;
-      try {
-        viewport.releasePointerCapture(event.pointerId);
-      } catch {}
+      if (dragState.captured) {
+        try {
+          viewport.releasePointerCapture(event.pointerId);
+        } catch {}
+      }
       finishDrag();
     };
 
@@ -879,18 +884,48 @@ function renderLocalCards(titles) {
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
+    const canPlay = isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
+    const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Play" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${playOverlay}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('');
 }
 
 function bindLocalCardEvents() {
+  elements.items.querySelectorAll('.item-play').forEach((btn) => {
+    btn.addEventListener('click', async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const key = btn.dataset.playKey;
+      if (!key) return;
+      const selected = loadLocalCatalog().find((title) => title.catalogKey === key);
+      if (!selected) return;
+      state.selected = selected;
+      state.seriesEpisodes = null;
+      state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
+      state.hydratedProgressId = '';
+
+      if (isSeriesLike(state.selected)) {
+        // Default to the first episode; if we have progress, existing routing/hydration will adjust.
+        state.playback.season = 1;
+        state.playback.episode = 1;
+        await loadSeriesEpisodes().catch(() => {});
+      }
+      openPlayerForCurrentSelection();
+    });
+  });
+
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
     item.addEventListener('click', async () => {
-      if (item.closest('[data-home-carousel]')?.dataset.dragging === '1') return;
+      const homeCarousel = item.closest('[data-home-carousel]');
+      if (homeCarousel) {
+        const lastDragAt = homeCarouselLastDragAt.get(homeCarousel) || 0;
+        if (Date.now() - lastDragAt < 350) return;
+      }
       state.selected = loadLocalCatalog().find((title) => title.catalogKey === item.dataset.key);
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
@@ -1620,7 +1655,17 @@ async function loadSeriesEpisodes(options = {}) {
       }
     }
 
-    state.seriesEpisodes = payload?.seasons?.length ? payload : { seasons: [] };
+    const hasEpisodes = (payload?.seasons?.length ?? 0) > 0;
+    if (!hasEpisodes && !forceRefresh) {
+      // If episode assets were updated on Pages (e.g. after resolving a "missing episodes" issue),
+      // localStorage + HTTP cache can keep us stuck. Retry once with a hard refresh.
+      clearEpisodeLookupCaches();
+      episodeIndexPromise = null;
+      await loadSeriesEpisodes({ forceRefresh: true });
+      return;
+    }
+
+    state.seriesEpisodes = hasEpisodes ? payload : { seasons: [] };
     if ((state.seriesEpisodes?.seasons?.length ?? 0) > 0) {
       cacheSeriesEpisodes(cacheId, state.seriesEpisodes);
     } else {

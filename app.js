@@ -468,10 +468,11 @@ async function notifyIssueCreated(issue, retryMs = 0) {
   const retryText = retryMs > 0 ? `Reintento automático en ${Math.ceil(retryMs / 1000)} segundos.` : '';
   await showIssueFeedback({
     kind: 'success',
-    title: 'Issue creado',
+    title: 'Problema de capítulos en proceso',
     html: [
-      `<p>#${escapeHtml(issue.number)}</p>`,
-      `<p><a href="${escapeAttribute(issue.html_url)}" target="_blank" rel="noopener noreferrer">Abrir issue</a></p>`,
+      `<p>Estamos solucionando los capítulos faltantes.</p>`,
+      `<p>Espera ${retryMs > 0 ? Math.ceil(retryMs / 1000) : 35} segundos.</p>`,
+      `<p>Cuando el contador llegue a 0, si los capítulos están disponibles, aparecerán en la lista.</p>`,
       retryText ? `<p>${escapeHtml(retryText)}</p>` : ''
     ].join('')
   });
@@ -1108,12 +1109,12 @@ function renderDetail(options = {}) {
     Date.now() < state.episodeSyncUntil
   );
   const syncRemaining = syncActive ? Math.max(0, state.episodeSyncUntil - Date.now()) : 0;
-  const syncText = syncActive ? formatCountdown(syncRemaining) : '02:00';
+  const syncText = syncActive ? formatCountdown(syncRemaining) : '00:35';
   const issueActionLabel = isSeriesLike(title)
     ? (syncActive ? `Sincronizando (${syncText})` : 'Solucionar capítulos faltantes')
     : 'Reportar problema';
   const issueActionHint = isSeriesLike(title)
-    ? (syncActive ? `Reintentando en ${syncText}.` : 'Crea un issue y vuelve a cargar los capítulos.')
+    ? (syncActive ? `Solucionando capítulos faltantes. Reintentando en ${syncText}.` : 'Crea un issue y vuelve a cargar los capítulos.')
     : 'Abre un issue con esta ficha y la ruta actual.';
 
   const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
@@ -1269,7 +1270,7 @@ function renderDetail(options = {}) {
       ''
     ]), ['episode-sync']).then((issue) => {
       beginEpisodeSyncCountdown();
-      void notifyIssueCreated(issue, 120000);
+      void notifyIssueCreated(issue, 35000);
     }).catch((error) => {
       console.error(error);
       if (button) button.disabled = false;
@@ -1565,7 +1566,7 @@ function formatCountdown(ms) {
 
 function beginEpisodeSyncCountdown() {
   state.episodeSyncTitleId = String(getTitleId(state.selected) || '').trim();
-  state.episodeSyncUntil = Date.now() + 120000;
+  state.episodeSyncUntil = Date.now() + 35000;
   clearInterval(state.episodeSyncTimer);
   state.episodeSyncTimer = setInterval(() => {
     if (!state.episodeSyncUntil || Date.now() >= state.episodeSyncUntil) {

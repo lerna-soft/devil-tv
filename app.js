@@ -467,11 +467,9 @@ async function notifyIssueCreated({ reloadMs = 60000 } = {}) {
     let endAt = Date.now() + reloadMs;
     const result = await swal.fire({
       icon: 'success',
-      title: 'Solucionando capítulos faltantes',
+      title: 'Solucionando',
       html: `
-        <p>Se está actualizando el archivo de episodios.</p>
         <p class="swal-sync-countdown">Espera <strong id="episodeSyncCountdown">${waitSeconds}</strong> segundos.</p>
-        <p>Cuando llegue a 0, la página se recargará automáticamente y leerá el archivo nuevo.</p>
       `,
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -502,7 +500,7 @@ async function notifyIssueCreated({ reloadMs = 60000 } = {}) {
     return;
   }
 
-  window.alert(`Solucionando capítulos faltantes.\n\nEspera ${waitSeconds} segundos.\n\nCuando llegue a 0, la página se recargará automáticamente.`);
+  window.alert(`Solucionando.\n\nEspera ${waitSeconds} segundos.`);
   window.setTimeout(hardReload, Math.max(0, reloadMs));
 }
 

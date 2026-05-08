@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:42:25.950Z",
+  "generatedAt": "2026-05-08T05:43:53.662Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -95,6 +95,13 @@
       "tvmazeId": 4248,
       "file": "tt1424037.txt",
       "seasonCount": 1,
+      "episodeCount": 50
+    },
+    "tt13706018": {
+      "title": "Spy×Family",
+      "tvmazeId": 59698,
+      "file": "tt13706018.txt",
+      "seasonCount": 3,
       "episodeCount": 50
     },
     "tt9054364": {

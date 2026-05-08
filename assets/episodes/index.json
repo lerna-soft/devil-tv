@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:29:47.065Z",
+  "generatedAt": "2026-05-08T05:31:18.389Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -54,6 +54,13 @@
       "file": "tt0367409.txt",
       "seasonCount": 1,
       "episodeCount": 64
+    },
+    "tt1424037": {
+      "title": "Kenichi the Mightiest Disciple",
+      "tvmazeId": 4248,
+      "file": "tt1424037.txt",
+      "seasonCount": 1,
+      "episodeCount": 50
     },
     "tt9054364": {
       "title": "That Time I Got Reincarnated as a Slime",

@@ -24,6 +24,7 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - El pipeline de Pages sincroniza issues con label `episode-sync` antes de reconstruir episodios.
 - El sincronizador está en [`tools/sync-episode-targets-from-issues.mjs`](/home/xanadu/media-evaluation-platform-static/tools/sync-episode-targets-from-issues.mjs).
 - Después del deploy, el workflow cierra automáticamente los issues ya procesados para no reprocesarlos.
+- Cada issue con label `episode-sync` también dispara un workflow dedicado que intenta resolverlo de inmediato y deja los assets actualizados en `main`.
 - Los targets actuales están en [`assets/episodes/targets.json`](/home/xanadu/media-evaluation-platform-static/assets/episodes/targets.json).
 - El workflow de Pages ejecuta ese script antes de publicar.
 - Fuente usada para construir los assets: TVMaze.

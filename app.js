@@ -448,15 +448,19 @@ function renderEvaluationPanel(title) {
 function openGitHubIssue(title, body) {
   const issueTitle = encodeURIComponent(title);
   const issueBody = encodeURIComponent(body);
-  window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+  const url = `https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`;
+  window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues`, '_blank', 'noopener');
+  window.setTimeout(() => {
+    window.open(url, '_blank', 'noopener');
+  }, 250);
 }
 
 function buildIssueBody(title, lines) {
   return [
-    `- title: ${title.title || ''}`,
-    `- type: ${title.type || ''}`,
-    title.imdbId ? `- imdbId: ${title.imdbId}` : '',
-    title.tmdbId ? `- tmdbId: ${title.tmdbId}` : '',
+    `Title: ${title.title || ''}`,
+    `Type: ${title.type || ''}`,
+    title.imdbId ? `IMDb: ${title.imdbId}` : '',
+    title.tmdbId ? `TMDB: ${title.tmdbId}` : '',
     '',
     ...(Array.isArray(lines) ? lines : []),
     '',

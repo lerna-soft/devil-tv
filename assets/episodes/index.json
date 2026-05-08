@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:24:50.743Z",
+  "generatedAt": "2026-05-08T05:29:47.065Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -32,6 +32,13 @@
       "tvmazeId": 12715,
       "file": "tt0486171.txt",
       "seasonCount": 5,
+      "episodeCount": 52
+    },
+    "tt1695360": {
+      "title": "The Legend of Korra",
+      "tvmazeId": 178,
+      "file": "tt1695360.txt",
+      "seasonCount": 4,
       "episodeCount": 52
     },
     "tt15765670": {

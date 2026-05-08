@@ -449,6 +449,42 @@ async function openGitHubIssue(title, body, labels = []) {
   return response.json();
 }
 
+function showIssueFeedback({ kind, title, html, text, confirmText = 'OK' }) {
+  const swal = window.Swal;
+  if (swal?.fire) {
+    return swal.fire({
+      icon: kind,
+      title,
+      html,
+      text,
+      confirmButtonText: confirmText
+    });
+  }
+  window.alert([title, text].filter(Boolean).join('\n\n'));
+  return Promise.resolve();
+}
+
+async function notifyIssueCreated(issue, retryMs = 0) {
+  const retryText = retryMs > 0 ? `Reintento automático en ${Math.ceil(retryMs / 1000)} segundos.` : '';
+  await showIssueFeedback({
+    kind: 'success',
+    title: 'Issue creado',
+    html: [
+      `<p>#${escapeHtml(issue.number)}</p>`,
+      `<p><a href="${escapeAttribute(issue.html_url)}" target="_blank" rel="noopener noreferrer">Abrir issue</a></p>`,
+      retryText ? `<p>${escapeHtml(retryText)}</p>` : ''
+    ].join('')
+  });
+}
+
+async function notifyIssueCreationError(error) {
+  await showIssueFeedback({
+    kind: 'error',
+    title: 'No se pudo crear el issue',
+    text: String(error?.message || error || 'Error desconocido')
+  });
+}
+
 async function getGitHubIssueToken() {
   const token = decodeIssueToken(GITHUB_ISSUE_TOKEN_CIPHER, GITHUB_ISSUE_TOKEN_SEED);
   if (!token) throw new Error('Missing GitHub issue token.');
@@ -1161,10 +1197,10 @@ function renderDetail(options = {}) {
       `Page: ${window.location.href}`
     ].filter(Boolean).join('\n');
     void openGitHubIssue(issueTitle, issueBody).then((issue) => {
-      window.alert(`Issue creado: #${issue.number}`);
+      void notifyIssueCreated(issue);
     }).catch((error) => {
       console.error(error);
-      window.alert(`No se pudo crear el issue: ${error.message}`);
+      void notifyIssueCreationError(error);
     });
   });
   bindTap(document.querySelector('#requestMetadata'), () => {
@@ -1177,10 +1213,10 @@ function renderDetail(options = {}) {
       'Context:',
       `- opened via direct route or missing metadata in current sources`
     ])).then((issue) => {
-      window.alert(`Issue creado: #${issue.number}`);
+      void notifyIssueCreated(issue);
     }).catch((error) => {
       console.error(error);
-      window.alert(`No se pudo crear el issue: ${error.message}`);
+      void notifyIssueCreationError(error);
     });
   });
   bindTap(document.querySelector('#reportIssue'), () => {
@@ -1214,11 +1250,11 @@ function renderDetail(options = {}) {
       ''
     ]), ['episode-sync']).then((issue) => {
       beginEpisodeSyncCountdown();
-      window.alert(`Issue creado: #${issue.number}. Se reintentará en 2 minutos.`);
+      void notifyIssueCreated(issue, 120000);
     }).catch((error) => {
       console.error(error);
       if (button) button.disabled = false;
-      window.alert(`No se pudo crear el issue: ${error.message}`);
+      void notifyIssueCreationError(error);
     });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {

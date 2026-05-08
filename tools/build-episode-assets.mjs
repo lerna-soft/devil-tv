@@ -43,25 +43,34 @@ async function main() {
     series: {}
   };
 
+  const skipped = [];
   for (const target of targets) {
-    const resolved = await resolveShow(target);
-    const episodes = await fetchEpisodes(resolved.tvmazeId);
-    const lines = episodes
-      .map((episode) => `tt${String(target.imdbId).replace(/^tt/i, '')}_${episode.season}x${episode.episode}`)
-      .join('\n');
-    await fs.writeFile(path.join(OUT_DIR, `${target.imdbId}.txt`), `${lines}\n`, 'utf8');
-    manifest.series[target.imdbId] = {
-      title: resolved.name,
-      tvmazeId: resolved.tvmazeId,
-      file: `${target.imdbId}.txt`,
-      seasonCount: new Set(episodes.map((episode) => episode.season)).size,
-      episodeCount: episodes.length
-    };
+    try {
+      const resolved = await resolveShow(target);
+      const episodes = await fetchEpisodes(resolved.tvmazeId);
+      const lines = episodes
+        .map((episode) => `tt${String(target.imdbId).replace(/^tt/i, '')}_${episode.season}x${episode.episode}`)
+        .join('\n');
+      await fs.writeFile(path.join(OUT_DIR, `${target.imdbId}.txt`), `${lines}\n`, 'utf8');
+      manifest.series[target.imdbId] = {
+        title: resolved.name,
+        tvmazeId: resolved.tvmazeId,
+        file: `${target.imdbId}.txt`,
+        seasonCount: new Set(episodes.map((episode) => episode.season)).size,
+        episodeCount: episodes.length
+      };
+    } catch (error) {
+      skipped.push({ imdbId: target.imdbId, reason: error?.message || String(error) });
+      console.warn(`[episode-assets] skipped ${target.imdbId}: ${error?.message || error}`);
+    }
   }
 
   await fs.writeFile(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${MANIFEST_PATH}`);
   console.log(`Series: ${Object.keys(manifest.series).length}`);
+  if (skipped.length > 0) {
+    console.log(`Skipped: ${skipped.length}`);
+  }
 }
 
 async function loadTargets(cliIds) {

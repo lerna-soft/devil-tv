@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T16:52:19.471Z",
+  "generatedAt": "2026-05-08T16:55:13.426Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -60,6 +60,13 @@
       "tvmazeId": 12715,
       "file": "tt0486171.txt",
       "seasonCount": 5,
+      "episodeCount": 52
+    },
+    "tt0275137": {
+      "title": "Justice League",
+      "tvmazeId": 22040,
+      "file": "tt0275137.txt",
+      "seasonCount": 2,
       "episodeCount": 52
     },
     "tt0278866": {

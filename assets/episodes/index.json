@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:31:18.389Z",
+  "generatedAt": "2026-05-08T05:34:09.579Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -12,6 +12,13 @@
       "file": "tt8050740.txt",
       "seasonCount": 3,
       "episodeCount": 106
+    },
+    "tt0417299": {
+      "title": "Avatar: The Last Airbender",
+      "tvmazeId": 555,
+      "file": "tt0417299.txt",
+      "seasonCount": 3,
+      "episodeCount": 61
     },
     "tt0481256": {
       "title": "Hajime no Ippo",

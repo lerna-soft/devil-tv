@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T17:25:33.670Z",
+  "generatedAt": "2026-05-08T17:39:38.885Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -110,6 +110,13 @@
       "file": "tt17069148.txt",
       "seasonCount": 1,
       "episodeCount": 22
+    },
+    "tt0972713": {
+      "title": "Shakugan no Shana",
+      "tvmazeId": 10489,
+      "file": "tt0972713.txt",
+      "seasonCount": 3,
+      "episodeCount": 72
     },
     "tt0367409": {
       "title": "Shaman King",

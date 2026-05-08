@@ -11,6 +11,8 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - Publicación activa desde rama: `gh-pages`
 - Rama de desarrollo: `main`
 - Reproductor primario: VidAPI (`https://vaplayer.ru/embed/...`)
+- Reproductor secundario: VidSrc (`https://vidsrc.to/embed/...`)
+- La app prueba VidAPI antes de abrir el player; si el probe no encuentra contenido, cae a VidSrc.
 - Los episodios se publican como assets estáticos por serie:
   - `assets/episodes/index.json`
   - `assets/episodes/<imdbId>.txt`

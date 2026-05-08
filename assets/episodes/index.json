@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:38:45.405Z",
+  "generatedAt": "2026-05-08T05:42:25.950Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -54,6 +54,13 @@
       "file": "tt0278866.txt",
       "seasonCount": 4,
       "episodeCount": 87
+    },
+    "tt2348803": {
+      "title": "Kuroko no Basuke",
+      "tvmazeId": 6873,
+      "file": "tt2348803.txt",
+      "seasonCount": 3,
+      "episodeCount": 75
     },
     "tt1695360": {
       "title": "The Legend of Korra",

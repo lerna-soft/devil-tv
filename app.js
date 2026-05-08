@@ -27,7 +27,8 @@ const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
-const GITHUB_ISSUE_TOKEN_KEY = 'mep_github_issue_token_v1';
+const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
+const GITHUB_ISSUE_TOKEN_CIPHER = '';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
@@ -430,9 +431,6 @@ async function openGitHubIssue(title, body, labels = []) {
   });
 
   if (!response.ok) {
-    if (response.status === 401 || response.status === 403) {
-      localStorage.removeItem(GITHUB_ISSUE_TOKEN_KEY);
-    }
     const text = await response.text().catch(() => '');
     throw new Error(`GitHub issue create failed (${response.status} ${response.statusText})${text ? `: ${text}` : ''}`);
   }
@@ -441,17 +439,23 @@ async function openGitHubIssue(title, body, labels = []) {
 }
 
 async function getGitHubIssueToken() {
-  const cached = String(localStorage.getItem(GITHUB_ISSUE_TOKEN_KEY) || '').trim();
-  if (cached) return cached;
+  const token = decodeIssueToken(GITHUB_ISSUE_TOKEN_CIPHER, GITHUB_ISSUE_TOKEN_SEED);
+  if (!token) throw new Error('Missing GitHub issue token.');
+  return token;
+}
 
-  const token = window.prompt('Pega un GitHub token con permiso para crear issues en este repo:');
-  if (token === null) throw new Error('Issue creation canceled.');
+function decodeIssueToken(cipherText, seed) {
+  const encoded = String(cipherText || '').trim();
+  const key = String(seed || '').trim();
+  if (!encoded || !key) return '';
 
-  const trimmed = String(token || '').trim();
-  if (!trimmed) throw new Error('Missing GitHub token.');
-
-  localStorage.setItem(GITHUB_ISSUE_TOKEN_KEY, trimmed);
-  return trimmed;
+  const bytes = atob(encoded);
+  let out = '';
+  for (let i = 0; i < bytes.length; i += 1) {
+    const decoded = bytes.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+    out += String.fromCharCode(decoded);
+  }
+  return out.trim();
 }
 
 function buildIssueBody(title, lines) {

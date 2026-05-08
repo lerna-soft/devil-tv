@@ -813,6 +813,24 @@ body.detail-active .toolbar {
   line-height: 1.35;
 }
 
+.report-issue {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 0.95rem;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: space-between;
+  margin-top: 0.85rem;
+  padding: 0.8rem 0.9rem;
+}
+
+.report-issue span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .source-switcher {
   align-items: center;
   background: rgba(255, 255, 255, 0.05);

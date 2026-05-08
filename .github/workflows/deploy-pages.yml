@@ -44,7 +44,7 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prefetch episode index (local asset for runtime speed)
+      - name: Prefetch episode index (publish as local asset)
         shell: bash
         run: |
           set -euxo pipefail

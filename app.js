@@ -28,6 +28,7 @@ const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
+const PLAYBACK_SOURCE_PREFS_KEY = 'mep_playback_source_prefs_v1';
 const EPS_LIST_CACHE_KEY = 'mep_eps_list_cache_v1';
 const EPS_LIST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
@@ -338,6 +339,43 @@ function loadEvaluations() {
 
 function saveEvaluations(evals) {
   localStorage.setItem(EVAL_STORAGE_KEY, JSON.stringify(evals || {}));
+}
+
+function loadPlaybackSourcePrefs() {
+  try {
+    const prefs = JSON.parse(localStorage.getItem(PLAYBACK_SOURCE_PREFS_KEY) || '{}');
+    return prefs && typeof prefs === 'object' ? prefs : {};
+  } catch {
+    return {};
+  }
+}
+
+function savePlaybackSourcePrefs(prefs) {
+  try {
+    localStorage.setItem(PLAYBACK_SOURCE_PREFS_KEY, JSON.stringify(prefs || {}));
+  } catch {}
+}
+
+function getPlaybackTitleKey(entry) {
+  return String(entry?.imdbId || entry?.tmdbId || '').trim();
+}
+
+function getPlaybackSourceMode(entry) {
+  const key = getPlaybackTitleKey(entry);
+  if (!key) return 'auto';
+  const prefs = loadPlaybackSourcePrefs();
+  const mode = prefs[key];
+  return ['auto', 'imdb', 'tmdb'].includes(mode) ? mode : 'auto';
+}
+
+function setPlaybackSourceMode(entry, mode) {
+  const key = getPlaybackTitleKey(entry);
+  if (!key) return;
+  const nextMode = ['auto', 'imdb', 'tmdb'].includes(mode) ? mode : 'auto';
+  const prefs = loadPlaybackSourcePrefs();
+  if (nextMode === 'auto') delete prefs[key];
+  else prefs[key] = nextMode;
+  savePlaybackSourcePrefs(prefs);
 }
 
 function getTitleId(title) {
@@ -987,6 +1025,7 @@ function renderDetail(options = {}) {
     </div>
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
+  const playbackSourceBlock = renderPlaybackSourceControls(title);
 
   const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
   const metadataBlock = isBareRoute ? `<div class="availability">
@@ -1012,6 +1051,7 @@ function renderDetail(options = {}) {
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
         ${metadataBlock}
         ${availabilityBlock}
+        ${playbackSourceBlock}
         <div class="actions hero-actions">
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
           ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
@@ -1038,9 +1078,9 @@ function renderDetail(options = {}) {
     openPlayerForCurrentSelection();
   });
   bindTap(document.querySelector('#refreshEpisodes'), async () => {
-    const imdbId = state.selected?.imdbId || '';
-    if (!imdbId) return;
-    try { localStorage.removeItem(`mep_series_eps_${imdbId}`); } catch {}
+    const cacheId = state.selected?.imdbId || state.selected?.tmdbId || '';
+    if (!cacheId) return;
+    try { localStorage.removeItem(`mep_series_eps_${cacheId}`); } catch {}
     episodeIndexPromise = null;
     state.seriesEpisodes = null;
     state.seriesEpisodesLoading = true;
@@ -1117,6 +1157,7 @@ function renderDetail(options = {}) {
     state.playback.episode = episode;
     openPlayerForCurrentSelection();
   }));
+  bindPlaybackSourceControls(elements.detail);
 }
 
 function openPlayerModal(embedUrl) {
@@ -1282,22 +1323,63 @@ async function loadSeriesEpisodes(options = {}) {
   if (!state.selected || !isSeriesLike(state.selected)) return;
   state.seriesEpisodesLoading = true;
   try {
-    const imdbId = state.selected.imdbId || '';
-    if (!imdbId) throw new Error('missing imdb id');
+    const imdbId = String(state.selected.imdbId || '').trim();
+    const tmdbId = String(state.selected.tmdbId || '').trim();
+    const cacheId = imdbId || tmdbId;
+    if (!cacheId) throw new Error('missing series id');
 
     if (!forceRefresh) {
-      const cached = loadCachedSeriesEpisodes(imdbId);
+      const cached = loadCachedSeriesEpisodes(cacheId);
       if (cached?.seasons?.length) {
         state.seriesEpisodes = cached;
+        console.debug('[mep] series episodes loaded from cache', {
+          title: state.selected.title,
+          imdbId,
+          tmdbId,
+          seasons: cached.seasons.length
+        });
         state.seriesEpisodesLoading = false;
         return;
       }
     }
 
-    const text = await fetchEpisodeIdListText({ forceRefresh });
-    state.seriesEpisodes = buildEpisodesFromIdList(imdbId, text);
+    let payload = null;
+    try {
+      const text = await fetchEpisodeIdListText({ forceRefresh });
+      payload = buildEpisodesFromIdList(imdbId, text);
+      if ((payload?.seasons?.length ?? 0) > 0) {
+        console.debug('[mep] series episodes loaded from episode index', {
+          title: state.selected.title,
+          imdbId,
+          tmdbId,
+          seasons: payload.seasons.length
+        });
+      }
+    } catch {
+      payload = null;
+    }
+
+    if ((payload?.seasons?.length ?? 0) === 0) {
+      payload = await buildEpisodesFromTmdb(state.selected).catch(() => null);
+      if ((payload?.seasons?.length ?? 0) > 0) {
+        console.debug('[mep] series episodes loaded from TMDB fallback', {
+          title: state.selected.title,
+          imdbId,
+          tmdbId,
+          seasons: payload.seasons.length
+        });
+      }
+    }
+
+    state.seriesEpisodes = payload?.seasons?.length ? payload : { seasons: [] };
     if ((state.seriesEpisodes?.seasons?.length ?? 0) > 0) {
-      cacheSeriesEpisodes(imdbId, state.seriesEpisodes);
+      cacheSeriesEpisodes(cacheId, state.seriesEpisodes);
+    } else {
+      console.warn('[mep] series episodes not found', {
+        title: state.selected.title,
+        imdbId,
+        tmdbId
+      });
     }
   } catch {
     state.seriesEpisodes = { seasons: [] };
@@ -1351,21 +1433,7 @@ async function fetchEpisodeIdListText(options = {}) {
       }
     }
 
-    const direct = await fetchWithTimeout('https://vidapi.ru/ids/eps_list_imdb.txt', {
-      headers: { accept: 'text/plain' }
-    }, 5000).catch(() => null);
-    if (direct?.ok) {
-      const text = await direct.text();
-      saveEpisodeListCache(text);
-      return text;
-    }
-
-    const proxy = await fetchWithTimeout('https://r.jina.ai/http://vidapi.ru/ids/eps_list_imdb.txt', {}, 7000).catch(() => null);
-    if (!proxy?.ok) throw new Error('episodes list unavailable');
-    const raw = await proxy.text();
-    const normalized = normalizeJinaPayload(raw);
-    saveEpisodeListCache(normalized);
-    return normalized;
+    throw new Error('episodes list unavailable');
   })();
 
   try {
@@ -1410,13 +1478,6 @@ async function getEpisodeSeriesIndex() {
   return episodeIndexPromise;
 }
 
-function normalizeJinaPayload(text) {
-  const lines = String(text ?? '').split('\n');
-  const startIndex = lines.findIndex((line) => /^tt\d+_\d+x\d+/.test(line.trim()));
-  if (startIndex === -1) return String(text ?? '');
-  return lines.slice(startIndex).join('\n');
-}
-
 function buildEpisodesFromIdList(imdbId, text) {
   const bySeason = new Map();
   const prefix = `${imdbId}_`;
@@ -1441,6 +1502,89 @@ function buildEpisodesFromIdList(imdbId, text) {
         episodes: episodes.sort((a, b) => a.episode - b.episode)
       }))
   };
+}
+
+async function buildEpisodesFromTmdb(title) {
+  const token = getTmdbReadToken();
+  if (!token) {
+    console.debug('[mep] TMDB fallback skipped: missing token', {
+      title: title?.title,
+      imdbId: title?.imdbId || '',
+      tmdbId: title?.tmdbId || ''
+    });
+    return null;
+  }
+
+  let tmdbId = String(title?.tmdbId || '').trim();
+  if (!tmdbId && title?.imdbId) {
+    try {
+      const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, {
+        external_source: 'imdb_id',
+        language: 'es-ES'
+      });
+      const pick = found.tv_results?.[0] || null;
+      if (pick?.id) tmdbId = String(pick.id);
+    } catch {
+      // Fall through to title search.
+    }
+  }
+
+  if (!tmdbId && title?.title) {
+    try {
+      const query = String(title.title || '').trim();
+      if (query) {
+        const search = await tmdbFetchJson('/search/tv', {
+          query,
+          language: 'es-ES',
+          include_adult: 'false'
+        });
+        const candidates = Array.isArray(search.results) ? search.results : [];
+        const lowered = query.toLowerCase();
+        const exact = candidates.find((item) => String(item?.name || '').trim().toLowerCase() === lowered);
+        const pick = exact || candidates[0] || null;
+        if (pick?.id) tmdbId = String(pick.id);
+      }
+    } catch {
+      // Keep returning null if title search is unavailable.
+    }
+  }
+
+  if (!tmdbId) {
+    console.debug('[mep] TMDB fallback could not resolve title', {
+      title: title?.title,
+      imdbId: title?.imdbId || '',
+      tmdbId: title?.tmdbId || ''
+    });
+    return null;
+  }
+
+  const details = await tmdbFetchJson(`/tv/${encodeURIComponent(tmdbId)}`, { language: 'es-ES' });
+  const seasons = [];
+  const seasonNumbers = (details.seasons || [])
+    .map((season) => Number(season?.season_number))
+    .filter((seasonNumber) => Number.isInteger(seasonNumber) && seasonNumber > 0);
+
+  for (const seasonNumber of seasonNumbers) {
+    try {
+      const seasonData = await tmdbFetchJson(`/tv/${encodeURIComponent(tmdbId)}/season/${seasonNumber}`, { language: 'es-ES' });
+      const episodes = (seasonData.episodes || [])
+        .map((episode) => ({
+          season: seasonNumber,
+          episode: Number(episode?.episode_number) || 0,
+          title: String(episode?.name || '').trim() || `Episode ${episode?.episode_number}`
+        }))
+        .filter((episode) => Number.isInteger(episode.episode) && episode.episode > 0)
+        .sort((a, b) => a.episode - b.episode);
+
+      if (episodes.length > 0) {
+        seasons.push({ seasonNumber, episodes });
+      }
+    } catch {
+      // continue with the next season
+    }
+  }
+
+  return seasons.length > 0 ? { seasons } : null;
 }
 
 function loadLocalCatalog() {
@@ -1502,26 +1646,32 @@ function normalizeSelection(remote) {
   return { catalogKey: `${remote.type}:${remote.imdbId ? 'imdb' : 'tmdb'}:${id}`, ...remote };
 }
 function getPlaybackId(entry) {
-  const imdb = String(entry?.imdbId || '').trim();
-  const tmdb = String(entry?.tmdbId || '').trim();
-  if (entry?.type === 'series') {
-    if (/^tt\d+$/i.test(imdb)) return imdb;
-    return tmdb || imdb;
-  }
-  return /^tt\d+$/i.test(imdb) ? imdb : (imdb || tmdb);
+  return getPlaybackCandidateIds(entry)[0] || '';
 }
-function getPlaybackCandidateIds(entry) {
+
+function getPlaybackCandidateIds(entry, mode = getPlaybackSourceMode(entry)) {
   const imdb = String(entry?.imdbId || '').trim();
   const tmdb = String(entry?.tmdbId || '').trim();
   const ids = [];
-  if (entry?.type === 'series') {
-    if (/^tt\d+$/i.test(imdb)) ids.push(imdb);
-    if (tmdb) ids.push(tmdb);
-    if (imdb && !ids.includes(imdb)) ids.push(imdb);
+  const pushUnique = (value) => {
+    const id = String(value || '').trim();
+    if (id && !ids.includes(id)) ids.push(id);
+  };
+
+  if (mode === 'imdb') {
+    pushUnique(imdb);
+    pushUnique(tmdb);
+  } else if (mode === 'tmdb') {
+    pushUnique(tmdb);
+    pushUnique(imdb);
+  } else if (entry?.type === 'series') {
+    if (/^tt\d+$/i.test(imdb)) pushUnique(imdb);
+    pushUnique(tmdb);
+    pushUnique(imdb);
   } else {
-    if (/^tt\d+$/i.test(imdb)) ids.push(imdb);
-    if (imdb && !ids.includes(imdb)) ids.push(imdb);
-    if (tmdb && !ids.includes(tmdb)) ids.push(tmdb);
+    if (/^tt\d+$/i.test(imdb)) pushUnique(imdb);
+    pushUnique(imdb);
+    pushUnique(tmdb);
   }
   return ids.filter(Boolean);
 }
@@ -1575,6 +1725,48 @@ function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisod
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }
 function syncTabs(type) { elements.tabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.typeTab === type)); }
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+
+function renderPlaybackSourceControls(title) {
+  if (!isAuthenticated()) return '';
+  const ids = getPlaybackCandidateIds(title);
+  if (ids.length < 2) return '';
+  const mode = getPlaybackSourceMode(title);
+  const label = mode === 'imdb' ? 'IMDb' : mode === 'tmdb' ? 'TMDB' : 'Auto';
+  return `
+    <div class="source-switcher">
+      <div class="source-switcher-head">
+        <span class="source-switcher-label">Fuente de reproduccion</span>
+        <span class="source-switcher-value">${escapeHtml(label)}</span>
+      </div>
+      <div class="source-switcher-group" role="group" aria-label="Fuente de reproduccion">
+        <button type="button" class="source-switcher-btn${mode === 'auto' ? ' active' : ''}" data-playback-source="auto">Auto</button>
+        <button type="button" class="source-switcher-btn${mode === 'imdb' ? ' active' : ''}" data-playback-source="imdb">IMDb</button>
+        <button type="button" class="source-switcher-btn${mode === 'tmdb' ? ' active' : ''}" data-playback-source="tmdb">TMDB</button>
+      </div>
+    </div>`;
+}
+
+function bindPlaybackSourceControls(root = document) {
+  root.querySelectorAll('[data-playback-source]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!state.selected) return;
+      setPlaybackSourceMode(state.selected, button.dataset.playbackSource || 'auto');
+      renderDetail({ skipHydratePlayback: true });
+      renderPlayerControls();
+      refreshPlayerSource();
+    });
+  });
+}
+
+function refreshPlayerSource() {
+  if (!state.selected) return;
+  const modal = elements.playerModal;
+  const iframe = elements.playerIframe;
+  if (!modal || !iframe || modal.hidden) return;
+  const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+  iframe.src = target;
+  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(target));
+}
 
 function persistLastSelection() {
   if (!state.selected) return;
@@ -1725,14 +1917,18 @@ function renderPlayerControls() {
   if (!elements.playerControls) return;
   if (isSeriesLike(state.selected)) {
     elements.playerControls.innerHTML = `
-      <button class="player-nav" data-player-action="back">Volver a la serie</button>
-      <button class="player-nav" data-player-action="prev">Capítulo anterior</button>
-      <button class="player-nav" data-player-action="next">Siguiente capítulo</button>
+      ${renderPlaybackSourceControls(state.selected)}
+      <div class="player-nav-row">
+        <button class="player-nav" data-player-action="back">Volver a la serie</button>
+        <button class="player-nav" data-player-action="prev">Capítulo anterior</button>
+        <button class="player-nav" data-player-action="next">Siguiente capítulo</button>
+      </div>
     `;
   } else {
     elements.playerControls.innerHTML = `<button class="player-nav" data-player-action="close">Cerrar</button>`;
   }
 
+  bindPlaybackSourceControls(elements.playerControls);
   elements.playerControls.querySelectorAll('[data-player-action]').forEach((button) => {
     button.addEventListener('click', () => {
       const action = button.dataset.playerAction;

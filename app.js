@@ -1738,6 +1738,12 @@ function buildEmbedUrl(entry) {
     ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
     : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`;
 }
+function buildVidCoreEmbedUrl(entry, id) {
+  if (!entry || entry.type === 'movie') return '';
+  const season = Number(entry.season || 1) || 1;
+  const episode = Number(entry.episode || 1) || 1;
+  return `https://vidcore.net/tv/${encodeURIComponent(id)}/${season}/${episode}`;
+}
 function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   if (!state.selected) return [primaryUrl];
   const ids = getPlaybackCandidateIds(state.selected);
@@ -1746,7 +1752,12 @@ function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   const suffix = media === 'movie'
     ? ''
     : `/${state.playback.season || 1}/${state.playback.episode || 1}`;
-  const urls = ids.map((id) => `https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
+  const urls = [];
+  for (const id of ids) {
+    urls.push(`https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
+    const vidCoreUrl = buildVidCoreEmbedUrl(state.selected, id);
+    if (vidCoreUrl) urls.push(vidCoreUrl);
+  }
   if (primaryUrl && !urls.includes(primaryUrl)) urls.unshift(primaryUrl);
   return [...new Set(urls)];
 }

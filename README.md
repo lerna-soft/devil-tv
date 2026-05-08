@@ -10,7 +10,8 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - URL pública: `https://lerna-admin.github.io/media-evaluation-platform-static/`
 - Publicación activa desde rama: `gh-pages`
 - Rama de desarrollo: `main`
-- Reproductor: VidAPI (`https://vaplayer.ru/embed/...`)
+- Reproductor primario: VidAPI (`https://vaplayer.ru/embed/...`)
+- Fallback de series: VidCore (`https://vidcore.net/tv/<id>/<season>/<episode>`)
 - Los episodios se publican como assets estáticos por serie:
   - `assets/episodes/index.json`
   - `assets/episodes/<imdbId>.txt`

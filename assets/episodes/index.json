@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:35:43.020Z",
+  "generatedAt": "2026-05-08T05:37:20.303Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -40,6 +40,13 @@
       "file": "tt0486171.txt",
       "seasonCount": 5,
       "episodeCount": 52
+    },
+    "tt0278866": {
+      "title": "Kim Possible",
+      "tvmazeId": 2557,
+      "file": "tt0278866.txt",
+      "seasonCount": 4,
+      "episodeCount": 87
     },
     "tt1695360": {
       "title": "The Legend of Korra",

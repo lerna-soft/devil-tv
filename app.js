@@ -449,9 +449,9 @@ function openGitHubIssue(title, body) {
   const issueTitle = encodeURIComponent(title);
   const issueBody = encodeURIComponent(body);
   const url = `https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`;
-  window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues`, '_blank', 'noopener');
+  window.location.assign(`https://github.com/lerna-admin/media-evaluation-platform-static/issues`);
   window.setTimeout(() => {
-    window.open(url, '_blank', 'noopener');
+    window.location.assign(url);
   }, 250);
 }
 
@@ -1132,7 +1132,7 @@ function renderDetail(options = {}) {
       '',
       `Page: ${window.location.href}`
     ].filter(Boolean).join('\n'));
-    window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+    window.location.assign(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`);
   });
   bindTap(document.querySelector('#requestMetadata'), () => {
     const id = title.imdbId || title.tmdbId || '';

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T05:59:22.796Z",
+  "generatedAt": "2026-05-08T06:04:39.297Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -68,6 +68,13 @@
       "file": "tt2348803.txt",
       "seasonCount": 3,
       "episodeCount": 75
+    },
+    "tt1553656": {
+      "title": "Under the Dome",
+      "tvmazeId": 1,
+      "file": "tt1553656.txt",
+      "seasonCount": 3,
+      "episodeCount": 39
     },
     "tt1695360": {
       "title": "The Legend of Korra",

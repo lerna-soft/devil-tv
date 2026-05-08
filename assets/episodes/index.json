@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T03:11:24.907Z",
+  "generatedAt": "2026-05-08T04:25:06.245Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -19,6 +19,13 @@
       "file": "tt0233127.txt",
       "seasonCount": 1,
       "episodeCount": 169
+    },
+    "tt15765670": {
+      "title": "My Dress-Up Darling",
+      "tvmazeId": 59412,
+      "file": "tt15765670.txt",
+      "seasonCount": 2,
+      "episodeCount": 24
     }
   }
 }

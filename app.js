@@ -445,6 +445,25 @@ function renderEvaluationPanel(title) {
   </section>`;
 }
 
+function openGitHubIssue(title, body) {
+  const issueTitle = encodeURIComponent(title);
+  const issueBody = encodeURIComponent(body);
+  window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+}
+
+function buildIssueBody(title, lines) {
+  return [
+    `- title: ${title.title || ''}`,
+    `- type: ${title.type || ''}`,
+    title.imdbId ? `- imdbId: ${title.imdbId}` : '',
+    title.tmdbId ? `- tmdbId: ${title.tmdbId}` : '',
+    '',
+    ...(Array.isArray(lines) ? lines : []),
+    '',
+    `Page: ${window.location.href}`
+  ].filter(Boolean).join('\n');
+}
+
 function bindEvaluationPanel(title) {
   const id = getTitleId(title);
   const msg = document.querySelector('#evalMsg');
@@ -1027,6 +1046,10 @@ function renderDetail(options = {}) {
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
   const playbackSourceBlock = renderPlaybackSourceControls(title);
+  const reportIssueBlock = `<div class="report-issue">
+    <button id="reportIssue" type="button">Reportar problema</button>
+    <span>Abre un issue con esta ficha y la ruta actual.</span>
+  </div>`;
 
   const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
   const metadataBlock = isBareRoute ? `<div class="availability">
@@ -1050,6 +1073,7 @@ function renderDetail(options = {}) {
         <p class="title-meta">${escapeHtml([title.year, genres.length ? genres.slice(0, 3).join(', ') : ''].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
+        ${reportIssueBlock}
         ${metadataBlock}
         ${availabilityBlock}
         ${playbackSourceBlock}
@@ -1110,18 +1134,28 @@ function renderDetail(options = {}) {
     const id = title.imdbId || title.tmdbId || '';
     const type = title.type || 'unknown';
     const label = title.title || id || 'Metadata request';
-    const issueTitle = encodeURIComponent(`Metadata request: ${label} (${type})`);
-    const issueBody = encodeURIComponent([
-      'Requesting metadata for:',
-      `- title: ${label}`,
-      `- type: ${type}`,
-      id ? `- id: ${id}` : '',
+    openGitHubIssue(`Metadata request: ${label} (${type})`, buildIssueBody(title, [
+      'Requesting metadata for this title.',
       '',
-      'Opened via direct route or missing metadata in current sources.',
+      'Context:',
+      `- opened via direct route or missing metadata in current sources`
+    ]));
+  });
+  bindTap(document.querySelector('#reportIssue'), () => {
+    const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
+    const type = title.type || 'unknown';
+    openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
+      'Describe the problem here:',
+      '- no links',
+      '- playback fails',
+      '- chapters missing',
+      '- metadata wrong',
       '',
-      `Page: ${window.location.href}`
-    ].filter(Boolean).join('\n'));
-    window.open(`https://github.com/lerna-admin/media-evaluation-platform-static/issues/new?title=${issueTitle}&body=${issueBody}`, '_blank', 'noopener');
+      'Observed issue:',
+      '',
+      'Expected behavior:',
+      ''
+    ]));
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
     state.selected = null;

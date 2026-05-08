@@ -20,7 +20,8 @@ const state = {
 };
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
-let episodeListTextPromise = null;
+let episodeManifestPromise = null;
+const episodeTextPromises = new Map();
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
@@ -29,8 +30,8 @@ const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 const PLAYBACK_SOURCE_PREFS_KEY = 'mep_playback_source_prefs_v1';
-const EPS_LIST_CACHE_KEY = 'mep_eps_list_cache_v1';
-const EPS_LIST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
+const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
+const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
 
 const elements = {
@@ -1345,7 +1346,7 @@ async function loadSeriesEpisodes(options = {}) {
 
     let payload = null;
     try {
-      const text = await fetchEpisodeIdListText({ forceRefresh });
+      const text = await fetchSeriesEpisodeText(imdbId, { forceRefresh });
       payload = buildEpisodesFromIdList(imdbId, text);
       if ((payload?.seasons?.length ?? 0) > 0) {
         console.debug('[mep] series episodes loaded from episode index', {
@@ -1388,61 +1389,6 @@ async function loadSeriesEpisodes(options = {}) {
   }
 }
 
-function loadEpisodeListCache() {
-  try {
-    const cached = JSON.parse(localStorage.getItem(EPS_LIST_CACHE_KEY) || 'null');
-    if (!cached || typeof cached !== 'object') return null;
-    const createdAt = Number(cached.createdAt || 0);
-    const text = String(cached.text || '');
-    if (!createdAt || !text) return null;
-    if ((Date.now() - createdAt) > EPS_LIST_CACHE_TTL_MS) return null;
-    return text;
-  } catch {
-    return null;
-  }
-}
-
-function saveEpisodeListCache(text) {
-  try {
-    const normalized = String(text || '');
-    if (!normalized) return;
-    localStorage.setItem(EPS_LIST_CACHE_KEY, JSON.stringify({
-      createdAt: Date.now(),
-      text: normalized
-    }));
-  } catch {}
-}
-
-async function fetchEpisodeIdListText(options = {}) {
-  const { forceRefresh = false } = options;
-  if (!forceRefresh) {
-    const cached = loadEpisodeListCache();
-    if (cached) return cached;
-    if (episodeListTextPromise) return episodeListTextPromise;
-  }
-
-  episodeListTextPromise = (async () => {
-    const local = await fetchWithTimeout('./assets/eps_list_imdb.txt', {
-      headers: { accept: 'text/plain' }
-    }, 2500).catch(() => null);
-    if (local?.ok) {
-      const text = await local.text();
-      if (String(text || '').trim()) {
-        saveEpisodeListCache(text);
-        return text;
-      }
-    }
-
-    throw new Error('episodes list unavailable');
-  })();
-
-  try {
-    return await episodeListTextPromise;
-  } finally {
-    episodeListTextPromise = null;
-  }
-}
-
 async function filterUnavailableSeries(results) {
   const index = await getEpisodeSeriesIndex();
   if (!index || index.size === 0) return results;
@@ -1459,15 +1405,10 @@ async function getEpisodeSeriesIndex() {
 
   episodeIndexPromise = (async () => {
     try {
-      const text = await fetchEpisodeIdListText();
+      const manifest = await fetchEpisodeManifest();
       const set = new Set();
-      for (const line of String(text || '').split('\n')) {
-        const value = line.trim();
-        if (!value.startsWith('tt')) continue;
-        const sep = value.indexOf('_');
-        if (sep <= 2) continue;
-        const id = value.slice(0, sep);
-        if (id.startsWith('tt')) set.add(id);
+      for (const id of Object.keys(manifest?.series || {})) {
+        if (/^tt\d+$/i.test(id)) set.add(id);
       }
       return set;
     } catch {
@@ -1476,6 +1417,76 @@ async function getEpisodeSeriesIndex() {
   })();
 
   return episodeIndexPromise;
+}
+
+function loadEpisodeManifestCache() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(EPISODE_MANIFEST_CACHE_KEY) || 'null');
+    if (!cached || typeof cached !== 'object') return null;
+    const createdAt = Number(cached.createdAt || 0);
+    const payload = cached.payload;
+    if (!createdAt || !payload || typeof payload !== 'object') return null;
+    if ((Date.now() - createdAt) > EPISODE_MANIFEST_CACHE_TTL_MS) return null;
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+function saveEpisodeManifestCache(payload) {
+  try {
+    localStorage.setItem(EPISODE_MANIFEST_CACHE_KEY, JSON.stringify({
+      createdAt: Date.now(),
+      payload
+    }));
+  } catch {}
+}
+
+async function fetchEpisodeManifest() {
+  const cached = loadEpisodeManifestCache();
+  if (cached) return cached;
+  if (episodeManifestPromise) return episodeManifestPromise;
+
+  episodeManifestPromise = (async () => {
+    const local = await fetchWithTimeout('./assets/episodes/index.json', {
+      headers: { accept: 'application/json' }
+    }, 2500).catch(() => null);
+    if (!local?.ok) throw new Error('episode manifest unavailable');
+    const payload = await local.json();
+    saveEpisodeManifestCache(payload);
+    return payload;
+  })();
+
+  try {
+    return await episodeManifestPromise;
+  } finally {
+    episodeManifestPromise = null;
+  }
+}
+
+async function fetchSeriesEpisodeText(imdbId, options = {}) {
+  const { forceRefresh = false } = options;
+  const id = String(imdbId || '').trim();
+  if (!id) throw new Error('missing imdb id');
+  if (!forceRefresh && episodeTextPromises.has(id)) return episodeTextPromises.get(id);
+
+  const promise = (async () => {
+    const local = await fetchWithTimeout(`./assets/episodes/${encodeURIComponent(id)}.txt`, {
+      headers: { accept: 'text/plain' }
+    }, 2500).catch(() => null);
+    if (local?.ok) {
+      const text = await local.text();
+      if (String(text || '').trim()) return text;
+    }
+    throw new Error('series episode file unavailable');
+  })();
+
+  episodeTextPromises.set(id, promise);
+  try {
+    return await promise;
+  } finally {
+    episodeTextPromises.delete(id);
+  }
 }
 
 function buildEpisodesFromIdList(imdbId, text) {

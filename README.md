@@ -11,7 +11,9 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - Publicación activa desde rama: `gh-pages`
 - Rama de desarrollo: `main`
 - Reproductor: VidAPI (`https://vaplayer.ru/embed/...`)
-- El índice de episodios se publica como asset estático en `assets/eps_list_imdb.txt`.
+- Los episodios se publican como assets estáticos por serie:
+  - `assets/episodes/index.json`
+  - `assets/episodes/<imdbId>.txt`
 
 ## Estado por plataforma
 
@@ -66,7 +68,7 @@ TTL actual de episodios por serie: 14 días.
 ## Limitaciones (por ser estático)
 
 - Sin backend no hay verificación server-side robusta de disponibilidad por URL.
-- Dependencia de endpoints públicos para búsqueda y metadata: puede haber CORS/rate-limit intermitente.
+- Dependencia de endpoints públicos para búsqueda, metadata y build de episodios: puede haber CORS/rate-limit intermitente.
 - Calidad de metadata depende de lo que entreguen las fuentes.
 
 ## Flujo de trabajo recomendado

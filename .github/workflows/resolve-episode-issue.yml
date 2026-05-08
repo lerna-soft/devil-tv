@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   issues: read
+  actions: write
 
 concurrency:
   group: episode-issue-${{ github.event.issue.number }}
@@ -63,3 +64,12 @@ jobs:
             git rebase origin/main --autostash
           done
           git push origin HEAD:main
+
+      - name: Trigger Pages deploy
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euxo pipefail
+          gh workflow run "Deploy static site to Pages" --ref main

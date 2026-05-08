@@ -453,7 +453,7 @@ function showIssueFeedback({ kind, title, html, text, confirmText = 'OK' }) {
   return Promise.resolve();
 }
 
-async function notifyIssueCreated({ reloadMs = 50000 } = {}) {
+async function notifyIssueCreated({ reloadMs = 60000 } = {}) {
   const swal = window.Swal;
   const waitSeconds = Math.max(0, Math.ceil(Number(reloadMs || 0) / 1000));
   const hardReload = () => {
@@ -1281,7 +1281,7 @@ function renderDetail(options = {}) {
       'Sync missing episode assets from the public source and mark the issue as resolved.',
       ''
     ]), ['episode-sync']).then((issue) => {
-      void notifyIssueCreated({ reloadMs: 50000 });
+      void notifyIssueCreated({ reloadMs: 60000 });
     }).catch((error) => {
       console.error(error);
       if (button) button.disabled = false;

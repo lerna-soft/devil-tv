@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T06:04:39.297Z",
+  "generatedAt": "2026-05-08T16:52:19.471Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -40,6 +40,13 @@
       "file": "tt1355642.txt",
       "seasonCount": 1,
       "episodeCount": 64
+    },
+    "tt1830617": {
+      "title": "Grimm",
+      "tvmazeId": 10,
+      "file": "tt1830617.txt",
+      "seasonCount": 6,
+      "episodeCount": 123
     },
     "tt3398540": {
       "title": "Haikyuu!!",

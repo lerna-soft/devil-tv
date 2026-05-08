@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T04:56:35.912Z",
+  "generatedAt": "2026-05-08T04:59:55.131Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -12,6 +12,13 @@
       "file": "tt8050740.txt",
       "seasonCount": 3,
       "episodeCount": 106
+    },
+    "tt0486171": {
+      "title": "Ikki Tousen",
+      "tvmazeId": 12715,
+      "file": "tt0486171.txt",
+      "seasonCount": 5,
+      "episodeCount": 52
     },
     "tt15765670": {
       "title": "My Dress-Up Darling",

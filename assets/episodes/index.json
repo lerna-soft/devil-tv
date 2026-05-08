@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-08T05:07:29.608Z",
+  "source": {
+    "provider": "tvmaze",
+    "strategy": "lookup_by_imdb_then_title"
+  },
+  "series": {
+    "tt8050740": {
+      "title": "Amphibia",
+      "tvmazeId": 35072,
+      "file": "tt8050740.txt",
+      "seasonCount": 3,
+      "episodeCount": 106
+    },
+    "tt0486171": {
+      "title": "Ikki Tousen",
+      "tvmazeId": 12715,
+      "file": "tt0486171.txt",
+      "seasonCount": 5,
+      "episodeCount": 52
+    },
+    "tt15765670": {
+      "title": "My Dress-Up Darling",
+      "tvmazeId": 59412,
+      "file": "tt15765670.txt",
+      "seasonCount": 2,
+      "episodeCount": 24
+    },
+    "tt0367409": {
+      "title": "Shaman King",
+      "tvmazeId": 4097,
+      "file": "tt0367409.txt",
+      "seasonCount": 1,
+      "episodeCount": 64
+    },
+    "tt9054364": {
+      "title": "That Time I Got Reincarnated as a Slime",
+      "tvmazeId": 38390,
+      "file": "tt9054364.txt",
+      "seasonCount": 4,
+      "episodeCount": 84
+    },
+    "tt0233127": {
+      "title": "Yo soy Betty, la fea",
+      "tvmazeId": 40334,
+      "file": "tt0233127.txt",
+      "seasonCount": 1,
+      "episodeCount": 169
+    }
+  }
+}

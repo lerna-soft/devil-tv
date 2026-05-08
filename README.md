@@ -12,6 +12,7 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - Rama de desarrollo: `main`
 - Reproductor primario: VidAPI (`https://vaplayer.ru/embed/...`)
 - Fallback de series: VidCore (`https://vidcore.net/tv/<id>/<season>/<episode>`)
+- Antes de abrir el player, la app prueba VidAPI y si detecta 404 en series cae a VidCore.
 - Los episodios se publican como assets estáticos por serie:
   - `assets/episodes/index.json`
   - `assets/episodes/<imdbId>.txt`

@@ -10,6 +10,7 @@ const state = {
   isSearching: false,
   playback: { season: 1, episode: 1 },
   playerOpening: false,
+  playerProvider: 'vidapi',
   homeSectionView: null,
   playerFallbackTimer: null,
   playerFallbackUrls: [],
@@ -1199,9 +1200,10 @@ function renderDetail(options = {}) {
   bindPlaybackSourceControls(elements.detail);
 }
 
-function openPlayerModal(embedUrl) {
+function openPlayerModal(embedUrl, provider = 'vidapi') {
   if (state.playerOpening) return;
   state.playerOpening = true;
+  state.playerProvider = provider;
   clearPlayerFallback();
   persistLastSelection();
   const modal = elements.playerModal;
@@ -1214,7 +1216,7 @@ function openPlayerModal(embedUrl) {
 
   renderPlayerControls();
   iframe.src = embedUrl;
-  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
+  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl, provider));
   modal.hidden = false;
   document.body.classList.add('player-active');
   requestNativeFullscreen(card);
@@ -1230,6 +1232,7 @@ function closePlayerModal() {
   modal.hidden = true;
   iframe.src = 'about:blank';
   document.body.classList.remove('player-active');
+  state.playerProvider = 'vidapi';
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
 }
@@ -1265,7 +1268,7 @@ function jumpEpisode(direction, baseEmbed) {
     const target = episodes[currentIndex + direction];
     if (target) {
       state.playback.episode = target.episode;
-      openPlayerModal(getCurrentEmbedUrl(baseEmbed));
+      openPlayerModal(getCurrentEmbedUrl(baseEmbed, state.playerProvider), state.playerProvider);
       return;
     }
   }
@@ -1286,7 +1289,7 @@ function jumpEpisode(direction, baseEmbed) {
     state.playback.episode = last.episode;
   }
 
-  openPlayerModal(getCurrentEmbedUrl(baseEmbed));
+  openPlayerModal(getCurrentEmbedUrl(baseEmbed, state.playerProvider), state.playerProvider);
 }
 
 async function searchViaListingsAndImdb(query, typeFilter) {
@@ -1744,19 +1747,68 @@ function buildVidCoreEmbedUrl(entry, id) {
   const episode = Number(entry.episode || 1) || 1;
   return `https://vidcore.net/tv/${encodeURIComponent(id)}/${season}/${episode}`;
 }
-function getPlaybackUrlsForCurrentSelection(primaryUrl) {
+function buildProxiedProbeUrl(url) {
+  const normalized = String(url || '').trim();
+  if (!normalized) return '';
+  return `https://r.jina.ai/http://${normalized.replace(/^https?:\/\//i, '')}`;
+}
+function extractIframeSrc(text) {
+  const match = String(text || '').match(/<iframe[^>]+src="([^"]+)"/i);
+  return match ? String(match[1] || '').trim() : '';
+}
+function looksLikeNotFoundPage(text) {
+  const value = String(text || '');
+  return /Warning:\s*Target URL returned error 404/i.test(value)
+    || /404\s*-\s*Not Found/i.test(value)
+    || /Title:\s*404\b/i.test(value)
+    || /<title>\s*404\b/i.test(value);
+}
+async function probePlaybackAvailability(url) {
+  const probeUrl = buildProxiedProbeUrl(url);
+  if (!probeUrl) return { status: 'unknown' };
+
+  const response = await fetchWithTimeout(probeUrl, {
+    headers: { accept: 'text/plain' }
+  }, 7000).catch(() => null);
+  if (!response?.ok) return { status: 'unknown' };
+
+  const text = await response.text().catch(() => '');
+  if (looksLikeNotFoundPage(text)) return { status: '404', probeUrl };
+
+  const iframeSrc = extractIframeSrc(text);
+  if (!iframeSrc) return { status: 'ok', probeUrl };
+
+  const nestedProbeUrl = buildProxiedProbeUrl(iframeSrc);
+  if (!nestedProbeUrl) return { status: 'ok', probeUrl, iframeSrc };
+
+  const nestedResponse = await fetchWithTimeout(nestedProbeUrl, {
+    headers: { accept: 'text/plain' }
+  }, 7000).catch(() => null);
+  if (!nestedResponse?.ok) return { status: 'unknown', probeUrl, iframeSrc };
+
+  const nestedText = await nestedResponse.text().catch(() => '');
+  if (looksLikeNotFoundPage(nestedText)) return { status: '404', probeUrl, iframeSrc };
+
+  return { status: 'ok', probeUrl, iframeSrc };
+}
+function getPlaybackUrlsForCurrentSelection(primaryUrl, provider = state.playerProvider || 'vidapi') {
   if (!state.selected) return [primaryUrl];
   const ids = getPlaybackCandidateIds(state.selected);
   if (!ids.length) return [primaryUrl];
-  const media = state.selected.type === 'movie' ? 'movie' : 'tv';
-  const suffix = media === 'movie'
-    ? ''
-    : `/${state.playback.season || 1}/${state.playback.episode || 1}`;
   const urls = [];
-  for (const id of ids) {
-    urls.push(`https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
-    const vidCoreUrl = buildVidCoreEmbedUrl(state.selected, id);
-    if (vidCoreUrl) urls.push(vidCoreUrl);
+  if (provider === 'vidcore' && isSeriesLike(state.selected)) {
+    for (const id of ids) {
+      const vidCoreUrl = buildVidCoreEmbedUrl(state.selected, id);
+      if (vidCoreUrl) urls.push(vidCoreUrl);
+    }
+  } else {
+    const media = state.selected.type === 'movie' ? 'movie' : 'tv';
+    const suffix = media === 'movie'
+      ? ''
+      : `/${state.playback.season || 1}/${state.playback.episode || 1}`;
+    for (const id of ids) {
+      urls.push(`https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
+    }
   }
   if (primaryUrl && !urls.includes(primaryUrl)) urls.unshift(primaryUrl);
   return [...new Set(urls)];
@@ -1784,15 +1836,29 @@ function schedulePlayerFallback(urls) {
   }, PLAYER_FALLBACK_DELAY_MS);
 }
 function isSeriesLike(title) { return title.type === 'series' || title.type === 'episode'; }
-function getCurrentEmbedUrl(baseEmbed) {
+function getCurrentEmbedUrl(baseEmbed, provider = state.playerProvider || 'vidapi') {
   if (!isSeriesLike(state.selected)) return baseEmbed;
   const id = getPlaybackId(state.selected);
+  if (provider === 'vidcore') return buildVidCoreEmbedUrl(state.selected, id) || baseEmbed;
   return `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season}/${state.playback.episode}`;
 }
 function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisodes?.seasons ?? []).find((entry) => entry.seasonNumber === seasonNumber); return season?.episodes ?? []; }
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }
 function syncTabs(type) { elements.tabs.forEach((tab) => tab.classList.toggle('active', tab.dataset.typeTab === type)); }
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+
+async function resolvePreferredPlaybackProvider() {
+  if (!state.selected) return 'vidapi';
+  const primaryUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected), 'vidapi');
+  const probe = await probePlaybackAvailability(primaryUrl);
+  console.debug('[mep] playback probe', {
+    title: state.selected.title,
+    primaryUrl,
+    probe: probe.status
+  });
+  if (probe.status === '404' && isSeriesLike(state.selected)) return 'vidcore';
+  return 'vidapi';
+}
 
 function renderPlaybackSourceControls(title) {
   if (!isAuthenticated()) return '';
@@ -1831,9 +1897,9 @@ function refreshPlayerSource() {
   const modal = elements.playerModal;
   const iframe = elements.playerIframe;
   if (!modal || !iframe || modal.hidden) return;
-  const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+  const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected), state.playerProvider);
   iframe.src = target;
-  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(target));
+  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(target, state.playerProvider));
 }
 
 function persistLastSelection() {
@@ -1937,7 +2003,7 @@ window.addEventListener('message', (event) => {
   }
   const modal = elements.playerModal;
   const iframe = elements.playerIframe;
-  const nextUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+  const nextUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected), state.playerProvider);
   if (modal && iframe && !modal.hidden) iframe.src = nextUrl;
   syncRoute();
 });
@@ -2073,7 +2139,7 @@ async function handleRouteChange() {
       if (route.mode === 'watch' && isSameSelected && modalNow && !modalNow.hidden && iframeNow) {
         state.playback.season = season;
         state.playback.episode = episode;
-        const targetUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
+        const targetUrl = getCurrentEmbedUrl(buildEmbedUrl(state.selected), state.playerProvider);
         if (iframeNow.src !== targetUrl) {
           iframeNow.src = targetUrl;
         }
@@ -2098,8 +2164,9 @@ async function handleRouteChange() {
       if (shouldOpenPlayer) {
         // iOS Safari can be flaky about repainting fixed overlays immediately;
         // deferring a tick makes the modal+hash transition more reliable.
-        const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
-        setTimeout(() => openPlayerModal(target), 0);
+        const provider = await resolvePreferredPlaybackProvider();
+        const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected), provider);
+        setTimeout(() => openPlayerModal(target, provider), 0);
       }
       if (isAuthenticated() && isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();

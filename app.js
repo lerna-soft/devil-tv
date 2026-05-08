@@ -719,6 +719,7 @@ function bindHomeCarouselEvents() {
 
     const cards = [...track.children];
     let page = 0;
+    let dragState = null;
 
     const metrics = () => {
       if (cards.length === 0) return { perPage: 1, maxPage: 0, step: 0 };
@@ -734,7 +735,55 @@ function bindHomeCarouselEvents() {
     const apply = () => {
       const { maxPage, step } = metrics();
       page = Math.min(Math.max(0, page), maxPage);
-      track.style.transform = `translateX(${-page * step}px)`;
+      const translateX = dragState?.currentTranslate ?? (-page * step);
+      track.style.transform = `translateX(${translateX}px)`;
+      prevBtn.disabled = page <= 0;
+      nextBtn.disabled = page >= maxPage;
+    };
+
+    const finishDrag = () => {
+      if (!dragState) return;
+      const wasDragged = dragState.moved;
+      const { step, maxPage } = metrics();
+      if (step > 0 && wasDragged) {
+        const snappedPage = Math.round(-dragState.currentTranslate / step);
+        page = Math.min(Math.max(0, snappedPage), maxPage);
+      }
+      dragState = null;
+      carousel.classList.remove('is-dragging');
+      apply();
+      if (wasDragged) {
+        carousel.dataset.dragging = '1';
+        window.setTimeout(() => {
+          delete carousel.dataset.dragging;
+        }, 0);
+      }
+    };
+
+    const updateDrag = (clientX, clientY) => {
+      if (!dragState) return;
+      const deltaX = clientX - dragState.startX;
+      const deltaY = clientY - dragState.startY;
+      if (!dragState.moved) {
+        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+          dragState = null;
+          carousel.classList.remove('is-dragging');
+          apply();
+          return;
+        }
+        if (Math.abs(deltaX) < 6) return;
+        dragState.moved = true;
+      }
+      const { step, maxPage } = metrics();
+      const minTranslate = -maxPage * step;
+      const maxTranslate = 0;
+      const rawTranslate = dragState.startTranslate + deltaX;
+      dragState.currentTranslate = Math.min(maxTranslate, Math.max(minTranslate, rawTranslate));
+      track.style.transform = `translateX(${dragState.currentTranslate}px)`;
+      if (dragState.moved) carousel.dataset.dragging = '1';
+      if (dragState.moved && step > 0) {
+        page = Math.min(Math.max(0, Math.round(-dragState.currentTranslate / step)), maxPage);
+      }
       prevBtn.disabled = page <= 0;
       nextBtn.disabled = page >= maxPage;
     };
@@ -747,6 +796,42 @@ function bindHomeCarouselEvents() {
       page += 1;
       apply();
     });
+
+    viewport.addEventListener('pointerdown', (event) => {
+      if (event.button !== undefined && event.button !== 0) return;
+      const { step } = metrics();
+      if (step <= 0) return;
+      dragState = {
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        startTranslate: -page * step,
+        currentTranslate: -page * step,
+        moved: false
+      };
+      carousel.classList.add('is-dragging');
+      try {
+        viewport.setPointerCapture(event.pointerId);
+      } catch {}
+      apply();
+    });
+
+    viewport.addEventListener('pointermove', (event) => {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      if (event.cancelable) event.preventDefault();
+      updateDrag(event.clientX, event.clientY);
+    }, { passive: false });
+
+    const endDrag = (event) => {
+      if (!dragState || event.pointerId !== dragState.pointerId) return;
+      try {
+        viewport.releasePointerCapture(event.pointerId);
+      } catch {}
+      finishDrag();
+    };
+
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
 
     window.addEventListener('resize', apply);
     apply();
@@ -805,6 +890,7 @@ function bindLocalCardEvents() {
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
     item.addEventListener('click', async () => {
+      if (item.closest('[data-home-carousel]')?.dataset.dragging === '1') return;
       state.selected = loadLocalCatalog().find((title) => title.catalogKey === item.dataset.key);
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);

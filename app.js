@@ -27,6 +27,7 @@ const homeCarouselLastDragAt = new WeakMap();
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const AUTH_SESSION_KEY = 'mep_auth_user_v1';
+const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
@@ -83,7 +84,8 @@ function isAuthenticated() {
 
 function loadAuthSession() {
   try {
-    return JSON.parse(sessionStorage.getItem(AUTH_SESSION_KEY) || 'null');
+    const raw = localStorage.getItem(AUTH_SESSION_KEY) || sessionStorage.getItem(AUTH_SESSION_KEY) || localStorage.getItem(AUTH_SESSION_LEGACY_KEY) || 'null';
+    return JSON.parse(raw);
   } catch {
     return null;
   }
@@ -91,13 +93,17 @@ function loadAuthSession() {
 
 function saveAuthSession(user) {
   if (!user) {
+    localStorage.removeItem(AUTH_SESSION_KEY);
     sessionStorage.removeItem(AUTH_SESSION_KEY);
+    localStorage.removeItem(AUTH_SESSION_LEGACY_KEY);
     return;
   }
-  sessionStorage.setItem(AUTH_SESSION_KEY, JSON.stringify({
+  const payload = JSON.stringify({
     email: String(user.email || '').trim().toLowerCase(),
     name: String(user.name || '').trim()
-  }));
+  });
+  localStorage.setItem(AUTH_SESSION_KEY, payload);
+  sessionStorage.setItem(AUTH_SESSION_KEY, payload);
 }
 
 function getInitials(name, email) {

@@ -443,7 +443,10 @@ async function hydrateSelectedFromTmdb() {
 function updateAuthUi() {
   const authenticated = isAuthenticated();
   const session = loadAuthSession();
-  if (elements.userChip) elements.userChip.hidden = !authenticated;
+  if (elements.userChip) {
+    elements.userChip.hidden = !authenticated;
+    elements.userChip.setAttribute('aria-hidden', authenticated ? 'false' : 'true');
+  }
   if (elements.logoutBtn) {
     elements.logoutBtn.textContent = authenticated ? 'Logout' : 'Login';
     elements.logoutBtn.title = authenticated ? 'Cerrar sesión' : 'Iniciar sesión';

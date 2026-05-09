@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T22:37:07.975Z",
+  "generatedAt": "2026-05-09T22:43:27.926Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -40,6 +40,13 @@
       "file": "tt8050756.txt",
       "seasonCount": 3,
       "episodeCount": 43
+    },
+    "tt0270118": {
+      "title": "Cheaters",
+      "tvmazeId": 25355,
+      "file": "tt0270118.txt",
+      "seasonCount": 11,
+      "episodeCount": 150
     },
     "tt0366005": {
       "title": "Danny Phantom",

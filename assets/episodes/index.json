@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T03:32:12.582Z",
+  "generatedAt": "2026-05-09T12:08:11.148Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -159,6 +159,13 @@
       "file": "tt1424037.txt",
       "seasonCount": 1,
       "episodeCount": 50
+    },
+    "tt5676412": {
+      "title": "Sin Senos Sí Hay Paraíso",
+      "tvmazeId": 20920,
+      "file": "tt5676412.txt",
+      "seasonCount": 3,
+      "episodeCount": 240
     },
     "tt0965547": {
       "title": "Slam Dunk",

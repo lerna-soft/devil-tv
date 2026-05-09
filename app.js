@@ -57,6 +57,7 @@ const elements = {
   playerControls: document.querySelector('#playerControls'),
   authGate: document.querySelector('#authGate'),
   authForm: document.querySelector('#authForm'),
+  authNameField: document.querySelector('#authNameField'),
   authName: document.querySelector('#authName'),
   authEmail: document.querySelector('#authEmail'),
   authPassword: document.querySelector('#authPassword'),
@@ -184,7 +185,7 @@ function bindAuth() {
 bindAuth();
 
 function syncAuthModeUi() {
-  if (!elements.authTitle || !elements.authHint || !elements.authSubmit || !elements.authToggle || !elements.authName) return;
+  if (!elements.authTitle || !elements.authHint || !elements.authSubmit || !elements.authToggle || !elements.authNameField) return;
   const isRegister = authMode === 'register';
   elements.authTitle.textContent = isRegister ? 'Create account' : 'Sign in';
   elements.authHint.textContent = isRegister
@@ -192,7 +193,7 @@ function syncAuthModeUi() {
     : 'Sign in to continue.';
   elements.authSubmit.textContent = isRegister ? 'Create account' : 'Entrar';
   elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Create account';
-  elements.authName.parentElement.hidden = !isRegister;
+  elements.authNameField.hidden = !isRegister;
   elements.authPassword.autocomplete = isRegister ? 'new-password' : 'current-password';
 }
 

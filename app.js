@@ -159,12 +159,12 @@ bindAuth();
 function syncAuthModeUi() {
   if (!elements.authTitle || !elements.authHint || !elements.authSubmit || !elements.authToggle || !elements.authName) return;
   const isRegister = authMode === 'register';
-  elements.authTitle.textContent = isRegister ? 'Sign up' : 'Login';
+  elements.authTitle.textContent = isRegister ? 'Create account' : 'Sign in';
   elements.authHint.textContent = isRegister
     ? 'Create a profile to unlock the catalog.'
     : 'Sign in to continue.';
   elements.authSubmit.textContent = isRegister ? 'Create account' : 'Entrar';
-  elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Crear cuenta';
+  elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Create account';
   elements.authName.parentElement.hidden = !isRegister;
   elements.authPassword.autocomplete = isRegister ? 'new-password' : 'current-password';
 }
@@ -304,7 +304,8 @@ bindPlayerModalEvents();
 handleRouteChange();
 hydrateSeedCatalog().then(() => renderCatalog()).catch(() => {});
 
-hideAuthGate();
+if (isAuthenticated()) hideAuthGate();
+else showAuthGate();
 
 function getTmdbReadToken() {
   return String(localStorage.getItem(TMDB_READ_TOKEN_KEY) || '').trim();

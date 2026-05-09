@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T02:32:34.224Z",
+  "generatedAt": "2026-05-09T03:12:33.006Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -19,6 +19,13 @@
       "file": "tt0417299.txt",
       "seasonCount": 3,
       "episodeCount": 61
+    },
+    "tt6258718": {
+      "title": "Bad Banks",
+      "tvmazeId": 34797,
+      "file": "tt6258718.txt",
+      "seasonCount": 2,
+      "episodeCount": 12
     },
     "tt8050756": {
       "title": "The Owl House",

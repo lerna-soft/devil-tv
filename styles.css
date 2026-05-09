@@ -35,10 +35,25 @@ body.player-active {
 @media (max-width: 980px) {
   .auth-shell {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
+    width: min(100%, 32rem);
   }
 
   .auth-hero {
     min-height: 320px;
+  }
+
+  .auth-card {
+    padding: 1rem;
+  }
+
+  .auth-card h2 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+    margin-bottom: 0.85rem;
+  }
+
+  .auth-form {
+    gap: 0.8rem;
   }
 
   body.detail-active .topbar,

@@ -166,17 +166,15 @@ function bindAuth() {
   });
 
   elements.logoutBtn?.addEventListener('click', () => {
-    if (!isAuthenticated()) {
-      showAuthGate();
-      return;
-    }
     localStorage.removeItem(AUTH_STORAGE_KEY);
     saveAuthSession(null);
+    authMode = 'login';
     state.selected = null;
     state.seriesEpisodes = null;
     closePlayerModal();
     hideAuthGate();
     updateAuthUi();
+    showAuthGate();
     renderCatalog();
     renderDetail();
   });

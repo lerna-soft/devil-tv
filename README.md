@@ -25,6 +25,10 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 - El sincronizador está en [`tools/sync-episode-targets-from-issues.mjs`](/home/xanadu/media-evaluation-platform-static/tools/sync-episode-targets-from-issues.mjs).
 - Después del deploy, el workflow cierra automáticamente los issues ya procesados para no reprocesarlos.
 - Cada issue con label `episode-sync` también dispara un workflow dedicado que intenta resolverlo de inmediato y deja los assets actualizados en `main`.
+- El progreso de visualización entre dispositivos se sincroniza con label `watch-progress-sync`.
+- El sincronizador está en [`tools/sync-watch-progress-from-issues.mjs`](/home/xanadu/media-evaluation-platform-static/tools/sync-watch-progress-from-issues.mjs).
+- El workflow dedicado escribe en `assets/watch-progress/` y conserva `localStorage` como fallback local.
+- Cada issue con label `watch-progress-sync` también dispara un workflow dedicado que intenta resolverlo de inmediato y deja el progreso actualizado en `main`.
 - Los targets actuales están en [`assets/episodes/targets.json`](/home/xanadu/media-evaluation-platform-static/assets/episodes/targets.json).
 - El workflow de Pages ejecuta ese script antes de publicar.
 - Fuente usada para construir los assets: TVMaze.
@@ -80,6 +84,8 @@ Claves principales:
 - `mep_series_progress_<id>`: progreso por serie (vistos, último capítulo).
 - `mep_last_watch`: snapshot de reproducción reciente.
 - `mep_last_selection`: última selección en UI.
+- `mep_watch_progress_<email>`: caché local del progreso sincronizado por usuario.
+- `assets/watch-progress/`: persistencia compartida para progreso entre dispositivos.
 
 TTL actual de episodios por serie: 14 días.
 

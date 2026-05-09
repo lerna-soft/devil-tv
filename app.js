@@ -194,6 +194,7 @@ function syncAuthModeUi() {
   elements.authSubmit.textContent = isRegister ? 'Create account' : 'Entrar';
   elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Create account';
   elements.authNameField.hidden = !isRegister;
+  elements.authNameField.classList.toggle('is-hidden', !isRegister);
   elements.authPassword.autocomplete = isRegister ? 'new-password' : 'current-password';
 }
 

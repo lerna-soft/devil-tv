@@ -359,6 +359,10 @@ h1 {
   margin-left: 0.25rem;
 }
 
+.auth-name-field.is-hidden {
+  display: none !important;
+}
+
 #search,
 #typeFilter,
 #genreFilter {

@@ -116,13 +116,8 @@ function bindAuth() {
         elements.authError.textContent = created.error || 'No se pudo crear la cuenta.';
         return;
       }
-      authMode = 'login';
-      syncAuthModeUi();
-      elements.authError.textContent = 'Solicitud enviada. La cuenta se activa cuando el archivo del usuario se publica.';
-      elements.authPassword.value = '';
-      if (elements.authName) elements.authName.value = '';
-      elements.authEmail.value = '';
-      elements.authEmail.focus();
+      elements.authError.textContent = '';
+      await notifyUserRegistrationCreated(email);
       return;
     }
 
@@ -640,6 +635,62 @@ async function notifyIssueCreated({ reloadMs = 60000 } = {}) {
 
   window.alert(`Solucionando.\n\nEspera ${waitSeconds} segundos.`);
   window.setTimeout(hardReload, Math.max(0, reloadMs));
+}
+
+async function notifyUserRegistrationCreated(email, reloadMs = 60000) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  const swal = window.Swal;
+  const waitSeconds = Math.max(0, Math.ceil(Number(reloadMs || 0) / 1000));
+  const handoffToLogin = () => {
+    authMode = 'login';
+    syncAuthModeUi();
+    if (elements.authEmail) elements.authEmail.value = normalizedEmail;
+    if (elements.authPassword) elements.authPassword.value = '';
+    if (elements.authName) elements.authName.value = '';
+    if (elements.authError) elements.authError.textContent = 'Usuario creado. Inicia sesión para continuar.';
+    showAuthGate();
+    window.setTimeout(() => elements.authPassword?.focus(), 0);
+  };
+
+  if (swal?.fire) {
+    let timerId = null;
+    let endAt = Date.now() + reloadMs;
+    const result = await swal.fire({
+      icon: 'success',
+      title: 'Creando usuario',
+      html: `
+        <p class="swal-sync-countdown">Espera <strong id="episodeSyncCountdown">${waitSeconds}</strong> segundos.</p>
+        <p class="swal-sync-note">Tu cuenta se activará cuando el archivo del usuario quede publicado.</p>
+      `,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      timer: reloadMs,
+      timerProgressBar: true,
+      didOpen: () => {
+        const countdownEl = swal.getHtmlContainer()?.querySelector('#episodeSyncCountdown');
+        timerId = window.setInterval(() => {
+          const remaining = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+          if (countdownEl) countdownEl.textContent = String(remaining);
+          if (remaining <= 0 && timerId) {
+            window.clearInterval(timerId);
+            timerId = null;
+          }
+        }, 250);
+      },
+      willClose: () => {
+        if (timerId) window.clearInterval(timerId);
+        timerId = null;
+      }
+    });
+    if (result.dismiss === swal.DismissReason.timer || reloadMs > 0) {
+      handoffToLogin();
+    }
+    return;
+  }
+
+  window.alert(`Creando usuario.\n\nEspera ${waitSeconds} segundos.`);
+  window.setTimeout(handoffToLogin, Math.max(0, reloadMs));
 }
 
 async function notifyIssueCreationError(error) {

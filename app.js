@@ -450,10 +450,14 @@ function updateAuthUi() {
   }
   if (authenticated) {
     const name = String(session?.name || '').trim() || 'Usuario';
-    const email = String(session?.email || '').trim() || AUTH_EMAIL;
+    const email = String(session?.email || '').trim();
     if (elements.userName) elements.userName.textContent = name;
     if (elements.userEmail) elements.userEmail.textContent = email;
     if (elements.userAvatar) elements.userAvatar.textContent = getInitials(name, email);
+  } else {
+    if (elements.userName) elements.userName.textContent = '';
+    if (elements.userEmail) elements.userEmail.textContent = '';
+    if (elements.userAvatar) elements.userAvatar.textContent = '';
   }
 }
 

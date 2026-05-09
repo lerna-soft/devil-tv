@@ -718,12 +718,15 @@ async function notifyUserRegistrationCreated(email, reloadMs = 60000) {
   const handoffToLogin = () => {
     authMode = 'login';
     syncAuthModeUi();
-    if (elements.authEmail) elements.authEmail.value = normalizedEmail;
-    if (elements.authPassword) elements.authPassword.value = '';
-    if (elements.authName) elements.authName.value = '';
-    if (elements.authError) elements.authError.textContent = 'Usuario creado. Inicia sesión para continuar.';
+    if (elements.authEmailLogin) elements.authEmailLogin.value = normalizedEmail;
+    if (elements.authPasswordLogin) elements.authPasswordLogin.value = '';
+    if (elements.authNameRegister) elements.authNameRegister.value = '';
+    if (elements.authEmailRegister) elements.authEmailRegister.value = normalizedEmail;
+    if (elements.authPasswordRegister) elements.authPasswordRegister.value = '';
+    if (elements.authPasswordConfirmRegister) elements.authPasswordConfirmRegister.value = '';
+    if (elements.authErrorLogin) elements.authErrorLogin.textContent = 'Usuario creado. Inicia sesión para continuar.';
     showAuthGate();
-    window.setTimeout(() => elements.authPassword?.focus(), 0);
+    window.setTimeout(() => elements.authPasswordLogin?.focus(), 0);
   };
 
   if (swal?.fire) {

@@ -660,7 +660,7 @@ async function notifyUserRegistrationCreated(email, reloadMs = 60000) {
       title: 'Creando usuario',
       html: `
         <p class="swal-sync-countdown">Espera <strong id="episodeSyncCountdown">${waitSeconds}</strong> segundos.</p>
-        <p class="swal-sync-note">Tu cuenta se activará cuando el archivo del usuario quede publicado.</p>
+        <p class="swal-sync-note">El registro no es inmediato. Tu usuario quedará listo cuando termine el proceso.</p>
       `,
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -689,7 +689,7 @@ async function notifyUserRegistrationCreated(email, reloadMs = 60000) {
     return;
   }
 
-  window.alert(`Creando usuario.\n\nEspera ${waitSeconds} segundos.`);
+  window.alert(`Creando usuario.\n\nEsto no es inmediato. Espera ${waitSeconds} segundos.`);
   window.setTimeout(handoffToLogin, Math.max(0, reloadMs));
 }
 

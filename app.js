@@ -25,11 +25,9 @@ const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
 
 const AUTH_EMAIL = 'usuario@mail.com';
-const AUTH_PASSWORD = 'movieValidator2026*';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
-const AUTH_USERS_KEY = 'mep_users_v1';
-const AUTH_MODE_KEY = 'mep_auth_mode_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
+const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
@@ -64,7 +62,7 @@ const elements = {
   authToggle: document.querySelector('#authToggle')
 };
 
-let authMode = localStorage.getItem(AUTH_MODE_KEY) === 'register' ? 'register' : 'login';
+let authMode = 'login';
 
 function isAuthenticated() {
   return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
@@ -92,12 +90,10 @@ function hideAuthGate() {
 function bindAuth() {
   if (!elements.authForm) return;
 
-  ensureSeedAuthUsers();
   syncAuthModeUi();
 
   elements.authToggle?.addEventListener('click', () => {
     authMode = authMode === 'login' ? 'register' : 'login';
-    localStorage.setItem(AUTH_MODE_KEY, authMode);
     syncAuthModeUi();
     if (elements.authError) elements.authError.textContent = '';
     if (authMode === 'register' && elements.authName) elements.authName.focus();
@@ -120,10 +116,13 @@ function bindAuth() {
         elements.authError.textContent = created.error || 'No se pudo crear la cuenta.';
         return;
       }
-      localStorage.setItem(AUTH_STORAGE_KEY, '1');
-      hideAuthGate();
-      updateAuthUi();
-      renderCatalog();
+      authMode = 'login';
+      syncAuthModeUi();
+      elements.authError.textContent = 'Solicitud enviada. La cuenta se activa cuando el archivo del usuario se publica.';
+      elements.authPassword.value = '';
+      if (elements.authName) elements.authName.value = '';
+      elements.authEmail.value = '';
+      elements.authEmail.focus();
       return;
     }
 
@@ -186,54 +185,63 @@ async function hashPassword(password, salt) {
   return [...new Uint8Array(digest)].map((value) => value.toString(16).padStart(2, '0')).join('');
 }
 
-function loadAuthUsers() {
-  try {
-    const raw = localStorage.getItem(AUTH_USERS_KEY) || '[]';
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveAuthUsers(users) {
-  localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users));
-}
-
 async function registerAuthUser({ name, email, password }) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!name || !normalizedEmail || !password) return { ok: false, error: 'Completa todos los campos.' };
-  const users = loadAuthUsers();
-  if (users.some((user) => String(user.email || '').toLowerCase() === normalizedEmail)) {
-    return { ok: false, error: 'Ese correo ya existe.' };
-  }
   const salt = makeSalt();
   const passwordHash = await hashPassword(password, salt);
-  users.push({ name, email: normalizedEmail, salt, passwordHash, createdAt: new Date().toISOString() });
-  saveAuthUsers(users);
-  return { ok: true };
+  const existing = await loadUserRecord(normalizedEmail).catch(() => null);
+  if (existing) return { ok: false, error: 'Ese correo ya existe.' };
+  const issue = await openGitHubIssue(
+    `User registration: ${name} <${normalizedEmail}>`,
+    buildUserRegistrationBody({ name, email: normalizedEmail, salt, passwordHash }),
+    ['user-register']
+  );
+  return { ok: true, issue };
 }
 
 async function validateAuthUser(email, password) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
-  const users = loadAuthUsers();
-  const user = users.find((entry) => String(entry.email || '').toLowerCase() === normalizedEmail);
+  const user = await loadUserRecord(normalizedEmail).catch(() => null);
   if (!user) return { ok: false, error: 'Credenciales incorrectas.' };
   const candidate = await hashPassword(password, String(user.salt || ''));
   if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
   return { ok: true, user };
 }
 
-async function ensureSeedAuthUsers() {
-  if (loadAuthUsers().length) return;
-  const seeded = await registerAuthUser({
-    name: 'Lerna Admin',
-    email: AUTH_EMAIL,
-    password: AUTH_PASSWORD
-  });
-  if (seeded.ok) {
-    authMode = 'login';
-    localStorage.setItem(AUTH_MODE_KEY, authMode);
+function buildUserRegistrationBody({ name, email, salt, passwordHash }) {
+  return [
+    'USER_REGISTRATION_REQUEST',
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Salt: ${salt}`,
+    `PasswordHash: ${passwordHash}`,
+    '',
+    `File: assets/users/${email}.json`
+  ].join('\n');
+}
+
+async function loadUserRecord(email) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!normalizedEmail) return null;
+  const index = await fetchJsonWithTimeout(`${AUTH_USERS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`);
+  const entry = Array.isArray(index?.users)
+    ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
+    : null;
+  const file = String(entry?.file || `${normalizedEmail}.json`);
+  const record = await fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`);
+  return record?.email ? record : null;
+}
+
+async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { cache: 'no-store', signal: controller.signal });
+    if (!response.ok) throw new Error(`Failed to load ${url}`);
+    return response.json();
+  } finally {
+    window.clearTimeout(timeout);
   }
 }
 

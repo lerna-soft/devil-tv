@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T20:39:41.026Z",
+  "generatedAt": "2026-05-09T22:37:07.975Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -222,6 +222,13 @@
       "file": "tt1190634.txt",
       "seasonCount": 5,
       "episodeCount": 40
+    },
+    "tt0141842": {
+      "title": "The Sopranos",
+      "tvmazeId": 527,
+      "file": "tt0141842.txt",
+      "seasonCount": 6,
+      "episodeCount": 86
     },
     "tt0233127": {
       "title": "Yo soy Betty, la fea",

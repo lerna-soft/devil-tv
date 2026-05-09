@@ -26,6 +26,7 @@ const homeCarouselLastDragAt = new WeakMap();
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
+const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
@@ -43,6 +44,10 @@ const elements = {
   genreFilter: document.querySelector('#genreFilter'),
   sortFilter: document.querySelector('#sortFilter'),
   logoutBtn: document.querySelector('#logoutBtn'),
+  userChip: document.querySelector('#userChip'),
+  userAvatar: document.querySelector('#userAvatar'),
+  userName: document.querySelector('#userName'),
+  userEmail: document.querySelector('#userEmail'),
   tabs: document.querySelectorAll('[data-type-tab]'),
   items: document.querySelector('#items'),
   count: document.querySelector('#count'),
@@ -66,6 +71,32 @@ let authMode = 'login';
 
 function isAuthenticated() {
   return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
+}
+
+function loadAuthSession() {
+  try {
+    return JSON.parse(sessionStorage.getItem(AUTH_SESSION_KEY) || 'null');
+  } catch {
+    return null;
+  }
+}
+
+function saveAuthSession(user) {
+  if (!user) {
+    sessionStorage.removeItem(AUTH_SESSION_KEY);
+    return;
+  }
+  sessionStorage.setItem(AUTH_SESSION_KEY, JSON.stringify({
+    email: String(user.email || '').trim().toLowerCase(),
+    name: String(user.name || '').trim()
+  }));
+}
+
+function getInitials(name, email) {
+  const source = String(name || '').trim() || String(email || '').split('@')[0] || 'U';
+  const parts = source.replace(/[^a-z0-9]+/gi, ' ').trim().split(/\s+/).filter(Boolean);
+  const letters = parts.slice(0, 2).map((part) => part.charAt(0).toUpperCase());
+  return (letters.join('') || source.slice(0, 2).toUpperCase() || 'U').slice(0, 2);
 }
 
 function showAuthGate() {
@@ -124,6 +155,7 @@ function bindAuth() {
     const validated = await validateAuthUser(email, password);
     if (validated.ok) {
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
+      saveAuthSession(validated.user);
       hideAuthGate();
       updateAuthUi();
       renderCatalog();
@@ -138,6 +170,7 @@ function bindAuth() {
       return;
     }
     localStorage.removeItem(AUTH_STORAGE_KEY);
+    saveAuthSession(null);
     state.selected = null;
     state.seriesEpisodes = null;
     closePlayerModal();
@@ -408,9 +441,20 @@ async function hydrateSelectedFromTmdb() {
 }
 
 function updateAuthUi() {
-  if (!elements.logoutBtn) return;
-  elements.logoutBtn.textContent = isAuthenticated() ? 'Salir' : 'Login';
-  elements.logoutBtn.title = isAuthenticated() ? 'Cerrar sesión' : 'Iniciar sesión';
+  const authenticated = isAuthenticated();
+  const session = loadAuthSession();
+  if (elements.userChip) elements.userChip.hidden = !authenticated;
+  if (elements.logoutBtn) {
+    elements.logoutBtn.textContent = authenticated ? 'Logout' : 'Login';
+    elements.logoutBtn.title = authenticated ? 'Cerrar sesión' : 'Iniciar sesión';
+  }
+  if (authenticated) {
+    const name = String(session?.name || '').trim() || 'Usuario';
+    const email = String(session?.email || '').trim() || AUTH_EMAIL;
+    if (elements.userName) elements.userName.textContent = name;
+    if (elements.userEmail) elements.userEmail.textContent = email;
+    if (elements.userAvatar) elements.userAvatar.textContent = getInitials(name, email);
+  }
 }
 
 updateAuthUi();

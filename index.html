@@ -68,7 +68,14 @@
           <select id="genreFilter" aria-label="Genre filter">
             <option value="all">Todos los generos</option>
           </select>
-          <button id="logoutBtn" class="ghost" type="button" title="Cerrar sesión">Salir</button>
+          <div class="user-chip" id="userChip" hidden>
+            <span class="user-avatar" id="userAvatar" aria-hidden="true">HG</span>
+            <div class="user-meta">
+              <span id="userName">Henry Gomez</span>
+              <span id="userEmail">usuario@mail.com</span>
+            </div>
+            <button id="logoutBtn" class="ghost compact" type="button" title="Cerrar sesión">Salir</button>
+          </div>
         </div>
       </section>
 

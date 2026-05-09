@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T17:15:12.558Z",
+  "generatedAt": "2026-05-09T20:39:41.026Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -82,6 +82,13 @@
       "file": "tt3398540.txt",
       "seasonCount": 4,
       "episodeCount": 85
+    },
+    "tt0412142": {
+      "title": "House",
+      "tvmazeId": 118,
+      "file": "tt0412142.txt",
+      "seasonCount": 8,
+      "episodeCount": 176
     },
     "tt0486171": {
       "title": "Ikki Tousen",

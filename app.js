@@ -30,6 +30,10 @@ const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
+const WATCH_PROGRESS_INDEX_PATH = './assets/watch-progress/index.json';
+const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
+const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
+const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
@@ -106,6 +110,16 @@ function saveAuthSession(user) {
   sessionStorage.setItem(AUTH_SESSION_KEY, payload);
 }
 
+function getAuthUser() {
+  const session = loadAuthSession();
+  const email = String(session?.email || '').trim().toLowerCase();
+  if (!email) return null;
+  return {
+    email,
+    name: String(session?.name || '').trim()
+  };
+}
+
 function getInitials(name, email) {
   const source = String(name || '').trim() || String(email || '').split('@')[0] || 'U';
   const parts = source.replace(/[^a-z0-9]+/gi, ' ').trim().split(/\s+/).filter(Boolean);
@@ -156,6 +170,7 @@ function bindAuth() {
       saveAuthSession(validated.user);
       hideAuthGate();
       updateAuthUi();
+      void hydrateWatchProgressForCurrentUser();
       renderCatalog();
       return;
     }
@@ -256,6 +271,157 @@ async function validateAuthUser(email, password) {
   const candidate = await hashPassword(password, String(user.salt || ''));
   if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
   return { ok: true, user };
+}
+
+function loadLocalWatchProgress(email) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!normalizedEmail) return null;
+  try {
+    return JSON.parse(localStorage.getItem(`${WATCH_PROGRESS_STORAGE_PREFIX}${normalizedEmail}`) || 'null');
+  } catch {
+    return null;
+  }
+}
+
+function saveLocalWatchProgress(email, progress) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!normalizedEmail) return;
+  try {
+    localStorage.setItem(`${WATCH_PROGRESS_STORAGE_PREFIX}${normalizedEmail}`, JSON.stringify(progress || {}));
+  } catch {
+    // ignore storage write issues
+  }
+}
+
+async function loadRemoteWatchProgress(email) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!normalizedEmail) return null;
+  const index = await fetchJsonWithTimeout(`${WATCH_PROGRESS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`).catch(() => null);
+  const entry = Array.isArray(index?.users)
+    ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
+    : null;
+  const file = String(entry?.file || `${normalizedEmail}.json`);
+  const record = await fetchJsonWithTimeout(`./assets/watch-progress/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`).catch(() => null);
+  return record?.email ? record : null;
+}
+
+async function hydrateWatchProgressForCurrentUser() {
+  const user = getAuthUser();
+  if (!user?.email) return;
+  const remote = await loadRemoteWatchProgress(user.email);
+  if (!remote) return;
+  mergeRemoteWatchProgress(remote);
+}
+
+function mergeRemoteWatchProgress(remote) {
+  const email = String(remote?.email || '').trim().toLowerCase();
+  if (!email) return;
+  const remoteProgress = remote?.progress && typeof remote.progress === 'object' ? remote.progress : {};
+  const existing = loadLocalWatchProgress(email) || {};
+  const merged = {
+    email,
+    name: String(remote?.name || existing.name || '').trim(),
+    updatedAt: maxIsoString(existing.updatedAt, remote.updatedAt),
+    progress: mergeProgressMaps(existing.progress || {}, remoteProgress),
+    lastWatch: pickNewestByUpdatedAt(existing.lastWatch, remote.lastWatch),
+    lastSelection: pickNewestByUpdatedAt(existing.lastSelection, remote.lastSelection)
+  };
+  saveLocalWatchProgress(email, merged);
+}
+
+function mergeProgressMaps(existing, incoming) {
+  const out = { ...(existing || {}) };
+  for (const [titleId, progress] of Object.entries(incoming || {})) {
+    out[titleId] = mergeProgressEntry(out[titleId], progress);
+  }
+  return out;
+}
+
+function mergeProgressEntry(existing, incoming) {
+  if (!incoming || typeof incoming !== 'object') return existing || null;
+  if (!existing || typeof existing !== 'object') return { ...incoming };
+  const existingUpdated = Date.parse(existing.updatedAt || 0) || 0;
+  const incomingUpdated = Date.parse(incoming.updatedAt || 0) || 0;
+  if (incomingUpdated > existingUpdated) return { ...existing, ...incoming };
+  if (incomingUpdated < existingUpdated) return existing;
+  return {
+    ...existing,
+    ...incoming,
+    watched: { ...(existing.watched || {}), ...(incoming.watched || {}) }
+  };
+}
+
+function loadSyncedWatchProgress(email) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!normalizedEmail) return null;
+  try {
+    return JSON.parse(localStorage.getItem(`${WATCH_PROGRESS_STORAGE_PREFIX}${normalizedEmail}`) || 'null');
+  } catch {
+    return null;
+  }
+}
+
+function persistSyncedWatchSnapshot(kind, snapshot) {
+  const user = getAuthUser();
+  if (!user?.email) return;
+  const current = loadSyncedWatchProgress(user.email) || {
+    email: user.email,
+    name: user.name,
+    progress: {}
+  };
+  const updatedAt = new Date().toISOString();
+  const merged = {
+    ...current,
+    email: user.email,
+    name: user.name || current.name || '',
+    updatedAt
+  };
+  if (kind === 'progress') {
+    const titleId = String(snapshot?.imdbId || snapshot?.tmdbId || '').trim();
+    if (titleId) {
+      merged.progress = {
+        ...(current.progress || {}),
+        [titleId]: {
+          ...(current.progress?.[titleId] || {}),
+          imdbId: String(snapshot?.imdbId || '').trim(),
+          tmdbId: String(snapshot?.tmdbId || '').trim(),
+          lastSeason: positiveInteger(snapshot?.season, 1),
+          lastEpisode: positiveInteger(snapshot?.episode, 1),
+          lastProgress: Number(snapshot?.progress || 0),
+          updatedAt
+        }
+      };
+      merged.lastWatch = {
+        imdbId: String(snapshot?.imdbId || '').trim(),
+        tmdbId: String(snapshot?.tmdbId || '').trim(),
+        season: positiveInteger(snapshot?.season, 1),
+        episode: positiveInteger(snapshot?.episode, 1),
+        progress: Number(snapshot?.progress || 0),
+        updatedAt
+      };
+    }
+  }
+  if (kind === 'lastSelection') {
+    merged.lastSelection = {
+      ...snapshot,
+      updatedAt
+    };
+  }
+  saveLocalWatchProgress(user.email, merged);
+}
+
+function pickNewestByUpdatedAt(existing, incoming) {
+  if (!existing) return incoming || null;
+  if (!incoming) return existing || null;
+  const existingUpdated = Date.parse(existing.updatedAt || 0) || 0;
+  const incomingUpdated = Date.parse(incoming.updatedAt || 0) || 0;
+  return incomingUpdated >= existingUpdated ? incoming : existing;
+}
+
+function maxIsoString(a, b) {
+  const at = Date.parse(a || 0) || 0;
+  const bt = Date.parse(b || 0) || 0;
+  return bt >= at ? (b || a || '') : (a || b || '');
 }
 
 function buildUserRegistrationBody({ name, email, salt, passwordHash }) {
@@ -488,6 +654,7 @@ function updateAuthUi() {
 }
 
 updateAuthUi();
+hydrateWatchProgressForCurrentUser().catch(() => {});
 
 async function hydrateSeedCatalog() {
   const seedUrl = `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
@@ -809,6 +976,55 @@ function buildIssueBody(title, lines) {
     '',
     `Page: ${window.location.href}`
   ].filter(Boolean).join('\n');
+}
+
+function buildWatchProgressIssueBody(snapshot) {
+  return [
+    'WATCH_PROGRESS_SYNC_REQUEST',
+    `Email: ${String(snapshot?.email || '').trim().toLowerCase()}`,
+    `Name: ${String(snapshot?.name || '').trim()}`,
+    `IMDb: ${String(snapshot?.imdbId || '').trim()}`,
+    `TMDB: ${String(snapshot?.tmdbId || '').trim()}`,
+    `Title: ${String(state.selected?.title || '').trim()}`,
+    `Type: ${String(state.selected?.type || '').trim()}`,
+    `Season: ${positiveInteger(snapshot?.season, 1)}`,
+    `Episode: ${positiveInteger(snapshot?.episode, 1)}`,
+    `Progress: ${Number(snapshot?.progress || 0)}`,
+    `PlayerStatus: ${String(snapshot?.player_status || '').trim()}`,
+    `UpdatedAt: ${new Date().toISOString()}`
+  ].join('\n');
+}
+
+function getWatchProgressIssueKey(snapshot) {
+  const id = String(snapshot?.imdbId || snapshot?.tmdbId || '').trim();
+  return `${id}:${positiveInteger(snapshot?.season, 1)}x${positiveInteger(snapshot?.episode, 1)}`;
+}
+
+async function queueWatchProgressSync(snapshot) {
+  const user = getAuthUser();
+  if (!user?.email) return;
+  const titleId = String(snapshot?.imdbId || snapshot?.tmdbId || '').trim();
+  if (!titleId) return;
+
+  const key = getWatchProgressIssueKey(snapshot);
+  const lastSync = Number(localStorage.getItem(`${WATCH_PROGRESS_LAST_SYNC_PREFIX}${user.email}:${key}`) || '0');
+  const now = Date.now();
+  if (now - lastSync < 5 * 60 * 1000 && Number(snapshot?.progress || 0) < 95) return;
+  localStorage.setItem(`${WATCH_PROGRESS_LAST_SYNC_PREFIX}${user.email}:${key}`, String(now));
+
+  try {
+    await openGitHubIssue(
+      `Watch progress: ${user.name || user.email} <${user.email}>`,
+      buildWatchProgressIssueBody({
+        ...snapshot,
+        email: user.email,
+        name: user.name
+      }),
+      [WATCH_PROGRESS_SYNC_LABEL]
+    );
+  } catch {
+    // local fallback remains authoritative if sync is unavailable
+  }
 }
 
 function bindEvaluationPanel(title) {
@@ -2324,9 +2540,29 @@ function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
 function persistLastSelection() {
   if (!state.selected) return;
-  localStorage.setItem('mep_last_selection', JSON.stringify({ imdbId: state.selected.imdbId || '', tmdbId: state.selected.tmdbId || '', season: state.playback.season, episode: state.playback.episode }));
+  const snapshot = {
+    imdbId: state.selected.imdbId || '',
+    tmdbId: state.selected.tmdbId || '',
+    season: state.playback.season,
+    episode: state.playback.episode,
+    updatedAt: new Date().toISOString()
+  };
+  localStorage.setItem('mep_last_selection', JSON.stringify(snapshot));
+  persistSyncedWatchSnapshot('lastSelection', snapshot);
 }
-function getSeriesProgress(title) { try { return JSON.parse(localStorage.getItem(`mep_series_progress_${title.imdbId || title.tmdbId}`) || '{"watched":{}}'); } catch { return { watched: {} }; } }
+function getSeriesProgress(title) {
+  const id = title.imdbId || title.tmdbId;
+  try {
+    const local = JSON.parse(localStorage.getItem(`mep_series_progress_${id}`) || '{"watched":{}}');
+    const user = getAuthUser();
+    const synced = user?.email ? loadSyncedWatchProgress(user.email) : null;
+    const remote = synced?.progress?.[id];
+    if (!remote) return local;
+    return mergeProgressEntry(local, remote) || local;
+  } catch {
+    return { watched: {} };
+  }
+}
 function loadCachedSeriesEpisodes(imdbId) {
   try {
     const cached = JSON.parse(localStorage.getItem(`mep_series_eps_${imdbId}`) || 'null');
@@ -2452,7 +2688,25 @@ function persistProgressFromPlayerEvent(data) {
   if (snapshot.progress > 60 || data.player_status === 'completed') record.completedAt = record.completedAt || now;
 
   watched[epKey] = record.completedAt ? { ...record } : record;
-  localStorage.setItem(key, JSON.stringify({ ...existing, lastSeason: snapshot.season, lastEpisode: snapshot.episode, watched }));
+  const nextProgress = { ...existing, lastSeason: snapshot.season, lastEpisode: snapshot.episode, watched };
+  localStorage.setItem(key, JSON.stringify(nextProgress));
+  persistSyncedWatchSnapshot('progress', {
+    imdbId: snapshot.imdbId,
+    tmdbId: snapshot.tmdbId,
+    season: snapshot.season,
+    episode: snapshot.episode,
+    progress: snapshot.progress,
+    player_status: data.player_status,
+    updatedAt: new Date().toISOString()
+  });
+  void queueWatchProgressSync({
+    imdbId: snapshot.imdbId,
+    tmdbId: snapshot.tmdbId,
+    season: snapshot.season,
+    episode: snapshot.episode,
+    progress: snapshot.progress,
+    player_status: data.player_status
+  });
 }
 
 function requestNativeFullscreen(element) {

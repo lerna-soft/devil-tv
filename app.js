@@ -57,16 +57,22 @@ const elements = {
   playerIframe: document.querySelector('#player'),
   playerControls: document.querySelector('#playerControls'),
   authGate: document.querySelector('#authGate'),
-  authForm: document.querySelector('#authForm'),
-  authNameField: document.querySelector('#authNameField'),
-  authName: document.querySelector('#authName'),
-  authEmail: document.querySelector('#authEmail'),
-  authPassword: document.querySelector('#authPassword'),
-  authError: document.querySelector('#authError'),
-  authTitle: document.querySelector('#authTitle'),
-  authHint: document.querySelector('#authHint'),
-  authSubmit: document.querySelector('#authSubmit'),
-  authToggle: document.querySelector('#authToggle')
+  authFormLogin: document.querySelector('#authFormLogin'),
+  authEmailLogin: document.querySelector('#authEmailLogin'),
+  authPasswordLogin: document.querySelector('#authPasswordLogin'),
+  authErrorLogin: document.querySelector('#authErrorLogin'),
+  authSubmitLogin: document.querySelector('#authSubmitLogin'),
+  authToggleLogin: document.querySelector('#authToggleLogin'),
+  authFormRegister: document.querySelector('#authFormRegister'),
+  authNameRegister: document.querySelector('#authNameRegister'),
+  authEmailRegister: document.querySelector('#authEmailRegister'),
+  authPasswordRegister: document.querySelector('#authPasswordRegister'),
+  authPasswordConfirmRegister: document.querySelector('#authPasswordConfirmRegister'),
+  authErrorRegister: document.querySelector('#authErrorRegister'),
+  authSubmitRegister: document.querySelector('#authSubmitRegister'),
+  authToggleRegister: document.querySelector('#authToggleRegister'),
+  loginCard: document.querySelector('#loginCard'),
+  registerCard: document.querySelector('#registerCard')
 };
 
 let authMode = 'login';
@@ -104,14 +110,10 @@ function getInitials(name, email) {
 function showAuthGate() {
   if (!elements.authGate) return;
   elements.authGate.hidden = false;
-  elements.authError.textContent = '';
-  elements.authEmail.value = '';
-  elements.authPassword.value = '';
-  if (elements.authName) elements.authName.value = '';
   syncAuthModeUi();
   window.setTimeout(() => {
-    if (authMode === 'register' && elements.authName) elements.authName.focus();
-    else elements.authEmail.focus();
+    if (authMode === 'register') elements.authNameRegister?.focus();
+    else elements.authEmailLogin?.focus();
   }, 0);
 }
 
@@ -121,39 +123,27 @@ function hideAuthGate() {
 }
 
 function bindAuth() {
-  if (!elements.authForm) return;
+  if (!elements.authFormLogin || !elements.authFormRegister) return;
 
   syncAuthModeUi();
 
-  elements.authToggle?.addEventListener('click', () => {
+  elements.authToggleLogin?.addEventListener('click', () => {
     authMode = authMode === 'login' ? 'register' : 'login';
     syncAuthModeUi();
-    if (elements.authError) elements.authError.textContent = '';
-    if (authMode === 'register' && elements.authName) elements.authName.focus();
-    else elements.authEmail.focus();
+    if (authMode === 'register') elements.authNameRegister?.focus();
+    else elements.authEmailLogin?.focus();
   });
 
-  elements.authForm.addEventListener('submit', async (event) => {
+  elements.authToggleRegister?.addEventListener('click', () => {
+    authMode = 'login';
+    syncAuthModeUi();
+    elements.authEmailLogin?.focus();
+  });
+
+  elements.authFormLogin.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const email = String(elements.authEmail.value || '').trim().toLowerCase();
-    const password = String(elements.authPassword.value || '');
-    const name = String(elements.authName?.value || '').trim();
-
-    if (authMode === 'register') {
-      if (!name) {
-        elements.authError.textContent = 'Ingresa tu nombre.';
-        return;
-      }
-      const created = await registerAuthUser({ name, email, password });
-      if (!created.ok) {
-        elements.authError.textContent = created.error || 'No se pudo crear la cuenta.';
-        return;
-      }
-      elements.authError.textContent = '';
-      await notifyUserRegistrationCreated(email);
-      return;
-    }
-
+    const email = String(elements.authEmailLogin.value || '').trim().toLowerCase();
+    const password = String(elements.authPasswordLogin.value || '');
     const validated = await validateAuthUser(email, password);
     if (validated.ok) {
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
@@ -163,7 +153,31 @@ function bindAuth() {
       renderCatalog();
       return;
     }
-    elements.authError.textContent = validated.error || 'Credenciales incorrectas.';
+    if (elements.authErrorLogin) elements.authErrorLogin.textContent = validated.error || 'Credenciales incorrectas.';
+  });
+
+  elements.authFormRegister.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = String(elements.authNameRegister.value || '').trim();
+    const email = String(elements.authEmailRegister.value || '').trim().toLowerCase();
+    const password = String(elements.authPasswordRegister.value || '');
+    const confirmPassword = String(elements.authPasswordConfirmRegister.value || '');
+
+    if (!name || !email || !password || !confirmPassword) {
+      if (elements.authErrorRegister) elements.authErrorRegister.textContent = 'Completa todos los campos.';
+      return;
+    }
+    if (password !== confirmPassword) {
+      if (elements.authErrorRegister) elements.authErrorRegister.textContent = 'Las contraseñas no coinciden.';
+      return;
+    }
+    const created = await registerAuthUser({ name, email, password });
+    if (!created.ok) {
+      if (elements.authErrorRegister) elements.authErrorRegister.textContent = created.error || 'No se pudo crear la cuenta.';
+      return;
+    }
+    if (elements.authErrorRegister) elements.authErrorRegister.textContent = '';
+    await notifyUserRegistrationCreated(email);
   });
 
   elements.logoutBtn?.addEventListener('click', () => {
@@ -184,17 +198,11 @@ function bindAuth() {
 bindAuth();
 
 function syncAuthModeUi() {
-  if (!elements.authTitle || !elements.authHint || !elements.authSubmit || !elements.authToggle || !elements.authNameField) return;
   const isRegister = authMode === 'register';
-  elements.authTitle.textContent = isRegister ? 'Create account' : 'Sign in';
-  elements.authHint.textContent = isRegister
-    ? 'Create a profile to unlock the catalog.'
-    : 'Sign in to continue.';
-  elements.authSubmit.textContent = isRegister ? 'Create account' : 'Entrar';
-  elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Create account';
-  elements.authNameField.hidden = !isRegister;
-  elements.authNameField.classList.toggle('is-hidden', !isRegister);
-  elements.authPassword.autocomplete = isRegister ? 'new-password' : 'current-password';
+  if (elements.loginCard) elements.loginCard.classList.toggle('is-active', !isRegister);
+  if (elements.registerCard) elements.registerCard.classList.toggle('is-active', isRegister);
+  if (elements.authErrorLogin) elements.authErrorLogin.textContent = '';
+  if (elements.authErrorRegister) elements.authErrorRegister.textContent = '';
 }
 
 function makeSalt() {

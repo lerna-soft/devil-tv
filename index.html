@@ -17,30 +17,52 @@
   <body>
     <div id="authGate" class="auth-gate" hidden>
       <div class="auth-shell" role="dialog" aria-modal="true" aria-label="Access">
-        <div class="auth-hero">
-          <div class="auth-brand">Devil TV</div>
-          <h2 id="authTitle">Login</h2>
-          <p id="authHint" class="auth-hint">Acceso restringido.</p>
-        </div>
-        <div class="auth-card">
-          <form id="authForm" class="auth-form">
-            <label class="auth-field auth-name-field" id="authNameField" hidden>
-              <span>Name</span>
-              <input id="authName" type="text" autocomplete="name" />
-            </label>
+        <section class="auth-card auth-card-login" id="loginCard">
+          <div class="auth-hero">
+            <div class="auth-brand">Devil TV</div>
+            <h2 id="authTitleLogin">Login</h2>
+          </div>
+          <form id="authFormLogin" class="auth-form">
             <label class="auth-field">
               <span>Email</span>
-              <input id="authEmail" type="email" autocomplete="username" required />
+              <input id="authEmailLogin" type="email" autocomplete="username" required />
             </label>
             <label class="auth-field">
               <span>Password</span>
-              <input id="authPassword" type="password" autocomplete="current-password" required />
+              <input id="authPasswordLogin" type="password" autocomplete="current-password" required />
             </label>
-            <button id="authSubmit" type="submit">Entrar</button>
-            <p id="authError" class="auth-error" aria-live="polite"></p>
-            <button id="authToggle" class="auth-toggle" type="button">Crear cuenta</button>
+            <button id="authSubmitLogin" type="submit">Login</button>
+            <p id="authErrorLogin" class="auth-error" aria-live="polite"></p>
+            <button id="authToggleLogin" class="auth-toggle" type="button">Signup</button>
           </form>
-        </div>
+        </section>
+        <section class="auth-card auth-card-register" id="registerCard">
+          <div class="auth-hero">
+            <div class="auth-brand">Devil TV</div>
+            <h2 id="authTitleRegister">Signup</h2>
+          </div>
+          <form id="authFormRegister" class="auth-form">
+            <label class="auth-field">
+              <span>Name</span>
+              <input id="authNameRegister" type="text" autocomplete="name" required />
+            </label>
+            <label class="auth-field">
+              <span>Email</span>
+              <input id="authEmailRegister" type="email" autocomplete="username" required />
+            </label>
+            <label class="auth-field">
+              <span>Password</span>
+              <input id="authPasswordRegister" type="password" autocomplete="new-password" required />
+            </label>
+            <label class="auth-field">
+              <span>Confirm Password</span>
+              <input id="authPasswordConfirmRegister" type="password" autocomplete="new-password" required />
+            </label>
+            <button id="authSubmitRegister" type="submit">Signup</button>
+            <p id="authErrorRegister" class="auth-error" aria-live="polite"></p>
+            <button id="authToggleRegister" class="auth-toggle" type="button">Login</button>
+          </form>
+        </section>
       </div>
     </div>
 

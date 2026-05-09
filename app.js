@@ -27,6 +27,9 @@ const homeCarouselLastDragAt = new WeakMap();
 const AUTH_EMAIL = 'usuario@mail.com';
 const AUTH_PASSWORD = 'movieValidator2026*';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
+const AUTH_USERS_KEY = 'mep_users_v1';
+const AUTH_MODE_KEY = 'mep_auth_mode_v1';
+const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
@@ -51,10 +54,17 @@ const elements = {
   playerControls: document.querySelector('#playerControls'),
   authGate: document.querySelector('#authGate'),
   authForm: document.querySelector('#authForm'),
+  authName: document.querySelector('#authName'),
   authEmail: document.querySelector('#authEmail'),
   authPassword: document.querySelector('#authPassword'),
-  authError: document.querySelector('#authError')
+  authError: document.querySelector('#authError'),
+  authTitle: document.querySelector('#authTitle'),
+  authHint: document.querySelector('#authHint'),
+  authSubmit: document.querySelector('#authSubmit'),
+  authToggle: document.querySelector('#authToggle')
 };
+
+let authMode = localStorage.getItem(AUTH_MODE_KEY) === 'register' ? 'register' : 'login';
 
 function isAuthenticated() {
   return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
@@ -66,7 +76,12 @@ function showAuthGate() {
   elements.authError.textContent = '';
   elements.authEmail.value = '';
   elements.authPassword.value = '';
-  elements.authEmail.focus();
+  if (elements.authName) elements.authName.value = '';
+  syncAuthModeUi();
+  window.setTimeout(() => {
+    if (authMode === 'register' && elements.authName) elements.authName.focus();
+    else elements.authEmail.focus();
+  }, 0);
 }
 
 function hideAuthGate() {
@@ -77,18 +92,50 @@ function hideAuthGate() {
 function bindAuth() {
   if (!elements.authForm) return;
 
-  elements.authForm.addEventListener('submit', (event) => {
+  ensureSeedAuthUsers();
+  syncAuthModeUi();
+
+  elements.authToggle?.addEventListener('click', () => {
+    authMode = authMode === 'login' ? 'register' : 'login';
+    localStorage.setItem(AUTH_MODE_KEY, authMode);
+    syncAuthModeUi();
+    if (elements.authError) elements.authError.textContent = '';
+    if (authMode === 'register' && elements.authName) elements.authName.focus();
+    else elements.authEmail.focus();
+  });
+
+  elements.authForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const email = String(elements.authEmail.value || '').trim().toLowerCase();
-    const password = String(elements.authPassword.value || '').trim();
-    if (email === AUTH_EMAIL.toLowerCase() && password === AUTH_PASSWORD) {
+    const password = String(elements.authPassword.value || '');
+    const name = String(elements.authName?.value || '').trim();
+
+    if (authMode === 'register') {
+      if (!name) {
+        elements.authError.textContent = 'Ingresa tu nombre.';
+        return;
+      }
+      const created = await registerAuthUser({ name, email, password });
+      if (!created.ok) {
+        elements.authError.textContent = created.error || 'No se pudo crear la cuenta.';
+        return;
+      }
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
       hideAuthGate();
       updateAuthUi();
       renderCatalog();
       return;
     }
-    elements.authError.textContent = 'Credenciales incorrectas.';
+
+    const validated = await validateAuthUser(email, password);
+    if (validated.ok) {
+      localStorage.setItem(AUTH_STORAGE_KEY, '1');
+      hideAuthGate();
+      updateAuthUi();
+      renderCatalog();
+      return;
+    }
+    elements.authError.textContent = validated.error || 'Credenciales incorrectas.';
   });
 
   elements.logoutBtn?.addEventListener('click', () => {
@@ -108,6 +155,87 @@ function bindAuth() {
 }
 
 bindAuth();
+
+function syncAuthModeUi() {
+  if (!elements.authTitle || !elements.authHint || !elements.authSubmit || !elements.authToggle || !elements.authName) return;
+  const isRegister = authMode === 'register';
+  elements.authTitle.textContent = isRegister ? 'Sign up' : 'Login';
+  elements.authHint.textContent = isRegister
+    ? 'Create a profile to unlock the catalog.'
+    : 'Sign in to continue.';
+  elements.authSubmit.textContent = isRegister ? 'Create account' : 'Entrar';
+  elements.authToggle.textContent = isRegister ? 'I already have an account' : 'Crear cuenta';
+  elements.authName.parentElement.hidden = !isRegister;
+  elements.authPassword.autocomplete = isRegister ? 'new-password' : 'current-password';
+}
+
+function makeSalt() {
+  return `${AUTH_SALT_PREFIX}_${cryptoRandomHex(8)}`;
+}
+
+function cryptoRandomHex(length) {
+  const bytes = new Uint8Array(length);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map((value) => value.toString(16).padStart(2, '0')).join('');
+}
+
+async function hashPassword(password, salt) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(`${salt}:${password}`);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(digest)].map((value) => value.toString(16).padStart(2, '0')).join('');
+}
+
+function loadAuthUsers() {
+  try {
+    const raw = localStorage.getItem(AUTH_USERS_KEY) || '[]';
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveAuthUsers(users) {
+  localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users));
+}
+
+async function registerAuthUser({ name, email, password }) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  if (!name || !normalizedEmail || !password) return { ok: false, error: 'Completa todos los campos.' };
+  const users = loadAuthUsers();
+  if (users.some((user) => String(user.email || '').toLowerCase() === normalizedEmail)) {
+    return { ok: false, error: 'Ese correo ya existe.' };
+  }
+  const salt = makeSalt();
+  const passwordHash = await hashPassword(password, salt);
+  users.push({ name, email: normalizedEmail, salt, passwordHash, createdAt: new Date().toISOString() });
+  saveAuthUsers(users);
+  return { ok: true };
+}
+
+async function validateAuthUser(email, password) {
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  const users = loadAuthUsers();
+  const user = users.find((entry) => String(entry.email || '').toLowerCase() === normalizedEmail);
+  if (!user) return { ok: false, error: 'Credenciales incorrectas.' };
+  const candidate = await hashPassword(password, String(user.salt || ''));
+  if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
+  return { ok: true, user };
+}
+
+async function ensureSeedAuthUsers() {
+  if (loadAuthUsers().length) return;
+  const seeded = await registerAuthUser({
+    name: 'Lerna Admin',
+    email: AUTH_EMAIL,
+    password: AUTH_PASSWORD
+  });
+  if (seeded.ok) {
+    authMode = 'login';
+    localStorage.setItem(AUTH_MODE_KEY, authMode);
+  }
+}
 
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;

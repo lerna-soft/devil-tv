@@ -16,21 +16,31 @@
   </head>
   <body>
     <div id="authGate" class="auth-gate" hidden>
-      <div class="auth-card" role="dialog" aria-modal="true" aria-label="Login">
-        <h2>Login</h2>
-        <p class="auth-hint">Acceso restringido.</p>
-        <form id="authForm" class="auth-form">
-          <label>
-            <span>Email</span>
-            <input id="authEmail" type="email" autocomplete="username" required />
-          </label>
-          <label>
-            <span>Password</span>
-            <input id="authPassword" type="password" autocomplete="current-password" required />
-          </label>
-          <button type="submit">Entrar</button>
-          <p id="authError" class="auth-error" aria-live="polite"></p>
-        </form>
+      <div class="auth-shell" role="dialog" aria-modal="true" aria-label="Access">
+        <div class="auth-hero">
+          <div class="auth-brand">Devil TV</div>
+          <h2 id="authTitle">Login</h2>
+          <p id="authHint" class="auth-hint">Acceso restringido.</p>
+        </div>
+        <div class="auth-card">
+          <form id="authForm" class="auth-form">
+            <label class="auth-field">
+              <span>Name</span>
+              <input id="authName" type="text" autocomplete="name" />
+            </label>
+            <label class="auth-field">
+              <span>Email</span>
+              <input id="authEmail" type="email" autocomplete="username" required />
+            </label>
+            <label class="auth-field">
+              <span>Password</span>
+              <input id="authPassword" type="password" autocomplete="current-password" required />
+            </label>
+            <button id="authSubmit" type="submit">Entrar</button>
+            <p id="authError" class="auth-error" aria-live="polite"></p>
+            <button id="authToggle" class="auth-toggle" type="button">Crear cuenta</button>
+          </form>
+        </div>
       </div>
     </div>
 

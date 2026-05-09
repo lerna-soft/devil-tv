@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-08T17:58:40.442Z",
+  "generatedAt": "2026-05-09T02:32:34.224Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -26,6 +26,13 @@
       "file": "tt8050756.txt",
       "seasonCount": 3,
       "episodeCount": 43
+    },
+    "tt0366005": {
+      "title": "Danny Phantom",
+      "tvmazeId": 6301,
+      "file": "tt0366005.txt",
+      "seasonCount": 3,
+      "episodeCount": 53
     },
     "tt0481256": {
       "title": "Hajime no Ippo",

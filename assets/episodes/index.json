@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T22:48:05.430Z",
+  "generatedAt": "2026-05-09T22:51:03.525Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -145,6 +145,13 @@
       "file": "tt1553656.txt",
       "seasonCount": 3,
       "episodeCount": 39
+    },
+    "tt1641384": {
+      "title": "Young Justice",
+      "tvmazeId": 689,
+      "file": "tt1641384.txt",
+      "seasonCount": 4,
+      "episodeCount": 98
     },
     "tt1695360": {
       "title": "The Legend of Korra",

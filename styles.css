@@ -313,6 +313,52 @@ h1 {
   align-items: center;
 }
 
+.user-chip {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 0.7rem;
+  justify-self: end;
+  padding: 0.34rem 0.45rem 0.34rem 0.36rem;
+}
+
+.user-avatar {
+  align-items: center;
+  background: linear-gradient(180deg, rgba(229, 9, 20, 0.95), rgba(147, 3, 12, 0.95));
+  border-radius: 999px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 900;
+  height: 2.05rem;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  width: 2.05rem;
+}
+
+.user-meta {
+  display: grid;
+  gap: 0.08rem;
+  line-height: 1.05;
+}
+
+.user-meta #userName {
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.user-meta #userEmail {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.user-chip .ghost.compact {
+  margin-left: 0.25rem;
+}
+
 #search,
 #typeFilter,
 #genreFilter {
@@ -1515,9 +1561,14 @@ code {
     grid-column: 1 / -1;
   }
 
-  #logoutBtn {
+  .user-chip {
     grid-column: 1 / -1;
-    justify-self: start;
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .user-chip .ghost.compact {
+    margin-left: auto;
   }
 
   .imports {

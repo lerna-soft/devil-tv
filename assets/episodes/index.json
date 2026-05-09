@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T22:55:10.715Z",
+  "generatedAt": "2026-05-09T22:58:52.515Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -180,6 +180,13 @@
       "file": "tt17069148.txt",
       "seasonCount": 1,
       "episodeCount": 22
+    },
+    "tt3443306": {
+      "title": "Seikon no Qwaser",
+      "tvmazeId": 9295,
+      "file": "tt3443306.txt",
+      "seasonCount": 2,
+      "episodeCount": 36
     },
     "tt0972713": {
       "title": "Shakugan no Shana",

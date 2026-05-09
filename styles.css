@@ -34,17 +34,11 @@ body.player-active {
 
 @media (max-width: 980px) {
   .auth-shell {
-    grid-template-columns: 1fr;
-    gap: 0.9rem;
-    width: min(100%, 32rem);
+    width: min(100%, 28rem);
   }
 
   .auth-hero {
-    min-height: 320px;
-  }
-
-  .auth-card {
-    padding: 1rem;
+    min-height: 0;
   }
 
   .auth-card h2 {
@@ -434,10 +428,7 @@ h1 {
 }
 
 .auth-shell {
-  width: min(980px, 100%);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  width: min(28rem, 100%);
 }
 
 .auth-hero {
@@ -462,8 +453,8 @@ h1 {
   padding: 1.2rem 1.15rem 1.1rem;
 }
 
-.auth-card.is-active {
-  border-color: rgba(229, 9, 20, 0.45);
+.auth-card[hidden] {
+  display: none !important;
 }
 
 .auth-card h2 {

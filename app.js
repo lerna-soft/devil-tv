@@ -199,8 +199,14 @@ bindAuth();
 
 function syncAuthModeUi() {
   const isRegister = authMode === 'register';
-  if (elements.loginCard) elements.loginCard.classList.toggle('is-active', !isRegister);
-  if (elements.registerCard) elements.registerCard.classList.toggle('is-active', isRegister);
+  if (elements.loginCard) {
+    elements.loginCard.hidden = isRegister;
+    elements.loginCard.setAttribute('aria-hidden', isRegister ? 'true' : 'false');
+  }
+  if (elements.registerCard) {
+    elements.registerCard.hidden = !isRegister;
+    elements.registerCard.setAttribute('aria-hidden', isRegister ? 'false' : 'true');
+  }
   if (elements.authErrorLogin) elements.authErrorLogin.textContent = '';
   if (elements.authErrorRegister) elements.authErrorRegister.textContent = '';
 }

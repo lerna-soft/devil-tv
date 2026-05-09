@@ -170,6 +170,13 @@ label {
   backdrop-filter: blur(18px);
 }
 
+.topbar-right {
+  align-items: center;
+  display: flex;
+  gap: 0.9rem;
+  justify-content: flex-end;
+}
+
 .brand-mark {
   align-items: center;
   display: flex;
@@ -1459,10 +1466,8 @@ code {
     padding: 0.7rem 0.7rem 1.2rem;
   }
 
-  .topbar,
-  .hero,
-  .toolbar {
-    grid-template-columns: 1fr;
+  .topbar {
+    grid-template-columns: auto 1fr;
   }
 
   .topbar {
@@ -1473,6 +1478,14 @@ code {
     position: sticky;
     top: 0;
     z-index: 50;
+  }
+
+  .topbar-right {
+    justify-self: end;
+  }
+
+  .user-chip {
+    display: none;
   }
 
   .service-state,

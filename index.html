@@ -72,11 +72,21 @@
           <img class="brand-logo" src="./assets/logo-devil-transparent.png" alt="Devil TV" />
           <span class="brand-word">TV</span>
         </div>
-        <nav class="content-tabs" aria-label="Content type">
-          <button class="tab active" data-type-tab="all">Home</button>
-          <button class="tab" data-type-tab="movie">Movies</button>
-          <button class="tab" data-type-tab="series">Series</button>
-        </nav>
+        <div class="topbar-right">
+          <nav class="content-tabs" aria-label="Content type">
+            <button class="tab active" data-type-tab="all">Home</button>
+            <button class="tab" data-type-tab="movie">Movies</button>
+            <button class="tab" data-type-tab="series">Series</button>
+          </nav>
+          <div class="user-chip" id="userChip" hidden aria-hidden="true">
+            <span class="user-avatar" id="userAvatar" aria-hidden="true"></span>
+            <div class="user-meta">
+              <span id="userName"></span>
+              <span id="userEmail"></span>
+            </div>
+            <button id="logoutBtn" class="ghost compact" type="button" title="Cerrar sesión">Salir</button>
+          </div>
+        </div>
       </header>
 
       <section class="toolbar">
@@ -90,14 +100,6 @@
           <select id="genreFilter" aria-label="Genre filter">
             <option value="all">Todos los generos</option>
           </select>
-          <div class="user-chip" id="userChip" hidden aria-hidden="true">
-            <span class="user-avatar" id="userAvatar" aria-hidden="true"></span>
-            <div class="user-meta">
-              <span id="userName"></span>
-              <span id="userEmail"></span>
-            </div>
-            <button id="logoutBtn" class="ghost compact" type="button" title="Cerrar sesión">Salir</button>
-          </div>
         </div>
       </section>
 

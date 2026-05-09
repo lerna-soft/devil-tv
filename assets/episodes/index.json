@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T12:08:11.148Z",
+  "generatedAt": "2026-05-09T12:33:53.038Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
   },
   "series": {
+    "tt2364582": {
+      "title": "Marvel's Agents of S.H.I.E.L.D.",
+      "tvmazeId": 31,
+      "file": "tt2364582.txt",
+      "seasonCount": 7,
+      "episodeCount": 136
+    },
     "tt8050740": {
       "title": "Amphibia",
       "tvmazeId": 35072,

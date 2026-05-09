@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T22:43:27.926Z",
+  "generatedAt": "2026-05-09T22:48:05.430Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -40,6 +40,13 @@
       "file": "tt8050756.txt",
       "seasonCount": 3,
       "episodeCount": 43
+    },
+    "tt0208614": {
+      "title": "Celebrity Deathmatch",
+      "tvmazeId": 8362,
+      "file": "tt0208614.txt",
+      "seasonCount": 6,
+      "episodeCount": 94
     },
     "tt0270118": {
       "title": "Cheaters",

@@ -44,6 +44,7 @@ const elements = {
   genreFilter: document.querySelector('#genreFilter'),
   sortFilter: document.querySelector('#sortFilter'),
   logoutBtn: document.querySelector('#logoutBtn'),
+  appShell: document.querySelector('#appShell'),
   userChip: document.querySelector('#userChip'),
   userAvatar: document.querySelector('#userAvatar'),
   userName: document.querySelector('#userName'),
@@ -443,6 +444,7 @@ async function hydrateSelectedFromTmdb() {
 function updateAuthUi() {
   const authenticated = isAuthenticated();
   const session = loadAuthSession();
+  if (elements.appShell) elements.appShell.hidden = !authenticated;
   if (elements.userChip) {
     elements.userChip.hidden = !authenticated;
     elements.userChip.setAttribute('aria-hidden', authenticated ? 'false' : 'true');
@@ -461,6 +463,7 @@ function updateAuthUi() {
     if (elements.userName) elements.userName.textContent = '';
     if (elements.userEmail) elements.userEmail.textContent = '';
     if (elements.userAvatar) elements.userAvatar.textContent = '';
+    if (elements.appShell) elements.appShell.hidden = true;
   }
 }
 

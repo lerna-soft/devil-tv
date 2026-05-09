@@ -175,6 +175,7 @@ label {
   display: flex;
   gap: 0.9rem;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .brand-mark {
@@ -1468,6 +1469,10 @@ code {
 
   .topbar {
     grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "brand actions"
+      "tabs tabs";
+    row-gap: 0.7rem;
   }
 
   .topbar {
@@ -1480,12 +1485,22 @@ code {
     z-index: 50;
   }
 
+  .brand-mark {
+    grid-area: brand;
+  }
+
   .topbar-right {
-    justify-self: end;
+    grid-area: tabs;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.55rem;
+    width: 100%;
   }
 
   .user-chip {
-    display: none;
+    display: inline-flex;
+    justify-self: stretch;
+    width: 100%;
   }
 
   .service-state,
@@ -1507,6 +1522,23 @@ code {
     min-height: 2.2rem;
     padding: 0.48rem 0.55rem;
     text-align: center;
+  }
+
+  .user-chip {
+    padding: 0.3rem 0.35rem 0.3rem 0.32rem;
+  }
+
+  .user-avatar {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+
+  .user-meta #userName {
+    font-size: 0.8rem;
+  }
+
+  .user-meta #userEmail {
+    font-size: 0.68rem;
   }
 
   .hero {

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T04:37:02.852Z",
+  "generatedAt": "2026-05-10T04:50:26.943Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -194,6 +194,13 @@
       "file": "tt1695360.txt",
       "seasonCount": 4,
       "episodeCount": 52
+    },
+    "tt26743760": {
+      "title": "The Apothecary Diaries",
+      "tvmazeId": 67017,
+      "file": "tt26743760.txt",
+      "seasonCount": 2,
+      "episodeCount": 48
     },
     "tt0434706": {
       "title": "Monster",

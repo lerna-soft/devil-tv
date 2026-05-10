@@ -13,8 +13,8 @@ permissions:
   actions: write
 
 concurrency:
-  group: watch-progress-issue-${{ github.event.issue.number }}
-  cancel-in-progress: true
+  group: watch-progress-sync-queue
+  cancel-in-progress: false
 
 jobs:
   resolve:

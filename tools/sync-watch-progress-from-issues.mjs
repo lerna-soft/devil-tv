@@ -65,7 +65,8 @@ function normalizeIndexEntry(entry) {
 }
 
 async function loadUsersFromIssues(existingIndex) {
-  const issues = await fetchAllIssues();
+  const eventIssue = await loadEventIssue();
+  const issues = eventIssue ? [eventIssue] : await fetchAllIssues();
   const users = [];
   const processedIssues = [];
   for (const issue of issues) {
@@ -89,7 +90,20 @@ async function loadUsersFromIssues(existingIndex) {
     if (existing) user.file = existing.file || user.file;
   }
 
-  return { users: dedupeUsers(users), processedIssues };
+  return { users: dedupeUsers(users), processedIssues: dedupeIssues(processedIssues) };
+}
+
+async function loadEventIssue() {
+  const eventPath = String(process.env.GITHUB_EVENT_PATH || '').trim();
+  if (!eventPath) return null;
+  const raw = await fs.readFile(eventPath, 'utf8').catch(() => '');
+  if (!raw.trim()) return null;
+  const event = JSON.parse(raw);
+  const issue = event?.issue;
+  if (!issue || issue.pull_request) return null;
+  const labels = Array.isArray(issue.labels) ? issue.labels.map((label) => String(label?.name || '').trim()) : [];
+  if (!labels.includes(LABEL)) return null;
+  return issue;
 }
 
 function parseIssue(issue) {
@@ -159,6 +173,15 @@ function dedupeUsers(users) {
   return [...map.values()];
 }
 
+function dedupeIssues(issues) {
+  const map = new Map();
+  for (const issue of issues || []) {
+    if (!issue?.number) continue;
+    map.set(issue.number, issue);
+  }
+  return [...map.values()];
+}
+
 function mergeIndex(existing, incoming) {
   const map = new Map(existing.map((entry) => [entry.email, entry]));
   for (const user of incoming) map.set(user.email, { email: user.email, file: user.file || `${user.email}.json` });
@@ -213,6 +236,10 @@ async function closeProcessedIssues(processedIssues) {
     });
     if (!response.ok) {
       const text = await response.text().catch(() => '');
+      if ([404, 410, 422].includes(response.status)) {
+        console.warn(`[watch-progress] skip close issue #${issue.number}: ${response.status}`);
+        continue;
+      }
       throw new Error(`Failed to close issue #${issue.number} (${response.status} ${response.statusText})\n${text}`.trim());
     }
     console.log(`[watch-progress] closed issue #${issue.number}`);

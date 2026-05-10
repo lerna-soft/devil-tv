@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T02:48:41.727Z",
+  "generatedAt": "2026-05-10T02:50:33.541Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -96,6 +96,13 @@
       "file": "tt1830617.txt",
       "seasonCount": 6,
       "episodeCount": 123
+    },
+    "tt29630627": {
+      "title": "Gundam Evolve",
+      "tvmazeId": 52777,
+      "file": "tt29630627.txt",
+      "seasonCount": 1,
+      "episodeCount": 15
     },
     "tt3398540": {
       "title": "Haikyuu!!",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T02:52:41.057Z",
+  "generatedAt": "2026-05-10T02:54:00.680Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -61,6 +61,13 @@
       "file": "tt0270118.txt",
       "seasonCount": 11,
       "episodeCount": 150
+    },
+    "tt7263328": {
+      "title": "Classroom of the Elite",
+      "tvmazeId": 29180,
+      "file": "tt7263328.txt",
+      "seasonCount": 4,
+      "episodeCount": 48
     },
     "tt0366005": {
       "title": "Danny Phantom",

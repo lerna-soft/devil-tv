@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T02:54:00.680Z",
+  "generatedAt": "2026-05-10T02:56:22.482Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -292,6 +292,13 @@
       "file": "tt0141842.txt",
       "seasonCount": 6,
       "episodeCount": 86
+    },
+    "tt0815736": {
+      "title": "Hasta que la plata nos separe",
+      "tvmazeId": 79687,
+      "file": "tt0815736.txt",
+      "seasonCount": 1,
+      "episodeCount": 163
     },
     "tt0233127": {
       "title": "Yo soy Betty, la fea",

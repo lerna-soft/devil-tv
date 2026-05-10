@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T03:00:24.094Z",
+  "generatedAt": "2026-05-10T03:23:49.023Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -33,6 +33,13 @@
       "file": "tt6258718.txt",
       "seasonCount": 2,
       "episodeCount": 12
+    },
+    "tt0059968": {
+      "title": "Batman",
+      "tvmazeId": 975,
+      "file": "tt0059968.txt",
+      "seasonCount": 3,
+      "episodeCount": 120
     },
     "tt11043632": {
       "title": "Beastars",

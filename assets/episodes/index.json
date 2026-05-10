@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T02:31:13.413Z",
+  "generatedAt": "2026-05-10T02:48:41.727Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -33,6 +33,13 @@
       "file": "tt6258718.txt",
       "seasonCount": 2,
       "episodeCount": 12
+    },
+    "tt11043632": {
+      "title": "Beastars",
+      "tvmazeId": 43426,
+      "file": "tt11043632.txt",
+      "seasonCount": 3,
+      "episodeCount": 48
     },
     "tt8050756": {
       "title": "The Owl House",

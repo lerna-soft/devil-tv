@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-09T23:02:37.362Z",
+  "generatedAt": "2026-05-10T02:31:13.413Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -159,6 +159,13 @@
       "file": "tt1695360.txt",
       "seasonCount": 4,
       "episodeCount": 52
+    },
+    "tt0434706": {
+      "title": "Monster",
+      "tvmazeId": 8244,
+      "file": "tt0434706.txt",
+      "seasonCount": 1,
+      "episodeCount": 74
     },
     "tt15765670": {
       "title": "My Dress-Up Darling",

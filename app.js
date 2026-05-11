@@ -1866,16 +1866,17 @@ function buildWatchInsights() {
     if (!key) return;
     const p = Number(payload?.progress || 0);
     const isCompleted = Boolean(payload?.isCompleted);
+    const forceContinue = Boolean(payload?.forceContinue);
     const updatedAt = Number(payload?.updatedAt || 0);
     if (updatedAt > (recentAt[key] || 0)) recentAt[key] = updatedAt;
     if (isCompleted) completedIds.add(key);
-    else if (p > 0) continueIds.add(key);
+    else if (forceContinue || p > 0) continueIds.add(key);
     const linked = aliasesById[key];
     if (linked) {
       for (const alt of linked) {
         if (updatedAt > (recentAt[alt] || 0)) recentAt[alt] = updatedAt;
         if (isCompleted) completedIds.add(alt);
-        else if (p > 0) continueIds.add(alt);
+        else if (forceContinue || p > 0) continueIds.add(alt);
       }
     }
   };
@@ -1927,6 +1928,7 @@ function buildWatchInsights() {
     const p = Number(entry.lastProgress ?? entry.progress ?? 0);
     const lastEvent = historyById[id];
     const status = String(lastEvent?.playerStatus || '').trim().toLowerCase();
+    const forceContinue = status === 'playing' || status === 'paused' || status === 'seeked';
     const isPercentScale = p >= 0 && p <= 100;
     const isCompleted = status === 'completed' || (isPercentScale && p >= 95);
     const updatedAt = Date.parse(entry.updatedAt || 0) || 0;
@@ -1934,9 +1936,9 @@ function buildWatchInsights() {
     const imdb = String(entry?.imdbId || '').trim();
     const tmdb = String(entry?.tmdbId || '').trim();
     registerAlias(imdb, tmdb);
-    markProgress(id, { progress: p, isCompleted, updatedAt });
-    if (imdb && imdb !== id) markProgress(imdb, { progress: p, isCompleted, updatedAt });
-    if (tmdb && tmdb !== id) markProgress(tmdb, { progress: p, isCompleted, updatedAt });
+    markProgress(id, { progress: p, isCompleted, forceContinue, updatedAt });
+    if (imdb && imdb !== id) markProgress(imdb, { progress: p, isCompleted, forceContinue, updatedAt });
+    if (tmdb && tmdb !== id) markProgress(tmdb, { progress: p, isCompleted, forceContinue, updatedAt });
   }
 
   // Authoritative correction by latest history event:

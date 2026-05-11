@@ -339,7 +339,8 @@ function mergeRemoteWatchProgress(remote) {
     updatedAt: maxIsoString(existing.updatedAt, remote.updatedAt),
     progress: mergeProgressMaps(existing.progress || {}, remoteProgress),
     lastWatch: pickNewestByUpdatedAt(existing.lastWatch, remote.lastWatch),
-    lastSelection: pickNewestByUpdatedAt(existing.lastSelection, remote.lastSelection)
+    lastSelection: pickNewestByUpdatedAt(existing.lastSelection, remote.lastSelection),
+    history: mergeWatchHistory(existing.history || [], remote.history || [])
   };
   saveLocalWatchProgress(email, merged);
 }
@@ -374,6 +375,35 @@ function loadSyncedWatchProgress(email) {
   } catch {
     return null;
   }
+}
+
+function mergeWatchHistory(existing, incoming) {
+  const rows = [...(Array.isArray(existing) ? existing : []), ...(Array.isArray(incoming) ? incoming : [])]
+    .filter((entry) => entry && typeof entry === 'object');
+  const map = new Map();
+  for (const row of rows) {
+    const id = String(row.imdbId || row.tmdbId || '').trim();
+    const season = positiveInteger(row.season, 1);
+    const episode = positiveInteger(row.episode, 1);
+    const status = String(row.playerStatus || '').trim().toLowerCase();
+    const at = String(row.updatedAt || row.watchedAt || '').trim();
+    const key = `${id}:${season}x${episode}:${status}:${at}`;
+    if (!id || !at) continue;
+    map.set(key, {
+      imdbId: String(row.imdbId || '').trim(),
+      tmdbId: String(row.tmdbId || '').trim(),
+      title: String(row.title || '').trim(),
+      type: String(row.type || '').trim(),
+      season,
+      episode,
+      progress: Number(row.progress || 0),
+      playerStatus: status || 'playing',
+      updatedAt: at
+    });
+  }
+  return [...map.values()]
+    .sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0))
+    .slice(0, 500);
 }
 
 function persistSyncedWatchSnapshot(kind, snapshot) {
@@ -415,6 +445,18 @@ function persistSyncedWatchSnapshot(kind, snapshot) {
         updatedAt
       };
     }
+    const event = {
+      imdbId: String(snapshot?.imdbId || '').trim(),
+      tmdbId: String(snapshot?.tmdbId || '').trim(),
+      title: String(state.selected?.title || '').trim(),
+      type: String(state.selected?.type || '').trim(),
+      season: positiveInteger(snapshot?.season, 1),
+      episode: positiveInteger(snapshot?.episode, 1),
+      progress: Number(snapshot?.progress || 0),
+      playerStatus: String(snapshot?.player_status || 'playing').trim().toLowerCase(),
+      updatedAt
+    };
+    merged.history = mergeWatchHistory(current.history || [], [event]);
   }
   if (kind === 'lastSelection') {
     merged.lastSelection = {
@@ -1240,6 +1282,7 @@ function renderCatalog() {
 function renderHomeCatalog(baseFiltered) {
   const watch = buildWatchInsights();
   const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const rewatchItems = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
 
@@ -1279,6 +1322,7 @@ function renderHomeCatalog(baseFiltered) {
     sections.push(section(`platform_${group.key}_movies`, `${group.label} Movies`, `Peliculas disponibles en ${group.label}`, movies));
     sections.push(section(`platform_${group.key}_series`, `${group.label} Series`, `Series disponibles en ${group.label}`, series));
   }
+  sections.push(section('rewatch', 'Volver a ver', 'Titulos que ya completaste', rewatchItems));
   elements.items.innerHTML = sections.join('');
   bindLocalCardEvents();
   bindHomeSectionEvents();
@@ -1292,6 +1336,9 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  } else if (sectionKey === 'rewatch') {
+    title = 'Volver a ver';
+    items = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   } else if (sectionKey === 'movies_recommended') {
     title = 'Peliculas que podrian gustarte';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
@@ -1737,6 +1784,7 @@ function buildWatchInsights() {
   const genreWeights = {};
   const actorWeights = {};
   const continueIds = new Set();
+  const completedIds = new Set();
   const catalog = loadLocalCatalog();
   const byId = {};
   for (const title of catalog) {
@@ -1751,15 +1799,21 @@ function buildWatchInsights() {
     const data = safeJson(localStorage.getItem(key));
     const watched = data?.watched || {};
     let score = 0;
+    let totalEntries = 0;
+    let completedEntries = 0;
     for (const record of Object.values(watched)) {
-      if (record === true) { score += 1; continue; }
+      if (record === true) { score += 1; totalEntries += 1; completedEntries += 1; continue; }
       if (!record || typeof record !== 'object') continue;
+      totalEntries += 1;
+      if (record.completedAt) completedEntries += 1;
       score += record.completedAt ? 1.5 : 0.5;
       score += Number(record.lastProgress || 0) / 120;
     }
     if (score <= 0) continue;
     scores[id] = (scores[id] || 0) + score;
-    continueIds.add(id);
+    const completedLocal = totalEntries > 0 && completedEntries === totalEntries;
+    if (completedLocal) completedIds.add(id);
+    else continueIds.add(id);
     const title = byId[id];
     const genres = title?.metadata?.genres || [];
     const cast = title?.metadata?.cast || [];
@@ -1774,7 +1828,10 @@ function buildWatchInsights() {
     if (!entry || typeof entry !== 'object') continue;
     const p = Number(entry.lastProgress ?? entry.progress ?? 0);
     const isCompleted = p >= 95;
-    if (isCompleted) continue;
+    if (isCompleted) {
+      completedIds.add(id);
+      continue;
+    }
     if (p <= 0) continue;
     scores[id] = Math.max(scores[id] || 0, 0.75 + (p / 120));
     continueIds.add(id);
@@ -1789,10 +1846,11 @@ function buildWatchInsights() {
       const syncedProgress = Number(syncedEntry?.lastProgress ?? syncedEntry?.progress ?? 0);
       const completed = syncedProgress >= 95;
       if (!completed) continueIds.add(key);
+      if (completed) completedIds.add(key);
       scores[key] = (scores[key] || 0) + (completed ? 0 : 2);
     }
   }
-  return { scores, genreWeights, actorWeights, continueIds };
+  return { scores, genreWeights, actorWeights, continueIds, completedIds };
 }
 
 function recommendationScore(title, watch) {

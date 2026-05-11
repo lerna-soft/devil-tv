@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T21:00:45Z",
+  "updatedAt": "2026-05-11T21:06:14Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -42,18 +42,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T21:00:45Z",
       "watched": {}
+    },
+    "tt34610311": {
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:06:14Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt0455944",
-    "tmdbId": "156022",
+    "imdbId": "tt34610311",
+    "tmdbId": "1419406",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T21:00:45Z"
+    "updatedAt": "2026-05-11T21:06:14Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "title": "Escuadrón letal",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:06:14Z"
+    },
     {
       "imdbId": "tt0455944",
       "tmdbId": "156022",

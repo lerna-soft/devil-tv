@@ -49,13 +49,13 @@ const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
 const HOME_STREAMING_GROUPS = [
-  { key: 'netflix', label: 'Netflix' },
-  { key: 'primevideo', label: 'Prime Video' },
-  { key: 'disneyplus', label: 'Disney+' },
-  { key: 'max', label: 'Max' },
-  { key: 'hulu', label: 'Hulu' },
-  { key: 'appletvplus', label: 'Apple TV+' },
-  { key: 'paramountplus', label: 'Paramount+' }
+  { key: 'netflix', label: 'Netflix', aliases: ['netflix'] },
+  { key: 'primevideo', label: 'Prime Video', aliases: ['primevideo', 'amazonprimevideo', 'primevideoamazonchannel'] },
+  { key: 'disneyplus', label: 'Disney+', aliases: ['disneyplus', 'disneynow'] },
+  { key: 'max', label: 'Max', aliases: ['max', 'hbomax', 'hbo'] },
+  { key: 'hulu', label: 'Hulu', aliases: ['hulu'] },
+  { key: 'appletvplus', label: 'Apple TV+', aliases: ['appletvplus', 'appletv', 'appletvstore', 'appletvamazonchannel'] },
+  { key: 'paramountplus', label: 'Paramount+', aliases: ['paramountplus', 'paramountplusappletvchannel'] }
 ];
 
 const elements = {
@@ -773,11 +773,16 @@ function normalizePlatformKey(name) {
     .replace(/[^a-z0-9]/g, '');
 }
 
-function titleHasProvider(title, providerKey) {
+function titleHasProvider(title, providerKeyOrAliases) {
   const providers = Array.isArray(title?.metadata?.watchProviders?.flatrate)
     ? title.metadata.watchProviders.flatrate
     : [];
-  return providers.some((name) => normalizePlatformKey(name).includes(providerKey));
+  const aliases = Array.isArray(providerKeyOrAliases) ? providerKeyOrAliases : [providerKeyOrAliases];
+  const normalizedAliases = aliases.map((alias) => normalizePlatformKey(alias)).filter(Boolean);
+  return providers.some((name) => {
+    const normalized = normalizePlatformKey(name);
+    return normalizedAliases.some((alias) => normalized.includes(alias));
+  });
 }
 
 function loadEvaluations() {
@@ -1234,7 +1239,7 @@ function renderCatalog() {
 
 function renderHomeCatalog(baseFiltered) {
   const watch = buildWatchInsights();
-  const continueItems = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
 
@@ -1268,8 +1273,9 @@ function renderHomeCatalog(baseFiltered) {
     section('series_recommended', 'Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
   ];
   for (const group of HOME_STREAMING_GROUPS) {
-    const movies = sortTitles(baseFiltered.filter((t) => t.type === 'movie' && titleHasProvider(t, group.key)));
-    const series = sortTitles(baseFiltered.filter((t) => t.type === 'series' && titleHasProvider(t, group.key)));
+    const movies = sortTitles(baseFiltered.filter((t) => t.type === 'movie' && titleHasProvider(t, group.aliases || [group.key])));
+    const series = sortTitles(baseFiltered.filter((t) => t.type === 'series' && titleHasProvider(t, group.aliases || [group.key])));
+    if (movies.length === 0 && series.length === 0) continue;
     sections.push(section(`platform_${group.key}_movies`, `${group.label} Movies`, `Peliculas disponibles en ${group.label}`, movies));
     sections.push(section(`platform_${group.key}_series`, `${group.label} Series`, `Series disponibles en ${group.label}`, series));
   }
@@ -1285,7 +1291,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   let items = [];
   if (sectionKey === 'continue') {
     title = 'Continuar viendo';
-    items = sortTitles(baseFiltered.filter((t) => watch.scores[getTitleId(t)] > 0)).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+    items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   } else if (sectionKey === 'movies_recommended') {
     title = 'Peliculas que podrian gustarte';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
@@ -1300,7 +1306,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
       const group = HOME_STREAMING_GROUPS.find((entry) => entry.key === providerKey);
       const providerLabel = group?.label || providerKey;
       title = `${providerLabel} ${kind === 'movie' ? 'Movies' : 'Series'}`;
-      items = sortTitles(baseFiltered.filter((t) => t.type === kind && titleHasProvider(t, providerKey)));
+      items = sortTitles(baseFiltered.filter((t) => t.type === kind && titleHasProvider(t, group?.aliases || [providerKey])));
     }
   }
   setCatalogCount(`${items.length} items`);
@@ -1730,6 +1736,7 @@ function buildWatchInsights() {
   const scores = {};
   const genreWeights = {};
   const actorWeights = {};
+  const continueIds = new Set();
   const catalog = loadLocalCatalog();
   const byId = {};
   for (const title of catalog) {
@@ -1752,6 +1759,7 @@ function buildWatchInsights() {
     }
     if (score <= 0) continue;
     scores[id] = (scores[id] || 0) + score;
+    continueIds.add(id);
     const title = byId[id];
     const genres = title?.metadata?.genres || [];
     const cast = title?.metadata?.cast || [];
@@ -1759,12 +1767,32 @@ function buildWatchInsights() {
     for (const c of cast.slice(0, 8)) actorWeights[c] = (actorWeights[c] || 0) + score;
   }
 
+  const authUser = getAuthUser();
+  const synced = authUser?.email ? loadSyncedWatchProgress(authUser.email) : null;
+  const remoteProgress = synced?.progress && typeof synced.progress === 'object' ? synced.progress : {};
+  for (const [id, entry] of Object.entries(remoteProgress)) {
+    if (!entry || typeof entry !== 'object') continue;
+    const p = Number(entry.lastProgress ?? entry.progress ?? 0);
+    const isCompleted = p >= 95;
+    if (isCompleted) continue;
+    if (p <= 0) continue;
+    scores[id] = Math.max(scores[id] || 0, 0.75 + (p / 120));
+    continueIds.add(id);
+  }
+
   const lastWatch = safeJson(localStorage.getItem('mep_last_watch'));
   if (lastWatch) {
     const id = lastWatch.imdbId || lastWatch.tmdbId;
-    if (id) scores[id] = (scores[id] || 0) + 2;
+    const key = String(id || '').trim();
+    if (key) {
+      const syncedEntry = remoteProgress[key];
+      const syncedProgress = Number(syncedEntry?.lastProgress ?? syncedEntry?.progress ?? 0);
+      const completed = syncedProgress >= 95;
+      if (!completed) continueIds.add(key);
+      scores[key] = (scores[key] || 0) + (completed ? 0 : 2);
+    }
   }
-  return { scores, genreWeights, actorWeights };
+  return { scores, genreWeights, actorWeights, continueIds };
 }
 
 function recommendationScore(title, watch) {

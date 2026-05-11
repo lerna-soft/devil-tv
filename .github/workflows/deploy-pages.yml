@@ -55,15 +55,6 @@ jobs:
           node tools/sync-episode-targets-from-issues.mjs
           node tools/build-episode-assets.mjs
 
-      - name: Sync watch progress from open issues
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: |
-          set -euxo pipefail
-          node tools/sync-watch-progress-from-issues.mjs
-
       - name: Sync catalog seed from open issues
         shell: bash
         env:
@@ -91,16 +82,6 @@ jobs:
         run: |
           set -euxo pipefail
           node tools/close-episode-sync-issues.mjs
-
-      - name: Close synced watch progress issues
-        if: success()
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: |
-          set -euxo pipefail
-          node tools/close-watch-progress-issues.mjs
 
       - name: Close synced catalog seed issues
         if: success()

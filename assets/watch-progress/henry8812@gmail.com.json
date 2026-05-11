@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T20:54:22Z",
+  "updatedAt": "2026-05-11T21:00:45Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -32,18 +32,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T20:54:22Z",
       "watched": {}
+    },
+    "tt0455944": {
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:00:45Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt0441773",
-    "tmdbId": "9502",
+    "imdbId": "tt0455944",
+    "tmdbId": "156022",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T20:54:22Z"
+    "updatedAt": "2026-05-11T21:00:45Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "title": "The equalizer (El protector)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:00:45Z"
+    },
     {
       "imdbId": "tt0441773",
       "tmdbId": "9502",

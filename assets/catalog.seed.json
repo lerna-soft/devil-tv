@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "generatedAt": "2026-05-11T23:44:20.117Z",
+  "version": 13,
+  "generatedAt": "2026-05-11T23:45:05.457Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -24913,6 +24913,22 @@
       "releaseDate": null,
       "overview": "Kenneth Branagh, Skyler Gisondo",
       "posterUrl": "Description: Kenneth Branagh, Skyler Gisondo",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0276239",
+      "title": "El jinete solitario",
+      "year": 1958,
+      "releaseDate": null,
+      "overview": "Demetrio González, Irma Dorantes",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzA1ZGZjMmUtZmJkMi00ZGQ4LWJlNjUtZDJkZTZjZTIzOGZjXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

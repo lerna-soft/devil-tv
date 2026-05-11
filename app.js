@@ -1616,6 +1616,7 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
     if (intentId !== state.searchIntentId) return;
     const withPlayable = results.map((item) => ({ ...item, playable: true }));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
+    for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
     cacheSearchResults(state.remoteResults);
     if (intentId !== state.searchIntentId) return;
     renderRemoteResults(query);

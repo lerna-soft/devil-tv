@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "generatedAt": "2026-05-11T16:17:38.364Z",
+  "version": 3,
+  "generatedAt": "2026-05-11T16:37:08.565Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -22427,6 +22427,22 @@
         "Drama",
         "Suspense"
       ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0103621",
+      "title": "Adventures in Dinosaur City",
+      "year": 1991,
+      "releaseDate": null,
+      "overview": "Marc Martorana, Tony Doyle",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTA2OTM1MDcxMDVeQTJeQWpwZ15BbWU3MDE2ODA4MjE@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
       "watchProviders": {
         "region": "CO",
         "flatrate": []

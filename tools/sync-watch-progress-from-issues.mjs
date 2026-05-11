@@ -27,6 +27,7 @@ const OWNER_REPO = String(process.env.GITHUB_REPOSITORY || '').trim();
 const TOKEN = String(process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '').trim();
 const LABEL = 'watch-progress-sync';
 const REPORT_PATH = path.join(process.env.RUNNER_TEMP || os.tmpdir(), 'mep-watch-progress-report.json');
+const MAX_ISSUES = Math.max(0, Number(process.env.WATCH_PROGRESS_MAX_ISSUES || '0'));
 
 async function main() {
   if (!OWNER_REPO) {
@@ -66,7 +67,13 @@ function normalizeIndexEntry(entry) {
 
 async function loadUsersFromIssues(existingIndex) {
   const eventIssue = await loadEventIssue();
-  const issues = eventIssue ? [eventIssue] : await fetchAllIssues();
+  let issues = eventIssue ? [eventIssue] : await fetchAllIssues();
+  issues = [...issues].sort((a, b) => {
+    const at = Date.parse(a?.created_at || a?.updated_at || 0) || 0;
+    const bt = Date.parse(b?.created_at || b?.updated_at || 0) || 0;
+    return at - bt;
+  });
+  if (MAX_ISSUES > 0) issues = issues.slice(0, MAX_ISSUES);
   const users = [];
   const processedIssues = [];
   for (const issue of issues) {

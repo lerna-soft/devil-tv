@@ -1,24 +1,20 @@
-name: Resolve watch progress issue
+name: Drain watch progress queue
 
 on:
-  issues:
-    types:
-      - opened
-      - edited
-      - reopened
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
   issues: write
-  actions: write
 
 concurrency:
-  group: watch-progress-sync-queue
+  group: watch-progress-sync-drain
   cancel-in-progress: false
 
 jobs:
-  resolve:
-    if: contains(github.event.issue.labels.*.name, 'watch-progress-sync')
+  drain:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -32,12 +28,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync watch progress from open issues
+      - name: Drain watch progress open issues (FIFO)
         shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          WATCH_PROGRESS_MAX_ISSUES: "1"
+          WATCH_PROGRESS_MAX_ISSUES: "50"
         run: |
           set -euxo pipefail
           node tools/sync-watch-progress-from-issues.mjs
@@ -46,16 +42,12 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
-          if git diff --cached --quiet && git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git add assets/watch-progress
+          git add assets/watch-progress || true
           if git diff --cached --quiet; then
             echo "No staged changes."
             exit 0
           fi
-          git commit -m "sync watch progress from issue #${{ github.event.issue.number }}"
+          git commit -m "drain watch-progress queue"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
               exit 0

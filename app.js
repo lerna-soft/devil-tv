@@ -1162,8 +1162,11 @@ async function queueWatchProgressSync(snapshot) {
   if (!['started', 'completed'].includes(eventType)) return;
   const key = getWatchProgressIssueKey(snapshot);
   const dedupe = `${WATCH_PROGRESS_LAST_SYNC_PREFIX}${user.email}:${key}:${eventType}`;
-  if (localStorage.getItem(dedupe) === '1') return;
-  localStorage.setItem(dedupe, '1');
+  const lastAt = Number(localStorage.getItem(dedupe) || '0');
+  const now = Date.now();
+  const windowMs = eventType === 'started' ? (30 * 60 * 1000) : (5 * 60 * 1000);
+  if (lastAt && (now - lastAt) < windowMs) return;
+  localStorage.setItem(dedupe, String(now));
 
   try {
     await openGitHubIssue(
@@ -2943,7 +2946,14 @@ window.addEventListener('message', (event) => {
 });
 
 function persistProgressFromPlayerEvent(data) {
-  if (!data || !['playing', 'paused', 'seeked', 'completed'].includes(data.player_status)) return;
+  if (!data) return;
+  const rawStatus = String(data.player_status || '').trim().toLowerCase();
+  const status = rawStatus === 'play' || rawStatus === 'start' || rawStatus === 'started' || rawStatus === 'resume'
+    ? 'playing'
+    : rawStatus === 'end' || rawStatus === 'ended' || rawStatus === 'complete'
+      ? 'completed'
+      : rawStatus;
+  if (!['playing', 'paused', 'seeked', 'completed'].includes(status)) return;
   const info = data.player_info || {};
   const id = info.imdb || info.tmdb || state.selected?.imdbId || state.selected?.tmdbId;
   if (!id) return;
@@ -2966,9 +2976,13 @@ function persistProgressFromPlayerEvent(data) {
   record.lastProgress = snapshot.progress;
   if (!record.startedAt) record.startedAt = now;
   // Completion is authoritative only when the player emits "completed".
-  if (data.player_status === 'completed') record.completedAt = record.completedAt || now;
+  if (status === 'completed') record.completedAt = record.completedAt || now;
   const justStarted = !hadStarted && Boolean(record.startedAt);
   const justCompleted = !hadCompleted && Boolean(record.completedAt);
+  const titleKey = `${snapshot.imdbId || snapshot.tmdbId}:${snapshot.season}x${snapshot.episode}`;
+  const startedEmitKey = `${WATCH_PROGRESS_LAST_SYNC_PREFIX}started_emit:${titleKey}`;
+  const lastStartedEmitAt = Number(localStorage.getItem(startedEmitKey) || '0');
+  const shouldEmitStarted = status === 'playing' && (justStarted || (Date.now() - lastStartedEmitAt) > (30 * 60 * 1000));
 
   watched[epKey] = record.completedAt ? { ...record } : record;
   const nextProgress = { ...existing, lastSeason: snapshot.season, lastEpisode: snapshot.episode, watched };
@@ -2979,10 +2993,11 @@ function persistProgressFromPlayerEvent(data) {
     season: snapshot.season,
     episode: snapshot.episode,
     progress: snapshot.progress,
-    player_status: data.player_status,
+    player_status: status,
     updatedAt: new Date().toISOString()
   });
-  if (justStarted || justCompleted) {
+  if (shouldEmitStarted || justCompleted) {
+    if (shouldEmitStarted) localStorage.setItem(startedEmitKey, String(Date.now()));
     void queueWatchProgressSync({
       imdbId: snapshot.imdbId,
       tmdbId: snapshot.tmdbId,

@@ -37,11 +37,23 @@ const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
-const TMDB_READ_TOKEN_KEY = 'mep_tmdb_read_token_v1';
+const TMDB_READ_TOKEN_SEED = 'mep_tmdb_token_key_v1';
+const TMDB_READ_TOKEN_CIPHER = 'CBw6NxYqBwsQHSUiMBQWWisQFU8fCBw6NxA6NQsQHSUCPzo0EiouFR1+OiMaEhkoVTsIJRgmMSw3MTE/MzsDIwg9bSVZKggWRCICLB0WBlAQBR94WygkPEciICcmOysiVSA2X1c2GydCJAs+bi0ELVQWHjZePwMSEystPERoOScbETMgHDsIPgcxDyg2JiI0JzhIJBY5MToHBlEdGAwSLFgIEi8RPDFdCwYdCRw3Jyg7OCwhVzQHIR8YCE9EJA8fJxI8SiU4GSUbXCI9XiEobwxEGVAZLBcHAFppBAAsMDkRBFxACB1mOBEkGTECICc=';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
+const TMDB_ALERT_LABEL = 'tmdb-token-alert';
+const TMDB_ALERT_DEDUPE_PREFIX = 'mep_tmdb_alert_once_';
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
+const HOME_STREAMING_GROUPS = [
+  { key: 'netflix', label: 'Netflix' },
+  { key: 'primevideo', label: 'Prime Video' },
+  { key: 'disneyplus', label: 'Disney+' },
+  { key: 'max', label: 'Max' },
+  { key: 'hulu', label: 'Hulu' },
+  { key: 'appletvplus', label: 'Apple TV+' },
+  { key: 'paramountplus', label: 'Paramount+' }
+];
 
 const elements = {
   search: document.querySelector('#search'),
@@ -531,12 +543,38 @@ if (isAuthenticated()) hideAuthGate();
 else showAuthGate();
 
 function getTmdbReadToken() {
-  return String(localStorage.getItem(TMDB_READ_TOKEN_KEY) || '').trim();
+  return decodeIssueToken(TMDB_READ_TOKEN_CIPHER, TMDB_READ_TOKEN_SEED);
+}
+
+async function reportTmdbAlertOnce(code, detail) {
+  const dedupeKey = `${TMDB_ALERT_DEDUPE_PREFIX}${String(code || 'unknown')}`;
+  if (sessionStorage.getItem(dedupeKey) === '1') return;
+  sessionStorage.setItem(dedupeKey, '1');
+  try {
+    const user = getAuthUser();
+    await openGitHubIssue(
+      `TMDB alert: ${String(code || 'unknown')}`,
+      [
+        'TMDB_TOKEN_ALERT',
+        `Code: ${String(code || '').trim()}`,
+        `Detail: ${String(detail || '').trim()}`,
+        `User: ${String(user?.email || 'anonymous').trim()}`,
+        `Page: ${window.location.href}`,
+        `CreatedAt: ${new Date().toISOString()}`
+      ].join('\n'),
+      [TMDB_ALERT_LABEL]
+    );
+  } catch {
+    // no-op: alerting should not block playback/catalog
+  }
 }
 
 async function tmdbFetchJson(path, params) {
   const token = getTmdbReadToken();
-  if (!token) throw new Error('missing TMDB read token');
+  if (!token) {
+    await reportTmdbAlertOnce('missing_tmdb_token', `path=${String(path || '').trim()}`);
+    throw new Error('missing TMDB read token');
+  }
   const url = new URL(`https://api.themoviedb.org/3/${String(path).replace(/^\/+/, '')}`);
   for (const [k, v] of Object.entries(params || {})) {
     if (v === undefined || v === null || v === '') continue;
@@ -548,7 +586,12 @@ async function tmdbFetchJson(path, params) {
       authorization: `Bearer ${token}`
     }
   });
-  if (!res.ok) throw new Error(`tmdb ${res.status}`);
+  if (!res.ok) {
+    if (res.status === 401 || res.status === 403) {
+      await reportTmdbAlertOnce('tmdb_auth_error', `${res.status} on ${url.pathname}`);
+    }
+    throw new Error(`tmdb ${res.status}`);
+  }
   return res.json();
 }
 
@@ -704,9 +747,28 @@ function normalizeSeedEntry(entry, defaultType) {
     metadata: {
       releaseDate: entry?.releaseDate || null,
       genres: entry?.genres || [],
-      backdropUrl: entry?.backdropUrl || null
+      backdropUrl: entry?.backdropUrl || null,
+      watchProviders: {
+        region: entry?.watchProviders?.region || '',
+        flatrate: Array.isArray(entry?.watchProviders?.flatrate) ? entry.watchProviders.flatrate : []
+      }
     }
   };
+}
+
+function normalizePlatformKey(name) {
+  return String(name || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+function titleHasProvider(title, providerKey) {
+  const providers = Array.isArray(title?.metadata?.watchProviders?.flatrate)
+    ? title.metadata.watchProviders.flatrate
+    : [];
+  return providers.some((name) => normalizePlatformKey(name).includes(providerKey));
 }
 
 function loadEvaluations() {
@@ -1141,11 +1203,18 @@ function renderHomeCatalog(baseFiltered) {
   };
 
   setCatalogCount(`${baseFiltered.length} items`);
-  elements.items.innerHTML = [
+  const sections = [
     section('continue', 'Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
     section('movies_recommended', 'Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
     section('series_recommended', 'Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
-  ].join('');
+  ];
+  for (const group of HOME_STREAMING_GROUPS) {
+    const movies = sortTitles(baseFiltered.filter((t) => t.type === 'movie' && titleHasProvider(t, group.key)));
+    const series = sortTitles(baseFiltered.filter((t) => t.type === 'series' && titleHasProvider(t, group.key)));
+    sections.push(section(`platform_${group.key}_movies`, `${group.label} Movies`, `Peliculas disponibles en ${group.label}`, movies));
+    sections.push(section(`platform_${group.key}_series`, `${group.label} Series`, `Series disponibles en ${group.label}`, series));
+  }
+  elements.items.innerHTML = sections.join('');
   bindLocalCardEvents();
   bindHomeSectionEvents();
   bindHomeCarouselEvents();
@@ -1164,6 +1233,16 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   } else if (sectionKey === 'series_recommended') {
     title = 'Series que podrian gustarte';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  } else if (sectionKey.startsWith('platform_')) {
+    const match = sectionKey.match(/^platform_([a-z0-9]+)_(movies|series)$/);
+    if (match) {
+      const providerKey = match[1];
+      const kind = match[2] === 'movies' ? 'movie' : 'series';
+      const group = HOME_STREAMING_GROUPS.find((entry) => entry.key === providerKey);
+      const providerLabel = group?.label || providerKey;
+      title = `${providerLabel} ${kind === 'movie' ? 'Movies' : 'Series'}`;
+      items = sortTitles(baseFiltered.filter((t) => t.type === kind && titleHasProvider(t, providerKey)));
+    }
   }
   setCatalogCount(`${items.length} items`);
   elements.items.innerHTML = `

@@ -36,6 +36,8 @@ const TARGET_MOVIES = Number(process.env.SEED_MOVIES || '1000');
 const TARGET_SERIES = Number(process.env.SEED_SERIES || '1000');
 const LANG = process.env.SEED_LANG || 'es-ES';
 const FALLBACK_LANG = process.env.SEED_FALLBACK_LANG || 'en-US';
+const PROVIDERS_REGION = process.env.SEED_PROVIDERS_REGION || 'CO';
+const SEED_VERSION = Number(process.env.SEED_VERSION || '2');
 
 const MOVIES_PER_YEAR = Math.max(1, Math.ceil(TARGET_MOVIES / Math.max(1, (TO_YEAR - FROM_YEAR + 1))));
 const SERIES_PER_YEAR = Math.max(1, Math.ceil(TARGET_SERIES / Math.max(1, (TO_YEAR - FROM_YEAR + 1))));
@@ -166,6 +168,33 @@ async function backfillMissingLanguage(items, kind) {
   return out;
 }
 
+async function attachWatchProviders(items, kind, region) {
+  const out = [];
+  for (const item of items) {
+    try {
+      const url = kind === 'movie'
+        ? `https://api.themoviedb.org/3/movie/${encodeURIComponent(item.tmdbId)}/watch/providers`
+        : `https://api.themoviedb.org/3/tv/${encodeURIComponent(item.tmdbId)}/watch/providers`;
+      const payload = await tmdbJson(url);
+      const regionPayload = payload?.results?.[region] || null;
+      const flatrate = Array.isArray(regionPayload?.flatrate)
+        ? regionPayload.flatrate.map((entry) => entry?.provider_name).filter(Boolean)
+        : [];
+      out.push({
+        ...item,
+        watchProviders: {
+          region,
+          flatrate
+        }
+      });
+    } catch {
+      out.push(item);
+    }
+    await sleep(60);
+  }
+  return out;
+}
+
 function dedupeByTmdb(items) {
   const seen = new Set();
   const out = [];
@@ -214,9 +243,12 @@ async function main() {
   console.log('Backfilling missing language fields (if any)...');
   const moviesBackfilled = await backfillMissingLanguage(moviesWithIds, 'movie');
   const seriesBackfilled = await backfillMissingLanguage(seriesWithIds, 'tv');
+  console.log(`Attaching watch providers (region=${PROVIDERS_REGION})...`);
+  const moviesWithProviders = await attachWatchProviders(moviesBackfilled, 'movie', PROVIDERS_REGION);
+  const seriesWithProviders = await attachWatchProviders(seriesBackfilled, 'tv', PROVIDERS_REGION);
 
   const payload = {
-    version: 1,
+    version: SEED_VERSION,
     generatedAt: new Date().toISOString(),
     source: {
       provider: 'tmdb',
@@ -228,10 +260,11 @@ async function main() {
       targetMovies: TARGET_MOVIES,
       targetSeries: TARGET_SERIES,
       language: LANG,
-      fallbackLanguage: FALLBACK_LANG
+      fallbackLanguage: FALLBACK_LANG,
+      providersRegion: PROVIDERS_REGION
     },
-    movies: moviesBackfilled,
-    series: seriesBackfilled
+    movies: moviesWithProviders,
+    series: seriesWithProviders
   };
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });

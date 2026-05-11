@@ -1,6 +1,6 @@
 {
-  "version": 5,
-  "generatedAt": "2026-05-11T16:53:49.890Z",
+  "version": 6,
+  "generatedAt": "2026-05-11T16:57:03.707Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -24806,6 +24806,22 @@
         "flatrate": [
           "Disney Plus (inferred)"
         ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0103776",
+      "title": "Batman Returns",
+      "year": 1992,
+      "releaseDate": null,
+      "overview": "Michael Keaton, Danny DeVito",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTliMDVkYTktZDdlMS00NTAwLWJhNzYtMWIwMDZjN2ViMGFiXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
       }
     }
   ],

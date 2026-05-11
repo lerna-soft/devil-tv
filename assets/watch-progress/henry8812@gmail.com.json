@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T21:12:18Z",
+  "updatedAt": "2026-05-11T21:30:15Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -62,18 +62,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T21:12:18Z",
       "watched": {}
+    },
+    "tt1345836": {
+      "imdbId": "tt1345836",
+      "tmdbId": "49026",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:30:15Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt6587046",
-    "tmdbId": "508883",
+    "imdbId": "tt1345836",
+    "tmdbId": "49026",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T21:12:18Z"
+    "updatedAt": "2026-05-11T21:30:15Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1345836",
+      "tmdbId": "49026",
+      "title": "El caballero oscuro: La leyenda renace",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:30:15Z"
+    },
     {
       "imdbId": "tt6587046",
       "tmdbId": "508883",

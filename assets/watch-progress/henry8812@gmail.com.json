@@ -1,16 +1,16 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T20:24:11Z",
+  "updatedAt": "2026-05-11T20:24:31Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
       "tmdbId": "359410",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 469.953769,
-      "lastProgress": 469.953769,
-      "updatedAt": "2026-05-11T20:24:11Z",
+      "progress": 490.138511,
+      "lastProgress": 490.138511,
+      "updatedAt": "2026-05-11T20:24:31Z",
       "watched": {}
     }
   },
@@ -19,11 +19,22 @@
     "tmdbId": "359410",
     "season": 1,
     "episode": 1,
-    "progress": 469.953769,
-    "updatedAt": "2026-05-11T20:24:11Z"
+    "progress": 490.138511,
+    "updatedAt": "2026-05-11T20:24:31Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 490.138511,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:24:31Z"
+    },
     {
       "imdbId": "tt3359350",
       "tmdbId": "359410",

@@ -1,16 +1,16 @@
 {
   "email": "ornebe@hotmail.com",
   "name": "Orfinelly",
-  "updatedAt": "2026-05-11T20:27:26Z",
+  "updatedAt": "2026-05-11T20:27:41Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 90.21833579300518,
-      "lastProgress": 90.21833579300518,
-      "updatedAt": "2026-05-11T20:27:26Z",
+      "progress": 105.27013303165032,
+      "lastProgress": 105.27013303165032,
+      "updatedAt": "2026-05-11T20:27:41Z",
       "watched": {}
     }
   },
@@ -19,11 +19,22 @@
     "tmdbId": "1316092",
     "season": 1,
     "episode": 1,
-    "progress": 90.21833579300518,
-    "updatedAt": "2026-05-11T20:27:26Z"
+    "progress": 105.27013303165032,
+    "updatedAt": "2026-05-11T20:27:41Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 105.27013303165032,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:27:41Z"
+    },
     {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",

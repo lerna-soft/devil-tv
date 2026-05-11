@@ -116,6 +116,9 @@ function parseIssue(issue) {
   const season = positiveInteger((body.match(/^Season:\s*(\d+)$/im) || [])[1], 1);
   const episode = positiveInteger((body.match(/^Episode:\s*(\d+)$/im) || [])[1], 1);
   const progress = Number((body.match(/^Progress:\s*([0-9]+(?:\.[0-9]+)?)$/im) || [])[1] || 0);
+  const title = String((body.match(/^Title:\s*(.+)$/im) || [])[1] || '').trim();
+  const type = String((body.match(/^Type:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const playerStatus = String((body.match(/^PlayerStatus:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   if (!email || (!imdbId && !tmdbId)) return null;
   return {
     email,
@@ -125,6 +128,9 @@ function parseIssue(issue) {
     season,
     episode,
     progress,
+    title,
+    type,
+    playerStatus,
     updatedAt: parseIssueDate(issue),
     progressKey: `${imdbId || tmdbId}:${season}x${episode}`
   };
@@ -191,33 +197,103 @@ function mergeIndex(existing, incoming) {
 async function writeUserFiles(users) {
   for (const user of users) {
     const filePath = path.join(STORE_DIR, user.file || `${user.email}.json`);
+    const existingRaw = await fs.readFile(filePath, 'utf8').catch(() => '');
+    const existing = existingRaw.trim() ? safeJson(existingRaw) : {};
+    const existingProgress = existing?.progress && typeof existing.progress === 'object' ? existing.progress : {};
+    const key = user.imdbId || user.tmdbId;
+    const previous = existingProgress[key] && typeof existingProgress[key] === 'object' ? existingProgress[key] : {};
+    const mergedProgress = {
+      ...existingProgress,
+      [key]: {
+        ...previous,
+        imdbId: user.imdbId,
+        tmdbId: user.tmdbId,
+        lastSeason: user.season,
+        lastEpisode: user.episode,
+        progress: user.progress,
+        lastProgress: user.progress,
+        updatedAt: user.updatedAt,
+        watched: { ...(previous.watched || {}) }
+      }
+    };
+    const historyEntry = {
+      imdbId: user.imdbId,
+      tmdbId: user.tmdbId,
+      title: user.title || '',
+      type: user.type || '',
+      season: user.season,
+      episode: user.episode,
+      progress: user.progress,
+      playerStatus: user.playerStatus || 'playing',
+      updatedAt: user.updatedAt
+    };
+    const history = mergeHistory(existing?.history || [], [historyEntry]);
     const payload = {
       email: user.email,
-      name: user.name,
-      updatedAt: user.updatedAt,
-      progress: {
-        [user.imdbId || user.tmdbId]: {
-          imdbId: user.imdbId,
-          tmdbId: user.tmdbId,
-          lastSeason: user.season,
-          lastEpisode: user.episode,
-          progress: user.progress,
-          updatedAt: user.updatedAt,
-          watched: {}
-        }
-      },
-      lastWatch: {
+      name: user.name || existing?.name || '',
+      updatedAt: maxIsoString(existing?.updatedAt, user.updatedAt),
+      progress: mergedProgress,
+      lastWatch: pickNewestByUpdatedAt(existing?.lastWatch, {
         imdbId: user.imdbId,
         tmdbId: user.tmdbId,
         season: user.season,
         episode: user.episode,
         progress: user.progress,
         updatedAt: user.updatedAt
-      }
+      }),
+      lastSelection: existing?.lastSelection || null,
+      history
     };
     await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
     console.log(`[watch-progress] wrote ${filePath}`);
   }
+}
+
+function safeJson(raw) {
+  try { return JSON.parse(raw || '{}'); } catch { return {}; }
+}
+
+function maxIsoString(a, b) {
+  const at = Date.parse(a || 0) || 0;
+  const bt = Date.parse(b || 0) || 0;
+  return bt >= at ? (b || a || '') : (a || b || '');
+}
+
+function pickNewestByUpdatedAt(existing, incoming) {
+  if (!existing) return incoming || null;
+  if (!incoming) return existing || null;
+  const existingUpdated = Date.parse(existing.updatedAt || 0) || 0;
+  const incomingUpdated = Date.parse(incoming.updatedAt || 0) || 0;
+  return incomingUpdated >= existingUpdated ? incoming : existing;
+}
+
+function mergeHistory(existing, incoming) {
+  const rows = [...(Array.isArray(existing) ? existing : []), ...(Array.isArray(incoming) ? incoming : [])]
+    .filter((entry) => entry && typeof entry === 'object');
+  const map = new Map();
+  for (const row of rows) {
+    const id = String(row.imdbId || row.tmdbId || '').trim();
+    const season = positiveInteger(row.season, 1);
+    const episode = positiveInteger(row.episode, 1);
+    const status = String(row.playerStatus || '').trim().toLowerCase() || 'playing';
+    const at = String(row.updatedAt || '').trim();
+    const key = `${id}:${season}x${episode}:${status}:${at}`;
+    if (!id || !at) continue;
+    map.set(key, {
+      imdbId: String(row.imdbId || '').trim(),
+      tmdbId: String(row.tmdbId || '').trim(),
+      title: String(row.title || '').trim(),
+      type: String(row.type || '').trim(),
+      season,
+      episode,
+      progress: Number(row.progress || 0),
+      playerStatus: status,
+      updatedAt: at
+    });
+  }
+  return [...map.values()]
+    .sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0))
+    .slice(0, 500);
 }
 
 async function closeProcessedIssues(processedIssues) {

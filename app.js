@@ -1841,6 +1841,26 @@ function buildWatchInsights() {
     if (id) byId[id] = title;
     registerAlias(title?.imdbId, title?.tmdbId);
   }
+  const ensureCatalogEntryByHistory = (id, event) => {
+    const key = String(id || '').trim();
+    if (!key || byId[key]) return;
+    const imdbId = String(event?.imdbId || '').trim();
+    const tmdbId = String(event?.tmdbId || '').trim();
+    const entry = {
+      catalogKey: `${String(event?.type || 'movie').trim() || 'movie'}:${imdbId ? 'imdb' : 'tmdb'}:${imdbId || tmdbId}`,
+      type: String(event?.type || 'movie').trim() || 'movie',
+      imdbId,
+      tmdbId,
+      title: String(event?.title || (imdbId || tmdbId || key)).trim(),
+      year: null,
+      description: 'Sincronizado desde historial',
+      posterUrl: '',
+      playable: true,
+      metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
+    };
+    byId[key] = entry;
+    saveLocalCatalog(dedupe([...loadLocalCatalog(), entry], { consolidateEquivalent: true }));
+  };
   const markProgress = (id, payload) => {
     const key = String(id || '').trim();
     if (!key) return;
@@ -1924,9 +1944,11 @@ function buildWatchInsights() {
   for (const [id, event] of Object.entries(historyById)) {
     const status = String(event?.playerStatus || '').trim().toLowerCase();
     const updatedAt = Date.parse(event?.updatedAt || 0) || 0;
+    ensureCatalogEntryByHistory(id, event);
     if (status === 'playing' || status === 'paused' || status === 'seeked') {
       completedIds.delete(id);
       continueIds.add(id);
+      scores[id] = Math.max(scores[id] || 0, 0.5);
       if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
     } else if (status === 'completed') {
       continueIds.delete(id);

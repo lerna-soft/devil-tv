@@ -64,6 +64,15 @@ jobs:
           set -euxo pipefail
           node tools/sync-watch-progress-from-issues.mjs
 
+      - name: Sync catalog seed from open issues
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euxo pipefail
+          node tools/sync-catalog-seed-from-issues.mjs
+
       - name: Upload Pages Artifact (site root)
         uses: actions/upload-pages-artifact@v3
         with:
@@ -92,6 +101,16 @@ jobs:
         run: |
           set -euxo pipefail
           node tools/close-watch-progress-issues.mjs
+
+      - name: Close synced catalog seed issues
+        if: success()
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euxo pipefail
+          node tools/close-catalog-seed-issues.mjs
 
       - name: Summary (deployed URL)
         if: always()

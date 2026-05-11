@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-10T04:50:26.943Z",
+  "generatedAt": "2026-05-11T12:02:58.272Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -278,6 +278,13 @@
       "file": "tt13706018.txt",
       "seasonCount": 3,
       "episodeCount": 50
+    },
+    "tt19495202": {
+      "title": "Suits",
+      "tvmazeId": 172,
+      "file": "tt19495202.txt",
+      "seasonCount": 9,
+      "episodeCount": 134
     },
     "tt1632701": {
       "title": "Suits",

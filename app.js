@@ -326,6 +326,8 @@ async function hydrateWatchProgressForCurrentUser() {
   const remote = await loadRemoteWatchProgress(user.email);
   if (!remote) return;
   mergeRemoteWatchProgress(remote);
+  renderCatalog();
+  renderDetail({ skipHydratePlayback: true });
 }
 
 function mergeRemoteWatchProgress(remote) {
@@ -1127,7 +1129,10 @@ async function queueWatchProgressSync(snapshot) {
   const key = getWatchProgressIssueKey(snapshot);
   const lastSync = Number(localStorage.getItem(`${WATCH_PROGRESS_LAST_SYNC_PREFIX}${user.email}:${key}`) || '0');
   const now = Date.now();
-  if (now - lastSync < 5 * 60 * 1000 && Number(snapshot?.progress || 0) < 95) return;
+  const status = String(snapshot?.player_status || '').trim().toLowerCase();
+  const progress = Number(snapshot?.progress || 0);
+  const alwaysSync = status === 'paused' || status === 'completed' || progress >= 95;
+  if (!alwaysSync && now - lastSync < 90 * 1000) return;
   localStorage.setItem(`${WATCH_PROGRESS_LAST_SYNC_PREFIX}${user.email}:${key}`, String(now));
 
   try {
@@ -1281,7 +1286,7 @@ function renderCatalog() {
 
 function renderHomeCatalog(baseFiltered) {
   const watch = buildWatchInsights();
-  const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   const rewatchItems = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
@@ -1335,7 +1340,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   let items = [];
   if (sectionKey === 'continue') {
     title = 'Continuar viendo';
-    items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+    items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   } else if (sectionKey === 'rewatch') {
     title = 'Volver a ver';
     items = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
@@ -1785,6 +1790,7 @@ function buildWatchInsights() {
   const actorWeights = {};
   const continueIds = new Set();
   const completedIds = new Set();
+  const recentAt = {};
   const catalog = loadLocalCatalog();
   const byId = {};
   for (const title of catalog) {
@@ -1811,6 +1817,8 @@ function buildWatchInsights() {
     }
     if (score <= 0) continue;
     scores[id] = (scores[id] || 0) + score;
+    const localUpdatedAt = Date.parse(data?.updatedAt || 0) || 0;
+    if (localUpdatedAt > (recentAt[id] || 0)) recentAt[id] = localUpdatedAt;
     const completedLocal = totalEntries > 0 && completedEntries === totalEntries;
     if (completedLocal) completedIds.add(id);
     else continueIds.add(id);
@@ -1828,6 +1836,8 @@ function buildWatchInsights() {
     if (!entry || typeof entry !== 'object') continue;
     const p = Number(entry.lastProgress ?? entry.progress ?? 0);
     const isCompleted = p >= 95;
+    const updatedAt = Date.parse(entry.updatedAt || 0) || 0;
+    if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
     if (isCompleted) {
       completedIds.add(id);
       continue;
@@ -1848,9 +1858,10 @@ function buildWatchInsights() {
       if (!completed) continueIds.add(key);
       if (completed) completedIds.add(key);
       scores[key] = (scores[key] || 0) + (completed ? 0 : 2);
+      recentAt[key] = Math.max(recentAt[key] || 0, Date.now());
     }
   }
-  return { scores, genreWeights, actorWeights, continueIds, completedIds };
+  return { scores, genreWeights, actorWeights, continueIds, completedIds, recentAt };
 }
 
 function recommendationScore(title, watch) {

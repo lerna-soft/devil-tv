@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "generatedAt": "2026-05-11T16:49:03.319Z",
+  "version": 5,
+  "generatedAt": "2026-05-11T16:53:49.890Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -21,6 +21,41 @@
       "targetMovies": 120,
       "targetSeries": 120,
       "enrichedAt": "2026-05-11T16:49:03.319Z"
+    },
+    "inferredDisneyMovies": {
+      "target": 220,
+      "region": "CO",
+      "companies": [
+        {
+          "id": 2,
+          "name": "Walt Disney Pictures"
+        },
+        {
+          "id": 3,
+          "name": "Pixar"
+        },
+        {
+          "id": 420,
+          "name": "Marvel Studios"
+        },
+        {
+          "id": 1,
+          "name": "Lucasfilm Ltd."
+        },
+        {
+          "id": 158526,
+          "name": "Walt Disney Animation Studios"
+        },
+        {
+          "id": 127928,
+          "name": "20th Century Studios"
+        },
+        {
+          "id": 127929,
+          "name": "Searchlight Pictures"
+        }
+      ],
+      "updatedAt": "2026-05-11T16:53:49.890Z"
     }
   },
   "movies": [
@@ -108,7 +143,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -165,7 +202,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -187,7 +226,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -247,7 +288,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -657,7 +700,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -832,7 +877,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -874,7 +921,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -894,7 +943,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -1426,7 +1477,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -1465,7 +1518,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -1634,7 +1689,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -1704,7 +1761,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -1797,7 +1856,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -2088,7 +2149,8 @@
         "region": "CO",
         "flatrate": [
           "HBO Max",
-          "HBO Max Amazon Channel"
+          "HBO Max Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -2133,7 +2195,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -2421,7 +2485,8 @@
         "region": "CO",
         "flatrate": [
           "HBO Max",
-          "HBO Max Amazon Channel"
+          "HBO Max Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -2776,7 +2841,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -2822,7 +2889,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -3020,7 +3089,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -3275,7 +3346,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -3359,7 +3432,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -3403,7 +3478,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -3424,7 +3501,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -3446,7 +3524,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -3517,7 +3596,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -3698,7 +3778,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -3809,7 +3890,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -3953,7 +4035,8 @@
         "region": "CO",
         "flatrate": [
           "Amazon Prime Video",
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4204,7 +4287,8 @@
         "region": "CO",
         "flatrate": [
           "MovistarTV",
-          "Universal+ Amazon Channel"
+          "Universal+ Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4273,7 +4357,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4295,7 +4380,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4514,7 +4600,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4560,7 +4647,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4629,7 +4717,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4835,7 +4924,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -4882,7 +4972,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -5141,7 +5233,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -5682,7 +5776,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -5923,7 +6019,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -5968,7 +6065,8 @@
         "flatrate": [
           "Netflix",
           "Claro video",
-          "Universal+ Amazon Channel"
+          "Universal+ Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6081,7 +6179,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6174,7 +6273,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6263,7 +6363,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -6284,7 +6386,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6381,7 +6484,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6763,7 +6867,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6882,7 +6987,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -6950,7 +7056,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7087,7 +7194,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -7224,7 +7333,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7695,7 +7805,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7719,7 +7830,8 @@
         "flatrate": [
           "HBO Max",
           "Claro video",
-          "HBO Max Amazon Channel"
+          "HBO Max Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7763,7 +7875,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "Disney Plus"
+          "Disney Plus",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7785,7 +7898,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7853,7 +7967,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7900,7 +8015,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -7990,7 +8106,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -8376,7 +8494,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -8627,7 +8746,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -8811,7 +8931,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -8877,7 +8998,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -9413,7 +9535,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -9461,7 +9584,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -9526,7 +9651,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -9569,7 +9695,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -9590,7 +9718,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -10692,7 +10821,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -11282,7 +11412,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -11786,7 +11917,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -11986,7 +12119,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -12008,7 +12142,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -12303,7 +12439,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -12946,7 +13083,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -13012,7 +13151,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -13034,7 +13174,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -13707,7 +13848,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -13773,7 +13915,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -13846,7 +13990,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -13932,7 +14078,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -14264,7 +14411,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -14604,7 +14752,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -15408,7 +15558,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -15453,7 +15604,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -15521,7 +15674,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -16237,7 +16392,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -16261,7 +16418,8 @@
           "HBO Max",
           "MovistarTV",
           "Claro video",
-          "HBO Max Amazon Channel"
+          "HBO Max Amazon Channel",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -16306,7 +16464,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -17131,7 +17290,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -17153,7 +17313,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -18077,7 +18239,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -18148,7 +18311,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -19026,7 +19190,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -19699,7 +19865,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -19720,7 +19888,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -20803,7 +20972,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -20849,7 +21020,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -21437,7 +21609,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -21725,7 +21899,8 @@
       "watchProviders": {
         "region": "CO",
         "flatrate": [
-          "MovistarTV"
+          "MovistarTV",
+          "Disney Plus (inferred)"
         ]
       }
     },
@@ -22301,7 +22476,9 @@
       ],
       "watchProviders": {
         "region": "CO",
-        "flatrate": []
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
       }
     },
     {
@@ -22687,6 +22864,1947 @@
         "region": "US",
         "flatrate": [
           "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1032892",
+      "imdbId": null,
+      "title": "En un instante",
+      "year": 2026,
+      "releaseDate": "2026-01-26",
+      "overview": "Tres historias interconectadas reflexionan sobre la esperanza, las relaciones humanas y el ciclo de la vida a lo largo de miles de años.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bN130HxJYMXPDEIO03wtpdhwj6K.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uM5i623wwNfoGD97iwwQWQ7GlZL.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "552524",
+      "imdbId": null,
+      "title": "Lilo y Stitch",
+      "year": 2025,
+      "releaseDate": "2025-05-17",
+      "overview": "La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4oLLOAT55JhAoe73VliaSKFvEEr.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg",
+      "genres": [
+        "Familia",
+        "Ciencia ficción",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "447273",
+      "imdbId": null,
+      "title": "Blancanieves",
+      "year": 2025,
+      "releaseDate": "2025-03-19",
+      "overview": "Tras la desaparición del benévolo Rey, la Reina Malvada dominó la otrora bella tierra con una vena cruel. La princesa Blancanieves huye del castillo cuando la Reina, celosa de su belleza interior, intenta matarla. En lo profundo del oscuro bosque, se topa con siete enanos mágicos y un joven bandido llamado Jonathan. Juntos, luchan por sobrevivir a la implacable persecución de la Reina y aspiran a recuperar el reino en el proceso.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sm91FNDF6OOKU4hT9BDW6EMoyDB.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/tyfO9jHgkhypUFizRVYD0bytPjP.jpg",
+      "genres": [
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "533533",
+      "imdbId": null,
+      "title": "TRON: Ares",
+      "year": 2025,
+      "releaseDate": "2025-10-08",
+      "overview": "La historia de Ares, un programa muy sofisticado que se envía desde el mundo digital al mundo real en una misión peligrosa y que va a representar el primer encuentro de la humanidad con seres creados por la IA.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qShQABLVRMZKnv5mWOPXWniBeB3.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/pUNfHmVqfwRdILhCkU8TdysVOXo.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1125257",
+      "imdbId": null,
+      "title": "Ponte en mi lugar de nuevo",
+      "year": 2025,
+      "releaseDate": "2025-08-06",
+      "overview": "Años después de que Tess y Anna atravesaran una crisis de identidad, Anna ahora tiene una hija y una futura hijastra. Mientras enfrentan los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que el rayo puede caer dos veces.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sqp4urYCbmSRbMYRt4SSb7oRQGJ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yQy9Y3p5INwkfTuHSnzYnz4MCV3.jpg",
+      "genres": [
+        "Comedia",
+        "Fantasía",
+        "Familia",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1022787",
+      "imdbId": null,
+      "title": "Elio",
+      "year": 2025,
+      "releaseDate": "2025-06-18",
+      "overview": "Cuenta la historia de Elio, un niño de 11 años, que lucha por encajar hasta que de repente es transportado por extraterrestres y es elegido para ser el embajador galáctico de la Tierra.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fqF7z5A8kFIrNtSdpEfjE539fna.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ukPu5xYOBAnh5H46uK4aQOirW2b.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Comedia",
+        "Familia",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "986056",
+      "imdbId": null,
+      "title": "Thunderbolts*",
+      "year": 2025,
+      "releaseDate": "2025-04-30",
+      "overview": "Un grupo de supervillanos poco convencional es reclutado para hacer misiones para el gobierno: Yelena Belova, Bucky Barnes, Red Guardian, Ghost, Taskmaster y John Walker. Después de verse atrapados en una trampa mortal urdida por Valentina Allegra de Fontaine, estos marginados deben embarcarse en una peligrosa misión que les obligará a enfrentarse a los recovecos más oscuros de su pasado.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yDWU8YyFkPnlVY627QXPvct8bz9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
+      "genres": [
+        "Acción",
+        "Ciencia ficción",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "822119",
+      "imdbId": null,
+      "title": "Capitán América: Brave New World",
+      "year": 2025,
+      "releaseDate": "2025-02-12",
+      "overview": "Tras reunirse con el recién elegido presidente de los EE. UU., Thaddeus Ross, Sam se encuentra en medio de un incidente internacional. Debe descubrir el motivo que se esconde tras un perverso complot global, antes de que su verdadero artífice enfurezca al mundo entero.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vUNj55xlF0pSU5FU3yDHC6L5wVX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8eifdha9GQeZAkexgtD45546XKx.jpg",
+      "genres": [
+        "Acción",
+        "Suspense",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1206008",
+      "imdbId": null,
+      "title": "Ella McCay",
+      "year": 2025,
+      "releaseDate": "2025-12-11",
+      "overview": "Una joven política idealista hace malabarismos con sus problemas familiares y su estresante vida laboral mientras se prepara para ocupar nada menos que el puesto de gobernadora de su estado, ocupando el puesto de su mentor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7dkh168bJBPAl3tjcnhDHXowyWt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9cd1zsxcOAcBW01WDOWz8EODTS0.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1376434",
+      "imdbId": null,
+      "title": "Predator: Asesino de asesinos",
+      "year": 2025,
+      "releaseDate": "2025-06-05",
+      "overview": "Esta antología original de animación narra las aventuras de tres de los guerreros más fieros de la historia de la humanidad: una saqueadora vikinga que guía a su hijo en su sangrienta búsqueda de la venganza, un ninja del Japón feudal que se enfrenta a su hermano samurái en una brutal batalla por la sucesión y un piloto de la Segunda Guerra Mundial que surca los cielos para investigar una amenaza extraterrestre contra los Aliados.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8upWJ1KTR1bAPqXCHAuVOhfuiAZ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3AGZKVr2DPT9H53gYtkSEC1tK1E.jpg",
+      "genres": [
+        "Animación",
+        "Acción",
+        "Ciencia ficción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1151334",
+      "imdbId": null,
+      "title": "La conductora",
+      "year": 2025,
+      "releaseDate": "2025-08-21",
+      "overview": "La conductora, un irreverente thriller de ritmo frenético, cuenta la historia de una mujer que, en su adolescencia, fue conductora de huidas en coche y que en el presente se ve obligada a revivir su desagradable pasado cuando un antiguo jefe le brinda la oportunidad de salvar la vida de su exnovio, quien nunca ha sido de fiar. La conductora está escrita y dirigida por Shawn Simmons y protagonizada por Samara Weaving en el papel principal de Edie, también conocida como Eenie Meanie.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nDNvZhJeMSwi8UH8jbpZvLMUfjp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/xk0ck8qmYmevisTmphWIDm1g43p.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1265344",
+      "imdbId": null,
+      "title": "Match: La reina de las apps de citas",
+      "year": 2025,
+      "releaseDate": "2025-09-09",
+      "overview": "Inspirada en la historia real de Whitney Wolfe, fundadora de la plataforma de citas Bumble, donde nos muestra su ingenio y perseverancia para abrirse camino en la industria tecnológica, dominada por hombres.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3Fyouhu5GY9okg794Qy0qa03p3d.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ehX2ljRmDLyKS44rZz2kt4BkwkJ.jpg",
+      "genres": [
+        "Historia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1230368",
+      "imdbId": null,
+      "title": "Springsteen: Deliver Me from Nowhere",
+      "year": 2025,
+      "releaseDate": "2025-10-22",
+      "overview": "Sigue a Springsteen cuando era un joven músico en los albores de la fama mundial, tratando de reconciliar las presiones del éxito con los fantasmas de su pasado. Grabado en un viejo casete de cuatro pistas en su habitación en Nueva Jersey, Nebraska refleja un periodo trascendental de su vida y está lleno de personajes perdidos en busca de una razón para creer.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/e5Gl93objIeRZp2V52kd0wNB9qR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/oOczvrnhpXUmqCbyKYFj4FQExAo.jpg",
+      "genres": [
+        "Drama",
+        "Música"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1362315",
+      "imdbId": null,
+      "title": "La mano que mece la cuna",
+      "year": 2025,
+      "releaseDate": "2025-10-16",
+      "overview": "Caitlin y Miguel, una pareja de los suburbios, contratan a la aparentemente dulce Polly para cuidar de su bebé recién nacido. Pero los verdaderos motivos de Polly tienen poco que ver con cantar canciones de cuna.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lRe1CQugJcj5ZA3WSaQnFIDPoK5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/lK1zWi7EpBIFaGJBf0Y7jjemZe2.jpg",
+      "genres": [
+        "Terror",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1267905",
+      "imdbId": null,
+      "title": "Los Rose",
+      "year": 2025,
+      "releaseDate": "2025-08-27",
+      "overview": "La vida parece fácil para la pareja perfecta que forman Ivy y Theo: carreras de éxito, un matrimonio feliz y unos hijos estupendos. Pero detrás de la fachada de su supuesta vida ideal, se avecina una tormenta: la carrera de Theo se desploma mientras que las ambiciones de Ivy despegan, lo que desencadena una caja de Pandora de competitividad y resentimiento ocultos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lXumhtgMOxA3aqocplC8YIMwOv8.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3CPQc1pgYu0iWr1UNk2nwy2ylDE.jpg",
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1140498",
+      "imdbId": null,
+      "title": "Sin conexión",
+      "year": 2025,
+      "releaseDate": "2025-12-19",
+      "overview": "Mientras su matrimonio se desmorona silenciosamente, Alex se enfrenta a la mediana edad y a un divorcio inminente, buscando un nuevo propósito en el mundo de la comedia neoyorquina, mientras que Tess se enfrenta a los sacrificios que ha hecho por su familia, lo que les obliga a lidiar con la crianza compartida, la identidad y si el amor puede adoptar una nueva forma.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ulxREzIzqoXjfvFUM3R2mUgK4wx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/bcw0QrKe9cM7MbjypxMPFdT6hrM.jpg",
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1075456",
+      "imdbId": null,
+      "title": "O'Dessa",
+      "year": 2025,
+      "releaseDate": "2025-03-08",
+      "overview": "O'Dessa es una ópera rock emplazada en un futuro posapocalíptico sobre una chica de campo que emprende la búsqueda de una reliquia familiar. El viaje la lleva a una ciudad peligrosa donde debe recurrir al poder del destino y la música para salvar el alma de su amor verdadero.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/l7EcAvzYaYfKv4JXKroJYfaTzSH.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7z2lSLmiJ5jNeYCoXmton86BapN.jpg",
+      "genres": [
+        "Música",
+        "Drama",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "437342",
+      "imdbId": null,
+      "title": "La primera profecía",
+      "year": 2024,
+      "releaseDate": "2024-04-03",
+      "overview": "Cuando una joven estadounidense es enviada a Roma para iniciar una vida de servicio a la Iglesia, se topa con una oscuridad que pone en cuestión su propia fe y descubre una conspiración aterradora que espera provocar el nacimiento de la encarnación del mal. Una precuela de 'La profecía'.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zukKt2xmxNVFhHjkYSMqHmllYXC.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mIBG74mhGEJnBubhYLkCtvplcNr.jpg",
+      "genres": [
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "661539",
+      "imdbId": null,
+      "title": "A Complete Unknown",
+      "year": 2024,
+      "releaseDate": "2024-12-25",
+      "overview": "Bob Dylan se hizo un nombre en el mundo del folk a muy temprana edad con sus versiones acústicas. Así que cuando en 1965, en el Newport Folk Festival, decidió conectar una guitarra eléctrica y usarla en su concierto, fue un duro golpe para los puristas del folk que veían el futuro del género en el joven. Desde ese momento, la vida de Dylan cambió profundamente. Siendo atacado por un gran grupo de seguidores del folk que lo tachaban de traidor, haciendo que su carrera no volviera a ser la misma. Ese concierto fue clave, se declaró como un músico independiente y fue el comienzo de la voz de una generación.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/staVor97Wqd8omvgEEXbc7sXJR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/otugS74HEHdca4aTCtt8HtXvPYV.jpg",
+      "genres": [
+        "Drama",
+        "Música"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1029955",
+      "imdbId": null,
+      "title": "Kinds of Kindness",
+      "year": 2024,
+      "releaseDate": "2024-05-30",
+      "overview": "Fábula en forma de tríptico que narra tres historias: la de un hombre atrapado que intenta tomar las riendas de su propia vida; la de un policía aterrado porque su mujer, que había desaparecido en el mar, ha vuelto y parece otra persona; y la de una mujer decidida a encontrar a alguien con un don especial, destinado a convertirse en un prodigioso líder espiritual.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8loKNUHhW0KPe3iS7JYozXHLIOB.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/aX1P75MWK5BzjqPh8fR8HQoX27s.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1014209",
+      "imdbId": null,
+      "title": "Suncoast",
+      "year": 2024,
+      "releaseDate": "2024-02-02",
+      "overview": "Una adolescente que vive con su madre debe llevar a su hermano a vivir a un centro especializado. Allí, entabla una inesperada amistad con un activista excéntrico en medio de protestas en torno a casos médicos controvertidos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nmPLUp5lVMiGomkN3db1WPeNrz3.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/cJOYsYSz3b3u0JpIWLBEfRam1eR.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "718014",
+      "imdbId": null,
+      "title": "Aguanta la respiración",
+      "year": 2024,
+      "releaseDate": "2024-09-12",
+      "overview": "En la Oklahoma de los años 30, asediada por las terribles tormentas de arena que azotan la región, una mujer cree que una presencia siniestra amenaza a su familia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pLxy9uzUZOjj6TTAzxhBJayPZT7.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9oQdB1z39WDaEXXCAhVX1t3mqrf.jpg",
+      "genres": [
+        "Terror",
+        "Suspense",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1011082",
+      "imdbId": null,
+      "title": "The Greatest Hits",
+      "year": 2024,
+      "releaseDate": "2024-04-05",
+      "overview": "Harriet descubre que ciertas canciones la hacen viajar atrás en el tiempo y revive un romance del pasado mientras conoce a un nuevo interés amoroso en el presente. Durante el viaje a través de la hipnótica conexión entre música y recuerdos, Harriet se pregunta si cambiaría el pasado a pesar de tener el poder de hacerlo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cve12HkI9psBUfmkx7FeBciaQN7.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yIHbfIKg6udGn2amj3EJYupSjnA.jpg",
+      "genres": [
+        "Drama",
+        "Música",
+        "Romance",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1002626",
+      "imdbId": null,
+      "title": "Domingos con Las Supremes",
+      "year": 2024,
+      "releaseDate": "2024-08-07",
+      "overview": "Odette, Clarice y Barbara Jean, \"Las Supremes\", son un grupo de grandes amigas de toda la vida que comparten un vínculo irrompible tras décadas enfrentándose juntas a las dificultades de la vida. Ahora, nuevas complicaciones pondrán a prueba al trío durante la fase más difícil por la que han pasado nunca.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/c6qEdH059GM48hQTrU8jE5QumbC.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/b18Vz2Y1lDyxoHK8EzY3InZQ04p.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1076364",
+      "imdbId": null,
+      "title": "La cita de Carl",
+      "year": 2023,
+      "releaseDate": "2023-06-15",
+      "overview": "Carl accede a regañadientes a tener una cita con una amiga a pesar de no tener ni idea de cómo funcionan las citas de hoy en día. Dug, su servicial amigo, interviene para calmar los nervios previos a la cita de Carl y le ofrece algunos consejos infalibles para hacer amigos, si eres un perro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ow1znpLHXVdkw7QrBoZjumJWmdT.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wLttOcR1wJGedXfpe69y215NvjN.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Comedia",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "609681",
+      "imdbId": null,
+      "title": "The Marvels",
+      "year": 2023,
+      "releaseDate": "2023-11-08",
+      "overview": "Cuando sus obligaciones la envían a un agujero de gusano vinculado a un revolucionario kree, los poderes de Carol Danvers, la capitana Marvel, se entremezclan con los de Kamala Khan, también conocida como la Sra. Marvel y la sobrina de Carol, ahora astronauta de S.A.B.E.R., Monica Rambeau. Juntas, deberán salvar el universo como \"The Marvels\".",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vpuuFM032yiX8tox4L84Wl9MGjG.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/w4pRLYYbhHn3sh9kqRgPZM6GjyS.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "335977",
+      "imdbId": null,
+      "title": "Indiana Jones y el dial del destino",
+      "year": 2023,
+      "releaseDate": "2023-06-25",
+      "overview": "El arqueólogo Indiana Jones deberá emprender otra aventura contra el tiempo para intentar recuperar un dial legendario que puede cambiar el curso de la historia. Acompañado por su ahijada, Jones pronto se encuentra enfrentándose a Jürgen Voller, un ex nazi que trabaja para la NASA.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3Sj5ubQ0BLXd6JuECq52Ira8Oor.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/57JocxmicOoAMhkUSmdKBlpZWMT.jpg",
+      "genres": [
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "820609",
+      "imdbId": null,
+      "title": "Nadie te salvará",
+      "year": 2023,
+      "releaseDate": "2023-09-21",
+      "overview": "Una mujer lucha con unos extraterrestres que amenazan su futuro y la hacen enfrentarse a su pasado.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7F6uEiOG7EE4tcfw1vYS3LdR3AT.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zYlgqIpqJ1VAbvFhRhktAzIybVs.jpg",
+      "genres": [
+        "Terror",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "945729",
+      "imdbId": null,
+      "title": "Misterio en Venecia",
+      "year": 2023,
+      "releaseDate": "2023-09-13",
+      "overview": "En la Venecia posterior a la Segunda Guerra Mundial, Poirot, ahora retirado y viviendo en su propio exilio, asiste a regañadientes a una sesión de espiritismo, cuando uno de los invitados es asesinado, por lo que depende del ex detective descubrir una vez más al asesino.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/kWz6Aa2chxcNUgAQNooYS4yyLkC.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/qB9wshRySHgN2MibLOlsW6YalqD.jpg",
+      "genres": [
+        "Misterio",
+        "Suspense",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "532408",
+      "imdbId": null,
+      "title": "The Boogeyman",
+      "year": 2023,
+      "releaseDate": "2023-05-31",
+      "overview": "Todavía conmocionadas por la trágica muerte de su madre, una adolescente y su hermana menor se ven atormentadas por una presencia sádica en su casa y luchan para que su afligido padre les preste atención antes de que sea demasiado tarde.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zzaEJ68gtZZ6cPqffUkAl56x223.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/6OnDSJThAbF6GxXNXNmcusGjBDy.jpg",
+      "genres": [
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "881164",
+      "imdbId": null,
+      "title": "El estrangulador de Boston",
+      "year": 2023,
+      "releaseDate": "2023-03-16",
+      "overview": "Un thriller sobre las periodistas pioneras que destaparon la historia de los asesinatos del famoso estrangulador de Boston: Loretta McLaughlin, reportera del periódico Record-American, y su compañera y confidente Jean Cole. Mientras el asesino va sumando víctimas, la pareja investiga, arriesgando su propia vida para descubrir la verdad.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/Af1vSPTbraVVqc6kB3Avm55gxcq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/254iY5CzFzjnjkP0lUkLpOLvXar.jpg",
+      "genres": [
+        "Crimen",
+        "Misterio",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "994108",
+      "imdbId": null,
+      "title": "Desconocidos",
+      "year": 2023,
+      "releaseDate": "2023-12-22",
+      "overview": "Adam es un guionista que, tras un encuentro casual con su misterioso vecino, regresa a la casa de su infancia donde descubre que sus padres, fallecidos hace mucho tiempo, están vivos y tienen la misma edad que el día de su muerte.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wmEiJEls6CE9jYgAk3hjkSfpWjl.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8yjHiSuSEhzR916LcIecuQ8tETG.jpg",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "626332",
+      "imdbId": null,
+      "title": "Flamin'Hot: La historia de los Cheetos picantes",
+      "year": 2023,
+      "releaseDate": "2023-03-11",
+      "overview": "La inspiradora historia de Richard Montañez, el conserje de Frito Lay que usó su legado y costumbres mexicoamericanos para convertir los famosos Cheetos picantes en un aperitivo que revolucionó el sector alimentario y se convirtió en un fenómeno de la cultura pop mundial.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gHghpc8mhVi7P5YilodDt7NLEtU.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yYEOYzgqPB31mkSsuPdCvXH3zHv.jpg",
+      "genres": [
+        "Drama",
+        "Historia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "621587",
+      "imdbId": null,
+      "title": "El peor equipo del mundo (Next Goal Wins)",
+      "year": 2023,
+      "releaseDate": "2023-11-16",
+      "overview": "Drama deportivo que cuenta la historia del entrenador holandés Thomas Rongen, artífice de realizar una tarea prácticamente imposible en el deporte: tomó las riendas del equipo de fútbol de la Samoa Americana y trató de hacer de un grupo de perdedores unos ganadores natos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rAFNxs9nkgoW20QNlBqY2hlRmWQ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/j4TnCy7lNPrE8mX5n5ydCoLA7xW.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "812635",
+      "imdbId": null,
+      "title": "Chevalier",
+      "year": 2023,
+      "releaseDate": "2023-04-20",
+      "overview": "Biopic de Chevalier de Saint-Georges, hijo de un esclavo africano que alcanzó el éxito en la sociedad francesa del siglo XVIII, como virtuoso violinista y compositor, y renombrado campeón de esgrima.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mRvqJLGhhW43DNTgn5IJzIuqkqk.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/olwNdhuypfQruJzrgC6qdvpZHfO.jpg",
+      "genres": [
+        "Música",
+        "Drama",
+        "Historia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1049638",
+      "imdbId": null,
+      "title": "Amor en Rye Lane",
+      "year": 2023,
+      "releaseDate": "2023-03-17",
+      "overview": "Dos jóvenes que se recuperan de malas rupturas se conectan durante un día lleno de acontecimientos en el sur de Londres.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AcdEqYTTnh6luc2heEsjf0fAI7X.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3di4noZGr04O2lyqgDgWNbyW1wA.jpg",
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "893752",
+      "imdbId": null,
+      "title": "Quasi",
+      "year": 2023,
+      "releaseDate": "2023-04-20",
+      "overview": "Un jorobado que anhela el amor se ve enredado en una enemistad asesina entre el papa y el rey de Francia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/g6uFA7r4VqqQeW4u9YtktheRXUt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/d5IQaD0Nj9gjXtpUFq0oWRZaAuR.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "718789",
+      "imdbId": null,
+      "title": "Lightyear",
+      "year": 2022,
+      "releaseDate": "2022-06-15",
+      "overview": "Atrapado en un planeta hostil a 4,2 millones de años luz de la Tierra junto a su comandante y su tripulación, Buzz Lightyear intenta encontrar la manera de volver a casa a través del espacio y el tiempo. Pero la llegada de Zurg, una presencia imponente con un ejército de robots despiadados y una agenda misteriosa, complica aún más las cosas y pone en peligro la misión.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bPIm1SXYp5RQ3c4wP91JQRewIb8.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/hwUxHPkuUleJeoick4uZsrKDXxF.jpg",
+      "genres": [
+        "Animación",
+        "Ciencia ficción",
+        "Familia",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "980804",
+      "imdbId": null,
+      "title": "LEGO Star Wars: Vacaciones de verano",
+      "year": 2022,
+      "releaseDate": "2022-08-05",
+      "overview": "Finn ha organizado unas vacaciones sorpresa para sus amigos a bordo del Crucero estelar galáctico Halcyon. Pero el plan de Finn pronto se tuerce cuando se ve separado del grupo. Solo a bordo del Halcyon, Finn se encuentra con tres Espíritus de la Fuerza -Obi-Wan Kenobi, Anakin Skywalker y la Princesa Leia-, que comparten sus inesperados relatos de vacaciones que salieron mal.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pl9q0qWfdiouMFhDxAXpq8RKHxp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/jhmGJmPcuAhF2ccuKluYlLxnyeP.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Ciencia ficción",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1044343",
+      "imdbId": null,
+      "title": "Zen - Grogu y los Hollines",
+      "year": 2022,
+      "releaseDate": "2022-11-11",
+      "overview": "Un cortometraje animado de Studio Ghibli dibujado a mano.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oUt6skwlKRwpq4MfNxE1cYsNejt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8v5KpLhY5K70kuLnunwoZmQYFMJ.jpg",
+      "genres": [
+        "Animación",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "505026",
+      "imdbId": null,
+      "title": "Muerte en el Nilo",
+      "year": 2022,
+      "releaseDate": "2022-02-09",
+      "overview": "Las vacaciones egipcias del detective belga Hércules Poirot, a bordo de un glamuroso barco de vapor, se ven alteradas por la búsqueda de un asesino cuando la idílica luna de miel de una pareja perfecta se ve truncada de la forma más trágica.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4Fbl3qZSraPXdgmQQzQIDJA736N.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/lRbDyjI7HEaXxflFQbYpqHRGFBJ.jpg",
+      "genres": [
+        "Misterio",
+        "Crimen",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "833425",
+      "imdbId": null,
+      "title": "En la tormenta",
+      "year": 2022,
+      "releaseDate": "2022-02-24",
+      "overview": "Darby Thorne, una joven que va a una emergencia familiar, queda atrapada en una ventisca y se refugia en un área de descanso de la autopista con unos desconocidos. Cuando encuentra a una chica secuestrada en una furgoneta, se ve en una aterradora lucha a vida o muerte para descubrir quién es el secuestrador.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pRGVi9gskuVgNkW7wJ4nZSNZuLu.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/epE4VnwJkqWEQIYLvWYxBj277W3.jpg",
+      "genres": [
+        "Suspense",
+        "Misterio",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "759175",
+      "imdbId": null,
+      "title": "La princesa",
+      "year": 2022,
+      "releaseDate": "2022-06-16",
+      "overview": "Cuando una princesa se niega a casarse con un sociópata cruel, es secuestrada y encerrada en una torre del castillo de su padre. Con su vengativo pretendiente decidido a tomar el trono de su padre, la princesa debe salvar el reino.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/deHzIFbvQudn9MFnuRb4Eb0Xg7k.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/5PnypKiSj2efSPqThNjTXz8jwOg.jpg",
+      "genres": [
+        "Acción",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "674324",
+      "imdbId": null,
+      "title": "Almas en pena de Inisherin",
+      "year": 2022,
+      "releaseDate": "2022-10-20",
+      "overview": "Pádraic y Colm son dos amigos de toda la vida que se encuentran en un callejón sin salida cuando Colm pone inesperadamente fin a su amistad. Un aturdido Pádraic, ayudado por su hermana Siobhán y el problemático joven isleño Dominic se esfuerza por reparar la relación, negándose a aceptar un no por respuesta. Pero los repetidos esfuerzos de Pádraic no hacen más que reforzar la determinación de su antiguo amigo, y cuando Colm le da un ultimátum desesperado los acontecimientos se intensifican rápidamente, con consecuencias impactantes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/24zHdUTv3dHOB9VLsPPvx0WGntA.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1vXD5HXqkhvsXFHE7KmCPZGPR1e.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "766475",
+      "imdbId": null,
+      "title": "Mira cómo corren",
+      "year": 2022,
+      "releaseDate": "2022-09-09",
+      "overview": "Un desesperado productor de cine de Hollywood se propone convertir en película una popular obra de teatro. Cuando miembros de la producción son asesinados, el cansado inspector Stoppard y la agente novata Stalker se encontrarán en medio de una intrigante novela policíaca.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9fOP1y2Y1li0KgQc1MPNch71Yq5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/cn9GQzCaeYylEV2hymVR8bskRMJ.jpg",
+      "genres": [
+        "Misterio",
+        "Comedia",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "838330",
+      "imdbId": null,
+      "title": "Not Okay",
+      "year": 2022,
+      "releaseDate": "2022-07-29",
+      "overview": "Una joven desesperada por amigos y fama, finge un viaje a París para actualizar su presencia en las redes sociales. En el mundo real tiene lugar un incidente aterrador que se convierte en parte del viaje imaginario y que ella deberá resolver.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/u2wgVSoekTvbej9PB9BgL9LKD3Y.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vsHD4yu6eHTXfYBLyRRiuQIJmJe.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "846250",
+      "imdbId": null,
+      "title": "Fire Island",
+      "year": 2022,
+      "releaseDate": "2022-06-02",
+      "overview": "Dos buenos amigos homosexuales hacen un viaje a Pines, una aldea en Fire Island de Nueva York, que es un punto de acceso para la cultura queer. En el transcurso de sus vacaciones, conocen y festejan con un grupo ecléctico de amigos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/11KDB6Cmke4g2O4WCVJc0x3wchS.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/4uwOKYaySkczmZ5C4EO50Ay3IoT.jpg",
+      "genres": [
+        "Comedia",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "814757",
+      "imdbId": null,
+      "title": "El imperio de la luz",
+      "year": 2022,
+      "releaseDate": "2022-12-09",
+      "overview": "Una historia de amor ambientada en y alrededor de un antiguo cine, en la costa sur de Inglaterra en la década de 1980.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7Y7l9FDxdknampTfpp6qjVWm54O.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/frV7YxDmZizcFjP5kKMFK37OrCC.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "857702",
+      "imdbId": null,
+      "title": "LEGO Star Wars Cuentos escalofriantes",
+      "year": 2021,
+      "releaseDate": "2021-10-01",
+      "overview": "Tras aterrizar de emergencia en el planeta volcánico Mustafar, Poe y BB-8 buscan ayuda en el escalofriante castillo de Darth Vader. Allí encuentran a un intrigante Hutt, un intrépido mecánico y el antiguo asistente de Darth Vader, Vaneé, que les obsequia con tres relatos aterradores ligados a antiguos artefactos y a villanos icónicos de todas las épocas de Star Wars.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bcPzH8PjdISs6yrqCIDEEPpRX7O.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/f53Jujiap580mgfefID0T0g2e17.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Ciencia ficción",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "617653",
+      "imdbId": null,
+      "title": "El último duelo",
+      "year": 2021,
+      "releaseDate": "2021-10-13",
+      "overview": "Francia, 1386. Narra el enfrentamiento entre el caballero Jean de Carrouges y el escudero Jacques LeGris, al acusar el primero al segundo de abusar de su esposa, Marguerite de Carrouges. El Rey Carlos VI decide que la mejor forma de solucionar el conflicto es un duelo a muerte. El que gane será el poseedor de la verdad y, en caso de que venza LeGris, la esposa del caballero será quemada como castigo por falsas acusaciones.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pA2zkZnfNR5v8hc07ekQGxgJg1r.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/4LrL40XecjGLRpX5I2gzMTUt04l.jpg",
+      "genres": [
+        "Historia",
+        "Drama",
+        "Acción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "511809",
+      "imdbId": null,
+      "title": "West Side Story",
+      "year": 2021,
+      "releaseDate": "2021-12-08",
+      "overview": "Los adolescentes Tony y María, a pesar de tener afiliaciones con pandillas callejeras rivales, los Jets y los Sharks, se enamoran en la ciudad de Nueva York en la década de los 50. Nueva versión del legendario musical 'West Side Story', a su vez adaptación de una famosa obra de teatro de Broadway, que modernizaba la historia de 'Romeo y Julieta', de Shakespeare.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lSIYqwBNXxN8QbANbAePVdG1WdI.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/exnFsbb9c3fDutTsgtJSWcDmZm0.jpg",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "653349",
+      "imdbId": null,
+      "title": "Amigos pasajeros",
+      "year": 2021,
+      "releaseDate": "2021-08-27",
+      "overview": "Marcus y Emily hacen amistad en un resort de México con Ron y Kyla, una pareja de locos fiesteros. Allí deciden disfrutar del momento dejándose llevar durante una semana llena de desinhibición y desenfreno con sus nuevos \"amigos pasajeros\". Meses después de la aventura, Marcus y Emily se horrorizan al ver que Ron y Kyla aparecen sin que los inviten en su boda.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5gQmECcdlJeYlBHTh0TIz3DE75Y.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/o0UGl6icA4DbhmDNgdZ5AWvuTtM.jpg",
+      "genres": [
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "597208",
+      "imdbId": null,
+      "title": "El callejón de las almas perdidas",
+      "year": 2021,
+      "releaseDate": "2021-12-02",
+      "overview": "Un buscavidas se compincha con una pitonisa para engañar a la gente y conseguir dinero... Remake del film \"El callejón de las almas perdidas\" (Nightmare Alley) de 1947.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3eceDLSJQ4GbSdnBj08QkmKoqni.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/g0YNGpmlXsgHfhGnJz3c5uyzZ1B.jpg",
+      "genres": [
+        "Crimen",
+        "Drama",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "516329",
+      "imdbId": null,
+      "title": "Antlers: Criatura oscura",
+      "year": 2021,
+      "releaseDate": "2021-10-28",
+      "overview": "En Antlers, una pequeña ciudad de Oregón, una profesora y su hermano, el sheriff de la localidad, se empiezan a interesar por un estudiante misterioso y distante. A medida que se van conociendo, descubren que el joven esconde un peligroso secreto que podría tener consecuencias fatales.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/v5KAhUn1Ml6mZHbMMvWxj1cQUkp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/10sdvlxjeTZNBxPg0PLl4CKU7v0.jpg",
+      "genres": [
+        "Drama",
+        "Terror",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "601470",
+      "imdbId": null,
+      "title": "Los ojos de Tammy Faye",
+      "year": 2021,
+      "releaseDate": "2021-09-17",
+      "overview": "Biopic sobre el fulgurante ascenso y posterior ccaída a los infiernos de la pareja de telepredicadores Tammy Faye y Jim Bakker en la década de los 70 y 80. Desde sus humildes comienzos hasta la creación de todo un imperio en torno a 'The PTL Club', el exitoso programa de televisión que estuvo en antena quince años y les hizo famosos en todo el país.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iBjkm6oxTPrvNkzr63cmnrpsQPR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/rskVKmBb83u7qbaASCxyJyLevkq.jpg",
+      "genres": [
+        "Drama",
+        "Historia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "680382",
+      "imdbId": null,
+      "title": "The Skywalker Legacy",
+      "year": 2020,
+      "releaseDate": "2020-03-18",
+      "overview": "La historia vive para siempre en este documental de larga duración que traza la realización de Star Wars: The Rise of Skywalker.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1f30N2i4w1aBkYbV1SBJL9ZmSUa.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/5d4ff1ElYsLvHe8AXTX8hyPPote.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "340102",
+      "imdbId": null,
+      "title": "Los nuevos mutantes",
+      "year": 2020,
+      "releaseDate": "2020-04-02",
+      "overview": "Cinco jóvenes mutantes que acaban de descubrir sus habilidades, son encerrados en unas instalaciones secretas contra su voluntad y luchan por escapar de su pasado y salvarse a sí mismos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cNEIc6SbgsNWkzwfw4EuYLqE9Gt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1MoeNacOltBWojkStjhT3svBTOK.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Terror",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "481848",
+      "imdbId": null,
+      "title": "La llamada de lo salvaje",
+      "year": 2020,
+      "releaseDate": "2020-02-19",
+      "overview": "Cuenta la historia vibrante de Buck, un perro grande y de buen corazón, un cruce entre un San Bernardo y un Scotch Collie, cuya despreocupada vida de ocio se alteró repentinamente cuando fue robado de su hogar en el condado de Santa Clara, California y llevado a Dawson City, Yukon, a fines de la década de 1890 durante la fiebre del oro, cuando los fuertes perros de trineo tenían una gran demanda. Como un recién llegado al servicio de entrega del equipo de perros, Buck está teniendo el momento de su vida. Obligado a luchar para sobrevivir, finalmente es llevado por su último propietario, John Thornton, a la proximidad del Círculo Polar Ártico, en algún lugar entre Yukon y Alaska, donde depende progresivamente de sus instintos primarios, se deshace de las comodidades de la civilización y responde \"al llamado salvaje\", convirtiéndose en su propio maestro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2KlzkeqqmXaDdXo7D6pq7qQLJoM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1GZCV0dwIoAn6jpWPfVAbeMTVC2.jpg",
+      "genres": [
+        "Aventura",
+        "Familia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "560391",
+      "imdbId": null,
+      "title": "Un desastre de altura",
+      "year": 2020,
+      "releaseDate": "2020-02-06",
+      "overview": "Tras escapar en el último instante de una avalancha durante unas vacaciones familiares en los Alpes, una pareja de casados comienza a tener problemas tras verse forzados a reevaluar sus vidas y cómo se sienten realmente el uno con el otro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qLAlAh64JgIdTDbrMbpQ4icPMaW.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/nvZuBYHUGbrFl3LmDnmbRgrQ8xa.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "399363",
+      "imdbId": null,
+      "title": "Wendy",
+      "year": 2020,
+      "releaseDate": "2020-02-28",
+      "overview": "Perdida en una isla misteriosa donde el tiempo y el envejecimiento se han detenido, Wendy debe luchar para salvar a su familia, su libertad y al espíritu alegre de la juventud, del peligro mortal de crecer.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/naFzu4rjzu7FIsXJ6rM76iHFTvg.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/jqOCty3utHRzDf8BNX5rP6p0UDe.jpg",
+      "genres": [
+        "Fantasía",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "127380",
+      "imdbId": null,
+      "title": "Buscando a Dory",
+      "year": 2016,
+      "releaseDate": "2016-06-16",
+      "overview": "Un año después de los acontecimientos narrados en \"Buscando a Nemo\", Dory vive apaciblemente con Marlin y su hijo Nemo. Pero durante un viaje para ver cómo las mantarrayas migran de vuelta a casa, los problemas de memoria de Dory parecen desaparecer durante un segundo: recuerda que tiene una familia e inmediatamente decide emprender viaje para reencontrarse con sus padres, a los que perdió hace años.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wXBwo2DxTm6wZ8Cbu02t9kzzoK4.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wijltj1toRcicHlCn8Cpsp4yPXe.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Familia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "302429",
+      "imdbId": null,
+      "title": "Marianne y la pócima del amor (Strange Magic)",
+      "year": 2015,
+      "releaseDate": "2015-01-23",
+      "overview": "Musical inspirado en El Sueño de una Noche de Verano, de William Shakespeare, donde “canciones populares de los últimos 60 años relatan la historia de un nutrido reparto de goblins, elfos y hadas, y sus encontronazos para hacerse con una poderosa poción”. (FILMAFFINITY)",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7LhOt6vzoCFYBXKUjlAe3iV28tP.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/aUbyQhWcPS7S0Su2d9Tgk3NxdPk.jpg",
+      "genres": [
+        "Música",
+        "Animación",
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "256835",
+      "imdbId": null,
+      "title": "Toy Story: El tiempo perdido",
+      "year": 2014,
+      "releaseDate": "2014-12-02",
+      "overview": "Después del día de Navidad, la pandilla de \"Toy Story\" se encuentra en territorio desconocido cuando Bonnie va a casa de un amigo a jugar a la consola. Allí, Woody y compañía se encuentran con todo un set de figuras de acción que no sabe que en realidad son juguetes. Ahora todo depende de Trixie, el triceratops, para que las cosas no se vuelvan completamente locas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3m8SkdSzWOkNodITnuqXCGaIdFG.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/4vetbabOgDQzpitnAkEVRiZP4P5.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Aventura",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "72431",
+      "imdbId": null,
+      "title": "Escuadrón rojo",
+      "year": 2012,
+      "releaseDate": "2012-01-19",
+      "overview": "En 1944, la Segunda Guerra Mundial está en su clímax. Aún así los pilotos negros del programa de entrenamiento de Tuskee se les encarga misiones de segunda categoría, además de tener que lidiar con el racismo de la época. Sin embargo, cuando comienzan a menguar los refuerzos, el Pentágono autoriza por primera vez en la historia una misión a un escuadrón en su totalidad de raza negra.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uuQW1ukIF3aCmAF6FPvM9kbXNX6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/k0q6OmVjVsMIocC3ovjh1Vzgx7J.jpg",
+      "genres": [
+        "Drama",
+        "Historia",
+        "Bélica"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "217",
+      "imdbId": null,
+      "title": "Indiana Jones y el reino de la calavera de cristal",
+      "year": 2008,
+      "releaseDate": "2008-05-21",
+      "overview": "Indiana Jones y el joven Mutt se proponen encontrar la Calavera de Cristal de Akator. Los agentes soviéticos tienen ese mismo objetivo. Liderados por la bella Irina Spalko, creen que el artilugio ayudará a su país a dominar el mundo si consiguen descifrar su secreto.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/caC98g0VyWVztBStLu46rpKlbGw.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/p96949hcwUG2BwE6MgKmw0uYNCx.jpg",
+      "genres": [
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "12180",
+      "imdbId": null,
+      "title": "Star Wars: Clone Wars",
+      "year": 2008,
+      "releaseDate": "2008-08-05",
+      "overview": "Mientras las Guerras Clon barren la galaxia, Anakin Skywalker y su nueva aprendiz Padawan, Ahsoka Tano, se aventuran en una arriesgada misión para rescatar al hijo secuestrado de Jabba el Hutt, el señor del Crimen. El renegado Conde Dooku y su letal y cruel vasalla Asajj Ventress harán todo lo posible por hacerles fracasar, haciendo que la misión de Anakin Skywalker tenga graves consecuencias.Mientras, en la línea de batalla, Obi-Wan Kenobi y el maestro Yoda lideran el masivo ejército clon en un valiente esfuerzo por derrotar al ejército droide y resistir a las fuerzas del lado oscuro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4RUVVMtmJvNPg74njR6mXaabBoY.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/eVA4ztLIuPEsokkgQ3NRt9rTRVh.jpg",
+      "genres": [
+        "Animación",
+        "Acción",
+        "Ciencia ficción",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "37135",
+      "imdbId": null,
+      "title": "Tarzán",
+      "year": 1999,
+      "releaseDate": "1999-06-17",
+      "overview": "Cuando Kala, una gorila hembra, encuentra un niño huérfano en la jungla, decide adoptarlo como su propio hijo a pesar de la oposición de Kerchak, el jefe de la manada. Junto a Terk, un gracioso mono, y Tantor, un elefante algo neurótico, Tazán crecerá en la jungla desarrollando los instintos de los animales y aprendiendo a deslizarse entre los árboles a velocidad de vértigo. Pero cuando una expedición se adentra en la jungla y Tarzán conoce a Jane, descubrirá quién es realmente y cuál es el mundo al que pertenece...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1Gk8iihu4Q4BGh2n1IwNLB3zM8E.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/a0E1mbejev56Ii51hCnYUDj4tZS.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "863",
+      "imdbId": null,
+      "title": "Toy Story 2",
+      "year": 1999,
+      "releaseDate": "1999-10-30",
+      "overview": "Cuando Andy se va de campamento dejando solos a los juguetes, Al McWhiggin, un compulsivo coleccionista de juguetes valiosos, secuestra a Woody. Buzz Lightyear y el resto de los juguetes de Andy deberán actuar con rapidez para rescatarlo, poniéndose al frente de una operación de rescate durante la cual se enfrentarán a múltiples peligros y divertidas situaciones.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8OTDKkJv2jXg5ZHKazFxBAttKkR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7iUDfakacY1HpajP1DtHrCuDB95.jpg",
+      "genres": [
+        "Animación",
+        "Comedia",
+        "Familia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1893",
+      "imdbId": null,
+      "title": "La guerra de las galaxias. Episodio I: La amenaza fantasma",
+      "year": 1999,
+      "releaseDate": "1999-05-19",
+      "overview": "La Federación de Comercio ha bloqueado el pequeño planeta de Naboo, gobernado por la joven Reina Amidala, como parte de un plan ideado por Sith Darth Sidious, que manteniéndose en el anonimato dirige a los neimoidianos, que están al mando de la Federación. Amidala es convencida por los Jedis Qui-Gon Jinn y su aprendiz, o padawan, Obi-Wan Kenobi a viajar hasta Coruscant, capital de la República y sede del Consejo Jedi para intentar mediar esta amenaza. Pero esquivando el bloqueo, la nave real resulta dañada, obligando a la tripulación a aterrizar en el desértico y remoto planeta de Tatooine...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4rjatbWmGGmu0DZs6WNpXaUWqWN.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg",
+      "genres": [
+        "Aventura",
+        "Acción",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "10674",
+      "imdbId": null,
+      "title": "Mulán",
+      "year": 1998,
+      "releaseDate": "1998-06-18",
+      "overview": "Mulán, una joven china hija única de la familia Fa, en lugar de buscar novio, como sus amigas, trata por todos los medios de alistarse en el ejército imperial para evitar que su anciano padre sea llamado a filas para defender al Emperador del acoso de los Hunos. Cuando el emisario imperial lleva a cabo la orden de reclutar a los varones de todas las familias, Mulán se hará pasar por soldado y se someterá a un duro entrenamiento hasta hacerse merecedora de la estima y de la confianza del resto de su escuadrón.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/towmTJ0k29quKI9IDnOZKAAtQx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mUYV0ZdsDEliGaQahcQH1F3grsP.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "9820",
+      "imdbId": null,
+      "title": "Tú a Londres y yo a California",
+      "year": 1998,
+      "releaseDate": "1998-07-28",
+      "overview": "Hallie y Annie, dos gemelas que se parecen como dos gotas de agua, fueron separadas poco después de nacer, a causa del divorcio de sus padres. Hallie vive en Napa Valley con su padre, que es viticultor. Por su parte, Annie vive en Londres con su madre, una famosa diseñadora de trajes de novia. Ninguna de las dos conoce la existencia de la otra, pero el destino hace que se encuentren por casualidad en Maine, en un campamento de verano. Antes de volver a casa, las niñas urden un plan para conseguir reunir a sus padres, pero hay un inconveniente con el que no contaban: su padre proyecta casarse con otra mujer.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3JyIUavN6byTNKjWXupCCvRljRF.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/y3zUOMWRoI2vC4ck2GBJyFWhzyA.jpg",
+      "genres": [
+        "Comedia",
+        "Familia",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "9487",
+      "imdbId": null,
+      "title": "Bichos, una aventura en miniatura",
+      "year": 1998,
+      "releaseDate": "1998-11-25",
+      "overview": "Un grupo de saltamontes liderados por el malvado Hopper y su estúpido hermano Molt asedian la colonia de hormigas todos los veranos para hacerse con la comida almacenada para pasar el invierno. Flik, una hormiga cansada de seguir las reglas del grupo, decide abandonar la colonia en busca de un grupo de mercenarios que los defiendan. Por equivocación, Flik reclutará a una pandilla de artistas de circo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3zc9gBzw0egrp7lMrE0zqFkNMms.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/hwwFyowfcbLRVmRBOkvnABBNIOs.jpg",
+      "genres": [
+        "Familia",
+        "Animación",
+        "Aventura",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "862",
+      "imdbId": null,
+      "title": "Toy Story",
+      "year": 1995,
+      "releaseDate": "1995-11-22",
+      "overview": "Los juguetes de Andy, un niño de seis años, temen que haya llegado su hora y que un nuevo regalo de cumpleaños les sustituya en el corazón de su dueño. Woody, un vaquero que ha sido hasta ahora el juguete favorito de Andy, trata de tranquilizarlos hasta que aparece Buzz Lightyear, un héroe espacial dotado de todo tipo de avances tecnológicos. Woody es relegado a un segundo plano, pero su constante rivalidad se transformará en una gran amistad cuando ambos se pierden en la ciudad sin saber cómo volver a casa.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/y59d8PjuFSgJJN4VRS7jDoRgSM9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+      "genres": [
+        "Familia",
+        "Comedia",
+        "Animación",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "8587",
+      "imdbId": null,
+      "title": "El rey león",
+      "year": 1994,
+      "releaseDate": "1994-06-15",
+      "overview": "La sabana africana es el escenario en el que tienen lugar las aventuras de Simba, un pequeño león que es el heredero del trono. Sin embargo, se ve forzado a exiliarse al ser injustamente acusado de la muerte de su padre. Durante su destierro, hará buenas amistades y, finalmente, regresará para recuperar lo que legítimamente le corresponde.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/6GF9uJs7AnbcJvyfoZyjZv063Oo.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "10020",
+      "imdbId": null,
+      "title": "La bella y la bestia",
+      "year": 1991,
+      "releaseDate": "1991-10-22",
+      "overview": "Una hermosa joven llamada Bella acepta alojarse en un castillo con una bestia a cambio de la libertad de su padre. La bestia es, en realidad, un príncipe encantado. Para romper el hechizo, deberá ganarse el amor de una preciosa dama antes de que caiga el último pétalo de una rosa encantada.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1FxMtEUc6DP1MXsTBftOFaoCVVO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/fW4ZCoEZRBqLAJGFQ2g5AdAfPQR.jpg",
+      "genres": [
+        "Romance",
+        "Familia",
+        "Animación",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "89",
+      "imdbId": null,
+      "title": "Indiana Jones y la última cruzada",
+      "year": 1989,
+      "releaseDate": "1989-05-24",
+      "overview": "En 1938, dos años después de encontrar el Arca de la Alianza, Indiana Jones es convencido por un millonario para que lo ayude a encontrar el Santo Grial antes de que caiga en manos del ejército nazi. Sin embargo, el verdadero motivo para involucrarse es encontrar a su padre, el doctor Henry Jones, con quien ha mantenido una fría relación desde su juventud y que ha desaparecido mientras seguía la pista del tesoro bíblico.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5h45gK147AAJpLLC7Cicr597urz.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/12fvZHskx57kQfNEUXJ3v0flWYQ.jpg",
+      "genres": [
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "847",
+      "imdbId": null,
+      "title": "Willow",
+      "year": 1988,
+      "releaseDate": "1988-05-20",
+      "overview": "Cuento medieval con brujas, enanos y poderes mágicos. En las mazmorras del castillo de la malvada reina hechicera Bavmorda, una prisionera da a luz una niña que, de acuerdo a una antigua profecía, pondrá fin al reinado de la hechicera. La comadrona salva a la niña de la ira de Bavmorda, pero se ve obligada a arrojar su cuna al río cuando es alcanzada por sus perros de presa. La corriente le hace alcanzar un pueblo de enanos en donde es adoptada por el valiente Willow.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/kymxskRkwRGGrlJLdneItwTIAHm.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3sF6AibdbTTkswfSRxXEGCt5w6s.jpg",
+      "genres": [
+        "Fantasía",
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "12144",
+      "imdbId": null,
+      "title": "En busca del valle encantado",
+      "year": 1988,
+      "releaseDate": "1988-11-18",
+      "overview": "Aclamada película de animación que narra las aventuras de unos pequeños dinosaurios en su viaje por alcanzar el Gran Valle, el único sitio de la tierra que todavía no ha sido alcanzado por una plaga devastadora",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jsxGmtUe06AAhfWihGiLDukI0QS.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/sXfQGa7juaTpZ5IF17Xa6hI53nx.jpg",
+      "genres": [
+        "Familia",
+        "Animación",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "13597",
+      "imdbId": null,
+      "title": "Dentro del laberinto",
+      "year": 1986,
+      "releaseDate": "1986-06-27",
+      "overview": "Sarah debe atravesar un laberinto para rescatar a su hermano pequeño, que ha sido secuestrado por los duendes y está en manos del poderoso rey Jareth. La niña descubre que ha llegado a un lugar donde las cosas no son siempre lo que parecen.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AhRH7qhyRWGOfr88UKLfSUEm7A0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mGkleIuPO2flRyvP8yBcUykSQsp.jpg",
+      "genres": [
+        "Aventura",
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "10658",
+      "imdbId": null,
+      "title": "Howard, un nuevo héroe",
+      "year": 1986,
+      "releaseDate": "1986-08-01",
+      "overview": "Desde un lejano planeta, y debido a un error de un laboratorio espacial, llega a La Tierra teletransportado un extraño personaje, un pato que dice llamarse Howard. Es acogido en casa de Beberly, una joven que es vocal de un grupo de rock. Cuando el doctor Jenin intenta devolverle a su planeta, la energia diabólica del experimento le atrapa, transformandole en el terrible Señor de las Tinieblas y Howard tendrá que enfrentarse a él.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sRidv4QitkAKDzgwOdRrVDJuWNG.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/eWNKQuZI5yEVqz3ATgc0ezYWgJH.jpg",
+      "genres": [
+        "Fantasía",
+        "Comedia",
+        "Acción",
+        "Aventura",
+        "Romance",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "27064",
+      "imdbId": null,
+      "title": "Mishima: Una vida en cuatro capítulos",
+      "year": 1985,
+      "releaseDate": "1985-09-20",
+      "overview": "Producida por Coppola y Lucas, \"Mishima\" es un retrato biográfico del consagrado autor japonés Yukio Mishima. La película investiga la inquietud interior y las contradicciones de un hombre que trató de alcanzar una imposible armonía entre sí mismo, el arte y la sociedad. La trama se centra en el día en que Mishima conmocionó al mundo, al hacerse en público el seppuku o harakiri (25 de noviembre de 1970), en el Cuartel General del Ejército. El relato está salpicado de flashbacks para contar diversos episodios de su infancia, sus comienzos como escritor, el posterior triunfo profesional, su tranformación en estrella mediática, sus obsesiones por la belleza física y sus ambiguos gustos sexuales, así como la creación de la \"Sociedad del Escudo\". (FILMAFFINITY)",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6P9jhxgdLGJMxlteZzuIcMQtM96.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/2ErRbysPsXusEzerMh2y3Hc5TuF.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "10372",
+      "imdbId": null,
+      "title": "La batalla del planeta de los Ewoks",
+      "year": 1985,
+      "releaseDate": "1985-11-24",
+      "overview": "Un ejército de merodeadores, bajo las órdenes del Rey Terak y la bruja Charal, atacan el Poblado Ewok. Cindel y Wicket huyen al bosque, donde se encuentran con Teek y el ermitaño Noa. Cindel y Wicket necesitarán la ayuda de Noa para derrotar a los merodeadores...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/or2IqyxJiaGL3AFGK45JQjXdlL2.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/xdH8k2O6mpLv4szeLkQGiM1aSOC.jpg",
+      "genres": [
+        "Aventura",
+        "Familia",
+        "Película de TV",
+        "Ciencia ficción",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "87",
+      "imdbId": null,
+      "title": "Indiana Jones y el templo maldito",
+      "year": 1984,
+      "releaseDate": "1984-05-23",
+      "overview": "1935. Shanghai. El intrépido arqueólogo Indiana Jones, tras meterse en jaleos en un local nocturno, consigue escapar junto a una bella cantante y su joven acompañante. Tras un accidentado vuelo, los tres acaban en la India, donde intentarán ayudar a los habitantes de un pequeño poblado, cuyos niños han sido raptados.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tLEaz41vKyKY7AgCTGgijLGWzbk.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/f133nWlU6yUkZqqwcCXCbTEJWHr.jpg",
+      "genres": [
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1884",
+      "imdbId": null,
+      "title": "La aventura de los Ewoks",
+      "year": 1984,
+      "releaseDate": "1984-12-21",
+      "overview": "Los miembros de la familia Towani se ven separados cuando su nave choca en la superficie de la luna de Endor. Los padres no tardan en ser capturados por el gigante Gorax, mientras que su hijo Mace y su hija Cincel están desaparecidos. Los Ewoks encuentran a los niños en los restos de la nave, y éstos deberán ganarse la confianza de los pequeños habitantes de Endor para iniciar la aventura de rescatar a sus padres",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tnDvyPj55BoxyLPOgkLDGTL3VAE.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/waWPYcXrbENXEoJkrQt7zFUdq14.jpg",
+      "genres": [
+        "Aventura",
+        "Familia",
+        "Fantasía",
+        "Ciencia ficción",
+        "Película de TV"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1892",
+      "imdbId": null,
+      "title": "El retorno del Jedi",
+      "year": 1983,
+      "releaseDate": "1983-05-25",
+      "overview": "Luke Skywalker y la princesa Leia deben viajar a Tatooine para liberar a Han Solo. Para conseguirlo, deben infiltrarse en la peligrosa guarida de Jabba the Hutt, el gángster más temido de la galaxia. Una vez reunidos, el equipo recluta a tribus de Ewoks para combatir a las fuerzas imperiales en los bosques de la luna de Endor. Mientras tanto, el Emperador y Darth Vader conspiran para convertir a Luke al lado oscuro, pero el joven Skywalker, por su parte, está decidido a reavivar el espíritu del Jedi en su padre. La guerra civil galáctica culmina en un último enfrentamiento entre las fuerzas rebeldes unificadas y una segunda Estrella de la Muerte, indefensa e incompleta, en una batalla que decidirá el destino de la galaxia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rKMmXzdm7eRgmlwYo7iq3klT7wJ.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+      "genres": [
+        "Aventura",
+        "Acción",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "85",
+      "imdbId": null,
+      "title": "En busca del arca perdida",
+      "year": 1981,
+      "releaseDate": "1981-06-12",
+      "overview": "Año 1936, Indiana Jones es un profesor de arqueología, dispuesto a correr peligrosas aventuras con tal de conseguir valiosas reliquias históricas. Después de una infructuosa misión en Sudamérica, el gobierno estadounidense le encarga la búsqueda del Arca de la Alianza, donde se conservan las Tablas de la Ley que Dios entregó a Moisés. Según la leyenda, quien las posea tendrá un poder absoluto, razón por la cual también la buscan los nazis.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tECLVwLCMexSkls33RTCwedRZ6d.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zPACwR32amTNvzId9qyapCWXYDJ.jpg",
+      "genres": [
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1891",
+      "imdbId": null,
+      "title": "El imperio contraataca",
+      "year": 1980,
+      "releaseDate": "1980-05-20",
+      "overview": "Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eU7KcNAOeZj9PBIcGUMSsuJz8qj.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/aJCtkxLLzkk1pECehVjKHA2lBgw.jpg",
+      "genres": [
+        "Aventura",
+        "Acción",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "11",
+      "imdbId": null,
+      "title": "La guerra de las galaxias",
+      "year": 1977,
+      "releaseDate": "1977-05-25",
+      "overview": "La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio, es capturada por las malévolas Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del emperador. El intrépido Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial \"El Halcón Milenario\", y los androides, R2D2 y C3PO, serán los encargados de luchar contra el enemigo y rescatar a la princesa para volver a instaurar la justicia en el seno de la Galaxia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ahT4ObS7XKedQkOSpGr1wQ97aKA.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+      "genres": [
+        "Aventura",
+        "Acción",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "838",
+      "imdbId": null,
+      "title": "American Graffiti",
+      "year": 1973,
+      "releaseDate": "1973-08-11",
+      "overview": "Es la última noche del verano de 1962, y los jóvenes de Modesto, California, quieren divertirse antes de que lleguen sus resonsabilidades como adultos. Así, todos los adolescentes del pueblo salen esa noche para beber, ligar, pasearse con el coche, ir a la bolera o bailar un rato...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9rvox1lGhLtUj0djMtr44CuxYE1.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vnKZUdnoJYn7jv68XVKHk6wzzaC.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
         ]
       }
     }

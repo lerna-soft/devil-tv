@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "generatedAt": "2026-05-11T16:37:08.565Z",
+  "version": 4,
+  "generatedAt": "2026-05-11T16:49:03.319Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -12,8 +12,16 @@
     "targetSeries": 1000,
     "language": "es-ES",
     "fallbackLanguage": "en-US",
-    "providersRegion": "CO",
-    "providersEnrichedAt": "2026-05-11T16:17:38.364Z"
+    "providersRegion": "US",
+    "providersEnrichedAt": "2026-05-11T16:17:38.364Z",
+    "providerBoost": {
+      "query": "disney",
+      "movieProvider": "DisneyNOW",
+      "tvProvider": "Disney Plus",
+      "targetMovies": 120,
+      "targetSeries": 120,
+      "enrichedAt": "2026-05-11T16:49:03.319Z"
+    }
   },
   "movies": [
     {
@@ -22447,6 +22455,240 @@
         "region": "CO",
         "flatrate": []
       }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1147411",
+      "imdbId": null,
+      "title": "Miraculous World : Tokyo, Stellar Force",
+      "year": 2025,
+      "releaseDate": "2025-12-07",
+      "overview": "Cuando Ladybug viaja a Tokio, se reúne con Miki y Kazuno, unos viejos amigos de Kagami que forman parte de los Stellar, un equipo de superhéroes japoneses. Juntos,  unen fuerzas para evitar que un nuevo supervillano cause estragos en la ciudad. Durante esta aventura, junto a Kagami, Marinette descubre que hay mucho del pasado de su amiga que aún desconoce.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vFaopnGXRXxRf4z2Z3IgA1QtOyV.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/3kps0wiGFMRVkSXxbebbAUeWrN3.jpg",
+      "genres": [
+        "Animación",
+        "Familia",
+        "Acción",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "277217",
+      "imdbId": null,
+      "title": "Los descendientes",
+      "year": 2015,
+      "releaseDate": "2015-07-31",
+      "overview": "Un reino de hoy en día idílico donde el hijo adolescente benevolente del rey Adam y la reina Bella, Ben, ofrece una oportunidad de redención de los descendientes de los villanos clásicos de Disney: Maléfica (Mal), la Reina Malvada (Evie), Cruella de Vil (Carlos) y Jafar (Jay).",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eUkdI96zP64e7JQLgPpVvM9WKGa.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/20ncMtoy9Cxy6OQxgXZemHoFymz.jpg",
+      "genres": [
+        "Familia",
+        "Aventura",
+        "Fantasía",
+        "Película de TV",
+        "Música"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "506574",
+      "imdbId": null,
+      "title": "Los descendientes 3",
+      "year": 2019,
+      "releaseDate": "2019-08-02",
+      "overview": "Mal, Evie, Carlos y Jay vuelven a la Isla de los Perdidos en busca de un nuevo grupo de hijos de villanos para que se unan a ellos en Auradon. Pero cuando Hades intenta colarse a través de la barrera mágica, Mal toma la decisión de cerrarla para siempre y así poder mantener a la gente de Auradon a salvo. Sin embargo, una fuerza maligna inesperada se cierne sobre el reino, por lo que Mal y el resto de los hijos de los villanos tendrán que unirse para salvar ambos mundos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iQICsH7ckxRExHu0fvPrsczpKJu.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wWLUUGtemgrRyH24v8lAkSR58US.jpg",
+      "genres": [
+        "Familia",
+        "Película de TV",
+        "Aventura",
+        "Fantasía",
+        "Música"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "417320",
+      "imdbId": null,
+      "title": "Los descendientes 2",
+      "year": 2017,
+      "releaseDate": "2017-07-21",
+      "overview": "Cuando la presión de ser real se convierte en demasiado para Mal, ella regresa a la isla de los perdidos donde su archienemiga Uma, la hija de Úrsula, ha tomado su lugar como la reina autoproclamada.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uQCZ12XelnvTchY9ncdLgnm4Gqy.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mLihPIodzSenkZtiUauDy4e9hRs.jpg",
+      "genres": [
+        "Familia",
+        "Fantasía",
+        "Película de TV",
+        "Aventura",
+        "Música"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "13655",
+      "imdbId": null,
+      "title": "Camp Rock",
+      "year": 2008,
+      "releaseDate": "2008-06-20",
+      "overview": "Mitchie Torres es una simpática chica que está deseando poder entrar en un campamento de música. Su única opción es trabajar en la cocina del campamento, donde un día la escucha cantar, por casualidad, una atractiva estrella del pop perteneciente al grupo Connect 3 llamada Shane Gray. Shane sólo escucha cantar a Mitchie, no la ve, así que el intenta descubrir quién es ella.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7IXMqZnwccogptThay3togKIFWw.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/utSa75etSZVmMmjBV9DzAWy1flP.jpg",
+      "genres": [
+        "Música",
+        "Comedia",
+        "Drama",
+        "Romance",
+        "Familia",
+        "Película de TV"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "26736",
+      "imdbId": null,
+      "title": "Los magos de Waverly Place: Vacaciones en el Caribe",
+      "year": 2009,
+      "releaseDate": "2009-08-28",
+      "overview": "La familia Russo se va de vacaciones al Caribe, al lugar donde los padres se conocieron. Alex Russo, cansada de que sus padres la controlen, lanza accidentalmente un hechizo deseando que sus padres nunca se hubiesen conocido, provocando que se olviden el uno del otro y de sus propios hijos. Alex y Justin deberán adentrarse en la selva para encontrar la Piedra de los Deseos, el único modo de revertir el hechizo. Mientras, Max, vigilará a sus padres para que no se metan en problemas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5aCizetfljyF2iMyrTPSAWpU6iM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9Qvc6fzE3PzodgJ9no11GlLYZJF.jpg",
+      "genres": [
+        "Familia",
+        "Película de TV",
+        "Aventura",
+        "Comedia",
+        "Fantasía",
+        "Acción",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "44244",
+      "imdbId": null,
+      "title": "Camp Rock 2: The Final Jam",
+      "year": 2010,
+      "releaseDate": "2010-09-17",
+      "overview": "La secuela sigue la historia de Mitchie, Shane, Jason, Nate y sus amigos cuando retornan a \"Camp Rock\" con la intención de pasar otro verano de música y diversión. Sin embargo, ellos pronto aprenden que un nuevo campamento musical, \"Camp Star\" se ha abierto al otro lado del lago y ha atraído a muchos de los profesores y alumnos de Camp Rock, poniendo el futuro de ese campamento en riesgo. Cuando el director de Camp Star desafía a Camp Rock a una \"batalla musical\" para ver cuál de los dos campamentos tiene realmente el mejor talento musical, todos se preparan para la máxima batalla de bandas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tiU02J6psYrY15tOASiJq6S18bU.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/tGgDjve3sY6me6JtefocFycCgyD.jpg",
+      "genres": [
+        "Comedia",
+        "Música",
+        "Película de TV"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "26189",
+      "imdbId": null,
+      "title": "Jóvenes y periodistas",
+      "year": 2002,
+      "releaseDate": "2002-06-28",
+      "overview": "Lexy Gold (Lindsay Lohan) es una prometedora periodista y reina de la moda que estudia en Manhattan. Junto a su mejor amiga Jennifer (Brenda Song), Lexy siempre está al acecho de las últimas primicias periodísticas y tendencias de moda. Cuando uno de sus profesores desaparece misteriosamente, Lexy pasa de ser una columnista escolar a convertirse en una decidida reportera de investigación. Y, con la ayuda de sus amigos Jennifer y Gabe y su astuto redactor Jack, Lexy se compromete a resolver el misterio. Antes de que se quieran dar cuenta, se encontrarán metidos en una aventura mucho mayor de lo que jamás se imaginaron...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7TVUCdVoiKUDHTE4w0VOnGmjCN.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1eqEZmLExg1Px2Dgz9t0Ji9ghPi.jpg",
+      "genres": [
+        "Familia",
+        "Comedia",
+        "Misterio",
+        "Película de TV"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1029549",
+      "imdbId": null,
+      "title": "Una pijama party inolvidable",
+      "year": 2023,
+      "releaseDate": "2023-07-27",
+      "overview": "En una fiesta de pijamas una sesión de hipnotismo sale mal cuando Megan, Page y Veronica se despiertan sin recuerdos de la noche anterior.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cFx31smpnhk1dbJ2Fjuqd6Ykkk6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ikYHvKwlRgQ0FZYQjj3ru9n67LV.jpg",
+      "genres": [
+        "Comedia",
+        "Familia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1592838",
+      "imdbId": null,
+      "title": "Descendants 2: A Rotten Holiday",
+      "year": 2017,
+      "releaseDate": "2017-12-09",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pFSCqPGXpjoL6V4JjEuQpvEbn7a.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zoWsfbwrwI1ZcIMJYzWY6pWEoBC.jpg",
+      "genres": [
+        "Fantasía",
+        "Animación",
+        "Familia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "DisneyNOW"
+        ]
+      }
     }
   ],
   "series": [
@@ -43780,6 +44022,1087 @@
         "region": "CO",
         "flatrate": [
           "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "70823",
+      "imdbId": null,
+      "title": "Mickey Mouse: ¡Vamos de aventura!",
+      "year": 2017,
+      "releaseDate": "2017-01-15",
+      "overview": "Mickey Mouse y sus amigos Minnie, Pluto, Goofy, Daisy y Donald transforman vehículos y participan en divertidas y animadas carreras por todo el mundo, así como en Ciudad Diversión. Cuando Minnie y Daisy no están ocupadas compitiendo, dirigen su propio negocio exitoso como Ayudantes Felices, resolviendo problemas para cualquiera que necesite una mano amiga. Anteriormente conocida como \"Mickey y los Superpilotos\", esta serie ahora se conoce como \"Mickey Mouse: ¡vamos de aventura!\", ya que su tercera temporada no trata exclusivamente de carreras.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iAy9zn5NWB92kLopi6Mon2IFKQq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7ne3CUNlcnzqEdX3jf0MQoGEP1o.jpg",
+      "genres": [
+        "Animación",
+        "Action & Adventure",
+        "Kids",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "126164",
+      "imdbId": null,
+      "title": "Aquellos maravillosos años",
+      "year": 2021,
+      "releaseDate": "2021-09-22",
+      "overview": "Historia de la familia Williams al finales de la década de 1960 narrada desde el punto de vista de una imaginativo Dean, de 12 años. Con la sabiduría de la edad adulta, los recuerdos entrañables y divertidos de Dean ponen de relieve los altibajos de crecer en una familia negra de clase media en Montgomery, Alabama, y la amistad, las risas y las lecciones aprendidas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4HzM9OtKSU5U0VXu1889HMU0PCm.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/495i0mBxW11e3QVVAVQLt525Sru.jpg",
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Familia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "205683",
+      "imdbId": null,
+      "title": "Chibiverse",
+      "year": 2022,
+      "releaseDate": "2022-07-30",
+      "overview": "Únete a tus personajes favoritos de Disney mientras organizan una presentación para celebrar sus aventuras más locas al estilo de Chibi Tiny Tales, incluidos Phineas y Ferb, Cricket Green, Anne Boonchuy, Molly McGee, Penny Proud y más.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sfLdBGHL0qsIqP7IsuMxgTYA890.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/s6BO9QBSJE2lMcUPjVJmyJeRxSY.jpg",
+      "genres": [
+        "Kids",
+        "Comedia",
+        "Animación"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "79787",
+      "imdbId": null,
+      "title": "Coop y Cami",
+      "year": 2018,
+      "releaseDate": "2018-10-12",
+      "overview": "Cooper y Cameron son dos hermanos que van juntos a la escuela de secundaria, ellos toman casi todas sus decisiones, a través de los millones de seguidores del canal en línea de Cooper.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gZkJkJt3J2PISpK9HzR4upax54P.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/qDCsU4CegdCGJMk119H52LQMEoF.jpg",
+      "genres": [
+        "Familia",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "319338",
+      "imdbId": null,
+      "title": "Travis Japan Summer Vacation!! ―7人のアメリカ旅―",
+      "year": 2026,
+      "releaseDate": "2026-05-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yd10Gq4aLGAWAqmsIedjR0181Sp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/sSUHTRthxHDsjyIDejTeZah1Ybv.jpg",
+      "genres": [
+        "Documental",
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "80056",
+      "imdbId": null,
+      "title": "Fancy  Rebeca",
+      "year": 2018,
+      "releaseDate": "2018-07-13",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2iNKvpHmh5IWlkycIGmY6yr1q7H.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/fIiiXIuFc8CRk12gh1Q7pJaZrpc.jpg",
+      "genres": [
+        "Animación",
+        "Kids"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "66014",
+      "imdbId": null,
+      "title": "Mi vida con 300 kilos",
+      "year": 2012,
+      "releaseDate": "2012-02-01",
+      "overview": "Espacio protagonizado por personas que no encajan en los patrones habituales debido a su peso. Sin embargo, los problemas de estos obesos no proceden de prejuicios estéticos, sino de cuestiones relacionadas con la salud: la pérdida de peso (facilitada con una operación de bypass gástrico) no tiene como objetivo mejorar el aspecto del protagonista, sino salvarle la vida.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rmS6nrKAscKwt91OM6KcOal8DO6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/gmSE7zgHx7Wrqh5GggAFYhrLTpA.jpg",
+      "genres": [
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "92371",
+      "imdbId": null,
+      "title": "La comida que cambió el mundo",
+      "year": 2019,
+      "releaseDate": "2019-08-11",
+      "overview": "Las fascinantes historias de las familias detrás de la comida que construyó Estados Unidos. Aquellos que usaron cerebro, músculos, sangre, sudor y lágrimas para llegar al corazón de Estados Unidos a través de su estómago. Aquellos que inventaron nuevas tecnologías y ayudaron a ganar guerras.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/l7AdS7EP0wGnK4V34p0cO2nlyKl.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/pJT70fVf19RLiYAUGAkzIlkqIkg.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "95755",
+      "imdbId": null,
+      "title": "Europa desde el cielo",
+      "year": 2019,
+      "releaseDate": "2019-11-10",
+      "overview": "Esta serie de viajes aéreos revela los secretos de los países más extraordinarios del mundo. Desde la planta de automóviles del tamaño de una ciudad de Alemania hasta el castillo más grande del mundo en Polonia o el famoso Pamplona Bull Run de España.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gqdWu3hJA4ss5Of8qzEMLdaIZZf.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zlrin9Cz9UiZHWIGFwPLAZRtiAP.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "64905",
+      "imdbId": null,
+      "title": "Ciencia para aficionados",
+      "year": 2014,
+      "releaseDate": "2014-04-09",
+      "overview": "Ciencia para aficionados es un programa que combina datos científicos con algunos de los videos grabados por aficionados más locos, espectaculares y dolorosos que existen. Esta temporada Richard Hammond nos muestra muchas maneras distintas de quedar en ridículo, lesionarse y humillarse al caminar sobre hielo, montando en carritos de la compra o cuando uno subestima la potencia de una corriente eléctrica.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sCwIEsu5hPoRU4FlS8yef1hAmzD.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/oVxQNJUi0NY4mj6VYgFWlgP5aL1.jpg",
+      "genres": [
+        "Documental",
+        "Reality",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "289832",
+      "imdbId": null,
+      "title": "The Secret of Skinwalker Ranch: Behind The Gate",
+      "year": null,
+      "releaseDate": null,
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nY4XNq1hTJuLwhb5BvgvNEOqOcx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/27hjo0GX3w22lE9bDkU4AtXvc2.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "261235",
+      "imdbId": null,
+      "title": "乐在其中",
+      "year": 2024,
+      "releaseDate": "2024-08-09",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/83glAubdd3BDUqksBLkAVex9JJv.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/hm2eYQWUcShVRSfYW8WrzzDRdRV.jpg",
+      "genres": [
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "65052",
+      "imdbId": null,
+      "title": "Control de aeropuertos: USA",
+      "year": 2020,
+      "releaseDate": "2020-01-01",
+      "overview": "Una serie que explora las historias cargadas de intensidad y emociones protagonizadas por la patrulla aduanera de Estados Unidos en algunos de los aeropuertos más concurridos del mundo por millones de pasajeros diariamente. Desde el Aeropuerto Internacional de Los Ángeles, Aeropuerto La Guardia y el Aeropuerto John F. Kennedy, entre otros. Descubra cómo se capturan a estos traficantes y sus cargamentos escondidos en lugares nunca imaginados.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2IPZiwc06JeihCF6xQzekAA2ctH.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/4LHqYNHoVVQYkXnyye9UWrSpBOI.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "296258",
+      "imdbId": null,
+      "title": "Sin límites con Chris Hemsworth: Una vida mejor",
+      "year": 2025,
+      "releaseDate": "2025-08-15",
+      "overview": "Chris Hemsworth se enfrenta a tres retos épicos para descubrir formas de mejorar nuestra salud y bienestar respaldadas por la ciencia. En primer lugar, inspirado por los beneficios cognitivos del aprendizaje de nuevas habilidades, Chris empieza a tocar la batería para ponerse a prueba actuando junto a Ed Sheeran ante 70.000 fans. Después, escala una terrorífica pared de más de 150 metros en los Alpes suizos en invierno y aprende que asumir riesgos puede mejorar la salud del cerebro y del cuerpo. Y, por último, viaja a Corea del Sur para explorar la ciencia del dolor. Allí se inspira en las tradiciones budistas y las artes marciales para prepararse ante un brutal desafío con las fuerzas especiales que incluye lagos helados, gas pimienta y electrocución. ¿Conseguirá reformular su relación con el dolor o podrá este con él? En cada episodio se abordan nuevos conocimientos científicos con relevancia en el mundo real que nos ofrecen herramientas para ayudarnos a tener una vida mejor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xbNA94OXDsyecCXT5zuoyBOCrlO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/fBmAdbiL3ageOxEQkxGkEqSBDp3.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "110527",
+      "imdbId": null,
+      "title": "Muppet Babies: enseña y cuenta",
+      "year": 2018,
+      "releaseDate": "2018-03-02",
+      "overview": "¡Waka, waka! El oso Fozzie cuenta el mejor chiste del mundo de toc-toc en \"enseña y cuenta\" y nos hace reir a todos en estos cortos de los Muppet Babies.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uWW97QTPw7u7lE81lliVmVmhn9R.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/A0bgpMkw9bN8F4R9s8olGjHhlDK.jpg",
+      "genres": [
+        "Kids"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "203884",
+      "imdbId": null,
+      "title": "ZOMBIES: Addison’s Monster Mystery",
+      "year": 2021,
+      "releaseDate": "2021-10-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/i0zFojtq3dBGTNbDmIBw1jrywpc.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vSZaVVM0KMGEI080jJ900ZlfZ9A.jpg",
+      "genres": [
+        "Animación"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "223181",
+      "imdbId": null,
+      "title": "La ciencia de lo absurdo",
+      "year": 2014,
+      "releaseDate": "2014-05-05",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nI3hvxuTB1ZPJ7kzgODLlwpBJnV.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/qjliPeODiw4kdoeWZBhx2Spt1lF.jpg",
+      "genres": [
+        "Documental",
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "86596",
+      "imdbId": null,
+      "title": "Secretos Veterinarios",
+      "year": 2018,
+      "releaseDate": "2018-07-29",
+      "overview": "El zoológico y acuario Columbus, junto con el parque The Wilds, alberga más de diez mil animales y cubre un terreno de 5800 hectáreas. El personal debe hacerse cargo de unos seis mil casos veterinarios y asistir a una centena de nacimientos por año.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7Ic1TB5Ivxsoyapag8w7jTbqC1l.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/fcAfJE3QW1BeT7wDoUCataQwO1d.jpg",
+      "genres": [
+        "Reality",
+        "Familia",
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "70386",
+      "imdbId": null,
+      "title": "Nuestros Orígenes",
+      "year": 2017,
+      "releaseDate": "2017-03-06",
+      "overview": "Esta serie es un emocionante viaje por el tiempo que se adentra en la historia para encontrar los momentos más destacados de nuestros orígenes que impulsaron nuestra evolución. Justo ahora, cuando nos encontramos en una edad tecnológica en rápido desarrollo gracias a los teléfonos inteligentes, los satélites y los próximos grandes descubrimientos, 'Nuestros orígenes' intenta dar respuesta a preguntas clave: ¿Cómo hemos llegado aquí? ¿Cómo ha evolucionado el Homo Sapiens para pasar del simio que se balancea en los árboles a los astronautas que caminan sobre la superficie lunar? La serie aporta un toque innovador y moderno a los tradicionales documentales históricos. El ideólogo Jason Silva ('Brain Games') es el conductor de este viaje que explora eventos esenciales como el descubrimiento y las aplicaciones del fuego, unos hitos que, de forma esencial e indiscutible, nos han permitido llegar a la etapa de desarrollo actual.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oBwjYXwunBsptijPEdTLtr8lzbG.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1n6vgVnMcvnzqrrcBlsmyTqGUol.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "273146",
+      "imdbId": null,
+      "title": "이게 맞아?! Behind",
+      "year": 2024,
+      "releaseDate": "2024-09-30",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hJSyZM3uPXDvgFTd0MoFKuJgm99.jpg",
+      "backdropUrl": null,
+      "genres": [
+        "Documental",
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "89666",
+      "imdbId": null,
+      "title": "Los tesoros perdidos de los Mayas",
+      "year": 2019,
+      "releaseDate": "2019-03-04",
+      "overview": "Tras un siglo de intrépidas expediciones arqueológicas, gran parte del antiguo mundo maya continúa oculto en la densa selva centroamericana. Gracias al Mapa del Tesoro, un proyecto de investigación que permite mapear el terreno a través de la vegetación y detectar estructuras inexploradas, National Geographic redescubre las maravillas de la civilización Maya.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/z2MOcqmrOp4YGhuRwAHqj0gkygW.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uZfeZjTgN6wet8MOcnU9lJg83VZ.jpg",
+      "genres": [
+        "Documental",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "22976",
+      "imdbId": null,
+      "title": "Four Weddings",
+      "year": 2009,
+      "releaseDate": "2009-07-06",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1jzNEklBbRYjajMUmmKU0KO7dYT.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9iUsXHu26ey2QTjjqHTeEZwPd1Q.jpg",
+      "genres": [
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "230226",
+      "imdbId": null,
+      "title": "Soy tu fan. La fiesta continua",
+      "year": 2023,
+      "releaseDate": "2023-11-15",
+      "overview": "¿Cómo ser adulto y no perder la magia? ¿Cómo podemos experimentar el amor cuando ya hemos dejado atrás lo mejor de nuestra juventud? Esta historia propone un reencuentro con los personajes que marcaron a una generación de mexicanos, que ahora enfrentan los dilemas de la vida adulta con sus exigencias y obligaciones, pero también con nuevos deseos y aspiraciones.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iKiT90Sbbon3y4oaiMUXlgiYC8R.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/m8Hb7XBouoLq7kPZWArHl44jxIY.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "273974",
+      "imdbId": null,
+      "title": "Náhradníci",
+      "year": 2024,
+      "releaseDate": "2024-12-13",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/s18zqocfzCHYgibqimJshllIsPf.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zyBET82GiiV7jmN56XbKZRXWOlF.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "95739",
+      "imdbId": null,
+      "title": "Ciudades Perdidas con Albert Lin",
+      "year": 2019,
+      "releaseDate": "2019-10-20",
+      "overview": "El científico y explorador de National Geographic Albert Lin viaja alrededor del mundo en busca de ciudades perdidas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mwDaLEcwkNZPYp6yZSIvhy1NcHS.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mpNeO5apIBSh4XUmfWl6CTdWN4v.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "91850",
+      "imdbId": null,
+      "title": "Apollo. La cara oculta de la Luna",
+      "year": 2019,
+      "releaseDate": "2019-07-01",
+      "overview": "¿Qué podría ser más fascinante que explorar el programa espacial Apolo desde una perspectiva nueva, impulsado por los nuevos procesos y técnicas de producción que tenemos hoy?\n\nGracias a las imágenes de archivo a todo color, que ahora han sido perfectamente restauradas por la NASA, y la recreación en 3D de las etapas clave de la misión, esta serie documental relata esta aventura épica detallando el viaje de los hombres y mujeres que participaron o ayudaron en la misión.\n\nPara no olvidar lo excepcional que fue esta hazaña, estas técnicas digitales se utilizarán para 'restaurar' la intensidad de esta aventura sin precedentes en el espacio, más allá de la imagen.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/10pgjCN8dWGS9C91FzLu1XPR2VA.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/e31v0f27FNtxfrGC7pzEnVTfiI9.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "98303",
+      "imdbId": null,
+      "title": "Drain the Oceans: Deep Dive",
+      "year": 2019,
+      "releaseDate": "2019-03-12",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/x1FFroBWpc963SP6H6awXlMzvfX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zXEunaxmhPbr2LxpX6tTF3pzYNh.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "129925",
+      "imdbId": null,
+      "title": "Secrets of Egypt's Valley of the Kings",
+      "year": 2019,
+      "releaseDate": "2019-03-24",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fJHNQCe6IutbcODQGDREdUTRj8y.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/dY3sbCnEu6bPdE9gV4kh0zOP5bF.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "85324",
+      "imdbId": null,
+      "title": "Marvel Funko Shorts",
+      "year": 2016,
+      "releaseDate": "2016-11-30",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fpqgYId4srQhyA1cXZZYzoRtYti.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1BZOjJ2qQVxyVwUFZfbCv6N6Dhn.jpg",
+      "genres": [
+        "Animación",
+        "Sci-Fi & Fantasy",
+        "Kids",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "221437",
+      "imdbId": null,
+      "title": "Europa: le meraviglie dall'alto",
+      "year": 2020,
+      "releaseDate": "2020-06-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pJdru0HjduFcRl7YQC7JDCn0tQC.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "104065",
+      "imdbId": null,
+      "title": "Playtime with Puppy Dog Pals",
+      "year": 2018,
+      "releaseDate": "2018-01-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yc3b99LHNhpDkmZAdateGDCGtqi.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/we4nco7NmUeNt7lcbzd18ktXO4g.jpg",
+      "genres": [
+        "Animación",
+        "Kids"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "121103",
+      "imdbId": null,
+      "title": "Bear Grylls Wild Adventure",
+      "year": 2021,
+      "releaseDate": "2021-03-16",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nQYswPOCUNBfoMT5czX4YOK8YgE.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/gmKwEKt5p55TE9R9rQWMqa2Bdwz.jpg",
+      "genres": [
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "120150",
+      "imdbId": null,
+      "title": "Malawi Wildlife Rescue",
+      "year": 2021,
+      "releaseDate": "2021-05-19",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2Bu3nX0qPGfBcDDDHdtuoSAEvov.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/4YmYVCPI7bpv5KT1rvxXJxLQ5PI.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "236207",
+      "imdbId": null,
+      "title": "Morphle",
+      "year": 2023,
+      "releaseDate": "2023-07-15",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mAjJ09o5ZOZ7T6Osa9PlfP9ZOYa.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/6IIqZJ69BkBhXzQLsdirq7aYpk7.jpg",
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "138604",
+      "imdbId": null,
+      "title": "Tiburones con Steve Backshall",
+      "year": 2021,
+      "releaseDate": "2021-11-07",
+      "overview": "El naturalista británico Steve Backshall celebra la diversidad de los tiburones, mostrando sus vidas secretas y las amenazas a las que se enfrentan.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9Iwm2fiIQnq7zzzN6YaSoyM9VKx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/dwl3a44BUEz5CYyGWXpgBlvD74P.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "134483",
+      "imdbId": null,
+      "title": "Secrets of the Zoo: Keeper Tales",
+      "year": 2019,
+      "releaseDate": "2019-06-03",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7pHL89d4QbEkmUPKdul14N9RuxL.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "249307",
+      "imdbId": null,
+      "title": "Tiny House Nation: Back to the Build",
+      "year": 2022,
+      "releaseDate": "2022-08-01",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "107137",
+      "imdbId": null,
+      "title": "America's Book of Secrets: Special Edition",
+      "year": 2020,
+      "releaseDate": "2020-08-11",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ORxk01FeBZIGPv6tPWkAiybArr.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ohhQxQCDUKIAEwI2Ka2ifruuFpe.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "282401",
+      "imdbId": null,
+      "title": "Monsters of the Deep: 20,000 Leagues Under the Sea",
+      "year": 2024,
+      "releaseDate": "2024-12-28",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bjUZqELIIqCswTbYFb4Z0XMBXug.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mXnlGv48ckiAMfpLjT8noBHVQL5.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "104859",
+      "imdbId": null,
+      "title": "Die Ozeane - Geheimnisse der Weltmeere",
+      "year": 2010,
+      "releaseDate": "2010-01-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pNU4kD3fCunxQehWo2MrNNJ66iS.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/pFtmyP5HO5ynOqhxLTsSRQUlK1J.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "309978",
+      "imdbId": null,
+      "title": "アイアンマンとさいこうのなかまたち",
+      "year": 2025,
+      "releaseDate": "2025-12-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rhC0mSs9gbaiJSImkP9puSIAGNF.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yaDiMo4Bgq9ZBaHfhbygoPRLlb1.jpg",
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "135922",
+      "imdbId": null,
+      "title": "Seconda Guerra: Nuove Rivelazioni",
+      "year": 2019,
+      "releaseDate": "2019-01-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yCBpiCkokzYdNqW4cRFfTN2P6ce.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/fDh2WPBtyBKbxBcSFMHW7XitTLp.jpg",
+      "genres": [
+        "Documental",
+        "War & Politics"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "220343",
+      "imdbId": null,
+      "title": "Welcome to Earth",
+      "year": 2023,
+      "releaseDate": "2023-02-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mfuj5YIMMmSvxIztx6ieFKMTNTN.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/jfOHKQT5AT0EFf0r8dfvc1oP17L.jpg",
+      "genres": [
+        "Animación",
+        "Kids"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "273302",
+      "imdbId": null,
+      "title": "Tiny House Nation: Unpacked",
+      "year": 2016,
+      "releaseDate": "2016-08-06",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yTKWY2rDJae8tKtLbjLXkQtNmWd.jpg",
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "261514",
+      "imdbId": null,
+      "title": "90 Dias Para Casar: Seguindo Emily & Sasha",
+      "year": 2022,
+      "releaseDate": "2022-08-28",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jNovdD8gBniJHInEh2AiL5UBVje.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "261365",
+      "imdbId": null,
+      "title": "90 Dias Para Casar: Seguindo Alan e Kirlyam",
+      "year": 2021,
+      "releaseDate": "2021-12-04",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wKbphBrId238SYSPLt3nRDxsCg2.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "229264",
+      "imdbId": null,
+      "title": "Guy's Grocery Games: Guy Cooks the Games",
+      "year": 2020,
+      "releaseDate": "2020-11-05",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "272153",
+      "imdbId": null,
+      "title": "Glee",
+      "year": null,
+      "releaseDate": null,
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "230660",
+      "imdbId": null,
+      "title": "메이드 인 코리아",
+      "year": 2005,
+      "releaseDate": "2005-07-24",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "203051",
+      "imdbId": null,
+      "title": "Cidades Perdidas do Antigo Testamento com Albert Lin",
+      "year": 2016,
+      "releaseDate": "2016-01-01",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6TuSnBo8Suy28pumm11SukmNTEV.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "134520",
+      "imdbId": null,
+      "title": "취향저격 선데이",
+      "year": 2019,
+      "releaseDate": "2019-05-19",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lCUbcaFNOVJTBXaR4ZxrFCjq4ls.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "129323",
+      "imdbId": null,
+      "title": "Pop Goes the Vet",
+      "year": 2020,
+      "releaseDate": "2020-08-22",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/n9dcPDU1jOw0j0CXK8h9s3fg9Fk.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ifnyMjz5aEQzPEdZA7nUvoXmmZH.jpg",
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "228825",
+      "imdbId": null,
+      "title": "Skål for Europa",
+      "year": 2019,
+      "releaseDate": "2019-01-14",
+      "overview": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9p9rFDtJbkkLLq3RjieUdAwF8bW.jpg",
+      "backdropUrl": null,
+      "genres": [
+        "Documental"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "136551",
+      "imdbId": null,
+      "title": "Переменка",
+      "year": 1976,
+      "releaseDate": "1976-01-01",
+      "overview": "",
+      "posterUrl": null,
+      "backdropUrl": null,
+      "genres": [
+        "Animación"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
         ]
       }
     }

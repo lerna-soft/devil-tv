@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T20:40:57Z",
+  "updatedAt": "2026-05-11T20:54:22Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -22,18 +22,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T20:40:57Z",
       "watched": {}
+    },
+    "tt0441773": {
+      "imdbId": "tt0441773",
+      "tmdbId": "9502",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T20:54:22Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt2948372",
-    "tmdbId": "508442",
+    "imdbId": "tt0441773",
+    "tmdbId": "9502",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T20:40:57Z"
+    "updatedAt": "2026-05-11T20:54:22Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0441773",
+      "tmdbId": "9502",
+      "title": "Kung Fu Panda",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:54:22Z"
+    },
     {
       "imdbId": "tt2948372",
       "tmdbId": "508442",

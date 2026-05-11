@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T21:06:14Z",
+  "updatedAt": "2026-05-11T21:12:18Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -52,18 +52,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T21:06:14Z",
       "watched": {}
+    },
+    "tt6587046": {
+      "imdbId": "tt6587046",
+      "tmdbId": "508883",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:12:18Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt34610311",
-    "tmdbId": "1419406",
+    "imdbId": "tt6587046",
+    "tmdbId": "508883",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T21:06:14Z"
+    "updatedAt": "2026-05-11T21:12:18Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt6587046",
+      "tmdbId": "508883",
+      "title": "El chico y la garza",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:12:18Z"
+    },
     {
       "imdbId": "tt34610311",
       "tmdbId": "1419406",

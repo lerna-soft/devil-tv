@@ -1919,6 +1919,35 @@ function buildWatchInsights() {
     if (tmdb && tmdb !== id) markProgress(tmdb, { progress: p, isCompleted, updatedAt });
   }
 
+  // Authoritative correction by latest history event:
+  // last "playing" => continue, last "completed" => rewatch.
+  for (const [id, event] of Object.entries(historyById)) {
+    const status = String(event?.playerStatus || '').trim().toLowerCase();
+    const updatedAt = Date.parse(event?.updatedAt || 0) || 0;
+    if (status === 'playing' || status === 'paused' || status === 'seeked') {
+      completedIds.delete(id);
+      continueIds.add(id);
+      if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
+    } else if (status === 'completed') {
+      continueIds.delete(id);
+      completedIds.add(id);
+      if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
+    }
+    const linked = aliasesById[id];
+    if (linked) {
+      for (const alt of linked) {
+        if (status === 'playing' || status === 'paused' || status === 'seeked') {
+          completedIds.delete(alt);
+          continueIds.add(alt);
+        } else if (status === 'completed') {
+          continueIds.delete(alt);
+          completedIds.add(alt);
+        }
+        if (updatedAt > (recentAt[alt] || 0)) recentAt[alt] = updatedAt;
+      }
+    }
+  }
+
   const lastWatch = safeJson(localStorage.getItem('mep_last_watch'));
   if (lastWatch) {
     const id = lastWatch.imdbId || lastWatch.tmdbId;

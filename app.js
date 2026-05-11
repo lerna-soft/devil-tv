@@ -1826,10 +1826,39 @@ function buildWatchInsights() {
   const recentAt = {};
   const catalog = loadLocalCatalog();
   const byId = {};
+  const aliasesById = {};
+  const registerAlias = (a, b) => {
+    const x = String(a || '').trim();
+    const y = String(b || '').trim();
+    if (!x || !y || x === y) return;
+    aliasesById[x] = aliasesById[x] || new Set();
+    aliasesById[y] = aliasesById[y] || new Set();
+    aliasesById[x].add(y);
+    aliasesById[y].add(x);
+  };
   for (const title of catalog) {
     const id = getTitleId(title);
     if (id) byId[id] = title;
+    registerAlias(title?.imdbId, title?.tmdbId);
   }
+  const markProgress = (id, payload) => {
+    const key = String(id || '').trim();
+    if (!key) return;
+    const p = Number(payload?.progress || 0);
+    const isCompleted = Boolean(payload?.isCompleted);
+    const updatedAt = Number(payload?.updatedAt || 0);
+    if (updatedAt > (recentAt[key] || 0)) recentAt[key] = updatedAt;
+    if (isCompleted) completedIds.add(key);
+    else if (p > 0) continueIds.add(key);
+    const linked = aliasesById[key];
+    if (linked) {
+      for (const alt of linked) {
+        if (updatedAt > (recentAt[alt] || 0)) recentAt[alt] = updatedAt;
+        if (isCompleted) completedIds.add(alt);
+        else if (p > 0) continueIds.add(alt);
+      }
+    }
+  };
 
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i) || '';
@@ -1881,14 +1910,13 @@ function buildWatchInsights() {
     const isPercentScale = p >= 0 && p <= 100;
     const isCompleted = status === 'completed' || (isPercentScale && p >= 95);
     const updatedAt = Date.parse(entry.updatedAt || 0) || 0;
-    if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
-    if (isCompleted) {
-      completedIds.add(id);
-      continue;
-    }
-    if (p <= 0) continue;
     scores[id] = Math.max(scores[id] || 0, 0.75 + (p / 120));
-    continueIds.add(id);
+    const imdb = String(entry?.imdbId || '').trim();
+    const tmdb = String(entry?.tmdbId || '').trim();
+    registerAlias(imdb, tmdb);
+    markProgress(id, { progress: p, isCompleted, updatedAt });
+    if (imdb && imdb !== id) markProgress(imdb, { progress: p, isCompleted, updatedAt });
+    if (tmdb && tmdb !== id) markProgress(tmdb, { progress: p, isCompleted, updatedAt });
   }
 
   const lastWatch = safeJson(localStorage.getItem('mep_last_watch'));

@@ -2965,7 +2965,8 @@ function persistProgressFromPlayerEvent(data) {
 
   record.lastProgress = snapshot.progress;
   if (!record.startedAt) record.startedAt = now;
-  if (snapshot.progress > 60 || data.player_status === 'completed') record.completedAt = record.completedAt || now;
+  // Completion is authoritative only when the player emits "completed".
+  if (data.player_status === 'completed') record.completedAt = record.completedAt || now;
   const justStarted = !hadStarted && Boolean(record.startedAt);
   const justCompleted = !hadCompleted && Boolean(record.completedAt);
 

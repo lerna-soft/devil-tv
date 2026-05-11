@@ -345,6 +345,7 @@ function mergeRemoteWatchProgress(remote) {
     history: mergeWatchHistory(existing.history || [], remote.history || [])
   };
   saveLocalWatchProgress(email, merged);
+  ensureCatalogEntriesFromWatchData(merged);
 }
 
 function mergeProgressMaps(existing, incoming) {
@@ -406,6 +407,34 @@ function mergeWatchHistory(existing, incoming) {
   return [...map.values()]
     .sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0))
     .slice(0, 500);
+}
+
+function ensureCatalogEntriesFromWatchData(watchData) {
+  const current = loadLocalCatalog();
+  const additions = [];
+  const hasById = (imdbId, tmdbId) => current.some((entry) =>
+    (imdbId && String(entry.imdbId || '').trim() === imdbId) || (tmdbId && String(entry.tmdbId || '').trim() === tmdbId)
+  );
+  const history = Array.isArray(watchData?.history) ? watchData.history : [];
+  for (const item of history) {
+    const imdbId = String(item?.imdbId || '').trim();
+    const tmdbId = String(item?.tmdbId || '').trim();
+    const id = imdbId || tmdbId;
+    if (!id || hasById(imdbId, tmdbId)) continue;
+    additions.push({
+      catalogKey: `${String(item?.type || 'movie').trim() || 'movie'}:${imdbId ? 'imdb' : 'tmdb'}:${id}`,
+      type: String(item?.type || 'movie').trim() || 'movie',
+      imdbId,
+      tmdbId,
+      title: String(item?.title || id).trim(),
+      year: null,
+      description: 'Sincronizado desde historial',
+      posterUrl: '',
+      playable: true,
+      metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
+    });
+  }
+  if (additions.length > 0) saveLocalCatalog(dedupe([...current, ...additions], { consolidateEquivalent: true }));
 }
 
 function persistSyncedWatchSnapshot(kind, snapshot) {
@@ -1833,10 +1862,21 @@ function buildWatchInsights() {
   const authUser = getAuthUser();
   const synced = authUser?.email ? loadSyncedWatchProgress(authUser.email) : null;
   const remoteProgress = synced?.progress && typeof synced.progress === 'object' ? synced.progress : {};
+  const historyById = {};
+  for (const event of Array.isArray(synced?.history) ? synced.history : []) {
+    const id = String(event?.imdbId || event?.tmdbId || '').trim();
+    if (!id) continue;
+    const prev = historyById[id];
+    const at = Date.parse(event?.updatedAt || 0) || 0;
+    if (!prev || at > (Date.parse(prev.updatedAt || 0) || 0)) historyById[id] = event;
+  }
   for (const [id, entry] of Object.entries(remoteProgress)) {
     if (!entry || typeof entry !== 'object') continue;
     const p = Number(entry.lastProgress ?? entry.progress ?? 0);
-    const isCompleted = p >= 95;
+    const lastEvent = historyById[id];
+    const status = String(lastEvent?.playerStatus || '').trim().toLowerCase();
+    const isPercentScale = p >= 0 && p <= 100;
+    const isCompleted = status === 'completed' || (isPercentScale && p >= 95);
     const updatedAt = Date.parse(entry.updatedAt || 0) || 0;
     if (updatedAt > (recentAt[id] || 0)) recentAt[id] = updatedAt;
     if (isCompleted) {

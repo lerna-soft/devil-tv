@@ -42,6 +42,9 @@ const TMDB_READ_TOKEN_CIPHER = 'CBw6NxYqBwsQHSUiMBQWWisQFU8fCBw6NxA6NQsQHSUCPzo0
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
 const TMDB_ALERT_LABEL = 'tmdb-token-alert';
 const TMDB_ALERT_DEDUPE_PREFIX = 'mep_tmdb_alert_once_';
+const SEED_SYNC_LABEL = 'catalog-seed-sync';
+const SEED_SYNC_DEDUPE_PREFIX = 'mep_seed_sync_once_';
+const SEED_CATALOG_KEYS_STORAGE = 'mep_seed_catalog_keys_v1';
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
@@ -717,6 +720,12 @@ async function hydrateSeedCatalog() {
   for (const entry of seed.series ?? []) {
     items.push(normalizeSeedEntry(entry, 'series'));
   }
+  try {
+    const keys = dedupe(items, { consolidateEquivalent: true })
+      .map((entry) => getSeedSyncKey(entry))
+      .filter(Boolean);
+    localStorage.setItem(SEED_CATALOG_KEYS_STORAGE, JSON.stringify(keys));
+  } catch {}
 
   const current = loadLocalCatalog();
   const merged = dedupe([...current, ...items]);
@@ -1087,6 +1096,56 @@ async function queueWatchProgressSync(snapshot) {
   } catch {
     // local fallback remains authoritative if sync is unavailable
   }
+}
+
+function buildCatalogSeedSyncIssueBody(title) {
+  return [
+    'CATALOG_SEED_SYNC_REQUEST',
+    `Type: ${String(title?.type || '').trim()}`,
+    `IMDb: ${String(title?.imdbId || '').trim()}`,
+    `TMDB: ${String(title?.tmdbId || '').trim()}`,
+    `Title: ${String(title?.title || '').trim()}`,
+    `Year: ${Number(title?.year) || ''}`,
+    `PosterUrl: ${String(title?.posterUrl || '').trim()}`,
+    `Description: ${String(title?.description || '').trim()}`,
+    `Page: ${window.location.href}`,
+    `CreatedAt: ${new Date().toISOString()}`
+  ].join('\n');
+}
+
+function getSeedSyncKey(title) {
+  const type = String(title?.type || '').trim().toLowerCase();
+  const imdb = String(title?.imdbId || '').trim();
+  const tmdb = String(title?.tmdbId || '').trim();
+  if (!type || (!imdb && !tmdb)) return '';
+  return `${type}:${imdb || tmdb}`;
+}
+
+function existsInSeedCatalog(title) {
+  const key = getSeedSyncKey(title);
+  if (!key) return false;
+  try {
+    const keys = JSON.parse(localStorage.getItem(SEED_CATALOG_KEYS_STORAGE) || '[]');
+    return Array.isArray(keys) ? keys.includes(key) : false;
+  } catch {
+    return false;
+  }
+}
+
+function queueCatalogSeedSyncForTitle(title) {
+  const dedupeKey = getSeedSyncKey(title);
+  if (!dedupeKey) return;
+  if (existsInSeedCatalog(title)) return;
+  const onceKey = `${SEED_SYNC_DEDUPE_PREFIX}${dedupeKey}`;
+  if (localStorage.getItem(onceKey) === '1') return;
+  localStorage.setItem(onceKey, '1');
+  void openGitHubIssue(
+    `Catalog seed sync: ${String(title?.title || dedupeKey)}`,
+    buildCatalogSeedSyncIssueBody(title),
+    [SEED_SYNC_LABEL]
+  ).catch(() => {
+    localStorage.removeItem(onceKey);
+  });
 }
 
 function bindEvaluationPanel(title) {
@@ -1593,6 +1652,7 @@ function renderRemoteResults(query) {
     item.addEventListener('click', () => {
       const remote = merged[Number(item.dataset.remoteIndex)]?.title;
       if (!remote) return;
+      queueCatalogSeedSyncForTitle(remote);
       state.selected = remote;
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);

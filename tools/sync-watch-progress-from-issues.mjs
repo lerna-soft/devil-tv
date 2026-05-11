@@ -46,7 +46,6 @@ async function main() {
 
   await fs.writeFile(INDEX_PATH, `${JSON.stringify({ users: mergedIndex }, null, 2)}\n`, 'utf8');
   await writeUserFiles(users);
-  await closeProcessedIssues(processedIssues);
   await writeReport(processedIssues);
   console.log(`[watch-progress] wrote ${INDEX_PATH}`);
   console.log(`[watch-progress] users: ${mergedIndex.length}`);
@@ -66,8 +65,7 @@ function normalizeIndexEntry(entry) {
 }
 
 async function loadUsersFromIssues(existingIndex) {
-  const eventIssue = await loadEventIssue();
-  let issues = eventIssue ? [eventIssue] : await fetchAllIssues();
+  let issues = await fetchAllIssues();
   issues = [...issues].sort((a, b) => {
     const at = Date.parse(a?.created_at || a?.updated_at || 0) || 0;
     const bt = Date.parse(b?.created_at || b?.updated_at || 0) || 0;
@@ -98,19 +96,6 @@ async function loadUsersFromIssues(existingIndex) {
   }
 
   return { users: dedupeUsers(users), processedIssues: dedupeIssues(processedIssues) };
-}
-
-async function loadEventIssue() {
-  const eventPath = String(process.env.GITHUB_EVENT_PATH || '').trim();
-  if (!eventPath) return null;
-  const raw = await fs.readFile(eventPath, 'utf8').catch(() => '');
-  if (!raw.trim()) return null;
-  const event = JSON.parse(raw);
-  const issue = event?.issue;
-  if (!issue || issue.pull_request) return null;
-  const labels = Array.isArray(issue.labels) ? issue.labels.map((label) => String(label?.name || '').trim()) : [];
-  if (!labels.includes(LABEL)) return null;
-  return issue;
 }
 
 function parseIssue(issue) {
@@ -301,32 +286,6 @@ function mergeHistory(existing, incoming) {
   return [...map.values()]
     .sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0))
     .slice(0, 500);
-}
-
-async function closeProcessedIssues(processedIssues) {
-  for (const issue of processedIssues) {
-    const url = `https://api.github.com/repos/${OWNER_REPO}/issues/${issue.number}`;
-    const response = await fetch(url, {
-      method: 'PATCH',
-      headers: {
-        accept: 'application/vnd.github+json',
-        authorization: `Bearer ${TOKEN}`,
-        'content-type': 'application/json',
-        'x-github-api-version': '2022-11-28',
-        'user-agent': 'media-evaluation-platform-static'
-      },
-      body: JSON.stringify({ state: 'closed' })
-    });
-    if (!response.ok) {
-      const text = await response.text().catch(() => '');
-      if ([404, 410, 422].includes(response.status)) {
-        console.warn(`[watch-progress] skip close issue #${issue.number}: ${response.status}`);
-        continue;
-      }
-      throw new Error(`Failed to close issue #${issue.number} (${response.status} ${response.statusText})\n${text}`.trim());
-    }
-    console.log(`[watch-progress] closed issue #${issue.number}`);
-  }
 }
 
 async function writeReport(processedIssues) {

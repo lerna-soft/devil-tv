@@ -33,7 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          WATCH_PROGRESS_MAX_ISSUES: "50"
+          WATCH_PROGRESS_MAX_ISSUES: "1"
         run: |
           set -euxo pipefail
           node tools/sync-watch-progress-from-issues.mjs

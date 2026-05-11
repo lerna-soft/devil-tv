@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "generatedAt": "2026-05-11T20:20:14.247Z",
+  "version": 10,
+  "generatedAt": "2026-05-11T21:45:24.860Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -24865,6 +24865,22 @@
       "releaseDate": null,
       "overview": "Page: https://lerna-admin.github.io/media-evaluation-platform-static/#/browse?q=Cump",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BOWMzMjM5NDktMGZhYS00NGM5LTgzZWItYjAzNzkzYmVjZmM5XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0096895",
+      "title": "Batman",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "Michael Keaton, Jack Nicholson",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

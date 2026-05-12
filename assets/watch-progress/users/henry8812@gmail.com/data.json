@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-12T02:49:06Z",
+  "updatedAt": "2026-05-12T03:01:42Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -88,9 +88,9 @@
       "tmdbId": "37680",
       "lastSeason": 3,
       "lastEpisode": 14,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-12T02:49:06Z",
+      "progress": 2578.743,
+      "lastProgress": 2578.743,
+      "updatedAt": "2026-05-12T03:01:42Z",
       "watched": {}
     }
   },
@@ -99,11 +99,22 @@
     "tmdbId": "37680",
     "season": 3,
     "episode": 14,
-    "progress": 0,
-    "updatedAt": "2026-05-12T02:49:06Z"
+    "progress": 2578.743,
+    "updatedAt": "2026-05-12T03:01:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1632701",
+      "tmdbId": "37680",
+      "title": "Suits: la clave del éxito",
+      "type": "series",
+      "season": 3,
+      "episode": 14,
+      "progress": 2578.743,
+      "playerStatus": "completed",
+      "updatedAt": "2026-05-12T03:01:42Z"
+    },
     {
       "imdbId": "tt1632701",
       "tmdbId": "37680",

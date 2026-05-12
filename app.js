@@ -311,13 +311,17 @@ function saveLocalWatchProgress(email, progress) {
 async function loadRemoteWatchProgress(email) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!normalizedEmail) return null;
-  const index = await fetchJsonWithTimeout(`${WATCH_PROGRESS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`).catch(() => null);
+  const cacheTag = window.__mep_build || Date.now();
+  const primary = await fetchJsonWithTimeout(`./assets/watch-progress/users/${encodeURIComponent(normalizedEmail)}/data.json?v=${cacheTag}`).catch(() => null);
+  if (primary?.email) return primary;
+
+  const index = await fetchJsonWithTimeout(`${WATCH_PROGRESS_INDEX_PATH}?v=${cacheTag}`).catch(() => null);
   const entry = Array.isArray(index?.users)
     ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
     : null;
-  const file = String(entry?.file || `${normalizedEmail}.json`);
-  const record = await fetchJsonWithTimeout(`./assets/watch-progress/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`).catch(() => null);
-  return record?.email ? record : null;
+  const fallbackFile = String(entry?.file || `${normalizedEmail}.json`);
+  const legacy = await fetchJsonWithTimeout(`./assets/watch-progress/${encodeURIComponent(fallbackFile)}?v=${cacheTag}`).catch(() => null);
+  return legacy?.email ? legacy : null;
 }
 
 async function hydrateWatchProgressForCurrentUser() {

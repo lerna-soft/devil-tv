@@ -1,6 +1,6 @@
 {
-  "version": 20,
-  "generatedAt": "2026-05-12T19:00:54.610Z",
+  "version": 21,
+  "generatedAt": "2026-05-12T19:01:33.417Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -24993,6 +24993,22 @@
       "releaseDate": null,
       "overview": "Kakalo, Carin León",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTExYzVlMzktYWE0NS00ZTc3LWI5NTEtMzNlNTM0Nzg2NjFhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt29044497",
+      "title": "Mis capacidades",
+      "year": 2015,
+      "releaseDate": null,
+      "overview": "Jesús Gil, Carlos Guzmán",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTRjY2M1NTgtMTQ1Yy00NjdjLWFlNzEtMzk0NGM0YTA0MGQ0XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

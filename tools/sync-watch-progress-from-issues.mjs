@@ -43,8 +43,7 @@ async function main() {
   await fs.mkdir(STORE_DIR, { recursive: true });
   await fs.mkdir(USERS_DIR, { recursive: true });
   const existingIndex = await loadIndex();
-  await migrateLegacyUserFiles(existingIndex);
-  const { users, processedIssues } = await loadUsersFromIssues(existingIndex);
+  const { users, processedIssues } = await loadUsersFromIssues();
   const mergedIndex = mergeIndex(existingIndex, users);
 
   await fs.writeFile(INDEX_PATH, `${JSON.stringify({ users: mergedIndex }, null, 2)}\n`, 'utf8');
@@ -76,11 +75,7 @@ function resolveUserPath(file) {
   return path.join(STORE_DIR, String(file || '').trim());
 }
 
-function legacyUserPath(email) {
-  return path.join(STORE_DIR, `${normalizeEmail(email)}.json`);
-}
-
-async function loadUsersFromIssues(existingIndex) {
+async function loadUsersFromIssues() {
   let issues = await fetchAllIssues();
   issues = [...issues].sort((a, b) => {
     const at = Date.parse(a?.created_at || a?.updated_at || 0) || 0;
@@ -205,7 +200,7 @@ async function writeUserFiles(users) {
   for (const user of users) {
     const filePath = resolveUserPath(user.file || userDataRelativePath(user.email));
     await fs.mkdir(path.dirname(filePath), { recursive: true });
-    const existingRaw = await loadExistingUserRaw(user);
+    const existingRaw = await fs.readFile(filePath, 'utf8').catch(() => '');
     const existing = existingRaw.trim() ? safeJson(existingRaw) : {};
     const existingProgress = existing?.progress && typeof existing.progress === 'object' ? existing.progress : {};
     const key = user.imdbId || user.tmdbId;
@@ -254,38 +249,6 @@ async function writeUserFiles(users) {
     };
     await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
     console.log(`[watch-progress] wrote ${filePath}`);
-  }
-}
-
-async function loadExistingUserRaw(user) {
-  const primaryPath = resolveUserPath(user.file || userDataRelativePath(user.email));
-  const primary = await fs.readFile(primaryPath, 'utf8').catch(() => '');
-  if (primary.trim()) return primary;
-  return fs.readFile(legacyUserPath(user.email), 'utf8').catch(() => '');
-}
-
-async function migrateLegacyUserFiles(existingIndex) {
-  const knownEmails = new Set((existingIndex || []).map((entry) => normalizeEmail(entry.email)).filter(Boolean));
-  const entries = await fs.readdir(STORE_DIR, { withFileTypes: true }).catch(() => []);
-  for (const entry of entries) {
-    if (!entry.isFile()) continue;
-    if (!entry.name.endsWith('.json')) continue;
-    if (entry.name === 'index.json') continue;
-    const email = normalizeEmail(entry.name.replace(/\.json$/i, ''));
-    if (!email) continue;
-    knownEmails.add(email);
-  }
-
-  for (const email of knownEmails) {
-    const legacyPath = legacyUserPath(email);
-    const targetPath = resolveUserPath(userDataRelativePath(email));
-    const targetRaw = await fs.readFile(targetPath, 'utf8').catch(() => '');
-    if (targetRaw.trim()) continue;
-    const legacyRaw = await fs.readFile(legacyPath, 'utf8').catch(() => '');
-    if (!legacyRaw.trim()) continue;
-    await fs.mkdir(path.dirname(targetPath), { recursive: true });
-    await fs.writeFile(targetPath, legacyRaw, 'utf8');
-    console.log(`[watch-progress] migrated ${legacyPath} -> ${targetPath}`);
   }
 }
 

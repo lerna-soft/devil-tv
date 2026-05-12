@@ -30,7 +30,6 @@ const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
-const WATCH_PROGRESS_INDEX_PATH = './assets/watch-progress/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
@@ -313,15 +312,7 @@ async function loadRemoteWatchProgress(email) {
   if (!normalizedEmail) return null;
   const cacheTag = window.__mep_build || Date.now();
   const primary = await fetchJsonWithTimeout(`./assets/watch-progress/users/${encodeURIComponent(normalizedEmail)}/data.json?v=${cacheTag}`).catch(() => null);
-  if (primary?.email) return primary;
-
-  const index = await fetchJsonWithTimeout(`${WATCH_PROGRESS_INDEX_PATH}?v=${cacheTag}`).catch(() => null);
-  const entry = Array.isArray(index?.users)
-    ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
-    : null;
-  const fallbackFile = String(entry?.file || `${normalizedEmail}.json`);
-  const legacy = await fetchJsonWithTimeout(`./assets/watch-progress/${encodeURIComponent(fallbackFile)}?v=${cacheTag}`).catch(() => null);
-  return legacy?.email ? legacy : null;
+  return primary?.email ? primary : null;
 }
 
 async function hydrateWatchProgressForCurrentUser() {

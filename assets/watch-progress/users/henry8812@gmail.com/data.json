@@ -1,0 +1,472 @@
+{
+  "email": "henry8812@gmail.com",
+  "name": "Henry Gomez",
+  "updatedAt": "2026-05-11T21:45:28Z",
+  "progress": {
+    "tt3359350": {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 1387.408829,
+      "lastProgress": 1387.408829,
+      "updatedAt": "2026-05-11T20:34:33Z",
+      "watched": {}
+    },
+    "tt2948372": {
+      "imdbId": "tt2948372",
+      "tmdbId": "508442",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T20:40:57Z",
+      "watched": {}
+    },
+    "tt0441773": {
+      "imdbId": "tt0441773",
+      "tmdbId": "9502",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T20:54:22Z",
+      "watched": {}
+    },
+    "tt0455944": {
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:00:45Z",
+      "watched": {}
+    },
+    "tt34610311": {
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:06:14Z",
+      "watched": {}
+    },
+    "tt6587046": {
+      "imdbId": "tt6587046",
+      "tmdbId": "508883",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:12:18Z",
+      "watched": {}
+    },
+    "tt1345836": {
+      "imdbId": "tt1345836",
+      "tmdbId": "49026",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:30:15Z",
+      "watched": {}
+    },
+    "tt0398417": {
+      "imdbId": "tt0398417",
+      "tmdbId": "2022",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T21:45:28Z",
+      "watched": {}
+    }
+  },
+  "lastWatch": {
+    "imdbId": "tt0398417",
+    "tmdbId": "2022",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-05-11T21:45:28Z"
+  },
+  "lastSelection": null,
+  "history": [
+    {
+      "imdbId": "tt0398417",
+      "tmdbId": "2022",
+      "title": "The Batman",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:45:28Z"
+    },
+    {
+      "imdbId": "tt1345836",
+      "tmdbId": "49026",
+      "title": "El caballero oscuro: La leyenda renace",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:30:15Z"
+    },
+    {
+      "imdbId": "tt6587046",
+      "tmdbId": "508883",
+      "title": "El chico y la garza",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:12:18Z"
+    },
+    {
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "title": "Escuadrón letal",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:06:14Z"
+    },
+    {
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "title": "The equalizer (El protector)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T21:00:45Z"
+    },
+    {
+      "imdbId": "tt0441773",
+      "tmdbId": "9502",
+      "title": "Kung Fu Panda",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:54:22Z"
+    },
+    {
+      "imdbId": "tt2948372",
+      "tmdbId": "508442",
+      "title": "Soul",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:40:57Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1387.408829,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:34:33Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1367.215982,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:34:13Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1347.029405,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:33:53Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1336.941076,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:33:43Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1321.790121,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:33:27Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1291.898117,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:32:57Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1276.756638,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:32:42Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1246.47533,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:32:12Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1236.381631,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:32:02Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1221.24146,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:31:46Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1201.054399,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:31:26Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1175.817743,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:31:01Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1145.543141,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:30:31Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1135.446396,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:30:21Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1125.355292,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:30:11Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1115.586281,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:30:00Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 929.696835,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:26:03Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 919.608165,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:25:53Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 525.471765,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:25:07Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 500.23123,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:24:42Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 490.138511,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:24:31Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 469.953769,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:24:11Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 449.76713,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:23:51Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 429.574944,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:23:31Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 399.29804,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:23:01Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 363.968332,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:22:25Z"
+    },
+    {
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 278.166872,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T20:21:11Z"
+    }
+  ]
+}

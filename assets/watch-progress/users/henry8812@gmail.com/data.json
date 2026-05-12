@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-12T03:01:54Z",
+  "updatedAt": "2026-05-12T03:21:15Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -92,18 +92,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-12T03:01:44Z",
       "watched": {}
+    },
+    "tt38121182": {
+      "imdbId": "tt38121182",
+      "tmdbId": "1539104",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-12T03:21:15Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt3359350",
-    "tmdbId": "359410",
+    "imdbId": "tt38121182",
+    "tmdbId": "1539104",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-12T03:01:54Z"
+    "updatedAt": "2026-05-12T03:21:15Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt38121182",
+      "tmdbId": "1539104",
+      "title": "JUJUTSU KAISEN: Ejecución",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-12T03:21:15Z"
+    },
     {
       "imdbId": "tt3359350",
       "tmdbId": "359410",

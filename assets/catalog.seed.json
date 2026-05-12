@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "generatedAt": "2026-05-12T19:01:33.417Z",
+  "version": 22,
+  "generatedAt": "2026-05-12T23:30:12.413Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47473,6 +47473,22 @@
       "releaseDate": null,
       "overview": "Jeff Jellison, Mark Goodyear",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzE2MDcyYWItM2ZkNC00ZDA5LWJmZWUtY2EyMDU5ZDA5N2U4XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "296232",
+      "imdbId": null,
+      "title": "Snowball Earth",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Animation, Action & Adventure, Sci-Fi & Fantasy",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/61E9aXjYUGPfrO5CW2cTutu0jX3.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

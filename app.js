@@ -44,6 +44,7 @@ const TMDB_ALERT_DEDUPE_PREFIX = 'mep_tmdb_alert_once_';
 const SEED_SYNC_LABEL = 'catalog-seed-sync';
 const SEED_SYNC_DEDUPE_PREFIX = 'mep_seed_sync_once_';
 const SEED_CATALOG_KEYS_STORAGE = 'mep_seed_catalog_keys_v1';
+const SEED_SYNC_WINDOW_MS = 12 * 60 * 60 * 1000;
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
@@ -1215,10 +1216,15 @@ function existsInSeedCatalog(title) {
 function queueCatalogSeedSyncForTitle(title) {
   const dedupeKey = getSeedSyncKey(title);
   if (!dedupeKey) return;
-  if (existsInSeedCatalog(title)) return;
   const onceKey = `${SEED_SYNC_DEDUPE_PREFIX}${dedupeKey}`;
-  if (localStorage.getItem(onceKey) === '1') return;
-  localStorage.setItem(onceKey, '1');
+  if (existsInSeedCatalog(title)) {
+    localStorage.removeItem(onceKey);
+    return;
+  }
+  const now = Date.now();
+  const lastAt = Number(localStorage.getItem(onceKey) || '0');
+  if (lastAt && (now - lastAt) < SEED_SYNC_WINDOW_MS) return;
+  localStorage.setItem(onceKey, String(now));
   void openGitHubIssue(
     `Catalog seed sync: ${String(title?.title || dedupeKey)}`,
     buildCatalogSeedSyncIssueBody(title),
@@ -1632,6 +1638,7 @@ function bindLocalCardEvents() {
         if (Date.now() - lastDragAt < 350) return;
       }
       state.selected = loadLocalCatalog().find((title) => title.catalogKey === item.dataset.key);
+      if (isAuthenticated() && state.selected) queueCatalogSeedSyncForTitle(state.selected);
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       state.hydratedProgressId = '';

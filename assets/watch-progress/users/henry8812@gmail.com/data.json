@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-12T02:38:28Z",
+  "updatedAt": "2026-05-12T02:38:32Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -76,11 +76,11 @@
     "tt0398417": {
       "imdbId": "tt0398417",
       "tmdbId": "2022",
-      "lastSeason": 1,
-      "lastEpisode": 13,
-      "progress": 1273.939568,
-      "lastProgress": 1273.939568,
-      "updatedAt": "2026-05-12T02:38:28Z",
+      "lastSeason": 2,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-12T02:38:32Z",
       "watched": {}
     },
     "tt1632701": {
@@ -97,13 +97,24 @@
   "lastWatch": {
     "imdbId": "tt0398417",
     "tmdbId": "2022",
-    "season": 1,
-    "episode": 13,
-    "progress": 1273.939568,
-    "updatedAt": "2026-05-12T02:38:28Z"
+    "season": 2,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-05-12T02:38:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0398417",
+      "tmdbId": "2022",
+      "title": "The Batman",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-12T02:38:32Z"
+    },
     {
       "imdbId": "tt0398417",
       "tmdbId": "2022",

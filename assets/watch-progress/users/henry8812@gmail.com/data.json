@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-12T05:01:04Z",
+  "updatedAt": "2026-05-12T09:36:57Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -102,18 +102,39 @@
       "lastProgress": 9.875331,
       "updatedAt": "2026-05-12T04:01:31Z",
       "watched": {}
+    },
+    "tt4303340": {
+      "imdbId": "tt4303340",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-12T09:36:57Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt3359350",
-    "tmdbId": "359410",
+    "imdbId": "tt4303340",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 4572.765832846665,
-    "updatedAt": "2026-05-12T05:01:04Z"
+    "progress": 0,
+    "updatedAt": "2026-05-12T09:36:57Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt4303340",
+      "tmdbId": "",
+      "title": "I Am Not a Serial Killer",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-12T09:36:57Z"
+    },
     {
       "imdbId": "tt3359350",
       "tmdbId": "359410",

@@ -21,6 +21,7 @@ const state = {
 let suppressRouteSync = false;
 let episodeIndexPromise = null;
 let episodeManifestPromise = null;
+let watchProgressHeartbeatStarted = false;
 const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
 
@@ -45,6 +46,10 @@ const SEED_SYNC_LABEL = 'catalog-seed-sync';
 const SEED_SYNC_DEDUPE_PREFIX = 'mep_seed_sync_once_';
 const SEED_CATALOG_KEYS_STORAGE = 'mep_seed_catalog_keys_v1';
 const SEED_SYNC_WINDOW_MS = 12 * 60 * 60 * 1000;
+const WATCH_PROGRESS_HEARTBEAT_MS = 60 * 1000;
+const WATCH_PROGRESS_HEARTBEAT_LOCK_KEY = 'mep_watch_progress_queue_heartbeat_lock_v1';
+const WATCH_PROGRESS_HEARTBEAT_DISPATCH_KEY = 'mep_watch_progress_queue_heartbeat_last_dispatch_v1';
+const WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS = 2 * 60 * 1000;
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
@@ -185,6 +190,7 @@ function bindAuth() {
       saveAuthSession(validated.user);
       hideAuthGate();
       updateAuthUi();
+      startWatchProgressQueueHeartbeat();
       void hydrateWatchProgressForCurrentUser();
       renderCatalog();
       return;
@@ -769,6 +775,7 @@ function updateAuthUi() {
 }
 
 updateAuthUi();
+startWatchProgressQueueHeartbeat();
 hydrateWatchProgressForCurrentUser().catch(() => {});
 
 async function hydrateSeedCatalog() {
@@ -955,6 +962,71 @@ async function openGitHubIssue(title, body, labels = []) {
   }
 
   return response.json();
+}
+
+async function githubApiJson(pathname, init = {}) {
+  const token = await getGitHubIssueToken();
+  const response = await fetch(`https://api.github.com${pathname}`, {
+    ...init,
+    headers: {
+      accept: 'application/vnd.github+json',
+      authorization: `Bearer ${token}`,
+      'content-type': 'application/json',
+      'x-github-api-version': '2022-11-28',
+      ...(init.headers || {})
+    }
+  });
+  if (!response.ok) {
+    const text = await response.text().catch(() => '');
+    throw new Error(`GitHub API failed (${response.status} ${response.statusText})${text ? `: ${text}` : ''}`);
+  }
+  return response.status === 204 ? null : response.json();
+}
+
+async function triggerWatchProgressQueueDrainIfNeeded() {
+  if (!isAuthenticated()) return;
+  const user = getAuthUser();
+  if (!user?.email) return;
+
+  const now = Date.now();
+  const lockUntil = Number(localStorage.getItem(WATCH_PROGRESS_HEARTBEAT_LOCK_KEY) || '0');
+  if (lockUntil && lockUntil > now) return;
+  localStorage.setItem(WATCH_PROGRESS_HEARTBEAT_LOCK_KEY, String(now + 20 * 1000));
+
+  try {
+    const openIssues = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/issues?state=open&labels=watch-progress-sync&per_page=1');
+    const openCount = Array.isArray(openIssues) ? openIssues.length : 0;
+    if (openCount <= 0) return;
+
+    const resolveRuns = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/resolve-watch-progress-issue.yml/runs?per_page=10');
+    const drainRuns = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/runs?per_page=10');
+    const hasActiveRun = [...(resolveRuns?.workflow_runs || []), ...(drainRuns?.workflow_runs || [])]
+      .some((run) => ['queued', 'in_progress', 'waiting', 'requested', 'pending'].includes(String(run?.status || '').toLowerCase()));
+    if (hasActiveRun) return;
+
+    const lastDispatchAt = Number(localStorage.getItem(WATCH_PROGRESS_HEARTBEAT_DISPATCH_KEY) || '0');
+    if (lastDispatchAt && (now - lastDispatchAt) < WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS) return;
+
+    await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'main' })
+    });
+    localStorage.setItem(WATCH_PROGRESS_HEARTBEAT_DISPATCH_KEY, String(now));
+  } catch {
+    // Keep UI responsive; heartbeat is best effort.
+  } finally {
+    localStorage.removeItem(WATCH_PROGRESS_HEARTBEAT_LOCK_KEY);
+  }
+}
+
+function startWatchProgressQueueHeartbeat() {
+  if (watchProgressHeartbeatStarted) return;
+  if (!isAuthenticated()) return;
+  watchProgressHeartbeatStarted = true;
+  triggerWatchProgressQueueDrainIfNeeded().catch(() => {});
+  window.setInterval(() => {
+    triggerWatchProgressQueueDrainIfNeeded().catch(() => {});
+  }, WATCH_PROGRESS_HEARTBEAT_MS);
 }
 
 function showIssueFeedback({ kind, title, html, text, confirmText = 'OK' }) {

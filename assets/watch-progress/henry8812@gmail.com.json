@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-11T23:40:20Z",
+  "updatedAt": "2026-05-11T23:43:30Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -82,18 +82,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-11T23:40:20Z",
       "watched": {}
+    },
+    "tt28776190": {
+      "imdbId": "tt28776190",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-11T23:43:30Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt0398417",
-    "tmdbId": "2022",
+    "imdbId": "tt28776190",
+    "tmdbId": "",
     "season": 1,
-    "episode": 6,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-11T23:40:20Z"
+    "updatedAt": "2026-05-11T23:43:30Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt28776190",
+      "tmdbId": "",
+      "title": "Shangri-La Frontier",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-11T23:43:30Z"
+    },
     {
       "imdbId": "tt0398417",
       "tmdbId": "2022",

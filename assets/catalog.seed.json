@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "generatedAt": "2026-05-12T09:26:55.004Z",
+  "version": 18,
+  "generatedAt": "2026-05-12T09:36:57.240Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47409,6 +47409,22 @@
       "releaseDate": null,
       "overview": "Kids, Animation, Sci-Fi & Fantasy",
       "posterUrl": "https://image.tmdb.org/t/p/w500/3pjsgCyli0xupAOSvJsKKo7hlia.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt35617850",
+      "title": "The Fox Hollow Murders: Playground of a Serial Killer",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Jeff Jellison, Mark Goodyear",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzE2MDcyYWItM2ZkNC00ZDA5LWJmZWUtY2EyMDU5ZDA5N2U4XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 23,
-  "generatedAt": "2026-05-12T23:30:25.856Z",
+  "version": 24,
+  "generatedAt": "2026-05-12T23:30:57.830Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25009,6 +25009,22 @@
       "releaseDate": null,
       "overview": "Jesús Gil, Carlos Guzmán",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTRjY2M1NTgtMTQ1Yy00NjdjLWFlNzEtMzk0NGM0YTA0MGQ0XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0472219",
+      "title": "The Batman vs. Dracula",
+      "year": 2005,
+      "releaseDate": null,
+      "overview": "Rino Romano, Peter Stormare",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTkyMTMwNjA3MV5BMl5BanBnXkFtZTcwNzE2NTI2OQ@@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

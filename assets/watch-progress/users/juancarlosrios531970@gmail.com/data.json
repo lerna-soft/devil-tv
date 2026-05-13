@@ -1,0 +1,39 @@
+{
+  "email": "juancarlosrios531970@gmail.com",
+  "name": "Juan carlos Rios",
+  "updatedAt": "2026-05-13T17:00:31Z",
+  "progress": {
+    "tt0480489": {
+      "imdbId": "tt0480489",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 2,
+      "progress": 974.321778,
+      "lastProgress": 974.321778,
+      "updatedAt": "2026-05-13T17:00:31Z",
+      "watched": {}
+    }
+  },
+  "lastWatch": {
+    "imdbId": "tt0480489",
+    "tmdbId": "",
+    "season": 1,
+    "episode": 2,
+    "progress": 974.321778,
+    "updatedAt": "2026-05-13T17:00:31Z"
+  },
+  "lastSelection": null,
+  "history": [
+    {
+      "imdbId": "tt0480489",
+      "tmdbId": "",
+      "title": "Elfen Lied",
+      "type": "series",
+      "season": 1,
+      "episode": 2,
+      "progress": 974.321778,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-13T17:00:31Z"
+    }
+  ]
+}

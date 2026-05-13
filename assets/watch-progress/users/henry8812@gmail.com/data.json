@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-12T23:31:31Z",
+  "updatedAt": "2026-05-13T00:06:12Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -130,7 +130,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-12T23:31:31Z",
+      "updatedAt": "2026-05-13T00:06:12Z",
       "watched": {}
     }
   },
@@ -140,10 +140,21 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-12T23:31:31Z"
+    "updatedAt": "2026-05-13T00:06:12Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0472219",
+      "tmdbId": "",
+      "title": "The Batman vs. Dracula",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-13T00:06:12Z"
+    },
     {
       "imdbId": "tt0472219",
       "tmdbId": "",

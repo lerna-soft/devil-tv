@@ -1,6 +1,6 @@
 {
-  "version": 32,
-  "generatedAt": "2026-05-13T17:14:08.037Z",
+  "version": 33,
+  "generatedAt": "2026-05-13T22:43:07.337Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47649,6 +47649,22 @@
       "releaseDate": null,
       "overview": "David Attenborough",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODEzMGFkNjAtYmI0Zi00ZDk2LTg1MjAtNjkwYWNkNTg0OWE3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt36042156",
+      "title": "The Punisher: One Last Kill",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Jon Bernthal, Jason R. Moore",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzdhZTI5YWQtOTE5ZS00YmE1LTgxOWUtN2ZiMzYwOGU5OWNhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

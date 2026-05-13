@@ -1,6 +1,6 @@
 {
-  "version": 29,
-  "generatedAt": "2026-05-13T15:02:01.992Z",
+  "version": 30,
+  "generatedAt": "2026-05-13T15:03:54.897Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25073,6 +25073,22 @@
       "releaseDate": null,
       "overview": "R.A. Dyer, Max Eberle",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2NjZWIzY2QtMjFjMi00ZjhmLWE4YzEtODY4YTRjNjViZWIzXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt14209916",
+      "title": "Cocaine Bear",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Keri Russell, Alden Ehrenreich",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjg3MmNiNWQtOWI1OS00MjE2LWFhYzYtMWY0NWRhZmVkMGFiXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

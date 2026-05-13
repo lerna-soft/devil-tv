@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-13T16:36:40Z",
+  "updatedAt": "2026-05-13T16:39:39Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -152,18 +152,39 @@
       "lastProgress": 1430.251063047,
       "updatedAt": "2026-05-13T16:35:27Z",
       "watched": {}
+    },
+    "tt15940132": {
+      "imdbId": "tt15940132",
+      "tmdbId": "1265609",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-13T16:39:39Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "296232",
+    "imdbId": "tt15940132",
+    "tmdbId": "1265609",
     "season": 1,
-    "episode": 3,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-13T16:36:40Z"
+    "updatedAt": "2026-05-13T16:39:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt15940132",
+      "tmdbId": "1265609",
+      "title": "Máquina de guerra",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-13T16:39:39Z"
+    },
     {
       "imdbId": "",
       "tmdbId": "296232",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-13T11:16:27Z",
+  "updatedAt": "2026-05-13T11:27:44Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -10,7 +10,7 @@
       "lastEpisode": 6,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-13T04:30:20Z",
+      "updatedAt": "2026-05-13T11:27:44Z",
       "watched": {}
     },
     "tt3359350": {
@@ -145,15 +145,26 @@
     }
   },
   "lastWatch": {
-    "imdbId": "tt1416765",
-    "tmdbId": "21762",
+    "imdbId": "",
+    "tmdbId": "296232",
     "season": 1,
-    "episode": 1,
+    "episode": 6,
     "progress": 0,
-    "updatedAt": "2026-05-13T11:16:27Z"
+    "updatedAt": "2026-05-13T11:27:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "",
+      "tmdbId": "296232",
+      "title": "Snowball Earth",
+      "type": "series",
+      "season": 1,
+      "episode": 6,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-13T11:27:44Z"
+    },
     {
       "imdbId": "tt1416765",
       "tmdbId": "21762",

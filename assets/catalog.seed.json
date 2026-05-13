@@ -1,6 +1,6 @@
 {
-  "version": 26,
-  "generatedAt": "2026-05-13T11:16:14.940Z",
+  "version": 27,
+  "generatedAt": "2026-05-13T11:27:27.058Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25025,6 +25025,22 @@
       "releaseDate": null,
       "overview": "Rino Romano, Peter Stormare",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTkyMTMwNjA3MV5BMl5BanBnXkFtZTcwNzE2NTI2OQ@@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt29670554",
+      "title": "Aleste: Como la primera vez",
+      "year": 1993,
+      "releaseDate": null,
+      "overview": "Aleste, Alfredo Alonso",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzg2YjE4M2MtMDQ4Yi00M2ViLWE3YjAtMGJkNTY3M2NiMWYwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

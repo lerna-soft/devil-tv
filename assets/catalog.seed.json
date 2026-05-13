@@ -1,6 +1,6 @@
 {
-  "version": 34,
-  "generatedAt": "2026-05-13T23:23:52.678Z",
+  "version": 35,
+  "generatedAt": "2026-05-13T23:28:20.073Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47681,6 +47681,22 @@
       "releaseDate": null,
       "overview": "Jon Bernthal, Jason R. Moore",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzdhZTI5YWQtOTE5ZS00YmE1LTgxOWUtN2ZiMzYwOGU5OWNhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt28769801",
+      "title": "A Playthrough of a Certain Dude's VRMMO Life",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Kaito Ishikawa, Mizuki Hayashi",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjQ2OTQ5ODctMTk2Yi00MGMyLTkwNmMtMGRhYjJkOWIxNTE5XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

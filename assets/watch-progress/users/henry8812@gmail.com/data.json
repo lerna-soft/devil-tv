@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-13T04:30:20Z",
+  "updatedAt": "2026-05-13T11:16:27Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -132,18 +132,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-13T00:06:12Z",
       "watched": {}
+    },
+    "tt1416765": {
+      "imdbId": "tt1416765",
+      "tmdbId": "21762",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-13T11:16:27Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "296232",
+    "imdbId": "tt1416765",
+    "tmdbId": "21762",
     "season": 1,
-    "episode": 6,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-13T04:30:20Z"
+    "updatedAt": "2026-05-13T11:16:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1416765",
+      "tmdbId": "21762",
+      "title": "Parenthood",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-13T11:16:27Z"
+    },
     {
       "imdbId": "",
       "tmdbId": "296232",

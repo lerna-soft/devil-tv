@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-14T07:30:39Z",
+  "updatedAt": "2026-05-14T11:43:48Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -192,18 +192,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-14T07:30:39Z",
       "watched": {}
+    },
+    "tt33332385": {
+      "imdbId": "tt33332385",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T11:43:48Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
+    "imdbId": "tt33332385",
+    "tmdbId": "",
     "season": 1,
-    "episode": 8,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-14T07:30:39Z"
+    "updatedAt": "2026-05-14T11:43:48Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33332385",
+      "tmdbId": "",
+      "title": "Widow's Bay",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T11:43:48Z"
+    },
     {
       "imdbId": "tt1190634",
       "tmdbId": "76479",

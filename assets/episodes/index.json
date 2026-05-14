@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-13T22:43:16.176Z",
+  "generatedAt": "2026-05-14T07:26:04.242Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -217,11 +217,11 @@
       "episodeCount": 24
     },
     "tt0444744": {
-      "title": "Romántica Obsesión",
-      "tvmazeId": 88690,
+      "title": "Obsessed",
+      "tvmazeId": 15499,
       "file": "tt0444744.txt",
-      "seasonCount": 1,
-      "episodeCount": 84
+      "seasonCount": 2,
+      "episodeCount": 21
     },
     "tt17069148": {
       "title": "Sakamoto Days",

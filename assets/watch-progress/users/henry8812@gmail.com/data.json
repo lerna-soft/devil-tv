@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-14T17:21:06Z",
+  "updatedAt": "2026-05-14T18:49:05Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -186,11 +186,11 @@
     "tt1190634": {
       "imdbId": "tt1190634",
       "tmdbId": "76479",
-      "lastSeason": 5,
+      "lastSeason": 1,
       "lastEpisode": 7,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-14T13:19:06Z",
+      "updatedAt": "2026-05-14T18:49:05Z",
       "watched": {}
     },
     "tt33332385": {
@@ -215,15 +215,26 @@
     }
   },
   "lastWatch": {
-    "imdbId": "tt16431870",
-    "tmdbId": "1029575",
+    "imdbId": "tt1190634",
+    "tmdbId": "76479",
     "season": 1,
-    "episode": 1,
-    "progress": 3250.287715134329,
-    "updatedAt": "2026-05-14T17:21:06Z"
+    "episode": 7,
+    "progress": 0,
+    "updatedAt": "2026-05-14T18:49:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1190634",
+      "tmdbId": "76479",
+      "title": "The Boys",
+      "type": "series",
+      "season": 1,
+      "episode": 7,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T18:49:05Z"
+    },
     {
       "imdbId": "tt16431870",
       "tmdbId": "1029575",

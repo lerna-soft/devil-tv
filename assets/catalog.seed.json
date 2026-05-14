@@ -1,6 +1,6 @@
 {
-  "version": 35,
-  "generatedAt": "2026-05-13T23:28:20.073Z",
+  "version": 36,
+  "generatedAt": "2026-05-14T03:41:14.426Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47697,6 +47697,22 @@
       "releaseDate": null,
       "overview": "Kaito Ishikawa, Mizuki Hayashi",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjQ2OTQ5ODctMTk2Yi00MGMyLTkwNmMtMGRhYjJkOWIxNTE5XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt18925788",
+      "title": "Mr. Robot_dec0d3d.doc",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "Sam Esmail, Rami Malek",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODFlZmU3OTUtZWMxZi00NTdmLWI2MjItYWEwZWIyYjI3YTMxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

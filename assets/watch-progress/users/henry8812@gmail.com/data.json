@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-14T13:19:06Z",
+  "updatedAt": "2026-05-14T16:51:02Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -202,18 +202,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-14T11:43:48Z",
       "watched": {}
+    },
+    "tt16431870": {
+      "imdbId": "tt16431870",
+      "tmdbId": "1029575",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T16:51:02Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
-    "season": 5,
-    "episode": 7,
+    "imdbId": "tt16431870",
+    "tmdbId": "1029575",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-14T13:19:06Z"
+    "updatedAt": "2026-05-14T16:51:02Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt16431870",
+      "tmdbId": "1029575",
+      "title": "Plan en familia",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T16:51:02Z"
+    },
     {
       "imdbId": "tt1190634",
       "tmdbId": "76479",

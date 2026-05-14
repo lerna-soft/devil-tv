@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-14T01:28:07Z",
+  "updatedAt": "2026-05-14T03:41:41Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -172,18 +172,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-14T01:28:07Z",
       "watched": {}
+    },
+    "tt4158110": {
+      "imdbId": "tt4158110",
+      "tmdbId": "62560",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T03:41:41Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt31596104",
-    "tmdbId": "",
+    "imdbId": "tt4158110",
+    "tmdbId": "62560",
     "season": 1,
-    "episode": 4,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-14T01:28:07Z"
+    "updatedAt": "2026-05-14T03:41:41Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt4158110",
+      "tmdbId": "62560",
+      "title": "Mr. Robot",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T03:41:41Z"
+    },
     {
       "imdbId": "tt31596104",
       "tmdbId": "",

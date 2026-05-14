@@ -1,6 +1,6 @@
 {
-  "version": 41,
-  "generatedAt": "2026-05-14T05:43:11.935Z",
+  "version": 42,
+  "generatedAt": "2026-05-14T05:43:56.471Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47793,6 +47793,22 @@
       "releaseDate": null,
       "overview": "Sam Esmail, Rami Malek",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODFlZmU3OTUtZWMxZi00NTdmLWI2MjItYWEwZWIyYjI3YTMxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt31596104",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Takuya Satô, Saori Oonishi",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzczOTc3NTctMGUyOS00ZDgxLTlkMWItNTRhNWY3NzcxNmJkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

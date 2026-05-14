@@ -1,7 +1,7 @@
 {
   "email": "juancarlosrios531970@gmail.com",
   "name": "Juan carlos Rios",
-  "updatedAt": "2026-05-14T19:20:28Z",
+  "updatedAt": "2026-05-14T20:27:42Z",
   "progress": {
     "tt0480489": {
       "imdbId": "tt0480489",
@@ -22,18 +22,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-14T19:20:28Z",
       "watched": {}
+    },
+    "tt1630029": {
+      "imdbId": "tt1630029",
+      "tmdbId": "76600",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T20:27:42Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt10676052",
-    "tmdbId": "617126",
+    "imdbId": "tt1630029",
+    "tmdbId": "76600",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-14T19:20:28Z"
+    "updatedAt": "2026-05-14T20:27:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1630029",
+      "tmdbId": "76600",
+      "title": "Avatar: El sentido del agua",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T20:27:42Z"
+    },
     {
       "imdbId": "tt10676052",
       "tmdbId": "617126",

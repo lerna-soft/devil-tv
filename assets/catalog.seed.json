@@ -1,6 +1,6 @@
 {
-  "version": 42,
-  "generatedAt": "2026-05-14T05:43:56.471Z",
+  "version": 43,
+  "generatedAt": "2026-05-14T07:25:53.845Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25217,6 +25217,22 @@
       "releaseDate": null,
       "overview": "Jim Parsons, Zachary Quinto",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODFkOTU5ZDEtY2I1My00NWQyLWJmYTItZjgxZjAxZTU3MjM1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0093437",
+      "title": "The Lost Boys",
+      "year": 1987,
+      "releaseDate": null,
+      "overview": "Jason Patric, Corey Haim",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc4NzljMDQtMWYxMS00ZDIxLTkwY2ItMjZhMzIzNjQ4NDNkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

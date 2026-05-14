@@ -1,6 +1,6 @@
 {
-  "version": 47,
-  "generatedAt": "2026-05-14T16:50:40.456Z",
+  "version": 48,
+  "generatedAt": "2026-05-14T19:38:33.669Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47889,6 +47889,22 @@
       "releaseDate": null,
       "overview": "Bae Doona, Ryu Seung-beom",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWM0ODkzNDgtYzMzMy00MGI4LTk0NjItODg5YWYwYWFhMTVmXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0259141",
+      "title": "Jackie Chan Adventures",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "Jackie Chan, James Sie",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjI1ZTkxMmMtYmZhYS00MjQwLWIyMGUtN2VmMTBkYWRkNmE1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

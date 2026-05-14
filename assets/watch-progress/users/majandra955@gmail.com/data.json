@@ -1,7 +1,7 @@
 {
   "email": "majandra955@gmail.com",
   "name": "Alejandra Burgos",
-  "updatedAt": "2026-05-12T23:59:08Z",
+  "updatedAt": "2026-05-14T17:42:32Z",
   "progress": {
     "tt28650488": {
       "imdbId": "tt28650488",
@@ -12,18 +12,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-12T23:59:08Z",
       "watched": {}
+    },
+    "tt33612209": {
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T17:42:32Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt28650488",
-    "tmdbId": "1226863",
+    "imdbId": "tt33612209",
+    "tmdbId": "1314481",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-12T23:59:08Z"
+    "updatedAt": "2026-05-14T17:42:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "title": "El diablo viste de Prada 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-14T17:42:32Z"
+    },
     {
       "imdbId": "tt28650488",
       "tmdbId": "1226863",

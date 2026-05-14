@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-13T23:28:26Z",
+  "updatedAt": "2026-05-14T01:10:42Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -168,9 +168,9 @@
       "tmdbId": "",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-13T23:28:26Z",
+      "progress": 1425.0550462585034,
+      "lastProgress": 1425.0550462585034,
+      "updatedAt": "2026-05-14T01:10:42Z",
       "watched": {}
     }
   },
@@ -179,11 +179,22 @@
     "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-13T23:28:26Z"
+    "progress": 1425.0550462585034,
+    "updatedAt": "2026-05-14T01:10:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt31596104",
+      "tmdbId": "",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 1425.0550462585034,
+      "playerStatus": "completed",
+      "updatedAt": "2026-05-14T01:10:42Z"
+    },
     {
       "imdbId": "tt31596104",
       "tmdbId": "",

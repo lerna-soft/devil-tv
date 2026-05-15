@@ -1,6 +1,6 @@
 {
-  "version": 59,
-  "generatedAt": "2026-05-15T23:19:09.225Z",
+  "version": 60,
+  "generatedAt": "2026-05-15T23:19:39.465Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25393,6 +25393,22 @@
       "releaseDate": null,
       "overview": "Marie Maser, Mike Giannelli",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzY5ZTAxZDgtN2E3Zi00NTUxLWJmZDUtZTliMTA3Y2Y1NjU0XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt35058887",
+      "title": "Smile 3",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Page: https://lerna-admin.github.io/media-evaluation-platform-static/?mep_reload=1778388684907#/browse?q=Smile",
+      "posterUrl": "Description:",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

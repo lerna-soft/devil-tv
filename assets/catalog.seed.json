@@ -1,6 +1,6 @@
 {
-  "version": 48,
-  "generatedAt": "2026-05-14T19:38:33.669Z",
+  "version": 49,
+  "generatedAt": "2026-05-15T17:01:23.604Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47905,6 +47905,22 @@
       "releaseDate": null,
       "overview": "Jackie Chan, James Sie",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjI1ZTkxMmMtYmZhYS00MjQwLWIyMGUtN2VmMTBkYWRkNmE1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt19037550",
+      "title": "Love on the Spectrum U.S.",
+      "year": 2022,
+      "releaseDate": null,
+      "overview": "James B. Jones, Jean Ann Douglass",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODJjMmEwNWYtZmU4ZC00YzZjLWI2MDQtNzc3MWYzZjU0MDAyXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

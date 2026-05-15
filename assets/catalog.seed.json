@@ -1,6 +1,6 @@
 {
-  "version": 57,
-  "generatedAt": "2026-05-15T23:18:13.383Z",
+  "version": 58,
+  "generatedAt": "2026-05-15T23:18:43.071Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25361,6 +25361,22 @@
       "releaseDate": null,
       "overview": "Richard Burton, Linda Blair",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTQ4YTYwZTEtODA0Ni00MjQ3LTgxYmUtNWE1NzRkNGQ3NWE3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0297396",
+      "title": "Sinners",
+      "year": 1990,
+      "releaseDate": null,
+      "overview": "Robert Gallo, Lou Calvelli",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMzODA5OTk2Ml5BMl5BanBnXkFtZTcwMzQ4MTYxMQ@@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

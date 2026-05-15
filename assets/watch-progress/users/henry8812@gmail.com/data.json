@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-15T22:27:19Z",
+  "updatedAt": "2026-05-15T23:14:38Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -222,18 +222,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-15T04:23:29Z",
       "watched": {}
+    },
+    "tt26753003": {
+      "imdbId": "tt26753003",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-15T23:14:38Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt14452776",
-    "tmdbId": "136315",
+    "imdbId": "tt26753003",
+    "tmdbId": "",
     "season": 1,
-    "episode": 7,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-15T22:27:19Z"
+    "updatedAt": "2026-05-15T23:14:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt26753003",
+      "tmdbId": "",
+      "title": "Trap",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-15T23:14:38Z"
+    },
     {
       "imdbId": "tt14452776",
       "tmdbId": "136315",

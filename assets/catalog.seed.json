@@ -1,6 +1,6 @@
 {
-  "version": 51,
-  "generatedAt": "2026-05-15T23:15:06.027Z",
+  "version": 52,
+  "generatedAt": "2026-05-15T23:15:33.911Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25265,6 +25265,22 @@
       "releaseDate": null,
       "overview": "Sanaa Lathan, Lance Henriksen",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU4MjIwMTcyMl5BMl5BanBnXkFtZTYwMTYwNDA3._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt13433802",
+      "title": "A Quiet Place: Day One",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Lupita Nyong'o, Joseph Quinn",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDdjZTljZWMtMDIwNi00MTA5LTkxZmItNmY0NDA3ZDM0N2M2XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

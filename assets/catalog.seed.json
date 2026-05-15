@@ -1,6 +1,6 @@
 {
-  "version": 58,
-  "generatedAt": "2026-05-15T23:18:43.071Z",
+  "version": 59,
+  "generatedAt": "2026-05-15T23:19:09.225Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25377,6 +25377,22 @@
       "releaseDate": null,
       "overview": "Robert Gallo, Lou Calvelli",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMzODA5OTk2Ml5BMl5BanBnXkFtZTcwMzQ4MTYxMQ@@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt2018130",
+      "title": "Terrifier",
+      "year": 2011,
+      "releaseDate": null,
+      "overview": "Marie Maser, Mike Giannelli",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzY5ZTAxZDgtN2E3Zi00NTUxLWJmZDUtZTliMTA3Y2Y1NjU0XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

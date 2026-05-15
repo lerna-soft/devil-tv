@@ -1,6 +1,6 @@
 {
-  "version": 56,
-  "generatedAt": "2026-05-15T23:17:40.747Z",
+  "version": 57,
+  "generatedAt": "2026-05-15T23:18:13.383Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25345,6 +25345,22 @@
       "releaseDate": null,
       "overview": "Bruce Lee, Gig Young",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODY4YTUxNDEtMjcxZS00NDlhLWE2OWQtNDM0N2E4YmIyNGJkXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0076009",
+      "title": "Exorcist II: The Heretic",
+      "year": 1977,
+      "releaseDate": null,
+      "overview": "Richard Burton, Linda Blair",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTQ4YTYwZTEtODA0Ni00MjQ3LTgxYmUtNWE1NzRkNGQ3NWE3XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

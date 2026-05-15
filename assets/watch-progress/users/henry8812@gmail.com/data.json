@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-15T04:20:20Z",
+  "updatedAt": "2026-05-15T04:23:27Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -218,9 +218,9 @@
       "tmdbId": "",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-15T04:20:20Z",
+      "progress": 1269.9225303854876,
+      "lastProgress": 1269.9225303854876,
+      "updatedAt": "2026-05-15T04:23:27Z",
       "watched": {}
     }
   },
@@ -229,11 +229,22 @@
     "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-15T04:20:20Z"
+    "progress": 1269.9225303854876,
+    "updatedAt": "2026-05-15T04:23:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0259141",
+      "tmdbId": "",
+      "title": "Jackie Chan Adventures",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 1269.9225303854876,
+      "playerStatus": "completed",
+      "updatedAt": "2026-05-15T04:23:27Z"
+    },
     {
       "imdbId": "tt0259141",
       "tmdbId": "",

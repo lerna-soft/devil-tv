@@ -1,6 +1,6 @@
 {
-  "version": 49,
-  "generatedAt": "2026-05-15T17:01:23.604Z",
+  "version": 50,
+  "generatedAt": "2026-05-15T23:13:01.428Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -47921,6 +47921,22 @@
       "releaseDate": null,
       "overview": "James B. Jones, Jean Ann Douglass",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODJjMmEwNWYtZmU4ZC00YzZjLWI2MDQtNzc3MWYzZjU0MDAyXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt21741266",
+      "title": "Trap",
+      "year": 2022,
+      "releaseDate": null,
+      "overview": "Talat Bulut, Akin Akinözü",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzFjZGY4ODMtMjZmNi00YWM4LWJkODAtN2EyYTM5YmVhNWNmXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

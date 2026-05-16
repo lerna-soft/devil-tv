@@ -95,10 +95,9 @@ La plataforma usa el lenguaje operativo **EPE** para identificar y manejar archi
 
 - Un archivo EPE tiene contenido ofuscado con prefijo `EPE2:` (actual).
 - `EPE2` agrega verificación de integridad (HMAC) para detectar manipulación.
-- `EPE1` y formato legacy siguen siendo legibles para migración.
 - La **llave de cifrado/descifrado es el nombre del archivo** (basename), no una seed fija global.
 - Si cambias el nombre del archivo EPE, cambia su llave y hay que re-encriptarlo.
-- Se mantiene compatibilidad de lectura con formato legacy para migración.
+- El sistema opera en **EPE2-only** (sin retrocompatibilidad).
 
 Convenciones EPE:
 
@@ -192,4 +191,4 @@ Si Pages queda “pegado”:
 
 1. Ver `pages/builds/latest`.
 2. Forzar build.
-3. Confirmar que fuente siga en `gh-pages` (`legacy`).
+3. Confirmar que fuente siga en `gh-pages` (publicación estática).

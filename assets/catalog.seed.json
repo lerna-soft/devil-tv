@@ -1,6 +1,6 @@
 {
-  "version": 77,
-  "generatedAt": "2026-05-16T07:01:32.173Z",
+  "version": 78,
+  "generatedAt": "2026-05-16T07:02:32.749Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25633,6 +25633,22 @@
       "releaseDate": null,
       "overview": "Comedy, Western",
       "posterUrl": "https://image.tmdb.org/t/p/original/e17CdsK2fsSGYjwfI6LbC9NmMaT.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt35047998",
+      "title": "If Jack Reacher Could Sing",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Lee Child, Jennifer Smith",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzkyNWQxZmEtM2NkZC00NjY1LThjZGItMjllODYwNDVlZWYwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

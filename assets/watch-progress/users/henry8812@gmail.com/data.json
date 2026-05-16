@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:21:39Z",
+  "updatedAt": "2026-05-16T05:21:40Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -322,6 +322,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:39Z",
       "watched": {}
+    },
+    "tt36104233": {
+      "imdbId": "tt36104233",
+      "tmdbId": "285838",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:21:40Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -330,18 +340,29 @@
       "tt14452776": true,
       "tt35521922": true
     },
-    "updatedAt": "2026-05-16T05:21:39Z"
+    "updatedAt": "2026-05-16T05:21:40Z"
   },
   "lastWatch": {
-    "imdbId": "tt0365847",
-    "tmdbId": "11653",
+    "imdbId": "tt36104233",
+    "tmdbId": "285838",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:21:39Z"
+    "updatedAt": "2026-05-16T05:21:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt36104233",
+      "tmdbId": "285838",
+      "title": "Si los deseos mataran...",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:21:40Z"
+    },
     {
       "imdbId": "tt0365847",
       "tmdbId": "11653",

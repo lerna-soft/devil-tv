@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:03:24Z",
+  "updatedAt": "2026-05-16T07:03:25Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -602,6 +602,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:03:24Z",
       "watched": {}
+    },
+    "tt0100502": {
+      "imdbId": "tt0100502",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:03:25Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -636,20 +646,32 @@
       "tt0790724": true,
       "tt3393786": true,
       "tt9288030": true,
-      "tt0093870": true
+      "tt0093870": true,
+      "tt0100502": true
     },
-    "updatedAt": "2026-05-16T07:03:24Z"
+    "updatedAt": "2026-05-16T07:03:25Z"
   },
   "lastWatch": {
-    "imdbId": "tt0093870",
+    "imdbId": "tt0100502",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:03:24Z"
+    "updatedAt": "2026-05-16T07:03:25Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0100502",
+      "tmdbId": "",
+      "title": "RoboCop 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:03:25Z"
+    },
     {
       "imdbId": "tt0093870",
       "tmdbId": "",

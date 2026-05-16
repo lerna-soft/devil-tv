@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:18Z",
+  "updatedAt": "2026-05-16T06:59:19Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -462,6 +462,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:18Z",
       "watched": {}
+    },
+    "tt1386932": {
+      "imdbId": "tt1386932",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:19Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -482,20 +492,32 @@
       "tt0104558": true,
       "tt2599716": true,
       "tt0386005": true,
-      "tt1220719": true
+      "tt1220719": true,
+      "tt1386932": true
     },
-    "updatedAt": "2026-05-16T06:59:18Z"
+    "updatedAt": "2026-05-16T06:59:19Z"
   },
   "lastWatch": {
-    "imdbId": "tt1220719",
+    "imdbId": "tt1386932",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:18Z"
+    "updatedAt": "2026-05-16T06:59:19Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1386932",
+      "tmdbId": "",
+      "title": "Ip Man 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:19Z"
+    },
     {
       "imdbId": "tt1220719",
       "tmdbId": "",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:02:38Z",
+  "updatedAt": "2026-05-16T07:02:41Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -582,6 +582,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:02:38Z",
       "watched": {}
+    },
+    "tt9288030": {
+      "imdbId": "tt9288030",
+      "tmdbId": "108978",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:02:41Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -614,20 +624,32 @@
       "tt2249007": true,
       "tt29268110": true,
       "tt0790724": true,
-      "tt3393786": true
+      "tt3393786": true,
+      "tt9288030": true
     },
-    "updatedAt": "2026-05-16T07:02:38Z"
+    "updatedAt": "2026-05-16T07:02:41Z"
   },
   "lastWatch": {
-    "imdbId": "tt3393786",
-    "tmdbId": "343611",
+    "imdbId": "tt9288030",
+    "tmdbId": "108978",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:02:38Z"
+    "updatedAt": "2026-05-16T07:02:41Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt9288030",
+      "tmdbId": "108978",
+      "title": "Reacher",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:02:41Z"
+    },
     {
       "imdbId": "tt3393786",
       "tmdbId": "343611",

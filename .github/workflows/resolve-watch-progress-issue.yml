@@ -32,7 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync watch progress from open issues
+      - name: Sync, commit and push changes (retry-safe)
         shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
@@ -40,34 +40,23 @@ jobs:
           WATCH_PROGRESS_MAX_ISSUES: "1"
         run: |
           set -euxo pipefail
-          node tools/sync-watch-progress-from-issues.mjs
-
-      - name: Commit and push changes
-        shell: bash
-        run: |
-          set -euxo pipefail
-          if git diff --cached --quiet && git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git add assets/watch-progress
-          if git diff --cached --quiet; then
-            echo "No staged changes."
-            exit 0
-          fi
-          git commit -m "sync watch progress from issue #${{ github.event.issue.number }}"
-          pushed=0
-          for attempt in 1 2 3; do
-            if git push origin HEAD:main; then
-              pushed=1
-              break
-            fi
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main --autostash
+            git checkout -B main origin/main
+            node tools/sync-watch-progress-from-issues.mjs
+            git add assets/watch-progress
+            if git diff --cached --quiet; then
+              echo "No staged changes."
+              exit 0
+            fi
+            git commit -m "sync watch progress from issue #${{ github.event.issue.number }}"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; retrying from latest origin/main"
           done
-          if [ "$pushed" -ne 1 ]; then
-            git push origin HEAD:main
-          fi
+          echo "Failed to push after retries"
+          exit 1
 
       - name: Close synced watch progress issues
         if: success()

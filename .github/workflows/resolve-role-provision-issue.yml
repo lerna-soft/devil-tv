@@ -31,37 +31,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync role provisions from open issues
+      - name: Sync, commit and push changes (retry-safe)
         shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           set -euxo pipefail
-          node tools/sync-role-provision-from-issues.mjs
-
-      - name: Commit and push changes
-        shell: bash
-        run: |
-          set -euxo pipefail
-          git add assets/users assets/roles
-          if git diff --cached --quiet; then
-            echo "No staged changes."
-            exit 0
-          fi
-          git commit -m "sync roles/users from issue #${{ github.event.issue.number }}"
-          pushed=0
-          for attempt in 1 2 3; do
-            if git push origin HEAD:main; then
-              pushed=1
-              break
-            fi
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main --autostash
+            git checkout -B main origin/main
+            node tools/sync-role-provision-from-issues.mjs
+            git add assets/users assets/roles
+            if git diff --cached --quiet; then
+              echo "No staged changes."
+              exit 0
+            fi
+            git commit -m "sync roles/users from issue #${{ github.event.issue.number }}"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; retrying from latest origin/main"
           done
-          if [ "$pushed" -ne 1 ]; then
-            git push origin HEAD:main
-          fi
+          echo "Failed to push after retries"
+          exit 1
 
       - name: Close synced role provision issues
         if: success()

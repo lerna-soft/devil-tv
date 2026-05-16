@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:00:49Z",
+  "updatedAt": "2026-05-16T07:02:06Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -542,6 +542,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:00:49Z",
       "watched": {}
+    },
+    "tt2249007": {
+      "imdbId": "tt2249007",
+      "tmdbId": "1423",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:02:06Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -570,20 +580,32 @@
       "tt38682795": true,
       "tt21028848": true,
       "tt7262882": true,
-      "tt15880520": true
+      "tt15880520": true,
+      "tt2249007": true
     },
-    "updatedAt": "2026-05-16T07:00:49Z"
+    "updatedAt": "2026-05-16T07:02:06Z"
   },
   "lastWatch": {
-    "imdbId": "tt15880520",
-    "tmdbId": "",
+    "imdbId": "tt2249007",
+    "tmdbId": "1423",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:00:49Z"
+    "updatedAt": "2026-05-16T07:02:06Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt2249007",
+      "tmdbId": "1423",
+      "title": "Ray Donovan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:02:06Z"
+    },
     {
       "imdbId": "tt15880520",
       "tmdbId": "",

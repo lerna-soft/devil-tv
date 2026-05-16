@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T17:05:56Z",
+  "updatedAt": "2026-05-16T18:22:24Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -802,6 +802,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T14:34:58Z",
       "watched": {}
+    },
+    "tt22022784": {
+      "imdbId": "tt22022784",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T18:22:24Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -858,15 +868,26 @@
     "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt2140479",
-    "tmdbId": "302946",
+    "imdbId": "tt22022784",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T17:05:56Z"
+    "updatedAt": "2026-05-16T18:22:24Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt22022784",
+      "tmdbId": "",
+      "title": "My Dead Friend Zoe",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T18:22:24Z"
+    },
     {
       "imdbId": "tt2140479",
       "tmdbId": "302946",

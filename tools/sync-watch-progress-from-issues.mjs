@@ -121,6 +121,8 @@ function parseIssue(issue) {
   const title = String((body.match(/^Title:\s*(.+)$/im) || [])[1] || '').trim();
   const type = String((body.match(/^Type:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   const playerStatus = String((body.match(/^PlayerStatus:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const preferenceAction = String((body.match(/^PreferenceAction:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const preferenceValue = String((body.match(/^PreferenceValue:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   if (!email || (!imdbId && !tmdbId)) return null;
   return {
     email,
@@ -133,6 +135,8 @@ function parseIssue(issue) {
     title,
     type,
     playerStatus,
+    preferenceAction,
+    preferenceValue,
     updatedAt: parseIssueDate(issue),
     progressKey: `${imdbId || tmdbId}:${season}x${episode}`
   };
@@ -236,6 +240,7 @@ async function writeUserFiles(users) {
       name: user.name || existing?.name || '',
       updatedAt: maxIsoString(existing?.updatedAt, user.updatedAt),
       progress: mergedProgress,
+      preferences: mergePreferences(existing?.preferences || {}, user),
       lastWatch: pickNewestByUpdatedAt(existing?.lastWatch, {
         imdbId: user.imdbId,
         tmdbId: user.tmdbId,
@@ -250,6 +255,32 @@ async function writeUserFiles(users) {
     await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
     console.log(`[watch-progress] wrote ${filePath}`);
   }
+}
+
+function mergePreferences(existing, user) {
+  const current = existing && typeof existing === 'object' ? existing : {};
+  const action = String(user?.preferenceAction || '').trim().toLowerCase();
+  const value = String(user?.preferenceValue || '').trim().toLowerCase();
+  const id = String(user?.imdbId || user?.tmdbId || '').trim();
+  if (!id || !action) return current;
+
+  const likes = { ...(current.likes || {}) };
+  const watchLater = { ...(current.watchLater || {}) };
+
+  if (action === 'like') {
+    if (value === 'liked') likes[id] = 1;
+    else delete likes[id];
+  }
+  if (action === 'later') {
+    if (value === 'saved') watchLater[id] = true;
+    else delete watchLater[id];
+  }
+
+  return {
+    likes,
+    watchLater,
+    updatedAt: user.updatedAt
+  };
 }
 
 function safeJson(raw) {

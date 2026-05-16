@@ -26,11 +26,13 @@ const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
 
 const AUTH_EMAIL = 'usuario@mail.com';
+const ADMIN_EMAIL = 'admin@deviltv.local';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
+const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
@@ -125,7 +127,8 @@ function saveAuthSession(user) {
   }
   const payload = JSON.stringify({
     email: String(user.email || '').trim().toLowerCase(),
-    name: String(user.name || '').trim()
+    name: String(user.name || '').trim(),
+    role: String(user.role || '').trim().toLowerCase()
   });
   localStorage.setItem(AUTH_SESSION_KEY, payload);
   sessionStorage.setItem(AUTH_SESSION_KEY, payload);
@@ -137,8 +140,15 @@ function getAuthUser() {
   if (!email) return null;
   return {
     email,
-    name: String(session?.name || '').trim()
+    name: String(session?.name || '').trim(),
+    role: String(session?.role || '').trim().toLowerCase()
   };
+}
+
+function isAdminUser(user = getAuthUser()) {
+  const email = String(user?.email || '').trim().toLowerCase();
+  const role = String(user?.role || '').trim().toLowerCase();
+  return role === 'admin' || email === ADMIN_EMAIL;
 }
 
 function getInitials(name, email) {
@@ -280,7 +290,7 @@ async function registerAuthUser({ name, email, password }) {
   if (existing) return { ok: false, error: 'Ese correo ya existe.' };
   const issue = await openGitHubIssue(
     `User registration: ${name} <${normalizedEmail}>`,
-    buildUserRegistrationBody({ name, email: normalizedEmail, salt, passwordHash }),
+    buildUserRegistrationBody({ name, email: normalizedEmail, salt, passwordHash, role: 'viewer' }),
     ['user-register']
   );
   return { ok: true, issue };
@@ -515,16 +525,42 @@ function maxIsoString(a, b) {
   return bt >= at ? (b || a || '') : (a || b || '');
 }
 
-function buildUserRegistrationBody({ name, email, salt, passwordHash }) {
+function buildUserRegistrationBody({ name, email, salt, passwordHash, role = 'viewer' }) {
   return [
     'USER_REGISTRATION_REQUEST',
     `Name: ${name}`,
     `Email: ${email}`,
+    `Role: ${String(role || 'viewer').trim().toLowerCase()}`,
     `Salt: ${salt}`,
     `PasswordHash: ${passwordHash}`,
     '',
     `File: assets/users/${email}.json`
   ].join('\n');
+}
+
+async function createAgentByAdmin({ name, email, password }) {
+  if (!isAdminUser()) return { ok: false, error: 'Solo administrador.' };
+  const normalizedEmail = String(email || '').trim().toLowerCase();
+  const safeName = String(name || '').trim();
+  const safePassword = String(password || '');
+  if (!safeName || !normalizedEmail || !safePassword) return { ok: false, error: 'Completa todos los campos.' };
+  const existing = await loadUserRecord(normalizedEmail).catch(() => null);
+  if (existing) return { ok: false, error: 'Ese correo ya existe.' };
+  const salt = makeSalt();
+  const passwordHash = await hashPassword(safePassword, salt);
+  const body = [
+    'ROLE_PROVISION_REQUEST',
+    `Action: create_agent`,
+    `Name: ${safeName}`,
+    `Email: ${normalizedEmail}`,
+    'Role: agent',
+    `Salt: ${salt}`,
+    `PasswordHash: ${passwordHash}`,
+    `RequestedBy: ${String(getAuthUser()?.email || '').trim().toLowerCase()}`,
+    `RequestedAt: ${new Date().toISOString()}`
+  ].join('\n');
+  const issue = await openGitHubIssue(`Role provision: agent ${safeName} <${normalizedEmail}>`, body, ['role-provision']);
+  return { ok: true, issue };
 }
 
 async function loadUserRecord(email) {
@@ -536,7 +572,11 @@ async function loadUserRecord(email) {
     : null;
   const file = String(entry?.file || `${normalizedEmail}.json`);
   const record = await fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`);
-  return record?.email ? record : null;
+  if (!record?.email) return null;
+  return {
+    ...record,
+    role: String(record?.role || 'viewer').trim().toLowerCase() || 'viewer'
+  };
 }
 
 async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
@@ -764,10 +804,13 @@ function updateAuthUi() {
   if (authenticated) {
     const name = String(session?.name || '').trim() || 'Usuario';
     const email = String(session?.email || '').trim();
+    const admin = isAdminUser(session);
+    document.body.classList.toggle('admin-mode', admin);
     if (elements.userName) elements.userName.textContent = name;
-    if (elements.userEmail) elements.userEmail.textContent = email;
+    if (elements.userEmail) elements.userEmail.textContent = admin ? `${email} · admin` : email;
     if (elements.userAvatar) elements.userAvatar.textContent = getInitials(name, email);
   } else {
+    document.body.classList.remove('admin-mode');
     if (elements.userName) elements.userName.textContent = '';
     if (elements.userEmail) elements.userEmail.textContent = '';
     if (elements.userAvatar) elements.userAvatar.textContent = '';
@@ -1367,6 +1410,10 @@ function bindTap(element, handler) {
 }
 
 function renderCatalog() {
+  if (isAdminUser()) {
+    renderAdminDashboard();
+    return;
+  }
   const query = elements.search.value.trim();
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
@@ -1390,6 +1437,115 @@ function renderCatalog() {
     elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Searching IMDb/TMDB</strong><p>Looking for playable titles...</p></div>`;
   }
 }
+
+function renderAdminDashboard() {
+  setCatalogCount('Panel administrador');
+  elements.items.innerHTML = `<section class="admin-dashboard"><div class="loader-card"><span class="spinner"></span><strong>Cargando dashboard</strong><p>Recolectando métricas del sistema...</p></div></section>`;
+  const user = getAuthUser();
+  const userEmail = String(user?.email || '').trim().toLowerCase();
+  Promise.all([
+    fetchJsonWithTimeout('./assets/watch-progress/index.json', 3500).catch(() => ({ users: [] })),
+    fetchJsonWithTimeout('./assets/catalog.seed.json', 3500).catch(() => ({})),
+    fetchJsonWithTimeout('./assets/roles/permissions.json', 3500).catch(() => ({ permissions: {} })),
+    fetchJsonWithTimeout('./assets/roles/requests.json', 3500).catch(() => ({ requests: [] })),
+    fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] }))
+  ]).then(async ([watchIndex, seed, permissions, roleRequests, roleAudit]) => {
+    const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
+    const details = await Promise.all(users.slice(0, 50).map(async (entry) => {
+      const rel = String(entry?.file || '').trim();
+      if (!rel) return null;
+      const file = rel.startsWith('users/') ? rel : `users/${rel}`;
+      return fetchJsonWithTimeout(`./assets/watch-progress/${file}?v=${window.__mep_build || Date.now()}`, 3000).catch(() => null);
+    }));
+    const cleanDetails = details.filter(Boolean);
+    const progressRows = cleanDetails.flatMap((row) => Object.values(row?.progress || {}));
+    const totalUsers = users.length;
+    const activeUsers = cleanDetails.filter((row) => Array.isArray(row?.history) && row.history.length > 0).length;
+    const totalHistory = cleanDetails.reduce((acc, row) => acc + (Array.isArray(row?.history) ? row.history.length : 0), 0);
+    const completionRate = progressRows.length
+      ? Math.round((progressRows.filter((p) => Number(p?.lastProgress || p?.progress || 0) >= 95).length / progressRows.length) * 100)
+      : 0;
+    const movieCount = Array.isArray(seed?.movies) ? seed.movies.length : 0;
+    const seriesCount = Array.isArray(seed?.series) ? seed.series.length : 0;
+    const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
+    const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
+    const pendingRequests = requests.filter((row) => String(row?.status || '').toLowerCase() === 'pending').length;
+    const approvedRequests = requests.filter((row) => String(row?.status || '').toLowerCase() === 'approved').length;
+    const permissionsCount = Object.keys(permissions?.permissions || {}).length;
+    const adminNote = userEmail === ADMIN_EMAIL ? 'Usuario administrador activo' : 'Rol administrador activo';
+    elements.items.innerHTML = `
+      <section class="admin-dashboard">
+        <h3>Bienvenido, administrador</h3>
+        <p class="admin-note">${escapeHtml(adminNote)}. Este perfil solo permite monitoreo del sistema.</p>
+        <section class="admin-role-provision">
+          <h4>Crear Agente</h4>
+          <div class="admin-role-grid">
+            <input id="adminAgentName" type="text" placeholder="Nombre del agente" />
+            <input id="adminAgentEmail" type="email" placeholder="Correo del agente" />
+            <input id="adminAgentPassword" type="password" placeholder="Password temporal" />
+            <button id="adminCreateAgent" type="button">Crear agente</button>
+          </div>
+          <p id="adminRoleMsg" class="admin-role-msg" aria-live="polite"></p>
+        </section>
+        <div class="admin-kpis">
+          <article class="admin-kpi"><strong>${totalUsers}</strong><span>Usuarios registrados</span></article>
+          <article class="admin-kpi"><strong>${activeUsers}</strong><span>Usuarios activos</span></article>
+          <article class="admin-kpi"><strong>${totalHistory}</strong><span>Eventos de reproducción</span></article>
+          <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización estimada</span></article>
+          <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas en catálogo seed</span></article>
+          <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series en catálogo seed</span></article>
+          <article class="admin-kpi"><strong>${permissionsCount}</strong><span>Roles con permisos</span></article>
+          <article class="admin-kpi"><strong>${pendingRequests}</strong><span>Solicitudes pendientes</span></article>
+          <article class="admin-kpi"><strong>${approvedRequests}</strong><span>Solicitudes aprobadas</span></article>
+        </div>
+        <div class="admin-chart-wrap">
+          <h4>Provisionamiento reciente</h4>
+          <div class="admin-chart">
+            ${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'} · ${row.status || 'unknown'}`)}</span></div>`).join('') || '<p>Sin solicitudes recientes.</p>'}
+          </div>
+        </div>
+        <div class="admin-chart-wrap">
+          <h4>Actividad por usuario</h4>
+          <div class="admin-chart">
+            ${cleanDetails.slice(0, 12).map((row) => {
+              const name = String(row?.name || row?.email || 'user').trim();
+              const value = Math.min(100, (Array.isArray(row?.history) ? row.history.length : 0) * 4);
+              return `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(name)}</span><div class="admin-bar-track"><i style="width:${value}%"></i></div></div>`;
+            }).join('') || '<p>Sin actividad para mostrar.</p>'}
+          </div>
+        </div>
+        <div class="admin-chart-wrap">
+          <h4>Auditoría de roles</h4>
+          <div class="admin-chart">
+            ${auditEvents.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.type || 'event'} · ${row.email || 'n/a'} · ${String(row.processedAt || row.requestedAt || '').slice(0, 19).replace('T', ' ')}`)}</span></div>`).join('') || '<p>Sin eventos de auditoría.</p>'}
+          </div>
+        </div>
+      </section>`;
+
+    const createBtn = document.querySelector('#adminCreateAgent');
+    createBtn?.addEventListener('click', async () => {
+      const msg = document.querySelector('#adminRoleMsg');
+      const name = String(document.querySelector('#adminAgentName')?.value || '').trim();
+      const email = String(document.querySelector('#adminAgentEmail')?.value || '').trim().toLowerCase();
+      const password = String(document.querySelector('#adminAgentPassword')?.value || '');
+      if (msg) msg.textContent = 'Creando issue para provisionar agente...';
+      const result = await createAgentByAdmin({ name, email, password }).catch((error) => ({ ok: false, error: String(error?.message || error) }));
+      if (!result.ok) {
+        if (msg) msg.textContent = result.error || 'No se pudo crear el agente.';
+        return;
+      }
+      if (msg) msg.textContent = 'Issue creado. El pipeline creará el usuario agente en JSON.';
+      const emailInput = document.querySelector('#adminAgentEmail');
+      const passInput = document.querySelector('#adminAgentPassword');
+      if (emailInput) emailInput.value = '';
+      if (passInput) passInput.value = '';
+    });
+  }).catch(() => {
+    elements.items.innerHTML = `<section class="admin-dashboard"><div class="empty">No se pudieron cargar métricas del sistema.</div></section>`;
+  });
+}
+
+window.mepAdminCreateAgent = createAgentByAdmin;
 
 function renderHomeCatalog(baseFiltered) {
   cleanupWatchLaterFromCompleted(baseFiltered);
@@ -1669,6 +1825,7 @@ function populateGenreFilter() {
 }
 
 function renderLocalCards(titles) {
+  const isAdmin = isAdminUser();
   const prefs = loadTitlePrefs();
   return titles.map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
@@ -1678,13 +1835,12 @@ function renderLocalCards(titles) {
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
-    const canPlay = isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
+    const canPlay = !isAdmin && isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
     const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Play" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${playOverlay}
-      ${getCardQuickActions(title, prefs)}
-      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
+      <div><strong>${escapeHtml(title.title)}</strong>${getCardQuickActions(title, prefs)}${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('');
 }
@@ -1732,6 +1888,7 @@ function bindLocalCardEvents() {
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
     item.addEventListener('click', async () => {
+      if (isAdminUser()) return;
       const homeCarousel = item.closest('[data-home-carousel]');
       if (homeCarousel) {
         const lastDragAt = homeCarouselLastDragAt.get(homeCarousel) || 0;
@@ -2150,11 +2307,9 @@ function getCardQuickActions(title, prefs = loadTitlePrefs()) {
   if (!isAuthenticated()) return '';
   const flags = getTitleFlags(title, prefs);
   const likedClass = flags.like === 1 ? ' active-like' : '';
-  const dislikedClass = flags.like === -1 ? ' active-dislike' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
   return `<div class="item-quick-actions">
     <button class="item-quick-btn${likedClass}" type="button" data-quick-action="like" aria-label="Me gusta">❤</button>
-    <button class="item-quick-btn${dislikedClass}" type="button" data-quick-action="dislike" aria-label="No me gusta">✕</button>
     <button class="item-quick-btn${laterClass}" type="button" data-quick-action="later" aria-label="Ver mas tarde">+</button>
   </div>`;
 }
@@ -2205,13 +2360,45 @@ function setTitlePreference(title, action) {
     watchLater: { ...(prefs.watchLater || {}) }
   };
   if (action === 'like') next.likes[id] = next.likes[id] === 1 ? 0 : 1;
-  else if (action === 'dislike') next.likes[id] = next.likes[id] === -1 ? 0 : -1;
   else if (action === 'later') {
     if (next.watchLater[id]) delete next.watchLater[id];
     else next.watchLater[id] = true;
   }
   if (!next.likes[id]) delete next.likes[id];
   saveTitlePrefs(next);
+  void queueTitlePreferenceSync(title, action, {
+    liked: next.likes[id] === 1,
+    watchLater: Boolean(next.watchLater[id])
+  });
+}
+
+async function queueTitlePreferenceSync(title, action, stateFlags) {
+  const user = getAuthUser();
+  const email = String(user?.email || '').trim().toLowerCase();
+  if (!email || !title || !['like', 'later'].includes(String(action || ''))) return;
+  const titleId = String(title?.imdbId || title?.tmdbId || '').trim();
+  if (!titleId) return;
+  const issueBody = [
+    'WATCH_PROGRESS_SYNC_REQUEST',
+    `Email: ${email}`,
+    `Name: ${String(user?.name || '').trim()}`,
+    `IMDb: ${String(title.imdbId || '').trim()}`,
+    `TMDB: ${String(title.tmdbId || '').trim()}`,
+    'Season: 1',
+    'Episode: 1',
+    'Progress: 0',
+    `Title: ${String(title.title || '').trim()}`,
+    `Type: ${String(title.type || '').trim()}`,
+    'PlayerStatus: preference',
+    `PreferenceAction: ${String(action).trim()}`,
+    `PreferenceValue: ${action === 'like' ? (stateFlags?.liked ? 'liked' : 'none') : (stateFlags?.watchLater ? 'saved' : 'none')}`,
+    `ClientUpdatedAt: ${new Date().toISOString()}`
+  ].join('\n');
+  try {
+    await openGitHubIssue(`Preference sync: ${title.title || titleId}`, issueBody, [WATCH_PROGRESS_SYNC_LABEL]);
+  } catch {
+    // Keep local preference toggle even if issue sync fails.
+  }
 }
 
 function renderDetail(options = {}) {
@@ -2242,7 +2429,9 @@ function renderDetail(options = {}) {
         <div class="title-copy">
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
+          ${getCardQuickActions(title)}
           <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
+          <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
           ${isBareRoute ? '<p class="title-description">Metadata no disponible para este ID. Busca por nombre para obtener información.</p>' : ''}
           ${renderEvaluationPanel(title)}
         </div>
@@ -2319,6 +2508,7 @@ function renderDetail(options = {}) {
       <div class="title-copy">
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>
+        ${getCardQuickActions(title)}
         <p class="title-meta">${escapeHtml([title.year, genres.length ? genres.slice(0, 3).join(', ') : ''].filter(Boolean).join(' | '))}</p>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
@@ -2531,6 +2721,7 @@ function closePlayerModal() {
 }
 
 function openPlayerForCurrentSelection() {
+  if (isAdminUser()) return;
   if (!isAuthenticated()) {
     showAuthGate();
     return;
@@ -3389,6 +3580,14 @@ async function handleRouteChange() {
     const episode = positiveInteger(route.episode, 1);
     const shouldOpenPlayer = route.mode === 'watch';
 
+    if (isAdminUser()) {
+      state.selected = null;
+      state.seriesEpisodes = null;
+      closePlayerModal();
+      renderCatalog();
+      return;
+    }
+
     elements.search.value = q;
     elements.typeFilter.value = ['all', 'movie', 'series'].includes(type) ? type : 'all';
     syncTabs(elements.typeFilter.value);
@@ -3410,14 +3609,16 @@ async function handleRouteChange() {
       }
 
       const fromLocal = loadLocalCatalog().find((entry) => entry.imdbId === id || entry.tmdbId === id);
+      const previous = state.selected;
+      const previousId = String(previous?.imdbId || previous?.tmdbId || '').trim();
       state.selected = fromLocal || normalizeSelection({
         imdbId: id.startsWith('tt') ? id : '',
         tmdbId: id.startsWith('tt') ? '' : id,
-        title: fromLocal?.title || id,
+        title: fromLocal?.title || previous?.title || id,
         year: fromLocal?.year || null,
         type: media === 'movie' ? 'movie' : 'series',
-        posterUrl: fromLocal?.posterUrl || '',
-        description: fromLocal?.description || 'Cargado desde ruta'
+        posterUrl: fromLocal?.posterUrl || previous?.posterUrl || '',
+        description: fromLocal?.description || (previousId === id ? previous?.description : '') || 'Cargado desde ruta'
       });
       state.playback.season = season;
       state.playback.episode = episode;

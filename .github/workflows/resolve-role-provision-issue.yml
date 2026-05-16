@@ -1,0 +1,74 @@
+name: Resolve role provision issue
+
+on:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: role-provision-queue
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    if: contains(github.event.issue.labels.*.name, 'role-provision')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout (main)
+        uses: actions/checkout@v4
+
+      - name: Configure git identity
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync role provisions from open issues
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euxo pipefail
+          node tools/sync-role-provision-from-issues.mjs
+
+      - name: Commit and push changes
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git add assets/users assets/roles
+          if git diff --cached --quiet; then
+            echo "No staged changes."
+            exit 0
+          fi
+          git commit -m "sync roles/users from issue #${{ github.event.issue.number }}"
+          pushed=0
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+            git fetch origin main
+            git rebase origin/main --autostash
+          done
+          if [ "$pushed" -ne 1 ]; then
+            git push origin HEAD:main
+          fi
+
+      - name: Close synced role provision issues
+        if: success()
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euxo pipefail
+          node tools/close-role-provision-issues.mjs

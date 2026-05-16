@@ -1,0 +1,22 @@
+{
+  "roles": [
+    {
+      "name": "viewer",
+      "description": "Puede ver contenido y calificar.",
+      "createdAt": "2026-05-16T00:00:00.000Z",
+      "createdBy": "system"
+    },
+    {
+      "name": "admin",
+      "description": "Puede administrar plataforma y crear agentes.",
+      "createdAt": "2026-05-16T00:00:00.000Z",
+      "createdBy": "system"
+    },
+    {
+      "name": "agent",
+      "description": "Rol operativo creado por administrador.",
+      "createdAt": "2026-05-16T00:00:00.000Z",
+      "createdBy": "system"
+    }
+  ]
+}

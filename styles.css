@@ -755,10 +755,7 @@ h1 {
 .item-quick-actions {
   display: flex;
   gap: 0.35rem;
-  position: absolute;
-  right: 0.45rem;
-  top: 0.45rem;
-  z-index: 7;
+  margin-top: 0.4rem;
 }
 
 .item-quick-btn {
@@ -1180,6 +1177,120 @@ body.detail-active .toolbar {
   font-size: 1rem;
   line-height: 1.55;
   margin: 0.25rem 0;
+}
+
+.admin-mode .content-tabs,
+.admin-mode .toolbar,
+.admin-mode .detail {
+  display: none;
+}
+
+.admin-dashboard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.admin-note {
+  color: var(--soft);
+  margin: 0.35rem 0 1rem;
+}
+
+.admin-kpis {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.admin-role-provision {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+}
+
+.admin-role-provision h4 {
+  margin: 0 0 0.65rem;
+}
+
+.admin-role-grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.admin-role-grid input,
+.admin-role-grid button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  color: var(--text);
+  min-height: 2.4rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.admin-role-grid button {
+  background: rgba(229, 9, 20, 0.9);
+  border-color: rgba(229, 9, 20, 1);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.admin-role-msg {
+  color: var(--soft);
+  font-size: 0.86rem;
+  margin: 0.55rem 0 0;
+}
+
+.admin-kpi {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  padding: 0.85rem;
+}
+
+.admin-kpi strong {
+  display: block;
+  font-size: 1.35rem;
+}
+
+.admin-kpi span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.admin-chart-wrap {
+  margin-top: 1rem;
+}
+
+.admin-chart {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.admin-bar {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.admin-bar-label {
+  color: var(--soft);
+  font-size: 0.86rem;
+}
+
+.admin-bar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.admin-bar-track i {
+  background: linear-gradient(90deg, #e50914, #ff6b35);
+  display: block;
+  height: 100%;
 }
 
 .id-row {

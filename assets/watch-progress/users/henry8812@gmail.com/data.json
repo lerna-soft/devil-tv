@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T21:01:27Z",
+  "updatedAt": "2026-05-16T21:01:53Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -870,7 +870,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T21:01:27Z",
+      "updatedAt": "2026-05-16T21:01:53Z",
       "watched": {}
     }
   },
@@ -927,10 +927,9 @@
       "tt6143796": true,
       "tt1586680": true,
       "tt14257582": true,
-      "tt11083552": true,
-      "tt14966898": true
+      "tt11083552": true
     },
-    "updatedAt": "2026-05-16T21:01:27Z"
+    "updatedAt": "2026-05-16T21:01:53Z"
   },
   "lastWatch": {
     "imdbId": "tt14966898",
@@ -938,10 +937,21 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T21:01:27Z"
+    "updatedAt": "2026-05-16T21:01:53Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt14966898",
+      "tmdbId": "",
+      "title": "Late Night with the Devil",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T21:01:53Z"
+    },
     {
       "imdbId": "tt14966898",
       "tmdbId": "",

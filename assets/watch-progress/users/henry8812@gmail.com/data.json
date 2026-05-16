@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T18:40:12Z",
+  "updatedAt": "2026-05-16T18:40:24Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -842,6 +842,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T18:40:12Z",
       "watched": {}
+    },
+    "tt11083552": {
+      "imdbId": "tt11083552",
+      "tmdbId": "637649",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T18:40:24Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -896,20 +906,32 @@
       "tt8398600": true,
       "tt6143796": true,
       "tt1586680": true,
-      "tt14257582": true
+      "tt14257582": true,
+      "tt11083552": true
     },
-    "updatedAt": "2026-05-16T18:40:12Z"
+    "updatedAt": "2026-05-16T18:40:24Z"
   },
   "lastWatch": {
-    "imdbId": "tt14257582",
-    "tmdbId": "877817",
+    "imdbId": "tt11083552",
+    "tmdbId": "637649",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T18:40:12Z"
+    "updatedAt": "2026-05-16T18:40:24Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt11083552",
+      "tmdbId": "637649",
+      "title": "Despierta la furia",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T18:40:24Z"
+    },
     {
       "imdbId": "tt14257582",
       "tmdbId": "877817",

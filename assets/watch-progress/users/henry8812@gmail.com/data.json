@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T14:18:28Z",
+  "updatedAt": "2026-05-16T14:34:58Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -792,6 +792,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T08:29:48Z",
       "watched": {}
+    },
+    "tt26743760": {
+      "imdbId": "tt26743760",
+      "tmdbId": "220542",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T14:34:58Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -848,15 +858,26 @@
     "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt14452776",
-    "tmdbId": "136315",
+    "imdbId": "tt26743760",
+    "tmdbId": "220542",
     "season": 1,
-    "episode": 7,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T14:18:28Z"
+    "updatedAt": "2026-05-16T14:34:58Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt26743760",
+      "tmdbId": "220542",
+      "title": "Los diarios de la boticaria",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T14:34:58Z"
+    },
     {
       "imdbId": "tt14452776",
       "tmdbId": "136315",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:02:28Z",
+  "updatedAt": "2026-05-16T07:02:38Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -572,6 +572,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:02:28Z",
       "watched": {}
+    },
+    "tt3393786": {
+      "imdbId": "tt3393786",
+      "tmdbId": "343611",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:02:38Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -603,20 +613,32 @@
       "tt15880520": true,
       "tt2249007": true,
       "tt29268110": true,
-      "tt0790724": true
+      "tt0790724": true,
+      "tt3393786": true
     },
-    "updatedAt": "2026-05-16T07:02:28Z"
+    "updatedAt": "2026-05-16T07:02:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt0790724",
-    "tmdbId": "75780",
+    "imdbId": "tt3393786",
+    "tmdbId": "343611",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:02:28Z"
+    "updatedAt": "2026-05-16T07:02:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt3393786",
+      "tmdbId": "343611",
+      "title": "Jack Reacher: Nunca vuelvas atrás",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:02:38Z"
+    },
     {
       "imdbId": "tt0790724",
       "tmdbId": "75780",

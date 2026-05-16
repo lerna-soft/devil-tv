@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:22Z",
+  "updatedAt": "2026-05-16T06:59:24Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -492,6 +492,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:22Z",
       "watched": {}
+    },
+    "tt33456991": {
+      "imdbId": "tt33456991",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:24Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -515,20 +525,32 @@
       "tt1220719": true,
       "tt1386932": true,
       "tt2076298": true,
-      "tt2888046": true
+      "tt2888046": true,
+      "tt33456991": true
     },
-    "updatedAt": "2026-05-16T06:59:22Z"
+    "updatedAt": "2026-05-16T06:59:24Z"
   },
   "lastWatch": {
-    "imdbId": "tt2888046",
+    "imdbId": "tt33456991",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:22Z"
+    "updatedAt": "2026-05-16T06:59:24Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33456991",
+      "tmdbId": "",
+      "title": "Ip Man 5",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:24Z"
+    },
     {
       "imdbId": "tt2888046",
       "tmdbId": "",

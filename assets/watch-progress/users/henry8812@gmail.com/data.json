@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:38:27Z",
+  "updatedAt": "2026-05-16T07:39:42Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -630,7 +630,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T07:03:37Z",
+      "updatedAt": "2026-05-16T07:39:42Z",
       "watched": {}
     },
     "tt2911666": {
@@ -718,15 +718,26 @@
     "updatedAt": "2026-05-16T07:16:14Z"
   },
   "lastWatch": {
-    "imdbId": "tt2911666",
-    "tmdbId": "245891",
+    "imdbId": "tt1234721",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 6072.9,
-    "updatedAt": "2026-05-16T07:38:27Z"
+    "progress": 0,
+    "updatedAt": "2026-05-16T07:39:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1234721",
+      "tmdbId": "",
+      "title": "RoboCop",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T07:39:42Z"
+    },
     {
       "imdbId": "tt2911666",
       "tmdbId": "245891",

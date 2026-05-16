@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:21:35Z",
+  "updatedAt": "2026-05-16T05:21:37Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -292,6 +292,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:35Z",
       "watched": {}
+    },
+    "tt1318514": {
+      "imdbId": "tt1318514",
+      "tmdbId": "61791",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:21:37Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -300,18 +310,29 @@
       "tt14452776": true,
       "tt35521922": true
     },
-    "updatedAt": "2026-05-16T05:21:35Z"
+    "updatedAt": "2026-05-16T05:21:37Z"
   },
   "lastWatch": {
-    "imdbId": "tt29552248",
-    "tmdbId": "1007757",
+    "imdbId": "tt1318514",
+    "tmdbId": "61791",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:21:35Z"
+    "updatedAt": "2026-05-16T05:21:37Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1318514",
+      "tmdbId": "61791",
+      "title": "El origen del planeta de los simios",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:21:37Z"
+    },
     {
       "imdbId": "tt29552248",
       "tmdbId": "1007757",

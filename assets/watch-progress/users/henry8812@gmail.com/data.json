@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:29Z",
+  "updatedAt": "2026-05-16T06:59:32Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -522,6 +522,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:29Z",
       "watched": {}
+    },
+    "tt7262882": {
+      "imdbId": "tt7262882",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:32Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -548,20 +558,32 @@
       "tt2888046": true,
       "tt33456991": true,
       "tt38682795": true,
-      "tt21028848": true
+      "tt21028848": true,
+      "tt7262882": true
     },
-    "updatedAt": "2026-05-16T06:59:29Z"
+    "updatedAt": "2026-05-16T06:59:32Z"
   },
   "lastWatch": {
-    "imdbId": "tt21028848",
+    "imdbId": "tt7262882",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:29Z"
+    "updatedAt": "2026-05-16T06:59:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt7262882",
+      "tmdbId": "",
+      "title": "Master Z: The Ip Man Legacy",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:32Z"
+    },
     {
       "imdbId": "tt21028848",
       "tmdbId": "",

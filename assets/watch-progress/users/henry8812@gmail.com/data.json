@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:21:40Z",
+  "updatedAt": "2026-05-16T05:26:06Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -246,11 +246,11 @@
     "tt7587890": {
       "imdbId": "tt7587890",
       "tmdbId": "79744",
-      "lastSeason": 8,
-      "lastEpisode": 2,
+      "lastSeason": 1,
+      "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T01:54:24Z",
+      "updatedAt": "2026-05-16T05:26:06Z",
       "watched": {}
     },
     "tt12042730": {
@@ -338,20 +338,32 @@
     "likes": {},
     "watchLater": {
       "tt14452776": true,
-      "tt35521922": true
+      "tt35521922": true,
+      "tt7587890": true
     },
-    "updatedAt": "2026-05-16T05:21:40Z"
+    "updatedAt": "2026-05-16T05:26:06Z"
   },
   "lastWatch": {
-    "imdbId": "tt36104233",
-    "tmdbId": "285838",
+    "imdbId": "tt7587890",
+    "tmdbId": "79744",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:21:40Z"
+    "updatedAt": "2026-05-16T05:26:06Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt7587890",
+      "tmdbId": "79744",
+      "title": "The Rookie",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:26:06Z"
+    },
     {
       "imdbId": "tt36104233",
       "tmdbId": "285838",

@@ -1471,6 +1471,17 @@ function renderAdminDashboard() {
     fetchJsonWithTimeout('./assets/roles/requests.json', 3500).catch(() => ({ requests: [] })),
     fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] }))
   ]).then(async ([watchIndex, seed, permissions, roleRequests, roleAudit]) => {
+    const now = Date.now();
+    const toTs = (value) => Date.parse(value || 0) || 0;
+    const ago = (value) => {
+      const ts = toTs(value);
+      if (!ts) return 'n/a';
+      const deltaMin = Math.max(1, Math.floor((now - ts) / 60000));
+      if (deltaMin < 60) return `${deltaMin}m`;
+      const hours = Math.floor(deltaMin / 60);
+      if (hours < 48) return `${hours}h`;
+      return `${Math.floor(hours / 24)}d`;
+    };
     const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
     const details = await Promise.all(users.slice(0, 50).map(async (entry) => {
       const rel = String(entry?.file || '').trim();
@@ -1493,11 +1504,71 @@ function renderAdminDashboard() {
     const pendingRequests = requests.filter((row) => String(row?.status || '').toLowerCase() === 'pending').length;
     const approvedRequests = requests.filter((row) => String(row?.status || '').toLowerCase() === 'approved').length;
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
+    const viewers = cleanDetails.filter((row) => String(row?.role || 'viewer').toLowerCase() === 'viewer').length;
+    const agents = cleanDetails.filter((row) => String(row?.role || '').toLowerCase() === 'agent').length;
+    const avgHistoryPerActive = activeUsers ? Math.round(totalHistory / activeUsers) : 0;
+    const sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
+    const historyRows = cleanDetails.flatMap((row) => Array.isArray(row?.history) ? row.history : []);
+    const weekEvents = historyRows.filter((row) => toTs(row?.updatedAt) >= sevenDaysAgo);
+    const uniqueWeekUsers = new Set(weekEvents.map((row) => String(row?.imdbId || row?.tmdbId || '').trim())).size;
+    const requestsWithAge = requests.map((row) => ({ ...row, ts: toTs(row?.requestedAt) }));
+    const oldestPending = requestsWithAge
+      .filter((row) => String(row?.status || '').toLowerCase() === 'pending')
+      .sort((a, b) => a.ts - b.ts)[0] || null;
+    const recentAudit = auditEvents.slice(0, 10);
+
+    const titleHits = new Map();
+    for (const event of historyRows) {
+      const id = String(event?.imdbId || event?.tmdbId || '').trim();
+      if (!id) continue;
+      const name = String(event?.title || id).trim();
+      const prev = titleHits.get(id) || { id, name, plays: 0, completed: 0, progressSum: 0 };
+      prev.plays += 1;
+      if (String(event?.playerStatus || '').toLowerCase() === 'completed') prev.completed += 1;
+      prev.progressSum += Number(event?.progress || 0);
+      titleHits.set(id, prev);
+    }
+    const topTitles = [...titleHits.values()]
+      .sort((a, b) => b.plays - a.plays)
+      .slice(0, 6);
+    const maxTopPlays = topTitles.length ? Math.max(...topTitles.map((row) => row.plays)) : 1;
+
+    const dailyBuckets = new Map();
+    for (let i = 6; i >= 0; i -= 1) {
+      const d = new Date(now - (i * 24 * 60 * 60 * 1000));
+      const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+      dailyBuckets.set(key, 0);
+    }
+    for (const row of weekEvents) {
+      const ts = toTs(row?.updatedAt);
+      if (!ts) continue;
+      const d = new Date(ts);
+      const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+      if (dailyBuckets.has(key)) dailyBuckets.set(key, (dailyBuckets.get(key) || 0) + 1);
+    }
+    const daily = [...dailyBuckets.entries()].map(([date, count]) => ({ date, count }));
+    const maxDaily = daily.length ? Math.max(...daily.map((row) => row.count), 1) : 1;
+
+    const roleShareTotal = Math.max(1, totalUsers);
+    const viewerPct = Math.round((viewers / roleShareTotal) * 100);
+    const agentPct = Math.round((agents / roleShareTotal) * 100);
+    const adminPct = Math.max(0, 100 - viewerPct - agentPct);
+
     const adminNote = userEmail === ADMIN_EMAIL ? 'Usuario administrador activo' : 'Rol administrador activo';
     elements.items.innerHTML = `
       <section class="admin-dashboard">
-        <h3>Bienvenido, administrador</h3>
-        <p class="admin-note">${escapeHtml(adminNote)}. Este perfil solo permite monitoreo del sistema.</p>
+        <header class="admin-hero">
+          <div>
+            <h3>Centro de Control</h3>
+            <p class="admin-note">${escapeHtml(adminNote)} · Vista de operación en tiempo real.</p>
+          </div>
+          <div class="admin-pill-row">
+            <span class="admin-pill">Eventos 7d: ${weekEvents.length}</span>
+            <span class="admin-pill">Activos/Totales: ${activeUsers}/${totalUsers}</span>
+            <span class="admin-pill">Pendientes: ${pendingRequests}</span>
+          </div>
+        </header>
+
         <section class="admin-role-provision">
           <h4>Crear Agente</h4>
           <div class="admin-role-grid">
@@ -1505,41 +1576,80 @@ function renderAdminDashboard() {
             <input id="adminAgentEmail" type="email" placeholder="Correo del agente" />
             <input id="adminAgentPassword" type="password" placeholder="Password temporal" />
             <button id="adminCreateAgent" type="button">Crear agente</button>
+            <button id="adminRunQueue" type="button" class="admin-ghost">Procesar cola</button>
+            <button id="adminRunDeploy" type="button" class="admin-ghost">Publicar sitio</button>
           </div>
           <p id="adminRoleMsg" class="admin-role-msg" aria-live="polite"></p>
         </section>
+
         <div class="admin-kpis">
           <article class="admin-kpi"><strong>${totalUsers}</strong><span>Usuarios registrados</span></article>
           <article class="admin-kpi"><strong>${activeUsers}</strong><span>Usuarios activos</span></article>
           <article class="admin-kpi"><strong>${totalHistory}</strong><span>Eventos de reproducción</span></article>
+          <article class="admin-kpi"><strong>${avgHistoryPerActive}</strong><span>Promedio eventos/activo</span></article>
           <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización estimada</span></article>
           <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas en catálogo seed</span></article>
           <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series en catálogo seed</span></article>
           <article class="admin-kpi"><strong>${permissionsCount}</strong><span>Roles con permisos</span></article>
           <article class="admin-kpi"><strong>${pendingRequests}</strong><span>Solicitudes pendientes</span></article>
           <article class="admin-kpi"><strong>${approvedRequests}</strong><span>Solicitudes aprobadas</span></article>
+          <article class="admin-kpi"><strong>${oldestPending ? ago(oldestPending.requestedAt) : 'n/a'}</strong><span>Antigüedad pendiente</span></article>
+          <article class="admin-kpi"><strong>${uniqueWeekUsers}</strong><span>Títulos únicos (7d)</span></article>
         </div>
-        <div class="admin-chart-wrap">
-          <h4>Provisionamiento reciente</h4>
-          <div class="admin-chart">
-            ${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'} · ${row.status || 'unknown'}`)}</span></div>`).join('') || '<p>Sin solicitudes recientes.</p>'}
-          </div>
+
+        <div class="admin-grid-panels">
+          <section class="admin-panel">
+            <h4>Actividad 7 días</h4>
+            <div class="admin-spark">
+              ${daily.map((row) => `<div class="admin-spark-col"><i style="height:${Math.max(6, Math.round((row.count / maxDaily) * 100))}%"></i><span>${escapeHtml(row.date.slice(5))}</span></div>`).join('')}
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h4>Distribución por roles</h4>
+            <div class="admin-donut" style="--viewer:${viewerPct};--agent:${agentPct};--admin:${adminPct};"></div>
+            <div class="admin-legend">
+              <span><i class="sw-viewer"></i>Viewer ${viewerPct}%</span>
+              <span><i class="sw-agent"></i>Agent ${agentPct}%</span>
+              <span><i class="sw-admin"></i>Admin ${adminPct}%</span>
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h4>Top títulos por consumo</h4>
+            <div class="admin-chart">
+              ${topTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><div class="admin-bar-track"><i style="width:${Math.max(8, Math.round((row.plays / maxTopPlays) * 100))}%"></i></div><small>${row.plays} plays · ${row.completed} completados</small></div>`).join('') || '<p>Sin datos de consumo.</p>'}
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h4>Provisionamiento reciente</h4>
+            <div class="admin-chart">
+              ${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(`${row.status || 'unknown'} · hace ${ago(row.requestedAt)}`)}</small></div>`).join('') || '<p>Sin solicitudes recientes.</p>'}
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h4>Auditoría de roles</h4>
+            <div class="admin-chart">
+              ${recentAudit.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.type || 'event'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(String(row.processedAt || row.requestedAt || '').replace('T', ' ').slice(0, 16))}</small></div>`).join('') || '<p>Sin eventos de auditoría.</p>'}
+            </div>
+          </section>
+
+          <section class="admin-panel">
+            <h4>Salud operativa</h4>
+            <div class="admin-health-grid">
+              <article><strong>${pendingRequests > 0 ? 'Atención' : 'OK'}</strong><span>Cola de solicitudes</span></article>
+              <article><strong>${completionRate >= 60 ? 'OK' : 'Mejorable'}</strong><span>Tasa de finalización</span></article>
+              <article><strong>${activeUsers > 0 ? 'OK' : 'Bajo'}</strong><span>Usuarios activos</span></article>
+              <article><strong>${weekEvents.length > 0 ? 'Vivo' : 'Sin señal'}</strong><span>Actividad semanal</span></article>
+            </div>
+          </section>
         </div>
-        <div class="admin-chart-wrap">
-          <h4>Actividad por usuario</h4>
-          <div class="admin-chart">
-            ${cleanDetails.slice(0, 12).map((row) => {
-              const name = String(row?.name || row?.email || 'user').trim();
-              const value = Math.min(100, (Array.isArray(row?.history) ? row.history.length : 0) * 4);
-              return `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(name)}</span><div class="admin-bar-track"><i style="width:${value}%"></i></div></div>`;
-            }).join('') || '<p>Sin actividad para mostrar.</p>'}
-          </div>
-        </div>
-        <div class="admin-chart-wrap">
-          <h4>Auditoría de roles</h4>
-          <div class="admin-chart">
-            ${auditEvents.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.type || 'event'} · ${row.email || 'n/a'} · ${String(row.processedAt || row.requestedAt || '').slice(0, 19).replace('T', ' ')}`)}</span></div>`).join('') || '<p>Sin eventos de auditoría.</p>'}
-          </div>
+
+        <div class="admin-chart-wrap admin-footnote">
+          <p>Último evento de auditoría: ${recentAudit[0] ? escapeHtml(String(recentAudit[0]?.processedAt || recentAudit[0]?.requestedAt || '').replace('T', ' ').slice(0, 19)) : 'n/a'}</p>
+          <p>Los datos se alimentan de <code>assets/watch-progress</code> y <code>assets/roles</code>.</p>
         </div>
       </section>`;
 
@@ -1560,6 +1670,36 @@ function renderAdminDashboard() {
       const passInput = document.querySelector('#adminAgentPassword');
       if (emailInput) emailInput.value = '';
       if (passInput) passInput.value = '';
+    });
+
+    const queueBtn = document.querySelector('#adminRunQueue');
+    queueBtn?.addEventListener('click', async () => {
+      const msg = document.querySelector('#adminRoleMsg');
+      if (msg) msg.textContent = 'Disparando workflow de cola...';
+      try {
+        await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/dispatches', {
+          method: 'POST',
+          body: JSON.stringify({ ref: 'main' })
+        });
+        if (msg) msg.textContent = 'Workflow de cola enviado correctamente.';
+      } catch (error) {
+        if (msg) msg.textContent = `No se pudo disparar cola: ${String(error?.message || error)}`;
+      }
+    });
+
+    const deployBtn = document.querySelector('#adminRunDeploy');
+    deployBtn?.addEventListener('click', async () => {
+      const msg = document.querySelector('#adminRoleMsg');
+      if (msg) msg.textContent = 'Disparando workflow de deploy...';
+      try {
+        await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/deploy-pages.yml/dispatches', {
+          method: 'POST',
+          body: JSON.stringify({ ref: 'main' })
+        });
+        if (msg) msg.textContent = 'Deploy solicitado correctamente.';
+      } catch (error) {
+        if (msg) msg.textContent = `No se pudo disparar deploy: ${String(error?.message || error)}`;
+      }
     });
   }).catch(() => {
     elements.items.innerHTML = `<section class="admin-dashboard"><div class="empty">No se pudieron cargar métricas del sistema.</div></section>`;

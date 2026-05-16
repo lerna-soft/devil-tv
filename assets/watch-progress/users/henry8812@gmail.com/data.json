@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:42:20Z",
+  "updatedAt": "2026-05-16T07:42:23Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -682,6 +682,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:42:20Z",
       "watched": {}
+    },
+    "tt7068946": {
+      "imdbId": "tt7068946",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:42:23Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -724,20 +734,32 @@
       "tt4425200": true,
       "tt6146586": true,
       "tt10366206": true,
-      "tt11247606": true
+      "tt11247606": true,
+      "tt7068946": true
     },
-    "updatedAt": "2026-05-16T07:42:20Z"
+    "updatedAt": "2026-05-16T07:42:23Z"
   },
   "lastWatch": {
-    "imdbId": "tt11247606",
+    "imdbId": "tt7068946",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:42:20Z"
+    "updatedAt": "2026-05-16T07:42:23Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt7068946",
+      "tmdbId": "",
+      "title": "The Accountant 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:42:23Z"
+    },
     {
       "imdbId": "tt11247606",
       "tmdbId": "",

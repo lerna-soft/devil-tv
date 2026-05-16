@@ -2163,10 +2163,12 @@ code {
 }
 
 .admin-mode #items {
+  display: block;
   width: 100%;
 }
 
 .admin-mode .admin-dashboard {
+  grid-column: 1 / -1;
   max-width: 100%;
   overflow: hidden;
 }

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T08:23:00Z",
+  "updatedAt": "2026-05-16T08:29:48Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -782,6 +782,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T08:23:00Z",
       "watched": {}
+    },
+    "tt8398600": {
+      "imdbId": "tt8398600",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T08:29:48Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -832,20 +842,32 @@
       "tt4513678": true,
       "tt21235248": true,
       "tt2140479": true,
-      "tt0114369": true
+      "tt0114369": true,
+      "tt8398600": true
     },
-    "updatedAt": "2026-05-16T08:23:00Z"
+    "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt0114369",
+    "imdbId": "tt8398600",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T08:23:00Z"
+    "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt8398600",
+      "tmdbId": "",
+      "title": "After Life",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T08:29:48Z"
+    },
     {
       "imdbId": "tt0114369",
       "tmdbId": "",

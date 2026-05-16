@@ -31,6 +31,7 @@ const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';
 const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
+const AUTH_LOCAL_USERS_KEY = 'mep_local_auth_users_v1';
 const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
@@ -230,7 +231,14 @@ function bindAuth() {
       return;
     }
     if (elements.authErrorRegister) elements.authErrorRegister.textContent = '';
-    await notifyUserRegistrationCreated(email);
+    localStorage.setItem(AUTH_STORAGE_KEY, '1');
+    saveAuthSession(created.user || { name, email, role: 'viewer' });
+    hideAuthGate();
+    updateAuthUi();
+    startWatchProgressQueueHeartbeat();
+    void hydrateWatchProgressForCurrentUser();
+    renderCatalog();
+    renderDetail({ skipHydratePlayback: true });
   });
 
   elements.logoutBtn?.addEventListener('click', () => {
@@ -287,22 +295,83 @@ async function registerAuthUser({ name, email, password }) {
   const salt = makeSalt();
   const passwordHash = await hashPassword(password, salt);
   const existing = await loadUserRecord(normalizedEmail).catch(() => null);
-  if (existing) return { ok: false, error: 'Ese correo ya existe.' };
-  const issue = await openGitHubIssue(
-    `User registration: ${name} <${normalizedEmail}>`,
-    buildUserRegistrationBody({ name, email: normalizedEmail, salt, passwordHash, role: 'viewer' }),
-    ['user-register']
-  );
-  return { ok: true, issue };
+  const localUsers = loadLocalAuthUsers();
+  if (existing || localUsers[normalizedEmail]) return { ok: false, error: 'Ese correo ya existe.' };
+
+  localUsers[normalizedEmail] = {
+    name,
+    email: normalizedEmail,
+    role: 'viewer',
+    salt,
+    passwordHash,
+    pendingSync: true,
+    createdAt: new Date().toISOString()
+  };
+  saveLocalAuthUsers(localUsers);
+
+  void enqueueUserRegisterIssue({ name, email: normalizedEmail, salt, passwordHash });
+  return { ok: true, user: { name, email: normalizedEmail, role: 'viewer' } };
 }
 
 async function validateAuthUser(email, password) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   const user = await loadUserRecord(normalizedEmail).catch(() => null);
-  if (!user) return { ok: false, error: 'Credenciales incorrectas.' };
-  const candidate = await hashPassword(password, String(user.salt || ''));
-  if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
-  return { ok: true, user };
+  if (user) {
+    const candidate = await hashPassword(password, String(user.salt || ''));
+    if (candidate === user.passwordHash) {
+      markLocalUserAsSynced(normalizedEmail, user);
+      return { ok: true, user };
+    }
+  }
+
+  const localUsers = loadLocalAuthUsers();
+  const localUser = localUsers[normalizedEmail];
+  if (!localUser) return { ok: false, error: 'Credenciales incorrectas.' };
+  const candidate = await hashPassword(password, String(localUser.salt || ''));
+  if (candidate !== localUser.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
+  return { ok: true, user: { name: localUser.name, email: normalizedEmail, role: localUser.role || 'viewer' } };
+}
+
+function loadLocalAuthUsers() {
+  try {
+    const data = JSON.parse(localStorage.getItem(AUTH_LOCAL_USERS_KEY) || '{}');
+    return data && typeof data === 'object' ? data : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveLocalAuthUsers(users) {
+  try {
+    localStorage.setItem(AUTH_LOCAL_USERS_KEY, JSON.stringify(users || {}));
+  } catch {}
+}
+
+function markLocalUserAsSynced(email, remoteUser) {
+  const key = String(email || '').trim().toLowerCase();
+  if (!key) return;
+  const users = loadLocalAuthUsers();
+  if (!users[key]) return;
+  users[key] = {
+    ...users[key],
+    name: String(remoteUser?.name || users[key].name || '').trim(),
+    role: String(remoteUser?.role || users[key].role || 'viewer').trim().toLowerCase(),
+    pendingSync: false,
+    syncedAt: new Date().toISOString()
+  };
+  saveLocalAuthUsers(users);
+}
+
+async function enqueueUserRegisterIssue({ name, email, salt, passwordHash }) {
+  try {
+    await openGitHubIssue(
+      `User registration: ${name} <${email}>`,
+      buildUserRegistrationBody({ name, email, salt, passwordHash, role: 'viewer' }),
+      ['user-register']
+    );
+  } catch {
+    // keep local user usable even if remote sync fails for now
+  }
 }
 
 function loadLocalWatchProgress(email) {
@@ -1473,11 +1542,12 @@ function renderAdminDashboard() {
 
   Promise.all([
     fetchJsonWithTimeout('./assets/watch-progress/index.json', 3500).catch(() => ({ users: [] })),
+    fetchJsonWithTimeout('./assets/users/index.json', 3500).catch(() => ({ users: [] })),
     fetchJsonWithTimeout('./assets/catalog.seed.json', 3500).catch(() => ({})),
     fetchJsonWithTimeout('./assets/roles/permissions.json', 3500).catch(() => ({ permissions: {} })),
     fetchJsonWithTimeout('./assets/roles/requests.json', 3500).catch(() => ({ requests: [] })),
     fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] }))
-  ]).then(async ([watchIndex, seed, permissions, roleRequests, roleAudit]) => {
+  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit]) => {
     const toTs = (value) => Date.parse(value || 0) || 0;
     const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
     const details = await Promise.all(users.slice(0, 100).map(async (entry) => {
@@ -1487,6 +1557,13 @@ function renderAdminDashboard() {
       return fetchJsonWithTimeout(`./assets/watch-progress/${file}?v=${window.__mep_build || Date.now()}`, 3000).catch(() => null);
     }));
     const cleanDetails = details.filter(Boolean);
+    const allUsersIndex = Array.isArray(usersIndex?.users) ? usersIndex.users : [];
+    const userRoleRecords = await Promise.all(allUsersIndex.slice(0, 400).map(async (entry) => {
+      const file = String(entry?.file || '').trim();
+      if (!file) return null;
+      return fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
+    }));
+    const roleUsers = userRoleRecords.filter(Boolean);
     const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
     const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
@@ -1560,12 +1637,13 @@ function renderAdminDashboard() {
       const slaClass = oldestPendingHours >= 48 ? 'sla-critical' : oldestPendingHours >= 24 ? 'sla-warning' : 'sla-ok';
       const slaLabel = oldestPending ? `${oldestPendingHours}h` : '0h';
 
-      const viewers = cleanDetails.filter((row) => String(row?.role || 'viewer').toLowerCase() === 'viewer').length;
-      const agents = cleanDetails.filter((row) => String(row?.role || '').toLowerCase() === 'agent').length;
+      const viewers = roleUsers.filter((row) => String(row?.role || 'viewer').toLowerCase() === 'viewer').length;
+      const agents = roleUsers.filter((row) => String(row?.role || '').toLowerCase() === 'agent').length;
+      const admins = roleUsers.filter((row) => String(row?.role || '').toLowerCase() === 'admin').length;
       const roleShareTotal = Math.max(1, totalUsers);
       const viewerPct = Math.round((viewers / roleShareTotal) * 100);
       const agentPct = Math.round((agents / roleShareTotal) * 100);
-      const adminPct = Math.max(0, 100 - viewerPct - agentPct);
+      const adminPct = Math.round((admins / roleShareTotal) * 100);
 
       const titleHits = new Map();
       for (const event of scopedHistory) {

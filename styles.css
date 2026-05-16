@@ -752,6 +752,49 @@ h1 {
   display: none;
 }
 
+.item-quick-actions {
+  display: flex;
+  gap: 0.35rem;
+  position: absolute;
+  right: 0.45rem;
+  top: 0.45rem;
+  z-index: 7;
+}
+
+.item-quick-btn {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.54);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 800;
+  height: 1.85rem;
+  justify-content: center;
+  line-height: 1;
+  min-width: 1.85rem;
+  padding: 0;
+}
+
+.item-quick-btn.active-like {
+  background: rgba(229, 9, 20, 0.92);
+  border-color: rgba(229, 9, 20, 0.92);
+  color: #fff;
+}
+
+.item-quick-btn.active-dislike {
+  background: rgba(120, 126, 144, 0.92);
+  border-color: rgba(120, 126, 144, 0.92);
+  color: #fff;
+}
+
+.item-quick-btn.active-later {
+  background: rgba(5, 125, 255, 0.92);
+  border-color: rgba(5, 125, 255, 0.92);
+  color: #fff;
+}
+
 @media (hover: hover) and (pointer: fine) and (min-width: 941px) {
   .item-play {
     align-items: center;

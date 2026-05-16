@@ -34,6 +34,7 @@ const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
+const TITLE_PREFS_STORAGE_PREFIX = 'mep_title_prefs_';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
@@ -1391,9 +1392,12 @@ function renderCatalog() {
 }
 
 function renderHomeCatalog(baseFiltered) {
+  cleanupWatchLaterFromCompleted(baseFiltered);
+  const prefs = loadTitlePrefs();
   const watch = buildWatchInsights();
   const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   const rewatchItems = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const watchLaterItems = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
   const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
 
@@ -1422,6 +1426,7 @@ function renderHomeCatalog(baseFiltered) {
 
   setCatalogCount(`${baseFiltered.length} items`);
   const sections = [
+    section('watch_later', 'Ver mas tarde', 'Titulos que guardaste para despues', watchLaterItems),
     section('continue', 'Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
     section('movies_recommended', 'Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
     section('series_recommended', 'Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
@@ -1441,10 +1446,15 @@ function renderHomeCatalog(baseFiltered) {
 }
 
 function renderHomeSectionList(baseFiltered, sectionKey) {
+  cleanupWatchLaterFromCompleted(baseFiltered);
+  const prefs = loadTitlePrefs();
   const watch = buildWatchInsights();
   let title = 'Listado';
   let items = [];
-  if (sectionKey === 'continue') {
+  if (sectionKey === 'watch_later') {
+    title = 'Ver mas tarde';
+    items = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
+  } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   } else if (sectionKey === 'rewatch') {
@@ -1659,6 +1669,7 @@ function populateGenreFilter() {
 }
 
 function renderLocalCards(titles) {
+  const prefs = loadTitlePrefs();
   return titles.map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = title.posterUrl || title.metadata?.posterUrl || '';
@@ -1672,12 +1683,29 @@ function renderLocalCards(titles) {
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${playOverlay}
+      ${getCardQuickActions(title, prefs)}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('');
 }
 
 function bindLocalCardEvents() {
+  elements.items.querySelectorAll('.item-quick-btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const action = String(btn.dataset.quickAction || '').trim();
+      const card = btn.closest('.item');
+      const key = String(card?.dataset?.key || '').trim();
+      if (!key || !action) return;
+      const title = loadLocalCatalog().find((entry) => entry.catalogKey === key);
+      if (!title) return;
+      setTitlePreference(title, action);
+      renderCatalog();
+      renderDetail({ skipHydratePlayback: true });
+    });
+  });
+
   elements.items.querySelectorAll('.item-play').forEach((btn) => {
     btn.addEventListener('click', async (event) => {
       event.preventDefault();
@@ -1797,6 +1825,8 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
 }
 
 function renderRemoteResults(query) {
+  cleanupWatchLaterFromCompleted();
+  const prefs = loadTitlePrefs();
   const localResults = getFilteredLocalTitles();
   const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, query));
   setCatalogCount(`${merged.length} matches for "${query}"`);
@@ -1808,8 +1838,9 @@ function renderRemoteResults(query) {
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
-    return `<article class="item" ${entry.source === 'remote' ? `data-remote-index="${index}"` : `data-key="${escapeHtml(title.catalogKey)}"`}>
+    return `<article class="item" data-key="${escapeHtml(title.catalogKey)}" ${entry.source === 'remote' ? `data-remote-index="${index}"` : ''}>
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${getCardQuickActions(title, prefs)}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('') || '<div class="empty">No results found for this query.</div>';
@@ -2078,6 +2109,109 @@ function recommendationScore(title, watch) {
 
 function safeJson(text) {
   try { return JSON.parse(text || 'null'); } catch { return null; }
+}
+
+function getCurrentUserPrefsKey() {
+  const user = getAuthUser();
+  const email = String(user?.email || '').trim().toLowerCase();
+  return email ? `${TITLE_PREFS_STORAGE_PREFIX}${email}` : '';
+}
+
+function loadTitlePrefs() {
+  const key = getCurrentUserPrefsKey();
+  if (!key) return { likes: {}, watchLater: {} };
+  const data = safeJson(localStorage.getItem(key)) || {};
+  return {
+    likes: data.likes && typeof data.likes === 'object' ? data.likes : {},
+    watchLater: data.watchLater && typeof data.watchLater === 'object' ? data.watchLater : {}
+  };
+}
+
+function saveTitlePrefs(next) {
+  const key = getCurrentUserPrefsKey();
+  if (!key) return;
+  localStorage.setItem(key, JSON.stringify({
+    likes: next?.likes || {},
+    watchLater: next?.watchLater || {},
+    updatedAt: new Date().toISOString()
+  }));
+}
+
+function getTitleFlags(title, prefs = loadTitlePrefs()) {
+  const id = getTitleId(title);
+  if (!id) return { like: 0, watchLater: false };
+  return {
+    like: Number(prefs?.likes?.[id] || 0),
+    watchLater: Boolean(prefs?.watchLater?.[id])
+  };
+}
+
+function getCardQuickActions(title, prefs = loadTitlePrefs()) {
+  if (!isAuthenticated()) return '';
+  const flags = getTitleFlags(title, prefs);
+  const likedClass = flags.like === 1 ? ' active-like' : '';
+  const dislikedClass = flags.like === -1 ? ' active-dislike' : '';
+  const laterClass = flags.watchLater ? ' active-later' : '';
+  return `<div class="item-quick-actions">
+    <button class="item-quick-btn${likedClass}" type="button" data-quick-action="like" aria-label="Me gusta">❤</button>
+    <button class="item-quick-btn${dislikedClass}" type="button" data-quick-action="dislike" aria-label="No me gusta">✕</button>
+    <button class="item-quick-btn${laterClass}" type="button" data-quick-action="later" aria-label="Ver mas tarde">+</button>
+  </div>`;
+}
+
+function isSeriesCompletedByLastEpisode(title) {
+  if (!isSeriesLike(title)) return false;
+  const sourceId = String(title?.imdbId || title?.tmdbId || '').trim();
+  if (!sourceId) return false;
+  const progress = getSeriesProgress(title);
+  const cached = loadCachedSeriesEpisodes(sourceId);
+  const seasons = Array.isArray(cached?.seasons) ? cached.seasons : [];
+  if (!seasons.length) return false;
+  const lastSeason = seasons[seasons.length - 1];
+  const lastEpisode = Array.isArray(lastSeason?.episodes) && lastSeason.episodes.length
+    ? lastSeason.episodes[lastSeason.episodes.length - 1]
+    : null;
+  if (!lastEpisode) return false;
+  const entry = progress?.watched?.[`s${lastSeason.seasonNumber}e${lastEpisode.episode}`];
+  if (entry === true) return true;
+  return Boolean(entry?.completedAt);
+}
+
+function cleanupWatchLaterFromCompleted(baseFiltered = null) {
+  if (!isAuthenticated()) return;
+  const prefs = loadTitlePrefs();
+  const current = { ...(prefs.watchLater || {}) };
+  const watch = buildWatchInsights();
+  const titles = Array.isArray(baseFiltered) ? baseFiltered : getFilteredLocalTitles();
+  let changed = false;
+  for (const title of titles) {
+    const id = getTitleId(title);
+    if (!id || !current[id]) continue;
+    const completed = watch.completedIds.has(id) || isSeriesCompletedByLastEpisode(title);
+    if (!completed) continue;
+    delete current[id];
+    changed = true;
+  }
+  if (changed) saveTitlePrefs({ ...prefs, watchLater: current });
+}
+
+function setTitlePreference(title, action) {
+  if (!isAuthenticated() || !title) return;
+  const id = getTitleId(title);
+  if (!id) return;
+  const prefs = loadTitlePrefs();
+  const next = {
+    likes: { ...(prefs.likes || {}) },
+    watchLater: { ...(prefs.watchLater || {}) }
+  };
+  if (action === 'like') next.likes[id] = next.likes[id] === 1 ? 0 : 1;
+  else if (action === 'dislike') next.likes[id] = next.likes[id] === -1 ? 0 : -1;
+  else if (action === 'later') {
+    if (next.watchLater[id]) delete next.watchLater[id];
+    else next.watchLater[id] = true;
+  }
+  if (!next.likes[id]) delete next.likes[id];
+  saveTitlePrefs(next);
 }
 
 function renderDetail(options = {}) {

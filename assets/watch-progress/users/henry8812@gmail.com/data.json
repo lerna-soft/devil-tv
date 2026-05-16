@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T18:36:34Z",
+  "updatedAt": "2026-05-16T18:38:54Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -822,6 +822,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T18:36:34Z",
       "watched": {}
+    },
+    "tt1586680": {
+      "imdbId": "tt1586680",
+      "tmdbId": "34307",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T18:38:54Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -874,20 +884,32 @@
       "tt2140479": true,
       "tt0114369": true,
       "tt8398600": true,
-      "tt6143796": true
+      "tt6143796": true,
+      "tt1586680": true
     },
-    "updatedAt": "2026-05-16T18:36:34Z"
+    "updatedAt": "2026-05-16T18:38:54Z"
   },
   "lastWatch": {
-    "imdbId": "tt6143796",
-    "tmdbId": "",
+    "imdbId": "tt1586680",
+    "tmdbId": "34307",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T18:36:34Z"
+    "updatedAt": "2026-05-16T18:38:54Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1586680",
+      "tmdbId": "34307",
+      "title": "Shameless",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T18:38:54Z"
+    },
     {
       "imdbId": "tt6143796",
       "tmdbId": "",

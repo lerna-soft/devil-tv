@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:17:00Z",
+  "updatedAt": "2026-05-16T05:17:40Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -272,6 +272,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T02:33:00Z",
       "watched": {}
+    },
+    "tt27486290": {
+      "imdbId": "tt27486290",
+      "tmdbId": "224263",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:17:40Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -279,18 +289,29 @@
     "watchLater": {
       "tt14452776": true
     },
-    "updatedAt": "2026-05-16T05:17:00Z"
+    "updatedAt": "2026-05-16T05:17:40Z"
   },
   "lastWatch": {
-    "imdbId": "tt14452776",
-    "tmdbId": "136315",
+    "imdbId": "tt27486290",
+    "tmdbId": "224263",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:17:00Z"
+    "updatedAt": "2026-05-16T05:17:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt27486290",
+      "tmdbId": "224263",
+      "title": "Stranger Things: Relatos del 85",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:17:40Z"
+    },
     {
       "imdbId": "tt14452776",
       "tmdbId": "136315",

@@ -1,6 +1,6 @@
 {
-  "version": 91,
-  "generatedAt": "2026-05-16T14:32:48.732Z",
+  "version": 92,
+  "generatedAt": "2026-05-16T14:33:02.133Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48593,6 +48593,22 @@
       "releaseDate": null,
       "overview": "María José Magan, Francisco Angelini",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODE4MjJmZmUtYTVkOC00NWM3LTk0Y2MtODA4ZDEyYmY1YTA4XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt1312695",
+      "title": "Nadie me dirá como quererte",
+      "year": 2008,
+      "releaseDate": null,
+      "overview": "Dora Mazzone, Javier Vidal",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTFhY2NjNjYtODUyYS00OGI2LThkNDktMDA0NTA5ZDA2ZDc3XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

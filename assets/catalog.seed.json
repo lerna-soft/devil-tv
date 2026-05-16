@@ -1,6 +1,6 @@
 {
-  "version": 100,
-  "generatedAt": "2026-05-16T20:54:20.795Z",
+  "version": 101,
+  "generatedAt": "2026-05-16T20:54:31.883Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48737,6 +48737,22 @@
       "releaseDate": null,
       "overview": "Niecy Nash, James Lesure",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNGQyYTc3OGQtZWU5MS00MTgwLWFhYTAtYzZmYjc2N2ZiODk2XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt39027207",
+      "title": "The Rookie: North",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Chris Sullivan, Jay Ellis",
+      "posterUrl": "Description: Chris Sullivan, Jay Ellis",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

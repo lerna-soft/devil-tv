@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:12:17Z",
+  "updatedAt": "2026-05-16T06:53:42Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -382,6 +382,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:12:17Z",
       "watched": {}
+    },
+    "tt0103950": {
+      "imdbId": "tt0103950",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:53:42Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -395,20 +405,32 @@
       "tt26735622": true,
       "tt33046197": true,
       "tt32916440": true,
-      "tt1422020": true
+      "tt1422020": true,
+      "tt0103950": true
     },
-    "updatedAt": "2026-05-16T06:12:17Z"
+    "updatedAt": "2026-05-16T06:53:42Z"
   },
   "lastWatch": {
-    "imdbId": "tt1422020",
+    "imdbId": "tt0103950",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:12:17Z"
+    "updatedAt": "2026-05-16T06:53:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0103950",
+      "tmdbId": "",
+      "title": "City Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:53:42Z"
+    },
     {
       "imdbId": "tt1422020",
       "tmdbId": "",

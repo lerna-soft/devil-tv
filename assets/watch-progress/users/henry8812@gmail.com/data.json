@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:27Z",
+  "updatedAt": "2026-05-16T06:59:29Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -512,6 +512,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:27Z",
       "watched": {}
+    },
+    "tt21028848": {
+      "imdbId": "tt21028848",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:29Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -537,20 +547,32 @@
       "tt2076298": true,
       "tt2888046": true,
       "tt33456991": true,
-      "tt38682795": true
+      "tt38682795": true,
+      "tt21028848": true
     },
-    "updatedAt": "2026-05-16T06:59:27Z"
+    "updatedAt": "2026-05-16T06:59:29Z"
   },
   "lastWatch": {
-    "imdbId": "tt38682795",
+    "imdbId": "tt21028848",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:27Z"
+    "updatedAt": "2026-05-16T06:59:29Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt21028848",
+      "tmdbId": "",
+      "title": "Ip Man: The Awakening",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:29Z"
+    },
     {
       "imdbId": "tt38682795",
       "tmdbId": "",

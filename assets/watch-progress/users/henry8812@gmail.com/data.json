@@ -472,6 +472,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:19Z",
       "watched": {}
+    },
+    "tt2076298": {
+      "imdbId": "tt2076298",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:19Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -493,12 +503,13 @@
       "tt2599716": true,
       "tt0386005": true,
       "tt1220719": true,
-      "tt1386932": true
+      "tt1386932": true,
+      "tt2076298": true
     },
     "updatedAt": "2026-05-16T06:59:19Z"
   },
   "lastWatch": {
-    "imdbId": "tt1386932",
+    "imdbId": "tt2076298",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
@@ -511,6 +522,17 @@
       "imdbId": "tt1386932",
       "tmdbId": "",
       "title": "Ip Man 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:19Z"
+    },
+    {
+      "imdbId": "tt2076298",
+      "tmdbId": "",
+      "title": "Ip Man 4: The Finale",
       "type": "movie",
       "season": 1,
       "episode": 1,

@@ -2118,14 +2118,22 @@ function bindLocalCardEvents() {
       event.preventDefault();
       event.stopPropagation();
       const action = String(btn.dataset.quickAction || '').trim();
+      const prefId = String(btn.dataset.prefId || '').trim();
       const card = btn.closest('.item');
       const key = String(card?.dataset?.key || '').trim();
-      if (!key || !action) return;
-      const title = loadLocalCatalog().find((entry) => entry.catalogKey === key);
+      if (!action || (!prefId && !key)) return;
+      let title = null;
+      if (key) title = loadLocalCatalog().find((entry) => entry.catalogKey === key) || null;
+      if (!title && prefId) title = loadLocalCatalog().find((entry) => String(getTitleId(entry) || '').trim() === prefId) || null;
+      if (!title && state.selected && String(getTitleId(state.selected) || '').trim() === prefId) title = state.selected;
       if (!title) return;
       setTitlePreference(title, action);
-      renderCatalog();
-      renderDetail({ skipHydratePlayback: true });
+      const id = String(getTitleId(title) || '').trim();
+      updateQuickActionButtons(id);
+      if (action === 'later' && state.homeSectionView === 'watch_later' && card) {
+        const prefs = loadTitlePrefs();
+        if (!prefs.watchLater?.[id]) card.remove();
+      }
     });
   });
 
@@ -2572,13 +2580,26 @@ function getTitleFlags(title, prefs = loadTitlePrefs()) {
 
 function getCardQuickActions(title, prefs = loadTitlePrefs()) {
   if (!isAuthenticated()) return '';
+  const prefId = escapeAttribute(String(getTitleId(title) || ''));
   const flags = getTitleFlags(title, prefs);
   const likedClass = flags.like === 1 ? ' active-like' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
   return `<div class="item-quick-actions">
-    <button class="item-quick-btn${likedClass}" type="button" data-quick-action="like" aria-label="Me gusta">❤</button>
-    <button class="item-quick-btn${laterClass}" type="button" data-quick-action="later" aria-label="Ver mas tarde">+</button>
+    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="Me gusta">❤</button>
+    <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="Ver mas tarde">+</button>
   </div>`;
+}
+
+function updateQuickActionButtons(prefId) {
+  const id = String(prefId || '').trim();
+  if (!id) return;
+  const prefs = loadTitlePrefs();
+  const likeActive = Number(prefs?.likes?.[id] || 0) === 1;
+  const laterActive = Boolean(prefs?.watchLater?.[id]);
+  document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="like"]`)
+    .forEach((btn) => btn.classList.toggle('active-like', likeActive));
+  document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="later"]`)
+    .forEach((btn) => btn.classList.toggle('active-later', laterActive));
 }
 
 function isSeriesCompletedByLastEpisode(title) {

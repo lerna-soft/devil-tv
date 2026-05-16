@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:42:50Z",
+  "updatedAt": "2026-05-16T07:42:53Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -702,6 +702,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:42:50Z",
       "watched": {}
+    },
+    "tt0090506": {
+      "imdbId": "tt0090506",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:42:53Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -746,20 +756,32 @@
       "tt10366206": true,
       "tt11247606": true,
       "tt7068946": true,
-      "tt0087332": true
+      "tt0087332": true,
+      "tt0090506": true
     },
-    "updatedAt": "2026-05-16T07:42:50Z"
+    "updatedAt": "2026-05-16T07:42:53Z"
   },
   "lastWatch": {
-    "imdbId": "tt0087332",
+    "imdbId": "tt0090506",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:42:50Z"
+    "updatedAt": "2026-05-16T07:42:53Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0090506",
+      "tmdbId": "",
+      "title": "The Real Ghostbusters",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:42:53Z"
+    },
     {
       "imdbId": "tt0087332",
       "tmdbId": "",

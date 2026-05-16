@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:19Z",
+  "updatedAt": "2026-05-16T06:59:22Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -482,6 +482,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:19Z",
       "watched": {}
+    },
+    "tt2888046": {
+      "imdbId": "tt2888046",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:22Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -504,20 +514,32 @@
       "tt0386005": true,
       "tt1220719": true,
       "tt1386932": true,
-      "tt2076298": true
+      "tt2076298": true,
+      "tt2888046": true
     },
-    "updatedAt": "2026-05-16T06:59:19Z"
+    "updatedAt": "2026-05-16T06:59:22Z"
   },
   "lastWatch": {
-    "imdbId": "tt2076298",
+    "imdbId": "tt2888046",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:19Z"
+    "updatedAt": "2026-05-16T06:59:22Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt2888046",
+      "tmdbId": "",
+      "title": "Ip Man 3",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:22Z"
+    },
     {
       "imdbId": "tt1386932",
       "tmdbId": "",

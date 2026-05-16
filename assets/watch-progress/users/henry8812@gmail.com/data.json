@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:16:39Z",
+  "updatedAt": "2026-05-16T07:38:27Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -638,9 +638,9 @@
       "tmdbId": "245891",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-16T07:16:39Z",
+      "progress": 6072.9,
+      "lastProgress": 6072.9,
+      "updatedAt": "2026-05-16T07:38:27Z",
       "watched": {}
     },
     "tt4425200": {
@@ -722,11 +722,22 @@
     "tmdbId": "245891",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-16T07:16:39Z"
+    "progress": 6072.9,
+    "updatedAt": "2026-05-16T07:38:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt2911666",
+      "tmdbId": "245891",
+      "title": "John Wick (Otro día para matar)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 6072.9,
+      "playerStatus": "completed",
+      "updatedAt": "2026-05-16T07:38:27Z"
+    },
     {
       "imdbId": "tt2911666",
       "tmdbId": "245891",

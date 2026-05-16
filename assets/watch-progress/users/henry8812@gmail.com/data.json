@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:50:49Z",
+  "updatedAt": "2026-05-16T05:50:54Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -362,6 +362,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:50:49Z",
       "watched": {}
+    },
+    "tt32916440": {
+      "imdbId": "tt32916440",
+      "tmdbId": "1317288",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:50:54Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -373,20 +383,32 @@
       "tt27331527": true,
       "tt37989803": true,
       "tt26735622": true,
-      "tt33046197": true
+      "tt33046197": true,
+      "tt32916440": true
     },
-    "updatedAt": "2026-05-16T05:50:49Z"
+    "updatedAt": "2026-05-16T05:50:54Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "tt32916440",
+    "tmdbId": "1317288",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:50:49Z"
+    "updatedAt": "2026-05-16T05:50:54Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt32916440",
+      "tmdbId": "1317288",
+      "title": "Marty Supreme",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:50:54Z"
+    },
     {
       "imdbId": "tt33046197",
       "tmdbId": "1168190",

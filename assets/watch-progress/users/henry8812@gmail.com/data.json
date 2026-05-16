@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T14:34:58Z",
+  "updatedAt": "2026-05-16T17:05:56Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -760,7 +760,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T07:52:30Z",
+      "updatedAt": "2026-05-16T17:05:56Z",
       "watched": {}
     },
     "tt0032186": {
@@ -858,15 +858,26 @@
     "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt26743760",
-    "tmdbId": "220542",
+    "imdbId": "tt2140479",
+    "tmdbId": "302946",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T14:34:58Z"
+    "updatedAt": "2026-05-16T17:05:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt2140479",
+      "tmdbId": "302946",
+      "title": "El contable",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T17:05:56Z"
+    },
     {
       "imdbId": "tt26743760",
       "tmdbId": "220542",

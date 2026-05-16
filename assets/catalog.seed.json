@@ -1,6 +1,6 @@
 {
-  "version": 78,
-  "generatedAt": "2026-05-16T07:02:32.749Z",
+  "version": 79,
+  "generatedAt": "2026-05-16T07:03:14.511Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48385,6 +48385,22 @@
       "releaseDate": null,
       "overview": "Scott Brady, Mel Scott",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTQ0NTQyNmUtYTA5OS00MDFhLWFlNTEtYTBlNWFhOTgwNzFjXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0194622",
+      "title": "RoboCop",
+      "year": 1988,
+      "releaseDate": null,
+      "overview": "Robert Bockstael, Barbara Budd",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTZlMjg0ZWItMjkwNy00NjViLWJmYjktMDFlYzc0ZmM5ZTI3XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

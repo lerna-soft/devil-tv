@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-15T23:14:38Z",
+  "updatedAt": "2026-05-16T00:54:51Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -232,18 +232,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-15T23:14:38Z",
       "watched": {}
+    },
+    "tt31938062": {
+      "imdbId": "tt31938062",
+      "tmdbId": "250307",
+      "lastSeason": 2,
+      "lastEpisode": 15,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T00:54:51Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt26753003",
-    "tmdbId": "",
-    "season": 1,
-    "episode": 1,
+    "imdbId": "tt31938062",
+    "tmdbId": "250307",
+    "season": 2,
+    "episode": 15,
     "progress": 0,
-    "updatedAt": "2026-05-15T23:14:38Z"
+    "updatedAt": "2026-05-16T00:54:51Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt31938062",
+      "tmdbId": "250307",
+      "title": "The Pitt",
+      "type": "series",
+      "season": 2,
+      "episode": 15,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T00:54:51Z"
+    },
     {
       "imdbId": "tt26753003",
       "tmdbId": "",

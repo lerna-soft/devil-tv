@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T04:52:31Z",
+  "updatedAt": "2026-05-16T05:21:35Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -147,10 +147,10 @@
       "imdbId": "tt14452776",
       "tmdbId": "136315",
       "lastSeason": 1,
-      "lastEpisode": 7,
+      "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-15T22:27:19Z",
+      "updatedAt": "2026-05-16T05:17:00Z",
       "watched": {}
     },
     "tt15940132": {
@@ -270,20 +270,103 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T02:33:00Z",
+      "updatedAt": "2026-05-16T05:20:52Z",
+      "watched": {}
+    },
+    "tt27486290": {
+      "imdbId": "tt27486290",
+      "tmdbId": "224263",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:17:40Z",
+      "watched": {}
+    },
+    "tt29552248": {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:21:35Z",
       "watched": {}
     }
   },
+  "preferences": {
+    "likes": {},
+    "watchLater": {
+      "tt14452776": true,
+      "tt35521922": true
+    },
+    "updatedAt": "2026-05-16T05:21:35Z"
+  },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "296232",
+    "imdbId": "tt29552248",
+    "tmdbId": "1007757",
     "season": 1,
-    "episode": 3,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T04:52:31Z"
+    "updatedAt": "2026-05-16T05:21:35Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:21:35Z"
+    },
+    {
+      "imdbId": "tt35521922",
+      "tmdbId": "",
+      "title": "Good Boy",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:20:52Z"
+    },
+    {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:17:42Z"
+    },
+    {
+      "imdbId": "tt27486290",
+      "tmdbId": "224263",
+      "title": "Stranger Things: Relatos del 85",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:17:40Z"
+    },
+    {
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:17:00Z"
+    },
     {
       "imdbId": "",
       "tmdbId": "296232",

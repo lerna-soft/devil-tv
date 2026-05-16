@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:43:06Z",
+  "updatedAt": "2026-05-16T07:43:07Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -742,6 +742,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:43:06Z",
       "watched": {}
+    },
+    "tt21235248": {
+      "imdbId": "tt21235248",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:43:07Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -790,20 +800,32 @@
       "tt0090506": true,
       "tt0097428": true,
       "tt1289401": true,
-      "tt4513678": true
+      "tt4513678": true,
+      "tt21235248": true
     },
-    "updatedAt": "2026-05-16T07:43:06Z"
+    "updatedAt": "2026-05-16T07:43:07Z"
   },
   "lastWatch": {
-    "imdbId": "tt4513678",
+    "imdbId": "tt21235248",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:43:06Z"
+    "updatedAt": "2026-05-16T07:43:07Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt21235248",
+      "tmdbId": "",
+      "title": "Ghostbusters: Frozen Empire",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:43:07Z"
+    },
     {
       "imdbId": "tt4513678",
       "tmdbId": "",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:24Z",
+  "updatedAt": "2026-05-16T06:59:27Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -502,6 +502,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:24Z",
       "watched": {}
+    },
+    "tt38682795": {
+      "imdbId": "tt38682795",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:59:27Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -526,20 +536,32 @@
       "tt1386932": true,
       "tt2076298": true,
       "tt2888046": true,
-      "tt33456991": true
+      "tt33456991": true,
+      "tt38682795": true
     },
-    "updatedAt": "2026-05-16T06:59:24Z"
+    "updatedAt": "2026-05-16T06:59:27Z"
   },
   "lastWatch": {
-    "imdbId": "tt33456991",
+    "imdbId": "tt38682795",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:24Z"
+    "updatedAt": "2026-05-16T06:59:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt38682795",
+      "tmdbId": "",
+      "title": "Ip Man: Kung Fu Legend",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:59:27Z"
+    },
     {
       "imdbId": "tt33456991",
       "tmdbId": "",

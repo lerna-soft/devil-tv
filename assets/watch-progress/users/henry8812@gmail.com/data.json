@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:45:23Z",
+  "updatedAt": "2026-05-16T07:52:01Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -680,7 +680,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T07:42:20Z",
+      "updatedAt": "2026-05-16T07:52:01Z",
       "watched": {}
     },
     "tt7068946": {
@@ -794,7 +794,6 @@
       "tt4425200": true,
       "tt6146586": true,
       "tt10366206": true,
-      "tt11247606": true,
       "tt7068946": true,
       "tt0087332": true,
       "tt0090506": true,
@@ -803,18 +802,29 @@
       "tt4513678": true,
       "tt21235248": true
     },
-    "updatedAt": "2026-05-16T07:43:07Z"
+    "updatedAt": "2026-05-16T07:52:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt0093870",
+    "imdbId": "tt11247606",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:45:23Z"
+    "updatedAt": "2026-05-16T07:52:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt11247606",
+      "tmdbId": "",
+      "title": "The Account",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:52:01Z"
+    },
     {
       "imdbId": "tt0093870",
       "tmdbId": "",

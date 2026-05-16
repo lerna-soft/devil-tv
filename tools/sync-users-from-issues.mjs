@@ -6,6 +6,7 @@
  * USER_REGISTRATION_REQUEST
  * Name: ...
  * Email: ...
+ * Role: viewer
  * Salt: ...
  * PasswordHash: ...
  */
@@ -99,11 +100,13 @@ function parseIssue(issue) {
   const name = (body.match(/^Name:\s*(.+)$/im) || [])[1];
   const email = normalizeEmail((body.match(/^Email:\s*(.+)$/im) || [])[1]);
   const salt = (body.match(/^Salt:\s*(.+)$/im) || [])[1];
+  const role = 'viewer';
   const passwordHash = (body.match(/^PasswordHash:\s*([0-9a-f]{64})$/im) || [])[1];
   if (!name || !email || !salt || !passwordHash) return null;
   return {
     name: String(name).trim(),
     email,
+    role: role || 'viewer',
     salt: String(salt).trim(),
     passwordHash: String(passwordHash).trim(),
     createdAt: new Date().toISOString()
@@ -158,6 +161,7 @@ async function writeUserFiles(users) {
     const payload = {
       name: user.name,
       email: user.email,
+      role: user.role || 'viewer',
       salt: user.salt,
       passwordHash: user.passwordHash,
       createdAt: user.createdAt

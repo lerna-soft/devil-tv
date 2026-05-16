@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "permissions": {
+    "viewer": [
+      "catalog:view",
+      "title:detail:view",
+      "title:rate",
+      "title:favorite",
+      "watch:play"
+    ],
+    "agent": [
+      "catalog:view",
+      "title:detail:view",
+      "title:report",
+      "watch:progress:view",
+      "ops:monitor"
+    ],
+    "admin": [
+      "*"
+    ]
+  },
+  "updatedAt": "2026-05-16T00:00:00.000Z",
+  "updatedBy": "system"
+}

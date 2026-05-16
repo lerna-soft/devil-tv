@@ -1,6 +1,6 @@
 {
-  "version": 62,
-  "generatedAt": "2026-05-16T01:57:22.503Z",
+  "version": 63,
+  "generatedAt": "2026-05-16T02:32:49.781Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48129,6 +48129,22 @@
       "releaseDate": null,
       "overview": "Talat Bulut, Akin Akinözü",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzFjZGY4ODMtMjZmNi00YWM4LWJkODAtN2EyYTM5YmVhNWNmXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt32361930",
+      "title": "Good Boy",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Park Bo-gum, Kim So-hyun",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTE5NTRhODAtMmEzNi00ZGRmLWI1M2UtMmJlZTczNzhhZWU1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

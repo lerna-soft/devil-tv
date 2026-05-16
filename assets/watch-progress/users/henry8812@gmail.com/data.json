@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:45:41.588Z",
+  "updatedAt": "2026-05-16T05:50:40Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -322,6 +322,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:40Z",
       "watched": {}
+    },
+    "tt27331527": {
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:50:40Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -329,20 +339,32 @@
     "watchLater": {
       "tt14452776": true,
       "tt35521922": true,
-      "tt7587890": true
+      "tt7587890": true,
+      "tt27331527": true
     },
-    "updatedAt": "2026-05-16T05:26:06Z"
+    "updatedAt": "2026-05-16T05:50:40Z"
   },
   "lastWatch": {
-    "imdbId": "tt7587890",
-    "tmdbId": "79744",
+    "imdbId": "tt27331527",
+    "tmdbId": "223386",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:26:06Z"
+    "updatedAt": "2026-05-16T05:50:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "title": "El fuego de la venganza",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:50:40Z"
+    },
     {
       "imdbId": "tt7587890",
       "tmdbId": "79744",

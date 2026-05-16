@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T01:57:30Z",
+  "updatedAt": "2026-05-16T02:33:00Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -262,18 +262,39 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T01:57:30Z",
       "watched": {}
+    },
+    "tt35521922": {
+      "imdbId": "tt35521922",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T02:33:00Z",
+      "watched": {}
     }
   },
   "lastWatch": {
-    "imdbId": "tt12042730",
-    "tmdbId": "687163",
+    "imdbId": "tt35521922",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T01:57:30Z"
+    "updatedAt": "2026-05-16T02:33:00Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt35521922",
+      "tmdbId": "",
+      "title": "Good Boy",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T02:33:00Z"
+    },
     {
       "imdbId": "tt12042730",
       "tmdbId": "687163",

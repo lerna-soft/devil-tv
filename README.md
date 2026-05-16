@@ -93,7 +93,9 @@ TTL actual de episodios por serie: 14 días.
 
 La plataforma usa el lenguaje operativo **EPE** para identificar y manejar archivos sensibles.
 
-- Un archivo EPE tiene contenido ofuscado con prefijo `EPE1:`.
+- Un archivo EPE tiene contenido ofuscado con prefijo `EPE2:` (actual).
+- `EPE2` agrega verificación de integridad (HMAC) para detectar manipulación.
+- `EPE1` y formato legacy siguen siendo legibles para migración.
 - La **llave de cifrado/descifrado es el nombre del archivo** (basename), no una seed fija global.
 - Si cambias el nombre del archivo EPE, cambia su llave y hay que re-encriptarlo.
 - Se mantiene compatibilidad de lectura con formato legacy para migración.
@@ -103,6 +105,12 @@ Convenciones EPE:
 - `puntero`: el nombre del archivo (actúa como llave).
 - `giro`: rotación/cambio de puntero (renombrar + re-encriptar).
 - `boveda`: archivo `.vault` dentro de `assets/secure/`.
+
+### Política de archivos de usuarios
+
+- Usuarios autenticados se almacenan como `assets/users/<email>.json`.
+- El índice vive en `assets/users/index.json`.
+- Esto facilita trazabilidad y búsqueda operativa por correo.
 
 Scripts:
 

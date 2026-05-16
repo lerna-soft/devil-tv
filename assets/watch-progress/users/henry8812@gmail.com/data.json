@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T18:22:24Z",
+  "updatedAt": "2026-05-16T18:36:34Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -812,6 +812,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T18:22:24Z",
       "watched": {}
+    },
+    "tt6143796": {
+      "imdbId": "tt6143796",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T18:36:34Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -863,20 +873,32 @@
       "tt21235248": true,
       "tt2140479": true,
       "tt0114369": true,
-      "tt8398600": true
+      "tt8398600": true,
+      "tt6143796": true
     },
-    "updatedAt": "2026-05-16T08:29:48Z"
+    "updatedAt": "2026-05-16T18:36:34Z"
   },
   "lastWatch": {
-    "imdbId": "tt22022784",
+    "imdbId": "tt6143796",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T18:22:24Z"
+    "updatedAt": "2026-05-16T18:36:34Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt6143796",
+      "tmdbId": "",
+      "title": "Workin' Moms",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T18:36:34Z"
+    },
     {
       "imdbId": "tt22022784",
       "tmdbId": "",

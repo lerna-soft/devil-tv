@@ -9,7 +9,6 @@ import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import path from 'node:path';
 
-const EPE1_PREFIX = 'EPE1:';
 const EPE2_PREFIX = 'EPE2:';
 
 function xorWithKey(inputBytes, keyBytes) {

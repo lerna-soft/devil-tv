@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:50:40Z",
+  "updatedAt": "2026-05-16T05:50:43Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -332,6 +332,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:50:40Z",
       "watched": {}
+    },
+    "tt37989803": {
+      "imdbId": "tt37989803",
+      "tmdbId": "1613798",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:50:43Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -340,20 +350,32 @@
       "tt14452776": true,
       "tt35521922": true,
       "tt7587890": true,
-      "tt27331527": true
+      "tt27331527": true,
+      "tt37989803": true
     },
-    "updatedAt": "2026-05-16T05:50:40Z"
+    "updatedAt": "2026-05-16T05:50:43Z"
   },
   "lastWatch": {
-    "imdbId": "tt27331527",
-    "tmdbId": "223386",
+    "imdbId": "tt37989803",
+    "tmdbId": "1613798",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:50:40Z"
+    "updatedAt": "2026-05-16T05:50:43Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt37989803",
+      "tmdbId": "1613798",
+      "title": "Venganza",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:50:43Z"
+    },
     {
       "imdbId": "tt27331527",
       "tmdbId": "223386",

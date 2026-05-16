@@ -1,6 +1,6 @@
 {
-  "version": 99,
-  "generatedAt": "2026-05-16T18:38:55.694Z",
+  "version": 100,
+  "generatedAt": "2026-05-16T20:54:20.795Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48721,6 +48721,22 @@
       "releaseDate": null,
       "overview": "Dora Mazzone, Javier Vidal",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTFhY2NjNjYtODUyYS00OGI2LThkNDktMDA0NTA5ZDA2ZDc3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt18076310",
+      "title": "The Rookie: Feds",
+      "year": 2022,
+      "releaseDate": null,
+      "overview": "Niecy Nash, James Lesure",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNGQyYTc3OGQtZWU5MS00MTgwLWFhYTAtYzZmYjc2N2ZiODk2XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

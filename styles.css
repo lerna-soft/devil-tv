@@ -2143,3 +2143,176 @@ code {
     padding: 0.45rem 0.62rem;
   }
 }
+
+/* Admin dashboard hard-responsive overrides */
+.admin-mode .catalog {
+  width: 100%;
+}
+
+.admin-mode .catalog-header {
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.admin-mode .catalog-header h2 {
+  margin: 0;
+}
+
+.admin-mode .catalog-header-tools {
+  width: 100%;
+}
+
+.admin-mode #items {
+  width: 100%;
+}
+
+.admin-mode .admin-dashboard {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.admin-mode .admin-grid-panels {
+  align-items: stretch;
+}
+
+.admin-mode .admin-panel {
+  min-width: 0;
+}
+
+.admin-mode .admin-chart {
+  min-width: 0;
+}
+
+.admin-mode .admin-bar-label,
+.admin-mode .admin-bar small {
+  overflow-wrap: anywhere;
+}
+
+.admin-mode .admin-role-grid input,
+.admin-mode .admin-role-grid button,
+.admin-mode .admin-pill-btn {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .admin-mode .admin-kpis {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .admin-mode .admin-grid-panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-mode .catalog-header-tools {
+    display: block;
+  }
+
+  .admin-mode .catalog-header-tools #count {
+    display: block;
+    margin-bottom: 0.45rem;
+  }
+
+  .admin-mode .catalog-header-tools #sortFilter {
+    width: 100%;
+  }
+
+  .admin-mode .admin-hero {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .admin-mode .admin-pill-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .admin-mode .admin-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-mode .admin-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-mode .admin-spark {
+    height: 98px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-mode .shell {
+    padding: 0.5rem 0.5rem 1rem;
+  }
+
+  .admin-mode .admin-dashboard {
+    border-radius: 0.68rem;
+    gap: 0.75rem;
+    padding: 0.62rem;
+  }
+
+  .admin-mode .admin-kpis {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .admin-mode .admin-kpi {
+    padding: 0.62rem;
+  }
+
+  .admin-mode .admin-kpi strong {
+    font-size: 1.1rem;
+  }
+
+  .admin-mode .admin-panel {
+    padding: 0.62rem;
+  }
+
+  .admin-mode .admin-donut {
+    height: 92px;
+    width: 92px;
+  }
+
+  .admin-mode .admin-donut::after {
+    inset: 18px;
+  }
+
+  .admin-mode .admin-footnote {
+    display: grid;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .admin-mode .shell {
+    padding: 0.45rem 0.55rem 0.7rem;
+  }
+
+  .admin-mode .admin-dashboard {
+    gap: 0.6rem;
+    padding: 0.55rem;
+  }
+
+  .admin-mode .admin-pill-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .admin-mode .admin-kpis {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .admin-mode .admin-grid-panels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .admin-mode .admin-panel {
+    padding: 0.55rem;
+  }
+
+  .admin-mode .admin-spark {
+    height: 76px;
+  }
+}

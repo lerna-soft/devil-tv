@@ -1,6 +1,6 @@
 {
-  "version": 79,
-  "generatedAt": "2026-05-16T07:03:14.511Z",
+  "version": 80,
+  "generatedAt": "2026-05-16T07:03:27.068Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48401,6 +48401,22 @@
       "releaseDate": null,
       "overview": "Robert Bockstael, Barbara Budd",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTZlMjg0ZWItMjkwNy00NjViLWJmYjktMDFlYzc0ZmM5ZTI3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0108909",
+      "title": "RoboCop",
+      "year": 1994,
+      "releaseDate": null,
+      "overview": "Richard Eden, Yvette Nipar",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTM1N2M1NWEtZDM3Mi00MjVmLThjNDYtMGVmYTg5MjEyNjhhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

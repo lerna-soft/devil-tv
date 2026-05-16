@@ -1432,9 +1432,15 @@ function bindTap(element, handler) {
 
 function renderCatalog() {
   if (isAdminUser()) {
+    const titleEl = document.querySelector('.catalog-header h2');
+    if (titleEl) titleEl.textContent = 'Dashboard';
+    if (elements.sortFilter) elements.sortFilter.hidden = true;
     renderAdminDashboard();
     return;
   }
+  const titleEl = document.querySelector('.catalog-header h2');
+  if (titleEl) titleEl.textContent = 'Results';
+  if (elements.sortFilter) elements.sortFilter.hidden = false;
   const query = elements.search.value.trim();
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();

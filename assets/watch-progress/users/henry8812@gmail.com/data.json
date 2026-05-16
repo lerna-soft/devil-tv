@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:21:37Z",
+  "updatedAt": "2026-05-16T05:21:38Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -302,6 +302,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:37Z",
       "watched": {}
+    },
+    "tt0356910": {
+      "imdbId": "tt0356910",
+      "tmdbId": "787",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:21:38Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -310,18 +320,29 @@
       "tt14452776": true,
       "tt35521922": true
     },
-    "updatedAt": "2026-05-16T05:21:37Z"
+    "updatedAt": "2026-05-16T05:21:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt1318514",
-    "tmdbId": "61791",
+    "imdbId": "tt0356910",
+    "tmdbId": "787",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:21:37Z"
+    "updatedAt": "2026-05-16T05:21:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0356910",
+      "tmdbId": "787",
+      "title": "Sr. y Sra. Smith",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:21:38Z"
+    },
     {
       "imdbId": "tt1318514",
       "tmdbId": "61791",

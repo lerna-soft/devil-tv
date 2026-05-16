@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:16:10Z",
+  "updatedAt": "2026-05-16T07:16:13Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -652,6 +652,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:16:10Z",
       "watched": {}
+    },
+    "tt6146586": {
+      "imdbId": "tt6146586",
+      "tmdbId": "458156",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:16:13Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -691,20 +701,32 @@
       "tt0107978": true,
       "tt1234721": true,
       "tt2911666": true,
-      "tt4425200": true
+      "tt4425200": true,
+      "tt6146586": true
     },
-    "updatedAt": "2026-05-16T07:16:10Z"
+    "updatedAt": "2026-05-16T07:16:13Z"
   },
   "lastWatch": {
-    "imdbId": "tt4425200",
-    "tmdbId": "324552",
+    "imdbId": "tt6146586",
+    "tmdbId": "458156",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:16:10Z"
+    "updatedAt": "2026-05-16T07:16:13Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt6146586",
+      "tmdbId": "458156",
+      "title": "John Wick: Capítulo 3 - Parabellum",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:16:13Z"
+    },
     {
       "imdbId": "tt4425200",
       "tmdbId": "324552",

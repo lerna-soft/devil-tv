@@ -1,6 +1,6 @@
 {
-  "version": 69,
-  "generatedAt": "2026-05-16T06:53:30.532Z",
+  "version": 70,
+  "generatedAt": "2026-05-16T06:53:41.497Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48241,6 +48241,22 @@
       "releaseDate": null,
       "overview": "Park Bo-gum, Kim So-hyun",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTE5NTRhODAtMmEzNi00ZGRmLWI1M2UtMmJlZTczNzhhZWU1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0159208",
+      "title": "City Hunter",
+      "year": 1987,
+      "releaseDate": null,
+      "overview": "Akira Kamiya, Kazue Ikura",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjI1MjExNmYtMmZkMi00MzY3LWE5MDgtMDNmMTMwZDMzMmY5XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

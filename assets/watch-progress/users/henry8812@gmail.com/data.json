@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T08:32:15Z",
+  "updatedAt": "2026-05-16T08:36:37Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -770,7 +770,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T08:05:54Z",
+      "updatedAt": "2026-05-16T08:36:37Z",
       "watched": {}
     },
     "tt0114369": {
@@ -848,15 +848,26 @@
     "updatedAt": "2026-05-16T08:29:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt26735622",
-    "tmdbId": "1084577",
+    "imdbId": "tt0032186",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T08:32:15Z"
+    "updatedAt": "2026-05-16T08:36:37Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0032186",
+      "tmdbId": "",
+      "title": "You're Missing the Point",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-16T08:36:37Z"
+    },
     {
       "imdbId": "tt26735622",
       "tmdbId": "1084577",

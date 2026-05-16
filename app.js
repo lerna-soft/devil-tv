@@ -1566,6 +1566,8 @@ function renderAdminDashboard() {
         const id = String(event?.imdbId || event?.tmdbId || '').trim();
         if (!id) continue;
         const name = String(event?.title || id).trim();
+        // Ignore malformed telemetry where title falls back to a numeric ID.
+        if (!name || /^\d{5,}$/.test(name)) continue;
         const prev = titleHits.get(id) || { id, name, plays: 0, completed: 0 };
         prev.plays += 1;
         if (String(event?.playerStatus || '').toLowerCase() === 'completed') prev.completed += 1;

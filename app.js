@@ -358,7 +358,28 @@ function mergeRemoteWatchProgress(remote) {
     history: mergeWatchHistory(existing.history || [], remote.history || [])
   };
   saveLocalWatchProgress(email, merged);
+  syncTitlePrefsFromRemote(remote?.preferences || null);
   ensureCatalogEntriesFromWatchData(merged);
+}
+
+function syncTitlePrefsFromRemote(remotePrefs) {
+  const key = getCurrentUserPrefsKey();
+  if (!key || !remotePrefs || typeof remotePrefs !== 'object') return;
+
+  const localRaw = safeJson(localStorage.getItem(key)) || {};
+  const localUpdatedAt = Date.parse(localRaw?.updatedAt || 0) || 0;
+  const remoteUpdatedAt = Date.parse(remotePrefs?.updatedAt || 0) || 0;
+
+  if (remoteUpdatedAt > 0 && localUpdatedAt > remoteUpdatedAt) return;
+
+  const likes = remotePrefs?.likes && typeof remotePrefs.likes === 'object' ? remotePrefs.likes : {};
+  const watchLater = remotePrefs?.watchLater && typeof remotePrefs.watchLater === 'object' ? remotePrefs.watchLater : {};
+
+  localStorage.setItem(key, JSON.stringify({
+    likes,
+    watchLater,
+    updatedAt: remotePrefs?.updatedAt || new Date().toISOString()
+  }));
 }
 
 function mergeProgressMaps(existing, incoming) {

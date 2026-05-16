@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:02:11Z",
+  "updatedAt": "2026-05-16T07:02:28Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -562,6 +562,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:02:11Z",
       "watched": {}
+    },
+    "tt0790724": {
+      "imdbId": "tt0790724",
+      "tmdbId": "75780",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:02:28Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -592,20 +602,32 @@
       "tt7262882": true,
       "tt15880520": true,
       "tt2249007": true,
-      "tt29268110": true
+      "tt29268110": true,
+      "tt0790724": true
     },
-    "updatedAt": "2026-05-16T07:02:11Z"
+    "updatedAt": "2026-05-16T07:02:28Z"
   },
   "lastWatch": {
-    "imdbId": "tt29268110",
-    "tmdbId": "1100782",
+    "imdbId": "tt0790724",
+    "tmdbId": "75780",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:02:11Z"
+    "updatedAt": "2026-05-16T07:02:28Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0790724",
+      "tmdbId": "75780",
+      "title": "Jack Reacher",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:02:28Z"
+    },
     {
       "imdbId": "tt29268110",
       "tmdbId": "1100782",

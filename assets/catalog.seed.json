@@ -1,6 +1,6 @@
 {
-  "version": 83,
-  "generatedAt": "2026-05-16T07:42:21.626Z",
+  "version": 84,
+  "generatedAt": "2026-05-16T07:42:46.963Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -48465,6 +48465,22 @@
       "releaseDate": null,
       "overview": "Harriet Dyer, Patrick Brammall",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTA4YmVhNTAtMjFlYi00ZDRiLWJmMzQtYzdiZTAzNWUwN2ZhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0072505",
+      "title": "The Ghost Busters",
+      "year": 1975,
+      "releaseDate": null,
+      "overview": "Forrest Tucker, Larry Storch",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzU2NjQ4OWItMWJhMy00NTM3LWI3MzYtMmQyMzMxNGFlZTlkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

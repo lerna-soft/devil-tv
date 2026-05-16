@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:57:15Z",
+  "updatedAt": "2026-05-16T06:58:54Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -392,6 +392,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:57:15Z",
       "watched": {}
+    },
+    "tt0069620": {
+      "imdbId": "tt0069620",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:58:54Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -406,20 +416,32 @@
       "tt33046197": true,
       "tt32916440": true,
       "tt1422020": true,
-      "tt0103950": true
+      "tt0103950": true,
+      "tt0069620": true
     },
-    "updatedAt": "2026-05-16T06:53:42Z"
+    "updatedAt": "2026-05-16T06:58:54Z"
   },
   "lastWatch": {
-    "imdbId": "tt0103950",
+    "imdbId": "tt0069620",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:57:15Z"
+    "updatedAt": "2026-05-16T06:58:54Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0069620",
+      "tmdbId": "",
+      "title": "Police Story",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:58:54Z"
+    },
     {
       "imdbId": "tt0103950",
       "tmdbId": "",

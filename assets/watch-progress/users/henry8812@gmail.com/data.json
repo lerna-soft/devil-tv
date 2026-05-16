@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T07:42:54Z",
+  "updatedAt": "2026-05-16T07:43:05Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -722,6 +722,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T07:42:54Z",
       "watched": {}
+    },
+    "tt1289401": {
+      "imdbId": "tt1289401",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:43:05Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -768,20 +778,32 @@
       "tt7068946": true,
       "tt0087332": true,
       "tt0090506": true,
-      "tt0097428": true
+      "tt0097428": true,
+      "tt1289401": true
     },
-    "updatedAt": "2026-05-16T07:42:54Z"
+    "updatedAt": "2026-05-16T07:43:05Z"
   },
   "lastWatch": {
-    "imdbId": "tt0097428",
+    "imdbId": "tt1289401",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T07:42:54Z"
+    "updatedAt": "2026-05-16T07:43:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1289401",
+      "tmdbId": "",
+      "title": "Ghostbusters",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:43:05Z"
+    },
     {
       "imdbId": "tt0097428",
       "tmdbId": "",

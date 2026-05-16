@@ -32,37 +32,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Sync catalog seed from open issues
+      - name: Sync, commit and push changes (retry-safe)
         shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           set -euxo pipefail
-          node tools/sync-catalog-seed-from-issues.mjs
-
-      - name: Commit and push changes
-        shell: bash
-        run: |
-          set -euxo pipefail
-          if git diff --cached --quiet && git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git add assets/catalog.seed.json
-          if git diff --cached --quiet; then
-            echo "No staged changes."
-            exit 0
-          fi
-          git commit -m "sync catalog seed from issue #${{ github.event.issue.number }}"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git checkout -B main origin/main
+            node tools/sync-catalog-seed-from-issues.mjs
+            git add assets/catalog.seed.json
+            if git diff --cached --quiet; then
+              echo "No staged changes."
+              exit 0
+            fi
+            git commit -m "sync catalog seed from issue #${{ github.event.issue.number }}"
             if git push origin HEAD:main; then
               exit 0
             fi
-            git fetch origin main
-            git rebase origin/main --autostash
+            echo "Push rejected on attempt ${attempt}; retrying from latest origin/main"
           done
-          git push origin HEAD:main
+          echo "Failed to push after retries"
+          exit 1
 
       - name: Trigger Pages deploy
         shell: bash

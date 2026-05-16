@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:21:38Z",
+  "updatedAt": "2026-05-16T05:21:39Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -312,6 +312,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:38Z",
       "watched": {}
+    },
+    "tt0365847": {
+      "imdbId": "tt0365847",
+      "tmdbId": "11653",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T05:21:39Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -320,18 +330,29 @@
       "tt14452776": true,
       "tt35521922": true
     },
-    "updatedAt": "2026-05-16T05:21:38Z"
+    "updatedAt": "2026-05-16T05:21:39Z"
   },
   "lastWatch": {
-    "imdbId": "tt0356910",
-    "tmdbId": "787",
+    "imdbId": "tt0365847",
+    "tmdbId": "11653",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:21:38Z"
+    "updatedAt": "2026-05-16T05:21:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0365847",
+      "tmdbId": "11653",
+      "title": "El mito",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T05:21:39Z"
+    },
     {
       "imdbId": "tt0356910",
       "tmdbId": "787",

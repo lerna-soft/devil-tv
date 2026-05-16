@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T05:50:54Z",
+  "updatedAt": "2026-05-16T06:12:17Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -372,6 +372,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:50:54Z",
       "watched": {}
+    },
+    "tt1422020": {
+      "imdbId": "tt1422020",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T06:12:17Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -384,20 +394,32 @@
       "tt37989803": true,
       "tt26735622": true,
       "tt33046197": true,
-      "tt32916440": true
+      "tt32916440": true,
+      "tt1422020": true
     },
-    "updatedAt": "2026-05-16T05:50:54Z"
+    "updatedAt": "2026-05-16T06:12:17Z"
   },
   "lastWatch": {
-    "imdbId": "tt32916440",
-    "tmdbId": "1317288",
+    "imdbId": "tt1422020",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T05:50:54Z"
+    "updatedAt": "2026-05-16T06:12:17Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt1422020",
+      "tmdbId": "",
+      "title": "Dog Pound",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T06:12:17Z"
+    },
     {
       "imdbId": "tt32916440",
       "tmdbId": "1317288",

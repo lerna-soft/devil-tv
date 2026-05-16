@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-16T06:59:32Z",
+  "updatedAt": "2026-05-16T07:00:49Z",
   "progress": {
     "tt3359350": {
       "imdbId": "tt3359350",
@@ -532,6 +532,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-16T06:59:32Z",
       "watched": {}
+    },
+    "tt15880520": {
+      "imdbId": "tt15880520",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-16T07:00:49Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -559,20 +569,32 @@
       "tt33456991": true,
       "tt38682795": true,
       "tt21028848": true,
-      "tt7262882": true
+      "tt7262882": true,
+      "tt15880520": true
     },
-    "updatedAt": "2026-05-16T06:59:32Z"
+    "updatedAt": "2026-05-16T07:00:49Z"
   },
   "lastWatch": {
-    "imdbId": "tt7262882",
+    "imdbId": "tt15880520",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-16T06:59:32Z"
+    "updatedAt": "2026-05-16T07:00:49Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt15880520",
+      "tmdbId": "",
+      "title": "James Bond 007 at the Movies",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-16T07:00:49Z"
+    },
     {
       "imdbId": "tt7262882",
       "tmdbId": "",

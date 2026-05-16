@@ -6,19 +6,31 @@
  */
 
 import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 import path from 'node:path';
 
-const VAULT_SEED = 'mep_vault_seed_v1';
+const EPE_PREFIX = 'EPE1:';
 
-function encrypt(plainText, seed) {
-  const text = String(plainText || '');
-  const key = String(seed || '').trim();
-  if (!key) return '';
-  let out = '';
-  for (let i = 0; i < text.length; i += 1) {
-    out += String.fromCharCode(text.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+function xorWithKey(inputBytes, keyBytes) {
+  const out = Buffer.alloc(inputBytes.length);
+  for (let i = 0; i < inputBytes.length; i += 1) {
+    out[i] = inputBytes[i] ^ keyBytes[i % keyBytes.length];
   }
-  return Buffer.from(out, 'binary').toString('base64');
+  return out;
+}
+
+function deriveEpeKeyFromFilename(filePath) {
+  const base = path.basename(String(filePath || '').trim());
+  if (!base) return Buffer.alloc(0);
+  return crypto.createHash('sha256').update(base, 'utf8').digest();
+}
+
+function encryptEpe(plainText, outputFile) {
+  const text = String(plainText || '');
+  const key = deriveEpeKeyFromFilename(outputFile);
+  if (!key.length) throw new Error('EPE key derivation failed: missing output filename');
+  const cipher = xorWithKey(Buffer.from(text, 'utf8'), key).toString('base64');
+  return `${EPE_PREFIX}${cipher}`;
 }
 
 async function main() {
@@ -28,8 +40,9 @@ async function main() {
     throw new Error('Usage: node tools/write-encrypted-vault.mjs <input-file> <output-file>');
   }
   const plain = await fs.readFile(path.resolve(process.cwd(), inputFile), 'utf8');
-  const cipher = encrypt(plain, VAULT_SEED);
-  await fs.writeFile(path.resolve(process.cwd(), outputFile), `${cipher}\n`, 'utf8');
+  const resolvedOutput = path.resolve(process.cwd(), outputFile);
+  const cipher = encryptEpe(plain, resolvedOutput);
+  await fs.writeFile(resolvedOutput, `${cipher}\n`, 'utf8');
 }
 
 await main();

@@ -1,6 +1,6 @@
 {
-  "version": 107,
-  "generatedAt": "2026-05-17T13:56:41.528Z",
+  "version": 108,
+  "generatedAt": "2026-05-17T13:57:02.628Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -25921,6 +25921,22 @@
       "releaseDate": null,
       "overview": "Page: https://lerna-admin.github.io/media-evaluation-platform-static/?mep_reload=1778388684907#/browse?q=El+desertor+juan+pere",
       "posterUrl": "Description:",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0161369",
+      "title": "Cantinflas Boxer",
+      "year": 1940,
+      "releaseDate": null,
+      "overview": "Cantinflas, Chelo Gómez",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODNiNDczMGUtYmNjMS00OWFjLWI1OTAtYzYwYmQzODU2NzY0XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

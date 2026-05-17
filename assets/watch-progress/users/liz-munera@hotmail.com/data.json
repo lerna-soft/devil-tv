@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:56:22Z",
+  "updatedAt": "2026-05-17T17:56:27Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -42,6 +42,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:56:22Z",
       "watched": {}
+    },
+    "tt26443616": {
+      "imdbId": "tt26443616",
+      "tmdbId": "1327819",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:56:27Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -49,20 +59,32 @@
     "watchLater": {
       "tt16431404": true,
       "tt11378946": true,
-      "tt8036976": true
+      "tt8036976": true,
+      "tt26443616": true
     },
-    "updatedAt": "2026-05-17T17:56:22Z"
+    "updatedAt": "2026-05-17T17:56:27Z"
   },
   "lastWatch": {
-    "imdbId": "tt8036976",
-    "tmdbId": "1198994",
+    "imdbId": "tt26443616",
+    "tmdbId": "1327819",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:56:22Z"
+    "updatedAt": "2026-05-17T17:56:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt26443616",
+      "tmdbId": "1327819",
+      "title": "Hoppers",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:56:27Z"
+    },
     {
       "imdbId": "tt8036976",
       "tmdbId": "1198994",

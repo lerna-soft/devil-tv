@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:56:08Z",
+  "updatedAt": "2026-05-17T17:56:20Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -22,25 +22,47 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:56:08Z",
       "watched": {}
+    },
+    "tt11378946": {
+      "imdbId": "tt11378946",
+      "tmdbId": "936075",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:56:20Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {},
     "watchLater": {
-      "tt16431404": true
+      "tt16431404": true,
+      "tt11378946": true
     },
-    "updatedAt": "2026-05-17T17:56:08Z"
+    "updatedAt": "2026-05-17T17:56:20Z"
   },
   "lastWatch": {
-    "imdbId": "tt16431404",
-    "tmdbId": "1318447",
+    "imdbId": "tt11378946",
+    "tmdbId": "936075",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:56:08Z"
+    "updatedAt": "2026-05-17T17:56:20Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt11378946",
+      "tmdbId": "936075",
+      "title": "Michael",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:56:20Z"
+    },
     {
       "imdbId": "tt16431404",
       "tmdbId": "1318447",

@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:56:20Z",
+  "updatedAt": "2026-05-17T17:56:22Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -32,26 +32,48 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:56:20Z",
       "watched": {}
+    },
+    "tt8036976": {
+      "imdbId": "tt8036976",
+      "tmdbId": "1198994",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:56:22Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {},
     "watchLater": {
       "tt16431404": true,
-      "tt11378946": true
+      "tt11378946": true,
+      "tt8036976": true
     },
-    "updatedAt": "2026-05-17T17:56:20Z"
+    "updatedAt": "2026-05-17T17:56:22Z"
   },
   "lastWatch": {
-    "imdbId": "tt11378946",
-    "tmdbId": "936075",
+    "imdbId": "tt8036976",
+    "tmdbId": "1198994",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:56:20Z"
+    "updatedAt": "2026-05-17T17:56:22Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt8036976",
+      "tmdbId": "1198994",
+      "title": "SEND HELP (Enviad ayuda)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:56:22Z"
+    },
     {
       "imdbId": "tt11378946",
       "tmdbId": "936075",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-17T07:16:13Z",
+  "updatedAt": "2026-05-17T07:16:34Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -880,7 +880,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-17T07:16:13Z",
+      "updatedAt": "2026-05-17T07:16:34Z",
       "watched": {}
     }
   },
@@ -937,9 +937,10 @@
       "tt6143796": true,
       "tt1586680": true,
       "tt14257582": true,
-      "tt11083552": true
+      "tt11083552": true,
+      "tt2400463": true
     },
-    "updatedAt": "2026-05-16T21:01:53Z"
+    "updatedAt": "2026-05-17T07:16:34Z"
   },
   "lastWatch": {
     "imdbId": "tt2400463",
@@ -947,10 +948,21 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T07:16:13Z"
+    "updatedAt": "2026-05-17T07:16:34Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt2400463",
+      "tmdbId": "",
+      "title": "The Invitation",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T07:16:34Z"
+    },
     {
       "imdbId": "tt2400463",
       "tmdbId": "",

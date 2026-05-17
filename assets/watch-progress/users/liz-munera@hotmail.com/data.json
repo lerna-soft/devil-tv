@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:57:14Z",
+  "updatedAt": "2026-05-17T17:57:30Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -62,6 +62,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:57:14Z",
       "watched": {}
+    },
+    "tt27331527": {
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:57:30Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -71,20 +81,32 @@
       "tt11378946": true,
       "tt8036976": true,
       "tt26443616": true,
-      "tt33046197": true
+      "tt33046197": true,
+      "tt27331527": true
     },
-    "updatedAt": "2026-05-17T17:57:14Z"
+    "updatedAt": "2026-05-17T17:57:30Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "tt27331527",
+    "tmdbId": "223386",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:57:14Z"
+    "updatedAt": "2026-05-17T17:57:30Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "title": "El fuego de la venganza",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:57:30Z"
+    },
     {
       "imdbId": "tt33046197",
       "tmdbId": "1168190",

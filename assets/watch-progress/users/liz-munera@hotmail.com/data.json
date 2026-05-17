@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:55:49Z",
+  "updatedAt": "2026-05-17T17:56:00Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -10,16 +10,14 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-17T17:55:49Z",
+      "updatedAt": "2026-05-17T17:56:00Z",
       "watched": {}
     }
   },
   "preferences": {
     "likes": {},
-    "watchLater": {
-      "tt36594331": true
-    },
-    "updatedAt": "2026-05-17T17:55:49Z"
+    "watchLater": {},
+    "updatedAt": "2026-05-17T17:56:00Z"
   },
   "lastWatch": {
     "imdbId": "tt36594331",
@@ -27,10 +25,21 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:55:49Z"
+    "updatedAt": "2026-05-17T17:56:00Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt36594331",
+      "tmdbId": "289219",
+      "title": "Star Wars: Maul - Señor de las sombras",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:56:00Z"
+    },
     {
       "imdbId": "tt36594331",
       "tmdbId": "289219",

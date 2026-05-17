@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:58:30Z",
+  "updatedAt": "2026-05-17T23:25:11Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -50,7 +50,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-17T17:56:27Z",
+      "updatedAt": "2026-05-17T23:25:11Z",
       "watched": {}
     },
     "tt33046197": {
@@ -109,15 +109,26 @@
     "updatedAt": "2026-05-17T17:58:30Z"
   },
   "lastWatch": {
-    "imdbId": "tt8599532",
-    "tmdbId": "255661",
+    "imdbId": "tt26443616",
+    "tmdbId": "1327819",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:58:30Z"
+    "updatedAt": "2026-05-17T23:25:11Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt26443616",
+      "tmdbId": "1327819",
+      "title": "Hoppers",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-17T23:25:11Z"
+    },
     {
       "imdbId": "tt8599532",
       "tmdbId": "255661",

@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:57:30Z",
+  "updatedAt": "2026-05-17T17:57:33Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -72,6 +72,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:57:30Z",
       "watched": {}
+    },
+    "tt29552248": {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:57:33Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -82,20 +92,32 @@
       "tt8036976": true,
       "tt26443616": true,
       "tt33046197": true,
-      "tt27331527": true
+      "tt27331527": true,
+      "tt29552248": true
     },
-    "updatedAt": "2026-05-17T17:57:30Z"
+    "updatedAt": "2026-05-17T17:57:33Z"
   },
   "lastWatch": {
-    "imdbId": "tt27331527",
-    "tmdbId": "223386",
+    "imdbId": "tt29552248",
+    "tmdbId": "1007757",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:57:30Z"
+    "updatedAt": "2026-05-17T17:57:33Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:57:33Z"
+    },
     {
       "imdbId": "tt27331527",
       "tmdbId": "223386",

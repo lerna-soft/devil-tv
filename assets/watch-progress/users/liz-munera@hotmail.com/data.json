@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:57:33Z",
+  "updatedAt": "2026-05-17T17:58:30Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -82,6 +82,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:57:33Z",
       "watched": {}
+    },
+    "tt8599532": {
+      "imdbId": "tt8599532",
+      "tmdbId": "255661",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:58:30Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -93,20 +103,32 @@
       "tt26443616": true,
       "tt33046197": true,
       "tt27331527": true,
-      "tt29552248": true
+      "tt29552248": true,
+      "tt8599532": true
     },
-    "updatedAt": "2026-05-17T17:57:33Z"
+    "updatedAt": "2026-05-17T17:58:30Z"
   },
   "lastWatch": {
-    "imdbId": "tt29552248",
-    "tmdbId": "1007757",
+    "imdbId": "tt8599532",
+    "tmdbId": "255661",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:57:33Z"
+    "updatedAt": "2026-05-17T17:58:30Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt8599532",
+      "tmdbId": "255661",
+      "title": "El joven Sherlock",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:58:30Z"
+    },
     {
       "imdbId": "tt29552248",
       "tmdbId": "1007757",

@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:56:27Z",
+  "updatedAt": "2026-05-17T17:57:14Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -52,6 +52,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:56:27Z",
       "watched": {}
+    },
+    "tt33046197": {
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:57:14Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -60,20 +70,32 @@
       "tt16431404": true,
       "tt11378946": true,
       "tt8036976": true,
-      "tt26443616": true
+      "tt26443616": true,
+      "tt33046197": true
     },
-    "updatedAt": "2026-05-17T17:56:27Z"
+    "updatedAt": "2026-05-17T17:57:14Z"
   },
   "lastWatch": {
-    "imdbId": "tt26443616",
-    "tmdbId": "1327819",
+    "imdbId": "tt33046197",
+    "tmdbId": "1168190",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:56:27Z"
+    "updatedAt": "2026-05-17T17:57:14Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:57:14Z"
+    },
     {
       "imdbId": "tt26443616",
       "tmdbId": "1327819",

@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-17T17:56:00Z",
+  "updatedAt": "2026-05-17T17:56:08Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -12,23 +12,46 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:56:00Z",
       "watched": {}
+    },
+    "tt16431404": {
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-17T17:56:08Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {},
-    "watchLater": {},
-    "updatedAt": "2026-05-17T17:56:00Z"
+    "watchLater": {
+      "tt16431404": true
+    },
+    "updatedAt": "2026-05-17T17:56:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt36594331",
-    "tmdbId": "289219",
+    "imdbId": "tt16431404",
+    "tmdbId": "1318447",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T17:56:00Z"
+    "updatedAt": "2026-05-17T17:56:08Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "title": "Depredador dominante",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-17T17:56:08Z"
+    },
     {
       "imdbId": "tt36594331",
       "tmdbId": "289219",

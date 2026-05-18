@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T01:19:45Z",
+  "updatedAt": "2026-05-18T03:44:08Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -290,7 +290,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T05:21:35Z",
+      "updatedAt": "2026-05-18T03:44:08Z",
       "watched": {}
     },
     "tt1318514": {
@@ -948,20 +948,32 @@
       "tt1586680": true,
       "tt14257582": true,
       "tt11083552": true,
-      "tt2400463": true
+      "tt2400463": true,
+      "tt29552248": true
     },
-    "updatedAt": "2026-05-17T07:16:34Z"
+    "updatedAt": "2026-05-18T03:44:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt17013106",
-    "tmdbId": "",
+    "imdbId": "tt29552248",
+    "tmdbId": "1007757",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T01:19:45Z"
+    "updatedAt": "2026-05-18T03:44:08Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T03:44:08Z"
+    },
     {
       "imdbId": "tt17013106",
       "tmdbId": "",

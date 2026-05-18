@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T03:44:08Z",
+  "updatedAt": "2026-05-18T04:04:31Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -150,7 +150,7 @@
       "lastEpisode": 7,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T14:18:28Z",
+      "updatedAt": "2026-05-18T04:04:31Z",
       "watched": {}
     },
     "tt15940132": {
@@ -954,15 +954,26 @@
     "updatedAt": "2026-05-18T03:44:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt29552248",
-    "tmdbId": "1007757",
+    "imdbId": "tt14452776",
+    "tmdbId": "136315",
     "season": 1,
-    "episode": 1,
+    "episode": 7,
     "progress": 0,
-    "updatedAt": "2026-05-18T03:44:08Z"
+    "updatedAt": "2026-05-18T04:04:31Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 1,
+      "episode": 7,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-18T04:04:31Z"
+    },
     {
       "imdbId": "tt29552248",
       "tmdbId": "1007757",

@@ -1,30 +1,47 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-18T19:18:05Z",
+  "updatedAt": "2026-05-18T19:40:47Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 6552.508246,
-      "lastProgress": 6552.508246,
-      "updatedAt": "2026-05-18T19:18:05Z",
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T19:40:47Z",
       "watched": {}
     }
   },
-  "preferences": {},
+  "preferences": {
+    "likes": {
+      "tt32897959": 1
+    },
+    "watchLater": {},
+    "updatedAt": "2026-05-18T19:40:47Z"
+  },
   "lastWatch": {
     "imdbId": "tt32897959",
     "tmdbId": "1316092",
     "season": 1,
     "episode": 1,
-    "progress": 6552.508246,
-    "updatedAt": "2026-05-18T19:18:05Z"
+    "progress": 0,
+    "updatedAt": "2026-05-18T19:40:47Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T19:40:47Z"
+    },
     {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T04:33:19Z",
+  "updatedAt": "2026-05-18T13:26:03Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -892,6 +892,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-18T01:19:45Z",
       "watched": {}
+    },
+    "tt0914863": {
+      "imdbId": "tt0914863",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T13:26:03Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -949,20 +959,32 @@
       "tt14257582": true,
       "tt11083552": true,
       "tt2400463": true,
-      "tt29552248": true
+      "tt29552248": true,
+      "tt0914863": true
     },
-    "updatedAt": "2026-05-18T03:44:08Z"
+    "updatedAt": "2026-05-18T13:26:03Z"
   },
   "lastWatch": {
-    "imdbId": "tt14452776",
-    "tmdbId": "136315",
-    "season": 2,
+    "imdbId": "tt0914863",
+    "tmdbId": "",
+    "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T04:33:19Z"
+    "updatedAt": "2026-05-18T13:26:03Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0914863",
+      "tmdbId": "",
+      "title": "Unthinkable",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T13:26:03Z"
+    },
     {
       "imdbId": "tt14452776",
       "tmdbId": "136315",

@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-18T01:26:53Z",
+  "updatedAt": "2026-05-18T15:27:55Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -92,6 +92,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T17:58:30Z",
       "watched": {}
+    },
+    "tt33612209": {
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T15:27:55Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -109,15 +119,26 @@
     "updatedAt": "2026-05-17T17:58:30Z"
   },
   "lastWatch": {
-    "imdbId": "tt26443616",
-    "tmdbId": "1327819",
+    "imdbId": "tt33612209",
+    "tmdbId": "1314481",
     "season": 1,
     "episode": 1,
-    "progress": 4939.432236,
-    "updatedAt": "2026-05-18T01:26:53Z"
+    "progress": 0,
+    "updatedAt": "2026-05-18T15:27:55Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "title": "El diablo viste de Prada 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-18T15:27:55Z"
+    },
     {
       "imdbId": "tt26443616",
       "tmdbId": "1327819",

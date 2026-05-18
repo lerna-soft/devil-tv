@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T14:26:12Z",
+  "updatedAt": "2026-05-18T14:55:34Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -912,6 +912,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-18T14:26:12Z",
       "watched": {}
+    },
+    "tt11570202": {
+      "imdbId": "tt11570202",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T14:55:34Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -971,20 +981,32 @@
       "tt2400463": true,
       "tt29552248": true,
       "tt0914863": true,
-      "tt3513548": true
+      "tt3513548": true,
+      "tt11570202": true
     },
-    "updatedAt": "2026-05-18T14:26:12Z"
+    "updatedAt": "2026-05-18T14:55:34Z"
   },
   "lastWatch": {
-    "imdbId": "tt3513548",
+    "imdbId": "tt11570202",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T14:26:12Z"
+    "updatedAt": "2026-05-18T14:55:34Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt11570202",
+      "tmdbId": "",
+      "title": "The Silent Sea",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T14:55:34Z"
+    },
     {
       "imdbId": "tt3513548",
       "tmdbId": "",

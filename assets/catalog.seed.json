@@ -1,6 +1,6 @@
 {
-  "version": 121,
-  "generatedAt": "2026-05-18T14:31:56.805Z",
+  "version": 122,
+  "generatedAt": "2026-05-18T14:32:14.092Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26049,6 +26049,22 @@
       "releaseDate": null,
       "overview": "Robert Pattinson, Scarlett Johansson",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDlkYmJlNmEtMjg5NC00MTk2LThiOGYtYTAyZGI5ZGRjMDA2XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt29064227",
+      "title": "Batman: Manhunt",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Keaton Anderson, Josiah Drudy",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDg5Mjg1MzItZjdlNS00ZDY3LWEyZDEtYWM4NTUyMDkxZjczXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

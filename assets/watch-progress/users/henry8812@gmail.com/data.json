@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-17T07:16:34Z",
+  "updatedAt": "2026-05-18T01:19:45Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -882,6 +882,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-17T07:16:34Z",
       "watched": {}
+    },
+    "tt17013106": {
+      "imdbId": "tt17013106",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T01:19:45Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -943,15 +953,26 @@
     "updatedAt": "2026-05-17T07:16:34Z"
   },
   "lastWatch": {
-    "imdbId": "tt2400463",
+    "imdbId": "tt17013106",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-17T07:16:34Z"
+    "updatedAt": "2026-05-18T01:19:45Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt17013106",
+      "tmdbId": "",
+      "title": "Black Knight",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-18T01:19:45Z"
+    },
     {
       "imdbId": "tt2400463",
       "tmdbId": "",

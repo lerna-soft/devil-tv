@@ -1,6 +1,6 @@
 {
-  "version": 118,
-  "generatedAt": "2026-05-18T14:25:53.145Z",
+  "version": 119,
+  "generatedAt": "2026-05-18T14:26:12.088Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49025,6 +49025,22 @@
       "releaseDate": null,
       "overview": "Idris Elba, Dermot Crowley",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmViZjE1MjEtZjRlZC00MWMzLTg0ODItYjI1ODZiNzk5YzBiXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt35089718",
+      "title": "The Jewel of Section E",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Andres Muhlach, Ashtine Olviga",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTcxNzZkMDktYmFiNC00YmQyLTg4NTEtNTVlMTBlZWMzNDgxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

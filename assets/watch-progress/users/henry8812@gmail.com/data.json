@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T13:43:17Z",
+  "updatedAt": "2026-05-18T14:26:12Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -902,6 +902,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-18T13:26:03Z",
       "watched": {}
+    },
+    "tt3513548": {
+      "imdbId": "tt3513548",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T14:26:12Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -960,20 +970,32 @@
       "tt11083552": true,
       "tt2400463": true,
       "tt29552248": true,
-      "tt0914863": true
+      "tt0914863": true,
+      "tt3513548": true
     },
-    "updatedAt": "2026-05-18T13:26:03Z"
+    "updatedAt": "2026-05-18T14:26:12Z"
   },
   "lastWatch": {
-    "imdbId": "tt14452776",
-    "tmdbId": "136315",
-    "season": 2,
+    "imdbId": "tt3513548",
+    "tmdbId": "",
+    "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T13:43:17Z"
+    "updatedAt": "2026-05-18T14:26:12Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt3513548",
+      "tmdbId": "",
+      "title": "Richard Jewell",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T14:26:12Z"
+    },
     {
       "imdbId": "tt14452776",
       "tmdbId": "136315",

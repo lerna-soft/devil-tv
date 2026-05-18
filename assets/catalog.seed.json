@@ -1,6 +1,6 @@
 {
-  "version": 120,
-  "generatedAt": "2026-05-18T14:31:40.617Z",
+  "version": 121,
+  "generatedAt": "2026-05-18T14:31:56.805Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49057,6 +49057,22 @@
       "releaseDate": null,
       "overview": "Andres Muhlach, Ashtine Olviga",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTcxNzZkMDktYmFiNC00YmQyLTg4NTEtNTVlMTBlZWMzNDgxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0059968",
+      "title": "Batman",
+      "year": 1966,
+      "releaseDate": null,
+      "overview": "Adam West, Burt Ward",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWFjNTdlZjctZTRkNC00OTQ1LWI3NDktOWY0ZWZmNzFiOTNkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

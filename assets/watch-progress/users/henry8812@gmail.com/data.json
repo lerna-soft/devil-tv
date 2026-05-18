@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-18T14:55:34Z",
+  "updatedAt": "2026-05-18T15:57:35Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -922,6 +922,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-18T14:55:34Z",
       "watched": {}
+    },
+    "tt0388629": {
+      "imdbId": "tt0388629",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T15:57:35Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -987,15 +997,26 @@
     "updatedAt": "2026-05-18T14:55:34Z"
   },
   "lastWatch": {
-    "imdbId": "tt11570202",
+    "imdbId": "tt0388629",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T14:55:34Z"
+    "updatedAt": "2026-05-18T15:57:35Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt0388629",
+      "tmdbId": "",
+      "title": "One Piece",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-18T15:57:35Z"
+    },
     {
       "imdbId": "tt11570202",
       "tmdbId": "",

@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-18T19:40:47Z",
+  "updatedAt": "2026-05-18T19:41:21Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -12,25 +12,48 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-18T19:40:47Z",
       "watched": {}
+    },
+    "tt33714084": {
+      "imdbId": "tt33714084",
+      "tmdbId": "1367642",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-18T19:41:21Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {
       "tt32897959": 1
     },
-    "watchLater": {},
-    "updatedAt": "2026-05-18T19:40:47Z"
+    "watchLater": {
+      "tt33714084": true
+    },
+    "updatedAt": "2026-05-18T19:41:21Z"
   },
   "lastWatch": {
-    "imdbId": "tt32897959",
-    "tmdbId": "1316092",
+    "imdbId": "tt33714084",
+    "tmdbId": "1367642",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-18T19:40:47Z"
+    "updatedAt": "2026-05-18T19:41:21Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt33714084",
+      "tmdbId": "1367642",
+      "title": "No te olvidaré",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-18T19:41:21Z"
+    },
     {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",

@@ -1,0 +1,417 @@
+{
+  "generatedAt": "2026-05-19T03:14:09.551Z",
+  "actor": {
+    "objectType": "Agent",
+    "name": "Orfinelly",
+    "mbox": "mailto:ornebe@hotmail.com"
+  },
+  "statementCount": 7,
+  "statements": [
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "https://w3id.org/xapi/video/verbs/played",
+        "display": {
+          "en-US": "played"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 10.025634538,
+          "https://lerna.dev/xapi/extensions/progress-percent": 10.025634538,
+          "https://lerna.dev/xapi/extensions/player-status": "paused",
+          "https://lerna.dev/xapi/extensions/event-type": "progress"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T21:06:22Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:paused:2026-05-11T20:29:26Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "https://w3id.org/xapi/video/verbs/played",
+        "display": {
+          "en-US": "played"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 9.866339714685349,
+          "https://lerna.dev/xapi/extensions/progress-percent": 9.866339714685349,
+          "https://lerna.dev/xapi/extensions/player-status": "paused",
+          "https://lerna.dev/xapi/extensions/event-type": "progress"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:29:26Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:seeked:2026-05-11T20:28:59Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/completed",
+        "display": {
+          "en-US": "completed"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": true,
+        "success": true,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 2504.2787014,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "seeked",
+          "https://lerna.dev/xapi/extensions/event-type": "completed"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:28:59Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:playing:2026-05-11T20:28:26Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 150.42349966467972,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:28:26Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:playing:2026-05-11T20:28:06Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 130.35422571300367,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:28:06Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:playing:2026-05-11T20:27:41Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 105.27013303165032,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:27:41Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:ornebe-hotmail-com:tt32897959:s1e1:playing:2026-05-11T20:27:26Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Orfinelly",
+        "mbox": "mailto:ornebe@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt32897959",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "“Cumbres Borrascosas”"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt32897959",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1316092",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 90.21833579300518,
+          "https://lerna.dev/xapi/extensions/progress-percent": 90.21833579300518,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-11T20:27:26Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    }
+  ]
+}

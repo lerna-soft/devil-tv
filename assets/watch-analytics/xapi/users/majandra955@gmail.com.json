@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-05-19T03:14:09.551Z",
+  "actor": {
+    "objectType": "Agent",
+    "name": "Alejandra Burgos",
+    "mbox": "mailto:majandra955@gmail.com"
+  },
+  "statementCount": 2,
+  "statements": [
+    {
+      "id": "urn:uuid:majandra955-gmail-com:tt33612209:s1e1:playing:2026-05-14T17:42:32Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Alejandra Burgos",
+        "mbox": "mailto:majandra955@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt33612209",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "El diablo viste de Prada 2"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt33612209",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt33612209",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1314481",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-14T17:42:32Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:majandra955-gmail-com:tt28650488:s1e1:playing:2026-05-12T23:59:08Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Alejandra Burgos",
+        "mbox": "mailto:majandra955@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt28650488",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Super Mario Galaxy la película"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt28650488",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt28650488",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1226863",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-12T23:59:08Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    }
+  ]
+}

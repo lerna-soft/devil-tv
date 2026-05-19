@@ -23,12 +23,17 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const STORE_DIR = path.join(PROJECT_ROOT, 'assets', 'watch-progress');
 const ANALYTICS_DIR = path.join(PROJECT_ROOT, 'assets', 'watch-analytics');
+const USERS_STORE_DIR = path.join(PROJECT_ROOT, 'assets', 'users');
 const INDEX_PATH = path.join(STORE_DIR, 'index.json');
+const USERS_INDEX_PATH = path.join(USERS_STORE_DIR, 'index.json');
 const USERS_DIR = path.join(STORE_DIR, 'users');
 const ANALYTICS_EVENTS_PATH = path.join(ANALYTICS_DIR, 'events.json');
 const ANALYTICS_BY_CONTENT_PATH = path.join(ANALYTICS_DIR, 'by-content.json');
 const ANALYTICS_BY_USER_PATH = path.join(ANALYTICS_DIR, 'by-user.json');
 const ANALYTICS_SUMMARY_PATH = path.join(ANALYTICS_DIR, 'summary.json');
+const ANALYTICS_XAPI_DIR = path.join(ANALYTICS_DIR, 'xapi');
+const ANALYTICS_XAPI_USERS_DIR = path.join(ANALYTICS_XAPI_DIR, 'users');
+const ANALYTICS_XAPI_INDEX_PATH = path.join(ANALYTICS_XAPI_DIR, 'index.json');
 const OWNER_REPO = String(process.env.GITHUB_REPOSITORY || '').trim();
 const TOKEN = String(process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '').trim();
 const LABEL = 'watch-progress-sync';
@@ -48,6 +53,8 @@ async function main() {
   await fs.mkdir(STORE_DIR, { recursive: true });
   await fs.mkdir(USERS_DIR, { recursive: true });
   await fs.mkdir(ANALYTICS_DIR, { recursive: true });
+  await fs.mkdir(ANALYTICS_XAPI_DIR, { recursive: true });
+  await fs.mkdir(ANALYTICS_XAPI_USERS_DIR, { recursive: true });
   const existingIndex = await loadIndex();
   const { users, processedIssues } = await loadUsersFromIssues();
   const mergedIndex = mergeIndex(existingIndex, users);
@@ -118,21 +125,21 @@ async function loadUsersFromIssues() {
 function parseIssue(issue) {
   const body = String(issue?.body || '');
   if (!/WATCH_PROGRESS_SYNC_REQUEST/i.test(body)) return null;
-  const email = normalizeEmail((body.match(/^Email:\s*(.+)$/im) || [])[1]);
-  const name = String((body.match(/^Name:\s*(.+)$/im) || [])[1] || '').trim();
-  const imdbId = String((body.match(/^IMDb:\s*(tt\d+)$/im) || [])[1] || '').trim();
-  const tmdbId = String((body.match(/^TMDB:\s*(\d+)$/im) || [])[1] || '').trim();
-  const season = positiveInteger((body.match(/^Season:\s*(\d+)$/im) || [])[1], 1);
-  const episode = positiveInteger((body.match(/^Episode:\s*(\d+)$/im) || [])[1], 1);
-  const progress = Number((body.match(/^Progress:\s*([0-9]+(?:\.[0-9]+)?)$/im) || [])[1] || 0);
-  const title = String((body.match(/^Title:\s*(.+)$/im) || [])[1] || '').trim();
-  const type = String((body.match(/^Type:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
-  const playerStatus = String((body.match(/^PlayerStatus:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
-  const eventType = String((body.match(/^EventType:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
-  const startedAt = String((body.match(/^StartedAt:\s*(.+)$/im) || [])[1] || '').trim();
-  const completedAt = String((body.match(/^CompletedAt:\s*(.+)$/im) || [])[1] || '').trim();
-  const preferenceAction = String((body.match(/^PreferenceAction:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
-  const preferenceValue = String((body.match(/^PreferenceValue:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const email = normalizeEmail(extractIssueField(body, 'Email'));
+  const name = String(extractIssueField(body, 'Name') || '').trim();
+  const imdbId = String(extractIssueField(body, 'IMDb') || '').trim();
+  const tmdbId = String(extractIssueField(body, 'TMDB') || '').trim();
+  const season = positiveInteger(extractIssueField(body, 'Season'), 1);
+  const episode = positiveInteger(extractIssueField(body, 'Episode'), 1);
+  const progress = Number(extractIssueField(body, 'Progress') || 0);
+  const title = String(extractIssueField(body, 'Title') || '').trim();
+  const type = String(extractIssueField(body, 'Type') || '').trim().toLowerCase();
+  const playerStatus = String(extractIssueField(body, 'PlayerStatus') || '').trim().toLowerCase();
+  const eventType = String(extractIssueField(body, 'EventType') || '').trim().toLowerCase();
+  const startedAt = String(extractIssueField(body, 'StartedAt') || '').trim();
+  const completedAt = String(extractIssueField(body, 'CompletedAt') || '').trim();
+  const preferenceAction = String(extractIssueField(body, 'PreferenceAction') || '').trim().toLowerCase();
+  const preferenceValue = String(extractIssueField(body, 'PreferenceValue') || '').trim().toLowerCase();
   if (!email || (!imdbId && !tmdbId)) return null;
   return {
     email,
@@ -153,6 +160,16 @@ function parseIssue(issue) {
     updatedAt: parseIssueDate(issue),
     progressKey: `${imdbId || tmdbId}:${season}x${episode}`
   };
+}
+
+function extractIssueField(body, label) {
+  const pattern = new RegExp(`^${escapeRegex(label)}:[ \\t]*(.*)$`, 'im');
+  const match = String(body || '').match(pattern);
+  return String(match?.[1] || '').trim();
+}
+
+function escapeRegex(value) {
+  return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 async function fetchAllIssues() {
@@ -376,19 +393,81 @@ async function writeAnalytics(indexUsers) {
     });
   }
 
-  const events = buildAnalyticsEvents(users);
+  const registeredUsers = await loadRegisteredUsers();
+  const mergedUsers = mergeAnalyticsUsers(registeredUsers, users);
+
+  const events = buildAnalyticsEvents(mergedUsers);
   const byContent = buildAnalyticsByContent(events);
-  const byUser = buildAnalyticsByUser(users, events);
-  const summary = buildAnalyticsSummary(users, events, byContent);
+  const byUser = buildAnalyticsByUser(mergedUsers, events);
+  const xapi = buildXapiIndex(byUser, events);
+  const summary = buildAnalyticsSummary(mergedUsers, events, byContent);
 
   await fs.writeFile(ANALYTICS_EVENTS_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), events }, null, 2)}\n`, 'utf8');
   await fs.writeFile(ANALYTICS_BY_CONTENT_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), items: byContent }, null, 2)}\n`, 'utf8');
   await fs.writeFile(ANALYTICS_BY_USER_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), users: byUser }, null, 2)}\n`, 'utf8');
   await fs.writeFile(ANALYTICS_SUMMARY_PATH, `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
+  await writeXapiFiles(xapi);
   console.log(`[watch-progress] wrote ${ANALYTICS_EVENTS_PATH}`);
   console.log(`[watch-progress] wrote ${ANALYTICS_BY_CONTENT_PATH}`);
   console.log(`[watch-progress] wrote ${ANALYTICS_BY_USER_PATH}`);
   console.log(`[watch-progress] wrote ${ANALYTICS_SUMMARY_PATH}`);
+  console.log(`[watch-progress] wrote ${ANALYTICS_XAPI_INDEX_PATH}`);
+}
+
+async function loadRegisteredUsers() {
+  const raw = await fs.readFile(USERS_INDEX_PATH, 'utf8').catch(() => '');
+  const parsed = raw.trim() ? safeJson(raw) : {};
+  const indexUsers = Array.isArray(parsed?.users) ? parsed.users : [];
+  const out = [];
+  for (const entry of indexUsers) {
+    const file = String(entry?.file || '').trim();
+    const payload = file ? safeJson(await fs.readFile(path.join(USERS_STORE_DIR, file), 'utf8').catch(() => '')) : {};
+    const email = normalizeEmail(payload?.email || entry?.email || '');
+    if (!email) continue;
+    out.push({
+      email,
+      name: String(payload?.name || '').trim(),
+      role: String(payload?.role || 'viewer').trim().toLowerCase(),
+      createdAt: String(payload?.createdAt || '').trim(),
+      updatedAt: String(payload?.updatedAt || payload?.createdAt || '').trim(),
+      progress: {},
+      history: []
+    });
+  }
+  return out;
+}
+
+function mergeAnalyticsUsers(registeredUsers, activeUsers) {
+  const map = new Map();
+  for (const user of registeredUsers || []) {
+    map.set(user.email, {
+      email: user.email,
+      name: String(user.name || '').trim(),
+      role: String(user.role || 'viewer').trim().toLowerCase(),
+      createdAt: String(user.createdAt || '').trim(),
+      updatedAt: String(user.updatedAt || '').trim(),
+      progress: {},
+      history: []
+    });
+  }
+  for (const user of activeUsers || []) {
+    const current = map.get(user.email) || {
+      email: user.email,
+      name: '',
+      role: 'viewer',
+      createdAt: '',
+      updatedAt: ''
+    };
+    map.set(user.email, {
+      ...current,
+      email: user.email,
+      name: String(user.name || current.name || '').trim(),
+      updatedAt: maxIsoString(current.updatedAt, user.updatedAt),
+      progress: user.progress && typeof user.progress === 'object' ? user.progress : {},
+      history: Array.isArray(user.history) ? user.history : []
+    });
+  }
+  return [...map.values()].sort((a, b) => a.email.localeCompare(b.email, 'es', { sensitivity: 'base' }));
 }
 
 function buildAnalyticsEvents(users) {
@@ -432,8 +511,8 @@ function normalizeAnalyticsEvent(rawEvent, user) {
     progressPercent: progress >= 0 && progress <= 100 ? clamp(progress, 0, 100) : null,
     eventType,
     playerStatus,
-    startedAt: String(rawEvent?.startedAt || '').trim(),
-    completedAt: String(rawEvent?.completedAt || '').trim(),
+    startedAt: sanitizeTelemetryField(rawEvent?.startedAt),
+    completedAt: sanitizeTelemetryField(rawEvent?.completedAt),
     updatedAt
   };
 }
@@ -540,6 +619,8 @@ function buildAnalyticsByUser(users, events) {
     map.set(user.email, {
       userEmail: user.email,
       userName: String(user.name || '').trim(),
+      role: String(user.role || 'viewer').trim().toLowerCase(),
+      createdAt: String(user.createdAt || '').trim(),
       updatedAt: String(user.updatedAt || '').trim(),
       totalEvents: 0,
       totalStarts: 0,
@@ -559,6 +640,8 @@ function buildAnalyticsByUser(users, events) {
     const bucket = map.get(email) || {
       userEmail: email,
       userName: String(event.userName || '').trim(),
+      role: 'viewer',
+      createdAt: '',
       updatedAt: '',
       totalEvents: 0,
       totalStarts: 0,
@@ -634,6 +717,146 @@ function buildAnalyticsSummary(users, events, byContent) {
       completionRate: row.completionRate
     }))
   };
+}
+
+function buildXapiIndex(byUser, events) {
+  const eventsByUser = new Map();
+  for (const event of events || []) {
+    const email = normalizeEmail(event.userEmail);
+    if (!email) continue;
+    const rows = eventsByUser.get(email) || [];
+    rows.push(event);
+    eventsByUser.set(email, rows);
+  }
+
+  const users = [];
+  for (const row of byUser || []) {
+    const email = normalizeEmail(row?.userEmail);
+    const statements = buildXapiStatements(row, eventsByUser.get(email) || []);
+    users.push({
+      userEmail: email,
+      userName: String(row?.userName || '').trim(),
+      role: String(row?.role || 'viewer').trim().toLowerCase(),
+      statementCount: statements.length,
+      lastStatementAt: statements[0]?.timestamp || '',
+      file: `users/${email}.json`
+    });
+  }
+  return {
+    generatedAt: new Date().toISOString(),
+    users: users.sort((a, b) => b.statementCount - a.statementCount || (Date.parse(b.lastStatementAt || 0) || 0) - (Date.parse(a.lastStatementAt || 0) || 0)),
+    statementsByUser: Object.fromEntries(users.map((row) => [row.userEmail, buildXapiStatements(byUser.find((item) => normalizeEmail(item.userEmail) === row.userEmail) || row, eventsByUser.get(row.userEmail) || [])]))
+  };
+}
+
+async function writeXapiFiles(xapi) {
+  const indexUsers = [];
+  for (const row of xapi.users || []) {
+    const statements = xapi.statementsByUser?.[row.userEmail] || [];
+    const payload = {
+      generatedAt: xapi.generatedAt,
+      actor: buildXapiActor(row),
+      statementCount: statements.length,
+      statements
+    };
+    const filePath = path.join(ANALYTICS_XAPI_USERS_DIR, `${row.userEmail}.json`);
+    await fs.mkdir(path.dirname(filePath), { recursive: true });
+    await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+    indexUsers.push(row);
+  }
+  await fs.writeFile(ANALYTICS_XAPI_INDEX_PATH, `${JSON.stringify({ generatedAt: xapi.generatedAt, users: indexUsers }, null, 2)}\n`, 'utf8');
+}
+
+function buildXapiStatements(userRow, events) {
+  return (events || [])
+    .map((event) => buildXapiStatement(userRow, event))
+    .filter(Boolean)
+    .sort((a, b) => (Date.parse(b.timestamp || 0) || 0) - (Date.parse(a.timestamp || 0) || 0));
+}
+
+function buildXapiStatement(userRow, event) {
+  if (!event) return null;
+  const objectId = buildXapiObjectId(event);
+  const verb = buildXapiVerb(event);
+  return {
+    id: `urn:uuid:${sanitizeStatementId(event.eventId)}`,
+    actor: buildXapiActor(userRow),
+    verb,
+    object: {
+      id: objectId,
+      objectType: 'Activity',
+      definition: {
+        name: { 'en-US': String(event.title || event.contentId || objectId).trim() },
+        type: `https://w3id.org/xapi/video/activity-type/${event.type === 'series' ? 'video' : 'movie'}`,
+        extensions: {
+          'https://lerna.dev/xapi/extensions/content-id': String(event.contentId || '').trim(),
+          'https://lerna.dev/xapi/extensions/imdb-id': String(event.imdbId || '').trim(),
+          'https://lerna.dev/xapi/extensions/tmdb-id': String(event.tmdbId || '').trim(),
+          'https://lerna.dev/xapi/extensions/episode-key': String(event.episodeKey || '').trim()
+        }
+      }
+    },
+    result: {
+      completion: Boolean(event.eventType === 'completed' || event.playerStatus === 'completed'),
+      success: Boolean(event.eventType === 'completed' || event.playerStatus === 'completed'),
+      extensions: {
+        'https://lerna.dev/xapi/extensions/progress-value': Number(event.progressValue ?? event.progress ?? 0),
+        'https://lerna.dev/xapi/extensions/progress-percent': event.progressPercent == null ? null : Number(event.progressPercent),
+        'https://lerna.dev/xapi/extensions/player-status': String(event.playerStatus || '').trim().toLowerCase(),
+        'https://lerna.dev/xapi/extensions/event-type': String(event.eventType || '').trim().toLowerCase()
+      }
+    },
+    context: {
+      platform: 'Media Evaluation Platform Static',
+      contextActivities: {
+        category: [{ id: 'https://lerna.dev/xapi/categories/media-analytics' }]
+      },
+      extensions: {
+        'https://lerna.dev/xapi/extensions/season': positiveInteger(event.season, 1),
+        'https://lerna.dev/xapi/extensions/episode': positiveInteger(event.episode, 1),
+        'https://lerna.dev/xapi/extensions/started-at': String(event.startedAt || '').trim(),
+        'https://lerna.dev/xapi/extensions/completed-at': String(event.completedAt || '').trim()
+      }
+    },
+    timestamp: String(event.updatedAt || '').trim(),
+    stored: new Date().toISOString()
+  };
+}
+
+function buildXapiActor(userRow) {
+  const email = normalizeEmail(userRow?.userEmail || userRow?.email || '');
+  return {
+    objectType: 'Agent',
+    name: String(userRow?.userName || userRow?.name || email).trim(),
+    mbox: `mailto:${email}`
+  };
+}
+
+function buildXapiVerb(event) {
+  const type = String(event?.eventType || '').trim().toLowerCase();
+  if (type === 'completed') return { id: 'http://adlnet.gov/expapi/verbs/completed', display: { 'en-US': 'completed' } };
+  if (type === 'started') return { id: 'http://adlnet.gov/expapi/verbs/initialized', display: { 'en-US': 'initialized' } };
+  return { id: 'https://w3id.org/xapi/video/verbs/played', display: { 'en-US': 'played' } };
+}
+
+function buildXapiObjectId(event) {
+  const type = String(event?.type || 'movie').trim().toLowerCase();
+  const contentId = String(event?.contentId || event?.imdbId || event?.tmdbId || 'unknown').trim();
+  if (type === 'series') {
+    return `https://deviltv.local/xapi/series/${contentId}/seasons/${positiveInteger(event?.season, 1)}/episodes/${positiveInteger(event?.episode, 1)}`;
+  }
+  return `https://deviltv.local/xapi/movie/${contentId}`;
+}
+
+function sanitizeStatementId(value) {
+  return String(value || 'statement').replace(/[^a-z0-9:-]+/gi, '-').replace(/^-+|-+$/g, '') || 'statement';
+}
+
+function sanitizeTelemetryField(value) {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  if (/^[A-Za-z]+:\s*/.test(text)) return '';
+  return text;
 }
 
 function buildEventId(row) {

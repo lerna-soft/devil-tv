@@ -1550,8 +1550,9 @@ function renderAdminDashboard() {
     fetchJsonWithTimeout('./assets/watch-analytics/events.json', 3500).catch(() => ({ events: [] })),
     fetchJsonWithTimeout('./assets/watch-analytics/by-content.json', 3500).catch(() => ({ items: [] })),
     fetchJsonWithTimeout('./assets/watch-analytics/by-user.json', 3500).catch(() => ({ users: [] })),
-    fetchJsonWithTimeout('./assets/watch-analytics/summary.json', 3500).catch(() => ({}))
-  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit, analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary]) => {
+    fetchJsonWithTimeout('./assets/watch-analytics/summary.json', 3500).catch(() => ({})),
+    fetchJsonWithTimeout('./assets/watch-analytics/xapi/index.json', 3500).catch(() => ({ users: [] }))
+  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit, analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi]) => {
     const toTs = (value) => Date.parse(value || 0) || 0;
     const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
     const details = await Promise.all(users.slice(0, 100).map(async (entry) => {
@@ -1574,6 +1575,7 @@ function renderAdminDashboard() {
     const analyticsEventRows = Array.isArray(analyticsEvents?.events) ? analyticsEvents.events : [];
     const analyticsContentRows = Array.isArray(analyticsByContent?.items) ? analyticsByContent.items : [];
     const analyticsUserRows = Array.isArray(analyticsByUser?.users) ? analyticsByUser.users : [];
+    const analyticsXapiRows = Array.isArray(analyticsXapi?.users) ? analyticsXapi.users : [];
     const analyticsEnabled = analyticsEventRows.length > 0 || analyticsContentRows.length > 0 || analyticsUserRows.length > 0;
     const historyRows = analyticsEnabled
       ? analyticsEventRows
@@ -1762,6 +1764,7 @@ function renderAdminDashboard() {
             <article class="admin-kpi"><strong>${totalHistory}</strong><span>Eventos (${days}d)</span></article>
             <article class="admin-kpi"><strong>${avgHistoryPerActive}</strong><span>Prom. eventos/activo</span></article>
             <article class="admin-kpi"><strong>${inactiveUsers.length}</strong><span>Usuarios sin actividad</span></article>
+            <article class="admin-kpi"><strong>${analyticsXapiRows.filter((row) => Number(row?.statementCount || 0) > 0).length}</strong><span>Usuarios con xAPI</span></article>
             <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización global</span></article>
             <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas seed</span></article>
             <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series seed</span></article>
@@ -1800,6 +1803,11 @@ function renderAdminDashboard() {
             <section class="admin-panel">
               <h4>Usuarios sin actividad</h4>
               <div class="admin-chart">${inactiveUsers.slice(0, 10).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.name || row?.email || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.email || 'n/a')} · ${String(row?.role || 'viewer').toLowerCase()} · sin reproducciones`)}</small></div>`).join('') || '<p>Todos los usuarios tienen actividad.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>xAPI por usuario</h4>
+              <div class="admin-chart">${analyticsXapiRows.slice(0, 10).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.userName || row?.userEmail || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.userEmail || 'n/a')} · ${Number(row?.statementCount || 0)} statements · última ${ago(row?.lastStatementAt)}`)}</small></div>`).join('') || '<p>Sin statements xAPI.</p>'}</div>
             </section>
 
             <section class="admin-panel">

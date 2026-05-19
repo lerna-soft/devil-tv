@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T05:36:38.676Z",
+  "generatedAt": "2026-05-19T05:40:57.903Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1200,6 +1200,50 @@
       "avgPlaybackProgress": 317.4806
     },
     {
+      "contentId": "tt7068946",
+      "imdbId": "tt7068946",
+      "tmdbId": "",
+      "title": "The Accountant 2",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3489.7588178220017,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-19T05:40:46Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 2,
+          "totalPlaybackProgress": 3489.7588178220017,
+          "lastSeenAt": "2026-05-19T05:40:46Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3489.7588178220017,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T05:40:46Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1163.2529
+    },
+    {
       "contentId": "tt9114286",
       "imdbId": "tt9114286",
       "tmdbId": "505642",
@@ -1330,50 +1374,6 @@
         }
       },
       "avgPlaybackProgress": 0.9908
-    },
-    {
-      "contentId": "tt7068946",
-      "imdbId": "tt7068946",
-      "tmdbId": "",
-      "title": "The Accountant 2",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T05:10:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T05:10:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T05:10:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt33612209",

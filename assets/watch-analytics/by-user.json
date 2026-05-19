@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T18:30:57.753Z",
+  "generatedAt": "2026-05-19T18:31:12.209Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T18:30:48Z",
-      "totalEvents": 295,
+      "updatedAt": "2026-05-19T18:30:56Z",
+      "totalEvents": 296,
       "totalStarts": 179,
       "totalCompletions": 39,
       "totalPlaybackProgress": 147351.57515548394,
-      "uniqueContentCount": 102,
-      "lastActivityAt": "2026-05-19T18:30:48Z",
+      "uniqueContentCount": 103,
+      "lastActivityAt": "2026-05-19T18:30:56Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -45,6 +45,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt31392119": {
+          "contentId": "tt31392119",
+          "imdbId": "tt31392119",
+          "tmdbId": "",
+          "title": "The Bad Guys: Breaking In",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T18:30:56Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1259,7 +1271,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 499.4969
+      "avgPlaybackProgress": 497.8094
     },
     {
       "userEmail": "liz-munera@hotmail.com",

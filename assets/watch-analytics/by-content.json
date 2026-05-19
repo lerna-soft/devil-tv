@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T08:12:26.297Z",
+  "generatedAt": "2026-05-19T08:12:37.890Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -584,88 +584,46 @@
       "avgPlaybackProgress": 683.5484
     },
     {
-      "contentId": "tt32897959",
-      "imdbId": "tt32897959",
-      "tmdbId": "1316092",
-      "title": "“Cumbres Borrascosas”",
-      "type": "movie",
-      "totalEvents": 13,
-      "totalStarts": 9,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 19691.405951855024,
-      "uniqueUsers": 2,
-      "completionRate": 0.1111,
-      "lastActivityAt": "2026-05-18T19:40:47Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 5,
-          "totalPlaybackProgress": 16690.969082000003,
-          "lastSeenAt": "2026-05-18T19:40:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "ornebe@hotmail.com": {
-          "userEmail": "ornebe@hotmail.com",
-          "userName": "Orfinelly",
-          "playCount": 7,
-          "completedCount": 1,
-          "startedCount": 4,
-          "totalPlaybackProgress": 3000.4368698550247,
-          "lastSeenAt": "2026-05-11T21:06:22Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 13,
-          "totalStarts": 9,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 19691.405951855024,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-18T19:40:47Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "ornebe@hotmail.com": true
-          },
-          "completionRate": 0.1111
-        }
-      },
-      "avgPlaybackProgress": 1514.7235
-    },
-    {
       "contentId": "tt16030542",
       "imdbId": "tt16030542",
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 12,
-      "totalStarts": 7,
+      "totalEvents": 13,
+      "totalStarts": 8,
       "totalCompletions": 5,
       "totalPlaybackProgress": 16435.594618000003,
       "uniqueUsers": 1,
-      "completionRate": 0.7143,
-      "lastActivityAt": "2026-05-19T08:12:12Z",
+      "completionRate": 0.625,
+      "lastActivityAt": "2026-05-19T08:12:20Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 12,
+          "playCount": 13,
           "completedCount": 5,
-          "startedCount": 7,
+          "startedCount": 8,
           "totalPlaybackProgress": 16435.594618000003,
-          "lastSeenAt": "2026-05-19T08:12:12Z",
+          "lastSeenAt": "2026-05-19T08:12:20Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T08:12:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e6": {
           "season": 1,
           "episode": 6,
@@ -751,7 +709,63 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1369.6329
+      "avgPlaybackProgress": 1264.2765
+    },
+    {
+      "contentId": "tt32897959",
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "totalEvents": 13,
+      "totalStarts": 9,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 19691.405951855024,
+      "uniqueUsers": 2,
+      "completionRate": 0.1111,
+      "lastActivityAt": "2026-05-18T19:40:47Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 5,
+          "totalPlaybackProgress": 16690.969082000003,
+          "lastSeenAt": "2026-05-18T19:40:47Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "ornebe@hotmail.com": {
+          "userEmail": "ornebe@hotmail.com",
+          "userName": "Orfinelly",
+          "playCount": 7,
+          "completedCount": 1,
+          "startedCount": 4,
+          "totalPlaybackProgress": 3000.4368698550247,
+          "lastSeenAt": "2026-05-11T21:06:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 13,
+          "totalStarts": 9,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 19691.405951855024,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-18T19:40:47Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "ornebe@hotmail.com": true
+          },
+          "completionRate": 0.1111
+        }
+      },
+      "avgPlaybackProgress": 1514.7235
     },
     {
       "contentId": "tt29552248",

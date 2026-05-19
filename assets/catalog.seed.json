@@ -1,6 +1,6 @@
 {
-  "version": 139,
-  "generatedAt": "2026-05-19T09:42:50.346Z",
+  "version": 140,
+  "generatedAt": "2026-05-19T14:14:50.060Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49361,6 +49361,22 @@
       "releaseDate": null,
       "overview": "Sincronizado desde historial",
       "posterUrl": "Description: Sincronizado desde historial",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt37286909",
+      "title": "My Adventures with Green Lantern",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Greg Eagles, Sarah Hollis",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTIxMTgzYWUtZTBhYy00ZWQ2LWI2OWEtZWNiYzlhZDNhYjY1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

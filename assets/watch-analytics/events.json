@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T04:14:18.647Z",
+  "generatedAt": "2026-05-19T04:28:21.922Z",
   "events": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T04:28:11Z",
+      "contentId": "tt9114286",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T04:28:10.666Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T04:28:11Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt14452776:s2e3:started:2026-05-19T04:13:57Z",
       "contentId": "tt14452776",
@@ -3530,7 +3551,7 @@
       "updatedAt": "2026-05-15T04:20:20Z"
     },
     {
-      "eventId": "juancarlosrios531970@gmail.com:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
+      "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
       "contentId": "tt1630029",
       "episodeKey": "s1e1",
       "userEmail": "juancarlosrios531970@gmail.com",
@@ -3551,7 +3572,7 @@
       "updatedAt": "2026-05-14T21:01:51Z"
     },
     {
-      "eventId": "juancarlosrios531970@gmail.com:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
+      "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
       "contentId": "tt1630029",
       "episodeKey": "s1e1",
       "userEmail": "juancarlosrios531970@gmail.com",
@@ -3614,7 +3635,7 @@
       "updatedAt": "2026-05-14T19:21:17Z"
     },
     {
-      "eventId": "juancarlosrios531970@gmail.com:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
+      "eventId": "unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
       "contentId": "tt10676052",
       "episodeKey": "s1e1",
       "userEmail": "juancarlosrios531970@gmail.com",
@@ -4622,7 +4643,7 @@
       "updatedAt": "2026-05-13T20:53:48Z"
     },
     {
-      "eventId": "juancarlosrios531970@gmail.com:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
+      "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
       "contentId": "tt0480489",
       "episodeKey": "s1e2",
       "userEmail": "juancarlosrios531970@gmail.com",

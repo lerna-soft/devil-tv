@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-19T03:01:26.748Z",
+  "generatedAt": "2026-05-19T03:08:40.269Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
-      "updatedAt": "2026-05-19T01:58:13Z",
-      "totalEvents": 239,
-      "totalStarts": 139,
+      "updatedAt": "2026-05-19T03:08:28Z",
+      "totalEvents": 242,
+      "totalStarts": 142,
       "totalCompletions": 26,
       "totalPlaybackProgress": 97670.91264619092,
-      "uniqueContentCount": 98,
-      "lastActivityAt": "2026-05-19T01:58:13Z",
+      "uniqueContentCount": 99,
+      "lastActivityAt": "2026-05-19T03:08:28Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -41,6 +41,30 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt1830617": {
+          "contentId": "tt1830617",
+          "imdbId": "tt1830617",
+          "tmdbId": "39351",
+          "title": "Grimm",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T03:08:28Z"
+        },
+        "tt14452776": {
+          "contentId": "tt14452776",
+          "imdbId": "tt14452776",
+          "tmdbId": "136315",
+          "title": "The Bear",
+          "type": "series",
+          "playCount": 27,
+          "completed": true,
+          "maxProgressValue": 1880.723439229025,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T03:03:36Z"
         },
         "tt34987195": {
           "contentId": "tt34987195",
@@ -137,18 +161,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-18T14:26:12Z"
-        },
-        "tt14452776": {
-          "contentId": "tt14452776",
-          "imdbId": "tt14452776",
-          "tmdbId": "136315",
-          "title": "The Bear",
-          "type": "series",
-          "playCount": 25,
-          "completed": true,
-          "maxProgressValue": 1880.723439229025,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T13:43:17Z"
         },
         "tt0914863": {
           "contentId": "tt0914863",
@@ -1207,7 +1219,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 408.6649
+      "avgPlaybackProgress": 403.5988
     },
     {
       "userEmail": "liz-munera@hotmail.com",

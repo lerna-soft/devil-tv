@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-19T00:26:13Z",
+  "updatedAt": "2026-05-19T00:43:44Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -28,9 +28,9 @@
       "tmdbId": "1007757",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-19T00:26:13Z",
+      "progress": 492.258299,
+      "lastProgress": 492.258299,
+      "updatedAt": "2026-05-19T00:43:44Z",
       "watched": {}
     }
   },
@@ -49,11 +49,22 @@
     "tmdbId": "1007757",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-19T00:26:13Z"
+    "progress": 492.258299,
+    "updatedAt": "2026-05-19T00:43:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 492.258299,
+      "playerStatus": "playing",
+      "updatedAt": "2026-05-19T00:43:44Z"
+    },
     {
       "imdbId": "tt29552248",
       "tmdbId": "1007757",

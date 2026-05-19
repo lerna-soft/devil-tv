@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T03:09:11Z",
+  "updatedAt": "2026-05-19T03:09:42Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -146,11 +146,11 @@
     "tt14452776": {
       "imdbId": "tt14452776",
       "tmdbId": "136315",
-      "lastSeason": 1,
-      "lastEpisode": 5,
+      "lastSeason": 2,
+      "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-19T03:09:11Z",
+      "updatedAt": "2026-05-19T03:09:42Z",
       "watched": {}
     },
     "tt15940132": {
@@ -1064,13 +1064,32 @@
   "lastWatch": {
     "imdbId": "tt14452776",
     "tmdbId": "136315",
-    "season": 1,
-    "episode": 5,
+    "season": 2,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-19T03:09:11Z"
+    "updatedAt": "2026-05-19T03:09:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt14452776:s2e1:started:2026-05-19T03:09:42Z",
+      "contentId": "tt14452776",
+      "episodeKey": "s2e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-18T04:33:19.311Z",
+      "completedAt": "PlayerStatus: playing",
+      "updatedAt": "2026-05-19T03:09:42Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt14452776:s1e5:started:2026-05-19T03:09:11Z",
       "contentId": "tt14452776",

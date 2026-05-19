@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T07:59:19.531Z",
+  "generatedAt": "2026-05-19T08:12:26.297Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -645,22 +645,22 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 11,
+      "totalEvents": 12,
       "totalStarts": 7,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 13180.876819000001,
+      "totalCompletions": 5,
+      "totalPlaybackProgress": 16435.594618000003,
       "uniqueUsers": 1,
-      "completionRate": 0.5714,
-      "lastActivityAt": "2026-05-19T07:59:04Z",
+      "completionRate": 0.7143,
+      "lastActivityAt": "2026-05-19T08:12:12Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
-          "completedCount": 4,
+          "playCount": 12,
+          "completedCount": 5,
           "startedCount": 7,
-          "totalPlaybackProgress": 13180.876819000001,
-          "lastSeenAt": "2026-05-19T07:59:04Z",
+          "totalPlaybackProgress": 16435.594618000003,
+          "lastSeenAt": "2026-05-19T08:12:12Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -669,16 +669,16 @@
         "s1e6": {
           "season": 1,
           "episode": 6,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3254.717799,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T07:59:04Z",
+          "lastActivityAt": "2026-05-19T08:12:12Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e5": {
           "season": 1,
@@ -751,7 +751,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1198.2615
+      "avgPlaybackProgress": 1369.6329
     },
     {
       "contentId": "tt29552248",

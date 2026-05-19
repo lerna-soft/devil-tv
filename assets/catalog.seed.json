@@ -1,6 +1,6 @@
 {
-  "version": 143,
-  "generatedAt": "2026-05-19T17:29:33.826Z",
+  "version": 144,
+  "generatedAt": "2026-05-19T17:40:18.276Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26305,6 +26305,22 @@
       "releaseDate": null,
       "overview": "Sincronizado desde historial",
       "posterUrl": "Description: Sincronizado desde historial",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0100502",
+      "title": "RoboCop 2",
+      "year": 1990,
+      "releaseDate": null,
+      "overview": "Peter Weller, John Glover",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzFiZDU1ODktYTljOS00YWU3LThiYTYtNWRmMTdhMDg3OGE4XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

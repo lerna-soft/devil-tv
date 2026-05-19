@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T06:55:37.960Z",
+  "generatedAt": "2026-05-19T07:05:47.669Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -713,22 +713,22 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 6,
+      "totalEvents": 7,
       "totalStarts": 4,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 6721.433784000001,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 10130.146322,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-19T06:55:22Z",
+      "completionRate": 0.75,
+      "lastActivityAt": "2026-05-19T07:05:34Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 2,
+          "playCount": 7,
+          "completedCount": 3,
           "startedCount": 4,
-          "totalPlaybackProgress": 6721.433784000001,
-          "lastSeenAt": "2026-05-19T06:55:22Z",
+          "totalPlaybackProgress": 10130.146322,
+          "lastSeenAt": "2026-05-19T07:05:34Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -737,16 +737,16 @@
         "s1e4": {
           "season": 1,
           "episode": 4,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3408.712538,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T06:55:22Z",
+          "lastActivityAt": "2026-05-19T07:05:34Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e3": {
           "season": 1,
@@ -791,7 +791,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1120.239
+      "avgPlaybackProgress": 1447.1638
     },
     {
       "contentId": "tt26443616",

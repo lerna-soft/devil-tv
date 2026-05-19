@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T18:31:12.209Z",
+  "generatedAt": "2026-05-19T18:31:39.732Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -7,11 +7,11 @@
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
       "updatedAt": "2026-05-19T18:30:56Z",
-      "totalEvents": 296,
+      "totalEvents": 297,
       "totalStarts": 179,
       "totalCompletions": 39,
       "totalPlaybackProgress": 147351.57515548394,
-      "uniqueContentCount": 103,
+      "uniqueContentCount": 104,
       "lastActivityAt": "2026-05-19T18:30:56Z",
       "completedContentIds": [
         "tt16030542",
@@ -52,6 +52,18 @@
           "tmdbId": "",
           "title": "The Bad Guys: Breaking In",
           "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T18:30:56Z"
+        },
+        "tt9243946": {
+          "contentId": "tt9243946",
+          "imdbId": "tt9243946",
+          "tmdbId": "",
+          "title": "El Camino",
+          "type": "movie",
           "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
@@ -1271,7 +1283,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 497.8094
+      "avgPlaybackProgress": 496.1332
     },
     {
       "userEmail": "liz-munera@hotmail.com",

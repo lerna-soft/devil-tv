@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T08:21:15.817Z",
+  "generatedAt": "2026-05-19T08:39:05.981Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -589,27 +589,41 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 17,
-      "totalStarts": 10,
+      "totalEvents": 18,
+      "totalStarts": 11,
       "totalCompletions": 7,
-      "totalPlaybackProgress": 23263.027518000003,
+      "totalPlaybackProgress": 26315.752375999997,
       "uniqueUsers": 1,
-      "completionRate": 0.7,
-      "lastActivityAt": "2026-05-19T08:21:03Z",
+      "completionRate": 0.6364,
+      "lastActivityAt": "2026-05-19T08:38:53Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
+          "playCount": 18,
           "completedCount": 7,
-          "startedCount": 10,
-          "totalPlaybackProgress": 23263.027518000003,
-          "lastSeenAt": "2026-05-19T08:21:03Z",
+          "startedCount": 11,
+          "totalPlaybackProgress": 26315.752375999997,
+          "lastSeenAt": "2026-05-19T08:38:53Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3052.724858,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T08:38:53Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e1": {
           "season": 2,
           "episode": 1,
@@ -721,23 +735,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T06:07:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1368.4134
+      "avgPlaybackProgress": 1461.9862
     },
     {
       "contentId": "tt32897959",

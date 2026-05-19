@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T08:21:15.816Z",
+  "generatedAt": "2026-05-19T08:39:05.979Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 322,
-  "totalStarts": 196,
+  "totalEvents": 323,
+  "totalStarts": 197,
   "totalCompletions": 36,
-  "overallCompletionRate": 0.1837,
+  "overallCompletionRate": 0.1827,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -44,9 +44,9 @@
       "contentId": "tt16030542",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 17,
+      "totalEvents": 18,
       "uniqueUsers": 1,
-      "completionRate": 0.7
+      "completionRate": 0.6364
     },
     {
       "contentId": "tt32897959",

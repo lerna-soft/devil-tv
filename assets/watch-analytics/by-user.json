@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T04:14:18.650Z",
+  "generatedAt": "2026-05-19T04:28:21.927Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1457,19 +1457,31 @@
       "userName": "Juan carlos Rios",
       "role": "viewer",
       "createdAt": "2026-05-10T02:42:47.785Z",
-      "updatedAt": "2026-05-14T21:01:51Z",
-      "totalEvents": 4,
-      "totalStarts": 4,
+      "updatedAt": "2026-05-19T04:28:11Z",
+      "totalEvents": 5,
+      "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 1135.226285,
-      "uniqueContentCount": 3,
-      "lastActivityAt": "2026-05-14T21:01:51Z",
+      "uniqueContentCount": 4,
+      "lastActivityAt": "2026-05-19T04:28:11Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt1630029",
         "tt0480489"
       ],
       "content": {
+        "tt9114286": {
+          "contentId": "tt9114286",
+          "imdbId": "tt9114286",
+          "tmdbId": "505642",
+          "title": "Black Panther: Wakanda Forever",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T04:28:11Z"
+        },
         "tt1630029": {
           "contentId": "tt1630029",
           "imdbId": "tt1630029",
@@ -1507,7 +1519,7 @@
           "lastSeenAt": "2026-05-13T17:00:31Z"
         }
       },
-      "avgPlaybackProgress": 283.8066
+      "avgPlaybackProgress": 227.0453
     },
     {
       "userEmail": "majandra955@gmail.com",

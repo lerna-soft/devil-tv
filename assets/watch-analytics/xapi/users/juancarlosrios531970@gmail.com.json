@@ -1,14 +1,72 @@
 {
-  "generatedAt": "2026-05-19T04:14:18.645Z",
+  "generatedAt": "2026-05-19T04:28:21.920Z",
   "actor": {
     "objectType": "Agent",
     "name": "Juan carlos Rios",
     "mbox": "mailto:juancarlosrios531970@gmail.com"
   },
-  "statementCount": 4,
+  "statementCount": 5,
   "statements": [
     {
-      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
+      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt9114286:s1e1:started:2026-05-19T04:28:11Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Juan carlos Rios",
+        "mbox": "mailto:juancarlosrios531970@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt9114286",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Black Panther: Wakanda Forever"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt9114286",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt9114286",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "505642",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "2026-05-19T04:28:10.666Z",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-19T04:28:11Z",
+      "stored": "2026-05-19T04:28:21.922Z"
+    },
+    {
+      "id": "urn:uuid:unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
       "actor": {
         "objectType": "Agent",
         "name": "Juan carlos Rios",
@@ -63,10 +121,10 @@
         }
       },
       "timestamp": "2026-05-14T21:01:51Z",
-      "stored": "2026-05-19T04:14:18.647Z"
+      "stored": "2026-05-19T04:28:21.922Z"
     },
     {
-      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
+      "id": "urn:uuid:unknown:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
       "actor": {
         "objectType": "Agent",
         "name": "Juan carlos Rios",
@@ -121,10 +179,10 @@
         }
       },
       "timestamp": "2026-05-14T20:27:42Z",
-      "stored": "2026-05-19T04:14:18.647Z"
+      "stored": "2026-05-19T04:28:21.922Z"
     },
     {
-      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
+      "id": "urn:uuid:unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
       "actor": {
         "objectType": "Agent",
         "name": "Juan carlos Rios",
@@ -179,10 +237,10 @@
         }
       },
       "timestamp": "2026-05-14T19:20:28Z",
-      "stored": "2026-05-19T04:14:18.647Z"
+      "stored": "2026-05-19T04:28:21.922Z"
     },
     {
-      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
+      "id": "urn:uuid:unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
       "actor": {
         "objectType": "Agent",
         "name": "Juan carlos Rios",
@@ -237,7 +295,7 @@
         }
       },
       "timestamp": "2026-05-13T17:00:31Z",
-      "stored": "2026-05-19T04:14:18.647Z"
+      "stored": "2026-05-19T04:28:21.922Z"
     }
   ]
 }

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T05:40:57.905Z",
+  "generatedAt": "2026-05-19T05:42:11.439Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T05:40:46Z",
-      "totalEvents": 258,
-      "totalStarts": 156,
+      "updatedAt": "2026-05-19T05:42:03Z",
+      "totalEvents": 259,
+      "totalStarts": 157,
       "totalCompletions": 28,
       "totalPlaybackProgress": 106773.44865648392,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T05:40:46Z",
+      "lastActivityAt": "2026-05-19T05:42:03Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -51,11 +51,11 @@
           "tmdbId": "",
           "title": "The Accountant 2",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 3489.7588178220017,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:40:46Z"
+          "lastSeenAt": "2026-05-19T05:42:03Z"
         },
         "tt0388629": {
           "contentId": "tt0388629",
@@ -1222,7 +1222,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 413.8506
+      "avgPlaybackProgress": 412.2527
     },
     {
       "userEmail": "liz-munera@hotmail.com",

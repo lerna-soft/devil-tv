@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T03:43:52.443Z",
+  "generatedAt": "2026-05-19T03:44:05.377Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt14452776:s2e2:started:2026-05-19T03:43:44Z",
+      "contentId": "tt14452776",
+      "episodeKey": "s2e2",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 2,
+      "episode": 2,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T03:43:44.768Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T03:43:44Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt14452776:s2e1:completed:2026-05-19T03:43:42Z",
       "contentId": "tt14452776",

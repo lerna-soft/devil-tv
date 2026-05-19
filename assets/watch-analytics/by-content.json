@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T04:13:55.288Z",
+  "generatedAt": "2026-05-19T04:14:04.184Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -7,22 +7,22 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 34,
+      "totalEvents": 35,
       "totalStarts": 27,
-      "totalCompletions": 6,
-      "totalPlaybackProgress": 13934.523291568135,
+      "totalCompletions": 7,
+      "totalPlaybackProgress": 15734.321291568136,
       "uniqueUsers": 1,
-      "completionRate": 0.2222,
-      "lastActivityAt": "2026-05-19T04:13:46Z",
+      "completionRate": 0.2593,
+      "lastActivityAt": "2026-05-19T04:13:54Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 34,
-          "completedCount": 6,
+          "playCount": 35,
+          "completedCount": 7,
           "startedCount": 27,
-          "totalPlaybackProgress": 13934.523291568135,
-          "lastSeenAt": "2026-05-19T04:13:46Z",
+          "totalPlaybackProgress": 15734.321291568136,
+          "lastSeenAt": "2026-05-19T04:13:54Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1791.8540868749967,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3591.6520868749967,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T04:13:46Z",
+          "lastActivityAt": "2026-05-19T04:13:54Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s2e1": {
           "season": 2,
@@ -169,7 +169,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 409.8389
+      "avgPlaybackProgress": 449.552
     },
     {
       "contentId": "tt3359350",

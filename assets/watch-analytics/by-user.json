@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T05:36:38.677Z",
+  "generatedAt": "2026-05-19T05:40:57.905Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T05:16:51Z",
-      "totalEvents": 257,
-      "totalStarts": 155,
+      "updatedAt": "2026-05-19T05:40:46Z",
+      "totalEvents": 258,
+      "totalStarts": 156,
       "totalCompletions": 28,
-      "totalPlaybackProgress": 103283.68983866191,
+      "totalPlaybackProgress": 106773.44865648392,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T05:16:51Z",
+      "lastActivityAt": "2026-05-19T05:40:46Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -23,6 +23,7 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
+        "tt7068946",
         "tt0032186",
         "tt31938062",
         "tt1190634",
@@ -44,6 +45,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
         },
+        "tt7068946": {
+          "contentId": "tt7068946",
+          "imdbId": "tt7068946",
+          "tmdbId": "",
+          "title": "The Accountant 2",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 3489.7588178220017,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T05:40:46Z"
+        },
         "tt0388629": {
           "contentId": "tt0388629",
           "imdbId": "tt0388629",
@@ -55,18 +68,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T05:16:51Z"
-        },
-        "tt7068946": {
-          "contentId": "tt7068946",
-          "imdbId": "tt7068946",
-          "tmdbId": "",
-          "title": "The Accountant 2",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:10:44Z"
         },
         "tt2140479": {
           "contentId": "tt2140479",
@@ -1221,7 +1222,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 401.8821
+      "avgPlaybackProgress": 413.8506
     },
     {
       "userEmail": "liz-munera@hotmail.com",

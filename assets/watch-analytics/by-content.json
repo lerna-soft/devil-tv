@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T05:17:02.618Z",
+  "generatedAt": "2026-05-19T05:28:25.805Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1200,6 +1200,50 @@
       "avgPlaybackProgress": 317.4806
     },
     {
+      "contentId": "tt9114286",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 3,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 5191.537065,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-19T05:28:17Z",
+      "users": {
+        "juancarlosrios531970@gmail.com": {
+          "userEmail": "juancarlosrios531970@gmail.com",
+          "userName": "Juan carlos Rios",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 3,
+          "totalPlaybackProgress": 5191.537065,
+          "lastSeenAt": "2026-05-19T05:28:17Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 3,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 5191.537065,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T05:28:17Z",
+          "users": {
+            "juancarlosrios531970@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1730.5124
+    },
+    {
       "contentId": "tt2911666",
       "imdbId": "tt2911666",
       "tmdbId": "245891",
@@ -1330,50 +1374,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt9114286",
-      "imdbId": "tt9114286",
-      "tmdbId": "505642",
-      "title": "Black Panther: Wakanda Forever",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 1694.076619,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T04:58:14Z",
-      "users": {
-        "juancarlosrios531970@gmail.com": {
-          "userEmail": "juancarlosrios531970@gmail.com",
-          "userName": "Juan carlos Rios",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 1694.076619,
-          "lastSeenAt": "2026-05-19T04:58:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1694.076619,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T04:58:14Z",
-          "users": {
-            "juancarlosrios531970@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 847.0383
     },
     {
       "contentId": "tt33612209",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T05:17:02.619Z",
+  "generatedAt": "2026-05-19T05:28:25.806Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1421,49 +1421,17 @@
       "avgPlaybackProgress": 2058.0907
     },
     {
-      "userEmail": "ornebe@hotmail.com",
-      "userName": "Orfinelly",
-      "role": "viewer",
-      "createdAt": "2026-05-11T20:23:27.348Z",
-      "updatedAt": "2026-05-11T21:06:22Z",
-      "totalEvents": 7,
-      "totalStarts": 4,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 3000.4368698550247,
-      "uniqueContentCount": 1,
-      "lastActivityAt": "2026-05-11T21:06:22Z",
-      "completedContentIds": [
-        "tt32897959"
-      ],
-      "inProgressContentIds": [],
-      "content": {
-        "tt32897959": {
-          "contentId": "tt32897959",
-          "imdbId": "tt32897959",
-          "tmdbId": "1316092",
-          "title": "“Cumbres Borrascosas”",
-          "type": "movie",
-          "playCount": 7,
-          "completed": true,
-          "maxProgressValue": 2504.2787014,
-          "maxProgressPercent": 90.21833579300518,
-          "lastSeenAt": "2026-05-11T21:06:22Z"
-        }
-      },
-      "avgPlaybackProgress": 428.6338
-    },
-    {
       "userEmail": "juancarlosrios531970@gmail.com",
       "userName": "Juan carlos Rios",
       "role": "viewer",
       "createdAt": "2026-05-10T02:42:47.785Z",
-      "updatedAt": "2026-05-19T04:58:14Z",
-      "totalEvents": 6,
-      "totalStarts": 6,
+      "updatedAt": "2026-05-19T05:28:17Z",
+      "totalEvents": 7,
+      "totalStarts": 7,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 2829.302904,
+      "totalPlaybackProgress": 6326.763350000001,
       "uniqueContentCount": 4,
-      "lastActivityAt": "2026-05-19T04:58:14Z",
+      "lastActivityAt": "2026-05-19T05:28:17Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9114286",
@@ -1477,11 +1445,11 @@
           "tmdbId": "505642",
           "title": "Black Panther: Wakanda Forever",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 1694.076619,
+          "maxProgressValue": 3497.460446,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T04:58:14Z"
+          "lastSeenAt": "2026-05-19T05:28:17Z"
         },
         "tt1630029": {
           "contentId": "tt1630029",
@@ -1520,7 +1488,39 @@
           "lastSeenAt": "2026-05-13T17:00:31Z"
         }
       },
-      "avgPlaybackProgress": 471.5505
+      "avgPlaybackProgress": 903.8233
+    },
+    {
+      "userEmail": "ornebe@hotmail.com",
+      "userName": "Orfinelly",
+      "role": "viewer",
+      "createdAt": "2026-05-11T20:23:27.348Z",
+      "updatedAt": "2026-05-11T21:06:22Z",
+      "totalEvents": 7,
+      "totalStarts": 4,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 3000.4368698550247,
+      "uniqueContentCount": 1,
+      "lastActivityAt": "2026-05-11T21:06:22Z",
+      "completedContentIds": [
+        "tt32897959"
+      ],
+      "inProgressContentIds": [],
+      "content": {
+        "tt32897959": {
+          "contentId": "tt32897959",
+          "imdbId": "tt32897959",
+          "tmdbId": "1316092",
+          "title": "“Cumbres Borrascosas”",
+          "type": "movie",
+          "playCount": 7,
+          "completed": true,
+          "maxProgressValue": 2504.2787014,
+          "maxProgressPercent": 90.21833579300518,
+          "lastSeenAt": "2026-05-11T21:06:22Z"
+        }
+      },
+      "avgPlaybackProgress": 428.6338
     },
     {
       "userEmail": "majandra955@gmail.com",

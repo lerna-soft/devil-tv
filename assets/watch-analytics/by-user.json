@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T21:02:56.804Z",
+  "generatedAt": "2026-05-19T21:41:10.792Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T21:02:46Z",
-      "totalEvents": 300,
-      "totalStarts": 181,
+      "updatedAt": "2026-05-19T21:40:59Z",
+      "totalEvents": 301,
+      "totalStarts": 182,
       "totalCompletions": 39,
-      "totalPlaybackProgress": 147635.5086002899,
+      "totalPlaybackProgress": 150436.9377163979,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-05-19T21:02:46Z",
+      "lastActivityAt": "2026-05-19T21:40:59Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -53,11 +53,11 @@
           "tmdbId": "97020",
           "title": "RoboCop",
           "type": "movie",
-          "playCount": 5,
+          "playCount": 6,
           "completed": false,
-          "maxProgressValue": 283.933444806,
+          "maxProgressValue": 2801.429116108,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T21:02:46Z"
+          "lastSeenAt": "2026-05-19T21:40:59Z"
         },
         "tt2883512": {
           "contentId": "tt2883512",
@@ -1296,7 +1296,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 492.1184
+      "avgPlaybackProgress": 499.7905
     },
     {
       "userEmail": "liz-munera@hotmail.com",

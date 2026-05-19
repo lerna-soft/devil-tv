@@ -1,6 +1,6 @@
 {
-  "version": 133,
-  "generatedAt": "2026-05-19T05:10:44.988Z",
+  "version": 134,
+  "generatedAt": "2026-05-19T05:58:42.859Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49265,6 +49265,22 @@
       "releaseDate": null,
       "overview": "Natsuki Hanae, Seiichiro Yamashita",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNGU0YWZhNTgtNzQzYS00OGI3LWFmMzMtZDgyNzU5NmZiZTgxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt10406128",
+      "title": "Rookie Historian Goo Hae-Ryung",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "Shin Sae-Kyeong, Cha Eun-woo",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYwY2I1NzktZGI2Zi00NDExLWFhNDYtYzc4MTMxNzMzYjRkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 132,
-  "generatedAt": "2026-05-19T04:23:10.556Z",
+  "version": 133,
+  "generatedAt": "2026-05-19T05:10:44.988Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26177,6 +26177,22 @@
       "releaseDate": null,
       "overview": "Page: https://lerna-admin.github.io/media-evaluation-platform-static/?mep_reload=1778359222316#/browse?q=Animes",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGQ0NTJkMjEtM2I0ZC00OTg0LWE4NzAtMWNmOTQ5NjNhZTYwXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt7068946",
+      "title": "The Accountant 2",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Sincronizado desde historial",
+      "posterUrl": "Description: Sincronizado desde historial",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-19T03:08:40.269Z",
+  "generatedAt": "2026-05-19T03:09:21.640Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
-      "updatedAt": "2026-05-19T03:08:28Z",
-      "totalEvents": 242,
-      "totalStarts": 142,
+      "updatedAt": "2026-05-19T03:09:11Z",
+      "totalEvents": 243,
+      "totalStarts": 143,
       "totalCompletions": 26,
       "totalPlaybackProgress": 97670.91264619092,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T03:08:28Z",
+      "lastActivityAt": "2026-05-19T03:09:11Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -42,6 +42,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
         },
+        "tt14452776": {
+          "contentId": "tt14452776",
+          "imdbId": "tt14452776",
+          "tmdbId": "136315",
+          "title": "The Bear",
+          "type": "series",
+          "playCount": 28,
+          "completed": true,
+          "maxProgressValue": 1880.723439229025,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T03:09:11Z"
+        },
         "tt1830617": {
           "contentId": "tt1830617",
           "imdbId": "tt1830617",
@@ -53,18 +65,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T03:08:28Z"
-        },
-        "tt14452776": {
-          "contentId": "tt14452776",
-          "imdbId": "tt14452776",
-          "tmdbId": "136315",
-          "title": "The Bear",
-          "type": "series",
-          "playCount": 27,
-          "completed": true,
-          "maxProgressValue": 1880.723439229025,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T03:03:36Z"
         },
         "tt34987195": {
           "contentId": "tt34987195",
@@ -1219,7 +1219,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 403.5988
+      "avgPlaybackProgress": 401.9379
     },
     {
       "userEmail": "liz-munera@hotmail.com",

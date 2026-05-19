@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T07:51:52.654Z",
+  "generatedAt": "2026-05-19T07:59:09.574Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 314,
+  "totalEvents": 315,
   "totalStarts": 192,
-  "totalCompletions": 32,
-  "overallCompletionRate": 0.1667,
+  "totalCompletions": 33,
+  "overallCompletionRate": 0.1719,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -49,20 +49,20 @@
       "completionRate": 0.1111
     },
     {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 1,
+      "completionRate": 0.6667
+    },
+    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 10,
       "uniqueUsers": 3,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.5
     },
     {
       "contentId": "tt26443616",

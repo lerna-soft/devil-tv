@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T06:55:27.192Z",
+  "generatedAt": "2026-05-19T06:55:37.959Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 310,
-  "totalStarts": 189,
+  "totalEvents": 311,
+  "totalStarts": 190,
   "totalCompletions": 31,
-  "overallCompletionRate": 0.164,
+  "overallCompletionRate": 0.1632,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -57,6 +57,14 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 6,
+      "uniqueUsers": 1,
+      "completionRate": 0.5
+    },
+    {
       "contentId": "tt26443616",
       "title": "Hoppers",
       "type": "movie",
@@ -71,14 +79,6 @@
       "totalEvents": 6,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 5,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667
     },
     {
       "contentId": "tt2140479",

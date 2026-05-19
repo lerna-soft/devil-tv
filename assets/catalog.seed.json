@@ -1,6 +1,6 @@
 {
-  "version": 134,
-  "generatedAt": "2026-05-19T05:58:42.859Z",
+  "version": 135,
+  "generatedAt": "2026-05-19T05:58:55.937Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26193,6 +26193,22 @@
       "releaseDate": null,
       "overview": "Sincronizado desde historial",
       "posterUrl": "Description: Sincronizado desde historial",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0100514",
+      "title": "The Rookie",
+      "year": 1990,
+      "releaseDate": null,
+      "overview": "Clint Eastwood, Charlie Sheen",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNGE2MjI1ZmEtMzA5OC00NzE2LWE1YjgtNDQ4MTdiNjU2ZjhkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

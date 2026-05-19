@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T14:18:18.295Z",
+  "generatedAt": "2026-05-19T16:54:09.985Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt16030542:s2e5:started:2026-05-19T16:53:58Z",
+      "contentId": "tt16030542",
+      "episodeKey": "s2e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt16030542",
+      "tmdbId": "",
+      "title": "The Recruit",
+      "type": "series",
+      "season": 2,
+      "episode": 5,
+      "progress": 1897.60905,
+      "progressValue": 1897.60905,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T09:18:08.859Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T16:53:58Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt16030542:s2e5:started:2026-05-19T09:42:47Z",
       "contentId": "tt16030542",

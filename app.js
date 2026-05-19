@@ -37,6 +37,10 @@ const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
+const USER_REPORT_LABEL = 'user-report';
+const USER_REPORT_PLATFORM_LABEL = 'user-report-platform';
+const USER_REPORT_TITLE_LABEL = 'user-report-title';
+const USER_REPORT_EPISODE_LABEL = 'user-report-episode';
 const TITLE_PREFS_STORAGE_PREFIX = 'mep_title_prefs_';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
@@ -1076,6 +1080,7 @@ function renderEvaluationPanel(title) {
 }
 
 async function openGitHubIssue(title, body, labels = []) {
+  await ensureIssueLabels(Array.isArray(labels) ? labels : [labels].filter(Boolean));
   const token = await getGitHubIssueToken();
   const response = await fetch('https://api.github.com/repos/lerna-admin/media-evaluation-platform-static/issues', {
     method: 'POST',
@@ -1098,6 +1103,33 @@ async function openGitHubIssue(title, body, labels = []) {
   }
 
   return response.json();
+}
+
+async function ensureIssueLabels(labels = []) {
+  const names = [...new Set((Array.isArray(labels) ? labels : [labels]).map((label) => String(label || '').trim()).filter(Boolean))];
+  if (!names.length) return;
+  const presets = {
+    [USER_REPORT_LABEL]: { color: 'D93F0B', description: 'User-submitted problem reports' },
+    [USER_REPORT_PLATFORM_LABEL]: { color: 'B60205', description: 'Platform-level reports from users' },
+    [USER_REPORT_TITLE_LABEL]: { color: 'FBCA04', description: 'Movie or series reports from users' },
+    [USER_REPORT_EPISODE_LABEL]: { color: '0E8A16', description: 'Episode-specific reports from users' }
+  };
+  await Promise.all(names.map(async (name) => {
+    const preset = presets[name] || { color: '5319E7', description: 'Auto-created label' };
+    try {
+      await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/labels', {
+        method: 'POST',
+        body: JSON.stringify({
+          name,
+          color: preset.color,
+          description: preset.description
+        })
+      });
+    } catch (error) {
+      const message = String(error?.message || error);
+      if (!message.includes('422')) throw error;
+    }
+  }));
 }
 
 async function githubApiJson(pathname, init = {}) {
@@ -1384,6 +1416,14 @@ async function openUserProblemReportForm(context = {}) {
   const safeContext = context && typeof context === 'object' ? context : {};
   const scope = String(safeContext.scope || 'general').trim().toLowerCase();
   const label = String(safeContext.label || safeContext.title || 'plataforma').trim();
+  const issueLabels = [
+    USER_REPORT_LABEL,
+    scope === 'episode'
+      ? USER_REPORT_EPISODE_LABEL
+      : scope === 'title'
+        ? USER_REPORT_TITLE_LABEL
+        : USER_REPORT_PLATFORM_LABEL
+  ];
 
   if (!swal?.fire) {
     const description = window.prompt(`Describe el problema de ${label}:`, '');
@@ -1394,7 +1434,7 @@ async function openUserProblemReportForm(context = {}) {
         summary: `Reporte de ${label}`,
         description: description.trim(),
         expected: ''
-      }));
+      }), issueLabels);
     } catch (error) {
       console.error(error);
       void notifyIssueCreationError(error);
@@ -1454,7 +1494,7 @@ async function openUserProblemReportForm(context = {}) {
   if (!result.isConfirmed || !result.value) return;
 
   try {
-    await openGitHubIssue(`User report: ${label}`, buildUserProblemIssueBody(safeContext, result.value));
+    await openGitHubIssue(`User report: ${label}`, buildUserProblemIssueBody(safeContext, result.value), issueLabels);
     await swal.fire({
       icon: 'success',
       title: 'Reporte enviado',

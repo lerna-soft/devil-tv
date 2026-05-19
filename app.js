@@ -2442,6 +2442,104 @@ function bindHomeCarouselEvents() {
   });
 }
 
+function bindEpisodeCarouselEvents() {
+  const carousels = elements.detail?.querySelectorAll('[data-episodes-carousel]') || [];
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector('.episodes-viewport');
+    const track = carousel.querySelector('.episodes-track');
+    const prevBtn = carousel.querySelector('[data-episodes-prev]');
+    const nextBtn = carousel.querySelector('[data-episodes-next]');
+    if (!viewport || !track || !prevBtn || !nextBtn) return;
+
+    const cards = [...track.children];
+    let page = 0;
+    let dragState = null;
+
+    const metrics = () => {
+      if (cards.length === 0) return { perPage: 1, maxPage: 0, step: 0 };
+      const cardWidth = cards[0].getBoundingClientRect().width || 1;
+      const secondLeft = cards[1]?.offsetLeft ?? cards[0].offsetLeft;
+      const gap = Math.max(0, secondLeft - cards[0].offsetLeft - cardWidth);
+      const perPage = Math.max(1, Math.floor((viewport.clientWidth + gap) / (cardWidth + gap)));
+      const maxPage = Math.max(0, Math.ceil(cards.length / perPage) - 1);
+      const step = perPage * (cardWidth + gap);
+      return { perPage, maxPage, step };
+    };
+
+    const apply = () => {
+      const { maxPage, step } = metrics();
+      page = Math.min(Math.max(0, page), maxPage);
+      const translateX = dragState?.currentTranslate ?? (-page * step);
+      track.style.transform = `translateX(${translateX}px)`;
+      prevBtn.disabled = page <= 0;
+      nextBtn.disabled = page >= maxPage;
+    };
+
+    const finishDrag = () => {
+      if (!dragState) return;
+      const wasDragged = dragState.moved;
+      const { step, maxPage } = metrics();
+      if (step > 0 && wasDragged) {
+        const snappedPage = Math.round(-dragState.currentTranslate / step);
+        page = Math.min(Math.max(0, snappedPage), maxPage);
+      }
+      dragState = null;
+      carousel.classList.remove('is-dragging');
+      apply();
+    };
+
+    const updateDrag = (clientX, clientY) => {
+      if (!dragState) return;
+      const deltaX = clientX - dragState.startX;
+      const deltaY = clientY - dragState.startY;
+      if (!dragState.moved) {
+        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+          dragState = null;
+          carousel.classList.remove('is-dragging');
+          apply();
+          return;
+        }
+        if (Math.abs(deltaX) < 8) return;
+        dragState.moved = true;
+      }
+      dragState.currentTranslate = dragState.baseTranslate + deltaX;
+      const { step, maxPage } = metrics();
+      const minTranslate = -(maxPage * step);
+      dragState.currentTranslate = Math.max(minTranslate - 36, Math.min(36, dragState.currentTranslate));
+      track.style.transform = `translateX(${dragState.currentTranslate}px)`;
+    };
+
+    bindTap(prevBtn, () => {
+      page -= 1;
+      apply();
+    });
+    bindTap(nextBtn, () => {
+      page += 1;
+      apply();
+    });
+
+    viewport.addEventListener('pointerdown', (event) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return;
+      const { step } = metrics();
+      dragState = {
+        startX: event.clientX,
+        startY: event.clientY,
+        baseTranslate: -(page * step),
+        currentTranslate: -(page * step),
+        moved: false
+      };
+      carousel.classList.add('is-dragging');
+      viewport.setPointerCapture?.(event.pointerId);
+    });
+    viewport.addEventListener('pointermove', (event) => updateDrag(event.clientX, event.clientY));
+    viewport.addEventListener('pointerup', finishDrag);
+    viewport.addEventListener('pointercancel', finishDrag);
+    viewport.addEventListener('lostpointercapture', finishDrag);
+    window.addEventListener('resize', apply);
+    apply();
+  });
+}
+
 function getFilteredLocalTitles() {
   const query = elements.search.value.trim().toLowerCase();
   const type = elements.typeFilter.value;
@@ -3199,7 +3297,7 @@ function renderDetail(options = {}) {
         </div>
       </div>
     </section>
-    ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
+    ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div>${episodeCards ? `<div class="episodes-carousel" data-episodes-carousel><button class="episode-nav" type="button" data-episodes-prev aria-label="Capítulos anteriores">‹</button><div class="episodes-viewport"><div class="episodes-track">${episodeCards}</div></div><button class="episode-nav" type="button" data-episodes-next aria-label="Siguientes capítulos">›</button></div>` : `<div class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</div>`}</section>` : ''}
   </div>`;
 
   updateFloatingReportButtonVisibility();
@@ -3328,6 +3426,7 @@ function renderDetail(options = {}) {
       episodeTitle: episodeEntry?.title || ''
     });
   }));
+  bindEpisodeCarouselEvents();
 }
 
 function openPlayerModal(embedUrl) {

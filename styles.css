@@ -1665,20 +1665,52 @@ body.detail-active .toolbar {
   background: var(--brand);
 }
 
-.episodes-grid {
-  display: grid;
-  gap: 0.55rem;
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+.episodes-carousel {
+  align-items: stretch;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.episodes-viewport {
+  min-width: 0;
+  overflow: hidden;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.episodes-track {
+  display: flex;
+  gap: 0.7rem;
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+
+.episodes-carousel.is-dragging .episodes-track {
+  transition: none;
+}
+
+.episodes-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.episodes-viewport {
+  cursor: grab;
+}
+
+.episodes-track .episode-card {
+  flex: 0 0 18rem;
+  max-width: 18rem;
 }
 
 .episode-card {
-  align-items: center;
+  align-items: flex-start;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid transparent;
   border-radius: 0.75rem;
   color: var(--text);
   display: flex;
   gap: 0.75rem;
+  min-height: 5rem;
   justify-content: space-between;
   text-align: left;
   padding: 0.65rem 0.75rem;
@@ -1687,6 +1719,7 @@ body.detail-active .toolbar {
 .episode-copy {
   display: grid;
   gap: 0.15rem;
+  min-width: 0;
 }
 
 .episode-card.current {
@@ -1706,6 +1739,24 @@ body.detail-active .toolbar {
 .episode-title {
   font-size: 0.86rem;
   font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.episode-nav {
+  align-self: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  color: var(--text);
+  min-height: 2.2rem;
+  min-width: 2.2rem;
+  padding: 0;
+}
+
+.episode-nav:disabled {
+  cursor: default;
+  opacity: 0.4;
 }
 
 .episode-status {
@@ -2183,12 +2234,17 @@ code {
     padding: 0.48rem 0.72rem;
   }
 
-  .episodes-grid {
-    grid-template-columns: 1fr;
+  .episodes-carousel {
+    gap: 0.5rem;
+  }
+
+  .episodes-track .episode-card {
+    flex-basis: 15.5rem;
+    max-width: 15.5rem;
   }
 
   .episode-card {
-    min-height: 3.05rem;
+    min-height: 5.4rem;
     padding: 0.62rem 0.72rem;
   }
 

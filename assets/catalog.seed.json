@@ -1,6 +1,6 @@
 {
-  "version": 146,
-  "generatedAt": "2026-05-19T17:40:48.405Z",
+  "version": 147,
+  "generatedAt": "2026-05-19T17:41:02.883Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26353,6 +26353,22 @@
       "releaseDate": null,
       "overview": "Chase Fein, Nichole Bagby",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjgyODhiM2MtZTVjMi00ZWM0LWE1MDItNTFjOTYxZjY4NTMxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0093870",
+      "title": "RoboCop",
+      "year": 1987,
+      "releaseDate": null,
+      "overview": "Peter Weller, Nancy Allen",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWM1YzRhODktZDE1MC00NzBlLTk0NGMtOGNhZDQyMmJiZGFiXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

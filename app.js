@@ -1546,8 +1546,12 @@ function renderAdminDashboard() {
     fetchJsonWithTimeout('./assets/catalog.seed.json', 3500).catch(() => ({})),
     fetchJsonWithTimeout('./assets/roles/permissions.json', 3500).catch(() => ({ permissions: {} })),
     fetchJsonWithTimeout('./assets/roles/requests.json', 3500).catch(() => ({ requests: [] })),
-    fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] }))
-  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit]) => {
+    fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] })),
+    fetchJsonWithTimeout('./assets/watch-analytics/events.json', 3500).catch(() => ({ events: [] })),
+    fetchJsonWithTimeout('./assets/watch-analytics/by-content.json', 3500).catch(() => ({ items: [] })),
+    fetchJsonWithTimeout('./assets/watch-analytics/by-user.json', 3500).catch(() => ({ users: [] })),
+    fetchJsonWithTimeout('./assets/watch-analytics/summary.json', 3500).catch(() => ({}))
+  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit, analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary]) => {
     const toTs = (value) => Date.parse(value || 0) || 0;
     const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
     const details = await Promise.all(users.slice(0, 100).map(async (entry) => {
@@ -1567,7 +1571,17 @@ function renderAdminDashboard() {
     const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
     const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
-    const historyRows = cleanDetails.flatMap((row) => Array.isArray(row?.history) ? row.history : []);
+    const analyticsEventRows = Array.isArray(analyticsEvents?.events) ? analyticsEvents.events : [];
+    const analyticsContentRows = Array.isArray(analyticsByContent?.items) ? analyticsByContent.items : [];
+    const analyticsUserRows = Array.isArray(analyticsByUser?.users) ? analyticsByUser.users : [];
+    const analyticsEnabled = analyticsEventRows.length > 0 || analyticsContentRows.length > 0 || analyticsUserRows.length > 0;
+    const historyRows = analyticsEnabled
+      ? analyticsEventRows
+      : cleanDetails.flatMap((row) => Array.isArray(row?.history) ? row.history.map((entry) => ({
+        ...entry,
+        userEmail: String(entry?.userEmail || row?.email || '').trim().toLowerCase(),
+        userName: String(entry?.userName || row?.name || '').trim()
+      })) : []);
 
     const exportCsv = (rows, days) => {
       const header = ['updatedAt', 'userEmail', 'title', 'imdbId', 'tmdbId', 'season', 'episode', 'progress', 'playerStatus'];
@@ -1614,20 +1628,24 @@ function renderAdminDashboard() {
         .map((row) => ({ ...row, userEmail: String(row?.userEmail || '').trim() }))
         .filter((row) => toTs(row?.updatedAt) >= windowStart);
 
-      const activeUserEmails = new Set(cleanDetails
-        .filter((u) => Array.isArray(u?.history) && u.history.some((h) => toTs(h?.updatedAt) >= windowStart))
-        .map((u) => String(u?.email || '').trim().toLowerCase())
-      );
+      const activeUserEmails = analyticsEnabled
+        ? new Set(scopedHistory.map((row) => String(row?.userEmail || '').trim().toLowerCase()).filter(Boolean))
+        : new Set(cleanDetails
+          .filter((u) => Array.isArray(u?.history) && u.history.some((h) => toTs(h?.updatedAt) >= windowStart))
+          .map((u) => String(u?.email || '').trim().toLowerCase())
+        );
 
-      const totalUsers = users.length;
+      const totalUsers = Number(analyticsSummary?.totalUsers || 0) || users.length;
       const activeUsers = activeUserEmails.size;
       const totalHistory = scopedHistory.length;
       const avgHistoryPerActive = activeUsers ? Math.round(totalHistory / activeUsers) : 0;
 
-      const progressRows = cleanDetails.flatMap((row) => Object.values(row?.progress || {}));
-      const completionRate = progressRows.length
-        ? Math.round((progressRows.filter((p) => Number(p?.lastProgress || p?.progress || 0) >= 95).length / progressRows.length) * 100)
-        : 0;
+      const progressRows = analyticsEnabled ? [] : cleanDetails.flatMap((row) => Object.values(row?.progress || {}));
+      const completionRate = analyticsEnabled
+        ? Math.round(Number(analyticsSummary?.overallCompletionRate || 0) * 100)
+        : progressRows.length
+          ? Math.round((progressRows.filter((p) => Number(p?.lastProgress || p?.progress || 0) >= 95).length / progressRows.length) * 100)
+          : 0;
 
       const requestsWithAge = requests.map((row) => ({ ...row, ts: toTs(row?.requestedAt) }));
       const pendingRequests = requestsWithAge.filter((row) => String(row?.status || '').toLowerCase() === 'pending');
@@ -1646,16 +1664,29 @@ function renderAdminDashboard() {
       const adminPct = Math.round((admins / roleShareTotal) * 100);
 
       const titleHits = new Map();
-      for (const event of scopedHistory) {
-        const id = String(event?.imdbId || event?.tmdbId || '').trim();
-        if (!id) continue;
-        const name = String(event?.title || id).trim();
-        // Ignore malformed telemetry where title falls back to a numeric ID.
-        if (!name || /^\d{5,}$/.test(name)) continue;
-        const prev = titleHits.get(id) || { id, name, plays: 0, completed: 0 };
-        prev.plays += 1;
-        if (String(event?.playerStatus || '').toLowerCase() === 'completed') prev.completed += 1;
-        titleHits.set(id, prev);
+      if (analyticsEnabled) {
+        for (const row of analyticsContentRows) {
+          const id = String(row?.contentId || row?.imdbId || row?.tmdbId || '').trim();
+          const name = String(row?.title || id).trim();
+          if (!id || !name || /^\d{5,}$/.test(name)) continue;
+          titleHits.set(id, {
+            id,
+            name,
+            plays: Number(row?.totalStarts || row?.totalEvents || 0),
+            completed: Number(row?.totalCompletions || 0)
+          });
+        }
+      } else {
+        for (const event of scopedHistory) {
+          const id = String(event?.imdbId || event?.tmdbId || '').trim();
+          if (!id) continue;
+          const name = String(event?.title || id).trim();
+          if (!name || /^\d{5,}$/.test(name)) continue;
+          const prev = titleHits.get(id) || { id, name, plays: 0, completed: 0 };
+          prev.plays += 1;
+          if (String(event?.playerStatus || '').toLowerCase() === 'completed') prev.completed += 1;
+          titleHits.set(id, prev);
+        }
       }
       const topTitles = [...titleHits.values()].sort((a, b) => b.plays - a.plays).slice(0, 6);
       const maxTopPlays = topTitles.length ? Math.max(...topTitles.map((row) => row.plays)) : 1;

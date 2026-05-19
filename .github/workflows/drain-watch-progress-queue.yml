@@ -40,7 +40,7 @@ jobs:
             git fetch origin main
             git checkout -B main origin/main
             node tools/sync-watch-progress-from-issues.mjs
-            git add assets/watch-progress || true
+            git add assets/watch-progress assets/watch-analytics || true
             if git diff --cached --quiet; then
               echo "No staged changes."
               exit 0

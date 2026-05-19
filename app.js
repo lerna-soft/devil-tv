@@ -2551,6 +2551,7 @@ function getFilteredLocalTitles() {
   const titles = loadLocalCatalog();
   return titles.filter((title) => {
     if (title.type === 'episode') return false;
+    if (!hasPosterAsset(title)) return false;
     const genres = (title.metadata?.genres || title.categories || []).map((g) => String(g).toLowerCase());
     const haystack = [title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres].join(' ').toLowerCase();
     const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
@@ -2564,6 +2565,7 @@ function populateGenreFilter() {
   const current = select.value || 'all';
   const genres = new Set();
   for (const title of loadLocalCatalog()) {
+    if (!hasPosterAsset(title)) continue;
     const list = title.metadata?.genres || title.categories || [];
     for (const genre of list) {
       const value = String(genre || '').trim();
@@ -2579,7 +2581,7 @@ function populateGenreFilter() {
 function renderLocalCards(titles) {
   const isAdmin = isAdminUser();
   const prefs = loadTitlePrefs();
-  return titles.map((title) => {
+  return titles.filter((title) => hasPosterAsset(title)).map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = title.posterUrl || title.metadata?.posterUrl || '';
     const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
@@ -2724,7 +2726,7 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
     if (intentId !== state.searchIntentId) return;
-    const withPlayable = results.map((item) => ({ ...item, playable: true }));
+    const withPlayable = filterTitlesWithPoster(results.map((item) => ({ ...item, playable: true })));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
     cacheSearchResults(state.remoteResults);
@@ -3529,7 +3531,7 @@ function jumpEpisode(direction, baseEmbed) {
 async function searchViaListingsAndImdb(query, typeFilter) {
   const fromListings = await searchVidapiListings(query, typeFilter);
   const fromImdb = await searchImdbSuggestionsViaJina(query, typeFilter);
-  return [...fromListings, ...fromImdb];
+  return [...fromListings, ...fromImdb].filter((item) => hasPosterAsset(item));
 }
 
 async function searchVidapiListings(query, typeFilter) {
@@ -3919,11 +3921,24 @@ async function buildEpisodesFromTmdb(title) {
 function loadLocalCatalog() {
   try { return JSON.parse(localStorage.getItem('mep_static_catalog') || '[]'); } catch { return []; }
 }
-function saveLocalCatalog(items) { localStorage.setItem('mep_static_catalog', JSON.stringify(items)); }
+function normalizeCatalogPoster(title) {
+  const posterUrl = String(title?.posterUrl || title?.metadata?.posterUrl || '').trim();
+  return {
+    ...(title || {}),
+    posterUrl,
+    metadata: {
+      ...(title?.metadata || {}),
+      posterUrl
+    }
+  };
+}
+function saveLocalCatalog(items) { localStorage.setItem('mep_static_catalog', JSON.stringify((Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item)))); }
+function hasPosterAsset(title) { return Boolean(String(title?.posterUrl || title?.metadata?.posterUrl || '').trim()); }
+function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }
 
 function cacheSearchResults(results) {
   const current = loadLocalCatalog();
-  const merged = dedupe([...current, ...results], { consolidateEquivalent: true });
+  const merged = dedupe([...current, ...filterTitlesWithPoster(results)], { consolidateEquivalent: true });
   saveLocalCatalog(merged);
 }
 
@@ -3954,11 +3969,12 @@ function mergeEquivalentTitles(a, b) {
     title: choose(a.title, b.title),
     year: choose(a.year, b.year),
     description: choose(a.description, b.description),
-    posterUrl: choose(a.posterUrl, b.posterUrl),
+    posterUrl: choose(a.posterUrl, b.posterUrl) || choose(a.metadata?.posterUrl, b.metadata?.posterUrl) || choose(b.posterUrl, a.posterUrl) || choose(b.metadata?.posterUrl, a.metadata?.posterUrl),
     playable: a.playable === false && b.playable !== false ? b.playable : (b.playable === false && a.playable !== false ? a.playable : (a.playable === false || b.playable === false ? false : true)),
     metadata: {
       ...(a.metadata || {}),
       ...(b.metadata || {}),
+      posterUrl: choose(a.posterUrl, b.posterUrl) || choose(a.metadata?.posterUrl, b.metadata?.posterUrl) || choose(b.posterUrl, a.posterUrl) || choose(b.metadata?.posterUrl, a.metadata?.posterUrl),
       genres: [...new Set([...(a.metadata?.genres || []), ...(b.metadata?.genres || []), ...(a.categories || []), ...(b.categories || [])])]
     }
   };

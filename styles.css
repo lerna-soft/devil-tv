@@ -867,7 +867,7 @@ h1 {
 .item-poster.placeholder::before {
   align-items: center;
   color: var(--muted);
-  content: "No poster";
+  content: "";
   display: flex;
   font-size: 0.72rem;
   height: 100%;

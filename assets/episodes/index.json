@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-14T12:16:43.618Z",
+  "generatedAt": "2026-05-19T17:35:09.569Z",
   "source": {
     "provider": "tvmaze",
     "strategy": "lookup_by_imdb_then_title"
@@ -9,6 +9,7 @@
     "tt2364582": {
       "title": "Marvel's Agents of S.H.I.E.L.D.",
       "tvmazeId": 31,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/486/1215694.jpg",
       "file": "tt2364582.txt",
       "seasonCount": 7,
       "episodeCount": 136
@@ -16,6 +17,7 @@
     "tt8050740": {
       "title": "Amphibia",
       "tvmazeId": 35072,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/344/861126.jpg",
       "file": "tt8050740.txt",
       "seasonCount": 3,
       "episodeCount": 106
@@ -23,6 +25,7 @@
     "tt0417299": {
       "title": "Avatar: The Last Airbender",
       "tvmazeId": 555,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/79/199224.jpg",
       "file": "tt0417299.txt",
       "seasonCount": 3,
       "episodeCount": 61
@@ -30,6 +33,7 @@
     "tt6258718": {
       "title": "Bad Banks",
       "tvmazeId": 34797,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/612/1531651.jpg",
       "file": "tt6258718.txt",
       "seasonCount": 2,
       "episodeCount": 12
@@ -37,6 +41,7 @@
     "tt0059968": {
       "title": "Batman",
       "tvmazeId": 975,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/6/16463.jpg",
       "file": "tt0059968.txt",
       "seasonCount": 3,
       "episodeCount": 120
@@ -44,6 +49,7 @@
     "tt11043632": {
       "title": "Beastars",
       "tvmazeId": 43426,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/208/521199.jpg",
       "file": "tt11043632.txt",
       "seasonCount": 3,
       "episodeCount": 48
@@ -51,6 +57,7 @@
     "tt8050756": {
       "title": "The Owl House",
       "tvmazeId": 35073,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/454/1137234.jpg",
       "file": "tt8050756.txt",
       "seasonCount": 3,
       "episodeCount": 43
@@ -58,6 +65,7 @@
     "tt0208614": {
       "title": "Celebrity Deathmatch",
       "tvmazeId": 8362,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/30/75006.jpg",
       "file": "tt0208614.txt",
       "seasonCount": 6,
       "episodeCount": 94
@@ -65,6 +73,7 @@
     "tt0270118": {
       "title": "Cheaters",
       "tvmazeId": 25355,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/98/246399.jpg",
       "file": "tt0270118.txt",
       "seasonCount": 11,
       "episodeCount": 150
@@ -72,13 +81,15 @@
     "tt7263328": {
       "title": "Classroom of the Elite",
       "tvmazeId": 29180,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/492/1230473.jpg",
       "file": "tt7263328.txt",
       "seasonCount": 4,
-      "episodeCount": 48
+      "episodeCount": 54
     },
     "tt0366005": {
       "title": "Danny Phantom",
       "tvmazeId": 6301,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/478/1195260.jpg",
       "file": "tt0366005.txt",
       "seasonCount": 3,
       "episodeCount": 53
@@ -86,6 +97,7 @@
     "tt0480489": {
       "title": "Elfen Lied",
       "tvmazeId": 2061,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/613/1533729.jpg",
       "file": "tt0480489.txt",
       "seasonCount": 1,
       "episodeCount": 13
@@ -93,6 +105,7 @@
     "tt0481256": {
       "title": "Hajime no Ippo",
       "tvmazeId": 10292,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/34/87260.jpg",
       "file": "tt0481256.txt",
       "seasonCount": 3,
       "episodeCount": 127
@@ -100,6 +113,7 @@
     "tt1528406": {
       "title": "Fairy Tail",
       "tvmazeId": 2069,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/62/156497.jpg",
       "file": "tt1528406.txt",
       "seasonCount": 8,
       "episodeCount": 328
@@ -107,6 +121,7 @@
     "tt1355642": {
       "title": "Fullmetal Alchemist: Brotherhood",
       "tvmazeId": 2071,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/485/1214095.jpg",
       "file": "tt1355642.txt",
       "seasonCount": 1,
       "episodeCount": 64
@@ -114,6 +129,7 @@
     "tt1830617": {
       "title": "Grimm",
       "tvmazeId": 10,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/69/174906.jpg",
       "file": "tt1830617.txt",
       "seasonCount": 6,
       "episodeCount": 123
@@ -121,6 +137,7 @@
     "tt29630627": {
       "title": "Gundam Evolve",
       "tvmazeId": 52777,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/291/729464.jpg",
       "file": "tt29630627.txt",
       "seasonCount": 1,
       "episodeCount": 15
@@ -128,6 +145,7 @@
     "tt3398540": {
       "title": "Haikyuu!!",
       "tvmazeId": 5193,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/65/164065.jpg",
       "file": "tt3398540.txt",
       "seasonCount": 4,
       "episodeCount": 85
@@ -135,6 +153,7 @@
     "tt0412142": {
       "title": "House",
       "tvmazeId": 118,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/357/894990.jpg",
       "file": "tt0412142.txt",
       "seasonCount": 8,
       "episodeCount": 176
@@ -142,6 +161,7 @@
     "tt0486171": {
       "title": "Ikki Tousen",
       "tvmazeId": 12715,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/43/108808.jpg",
       "file": "tt0486171.txt",
       "seasonCount": 5,
       "episodeCount": 52
@@ -149,6 +169,7 @@
     "tt38648925": {
       "title": "Jack of All Trades, Party of None",
       "tvmazeId": 89091,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/623/1559773.jpg",
       "file": "tt38648925.txt",
       "seasonCount": 1,
       "episodeCount": 12
@@ -156,6 +177,7 @@
     "tt0275137": {
       "title": "Justice League",
       "tvmazeId": 22040,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/80/200323.jpg",
       "file": "tt0275137.txt",
       "seasonCount": 2,
       "episodeCount": 52
@@ -163,6 +185,7 @@
     "tt0278866": {
       "title": "Kim Possible",
       "tvmazeId": 2557,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/158/396340.jpg",
       "file": "tt0278866.txt",
       "seasonCount": 4,
       "episodeCount": 87
@@ -170,6 +193,7 @@
     "tt2348803": {
       "title": "Kuroko no Basuke",
       "tvmazeId": 6873,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/25/64851.jpg",
       "file": "tt2348803.txt",
       "seasonCount": 3,
       "episodeCount": 75
@@ -177,6 +201,7 @@
     "tt1553656": {
       "title": "Under the Dome",
       "tvmazeId": 1,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/610/1525272.jpg",
       "file": "tt1553656.txt",
       "seasonCount": 3,
       "episodeCount": 39
@@ -184,6 +209,7 @@
     "tt1641384": {
       "title": "Young Justice",
       "tvmazeId": 689,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/364/911074.jpg",
       "file": "tt1641384.txt",
       "seasonCount": 4,
       "episodeCount": 98
@@ -191,6 +217,7 @@
     "tt1695360": {
       "title": "The Legend of Korra",
       "tvmazeId": 178,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/260/650489.jpg",
       "file": "tt1695360.txt",
       "seasonCount": 4,
       "episodeCount": 52
@@ -198,6 +225,7 @@
     "tt26743760": {
       "title": "The Apothecary Diaries",
       "tvmazeId": 67017,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/557/1394574.jpg",
       "file": "tt26743760.txt",
       "seasonCount": 2,
       "episodeCount": 48
@@ -205,6 +233,7 @@
     "tt0434706": {
       "title": "Monster",
       "tvmazeId": 8244,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/29/74582.jpg",
       "file": "tt0434706.txt",
       "seasonCount": 1,
       "episodeCount": 74
@@ -212,6 +241,7 @@
     "tt15765670": {
       "title": "My Dress-Up Darling",
       "tvmazeId": 59412,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/508/1271784.jpg",
       "file": "tt15765670.txt",
       "seasonCount": 2,
       "episodeCount": 24
@@ -219,6 +249,7 @@
     "tt0444744": {
       "title": "Obsessed",
       "tvmazeId": 15499,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/52/131332.jpg",
       "file": "tt0444744.txt",
       "seasonCount": 2,
       "episodeCount": 21
@@ -226,6 +257,7 @@
     "tt17069148": {
       "title": "Sakamoto Days",
       "tvmazeId": 77383,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/580/1450303.jpg",
       "file": "tt17069148.txt",
       "seasonCount": 1,
       "episodeCount": 22
@@ -233,6 +265,7 @@
     "tt3443306": {
       "title": "Seikon no Qwaser",
       "tvmazeId": 9295,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/32/81728.jpg",
       "file": "tt3443306.txt",
       "seasonCount": 2,
       "episodeCount": 36
@@ -240,6 +273,7 @@
     "tt0972713": {
       "title": "Shakugan no Shana",
       "tvmazeId": 10489,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/35/88637.jpg",
       "file": "tt0972713.txt",
       "seasonCount": 3,
       "episodeCount": 72
@@ -247,6 +281,7 @@
     "tt0367409": {
       "title": "Shaman King",
       "tvmazeId": 4097,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/404/1011777.jpg",
       "file": "tt0367409.txt",
       "seasonCount": 1,
       "episodeCount": 64
@@ -254,6 +289,7 @@
     "tt1424037": {
       "title": "Kenichi the Mightiest Disciple",
       "tvmazeId": 4248,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/20/50880.jpg",
       "file": "tt1424037.txt",
       "seasonCount": 1,
       "episodeCount": 50
@@ -261,6 +297,7 @@
     "tt5676412": {
       "title": "Sin Senos Sí Hay Paraíso",
       "tvmazeId": 20920,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/374/935036.jpg",
       "file": "tt5676412.txt",
       "seasonCount": 3,
       "episodeCount": 240
@@ -268,6 +305,7 @@
     "tt0965547": {
       "title": "Slam Dunk",
       "tvmazeId": 4254,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/20/50928.jpg",
       "file": "tt0965547.txt",
       "seasonCount": 1,
       "episodeCount": 101
@@ -275,6 +313,7 @@
     "tt13706018": {
       "title": "Spy×Family",
       "tvmazeId": 59698,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/590/1477119.jpg",
       "file": "tt13706018.txt",
       "seasonCount": 3,
       "episodeCount": 50
@@ -282,6 +321,7 @@
     "tt19495202": {
       "title": "Suits",
       "tvmazeId": 172,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/393/983536.jpg",
       "file": "tt19495202.txt",
       "seasonCount": 9,
       "episodeCount": 134
@@ -289,6 +329,7 @@
     "tt1632701": {
       "title": "Suits",
       "tvmazeId": 172,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/393/983536.jpg",
       "file": "tt1632701.txt",
       "seasonCount": 9,
       "episodeCount": 134
@@ -296,6 +337,7 @@
     "tt9054364": {
       "title": "That Time I Got Reincarnated as a Slime",
       "tvmazeId": 38390,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/509/1274849.jpg",
       "file": "tt9054364.txt",
       "seasonCount": 4,
       "episodeCount": 84
@@ -303,6 +345,7 @@
     "tt1190634": {
       "title": "The Boys",
       "tvmazeId": 15299,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/619/1547768.jpg",
       "file": "tt1190634.txt",
       "seasonCount": 5,
       "episodeCount": 40
@@ -310,6 +353,7 @@
     "tt0141842": {
       "title": "The Sopranos",
       "tvmazeId": 527,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/4/11341.jpg",
       "file": "tt0141842.txt",
       "seasonCount": 6,
       "episodeCount": 86
@@ -317,6 +361,7 @@
     "tt0815736": {
       "title": "Hasta que la plata nos separe",
       "tvmazeId": 79687,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/536/1340897.jpg",
       "file": "tt0815736.txt",
       "seasonCount": 1,
       "episodeCount": 163
@@ -324,6 +369,7 @@
     "tt17640966": {
       "title": "Hasta que la plata nos separe",
       "tvmazeId": 79685,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/536/1340880.jpg",
       "file": "tt17640966.txt",
       "seasonCount": 1,
       "episodeCount": 88
@@ -331,6 +377,7 @@
     "tt0233127": {
       "title": "Yo soy Betty, la fea",
       "tvmazeId": 40334,
+      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/179/448655.jpg",
       "file": "tt0233127.txt",
       "seasonCount": 1,
       "episodeCount": 169

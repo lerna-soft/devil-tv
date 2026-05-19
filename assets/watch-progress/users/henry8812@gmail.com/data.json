@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T01:58:11Z",
+  "updatedAt": "2026-05-19T01:58:13Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -972,6 +972,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-19T01:58:11Z",
       "watched": {}
+    },
+    "tt34987195": {
+      "imdbId": "tt34987195",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-19T01:58:13Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1036,20 +1046,32 @@
       "tt9427166": true,
       "tt11506284": true,
       "tt16452664": true,
-      "tt29871729": true
+      "tt29871729": true,
+      "tt34987195": true
     },
-    "updatedAt": "2026-05-19T01:58:11Z"
+    "updatedAt": "2026-05-19T01:58:13Z"
   },
   "lastWatch": {
-    "imdbId": "tt29871729",
+    "imdbId": "tt34987195",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-19T01:58:11Z"
+    "updatedAt": "2026-05-19T01:58:13Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "imdbId": "tt34987195",
+      "tmdbId": "",
+      "title": "Father There is Only One 5",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "playerStatus": "preference",
+      "updatedAt": "2026-05-19T01:58:13Z"
+    },
     {
       "imdbId": "tt29871729",
       "tmdbId": "",

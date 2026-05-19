@@ -44,6 +44,7 @@ async function main() {
   };
 
   const skipped = [];
+  const enrichedTargets = [];
   for (const target of targets) {
     try {
       const resolved = await resolveShow(target);
@@ -52,9 +53,16 @@ async function main() {
         .map((episode) => `tt${String(target.imdbId).replace(/^tt/i, '')}_${episode.season}x${episode.episode}`)
         .join('\n');
       await fs.writeFile(path.join(OUT_DIR, `${target.imdbId}.txt`), `${lines}\n`, 'utf8');
+      const normalizedTarget = {
+        imdbId: target.imdbId,
+        title: resolved.name || target.title || target.imdbId,
+        posterUrl: resolved.posterUrl || String(target.posterUrl || '').trim()
+      };
+      enrichedTargets.push(normalizedTarget);
       manifest.series[target.imdbId] = {
         title: resolved.name,
         tvmazeId: resolved.tvmazeId,
+        posterUrl: resolved.posterUrl || '',
         file: `${target.imdbId}.txt`,
         seasonCount: new Set(episodes.map((episode) => episode.season)).size,
         episodeCount: episodes.length
@@ -66,6 +74,10 @@ async function main() {
   }
 
   await fs.writeFile(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  if (enrichedTargets.length > 0) {
+    await fs.writeFile(TARGETS_PATH, `${JSON.stringify({ series: enrichedTargets }, null, 2)}\n`, 'utf8');
+    console.log(`Updated ${TARGETS_PATH}`);
+  }
   console.log(`Wrote ${MANIFEST_PATH}`);
   console.log(`Series: ${Object.keys(manifest.series).length}`);
   if (skipped.length > 0) {
@@ -89,7 +101,8 @@ async function loadTargets(cliIds) {
       if (!entry || typeof entry !== 'object') return null;
       const imdbId = String(entry.imdbId || '').trim();
       const title = String(entry.title || '').trim();
-      return imdbId ? { imdbId, title } : null;
+      const posterUrl = String(entry.posterUrl || '').trim();
+      return imdbId ? { imdbId, title, posterUrl } : null;
     })
     .filter(Boolean);
 }
@@ -102,7 +115,8 @@ async function resolveShow(target) {
     const show = await tvmazeJson(`/lookup/shows?imdb=${encodeURIComponent(imdbId)}`);
     return {
       tvmazeId: show.id,
-      name: show.name || target.title || imdbId
+      name: show.name || target.title || imdbId,
+      posterUrl: pickPosterUrl(show, target)
     };
   } catch {
     if (!target.title) throw new Error(`TVMaze lookup failed for ${imdbId}.`);
@@ -114,8 +128,15 @@ async function resolveShow(target) {
   if (!pick?.show?.id) throw new Error(`TVMaze title search failed for ${imdbId}.`);
   return {
     tvmazeId: pick.show.id,
-    name: pick.show.name || target.title || imdbId
+    name: pick.show.name || target.title || imdbId,
+    posterUrl: pickPosterUrl(pick.show, target)
   };
+}
+
+function pickPosterUrl(show, target = {}) {
+  const fromTvmaze = String(show?.image?.original || show?.image?.medium || '').trim();
+  if (fromTvmaze) return fromTvmaze;
+  return String(target?.posterUrl || '').trim();
 }
 
 async function fetchEpisodes(tvmazeId) {

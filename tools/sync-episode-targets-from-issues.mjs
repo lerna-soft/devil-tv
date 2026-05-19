@@ -154,7 +154,8 @@ function normalizeTargets(entries) {
     const imdbId = String(entry?.imdbId || '').trim();
     if (!/^tt\d+$/i.test(imdbId)) continue;
     const title = String(entry?.title || imdbId).trim();
-    if (!map.has(imdbId)) map.set(imdbId, { imdbId, title });
+    const posterUrl = String(entry?.posterUrl || '').trim();
+    if (!map.has(imdbId)) map.set(imdbId, { imdbId, title, posterUrl });
   }
   return [...map.values()].sort((a, b) => a.title.localeCompare(b.title, 'es', { sensitivity: 'base' }));
 }
@@ -162,16 +163,23 @@ function normalizeTargets(entries) {
 function mergeTargets(existing, incoming) {
   const map = new Map(existing.map((entry) => [entry.imdbId, entry]));
   for (const entry of incoming) {
-    if (!map.has(entry.imdbId)) {
+    const current = map.get(entry.imdbId);
+    if (!current) {
       map.set(entry.imdbId, entry);
+      continue;
     }
+    map.set(entry.imdbId, {
+      imdbId: current.imdbId,
+      title: current.title || entry.title,
+      posterUrl: current.posterUrl || entry.posterUrl || ''
+    });
   }
   return [...map.values()].sort((a, b) => a.title.localeCompare(b.title, 'es', { sensitivity: 'base' }));
 }
 
 function sameTargets(a, b) {
   if (a.length !== b.length) return false;
-  return a.every((entry, index) => entry.imdbId === b[index]?.imdbId && entry.title === b[index]?.title);
+  return a.every((entry, index) => entry.imdbId === b[index]?.imdbId && entry.title === b[index]?.title && String(entry.posterUrl || '') === String(b[index]?.posterUrl || ''));
 }
 
 async function writeReport(processedIssues) {

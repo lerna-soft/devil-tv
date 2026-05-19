@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-05-19T03:14:09.551Z",
+  "actor": {
+    "objectType": "Agent",
+    "name": "Juan carlos Rios",
+    "mbox": "mailto:juancarlosrios531970@gmail.com"
+  },
+  "statementCount": 4,
+  "statements": [
+    {
+      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Juan carlos Rios",
+        "mbox": "mailto:juancarlosrios531970@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt1630029",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Avatar: El sentido del agua"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt1630029",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt1630029",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "76600",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 160.904507,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-14T21:01:51Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Juan carlos Rios",
+        "mbox": "mailto:juancarlosrios531970@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt1630029",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Avatar: El sentido del agua"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt1630029",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt1630029",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "76600",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-14T20:27:42Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Juan carlos Rios",
+        "mbox": "mailto:juancarlosrios531970@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt10676052",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Los Cuatro Fantásticos: Primeros pasos"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt10676052",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt10676052",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "617126",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-14T19:20:28Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    },
+    {
+      "id": "urn:uuid:juancarlosrios531970-gmail-com:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Juan carlos Rios",
+        "mbox": "mailto:juancarlosrios531970@gmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/series/tt0480489/seasons/1/episodes/2",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Elfen Lied"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/video",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt0480489",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt0480489",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e2"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 974.321778,
+          "https://lerna.dev/xapi/extensions/progress-percent": null,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 2,
+          "https://lerna.dev/xapi/extensions/started-at": "",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-13T17:00:31Z",
+      "stored": "2026-05-19T03:14:09.553Z"
+    }
+  ]
+}

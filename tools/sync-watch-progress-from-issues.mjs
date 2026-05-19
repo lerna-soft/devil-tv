@@ -22,8 +22,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const STORE_DIR = path.join(PROJECT_ROOT, 'assets', 'watch-progress');
+const ANALYTICS_DIR = path.join(PROJECT_ROOT, 'assets', 'watch-analytics');
 const INDEX_PATH = path.join(STORE_DIR, 'index.json');
 const USERS_DIR = path.join(STORE_DIR, 'users');
+const ANALYTICS_EVENTS_PATH = path.join(ANALYTICS_DIR, 'events.json');
+const ANALYTICS_BY_CONTENT_PATH = path.join(ANALYTICS_DIR, 'by-content.json');
+const ANALYTICS_BY_USER_PATH = path.join(ANALYTICS_DIR, 'by-user.json');
+const ANALYTICS_SUMMARY_PATH = path.join(ANALYTICS_DIR, 'summary.json');
 const OWNER_REPO = String(process.env.GITHUB_REPOSITORY || '').trim();
 const TOKEN = String(process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '').trim();
 const LABEL = 'watch-progress-sync';
@@ -42,12 +47,14 @@ async function main() {
 
   await fs.mkdir(STORE_DIR, { recursive: true });
   await fs.mkdir(USERS_DIR, { recursive: true });
+  await fs.mkdir(ANALYTICS_DIR, { recursive: true });
   const existingIndex = await loadIndex();
   const { users, processedIssues } = await loadUsersFromIssues();
   const mergedIndex = mergeIndex(existingIndex, users);
 
   await fs.writeFile(INDEX_PATH, `${JSON.stringify({ users: mergedIndex }, null, 2)}\n`, 'utf8');
   await writeUserFiles(users);
+  await writeAnalytics(mergedIndex);
   await writeReport(processedIssues);
   console.log(`[watch-progress] wrote ${INDEX_PATH}`);
   console.log(`[watch-progress] users: ${mergedIndex.length}`);
@@ -121,6 +128,9 @@ function parseIssue(issue) {
   const title = String((body.match(/^Title:\s*(.+)$/im) || [])[1] || '').trim();
   const type = String((body.match(/^Type:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   const playerStatus = String((body.match(/^PlayerStatus:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const eventType = String((body.match(/^EventType:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
+  const startedAt = String((body.match(/^StartedAt:\s*(.+)$/im) || [])[1] || '').trim();
+  const completedAt = String((body.match(/^CompletedAt:\s*(.+)$/im) || [])[1] || '').trim();
   const preferenceAction = String((body.match(/^PreferenceAction:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   const preferenceValue = String((body.match(/^PreferenceValue:\s*(.+)$/im) || [])[1] || '').trim().toLowerCase();
   if (!email || (!imdbId && !tmdbId)) return null;
@@ -135,6 +145,9 @@ function parseIssue(issue) {
     title,
     type,
     playerStatus,
+    eventType,
+    startedAt,
+    completedAt,
     preferenceAction,
     preferenceValue,
     updatedAt: parseIssueDate(issue),
@@ -224,6 +237,11 @@ async function writeUserFiles(users) {
       }
     };
     const historyEntry = {
+      eventId: buildEventId(user),
+      contentId: key,
+      episodeKey: `s${user.season}e${user.episode}`,
+      userEmail: user.email,
+      userName: user.name || existing?.name || '',
       imdbId: user.imdbId,
       tmdbId: user.tmdbId,
       title: user.title || '',
@@ -231,7 +249,10 @@ async function writeUserFiles(users) {
       season: user.season,
       episode: user.episode,
       progress: user.progress,
+      eventType: user.eventType || inferEventType(user.playerStatus, user.progress),
       playerStatus: user.playerStatus || 'playing',
+      startedAt: user.startedAt || '',
+      completedAt: user.completedAt || '',
       updatedAt: user.updatedAt
     };
     const history = mergeHistory(existing?.history || [], [historyEntry]);
@@ -314,6 +335,11 @@ function mergeHistory(existing, incoming) {
     const key = `${id}:${season}x${episode}:${status}:${at}`;
     if (!id || !at) continue;
     map.set(key, {
+      eventId: String(row.eventId || buildEventId(row)).trim(),
+      contentId: id,
+      episodeKey: `s${season}e${episode}`,
+      userEmail: normalizeEmail(row.userEmail || ''),
+      userName: String(row.userName || '').trim(),
       imdbId: String(row.imdbId || '').trim(),
       tmdbId: String(row.tmdbId || '').trim(),
       title: String(row.title || '').trim(),
@@ -321,13 +347,321 @@ function mergeHistory(existing, incoming) {
       season,
       episode,
       progress: Number(row.progress || 0),
+      eventType: String(row.eventType || inferEventType(status, row.progress)).trim().toLowerCase(),
       playerStatus: status,
+      startedAt: String(row.startedAt || '').trim(),
+      completedAt: String(row.completedAt || '').trim(),
       updatedAt: at
     });
   }
   return [...map.values()]
     .sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0))
     .slice(0, 500);
+}
+
+async function writeAnalytics(indexUsers) {
+  const users = [];
+  for (const entry of indexUsers || []) {
+    const email = normalizeEmail(entry?.email);
+    const file = String(entry?.file || '').trim();
+    if (!email || !file) continue;
+    const payload = safeJson(await fs.readFile(resolveUserPath(file), 'utf8').catch(() => ''));
+    if (!payload || typeof payload !== 'object') continue;
+    users.push({
+      email,
+      name: String(payload?.name || '').trim(),
+      updatedAt: String(payload?.updatedAt || '').trim(),
+      progress: payload?.progress && typeof payload.progress === 'object' ? payload.progress : {},
+      history: Array.isArray(payload?.history) ? payload.history : []
+    });
+  }
+
+  const events = buildAnalyticsEvents(users);
+  const byContent = buildAnalyticsByContent(events);
+  const byUser = buildAnalyticsByUser(users, events);
+  const summary = buildAnalyticsSummary(users, events, byContent);
+
+  await fs.writeFile(ANALYTICS_EVENTS_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), events }, null, 2)}\n`, 'utf8');
+  await fs.writeFile(ANALYTICS_BY_CONTENT_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), items: byContent }, null, 2)}\n`, 'utf8');
+  await fs.writeFile(ANALYTICS_BY_USER_PATH, `${JSON.stringify({ generatedAt: new Date().toISOString(), users: byUser }, null, 2)}\n`, 'utf8');
+  await fs.writeFile(ANALYTICS_SUMMARY_PATH, `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
+  console.log(`[watch-progress] wrote ${ANALYTICS_EVENTS_PATH}`);
+  console.log(`[watch-progress] wrote ${ANALYTICS_BY_CONTENT_PATH}`);
+  console.log(`[watch-progress] wrote ${ANALYTICS_BY_USER_PATH}`);
+  console.log(`[watch-progress] wrote ${ANALYTICS_SUMMARY_PATH}`);
+}
+
+function buildAnalyticsEvents(users) {
+  const map = new Map();
+  for (const user of users || []) {
+    for (const rawEvent of user.history || []) {
+      const normalized = normalizeAnalyticsEvent(rawEvent, user);
+      if (!normalized) continue;
+      map.set(normalized.eventId, normalized);
+    }
+  }
+  return [...map.values()].sort((a, b) => (Date.parse(b.updatedAt || 0) || 0) - (Date.parse(a.updatedAt || 0) || 0));
+}
+
+function normalizeAnalyticsEvent(rawEvent, user) {
+  const imdbId = String(rawEvent?.imdbId || '').trim();
+  const tmdbId = String(rawEvent?.tmdbId || '').trim();
+  const contentId = String(rawEvent?.contentId || imdbId || tmdbId).trim();
+  const updatedAt = String(rawEvent?.updatedAt || user?.updatedAt || '').trim();
+  if (!contentId || !updatedAt) return null;
+  const season = positiveInteger(rawEvent?.season, 1);
+  const episode = positiveInteger(rawEvent?.episode, 1);
+  const progress = Number(rawEvent?.progress || 0);
+  const playerStatus = String(rawEvent?.playerStatus || '').trim().toLowerCase() || 'playing';
+  const eventType = String(rawEvent?.eventType || inferEventType(playerStatus, progress)).trim().toLowerCase();
+  const userEmail = normalizeEmail(rawEvent?.userEmail || user?.email || '');
+  return {
+    eventId: String(rawEvent?.eventId || buildEventId({ ...rawEvent, userEmail, updatedAt })).trim(),
+    contentId,
+    episodeKey: String(rawEvent?.episodeKey || `s${season}e${episode}`).trim(),
+    userEmail,
+    userName: String(rawEvent?.userName || user?.name || '').trim(),
+    imdbId,
+    tmdbId,
+    title: String(rawEvent?.title || contentId).trim(),
+    type: String(rawEvent?.type || '').trim().toLowerCase() || 'movie',
+    season,
+    episode,
+    progress,
+    progressValue: progress,
+    progressPercent: progress >= 0 && progress <= 100 ? clamp(progress, 0, 100) : null,
+    eventType,
+    playerStatus,
+    startedAt: String(rawEvent?.startedAt || '').trim(),
+    completedAt: String(rawEvent?.completedAt || '').trim(),
+    updatedAt
+  };
+}
+
+function buildAnalyticsByContent(events) {
+  const map = new Map();
+  for (const event of events || []) {
+    const contentId = String(event?.contentId || '').trim();
+    if (!contentId) continue;
+    const bucket = map.get(contentId) || {
+      contentId,
+      imdbId: String(event?.imdbId || '').trim(),
+      tmdbId: String(event?.tmdbId || '').trim(),
+      title: String(event?.title || contentId).trim(),
+      type: String(event?.type || '').trim().toLowerCase() || 'movie',
+      totalEvents: 0,
+      totalStarts: 0,
+      totalCompletions: 0,
+      totalPlaybackProgress: 0,
+      uniqueUsers: 0,
+      completionRate: 0,
+      lastActivityAt: '',
+      users: {},
+      episodes: {}
+    };
+    bucket.totalEvents += 1;
+    if (event.eventType === 'started') bucket.totalStarts += 1;
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') bucket.totalCompletions += 1;
+    bucket.totalPlaybackProgress += Number(event.progress || 0);
+    bucket.lastActivityAt = maxIsoString(bucket.lastActivityAt, event.updatedAt);
+
+    const userEmail = normalizeEmail(event.userEmail);
+    if (userEmail) {
+      const userBucket = bucket.users[userEmail] || {
+        userEmail,
+        userName: String(event.userName || '').trim(),
+        playCount: 0,
+        completedCount: 0,
+        startedCount: 0,
+        totalPlaybackProgress: 0,
+        lastSeenAt: '',
+        lastSeason: 0,
+        lastEpisode: 0
+      };
+      userBucket.playCount += 1;
+      if (event.eventType === 'started') userBucket.startedCount += 1;
+      if (event.eventType === 'completed' || event.playerStatus === 'completed') userBucket.completedCount += 1;
+      userBucket.totalPlaybackProgress += Number(event.progress || 0);
+      userBucket.lastSeenAt = maxIsoString(userBucket.lastSeenAt, event.updatedAt);
+      userBucket.lastSeason = positiveInteger(event.season, userBucket.lastSeason || 1);
+      userBucket.lastEpisode = positiveInteger(event.episode, userBucket.lastEpisode || 1);
+      bucket.users[userEmail] = userBucket;
+    }
+
+    const episodeKey = String(event.episodeKey || `s${event.season}e${event.episode}`).trim();
+    const episodeBucket = bucket.episodes[episodeKey] || {
+      season: positiveInteger(event.season, 1),
+      episode: positiveInteger(event.episode, 1),
+      totalEvents: 0,
+      totalStarts: 0,
+      totalCompletions: 0,
+      totalPlaybackProgress: 0,
+      uniqueUsers: 0,
+      lastActivityAt: '',
+      users: {}
+    };
+    episodeBucket.totalEvents += 1;
+    if (event.eventType === 'started') episodeBucket.totalStarts += 1;
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') episodeBucket.totalCompletions += 1;
+    episodeBucket.totalPlaybackProgress += Number(event.progress || 0);
+    episodeBucket.lastActivityAt = maxIsoString(episodeBucket.lastActivityAt, event.updatedAt);
+    if (userEmail) episodeBucket.users[userEmail] = true;
+    bucket.episodes[episodeKey] = episodeBucket;
+
+    map.set(contentId, bucket);
+  }
+
+  return [...map.values()]
+    .map((bucket) => {
+      const userEmails = Object.keys(bucket.users);
+      const episodes = Object.fromEntries(Object.entries(bucket.episodes).map(([episodeKey, episodeBucket]) => [
+        episodeKey,
+        {
+          ...episodeBucket,
+          uniqueUsers: Object.keys(episodeBucket.users || {}).length,
+          completionRate: episodeBucket.totalStarts > 0 ? roundRatio(episodeBucket.totalCompletions / episodeBucket.totalStarts) : 0
+        }
+      ]));
+      return {
+        ...bucket,
+        uniqueUsers: userEmails.length,
+        completionRate: bucket.totalStarts > 0 ? roundRatio(bucket.totalCompletions / bucket.totalStarts) : 0,
+        avgPlaybackProgress: bucket.totalEvents > 0 ? roundRatio(bucket.totalPlaybackProgress / bucket.totalEvents) : 0,
+        users: bucket.users,
+        episodes
+      };
+    })
+    .sort((a, b) => b.totalEvents - a.totalEvents || (Date.parse(b.lastActivityAt || 0) || 0) - (Date.parse(a.lastActivityAt || 0) || 0));
+}
+
+function buildAnalyticsByUser(users, events) {
+  const map = new Map();
+  for (const user of users || []) {
+    map.set(user.email, {
+      userEmail: user.email,
+      userName: String(user.name || '').trim(),
+      updatedAt: String(user.updatedAt || '').trim(),
+      totalEvents: 0,
+      totalStarts: 0,
+      totalCompletions: 0,
+      totalPlaybackProgress: 0,
+      uniqueContentCount: 0,
+      lastActivityAt: '',
+      completedContentIds: [],
+      inProgressContentIds: [],
+      content: {}
+    });
+  }
+
+  for (const event of events || []) {
+    const email = normalizeEmail(event.userEmail);
+    if (!email) continue;
+    const bucket = map.get(email) || {
+      userEmail: email,
+      userName: String(event.userName || '').trim(),
+      updatedAt: '',
+      totalEvents: 0,
+      totalStarts: 0,
+      totalCompletions: 0,
+      totalPlaybackProgress: 0,
+      uniqueContentCount: 0,
+      lastActivityAt: '',
+      completedContentIds: [],
+      inProgressContentIds: [],
+      content: {}
+    };
+    bucket.totalEvents += 1;
+    if (event.eventType === 'started') bucket.totalStarts += 1;
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') bucket.totalCompletions += 1;
+    bucket.totalPlaybackProgress += Number(event.progress || 0);
+    bucket.lastActivityAt = maxIsoString(bucket.lastActivityAt, event.updatedAt);
+    const contentId = String(event.contentId || '').trim();
+    const contentBucket = bucket.content[contentId] || {
+      contentId,
+      imdbId: String(event.imdbId || '').trim(),
+      tmdbId: String(event.tmdbId || '').trim(),
+      title: String(event.title || contentId).trim(),
+      type: String(event.type || '').trim().toLowerCase() || 'movie',
+      playCount: 0,
+      completed: false,
+      maxProgressValue: 0,
+      maxProgressPercent: 0,
+      lastSeenAt: ''
+    };
+    contentBucket.playCount += 1;
+    contentBucket.maxProgressValue = Math.max(contentBucket.maxProgressValue, Number(event.progressValue || event.progress || 0));
+    if (event.progressPercent != null) contentBucket.maxProgressPercent = Math.max(contentBucket.maxProgressPercent, Number(event.progressPercent || 0));
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') contentBucket.completed = true;
+    contentBucket.lastSeenAt = maxIsoString(contentBucket.lastSeenAt, event.updatedAt);
+    bucket.content[contentId] = contentBucket;
+    map.set(email, bucket);
+  }
+
+  return [...map.values()]
+    .map((bucket) => {
+      const contentRows = Object.values(bucket.content || {});
+      return {
+        ...bucket,
+        uniqueContentCount: contentRows.length,
+        avgPlaybackProgress: bucket.totalEvents > 0 ? roundRatio(bucket.totalPlaybackProgress / bucket.totalEvents) : 0,
+        completedContentIds: contentRows.filter((row) => row.completed).map((row) => row.contentId),
+        inProgressContentIds: contentRows.filter((row) => !row.completed && row.maxProgressValue > 0).map((row) => row.contentId),
+        content: Object.fromEntries(contentRows.map((row) => [row.contentId, row]))
+      };
+    })
+    .sort((a, b) => b.totalEvents - a.totalEvents || (Date.parse(b.lastActivityAt || 0) || 0) - (Date.parse(a.lastActivityAt || 0) || 0));
+}
+
+function buildAnalyticsSummary(users, events, byContent) {
+  const startedEvents = (events || []).filter((event) => event.eventType === 'started');
+  const completedEvents = (events || []).filter((event) => event.eventType === 'completed' || event.playerStatus === 'completed');
+  const activeUserEmails = new Set((events || []).map((event) => normalizeEmail(event.userEmail)).filter(Boolean));
+  return {
+    generatedAt: new Date().toISOString(),
+    totalUsers: (users || []).length,
+    activeUsers: activeUserEmails.size,
+    totalEvents: (events || []).length,
+    totalStarts: startedEvents.length,
+    totalCompletions: completedEvents.length,
+    overallCompletionRate: startedEvents.length > 0 ? roundRatio(completedEvents.length / startedEvents.length) : 0,
+    trackedTitles: (byContent || []).length,
+    mostWatchedContent: (byContent || []).slice(0, 10).map((row) => ({
+      contentId: row.contentId,
+      title: row.title,
+      type: row.type,
+      totalEvents: row.totalEvents,
+      uniqueUsers: row.uniqueUsers,
+      completionRate: row.completionRate
+    }))
+  };
+}
+
+function buildEventId(row) {
+  const userEmail = normalizeEmail(row?.userEmail || row?.email || '');
+  const id = String(row?.contentId || row?.imdbId || row?.tmdbId || '').trim();
+  const season = positiveInteger(row?.season, 1);
+  const episode = positiveInteger(row?.episode, 1);
+  const eventType = String(row?.eventType || row?.playerStatus || 'playing').trim().toLowerCase();
+  const updatedAt = String(row?.updatedAt || '').trim();
+  return [userEmail || 'unknown', id || 'unknown', `s${season}e${episode}`, eventType || 'event', updatedAt || 'na'].join(':');
+}
+
+function inferEventType(playerStatus, progress) {
+  const status = String(playerStatus || '').trim().toLowerCase();
+  if (status === 'completed') return 'completed';
+  if (status === 'playing') return 'started';
+  return Number(progress || 0) >= 95 ? 'completed' : 'progress';
+}
+
+function roundRatio(value) {
+  const n = Number(value || 0);
+  return Number.isFinite(n) ? Math.round(n * 10000) / 10000 : 0;
+}
+
+function clamp(value, min, max) {
+  const n = Number(value || 0);
+  if (!Number.isFinite(n)) return min;
+  return Math.min(max, Math.max(min, n));
 }
 
 async function writeReport(processedIssues) {

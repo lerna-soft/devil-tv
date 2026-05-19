@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T04:58:22.811Z",
+  "generatedAt": "2026-05-19T05:10:54.346Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T04:45:57Z",
-      "totalEvents": 253,
-      "totalStarts": 151,
+      "updatedAt": "2026-05-19T05:10:44Z",
+      "totalEvents": 254,
+      "totalStarts": 152,
       "totalCompletions": 28,
       "totalPlaybackProgress": 103283.68983866191,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T04:45:57Z",
+      "lastActivityAt": "2026-05-19T05:10:44Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -43,6 +43,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt7068946": {
+          "contentId": "tt7068946",
+          "imdbId": "tt7068946",
+          "tmdbId": "",
+          "title": "The Accountant 2",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T05:10:44Z"
         },
         "tt2140479": {
           "contentId": "tt2140479",
@@ -463,18 +475,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:50Z"
-        },
-        "tt7068946": {
-          "contentId": "tt7068946",
-          "imdbId": "tt7068946",
-          "tmdbId": "",
-          "title": "The Accountant 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:42:23Z"
         },
         "tt1234721": {
           "contentId": "tt1234721",
@@ -1221,7 +1221,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 408.2359
+      "avgPlaybackProgress": 406.6287
     },
     {
       "userEmail": "liz-munera@hotmail.com",

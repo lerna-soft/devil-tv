@@ -2520,6 +2520,10 @@ function bindEpisodeCarouselEvents() {
 
     viewport.addEventListener('pointerdown', (event) => {
       if (event.pointerType === 'mouse' && event.button !== 0) return;
+      const interactiveTarget = event.target instanceof Element
+        ? event.target.closest('button, a, input, textarea, select, [data-episode-play], [data-episode-report]')
+        : null;
+      if (interactiveTarget) return;
       const { step } = metrics();
       dragState = {
         startX: event.clientX,

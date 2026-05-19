@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T08:50:09.660Z",
+  "generatedAt": "2026-05-19T09:07:31.662Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 327,
+  "totalEvents": 328,
   "totalStarts": 200,
-  "totalCompletions": 37,
-  "overallCompletionRate": 0.185,
+  "totalCompletions": 38,
+  "overallCompletionRate": 0.19,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -33,20 +33,20 @@
       "completionRate": 0.6667
     },
     {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 23,
+      "uniqueUsers": 1,
+      "completionRate": 0.6429
+    },
+    {
       "contentId": "tt1632701",
       "title": "Suits: la clave del éxito",
       "type": "series",
       "totalEvents": 23,
       "uniqueUsers": 1,
       "completionRate": 0.3529
-    },
-    {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 22,
-      "uniqueUsers": 1,
-      "completionRate": 0.5714
     },
     {
       "contentId": "tt32897959",

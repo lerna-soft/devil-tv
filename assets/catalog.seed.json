@@ -1,6 +1,6 @@
 {
-  "version": 142,
-  "generatedAt": "2026-05-19T14:15:25.456Z",
+  "version": 143,
+  "generatedAt": "2026-05-19T17:29:33.826Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26289,6 +26289,22 @@
       "releaseDate": null,
       "overview": "Gong Li, Jingwu Ma",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjZlMThlZTktOGYxNS00NjY0LWFkMzAtMjNiOTYxYjYxZWFmXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt1234721",
+      "title": "RoboCop",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Sincronizado desde historial",
+      "posterUrl": "Description: Sincronizado desde historial",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

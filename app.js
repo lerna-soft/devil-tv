@@ -1635,10 +1635,26 @@ function renderAdminDashboard() {
           .map((u) => String(u?.email || '').trim().toLowerCase())
         );
 
-      const totalUsers = Number(analyticsSummary?.totalUsers || 0) || users.length;
+      const totalUsers = allUsersIndex.length || Number(analyticsSummary?.totalUsers || 0) || users.length;
       const activeUsers = activeUserEmails.size;
       const totalHistory = scopedHistory.length;
       const avgHistoryPerActive = activeUsers ? Math.round(totalHistory / activeUsers) : 0;
+      const usersWithAnyActivity = analyticsEnabled
+        ? new Set(analyticsUserRows
+          .filter((row) => Number(row?.totalEvents || 0) > 0)
+          .map((row) => String(row?.userEmail || '').trim().toLowerCase())
+          .filter(Boolean))
+        : new Set(cleanDetails
+          .filter((row) => {
+            const hasHistory = Array.isArray(row?.history) && row.history.length > 0;
+            const hasProgress = row?.progress && Object.keys(row.progress).length > 0;
+            return hasHistory || hasProgress;
+          })
+          .map((row) => String(row?.email || '').trim().toLowerCase())
+          .filter(Boolean));
+      const inactiveUsers = roleUsers
+        .filter((row) => !usersWithAnyActivity.has(String(row?.email || '').trim().toLowerCase()))
+        .sort((a, b) => String(a?.name || a?.email || '').localeCompare(String(b?.name || b?.email || ''), 'es', { sensitivity: 'base' }));
 
       const progressRows = analyticsEnabled ? [] : cleanDetails.flatMap((row) => Object.values(row?.progress || {}));
       const completionRate = analyticsEnabled
@@ -1745,6 +1761,7 @@ function renderAdminDashboard() {
             <article class="admin-kpi"><strong>${activeUsers}</strong><span>Usuarios activos (${days}d)</span></article>
             <article class="admin-kpi"><strong>${totalHistory}</strong><span>Eventos (${days}d)</span></article>
             <article class="admin-kpi"><strong>${avgHistoryPerActive}</strong><span>Prom. eventos/activo</span></article>
+            <article class="admin-kpi"><strong>${inactiveUsers.length}</strong><span>Usuarios sin actividad</span></article>
             <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización global</span></article>
             <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas seed</span></article>
             <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series seed</span></article>
@@ -1778,6 +1795,11 @@ function renderAdminDashboard() {
             <section class="admin-panel">
               <h4>Provisionamiento reciente</h4>
               <div class="admin-chart">${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(`${row.status || 'unknown'} · hace ${ago(row.requestedAt)}`)}</small></div>`).join('') || '<p>Sin solicitudes.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>Usuarios sin actividad</h4>
+              <div class="admin-chart">${inactiveUsers.slice(0, 10).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.name || row?.email || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.email || 'n/a')} · ${String(row?.role || 'viewer').toLowerCase()} · sin reproducciones`)}</small></div>`).join('') || '<p>Todos los usuarios tienen actividad.</p>'}</div>
             </section>
 
             <section class="admin-panel">

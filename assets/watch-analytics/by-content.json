@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T08:21:06.910Z",
+  "generatedAt": "2026-05-19T08:21:15.817Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -589,27 +589,41 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 16,
-      "totalStarts": 9,
+      "totalEvents": 17,
+      "totalStarts": 10,
       "totalCompletions": 7,
       "totalPlaybackProgress": 23263.027518000003,
       "uniqueUsers": 1,
-      "completionRate": 0.7778,
-      "lastActivityAt": "2026-05-19T08:20:55Z",
+      "completionRate": 0.7,
+      "lastActivityAt": "2026-05-19T08:21:03Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 16,
+          "playCount": 17,
           "completedCount": 7,
-          "startedCount": 9,
+          "startedCount": 10,
           "totalPlaybackProgress": 23263.027518000003,
-          "lastSeenAt": "2026-05-19T08:20:55Z",
+          "lastSeenAt": "2026-05-19T08:21:03Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s2e1": {
+          "season": 2,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T08:21:03Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e8": {
           "season": 1,
           "episode": 8,
@@ -723,7 +737,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1453.9392
+      "avgPlaybackProgress": 1368.4134
     },
     {
       "contentId": "tt32897959",

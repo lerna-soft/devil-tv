@@ -760,6 +760,74 @@ function getTmdbReadToken() {
   return decodeIssueToken(TMDB_READ_TOKEN_CIPHER, TMDB_READ_TOKEN_SEED);
 }
 
+function sanitizePosterUrl(value) {
+  const poster = String(value || '').trim();
+  if (!poster) return '';
+  if (!/^https?:\/\//i.test(poster)) return '';
+  if (/^description\s*:/i.test(poster)) return '';
+  return poster;
+}
+
+async function resolvePosterForTitle(title) {
+  if (!title || (!title.imdbId && !title.tmdbId)) return null;
+  const tmdbType = title.type === 'series' ? 'tv' : 'movie';
+  let tmdbId = title.tmdbId ? String(title.tmdbId).trim() : '';
+
+  if (!tmdbId && title.imdbId) {
+    const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' }).catch(() => null);
+    const pick = tmdbType === 'tv' ? (found?.tv_results?.[0] || null) : (found?.movie_results?.[0] || null);
+    if (pick?.id) tmdbId = String(pick.id);
+    const poster = sanitizePosterUrl(pick?.poster_path ? `https://image.tmdb.org/t/p/w500${pick.poster_path}` : '');
+    if (poster) return { tmdbId, posterUrl: poster };
+  }
+
+  if (tmdbId) {
+    const details = await tmdbFetchJson(`/${tmdbType}/${encodeURIComponent(tmdbId)}`, { language: 'es-ES' }).catch(() => null);
+    const poster = sanitizePosterUrl(details?.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '');
+    if (poster) return { tmdbId, posterUrl: poster };
+  }
+
+  if (title.title) {
+    const searchPath = tmdbType === 'tv' ? '/search/tv' : '/search/movie';
+    const search = await tmdbFetchJson(searchPath, { query: title.title, language: 'es-ES', include_adult: 'false' }).catch(() => null);
+    const candidates = Array.isArray(search?.results) ? search.results : [];
+    const exact = candidates.find((item) => String(item?.name || item?.title || '').trim().toLowerCase() === String(title.title || '').trim().toLowerCase());
+    const pick = exact || candidates[0] || null;
+    const poster = sanitizePosterUrl(pick?.poster_path ? `https://image.tmdb.org/t/p/w500${pick.poster_path}` : '');
+    if (poster) return { tmdbId: pick?.id ? String(pick.id) : tmdbId, posterUrl: poster };
+  }
+
+  return null;
+}
+
+function persistPosterForTitle(title) {
+  if (!title) return;
+  const current = loadLocalCatalog();
+  saveLocalCatalog(dedupe([...current, normalizeSelection(title)], { consolidateEquivalent: true }));
+}
+
+async function ensurePosterForTitle(title, options = {}) {
+  const { registerSeed = false } = options;
+  if (!title) return '';
+  const currentPoster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
+  if (currentPoster) {
+    if (registerSeed) queueCatalogSeedSyncForTitle(title);
+    return currentPoster;
+  }
+  const resolved = await resolvePosterForTitle(title).catch(() => null);
+  const posterUrl = sanitizePosterUrl(resolved?.posterUrl || '');
+  if (!posterUrl) return '';
+  title.posterUrl = posterUrl;
+  title.tmdbId = title.tmdbId || resolved?.tmdbId || '';
+  title.metadata = {
+    ...(title.metadata || {}),
+    posterUrl
+  };
+  persistPosterForTitle(title);
+  if (registerSeed) queueCatalogSeedSyncForTitle(title);
+  return posterUrl;
+}
+
 async function reportTmdbAlertOnce(code, detail) {
   const dedupeKey = `${TMDB_ALERT_DEDUPE_PREFIX}${String(code || 'unknown')}`;
   if (sessionStorage.getItem(dedupeKey) === '1') return;
@@ -846,7 +914,7 @@ async function hydrateSelectedFromTmdb() {
       const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' });
       const pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
       if (pick?.id) tmdbId = String(pick.id);
-      if (pick?.poster_path && !title.posterUrl) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
+      if (pick?.poster_path && !sanitizePosterUrl(title.posterUrl)) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
       if (pick?.overview && (!title.description || title.description === 'IMDb result')) title.description = pick.overview;
     }
 
@@ -866,9 +934,10 @@ async function hydrateSelectedFromTmdb() {
       title: title.title || details.name || details.title || title.title,
       year: title.year || Number(String((details.first_air_date || details.release_date || '')).slice(0, 4)) || title.year,
       description: details.overview || title.description,
-      posterUrl: title.posterUrl || posterUrl,
+      posterUrl: sanitizePosterUrl(title.posterUrl) || posterUrl,
       metadata: {
         ...(title.metadata || {}),
+        posterUrl: sanitizePosterUrl(title.metadata?.posterUrl) || sanitizePosterUrl(title.posterUrl) || posterUrl,
         genres,
         cast: castNames,
         endYear: endYear || (title.metadata?.endYear ?? ''),
@@ -957,7 +1026,7 @@ function normalizeSeedEntry(entry, defaultType) {
   const title = entry?.title || '';
   const year = Number(entry?.year) || null;
   const description = entry?.overview || entry?.description || '';
-  const posterUrl = entry?.posterUrl || '';
+  const posterUrl = sanitizePosterUrl(entry?.posterUrl || '');
   const playable = type === 'series' ? (entry?.playable ?? true) : true;
   return {
     catalogKey: `${type}:${imdbId ? 'imdb' : 'tmdb'}:${id}`,
@@ -970,6 +1039,7 @@ function normalizeSeedEntry(entry, defaultType) {
     posterUrl,
     playable,
     metadata: {
+      posterUrl,
       releaseDate: entry?.releaseDate || null,
       genres: entry?.genres || [],
       backdropUrl: entry?.backdropUrl || null,
@@ -2583,7 +2653,7 @@ function renderLocalCards(titles) {
   const prefs = loadTitlePrefs();
   return titles.filter((title) => hasPosterAsset(title)).map((title) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
-    const poster = title.posterUrl || title.metadata?.posterUrl || '';
+    const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
     const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
     const startYear = title.year ?? '';
@@ -2600,6 +2670,7 @@ function renderLocalCards(titles) {
 }
 
 function bindLocalCardEvents() {
+  bindPosterFallbacks(elements.items);
   elements.items.querySelectorAll('.item-quick-btn').forEach((btn) => {
     btn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -2670,6 +2741,28 @@ function bindLocalCardEvents() {
   });
 }
 
+function bindPosterFallbacks(root = document) {
+  root.querySelectorAll?.('img.item-poster').forEach((img) => {
+    img.addEventListener('error', async () => {
+      if (img.dataset.posterFallbackApplied === '1') return;
+      img.dataset.posterFallbackApplied = '1';
+      const card = img.closest('.item');
+      const key = String(card?.dataset?.key || '').trim();
+      let title = key ? loadLocalCatalog().find((entry) => entry.catalogKey === key) || null : null;
+      if (!title && state.selected && String(state.selected.catalogKey || '').trim() === key) title = state.selected;
+      const repaired = title ? await ensurePosterForTitle(title, { registerSeed: true }).catch(() => '') : '';
+      if (repaired) {
+        img.src = repaired;
+        img.dataset.posterFallbackApplied = '0';
+        return;
+      }
+      const placeholder = document.createElement('div');
+      placeholder.className = 'item-poster placeholder';
+      img.replaceWith(placeholder);
+    });
+  });
+}
+
 function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
   const intentId = state.searchIntentId;
@@ -2726,6 +2819,11 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
   try {
     const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
     if (intentId !== state.searchIntentId) return;
+    for (const item of results) {
+      if (sanitizePosterUrl(item.posterUrl || item.metadata?.posterUrl || '')) continue;
+      await ensurePosterForTitle(item, { registerSeed: true }).catch(() => {});
+    }
+    if (intentId !== state.searchIntentId) return;
     const withPlayable = filterTitlesWithPoster(results.map((item) => ({ ...item, playable: true })));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
@@ -2751,7 +2849,7 @@ function renderRemoteResults(query) {
   setCatalogCount(`${merged.length} matches for "${query}"`);
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
-    const poster = title.posterUrl || '';
+    const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
     const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
     const startYear = title.year ?? '';
@@ -3192,7 +3290,7 @@ function renderDetail(options = {}) {
   if (elements.detail) elements.detail.hidden = false;
 
   if (!isAuthenticated()) {
-    const poster = title.posterUrl || '';
+    const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
     const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
     elements.detail.innerHTML = `<div class="detail-inner overlay-open">
       <button class="back-chip" id="closeDetail" aria-label="Volver al inicio">
@@ -3230,7 +3328,7 @@ function renderDetail(options = {}) {
   state.playback.season = title.season || state.playback.season || 1;
   state.playback.episode = title.episode || state.playback.episode || 1;
   if (!skipHydratePlayback) applySavedWatchState(title);
-  const poster = title.posterUrl || '';
+  const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
   const progress = getSeriesProgress(title);
   const genres = (title.metadata?.genres ?? []).filter(Boolean);
   const castNames = (title.metadata?.cast ?? []).filter(Boolean);
@@ -3919,10 +4017,10 @@ async function buildEpisodesFromTmdb(title) {
 }
 
 function loadLocalCatalog() {
-  try { return JSON.parse(localStorage.getItem('mep_static_catalog') || '[]'); } catch { return []; }
+  try { return (JSON.parse(localStorage.getItem('mep_static_catalog') || '[]') || []).map((item) => normalizeCatalogPoster(item)); } catch { return []; }
 }
 function normalizeCatalogPoster(title) {
-  const posterUrl = String(title?.posterUrl || title?.metadata?.posterUrl || '').trim();
+  const posterUrl = sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '');
   return {
     ...(title || {}),
     posterUrl,
@@ -3933,7 +4031,7 @@ function normalizeCatalogPoster(title) {
   };
 }
 function saveLocalCatalog(items) { localStorage.setItem('mep_static_catalog', JSON.stringify((Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item)))); }
-function hasPosterAsset(title) { return Boolean(String(title?.posterUrl || title?.metadata?.posterUrl || '').trim()); }
+function hasPosterAsset(title) { return Boolean(sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')); }
 function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }
 
 function cacheSearchResults(results) {

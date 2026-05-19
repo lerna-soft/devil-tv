@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T17:19:35.380Z",
+  "generatedAt": "2026-05-19T17:37:12.961Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T17:04:21Z",
-      "totalEvents": 291,
-      "totalStarts": 177,
+      "updatedAt": "2026-05-19T17:37:01Z",
+      "totalEvents": 292,
+      "totalStarts": 178,
       "totalCompletions": 39,
       "totalPlaybackProgress": 147351.57515548394,
       "uniqueContentCount": 100,
-      "lastActivityAt": "2026-05-19T17:04:21Z",
+      "lastActivityAt": "2026-05-19T17:37:01Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -45,6 +45,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt26735622": {
+          "contentId": "tt26735622",
+          "imdbId": "tt26735622",
+          "tmdbId": "1084577",
+          "title": "Balls Up: Con un par",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T17:37:01Z"
         },
         "tt16030542": {
           "contentId": "tt16030542",
@@ -357,18 +369,6 @@
           "maxProgressValue": 5172.198298546031,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T14:01:26Z"
-        },
-        "tt26735622": {
-          "contentId": "tt26735622",
-          "imdbId": "tt26735622",
-          "tmdbId": "1084577",
-          "title": "Balls Up: Con un par",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T08:32:15Z"
         },
         "tt8398600": {
           "contentId": "tt8398600",
@@ -1235,7 +1235,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 506.3628
+      "avgPlaybackProgress": 504.6287
     },
     {
       "userEmail": "liz-munera@hotmail.com",

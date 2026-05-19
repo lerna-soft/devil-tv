@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T21:02:56.801Z",
+  "generatedAt": "2026-05-19T21:41:10.788Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 345,
-  "totalStarts": 210,
+  "totalEvents": 346,
+  "totalStarts": 211,
   "totalCompletions": 40,
-  "overallCompletionRate": 0.1905,
+  "overallCompletionRate": 0.1896,
   "trackedTitles": 119,
   "mostWatchedContent": [
     {
@@ -65,6 +65,14 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt1234721",
+      "title": "RoboCop",
+      "type": "movie",
+      "totalEvents": 6,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt26443616",
       "title": "Hoppers",
       "type": "movie",
@@ -77,14 +85,6 @@
       "title": "The Boys",
       "type": "series",
       "totalEvents": 6,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
-      "contentId": "tt1234721",
-      "title": "RoboCop",
-      "type": "movie",
-      "totalEvents": 5,
       "uniqueUsers": 1,
       "completionRate": 0
     }

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T21:02:56.801Z",
+  "generatedAt": "2026-05-19T21:41:10.788Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T21:40:59Z",
+      "contentId": "tt1234721",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 2801.429116108,
+      "progressValue": 2801.429116108,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T18:39:24.126Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T21:40:59Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T21:02:46Z",
       "contentId": "tt1234721",

@@ -1363,6 +1363,11 @@ function buildIssueBody(title, lines) {
   ].filter(Boolean).join('\n');
 }
 
+function extractBodyField(body, label) {
+  const match = String(body || '').match(new RegExp(`^${String(label).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}:[ \\t]*(.*)$`, 'im'));
+  return String(match?.[1] || '').trim();
+}
+
 function shouldShowFloatingReportButton() {
   if (!isAuthenticated()) return false;
   if (isAdminUser()) return false;
@@ -1761,6 +1766,7 @@ function renderAdminDashboard() {
       return fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
     }));
     const roleUsers = userRoleRecords.filter(Boolean);
+    const userReportIssues = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/issues?state=all&labels=user-report&per_page=100&sort=created&direction=desc').catch(() => []);
     const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
     const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
@@ -1856,6 +1862,99 @@ function renderAdminDashboard() {
         : progressRows.length
           ? Math.round((progressRows.filter((p) => Number(p?.lastProgress || p?.progress || 0) >= 95).length / progressRows.length) * 100)
           : 0;
+      const reportRows = (Array.isArray(userReportIssues) ? userReportIssues : [])
+        .filter((issue) => !issue?.pull_request)
+        .map((issue) => {
+          const labels = Array.isArray(issue?.labels) ? issue.labels.map((row) => String(row?.name || '').trim().toLowerCase()) : [];
+          const body = String(issue?.body || '');
+          const title = extractBodyField(body, 'Title');
+          const type = extractBodyField(body, 'Type');
+          const imdbId = extractBodyField(body, 'IMDb');
+          const tmdbId = extractBodyField(body, 'TMDB');
+          const season = positiveInteger(extractBodyField(body, 'Season'), 0);
+          const episode = positiveInteger(extractBodyField(body, 'Episode'), 0);
+          const userEmailReported = extractBodyField(body, 'ReportedByEmail');
+          const userNameReported = extractBodyField(body, 'ReportedByName');
+          const category = extractBodyField(body, 'ProblemCategory') || 'other';
+          const scope = extractBodyField(body, 'ReportScope') || (labels.includes(USER_REPORT_EPISODE_LABEL) ? 'episode' : labels.includes(USER_REPORT_TITLE_LABEL) ? 'title' : 'general');
+          const createdAt = String(issue?.created_at || issue?.updated_at || '').trim();
+          return {
+            number: Number(issue?.number || 0),
+            title,
+            type,
+            imdbId,
+            tmdbId,
+            season,
+            episode,
+            scope,
+            category,
+            state: String(issue?.state || '').trim().toLowerCase(),
+            labels,
+            createdAt,
+            updatedAt: String(issue?.updated_at || createdAt).trim(),
+            userEmail: String(userEmailReported || issue?.user?.login || '').trim().toLowerCase(),
+            userName: String(userNameReported || '').trim(),
+            htmlUrl: String(issue?.html_url || '').trim()
+          };
+        });
+      const scopedReports = reportRows.filter((row) => toTs(row.createdAt) >= windowStart);
+      const openReports = scopedReports.filter((row) => row.state === 'open');
+      const reportUsers = new Map();
+      const reportTitles = new Map();
+      const reportEpisodes = new Map();
+      for (const row of scopedReports) {
+        const reportUserKey = String(row.userEmail || row.userName || 'unknown').trim().toLowerCase();
+        const reportUserName = row.userName || row.userEmail || 'Usuario';
+        const reportUserPrev = reportUsers.get(reportUserKey) || { key: reportUserKey, name: reportUserName, count: 0 };
+        reportUserPrev.count += 1;
+        reportUsers.set(reportUserKey, reportUserPrev);
+        const contentId = String(row.imdbId || row.tmdbId || row.title || '').trim();
+        const titleLabel = row.title || contentId || 'Sin título';
+        if (contentId) {
+          const titlePrev = reportTitles.get(contentId) || { id: contentId, name: titleLabel, count: 0, open: 0 };
+          titlePrev.count += 1;
+          if (row.state === 'open') titlePrev.open += 1;
+          reportTitles.set(contentId, titlePrev);
+          if (row.scope === 'episode' && row.season && row.episode) {
+            const episodeKey = `${contentId}:s${row.season}e${row.episode}`;
+            const episodePrev = reportEpisodes.get(episodeKey) || { key: episodeKey, name: `${titleLabel} T${row.season}E${row.episode}`, count: 0, open: 0 };
+            episodePrev.count += 1;
+            if (row.state === 'open') episodePrev.open += 1;
+            reportEpisodes.set(episodeKey, episodePrev);
+          }
+        }
+      }
+      const topReportedTitles = [...reportTitles.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+      const topReportedEpisodes = [...reportEpisodes.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+      const topReportingUsers = [...reportUsers.values()].sort((a, b) => b.count - a.count).slice(0, 6);
+      const contentHealth = analyticsContentRows
+        .map((row) => {
+          const contentId = String(row?.contentId || row?.imdbId || row?.tmdbId || '').trim();
+          const reportInfo = reportTitles.get(contentId) || { count: 0, open: 0 };
+          const starts = Number(row?.totalStarts || row?.totalEvents || 0);
+          const completions = Number(row?.totalCompletions || 0);
+          const rate = Number(row?.completionRate || 0);
+          let status = 'sin validar';
+          if (starts > 0 && reportInfo.count === 0 && rate >= 0.45) status = 'estable';
+          else if (reportInfo.open > 0 || (starts >= 3 && completions === 0)) status = 'inestable';
+          else if (reportInfo.count > 0 || (starts > 0 && rate < 0.45)) status = 'con reportes';
+          return {
+            id: contentId,
+            title: String(row?.title || contentId).trim(),
+            starts,
+            completions,
+            rate,
+            reports: reportInfo.count,
+            openReports: reportInfo.open,
+            status
+          };
+        })
+        .filter((row) => row.id)
+        .sort((a, b) => {
+          const severity = { inestable: 3, 'con reportes': 2, 'sin validar': 1, estable: 0 };
+          return (severity[b.status] || 0) - (severity[a.status] || 0) || b.reports - a.reports || b.starts - a.starts;
+        })
+        .slice(0, 8);
 
       const requestsWithAge = requests.map((row) => ({ ...row, ts: toTs(row?.requestedAt) }));
       const pendingRequests = requestsWithAge.filter((row) => String(row?.status || '').toLowerCase() === 'pending');
@@ -1957,6 +2056,8 @@ function renderAdminDashboard() {
             <article class="admin-kpi"><strong>${avgHistoryPerActive}</strong><span>Prom. eventos/activo</span></article>
             <article class="admin-kpi"><strong>${inactiveUsers.length}</strong><span>Usuarios sin actividad</span></article>
             <article class="admin-kpi"><strong>${analyticsXapiRows.filter((row) => Number(row?.statementCount || 0) > 0).length}</strong><span>Usuarios con xAPI</span></article>
+            <article class="admin-kpi"><strong>${scopedReports.length}</strong><span>Reportes usuario (${days}d)</span></article>
+            <article class="admin-kpi"><strong>${openReports.length}</strong><span>Reportes abiertos</span></article>
             <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización global</span></article>
             <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas seed</span></article>
             <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series seed</span></article>
@@ -1988,8 +2089,28 @@ function renderAdminDashboard() {
             </section>
 
             <section class="admin-panel">
+              <h4>Salud de reproducción</h4>
+              <div class="admin-chart">${contentHealth.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.title)}</span><small>${escapeHtml(`${row.status} · ${row.starts} intentos · ${Math.round(row.rate * 100)}% finalización · ${row.reports} reportes`)}</small></div>`).join('') || '<p>Sin datos.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
               <h4>Provisionamiento reciente</h4>
               <div class="admin-chart">${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(`${row.status || 'unknown'} · hace ${ago(row.requestedAt)}`)}</small></div>`).join('') || '<p>Sin solicitudes.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>Títulos más reportados</h4>
+              <div class="admin-chart">${topReportedTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes · ${row.open} abiertos`)}</small></div>`).join('') || '<p>Sin reportes.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>Capítulos más reportados</h4>
+              <div class="admin-chart">${topReportedEpisodes.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes · ${row.open} abiertos`)}</small></div>`).join('') || '<p>Sin reportes de capítulos.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>Usuarios que más reportan</h4>
+              <div class="admin-chart">${topReportingUsers.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes`)}</small></div>`).join('') || '<p>Sin reportes.</p>'}</div>
             </section>
 
             <section class="admin-panel">
@@ -2004,6 +2125,11 @@ function renderAdminDashboard() {
                 const activityLabel = count > 0 ? `última ${ago(row?.lastStatementAt)}` : 'sin actividad';
                 return `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.userName || row?.userEmail || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.userEmail || 'n/a')} · ${count} statements · ${activityLabel}`)}</small></div>`;
               }).join('') || '<p>Sin statements xAPI.</p>'}</div>
+            </section>
+
+            <section class="admin-panel">
+              <h4>Reportes recientes</h4>
+              <div class="admin-chart">${scopedReports.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`#${row.number} · ${row.title || row.scope}`)}</span><small>${escapeHtml(`${row.userEmail || row.userName || 'usuario'} · ${row.category} · ${row.state} · hace ${ago(row.createdAt)}`)}</small></div>`).join('') || '<p>Sin reportes recientes.</p>'}</div>
             </section>
 
             <section class="admin-panel">

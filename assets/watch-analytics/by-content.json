@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T16:54:09.986Z",
+  "generatedAt": "2026-05-19T17:04:29.696Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -186,71 +186,27 @@
       "avgPlaybackProgress": 432.6845
     },
     {
-      "contentId": "tt3359350",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 30,
-      "totalStarts": 30,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 30260.583266846672,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-12T05:01:04Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 30,
-          "completedCount": 0,
-          "startedCount": 30,
-          "totalPlaybackProgress": 30260.583266846672,
-          "lastSeenAt": "2026-05-12T05:01:04Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 30,
-          "totalStarts": 30,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 30260.583266846672,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T05:01:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1008.6861
-    },
-    {
       "contentId": "tt16030542",
       "imdbId": "tt16030542",
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 29,
+      "totalEvents": 30,
       "totalStarts": 19,
-      "totalCompletions": 10,
-      "totalPlaybackProgress": 37564.24607,
+      "totalCompletions": 11,
+      "totalPlaybackProgress": 40578.126499000005,
       "uniqueUsers": 1,
-      "completionRate": 0.5263,
-      "lastActivityAt": "2026-05-19T16:53:58Z",
+      "completionRate": 0.5789,
+      "lastActivityAt": "2026-05-19T17:04:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 29,
-          "completedCount": 10,
+          "playCount": 30,
+          "completedCount": 11,
           "startedCount": 19,
-          "totalPlaybackProgress": 37564.24607,
-          "lastSeenAt": "2026-05-19T16:53:58Z",
+          "totalPlaybackProgress": 40578.126499000005,
+          "lastSeenAt": "2026-05-19T17:04:17Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -259,16 +215,16 @@
         "s2e5": {
           "season": 2,
           "episode": 5,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1897.60905,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4911.489479,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T16:53:58Z",
+          "lastActivityAt": "2026-05-19T17:04:17Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s2e4": {
           "season": 2,
@@ -439,7 +395,51 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1295.3188
+      "avgPlaybackProgress": 1352.6042
+    },
+    {
+      "contentId": "tt3359350",
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 30,
+      "totalStarts": 30,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 30260.583266846672,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-12T05:01:04Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 30,
+          "completedCount": 0,
+          "startedCount": 30,
+          "totalPlaybackProgress": 30260.583266846672,
+          "lastSeenAt": "2026-05-12T05:01:04Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 30,
+          "totalStarts": 30,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 30260.583266846672,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T05:01:04Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1008.6861
     },
     {
       "contentId": "tt31596104",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T03:08:40.256Z",
+  "generatedAt": "2026-05-19T03:09:21.639Z",
   "items": [
     {
       "contentId": "tt3359350",
@@ -51,27 +51,41 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 27,
-      "totalStarts": 21,
+      "totalEvents": 28,
+      "totalStarts": 22,
       "totalCompletions": 5,
       "totalPlaybackProgress": 10396.550204693138,
       "uniqueUsers": 1,
-      "completionRate": 0.2381,
-      "lastActivityAt": "2026-05-19T03:03:36Z",
+      "completionRate": 0.2273,
+      "lastActivityAt": "2026-05-19T03:09:11Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 27,
+          "playCount": 28,
           "completedCount": 5,
-          "startedCount": 21,
+          "startedCount": 22,
           "totalPlaybackProgress": 10396.550204693138,
-          "lastSeenAt": "2026-05-19T03:03:36Z",
+          "lastSeenAt": "2026-05-19T03:09:11Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e5": {
+          "season": 1,
+          "episode": 5,
+          "totalEvents": 3,
+          "totalStarts": 3,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T03:09:11Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -142,20 +156,6 @@
           },
           "completionRate": 0.5
         },
-        "s1e5": {
-          "season": 1,
-          "episode": 5,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T20:24:23Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
         "s1e4": {
           "season": 1,
           "episode": 4,
@@ -199,7 +199,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 385.0574
+      "avgPlaybackProgress": 371.3054
     },
     {
       "contentId": "tt31596104",

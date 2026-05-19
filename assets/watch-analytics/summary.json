@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T03:08:40.228Z",
+  "generatedAt": "2026-05-19T03:09:21.617Z",
   "totalUsers": 6,
   "activeUsers": 6,
-  "totalEvents": 284,
-  "totalStarts": 168,
+  "totalEvents": 285,
+  "totalStarts": 169,
   "totalCompletions": 27,
-  "overallCompletionRate": 0.1607,
+  "overallCompletionRate": 0.1598,
   "trackedTitles": 112,
   "mostWatchedContent": [
     {
@@ -20,9 +20,9 @@
       "contentId": "tt14452776",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 27,
+      "totalEvents": 28,
       "uniqueUsers": 1,
-      "completionRate": 0.2381
+      "completionRate": 0.2273
     },
     {
       "contentId": "tt31596104",

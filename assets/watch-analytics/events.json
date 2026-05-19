@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T03:08:40.254Z",
+  "generatedAt": "2026-05-19T03:09:21.637Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt14452776:s1e5:started:2026-05-19T03:09:11Z",
+      "contentId": "tt14452776",
+      "episodeKey": "s1e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 1,
+      "episode": 5,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-15T18:38:57.815Z",
+      "completedAt": "PlayerStatus: playing",
+      "updatedAt": "2026-05-19T03:09:11Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1830617:s1e1:started:2026-05-19T03:08:28Z",
       "contentId": "tt1830617",

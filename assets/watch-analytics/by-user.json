@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T18:33:11.443Z",
+  "generatedAt": "2026-05-19T18:39:36.796Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T18:31:25Z",
-      "totalEvents": 298,
-      "totalStarts": 179,
+      "updatedAt": "2026-05-19T18:39:25Z",
+      "totalEvents": 299,
+      "totalStarts": 180,
       "totalCompletions": 39,
       "totalPlaybackProgress": 147351.57515548394,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-05-19T18:31:25Z",
+      "lastActivityAt": "2026-05-19T18:39:25Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -45,6 +45,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt1234721": {
+          "contentId": "tt1234721",
+          "imdbId": "tt1234721",
+          "tmdbId": "97020",
+          "title": "RoboCop",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T18:39:25Z"
         },
         "tt2883512": {
           "contentId": "tt2883512",
@@ -105,18 +117,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T18:30:31Z"
-        },
-        "tt1234721": {
-          "contentId": "tt1234721",
-          "imdbId": "tt1234721",
-          "tmdbId": "",
-          "title": "RoboCop",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T17:48:30Z"
         },
         "tt26735622": {
           "contentId": "tt26735622",
@@ -1295,7 +1295,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 494.4684
+      "avgPlaybackProgress": 492.8146
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1553,7 +1553,11 @@ function renderAdminDashboard() {
     fetchJsonWithTimeout('./assets/watch-analytics/summary.json', 3500).catch(() => ({})),
     fetchJsonWithTimeout('./assets/watch-analytics/xapi/index.json', 3500).catch(() => ({ users: [] }))
   ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit, analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi]) => {
-    const toTs = (value) => Date.parse(value || 0) || 0;
+    const toTs = (value) => {
+      const text = String(value || '').trim();
+      if (!text) return 0;
+      return Date.parse(text) || 0;
+    };
     const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
     const details = await Promise.all(users.slice(0, 100).map(async (entry) => {
       const rel = String(entry?.file || '').trim();
@@ -1807,7 +1811,11 @@ function renderAdminDashboard() {
 
             <section class="admin-panel">
               <h4>xAPI por usuario</h4>
-              <div class="admin-chart">${analyticsXapiRows.slice(0, 10).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.userName || row?.userEmail || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.userEmail || 'n/a')} · ${Number(row?.statementCount || 0)} statements · última ${ago(row?.lastStatementAt)}`)}</small></div>`).join('') || '<p>Sin statements xAPI.</p>'}</div>
+              <div class="admin-chart">${analyticsXapiRows.slice(0, 10).map((row) => {
+                const count = Number(row?.statementCount || 0);
+                const activityLabel = count > 0 ? `última ${ago(row?.lastStatementAt)}` : 'sin actividad';
+                return `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.userName || row?.userEmail || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.userEmail || 'n/a')} · ${count} statements · ${activityLabel}`)}</small></div>`;
+              }).join('') || '<p>Sin statements xAPI.</p>'}</div>
             </section>
 
             <section class="admin-panel">

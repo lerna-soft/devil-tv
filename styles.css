@@ -1056,6 +1056,64 @@ body.detail-active .toolbar {
   line-height: 1.35;
 }
 
+.episode-actions {
+  align-items: center;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.episode-report-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.74);
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.46rem 0.78rem;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.episode-report-btn:hover,
+.episode-report-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.94);
+  outline: none;
+}
+
+.floating-report-btn {
+  background: linear-gradient(135deg, #ff6a00, #ff2d55);
+  border: 0;
+  border-radius: 999px;
+  bottom: 1.4rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 0.95rem 1.25rem;
+  position: fixed;
+  right: 1.4rem;
+  z-index: 80;
+}
+
+.floating-report-btn:hover,
+.floating-report-btn:focus-visible {
+  filter: brightness(1.06);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+  .floating-report-btn {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
 .source-switcher {
   align-items: center;
   background: rgba(255, 255, 255, 0.05);

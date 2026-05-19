@@ -101,7 +101,8 @@ const elements = {
   authSubmitRegister: document.querySelector('#authSubmitRegister'),
   authToggleRegister: document.querySelector('#authToggleRegister'),
   loginCard: document.querySelector('#loginCard'),
-  registerCard: document.querySelector('#registerCard')
+  registerCard: document.querySelector('#registerCard'),
+  floatingReportBtn: document.querySelector('#floatingReportBtn')
 };
 
 let authMode = 'login';
@@ -906,6 +907,7 @@ function updateAuthUi() {
     if (elements.userAvatar) elements.userAvatar.textContent = '';
     if (elements.appShell) elements.appShell.hidden = true;
   }
+  updateFloatingReportButtonVisibility();
 }
 
 updateAuthUi();
@@ -1329,6 +1331,143 @@ function buildIssueBody(title, lines) {
   ].filter(Boolean).join('\n');
 }
 
+function shouldShowFloatingReportButton() {
+  if (!isAuthenticated()) return false;
+  if (isAdminUser()) return false;
+  if (!elements.appShell || elements.appShell.hidden) return false;
+  if (elements.playerModal && !elements.playerModal.hidden) return false;
+  return true;
+}
+
+function updateFloatingReportButtonVisibility() {
+  if (!elements.floatingReportBtn) return;
+  elements.floatingReportBtn.hidden = !shouldShowFloatingReportButton();
+}
+
+function buildUserProblemIssueBody(context, report) {
+  const user = getAuthUser();
+  const safeContext = context && typeof context === 'object' ? context : {};
+  return [
+    'USER_PROBLEM_REPORT',
+    `ReportedByEmail: ${String(user?.email || '').trim().toLowerCase()}`,
+    `ReportedByName: ${String(user?.name || '').trim()}`,
+    `ReportedAt: ${new Date().toISOString()}`,
+    `ReportScope: ${String(safeContext.scope || 'general').trim().toLowerCase()}`,
+    `ProblemCategory: ${String(report?.category || '').trim()}`,
+    `ProblemSummary: ${String(report?.summary || '').trim()}`,
+    safeContext.title ? `Title: ${String(safeContext.title).trim()}` : '',
+    safeContext.type ? `Type: ${String(safeContext.type).trim()}` : '',
+    safeContext.imdbId ? `IMDb: ${String(safeContext.imdbId).trim()}` : '',
+    safeContext.tmdbId ? `TMDB: ${String(safeContext.tmdbId).trim()}` : '',
+    safeContext.season ? `Season: ${positiveInteger(safeContext.season, 1)}` : '',
+    safeContext.episode ? `Episode: ${positiveInteger(safeContext.episode, 1)}` : '',
+    safeContext.episodeTitle ? `EpisodeTitle: ${String(safeContext.episodeTitle).trim()}` : '',
+    '',
+    'Observed issue:',
+    String(report?.description || '').trim(),
+    '',
+    'Expected behavior:',
+    String(report?.expected || '').trim() || 'The feature should work correctly.',
+    '',
+    `Page: ${window.location.href}`
+  ].filter(Boolean).join('\n');
+}
+
+async function openUserProblemReportForm(context = {}) {
+  const user = getAuthUser();
+  if (!user?.email) {
+    showAuthGate();
+    return;
+  }
+  if (isAdminUser()) return;
+  const swal = window.Swal;
+  const safeContext = context && typeof context === 'object' ? context : {};
+  const scope = String(safeContext.scope || 'general').trim().toLowerCase();
+  const label = String(safeContext.label || safeContext.title || 'plataforma').trim();
+
+  if (!swal?.fire) {
+    const description = window.prompt(`Describe el problema de ${label}:`, '');
+    if (!description || !description.trim()) return;
+    try {
+      await openGitHubIssue(`User report: ${label}`, buildUserProblemIssueBody(safeContext, {
+        category: scope === 'episode' ? 'episode_problem' : scope === 'title' ? 'title_problem' : 'platform_problem',
+        summary: `Reporte de ${label}`,
+        description: description.trim(),
+        expected: ''
+      }));
+    } catch (error) {
+      console.error(error);
+      void notifyIssueCreationError(error);
+    }
+    return;
+  }
+
+  const categoryOptions = scope === 'episode'
+    ? `
+      <option value="playback_error">No reproduce</option>
+      <option value="wrong_episode">Capítulo incorrecto</option>
+      <option value="subtitle_audio">Audio o subtítulos</option>
+      <option value="other">Otro</option>
+    `
+    : scope === 'title'
+      ? `
+        <option value="playback_error">No reproduce</option>
+        <option value="metadata_error">Información incorrecta</option>
+        <option value="missing_content">Faltan capítulos o versiones</option>
+        <option value="other">Otro</option>
+      `
+      : `
+        <option value="platform_bug">Error de la plataforma</option>
+        <option value="account_issue">Problema con la cuenta</option>
+        <option value="search_issue">Problema buscando contenido</option>
+        <option value="other">Otro</option>
+      `;
+
+  const result = await swal.fire({
+    title: 'Reportar problema',
+    html: `
+      <div style="display:grid;gap:0.8rem;text-align:left;">
+        <p style="margin:0;color:#cfd3da;font-size:0.92rem;">Contexto: <strong style="color:#fff;">${escapeHtml(label)}</strong></p>
+        <select id="reportCategory" class="swal2-input" style="margin:0;">${categoryOptions}</select>
+        <input id="reportSummary" class="swal2-input" placeholder="Resumen corto del problema" style="margin:0;" />
+        <textarea id="reportDescription" class="swal2-textarea" placeholder="Describe el problema con detalle" style="margin:0;min-height:120px;"></textarea>
+        <textarea id="reportExpected" class="swal2-textarea" placeholder="Qué esperabas que pasara" style="margin:0;min-height:90px;"></textarea>
+      </div>
+    `,
+    showCancelButton: true,
+    confirmButtonText: 'Enviar reporte',
+    cancelButtonText: 'Cancelar',
+    focusConfirm: false,
+    preConfirm: () => {
+      const category = String(document.querySelector('#reportCategory')?.value || '').trim();
+      const summary = String(document.querySelector('#reportSummary')?.value || '').trim();
+      const description = String(document.querySelector('#reportDescription')?.value || '').trim();
+      const expected = String(document.querySelector('#reportExpected')?.value || '').trim();
+      if (!summary || !description) {
+        swal.showValidationMessage('Completa el resumen y la descripción del problema.');
+        return null;
+      }
+      return { category, summary, description, expected };
+    }
+  });
+
+  if (!result.isConfirmed || !result.value) return;
+
+  try {
+    await openGitHubIssue(`User report: ${label}`, buildUserProblemIssueBody(safeContext, result.value));
+    await swal.fire({
+      icon: 'success',
+      title: 'Reporte enviado',
+      text: 'Tu reporte fue enviado correctamente.',
+      timer: 2200,
+      showConfirmButton: false
+    });
+  } catch (error) {
+    console.error(error);
+    void notifyIssueCreationError(error);
+  }
+}
+
 function buildWatchProgressIssueBody(snapshot) {
   return [
     'WATCH_PROGRESS_SYNC_REQUEST',
@@ -1499,7 +1638,15 @@ function bindTap(element, handler) {
   });
 }
 
+bindTap(elements.floatingReportBtn, () => {
+  void openUserProblemReportForm({
+    scope: 'general',
+    label: 'plataforma'
+  });
+});
+
 function renderCatalog() {
+  updateFloatingReportButtonVisibility();
   if (isAdminUser()) {
     const titleEl = document.querySelector('.catalog-header h2');
     if (titleEl) titleEl.textContent = 'Dashboard';
@@ -1535,6 +1682,7 @@ function renderCatalog() {
 }
 
 function renderAdminDashboard() {
+  updateFloatingReportButtonVisibility();
   setCatalogCount('Panel administrador');
   elements.items.innerHTML = `<section class="admin-dashboard"><div class="loader-card"><span class="spinner"></span><strong>Cargando dashboard</strong><p>Recolectando métricas del sistema...</p></div></section>`;
   const user = getAuthUser();
@@ -2831,9 +2979,14 @@ function renderDetail(options = {}) {
         <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
         ${watched ? '<span class="episode-status">Visto</span>' : ''}
       </div>
-      <button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">
-        ${inProgress ? 'Continuar' : 'Play'}
-      </button>
+      <div class="episode-actions">
+        <button class="episode-report-btn" type="button" data-episode-report="${entry.episode}">
+          Reportar
+        </button>
+        <button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">
+          ${inProgress ? 'Continuar' : 'Play'}
+        </button>
+      </div>
     </article>`;
   }).join('') : '';
 
@@ -2844,7 +2997,7 @@ function renderDetail(options = {}) {
     </div>
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
-  const issueActionLabel = isSeriesLike(title) ? 'Solucionar capítulos faltantes' : 'Reportar problema';
+  const issueActionLabel = 'Reportar problema';
 
   const isBareRoute = (title.description === 'Cargado desde ruta') || (title.title === (title.imdbId || title.tmdbId));
   const metadataBlock = isBareRoute ? `<div class="availability">
@@ -2882,6 +3035,8 @@ function renderDetail(options = {}) {
     </section>
     ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div><div class="episodes-grid">${episodeCards || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</span>`}</div></section>` : ''}
   </div>`;
+
+  updateFloatingReportButtonVisibility();
 
   bindTap(document.querySelector('#loadPlayer'), () => {
     if (!isPlayable) return;
@@ -2947,62 +3102,13 @@ function renderDetail(options = {}) {
     });
   });
   bindTap(document.querySelector('#reportIssue'), () => {
-    if (!isSeriesLike(title)) {
-      const id = title.imdbId || title.tmdbId || '';
-      const type = title.type || 'unknown';
-      const label = title.title || id || 'Title issue';
-      void openGitHubIssue(`Report: ${label} (${type})`, buildIssueBody(title, [
-        'Describe the problem here:',
-        '- no links',
-        '- playback fails',
-        '- chapters missing',
-        '- metadata wrong',
-        '',
-        'Observed issue:',
-        '',
-        'Expected behavior:',
-        ''
-      ]), ['episode-sync']).then((issue) => {
-        void notifyIssueCreated(issue);
-      }).catch((error) => {
-        console.error(error);
-        void notifyIssueCreationError(error);
-      });
-      return;
-    }
-    const label = title.title || title.imdbId || title.tmdbId || 'Title issue';
-    const type = title.type || 'unknown';
-    const seasons = Array.isArray(state.seriesEpisodes?.seasons) ? state.seriesEpisodes.seasons.length : 0;
-    const episodeTotal = Array.isArray(state.seriesEpisodes?.seasons)
-      ? state.seriesEpisodes.seasons.reduce((count, season) => count + (season?.episodes?.length || 0), 0)
-      : 0;
-    const chaptersListed = seasons > 0 ? 'yes' : 'no';
-    const button = document.querySelector('#reportIssue');
-    if (button) button.disabled = true;
-    void openGitHubIssue(`Solution request: missing episodes for ${label} (${type})`, buildIssueBody(title, [
-      'Problem type: missing episodes',
-      '',
-      'Episode status:',
-      `- Chapters listed in app: ${chaptersListed}`,
-      `- Seasons loaded: ${seasons}`,
-      `- Episodes loaded: ${episodeTotal}`,
-      `- Episode asset present: ${episodeTotal > 0 ? 'yes' : 'no'}`,
-      '',
-      'Observed issue:',
-      'Series opens but chapters are missing or incomplete.',
-      '',
-      'Expected behavior:',
-      'Series should list the available seasons and episodes after sync.',
-      '',
-      'Action requested:',
-      'Sync missing episode assets from the public source and mark the issue as resolved.',
-      ''
-    ]), ['episode-sync']).then((issue) => {
-      void notifyIssueCreated({ reloadMs: 60000 });
-    }).catch((error) => {
-      console.error(error);
-      if (button) button.disabled = false;
-      void notifyIssueCreationError(error);
+    void openUserProblemReportForm({
+      scope: 'title',
+      label: title.title || title.imdbId || title.tmdbId || 'titulo',
+      title: title.title || '',
+      type: title.type || '',
+      imdbId: title.imdbId || '',
+      tmdbId: title.tmdbId || ''
     });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
@@ -3040,6 +3146,22 @@ function renderDetail(options = {}) {
     state.playback.episode = episode;
     openPlayerForCurrentSelection();
   }));
+  document.querySelectorAll('[data-episode-report]').forEach((reportBtn) => bindTap(reportBtn, (event) => {
+    event?.stopPropagation?.();
+    const episode = positiveInteger(reportBtn.dataset.episodeReport, 1);
+    const episodeEntry = getEpisodesForSeason(state.playback.season).find((item) => item.episode === episode);
+    void openUserProblemReportForm({
+      scope: 'episode',
+      label: `${title.title || 'Serie'} T${state.playback.season}E${episode}`,
+      title: title.title || '',
+      type: title.type || '',
+      imdbId: title.imdbId || '',
+      tmdbId: title.tmdbId || '',
+      season: state.playback.season,
+      episode,
+      episodeTitle: episodeEntry?.title || ''
+    });
+  }));
 }
 
 function openPlayerModal(embedUrl) {
@@ -3060,6 +3182,7 @@ function openPlayerModal(embedUrl) {
   schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
   modal.hidden = false;
   document.body.classList.add('player-active');
+  updateFloatingReportButtonVisibility();
   requestNativeFullscreen(card);
   state.playerOpening = false;
   syncRoute();
@@ -3073,6 +3196,7 @@ function closePlayerModal() {
   modal.hidden = true;
   iframe.src = 'about:blank';
   document.body.classList.remove('player-active');
+  updateFloatingReportButtonVisibility();
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
 }

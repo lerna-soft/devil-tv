@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T05:16:47.584Z",
+  "generatedAt": "2026-05-19T05:17:02.617Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 300,
-  "totalStarts": 182,
+  "totalEvents": 301,
+  "totalStarts": 183,
   "totalCompletions": 29,
-  "overallCompletionRate": 0.1593,
+  "overallCompletionRate": 0.1585,
   "trackedTitles": 113,
   "mostWatchedContent": [
     {
@@ -81,9 +81,9 @@
       "completionRate": 0.6667
     },
     {
-      "contentId": "tt2140479",
-      "title": "El contable",
-      "type": "movie",
+      "contentId": "tt0388629",
+      "title": "One Piece",
+      "type": "series",
       "totalEvents": 4,
       "uniqueUsers": 1,
       "completionRate": 0

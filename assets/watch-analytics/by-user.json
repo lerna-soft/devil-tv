@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T05:16:47.588Z",
+  "generatedAt": "2026-05-19T05:17:02.619Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T05:16:37Z",
-      "totalEvents": 256,
-      "totalStarts": 154,
+      "updatedAt": "2026-05-19T05:16:51Z",
+      "totalEvents": 257,
+      "totalStarts": 155,
       "totalCompletions": 28,
       "totalPlaybackProgress": 103283.68983866191,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T05:16:37Z",
+      "lastActivityAt": "2026-05-19T05:16:51Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -50,11 +50,11 @@
           "tmdbId": "",
           "title": "One Piece",
           "type": "series",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:16:37Z"
+          "lastSeenAt": "2026-05-19T05:16:51Z"
         },
         "tt7068946": {
           "contentId": "tt7068946",
@@ -1221,7 +1221,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 403.4519
+      "avgPlaybackProgress": 401.8821
     },
     {
       "userEmail": "liz-munera@hotmail.com",

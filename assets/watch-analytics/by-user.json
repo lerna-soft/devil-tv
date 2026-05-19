@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T04:44:10.752Z",
+  "generatedAt": "2026-05-19T04:46:07.556Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T04:44:02Z",
-      "totalEvents": 252,
-      "totalStarts": 150,
+      "updatedAt": "2026-05-19T04:45:57Z",
+      "totalEvents": 253,
+      "totalStarts": 151,
       "totalCompletions": 28,
       "totalPlaybackProgress": 103283.68983866191,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T04:44:02Z",
+      "lastActivityAt": "2026-05-19T04:45:57Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -43,6 +43,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt2140479": {
+          "contentId": "tt2140479",
+          "imdbId": "tt2140479",
+          "tmdbId": "302946",
+          "title": "El contable",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T04:45:57Z"
         },
         "tt14452776": {
           "contentId": "tt14452776",
@@ -235,18 +247,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:01:53Z"
-        },
-        "tt2140479": {
-          "contentId": "tt2140479",
-          "imdbId": "tt2140479",
-          "tmdbId": "302946",
-          "title": "El contable",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T20:44:26Z"
         },
         "tt11083552": {
           "contentId": "tt11083552",
@@ -1221,7 +1221,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 409.8559
+      "avgPlaybackProgress": 408.2359
     },
     {
       "userEmail": "liz-munera@hotmail.com",

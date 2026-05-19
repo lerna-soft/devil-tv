@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T16:54:09.985Z",
+  "generatedAt": "2026-05-19T17:04:29.693Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 334,
+  "totalEvents": 335,
   "totalStarts": 205,
-  "totalCompletions": 39,
-  "overallCompletionRate": 0.1902,
+  "totalCompletions": 40,
+  "overallCompletionRate": 0.1951,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -17,20 +17,20 @@
       "completionRate": 0.2414
     },
     {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 30,
+      "uniqueUsers": 1,
+      "completionRate": 0.5789
+    },
+    {
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
       "totalEvents": 30,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 29,
-      "uniqueUsers": 1,
-      "completionRate": 0.5263
     },
     {
       "contentId": "tt31596104",

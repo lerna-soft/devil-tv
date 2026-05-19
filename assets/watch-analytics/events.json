@@ -1,6 +1,69 @@
 {
-  "generatedAt": "2026-05-19T03:01:26.742Z",
+  "generatedAt": "2026-05-19T03:08:40.254Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1830617:s1e1:started:2026-05-19T03:08:28Z",
+      "contentId": "tt1830617",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1830617",
+      "tmdbId": "39351",
+      "title": "Grimm",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T03:08:27.142Z",
+      "completedAt": "PlayerStatus: playing",
+      "updatedAt": "2026-05-19T03:08:28Z"
+    },
+    {
+      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-19T03:03:36Z",
+      "contentId": "tt14452776",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T03:03:36Z"
+    },
+    {
+      "eventId": "unknown:tt14452776:s2e1:playing:2026-05-19T02:58:04Z",
+      "contentId": "tt14452776",
+      "episodeKey": "s2e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt14452776",
+      "tmdbId": "136315",
+      "title": "The Bear",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T02:58:04Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt29552248:s1e1:playing:2026-05-19T02:20:43Z",
       "contentId": "tt29552248",
@@ -23,7 +86,7 @@
       "updatedAt": "2026-05-19T02:20:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt34987195:s1e1:preference:2026-05-19T01:58:13Z",
+      "eventId": "unknown:tt34987195:s1e1:preference:2026-05-19T01:58:13Z",
       "contentId": "tt34987195",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -44,7 +107,7 @@
       "updatedAt": "2026-05-19T01:58:13Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt29871729:s1e1:preference:2026-05-19T01:58:11Z",
+      "eventId": "unknown:tt29871729:s1e1:preference:2026-05-19T01:58:11Z",
       "contentId": "tt29871729",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -65,7 +128,7 @@
       "updatedAt": "2026-05-19T01:58:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt16452664:s1e1:preference:2026-05-19T01:58:09Z",
+      "eventId": "unknown:tt16452664:s1e1:preference:2026-05-19T01:58:09Z",
       "contentId": "tt16452664",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -86,7 +149,7 @@
       "updatedAt": "2026-05-19T01:58:09Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt11506284:s1e1:preference:2026-05-19T01:58:08Z",
+      "eventId": "unknown:tt11506284:s1e1:preference:2026-05-19T01:58:08Z",
       "contentId": "tt11506284",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -107,7 +170,7 @@
       "updatedAt": "2026-05-19T01:58:08Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt9427166:s1e1:preference:2026-05-19T01:58:06Z",
+      "eventId": "unknown:tt9427166:s1e1:preference:2026-05-19T01:58:06Z",
       "contentId": "tt9427166",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -380,7 +443,7 @@
       "updatedAt": "2026-05-18T17:17:56Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0388629:s1e1:playing:2026-05-18T15:57:35Z",
+      "eventId": "unknown:tt0388629:s1e1:playing:2026-05-18T15:57:35Z",
       "contentId": "tt0388629",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -422,7 +485,7 @@
       "updatedAt": "2026-05-18T15:27:55Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt11570202:s1e1:preference:2026-05-18T14:55:34Z",
+      "eventId": "unknown:tt11570202:s1e1:preference:2026-05-18T14:55:34Z",
       "contentId": "tt11570202",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -443,7 +506,7 @@
       "updatedAt": "2026-05-18T14:55:34Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3513548:s1e1:preference:2026-05-18T14:26:12Z",
+      "eventId": "unknown:tt3513548:s1e1:preference:2026-05-18T14:26:12Z",
       "contentId": "tt3513548",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -464,7 +527,7 @@
       "updatedAt": "2026-05-18T14:26:12Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s2e1:playing:2026-05-18T13:43:17Z",
+      "eventId": "unknown:tt14452776:s2e1:playing:2026-05-18T13:43:17Z",
       "contentId": "tt14452776",
       "episodeKey": "s2e1",
       "userEmail": "henry8812@gmail.com",
@@ -485,7 +548,7 @@
       "updatedAt": "2026-05-18T13:43:17Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0914863:s1e1:preference:2026-05-18T13:26:03Z",
+      "eventId": "unknown:tt0914863:s1e1:preference:2026-05-18T13:26:03Z",
       "contentId": "tt0914863",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -506,7 +569,7 @@
       "updatedAt": "2026-05-18T13:26:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s2e1:playing:2026-05-18T04:33:19Z",
+      "eventId": "unknown:tt14452776:s2e1:playing:2026-05-18T04:33:19Z",
       "contentId": "tt14452776",
       "episodeKey": "s2e1",
       "userEmail": "henry8812@gmail.com",
@@ -527,7 +590,7 @@
       "updatedAt": "2026-05-18T04:33:19Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e8:playing:2026-05-18T04:16:03Z",
+      "eventId": "unknown:tt14452776:s1e8:playing:2026-05-18T04:16:03Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e8",
       "userEmail": "henry8812@gmail.com",
@@ -548,7 +611,7 @@
       "updatedAt": "2026-05-18T04:16:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e7:playing:2026-05-18T04:04:31Z",
+      "eventId": "unknown:tt14452776:s1e7:playing:2026-05-18T04:04:31Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -569,7 +632,7 @@
       "updatedAt": "2026-05-18T04:04:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:preference:2026-05-18T03:44:08Z",
+      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-18T03:44:08Z",
       "contentId": "tt29552248",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -611,7 +674,7 @@
       "updatedAt": "2026-05-18T01:26:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt17013106:s1e1:playing:2026-05-18T01:19:45Z",
+      "eventId": "unknown:tt17013106:s1e1:playing:2026-05-18T01:19:45Z",
       "contentId": "tt17013106",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -926,7 +989,7 @@
       "updatedAt": "2026-05-17T17:55:49Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2400463:s1e1:preference:2026-05-17T07:16:34Z",
+      "eventId": "unknown:tt2400463:s1e1:preference:2026-05-17T07:16:34Z",
       "contentId": "tt2400463",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -947,7 +1010,7 @@
       "updatedAt": "2026-05-17T07:16:34Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2400463:s1e1:playing:2026-05-17T07:16:13Z",
+      "eventId": "unknown:tt2400463:s1e1:playing:2026-05-17T07:16:13Z",
       "contentId": "tt2400463",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -968,7 +1031,7 @@
       "updatedAt": "2026-05-17T07:16:13Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0441773:s1e1:playing:2026-05-17T03:38:04Z",
+      "eventId": "unknown:tt0441773:s1e1:playing:2026-05-17T03:38:04Z",
       "contentId": "tt0441773",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -989,7 +1052,7 @@
       "updatedAt": "2026-05-17T03:38:04Z"
     },
     {
-      "eventId": "henry8812@gmail.com:296232:s1e7:playing:2026-05-16T21:35:06Z",
+      "eventId": "unknown:296232:s1e7:playing:2026-05-16T21:35:06Z",
       "contentId": "296232",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -1010,7 +1073,7 @@
       "updatedAt": "2026-05-16T21:35:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14966898:s1e1:preference:2026-05-16T21:01:53Z",
+      "eventId": "unknown:tt14966898:s1e1:preference:2026-05-16T21:01:53Z",
       "contentId": "tt14966898",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1031,7 +1094,7 @@
       "updatedAt": "2026-05-16T21:01:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14966898:s1e1:preference:2026-05-16T21:01:27Z",
+      "eventId": "unknown:tt14966898:s1e1:preference:2026-05-16T21:01:27Z",
       "contentId": "tt14966898",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1052,7 +1115,7 @@
       "updatedAt": "2026-05-16T21:01:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2140479:s1e1:playing:2026-05-16T20:44:26Z",
+      "eventId": "unknown:tt2140479:s1e1:playing:2026-05-16T20:44:26Z",
       "contentId": "tt2140479",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1073,7 +1136,7 @@
       "updatedAt": "2026-05-16T20:44:26Z"
     },
     {
-      "eventId": "henry8812@gmail.com:296232:s1e3:playing:2026-05-16T20:44:09Z",
+      "eventId": "unknown:296232:s1e3:playing:2026-05-16T20:44:09Z",
       "contentId": "296232",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -1094,7 +1157,7 @@
       "updatedAt": "2026-05-16T20:44:09Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt11083552:s1e1:preference:2026-05-16T18:40:24Z",
+      "eventId": "unknown:tt11083552:s1e1:preference:2026-05-16T18:40:24Z",
       "contentId": "tt11083552",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1115,7 +1178,7 @@
       "updatedAt": "2026-05-16T18:40:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14257582:s1e1:preference:2026-05-16T18:40:12Z",
+      "eventId": "unknown:tt14257582:s1e1:preference:2026-05-16T18:40:12Z",
       "contentId": "tt14257582",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1136,7 +1199,7 @@
       "updatedAt": "2026-05-16T18:40:12Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1586680:s1e1:preference:2026-05-16T18:38:54Z",
+      "eventId": "unknown:tt1586680:s1e1:preference:2026-05-16T18:38:54Z",
       "contentId": "tt1586680",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1157,7 +1220,7 @@
       "updatedAt": "2026-05-16T18:38:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt6143796:s1e1:preference:2026-05-16T18:36:34Z",
+      "eventId": "unknown:tt6143796:s1e1:preference:2026-05-16T18:36:34Z",
       "contentId": "tt6143796",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1178,7 +1241,7 @@
       "updatedAt": "2026-05-16T18:36:34Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt22022784:s1e1:playing:2026-05-16T18:22:24Z",
+      "eventId": "unknown:tt22022784:s1e1:playing:2026-05-16T18:22:24Z",
       "contentId": "tt22022784",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1199,7 +1262,7 @@
       "updatedAt": "2026-05-16T18:22:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2140479:s1e1:playing:2026-05-16T17:05:56Z",
+      "eventId": "unknown:tt2140479:s1e1:playing:2026-05-16T17:05:56Z",
       "contentId": "tt2140479",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1220,7 +1283,7 @@
       "updatedAt": "2026-05-16T17:05:56Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt26743760:s1e1:playing:2026-05-16T14:34:58Z",
+      "eventId": "unknown:tt26743760:s1e1:playing:2026-05-16T14:34:58Z",
       "contentId": "tt26743760",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1241,7 +1304,7 @@
       "updatedAt": "2026-05-16T14:34:58Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e7:playing:2026-05-16T14:18:28Z",
+      "eventId": "unknown:tt14452776:s1e7:playing:2026-05-16T14:18:28Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -1262,7 +1325,7 @@
       "updatedAt": "2026-05-16T14:18:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e6:playing:2026-05-16T14:10:54Z",
+      "eventId": "unknown:tt14452776:s1e6:playing:2026-05-16T14:10:54Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e6",
       "userEmail": "henry8812@gmail.com",
@@ -1283,7 +1346,7 @@
       "updatedAt": "2026-05-16T14:10:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0032186:s1e1:playing:2026-05-16T14:01:26Z",
+      "eventId": "unknown:tt0032186:s1e1:playing:2026-05-16T14:01:26Z",
       "contentId": "tt0032186",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1304,7 +1367,7 @@
       "updatedAt": "2026-05-16T14:01:26Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0032186:s1e1:playing:2026-05-16T09:06:41Z",
+      "eventId": "unknown:tt0032186:s1e1:playing:2026-05-16T09:06:41Z",
       "contentId": "tt0032186",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1325,7 +1388,7 @@
       "updatedAt": "2026-05-16T09:06:41Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0032186:s1e1:playing:2026-05-16T08:36:37Z",
+      "eventId": "unknown:tt0032186:s1e1:playing:2026-05-16T08:36:37Z",
       "contentId": "tt0032186",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1346,7 +1409,7 @@
       "updatedAt": "2026-05-16T08:36:37Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt26735622:s1e1:playing:2026-05-16T08:32:15Z",
+      "eventId": "unknown:tt26735622:s1e1:playing:2026-05-16T08:32:15Z",
       "contentId": "tt26735622",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1367,7 +1430,7 @@
       "updatedAt": "2026-05-16T08:32:15Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt8398600:s1e1:preference:2026-05-16T08:29:48Z",
+      "eventId": "unknown:tt8398600:s1e1:preference:2026-05-16T08:29:48Z",
       "contentId": "tt8398600",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1388,7 +1451,7 @@
       "updatedAt": "2026-05-16T08:29:48Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0114369:s1e1:preference:2026-05-16T08:23:00Z",
+      "eventId": "unknown:tt0114369:s1e1:preference:2026-05-16T08:23:00Z",
       "contentId": "tt0114369",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1409,7 +1472,7 @@
       "updatedAt": "2026-05-16T08:23:00Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0032186:s1e1:playing:2026-05-16T08:05:54Z",
+      "eventId": "unknown:tt0032186:s1e1:playing:2026-05-16T08:05:54Z",
       "contentId": "tt0032186",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1430,7 +1493,7 @@
       "updatedAt": "2026-05-16T08:05:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2140479:s1e1:preference:2026-05-16T07:52:30Z",
+      "eventId": "unknown:tt2140479:s1e1:preference:2026-05-16T07:52:30Z",
       "contentId": "tt2140479",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1451,7 +1514,7 @@
       "updatedAt": "2026-05-16T07:52:30Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt11247606:s1e1:preference:2026-05-16T07:52:01Z",
+      "eventId": "unknown:tt11247606:s1e1:preference:2026-05-16T07:52:01Z",
       "contentId": "tt11247606",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1472,7 +1535,7 @@
       "updatedAt": "2026-05-16T07:52:01Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0093870:s1e1:playing:2026-05-16T07:45:23Z",
+      "eventId": "unknown:tt0093870:s1e1:playing:2026-05-16T07:45:23Z",
       "contentId": "tt0093870",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1493,7 +1556,7 @@
       "updatedAt": "2026-05-16T07:45:23Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt21235248:s1e1:preference:2026-05-16T07:43:07Z",
+      "eventId": "unknown:tt21235248:s1e1:preference:2026-05-16T07:43:07Z",
       "contentId": "tt21235248",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1514,7 +1577,7 @@
       "updatedAt": "2026-05-16T07:43:07Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt4513678:s1e1:preference:2026-05-16T07:43:06Z",
+      "eventId": "unknown:tt4513678:s1e1:preference:2026-05-16T07:43:06Z",
       "contentId": "tt4513678",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1535,7 +1598,7 @@
       "updatedAt": "2026-05-16T07:43:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1289401:s1e1:preference:2026-05-16T07:43:05Z",
+      "eventId": "unknown:tt1289401:s1e1:preference:2026-05-16T07:43:05Z",
       "contentId": "tt1289401",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1556,7 +1619,7 @@
       "updatedAt": "2026-05-16T07:43:05Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0097428:s1e1:preference:2026-05-16T07:42:54Z",
+      "eventId": "unknown:tt0097428:s1e1:preference:2026-05-16T07:42:54Z",
       "contentId": "tt0097428",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1577,7 +1640,7 @@
       "updatedAt": "2026-05-16T07:42:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0090506:s1e1:preference:2026-05-16T07:42:53Z",
+      "eventId": "unknown:tt0090506:s1e1:preference:2026-05-16T07:42:53Z",
       "contentId": "tt0090506",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1598,7 +1661,7 @@
       "updatedAt": "2026-05-16T07:42:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0087332:s1e1:preference:2026-05-16T07:42:50Z",
+      "eventId": "unknown:tt0087332:s1e1:preference:2026-05-16T07:42:50Z",
       "contentId": "tt0087332",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1619,7 +1682,7 @@
       "updatedAt": "2026-05-16T07:42:50Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7068946:s1e1:preference:2026-05-16T07:42:23Z",
+      "eventId": "unknown:tt7068946:s1e1:preference:2026-05-16T07:42:23Z",
       "contentId": "tt7068946",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1640,7 +1703,7 @@
       "updatedAt": "2026-05-16T07:42:23Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt11247606:s1e1:preference:2026-05-16T07:42:20Z",
+      "eventId": "unknown:tt11247606:s1e1:preference:2026-05-16T07:42:20Z",
       "contentId": "tt11247606",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1661,7 +1724,7 @@
       "updatedAt": "2026-05-16T07:42:20Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1234721:s1e1:playing:2026-05-16T07:39:42Z",
+      "eventId": "unknown:tt1234721:s1e1:playing:2026-05-16T07:39:42Z",
       "contentId": "tt1234721",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1682,7 +1745,7 @@
       "updatedAt": "2026-05-16T07:39:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2911666:s1e1:completed:2026-05-16T07:38:27Z",
+      "eventId": "unknown:tt2911666:s1e1:completed:2026-05-16T07:38:27Z",
       "contentId": "tt2911666",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1703,7 +1766,7 @@
       "updatedAt": "2026-05-16T07:38:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2911666:s1e1:playing:2026-05-16T07:16:39Z",
+      "eventId": "unknown:tt2911666:s1e1:playing:2026-05-16T07:16:39Z",
       "contentId": "tt2911666",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1724,7 +1787,7 @@
       "updatedAt": "2026-05-16T07:16:39Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt10366206:s1e1:preference:2026-05-16T07:16:14Z",
+      "eventId": "unknown:tt10366206:s1e1:preference:2026-05-16T07:16:14Z",
       "contentId": "tt10366206",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1745,7 +1808,7 @@
       "updatedAt": "2026-05-16T07:16:14Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt6146586:s1e1:preference:2026-05-16T07:16:13Z",
+      "eventId": "unknown:tt6146586:s1e1:preference:2026-05-16T07:16:13Z",
       "contentId": "tt6146586",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1766,7 +1829,7 @@
       "updatedAt": "2026-05-16T07:16:13Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt4425200:s1e1:preference:2026-05-16T07:16:10Z",
+      "eventId": "unknown:tt4425200:s1e1:preference:2026-05-16T07:16:10Z",
       "contentId": "tt4425200",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1787,7 +1850,7 @@
       "updatedAt": "2026-05-16T07:16:10Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2911666:s1e1:preference:2026-05-16T07:16:08Z",
+      "eventId": "unknown:tt2911666:s1e1:preference:2026-05-16T07:16:08Z",
       "contentId": "tt2911666",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1808,7 +1871,7 @@
       "updatedAt": "2026-05-16T07:16:08Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1234721:s1e1:preference:2026-05-16T07:03:37Z",
+      "eventId": "unknown:tt1234721:s1e1:preference:2026-05-16T07:03:37Z",
       "contentId": "tt1234721",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1829,7 +1892,7 @@
       "updatedAt": "2026-05-16T07:03:37Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0107978:s1e1:preference:2026-05-16T07:03:27Z",
+      "eventId": "unknown:tt0107978:s1e1:preference:2026-05-16T07:03:27Z",
       "contentId": "tt0107978",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1850,7 +1913,7 @@
       "updatedAt": "2026-05-16T07:03:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0100502:s1e1:preference:2026-05-16T07:03:25Z",
+      "eventId": "unknown:tt0100502:s1e1:preference:2026-05-16T07:03:25Z",
       "contentId": "tt0100502",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1871,7 +1934,7 @@
       "updatedAt": "2026-05-16T07:03:25Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0093870:s1e1:preference:2026-05-16T07:03:24Z",
+      "eventId": "unknown:tt0093870:s1e1:preference:2026-05-16T07:03:24Z",
       "contentId": "tt0093870",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1892,7 +1955,7 @@
       "updatedAt": "2026-05-16T07:03:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt9288030:s1e1:preference:2026-05-16T07:02:41Z",
+      "eventId": "unknown:tt9288030:s1e1:preference:2026-05-16T07:02:41Z",
       "contentId": "tt9288030",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1913,7 +1976,7 @@
       "updatedAt": "2026-05-16T07:02:41Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3393786:s1e1:preference:2026-05-16T07:02:38Z",
+      "eventId": "unknown:tt3393786:s1e1:preference:2026-05-16T07:02:38Z",
       "contentId": "tt3393786",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1934,7 +1997,7 @@
       "updatedAt": "2026-05-16T07:02:38Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0790724:s1e1:preference:2026-05-16T07:02:28Z",
+      "eventId": "unknown:tt0790724:s1e1:preference:2026-05-16T07:02:28Z",
       "contentId": "tt0790724",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1955,7 +2018,7 @@
       "updatedAt": "2026-05-16T07:02:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt29268110:s1e1:preference:2026-05-16T07:02:11Z",
+      "eventId": "unknown:tt29268110:s1e1:preference:2026-05-16T07:02:11Z",
       "contentId": "tt29268110",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1976,7 +2039,7 @@
       "updatedAt": "2026-05-16T07:02:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2249007:s1e1:preference:2026-05-16T07:02:06Z",
+      "eventId": "unknown:tt2249007:s1e1:preference:2026-05-16T07:02:06Z",
       "contentId": "tt2249007",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -1997,7 +2060,7 @@
       "updatedAt": "2026-05-16T07:02:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt15880520:s1e1:preference:2026-05-16T07:00:49Z",
+      "eventId": "unknown:tt15880520:s1e1:preference:2026-05-16T07:00:49Z",
       "contentId": "tt15880520",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2018,7 +2081,7 @@
       "updatedAt": "2026-05-16T07:00:49Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7262882:s1e1:preference:2026-05-16T06:59:32Z",
+      "eventId": "unknown:tt7262882:s1e1:preference:2026-05-16T06:59:32Z",
       "contentId": "tt7262882",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2039,7 +2102,7 @@
       "updatedAt": "2026-05-16T06:59:32Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt21028848:s1e1:preference:2026-05-16T06:59:29Z",
+      "eventId": "unknown:tt21028848:s1e1:preference:2026-05-16T06:59:29Z",
       "contentId": "tt21028848",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2060,7 +2123,7 @@
       "updatedAt": "2026-05-16T06:59:29Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt38682795:s1e1:preference:2026-05-16T06:59:27Z",
+      "eventId": "unknown:tt38682795:s1e1:preference:2026-05-16T06:59:27Z",
       "contentId": "tt38682795",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2081,7 +2144,7 @@
       "updatedAt": "2026-05-16T06:59:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt33456991:s1e1:preference:2026-05-16T06:59:24Z",
+      "eventId": "unknown:tt33456991:s1e1:preference:2026-05-16T06:59:24Z",
       "contentId": "tt33456991",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2102,7 +2165,7 @@
       "updatedAt": "2026-05-16T06:59:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2888046:s1e1:preference:2026-05-16T06:59:22Z",
+      "eventId": "unknown:tt2888046:s1e1:preference:2026-05-16T06:59:22Z",
       "contentId": "tt2888046",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2123,7 +2186,7 @@
       "updatedAt": "2026-05-16T06:59:22Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1386932:s1e1:preference:2026-05-16T06:59:19Z",
+      "eventId": "unknown:tt1386932:s1e1:preference:2026-05-16T06:59:19Z",
       "contentId": "tt1386932",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2144,7 +2207,7 @@
       "updatedAt": "2026-05-16T06:59:19Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2076298:s1e1:preference:2026-05-16T06:59:19Z",
+      "eventId": "unknown:tt2076298:s1e1:preference:2026-05-16T06:59:19Z",
       "contentId": "tt2076298",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2165,7 +2228,7 @@
       "updatedAt": "2026-05-16T06:59:19Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1220719:s1e1:preference:2026-05-16T06:59:18Z",
+      "eventId": "unknown:tt1220719:s1e1:preference:2026-05-16T06:59:18Z",
       "contentId": "tt1220719",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2186,7 +2249,7 @@
       "updatedAt": "2026-05-16T06:59:18Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0386005:s1e1:preference:2026-05-16T06:59:03Z",
+      "eventId": "unknown:tt0386005:s1e1:preference:2026-05-16T06:59:03Z",
       "contentId": "tt0386005",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2207,7 +2270,7 @@
       "updatedAt": "2026-05-16T06:59:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2599716:s1e1:preference:2026-05-16T06:59:01Z",
+      "eventId": "unknown:tt2599716:s1e1:preference:2026-05-16T06:59:01Z",
       "contentId": "tt2599716",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2228,7 +2291,7 @@
       "updatedAt": "2026-05-16T06:59:01Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0104558:s1e1:preference:2026-05-16T06:59:00Z",
+      "eventId": "unknown:tt0104558:s1e1:preference:2026-05-16T06:59:00Z",
       "contentId": "tt0104558",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2249,7 +2312,7 @@
       "updatedAt": "2026-05-16T06:59:00Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0095403:s1e1:preference:2026-05-16T06:58:59Z",
+      "eventId": "unknown:tt0095403:s1e1:preference:2026-05-16T06:58:59Z",
       "contentId": "tt0095403",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2270,7 +2333,7 @@
       "updatedAt": "2026-05-16T06:58:59Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0089374:s1e1:preference:2026-05-16T06:58:57Z",
+      "eventId": "unknown:tt0089374:s1e1:preference:2026-05-16T06:58:57Z",
       "contentId": "tt0089374",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2291,7 +2354,7 @@
       "updatedAt": "2026-05-16T06:58:57Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0069620:s1e1:preference:2026-05-16T06:58:56Z",
+      "eventId": "unknown:tt0069620:s1e1:preference:2026-05-16T06:58:56Z",
       "contentId": "tt0069620",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2312,7 +2375,7 @@
       "updatedAt": "2026-05-16T06:58:56Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0069620:s1e1:preference:2026-05-16T06:58:54Z",
+      "eventId": "unknown:tt0069620:s1e1:preference:2026-05-16T06:58:54Z",
       "contentId": "tt0069620",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2333,7 +2396,7 @@
       "updatedAt": "2026-05-16T06:58:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0103950:s1e1:playing:2026-05-16T06:57:15Z",
+      "eventId": "unknown:tt0103950:s1e1:playing:2026-05-16T06:57:15Z",
       "contentId": "tt0103950",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2354,7 +2417,7 @@
       "updatedAt": "2026-05-16T06:57:15Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0103950:s1e1:preference:2026-05-16T06:53:42Z",
+      "eventId": "unknown:tt0103950:s1e1:preference:2026-05-16T06:53:42Z",
       "contentId": "tt0103950",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2375,7 +2438,7 @@
       "updatedAt": "2026-05-16T06:53:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1422020:s1e1:preference:2026-05-16T06:12:17Z",
+      "eventId": "unknown:tt1422020:s1e1:preference:2026-05-16T06:12:17Z",
       "contentId": "tt1422020",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2396,7 +2459,7 @@
       "updatedAt": "2026-05-16T06:12:17Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt32916440:s1e1:preference:2026-05-16T05:50:54Z",
+      "eventId": "unknown:tt32916440:s1e1:preference:2026-05-16T05:50:54Z",
       "contentId": "tt32916440",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2417,7 +2480,7 @@
       "updatedAt": "2026-05-16T05:50:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt33046197:s1e1:preference:2026-05-16T05:50:49Z",
+      "eventId": "unknown:tt33046197:s1e1:preference:2026-05-16T05:50:49Z",
       "contentId": "tt33046197",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2438,7 +2501,7 @@
       "updatedAt": "2026-05-16T05:50:49Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt26735622:s1e1:preference:2026-05-16T05:50:44Z",
+      "eventId": "unknown:tt26735622:s1e1:preference:2026-05-16T05:50:44Z",
       "contentId": "tt26735622",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2459,7 +2522,7 @@
       "updatedAt": "2026-05-16T05:50:44Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt37989803:s1e1:preference:2026-05-16T05:50:43Z",
+      "eventId": "unknown:tt37989803:s1e1:preference:2026-05-16T05:50:43Z",
       "contentId": "tt37989803",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2480,7 +2543,7 @@
       "updatedAt": "2026-05-16T05:50:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt27331527:s1e1:preference:2026-05-16T05:50:40Z",
+      "eventId": "unknown:tt27331527:s1e1:preference:2026-05-16T05:50:40Z",
       "contentId": "tt27331527",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2501,7 +2564,7 @@
       "updatedAt": "2026-05-16T05:50:40Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7587890:s1e1:preference:2026-05-16T05:26:06Z",
+      "eventId": "unknown:tt7587890:s1e1:preference:2026-05-16T05:26:06Z",
       "contentId": "tt7587890",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2522,7 +2585,7 @@
       "updatedAt": "2026-05-16T05:26:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt36104233:s1e1:preference:2026-05-16T05:21:40Z",
+      "eventId": "unknown:tt36104233:s1e1:preference:2026-05-16T05:21:40Z",
       "contentId": "tt36104233",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2543,7 +2606,7 @@
       "updatedAt": "2026-05-16T05:21:40Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0365847:s1e1:preference:2026-05-16T05:21:39Z",
+      "eventId": "unknown:tt0365847:s1e1:preference:2026-05-16T05:21:39Z",
       "contentId": "tt0365847",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2564,7 +2627,7 @@
       "updatedAt": "2026-05-16T05:21:39Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0356910:s1e1:preference:2026-05-16T05:21:38Z",
+      "eventId": "unknown:tt0356910:s1e1:preference:2026-05-16T05:21:38Z",
       "contentId": "tt0356910",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2585,7 +2648,7 @@
       "updatedAt": "2026-05-16T05:21:38Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1318514:s1e1:preference:2026-05-16T05:21:37Z",
+      "eventId": "unknown:tt1318514:s1e1:preference:2026-05-16T05:21:37Z",
       "contentId": "tt1318514",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2606,7 +2669,7 @@
       "updatedAt": "2026-05-16T05:21:37Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:preference:2026-05-16T05:21:35Z",
+      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-16T05:21:35Z",
       "contentId": "tt29552248",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2627,7 +2690,7 @@
       "updatedAt": "2026-05-16T05:21:35Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt35521922:s1e1:preference:2026-05-16T05:20:52Z",
+      "eventId": "unknown:tt35521922:s1e1:preference:2026-05-16T05:20:52Z",
       "contentId": "tt35521922",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2648,7 +2711,7 @@
       "updatedAt": "2026-05-16T05:20:52Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:preference:2026-05-16T05:17:42Z",
+      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-16T05:17:42Z",
       "contentId": "tt29552248",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2669,7 +2732,7 @@
       "updatedAt": "2026-05-16T05:17:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt27486290:s1e1:preference:2026-05-16T05:17:40Z",
+      "eventId": "unknown:tt27486290:s1e1:preference:2026-05-16T05:17:40Z",
       "contentId": "tt27486290",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2690,7 +2753,7 @@
       "updatedAt": "2026-05-16T05:17:40Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e1:preference:2026-05-16T05:17:00Z",
+      "eventId": "unknown:tt14452776:s1e1:preference:2026-05-16T05:17:00Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2711,7 +2774,7 @@
       "updatedAt": "2026-05-16T05:17:00Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt35521922:s1e1:playing:2026-05-16T02:33:00Z",
+      "eventId": "unknown:tt35521922:s1e1:playing:2026-05-16T02:33:00Z",
       "contentId": "tt35521922",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2732,7 +2795,7 @@
       "updatedAt": "2026-05-16T02:33:00Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt12042730:s1e1:playing:2026-05-16T01:57:30Z",
+      "eventId": "unknown:tt12042730:s1e1:playing:2026-05-16T01:57:30Z",
       "contentId": "tt12042730",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2753,7 +2816,7 @@
       "updatedAt": "2026-05-16T01:57:30Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7587890:s8e2:playing:2026-05-16T01:54:24Z",
+      "eventId": "unknown:tt7587890:s8e2:playing:2026-05-16T01:54:24Z",
       "contentId": "tt7587890",
       "episodeKey": "s8e2",
       "userEmail": "henry8812@gmail.com",
@@ -2774,7 +2837,7 @@
       "updatedAt": "2026-05-16T01:54:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7587890:s8e1:completed:2026-05-16T01:54:22Z",
+      "eventId": "unknown:tt7587890:s8e1:completed:2026-05-16T01:54:22Z",
       "contentId": "tt7587890",
       "episodeKey": "s8e1",
       "userEmail": "henry8812@gmail.com",
@@ -2795,7 +2858,7 @@
       "updatedAt": "2026-05-16T01:54:22Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt7587890:s8e1:playing:2026-05-16T01:50:51Z",
+      "eventId": "unknown:tt7587890:s8e1:playing:2026-05-16T01:50:51Z",
       "contentId": "tt7587890",
       "episodeKey": "s8e1",
       "userEmail": "henry8812@gmail.com",
@@ -2816,7 +2879,7 @@
       "updatedAt": "2026-05-16T01:50:51Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31938062:s2e15:playing:2026-05-16T01:46:08Z",
+      "eventId": "unknown:tt31938062:s2e15:playing:2026-05-16T01:46:08Z",
       "contentId": "tt31938062",
       "episodeKey": "s2e15",
       "userEmail": "henry8812@gmail.com",
@@ -2837,7 +2900,7 @@
       "updatedAt": "2026-05-16T01:46:08Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31938062:s2e15:playing:2026-05-16T00:54:51Z",
+      "eventId": "unknown:tt31938062:s2e15:playing:2026-05-16T00:54:51Z",
       "contentId": "tt31938062",
       "episodeKey": "s2e15",
       "userEmail": "henry8812@gmail.com",
@@ -2858,7 +2921,7 @@
       "updatedAt": "2026-05-16T00:54:51Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt26753003:s1e1:playing:2026-05-15T23:14:38Z",
+      "eventId": "unknown:tt26753003:s1e1:playing:2026-05-15T23:14:38Z",
       "contentId": "tt26753003",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -2879,7 +2942,7 @@
       "updatedAt": "2026-05-15T23:14:38Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e7:playing:2026-05-15T22:27:19Z",
+      "eventId": "unknown:tt14452776:s1e7:playing:2026-05-15T22:27:19Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -2900,7 +2963,7 @@
       "updatedAt": "2026-05-15T22:27:19Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e7:playing:2026-05-15T20:43:46Z",
+      "eventId": "unknown:tt14452776:s1e7:playing:2026-05-15T20:43:46Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -2921,7 +2984,7 @@
       "updatedAt": "2026-05-15T20:43:46Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e6:completed:2026-05-15T20:43:44Z",
+      "eventId": "unknown:tt14452776:s1e6:completed:2026-05-15T20:43:44Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e6",
       "userEmail": "henry8812@gmail.com",
@@ -2942,7 +3005,7 @@
       "updatedAt": "2026-05-15T20:43:44Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e6:playing:2026-05-15T20:39:35Z",
+      "eventId": "unknown:tt14452776:s1e6:playing:2026-05-15T20:39:35Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e6",
       "userEmail": "henry8812@gmail.com",
@@ -2963,7 +3026,7 @@
       "updatedAt": "2026-05-15T20:39:35Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e5:playing:2026-05-15T20:24:23Z",
+      "eventId": "unknown:tt14452776:s1e5:playing:2026-05-15T20:24:23Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e5",
       "userEmail": "henry8812@gmail.com",
@@ -2984,7 +3047,7 @@
       "updatedAt": "2026-05-15T20:24:23Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e5:playing:2026-05-15T18:38:58Z",
+      "eventId": "unknown:tt14452776:s1e5:playing:2026-05-15T18:38:58Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e5",
       "userEmail": "henry8812@gmail.com",
@@ -3005,7 +3068,7 @@
       "updatedAt": "2026-05-15T18:38:58Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e4:completed:2026-05-15T18:38:55Z",
+      "eventId": "unknown:tt14452776:s1e4:completed:2026-05-15T18:38:55Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e4",
       "userEmail": "henry8812@gmail.com",
@@ -3026,7 +3089,7 @@
       "updatedAt": "2026-05-15T18:38:55Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e4:playing:2026-05-15T18:24:15Z",
+      "eventId": "unknown:tt14452776:s1e4:playing:2026-05-15T18:24:15Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e4",
       "userEmail": "henry8812@gmail.com",
@@ -3047,7 +3110,7 @@
       "updatedAt": "2026-05-15T18:24:15Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e3:completed:2026-05-15T18:24:11Z",
+      "eventId": "unknown:tt14452776:s1e3:completed:2026-05-15T18:24:11Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -3068,7 +3131,7 @@
       "updatedAt": "2026-05-15T18:24:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e3:playing:2026-05-15T18:11:43Z",
+      "eventId": "unknown:tt14452776:s1e3:playing:2026-05-15T18:11:43Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -3089,7 +3152,7 @@
       "updatedAt": "2026-05-15T18:11:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e3:playing:2026-05-15T15:23:42Z",
+      "eventId": "unknown:tt14452776:s1e3:playing:2026-05-15T15:23:42Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -3110,7 +3173,7 @@
       "updatedAt": "2026-05-15T15:23:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e3:playing:2026-05-15T11:38:44Z",
+      "eventId": "unknown:tt14452776:s1e3:playing:2026-05-15T11:38:44Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -3131,7 +3194,7 @@
       "updatedAt": "2026-05-15T11:38:44Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e2:completed:2026-05-15T11:38:41Z",
+      "eventId": "unknown:tt14452776:s1e2:completed:2026-05-15T11:38:41Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e2",
       "userEmail": "henry8812@gmail.com",
@@ -3152,7 +3215,7 @@
       "updatedAt": "2026-05-15T11:38:41Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e2:playing:2026-05-15T11:27:27Z",
+      "eventId": "unknown:tt14452776:s1e2:playing:2026-05-15T11:27:27Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e2",
       "userEmail": "henry8812@gmail.com",
@@ -3173,7 +3236,7 @@
       "updatedAt": "2026-05-15T11:27:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e1:completed:2026-05-15T11:27:24Z",
+      "eventId": "unknown:tt14452776:s1e1:completed:2026-05-15T11:27:24Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3194,7 +3257,7 @@
       "updatedAt": "2026-05-15T11:27:24Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e1:playing:2026-05-15T11:23:03Z",
+      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-15T11:23:03Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3215,7 +3278,7 @@
       "updatedAt": "2026-05-15T11:23:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0259141:s1e2:playing:2026-05-15T04:23:29Z",
+      "eventId": "unknown:tt0259141:s1e2:playing:2026-05-15T04:23:29Z",
       "contentId": "tt0259141",
       "episodeKey": "s1e2",
       "userEmail": "henry8812@gmail.com",
@@ -3236,7 +3299,7 @@
       "updatedAt": "2026-05-15T04:23:29Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0259141:s1e1:completed:2026-05-15T04:23:27Z",
+      "eventId": "unknown:tt0259141:s1e1:completed:2026-05-15T04:23:27Z",
       "contentId": "tt0259141",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3257,7 +3320,7 @@
       "updatedAt": "2026-05-15T04:23:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0259141:s1e1:playing:2026-05-15T04:20:20Z",
+      "eventId": "unknown:tt0259141:s1e1:playing:2026-05-15T04:20:20Z",
       "contentId": "tt0259141",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3320,7 +3383,7 @@
       "updatedAt": "2026-05-14T20:27:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0259141:s1e1:playing:2026-05-14T19:38:48Z",
+      "eventId": "unknown:tt0259141:s1e1:playing:2026-05-14T19:38:48Z",
       "contentId": "tt0259141",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3341,7 +3404,7 @@
       "updatedAt": "2026-05-14T19:38:48Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e12:playing:2026-05-14T19:21:17Z",
+      "eventId": "unknown:tt31596104:s1e12:playing:2026-05-14T19:21:17Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e12",
       "userEmail": "henry8812@gmail.com",
@@ -3383,7 +3446,7 @@
       "updatedAt": "2026-05-14T19:20:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e7:playing:2026-05-14T19:20:10Z",
+      "eventId": "unknown:tt1190634:s5e7:playing:2026-05-14T19:20:10Z",
       "contentId": "tt1190634",
       "episodeKey": "s5e7",
       "userEmail": "henry8812@gmail.com",
@@ -3404,7 +3467,7 @@
       "updatedAt": "2026-05-14T19:20:10Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e7:playing:2026-05-14T18:50:07Z",
+      "eventId": "unknown:tt1190634:s5e7:playing:2026-05-14T18:50:07Z",
       "contentId": "tt1190634",
       "episodeKey": "s5e7",
       "userEmail": "henry8812@gmail.com",
@@ -3425,7 +3488,7 @@
       "updatedAt": "2026-05-14T18:50:07Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s1e7:playing:2026-05-14T18:49:05Z",
+      "eventId": "unknown:tt1190634:s1e7:playing:2026-05-14T18:49:05Z",
       "contentId": "tt1190634",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -3467,7 +3530,7 @@
       "updatedAt": "2026-05-14T17:42:32Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt16431870:s1e1:playing:2026-05-14T17:21:06Z",
+      "eventId": "unknown:tt16431870:s1e1:playing:2026-05-14T17:21:06Z",
       "contentId": "tt16431870",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3488,7 +3551,7 @@
       "updatedAt": "2026-05-14T17:21:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt16431870:s1e1:playing:2026-05-14T16:51:02Z",
+      "eventId": "unknown:tt16431870:s1e1:playing:2026-05-14T16:51:02Z",
       "contentId": "tt16431870",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3509,7 +3572,7 @@
       "updatedAt": "2026-05-14T16:51:02Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e7:playing:2026-05-14T13:19:06Z",
+      "eventId": "unknown:tt1190634:s5e7:playing:2026-05-14T13:19:06Z",
       "contentId": "tt1190634",
       "episodeKey": "s5e7",
       "userEmail": "henry8812@gmail.com",
@@ -3530,7 +3593,7 @@
       "updatedAt": "2026-05-14T13:19:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s1e8:playing:2026-05-14T12:16:18Z",
+      "eventId": "unknown:tt1190634:s1e8:playing:2026-05-14T12:16:18Z",
       "contentId": "tt1190634",
       "episodeKey": "s1e8",
       "userEmail": "henry8812@gmail.com",
@@ -3551,7 +3614,7 @@
       "updatedAt": "2026-05-14T12:16:18Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt33332385:s1e1:playing:2026-05-14T11:43:48Z",
+      "eventId": "unknown:tt33332385:s1e1:playing:2026-05-14T11:43:48Z",
       "contentId": "tt33332385",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3572,7 +3635,7 @@
       "updatedAt": "2026-05-14T11:43:48Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1190634:s1e8:playing:2026-05-14T07:30:39Z",
+      "eventId": "unknown:tt1190634:s1e8:playing:2026-05-14T07:30:39Z",
       "contentId": "tt1190634",
       "episodeKey": "s1e8",
       "userEmail": "henry8812@gmail.com",
@@ -3593,7 +3656,7 @@
       "updatedAt": "2026-05-14T07:30:39Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e12:playing:2026-05-14T07:06:56Z",
+      "eventId": "unknown:tt31596104:s1e12:playing:2026-05-14T07:06:56Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e12",
       "userEmail": "henry8812@gmail.com",
@@ -3614,7 +3677,7 @@
       "updatedAt": "2026-05-14T07:06:56Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e11:completed:2026-05-14T07:06:51Z",
+      "eventId": "unknown:tt31596104:s1e11:completed:2026-05-14T07:06:51Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e11",
       "userEmail": "henry8812@gmail.com",
@@ -3635,7 +3698,7 @@
       "updatedAt": "2026-05-14T07:06:51Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e11:playing:2026-05-14T07:00:54Z",
+      "eventId": "unknown:tt31596104:s1e11:playing:2026-05-14T07:00:54Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e11",
       "userEmail": "henry8812@gmail.com",
@@ -3656,7 +3719,7 @@
       "updatedAt": "2026-05-14T07:00:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e10:completed:2026-05-14T07:00:49Z",
+      "eventId": "unknown:tt31596104:s1e10:completed:2026-05-14T07:00:49Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e10",
       "userEmail": "henry8812@gmail.com",
@@ -3677,7 +3740,7 @@
       "updatedAt": "2026-05-14T07:00:49Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e10:playing:2026-05-14T06:56:48Z",
+      "eventId": "unknown:tt31596104:s1e10:playing:2026-05-14T06:56:48Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e10",
       "userEmail": "henry8812@gmail.com",
@@ -3698,7 +3761,7 @@
       "updatedAt": "2026-05-14T06:56:48Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e9:completed:2026-05-14T06:56:43Z",
+      "eventId": "unknown:tt31596104:s1e9:completed:2026-05-14T06:56:43Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e9",
       "userEmail": "henry8812@gmail.com",
@@ -3719,7 +3782,7 @@
       "updatedAt": "2026-05-14T06:56:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e9:playing:2026-05-14T06:53:04Z",
+      "eventId": "unknown:tt31596104:s1e9:playing:2026-05-14T06:53:04Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e9",
       "userEmail": "henry8812@gmail.com",
@@ -3740,7 +3803,7 @@
       "updatedAt": "2026-05-14T06:53:04Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e8:completed:2026-05-14T06:52:59Z",
+      "eventId": "unknown:tt31596104:s1e8:completed:2026-05-14T06:52:59Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e8",
       "userEmail": "henry8812@gmail.com",
@@ -3761,7 +3824,7 @@
       "updatedAt": "2026-05-14T06:52:59Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e8:playing:2026-05-14T06:42:51Z",
+      "eventId": "unknown:tt31596104:s1e8:playing:2026-05-14T06:42:51Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e8",
       "userEmail": "henry8812@gmail.com",
@@ -3782,7 +3845,7 @@
       "updatedAt": "2026-05-14T06:42:51Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e7:completed:2026-05-14T06:42:46Z",
+      "eventId": "unknown:tt31596104:s1e7:completed:2026-05-14T06:42:46Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -3803,7 +3866,7 @@
       "updatedAt": "2026-05-14T06:42:46Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e7:playing:2026-05-14T06:37:16Z",
+      "eventId": "unknown:tt31596104:s1e7:playing:2026-05-14T06:37:16Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e7",
       "userEmail": "henry8812@gmail.com",
@@ -3824,7 +3887,7 @@
       "updatedAt": "2026-05-14T06:37:16Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e6:playing:2026-05-14T06:31:28Z",
+      "eventId": "unknown:tt31596104:s1e6:playing:2026-05-14T06:31:28Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e6",
       "userEmail": "henry8812@gmail.com",
@@ -3845,7 +3908,7 @@
       "updatedAt": "2026-05-14T06:31:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt34610311:s1e1:playing:2026-05-14T06:31:09Z",
+      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-14T06:31:09Z",
       "contentId": "tt34610311",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3866,7 +3929,7 @@
       "updatedAt": "2026-05-14T06:31:09Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e6:playing:2026-05-14T05:54:58Z",
+      "eventId": "unknown:tt31596104:s1e6:playing:2026-05-14T05:54:58Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e6",
       "userEmail": "henry8812@gmail.com",
@@ -3887,7 +3950,7 @@
       "updatedAt": "2026-05-14T05:54:58Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e5:completed:2026-05-14T05:54:53Z",
+      "eventId": "unknown:tt31596104:s1e5:completed:2026-05-14T05:54:53Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e5",
       "userEmail": "henry8812@gmail.com",
@@ -3908,7 +3971,7 @@
       "updatedAt": "2026-05-14T05:54:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e5:playing:2026-05-14T05:50:47Z",
+      "eventId": "unknown:tt31596104:s1e5:playing:2026-05-14T05:50:47Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e5",
       "userEmail": "henry8812@gmail.com",
@@ -3929,7 +3992,7 @@
       "updatedAt": "2026-05-14T05:50:47Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e4:completed:2026-05-14T05:50:42Z",
+      "eventId": "unknown:tt31596104:s1e4:completed:2026-05-14T05:50:42Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e4",
       "userEmail": "henry8812@gmail.com",
@@ -3950,7 +4013,7 @@
       "updatedAt": "2026-05-14T05:50:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e4:playing:2026-05-14T05:43:47Z",
+      "eventId": "unknown:tt31596104:s1e4:playing:2026-05-14T05:43:47Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e4",
       "userEmail": "henry8812@gmail.com",
@@ -3971,7 +4034,7 @@
       "updatedAt": "2026-05-14T05:43:47Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt4158110:s1e1:playing:2026-05-14T03:41:41Z",
+      "eventId": "unknown:tt4158110:s1e1:playing:2026-05-14T03:41:41Z",
       "contentId": "tt4158110",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -3992,7 +4055,7 @@
       "updatedAt": "2026-05-14T03:41:41Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e4:playing:2026-05-14T01:28:07Z",
+      "eventId": "unknown:tt31596104:s1e4:playing:2026-05-14T01:28:07Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e4",
       "userEmail": "henry8812@gmail.com",
@@ -4013,7 +4076,7 @@
       "updatedAt": "2026-05-14T01:28:07Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e3:completed:2026-05-14T01:28:05Z",
+      "eventId": "unknown:tt31596104:s1e3:completed:2026-05-14T01:28:05Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -4034,7 +4097,7 @@
       "updatedAt": "2026-05-14T01:28:05Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e3:playing:2026-05-14T01:19:09Z",
+      "eventId": "unknown:tt31596104:s1e3:playing:2026-05-14T01:19:09Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e3",
       "userEmail": "henry8812@gmail.com",
@@ -4055,7 +4118,7 @@
       "updatedAt": "2026-05-14T01:19:09Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e2:completed:2026-05-14T01:19:04Z",
+      "eventId": "unknown:tt31596104:s1e2:completed:2026-05-14T01:19:04Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e2",
       "userEmail": "henry8812@gmail.com",
@@ -4076,7 +4139,7 @@
       "updatedAt": "2026-05-14T01:19:04Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e2:playing:2026-05-14T01:10:47Z",
+      "eventId": "unknown:tt31596104:s1e2:playing:2026-05-14T01:10:47Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e2",
       "userEmail": "henry8812@gmail.com",
@@ -4097,7 +4160,7 @@
       "updatedAt": "2026-05-14T01:10:47Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e1:completed:2026-05-14T01:10:42Z",
+      "eventId": "unknown:tt31596104:s1e1:completed:2026-05-14T01:10:42Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4118,7 +4181,7 @@
       "updatedAt": "2026-05-14T01:10:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt31596104:s1e1:playing:2026-05-13T23:28:26Z",
+      "eventId": "unknown:tt31596104:s1e1:playing:2026-05-13T23:28:26Z",
       "contentId": "tt31596104",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4139,7 +4202,7 @@
       "updatedAt": "2026-05-13T23:28:26Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e16:playing:2026-05-13T21:10:31Z",
+      "eventId": "unknown:tt1632701:s3e16:playing:2026-05-13T21:10:31Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e16",
       "userEmail": "henry8812@gmail.com",
@@ -4160,7 +4223,7 @@
       "updatedAt": "2026-05-13T21:10:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e15:completed:2026-05-13T21:10:29Z",
+      "eventId": "unknown:tt1632701:s3e15:completed:2026-05-13T21:10:29Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e15",
       "userEmail": "henry8812@gmail.com",
@@ -4181,7 +4244,7 @@
       "updatedAt": "2026-05-13T21:10:29Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e15:playing:2026-05-13T21:09:53Z",
+      "eventId": "unknown:tt1632701:s3e15:playing:2026-05-13T21:09:53Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e15",
       "userEmail": "henry8812@gmail.com",
@@ -4202,7 +4265,7 @@
       "updatedAt": "2026-05-13T21:09:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e14:playing:2026-05-13T21:09:32Z",
+      "eventId": "unknown:tt1632701:s3e14:playing:2026-05-13T21:09:32Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e14",
       "userEmail": "henry8812@gmail.com",
@@ -4223,7 +4286,7 @@
       "updatedAt": "2026-05-13T21:09:32Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e13:playing:2026-05-13T21:09:16Z",
+      "eventId": "unknown:tt1632701:s3e13:playing:2026-05-13T21:09:16Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e13",
       "userEmail": "henry8812@gmail.com",
@@ -4244,7 +4307,7 @@
       "updatedAt": "2026-05-13T21:09:16Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e12:playing:2026-05-13T21:08:18Z",
+      "eventId": "unknown:tt1632701:s3e12:playing:2026-05-13T21:08:18Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e12",
       "userEmail": "henry8812@gmail.com",
@@ -4265,7 +4328,7 @@
       "updatedAt": "2026-05-13T21:08:18Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e11:playing:2026-05-13T21:07:57Z",
+      "eventId": "unknown:tt1632701:s3e11:playing:2026-05-13T21:07:57Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e11",
       "userEmail": "henry8812@gmail.com",
@@ -4286,7 +4349,7 @@
       "updatedAt": "2026-05-13T21:07:57Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e10:playing:2026-05-13T21:07:41Z",
+      "eventId": "unknown:tt1632701:s3e10:playing:2026-05-13T21:07:41Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e10",
       "userEmail": "henry8812@gmail.com",
@@ -4307,7 +4370,7 @@
       "updatedAt": "2026-05-13T21:07:41Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e1:playing:2026-05-13T21:07:28Z",
+      "eventId": "unknown:tt1632701:s3e1:playing:2026-05-13T21:07:28Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e1",
       "userEmail": "henry8812@gmail.com",
@@ -4328,7 +4391,7 @@
       "updatedAt": "2026-05-13T21:07:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s2e16:playing:2026-05-13T21:07:21Z",
+      "eventId": "unknown:tt1632701:s2e16:playing:2026-05-13T21:07:21Z",
       "contentId": "tt1632701",
       "episodeKey": "s2e16",
       "userEmail": "henry8812@gmail.com",
@@ -4349,7 +4412,7 @@
       "updatedAt": "2026-05-13T21:07:21Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt15940132:s1e1:playing:2026-05-13T20:53:48Z",
+      "eventId": "unknown:tt15940132:s1e1:playing:2026-05-13T20:53:48Z",
       "contentId": "tt15940132",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4391,7 +4454,7 @@
       "updatedAt": "2026-05-13T17:00:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt15940132:s1e1:playing:2026-05-13T16:39:39Z",
+      "eventId": "unknown:tt15940132:s1e1:playing:2026-05-13T16:39:39Z",
       "contentId": "tt15940132",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4412,7 +4475,7 @@
       "updatedAt": "2026-05-13T16:39:39Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e1:playing:2026-05-13T16:35:27Z",
+      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-13T16:35:27Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4433,7 +4496,7 @@
       "updatedAt": "2026-05-13T16:35:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt14452776:s1e1:playing:2026-05-13T15:11:31Z",
+      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-13T15:11:31Z",
       "contentId": "tt14452776",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4454,7 +4517,7 @@
       "updatedAt": "2026-05-13T15:11:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1416765:s1e1:playing:2026-05-13T11:16:27Z",
+      "eventId": "unknown:tt1416765:s1e1:playing:2026-05-13T11:16:27Z",
       "contentId": "tt1416765",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4475,7 +4538,7 @@
       "updatedAt": "2026-05-13T11:16:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s2e16:playing:2026-05-13T03:28:30Z",
+      "eventId": "unknown:tt1632701:s2e16:playing:2026-05-13T03:28:30Z",
       "contentId": "tt1632701",
       "episodeKey": "s2e16",
       "userEmail": "henry8812@gmail.com",
@@ -4496,7 +4559,7 @@
       "updatedAt": "2026-05-13T03:28:30Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0472219:s1e1:playing:2026-05-13T00:06:12Z",
+      "eventId": "unknown:tt0472219:s1e1:playing:2026-05-13T00:06:12Z",
       "contentId": "tt0472219",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4538,7 +4601,7 @@
       "updatedAt": "2026-05-12T23:59:08Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0472219:s1e1:playing:2026-05-12T23:31:31Z",
+      "eventId": "unknown:tt0472219:s1e1:playing:2026-05-12T23:31:31Z",
       "contentId": "tt0472219",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4559,7 +4622,7 @@
       "updatedAt": "2026-05-12T23:31:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt4303340:s1e1:playing:2026-05-12T09:36:57Z",
+      "eventId": "unknown:tt4303340:s1e1:playing:2026-05-12T09:36:57Z",
       "contentId": "tt4303340",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4580,7 +4643,7 @@
       "updatedAt": "2026-05-12T09:36:57Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-12T05:01:04Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T05:01:04Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4601,7 +4664,7 @@
       "updatedAt": "2026-05-12T05:01:04Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-12T04:31:04Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T04:31:04Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4622,7 +4685,7 @@
       "updatedAt": "2026-05-12T04:31:04Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt34610311:s1e1:playing:2026-05-12T04:10:47Z",
+      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-12T04:10:47Z",
       "contentId": "tt34610311",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4643,7 +4706,7 @@
       "updatedAt": "2026-05-12T04:10:47Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e15:playing:2026-05-12T04:04:50Z",
+      "eventId": "unknown:tt1632701:s3e15:playing:2026-05-12T04:04:50Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e15",
       "userEmail": "henry8812@gmail.com",
@@ -4664,7 +4727,7 @@
       "updatedAt": "2026-05-12T04:04:50Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt38121182:s1e1:playing:2026-05-12T04:01:31Z",
+      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T04:01:31Z",
       "contentId": "tt38121182",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4685,7 +4748,7 @@
       "updatedAt": "2026-05-12T04:01:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt38121182:s1e1:playing:2026-05-12T03:21:15Z",
+      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T03:21:15Z",
       "contentId": "tt38121182",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4706,7 +4769,7 @@
       "updatedAt": "2026-05-12T03:21:15Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-12T03:01:54Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T03:01:54Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -4727,7 +4790,7 @@
       "updatedAt": "2026-05-12T03:01:54Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e15:playing:2026-05-12T03:01:44Z",
+      "eventId": "unknown:tt1632701:s3e15:playing:2026-05-12T03:01:44Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e15",
       "userEmail": "henry8812@gmail.com",
@@ -4748,7 +4811,7 @@
       "updatedAt": "2026-05-12T03:01:44Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e14:completed:2026-05-12T03:01:42Z",
+      "eventId": "unknown:tt1632701:s3e14:completed:2026-05-12T03:01:42Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e14",
       "userEmail": "henry8812@gmail.com",
@@ -4769,7 +4832,7 @@
       "updatedAt": "2026-05-12T03:01:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e14:playing:2026-05-12T02:49:06Z",
+      "eventId": "unknown:tt1632701:s3e14:playing:2026-05-12T02:49:06Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e14",
       "userEmail": "henry8812@gmail.com",
@@ -4790,7 +4853,7 @@
       "updatedAt": "2026-05-12T02:49:06Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e13:completed:2026-05-12T02:49:03Z",
+      "eventId": "unknown:tt1632701:s3e13:completed:2026-05-12T02:49:03Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e13",
       "userEmail": "henry8812@gmail.com",
@@ -4811,7 +4874,7 @@
       "updatedAt": "2026-05-12T02:49:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e13:playing:2026-05-12T02:45:48Z",
+      "eventId": "unknown:tt1632701:s3e13:playing:2026-05-12T02:45:48Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e13",
       "userEmail": "henry8812@gmail.com",
@@ -4832,7 +4895,7 @@
       "updatedAt": "2026-05-12T02:45:48Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e12:completed:2026-05-12T02:45:46Z",
+      "eventId": "unknown:tt1632701:s3e12:completed:2026-05-12T02:45:46Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e12",
       "userEmail": "henry8812@gmail.com",
@@ -4853,7 +4916,7 @@
       "updatedAt": "2026-05-12T02:45:46Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e12:playing:2026-05-12T02:42:40Z",
+      "eventId": "unknown:tt1632701:s3e12:playing:2026-05-12T02:42:40Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e12",
       "userEmail": "henry8812@gmail.com",
@@ -4874,7 +4937,7 @@
       "updatedAt": "2026-05-12T02:42:40Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e11:completed:2026-05-12T02:42:38Z",
+      "eventId": "unknown:tt1632701:s3e11:completed:2026-05-12T02:42:38Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e11",
       "userEmail": "henry8812@gmail.com",
@@ -4895,7 +4958,7 @@
       "updatedAt": "2026-05-12T02:42:38Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e11:playing:2026-05-12T02:40:58Z",
+      "eventId": "unknown:tt1632701:s3e11:playing:2026-05-12T02:40:58Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e11",
       "userEmail": "henry8812@gmail.com",
@@ -4916,7 +4979,7 @@
       "updatedAt": "2026-05-12T02:40:58Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e10:completed:2026-05-12T02:40:56Z",
+      "eventId": "unknown:tt1632701:s3e10:completed:2026-05-12T02:40:56Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e10",
       "userEmail": "henry8812@gmail.com",
@@ -4937,7 +5000,7 @@
       "updatedAt": "2026-05-12T02:40:56Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0398417:s2e1:playing:2026-05-12T02:38:32Z",
+      "eventId": "unknown:tt0398417:s2e1:playing:2026-05-12T02:38:32Z",
       "contentId": "tt0398417",
       "episodeKey": "s2e1",
       "userEmail": "henry8812@gmail.com",
@@ -4958,7 +5021,7 @@
       "updatedAt": "2026-05-12T02:38:32Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0398417:s1e13:completed:2026-05-12T02:38:28Z",
+      "eventId": "unknown:tt0398417:s1e13:completed:2026-05-12T02:38:28Z",
       "contentId": "tt0398417",
       "episodeKey": "s1e13",
       "userEmail": "henry8812@gmail.com",
@@ -4979,7 +5042,7 @@
       "updatedAt": "2026-05-12T02:38:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1632701:s3e10:playing:2026-05-12T02:27:43Z",
+      "eventId": "unknown:tt1632701:s3e10:playing:2026-05-12T02:27:43Z",
       "contentId": "tt1632701",
       "episodeKey": "s3e10",
       "userEmail": "henry8812@gmail.com",
@@ -5000,7 +5063,7 @@
       "updatedAt": "2026-05-12T02:27:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0398417:s1e13:playing:2026-05-12T02:17:13Z",
+      "eventId": "unknown:tt0398417:s1e13:playing:2026-05-12T02:17:13Z",
       "contentId": "tt0398417",
       "episodeKey": "s1e13",
       "userEmail": "henry8812@gmail.com",
@@ -5021,7 +5084,7 @@
       "updatedAt": "2026-05-12T02:17:13Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0398417:s1e12:completed:2026-05-12T02:17:11Z",
+      "eventId": "unknown:tt0398417:s1e12:completed:2026-05-12T02:17:11Z",
       "contentId": "tt0398417",
       "episodeKey": "s1e12",
       "userEmail": "henry8812@gmail.com",
@@ -5042,7 +5105,7 @@
       "updatedAt": "2026-05-12T02:17:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0398417:s1e1:playing:2026-05-11T21:45:28Z",
+      "eventId": "unknown:tt0398417:s1e1:playing:2026-05-11T21:45:28Z",
       "contentId": "tt0398417",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5063,7 +5126,7 @@
       "updatedAt": "2026-05-11T21:45:28Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt1345836:s1e1:playing:2026-05-11T21:30:15Z",
+      "eventId": "unknown:tt1345836:s1e1:playing:2026-05-11T21:30:15Z",
       "contentId": "tt1345836",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5084,7 +5147,7 @@
       "updatedAt": "2026-05-11T21:30:15Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt6587046:s1e1:playing:2026-05-11T21:12:18Z",
+      "eventId": "unknown:tt6587046:s1e1:playing:2026-05-11T21:12:18Z",
       "contentId": "tt6587046",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5126,7 +5189,7 @@
       "updatedAt": "2026-05-11T21:06:22Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt34610311:s1e1:playing:2026-05-11T21:06:14Z",
+      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-11T21:06:14Z",
       "contentId": "tt34610311",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5147,7 +5210,7 @@
       "updatedAt": "2026-05-11T21:06:14Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0455944:s1e1:playing:2026-05-11T21:00:45Z",
+      "eventId": "unknown:tt0455944:s1e1:playing:2026-05-11T21:00:45Z",
       "contentId": "tt0455944",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5168,7 +5231,7 @@
       "updatedAt": "2026-05-11T21:00:45Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt0441773:s1e1:playing:2026-05-11T20:54:22Z",
+      "eventId": "unknown:tt0441773:s1e1:playing:2026-05-11T20:54:22Z",
       "contentId": "tt0441773",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5189,7 +5252,7 @@
       "updatedAt": "2026-05-11T20:54:22Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt2948372:s1e1:playing:2026-05-11T20:40:57Z",
+      "eventId": "unknown:tt2948372:s1e1:playing:2026-05-11T20:40:57Z",
       "contentId": "tt2948372",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5210,7 +5273,7 @@
       "updatedAt": "2026-05-11T20:40:57Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:34:33Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:34:33Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5231,7 +5294,7 @@
       "updatedAt": "2026-05-11T20:34:33Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:34:13Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:34:13Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5252,7 +5315,7 @@
       "updatedAt": "2026-05-11T20:34:13Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:33:53Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:33:53Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5273,7 +5336,7 @@
       "updatedAt": "2026-05-11T20:33:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:33:43Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:33:43Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5294,7 +5357,7 @@
       "updatedAt": "2026-05-11T20:33:43Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:33:27Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:33:27Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5315,7 +5378,7 @@
       "updatedAt": "2026-05-11T20:33:27Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:32:57Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:32:57Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5336,7 +5399,7 @@
       "updatedAt": "2026-05-11T20:32:57Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:32:42Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:32:42Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5357,7 +5420,7 @@
       "updatedAt": "2026-05-11T20:32:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:32:12Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:32:12Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5378,7 +5441,7 @@
       "updatedAt": "2026-05-11T20:32:12Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:32:02Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:32:02Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5399,7 +5462,7 @@
       "updatedAt": "2026-05-11T20:32:02Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:31:46Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:31:46Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5420,7 +5483,7 @@
       "updatedAt": "2026-05-11T20:31:46Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:31:26Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:31:26Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5441,7 +5504,7 @@
       "updatedAt": "2026-05-11T20:31:26Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:31:01Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:31:01Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5462,7 +5525,7 @@
       "updatedAt": "2026-05-11T20:31:01Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:30:31Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:30:31Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5483,7 +5546,7 @@
       "updatedAt": "2026-05-11T20:30:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:30:21Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:30:21Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5504,7 +5567,7 @@
       "updatedAt": "2026-05-11T20:30:21Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:30:11Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:30:11Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5525,7 +5588,7 @@
       "updatedAt": "2026-05-11T20:30:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:30:00Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:30:00Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5672,7 +5735,7 @@
       "updatedAt": "2026-05-11T20:27:26Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:26:03Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:26:03Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5693,7 +5756,7 @@
       "updatedAt": "2026-05-11T20:26:03Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:25:53Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:25:53Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5714,7 +5777,7 @@
       "updatedAt": "2026-05-11T20:25:53Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:25:07Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:25:07Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5735,7 +5798,7 @@
       "updatedAt": "2026-05-11T20:25:07Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:24:42Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:24:42Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5756,7 +5819,7 @@
       "updatedAt": "2026-05-11T20:24:42Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:24:31Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:24:31Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5777,7 +5840,7 @@
       "updatedAt": "2026-05-11T20:24:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:24:11Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:24:11Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5798,7 +5861,7 @@
       "updatedAt": "2026-05-11T20:24:11Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:23:51Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:23:51Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5819,7 +5882,7 @@
       "updatedAt": "2026-05-11T20:23:51Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:23:31Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:23:31Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5840,7 +5903,7 @@
       "updatedAt": "2026-05-11T20:23:31Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:23:01Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:23:01Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5861,7 +5924,7 @@
       "updatedAt": "2026-05-11T20:23:01Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:22:25Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:22:25Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",
@@ -5882,7 +5945,7 @@
       "updatedAt": "2026-05-11T20:22:25Z"
     },
     {
-      "eventId": "henry8812@gmail.com:tt3359350:s1e1:playing:2026-05-11T20:21:11Z",
+      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:21:11Z",
       "contentId": "tt3359350",
       "episodeKey": "s1e1",
       "userEmail": "henry8812@gmail.com",

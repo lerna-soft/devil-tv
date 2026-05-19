@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T04:14:04.185Z",
+  "generatedAt": "2026-05-19T04:14:18.650Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T04:13:54Z",
-      "totalEvents": 250,
-      "totalStarts": 148,
+      "updatedAt": "2026-05-19T04:13:57Z",
+      "totalEvents": 251,
+      "totalStarts": 149,
       "totalCompletions": 28,
       "totalPlaybackProgress": 103008.68373306592,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T04:13:54Z",
+      "lastActivityAt": "2026-05-19T04:13:57Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -50,11 +50,11 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 35,
+          "playCount": 36,
           "completed": true,
           "maxProgressValue": 1880.723439229025,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T04:13:54Z"
+          "lastSeenAt": "2026-05-19T04:13:57Z"
         },
         "tt1830617": {
           "contentId": "tt1830617",
@@ -1221,7 +1221,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 412.0347
+      "avgPlaybackProgress": 410.3932
     },
     {
       "userEmail": "liz-munera@hotmail.com",

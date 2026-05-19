@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T06:40:13.209Z",
+  "generatedAt": "2026-05-19T06:55:27.192Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 309,
+  "totalEvents": 310,
   "totalStarts": 189,
-  "totalCompletions": 30,
-  "overallCompletionRate": 0.1587,
+  "totalCompletions": 31,
+  "overallCompletionRate": 0.164,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -73,20 +73,20 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 5,
+      "uniqueUsers": 1,
+      "completionRate": 0.6667
+    },
+    {
       "contentId": "tt2140479",
       "title": "El contable",
       "type": "movie",
       "totalEvents": 5,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt0398417",
-      "title": "The Batman",
-      "type": "series",
-      "totalEvents": 5,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667
     }
   ]
 }

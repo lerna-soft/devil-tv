@@ -1,6 +1,6 @@
 {
-  "version": 138,
-  "generatedAt": "2026-05-19T06:08:02.986Z",
+  "version": 139,
+  "generatedAt": "2026-05-19T09:42:50.346Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49345,6 +49345,22 @@
       "releaseDate": null,
       "overview": "Shin Sae-Kyeong, Cha Eun-woo",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzYwY2I1NzktZGI2Zi00NDExLWFhNDYtYzc4MTMxNzMzYjRkXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt16030542",
+      "title": "The Recruit",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Sincronizado desde historial",
+      "posterUrl": "Description: Sincronizado desde historial",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

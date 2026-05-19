@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T08:39:05.981Z",
+  "generatedAt": "2026-05-19T08:40:06.837Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -589,27 +589,41 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 18,
-      "totalStarts": 11,
+      "totalEvents": 19,
+      "totalStarts": 12,
       "totalCompletions": 7,
       "totalPlaybackProgress": 26315.752375999997,
       "uniqueUsers": 1,
-      "completionRate": 0.6364,
-      "lastActivityAt": "2026-05-19T08:38:53Z",
+      "completionRate": 0.5833,
+      "lastActivityAt": "2026-05-19T08:39:55Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 18,
+          "playCount": 19,
           "completedCount": 7,
-          "startedCount": 11,
+          "startedCount": 12,
           "totalPlaybackProgress": 26315.752375999997,
-          "lastSeenAt": "2026-05-19T08:38:53Z",
+          "lastSeenAt": "2026-05-19T08:39:55Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 3,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3340.724511,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T08:39:55Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.5
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -637,20 +651,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e8": {
-          "season": 1,
-          "episode": 8,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 3340.724511,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T08:20:55Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
         },
         "s1e7": {
           "season": 1,
@@ -737,7 +737,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1461.9862
+      "avgPlaybackProgress": 1385.0396
     },
     {
       "contentId": "tt32897959",

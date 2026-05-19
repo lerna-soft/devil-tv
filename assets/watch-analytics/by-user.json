@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T05:10:54.346Z",
+  "generatedAt": "2026-05-19T05:16:37.204Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T05:10:44Z",
-      "totalEvents": 254,
-      "totalStarts": 152,
+      "updatedAt": "2026-05-19T05:16:25Z",
+      "totalEvents": 255,
+      "totalStarts": 153,
       "totalCompletions": 28,
       "totalPlaybackProgress": 103283.68983866191,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-05-19T05:10:44Z",
+      "lastActivityAt": "2026-05-19T05:16:25Z",
       "completedContentIds": [
         "tt14452776",
         "tt2911666",
@@ -43,6 +43,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0388629": {
+          "contentId": "tt0388629",
+          "imdbId": "tt0388629",
+          "tmdbId": "",
+          "title": "One Piece",
+          "type": "series",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T05:16:25Z"
         },
         "tt7068946": {
           "contentId": "tt7068946",
@@ -151,18 +163,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T01:58:06Z"
-        },
-        "tt0388629": {
-          "contentId": "tt0388629",
-          "imdbId": "tt0388629",
-          "tmdbId": "",
-          "title": "One Piece",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T15:57:35Z"
         },
         "tt11570202": {
           "contentId": "tt11570202",
@@ -1221,7 +1221,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 406.6287
+      "avgPlaybackProgress": 405.0341
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T05:10:54.343Z",
+  "generatedAt": "2026-05-19T05:16:37.202Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0388629:s1e1:started:2026-05-19T05:16:25Z",
+      "contentId": "tt0388629",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0388629",
+      "tmdbId": "",
+      "title": "One Piece",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-18T15:57:33.234Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T05:16:25Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt7068946:s1e1:started:2026-05-19T05:10:44Z",
       "contentId": "tt7068946",

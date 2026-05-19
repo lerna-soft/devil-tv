@@ -27,6 +27,14 @@ const TOKEN = String(process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '').tri
 const LABEL = 'catalog-seed-sync';
 const REPORT_PATH = path.join(process.env.RUNNER_TEMP || os.tmpdir(), 'mep-catalog-seed-report.json');
 
+function sanitizePosterUrl(value) {
+  const poster = String(value || '').trim();
+  if (!poster) return '';
+  if (!/^https?:\/\//i.test(poster)) return '';
+  if (/^description\s*:/i.test(poster)) return '';
+  return poster;
+}
+
 async function main() {
   if (!OWNER_REPO) {
     console.log('[catalog-seed] skip: missing GITHUB_REPOSITORY');
@@ -110,7 +118,7 @@ function parseIssue(issue) {
   const tmdbId = String((body.match(/^TMDB:\s*(\d+)$/im) || [])[1] || '').trim();
   const title = String((body.match(/^Title:\s*(.+)$/im) || [])[1] || '').trim();
   const year = Number((body.match(/^Year:\s*(\d{4})$/im) || [])[1] || 0) || null;
-  const posterUrl = String((body.match(/^PosterUrl:\s*(.+)$/im) || [])[1] || '').trim();
+  const posterUrl = sanitizePosterUrl((body.match(/^PosterUrl:\s*(.+)$/im) || [])[1] || '');
   const description = String((body.match(/^Description:\s*(.*)$/im) || [])[1] || '').trim();
   if (!type || (!imdbId && !tmdbId) || !title) return null;
   return { type, imdbId, tmdbId, title, year, posterUrl, description, updatedAt: parseIssueDate(issue) };
@@ -174,7 +182,7 @@ function upsertSeedEntry(seed, req) {
     year: req.year,
     releaseDate: null,
     overview: req.description || '',
-    posterUrl: req.posterUrl || null,
+    posterUrl: sanitizePosterUrl(req.posterUrl) || null,
     backdropUrl: null,
     genres: [],
     watchProviders: { region: 'CO', flatrate: [] }
@@ -195,7 +203,7 @@ function upsertSeedEntry(seed, req) {
     year: existing.year || payload.year,
     releaseDate: existing.releaseDate || payload.releaseDate,
     overview: existing.overview || payload.overview,
-    posterUrl: existing.posterUrl || payload.posterUrl,
+    posterUrl: sanitizePosterUrl(existing.posterUrl) || sanitizePosterUrl(payload.posterUrl) || null,
     backdropUrl: existing.backdropUrl || payload.backdropUrl,
     genres: Array.isArray(existing.genres) && existing.genres.length ? existing.genres : payload.genres,
     watchProviders: existing.watchProviders || payload.watchProviders

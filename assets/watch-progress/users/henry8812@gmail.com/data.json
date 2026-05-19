@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T18:30:31Z",
+  "updatedAt": "2026-05-19T18:30:48Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1012,6 +1012,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-19T18:30:31Z",
       "watched": {}
+    },
+    "tt0903747": {
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-19T18:30:48Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1077,20 +1087,40 @@
       "tt16452664": true,
       "tt29871729": true,
       "tt34987195": true,
-      "tt3032476": true
+      "tt3032476": true,
+      "tt0903747": true
     },
-    "updatedAt": "2026-05-19T18:30:31Z"
+    "updatedAt": "2026-05-19T18:30:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt3032476",
-    "tmdbId": "60059",
+    "imdbId": "tt0903747",
+    "tmdbId": "1396",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-19T18:30:31Z"
+    "updatedAt": "2026-05-19T18:30:48Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s1e1:preference:2026-05-19T18:30:48Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T18:30:48Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt3032476:s1e1:preference:2026-05-19T18:30:31Z",
       "contentId": "tt3032476",

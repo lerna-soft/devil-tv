@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-19T17:49:09.705Z",
+  "generatedAt": "2026-05-19T18:30:46.362Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt3032476:s1e1:preference:2026-05-19T18:30:31Z",
+      "contentId": "tt3032476",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3032476",
+      "tmdbId": "60059",
+      "title": "Better Call Saul",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T18:30:31Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T17:48:30Z",
       "contentId": "tt1234721",

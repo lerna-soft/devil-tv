@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T17:48:30Z",
+  "updatedAt": "2026-05-19T18:30:31Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1002,6 +1002,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-19T17:04:21Z",
       "watched": {}
+    },
+    "tt3032476": {
+      "imdbId": "tt3032476",
+      "tmdbId": "60059",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-19T18:30:31Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1066,20 +1076,40 @@
       "tt11506284": true,
       "tt16452664": true,
       "tt29871729": true,
-      "tt34987195": true
+      "tt34987195": true,
+      "tt3032476": true
     },
-    "updatedAt": "2026-05-19T05:57:57Z"
+    "updatedAt": "2026-05-19T18:30:31Z"
   },
   "lastWatch": {
-    "imdbId": "tt1234721",
-    "tmdbId": "",
+    "imdbId": "tt3032476",
+    "tmdbId": "60059",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-19T17:48:30Z"
+    "updatedAt": "2026-05-19T18:30:31Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt3032476:s1e1:preference:2026-05-19T18:30:31Z",
+      "contentId": "tt3032476",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3032476",
+      "tmdbId": "60059",
+      "title": "Better Call Saul",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-19T18:30:31Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T17:48:30Z",
       "contentId": "tt1234721",

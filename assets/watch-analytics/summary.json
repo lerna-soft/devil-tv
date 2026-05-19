@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T05:40:57.901Z",
+  "generatedAt": "2026-05-19T05:42:11.435Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 303,
-  "totalStarts": 185,
+  "totalEvents": 304,
+  "totalStarts": 186,
   "totalCompletions": 29,
-  "overallCompletionRate": 0.1568,
+  "overallCompletionRate": 0.1559,
   "trackedTitles": 113,
   "mostWatchedContent": [
     {
@@ -81,9 +81,9 @@
       "completionRate": 0.6667
     },
     {
-      "contentId": "tt0388629",
-      "title": "One Piece",
-      "type": "series",
+      "contentId": "tt7068946",
+      "title": "The Accountant 2",
+      "type": "movie",
       "totalEvents": 4,
       "uniqueUsers": 1,
       "completionRate": 0

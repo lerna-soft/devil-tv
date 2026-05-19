@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T09:07:23Z",
+  "updatedAt": "2026-05-19T09:15:39Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -998,9 +998,9 @@
       "tmdbId": "",
       "lastSeason": 2,
       "lastEpisode": 3,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-19T09:07:23Z",
+      "progress": 3004.754987,
+      "lastProgress": 3004.754987,
+      "updatedAt": "2026-05-19T09:15:39Z",
       "watched": {}
     }
   },
@@ -1075,11 +1075,30 @@
     "tmdbId": "",
     "season": 2,
     "episode": 3,
-    "progress": 0,
-    "updatedAt": "2026-05-19T09:07:23Z"
+    "progress": 3004.754987,
+    "updatedAt": "2026-05-19T09:15:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt16030542:s2e3:completed:2026-05-19T09:15:39Z",
+      "contentId": "tt16030542",
+      "episodeKey": "s2e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt16030542",
+      "tmdbId": "",
+      "title": "The Recruit",
+      "type": "series",
+      "season": 2,
+      "episode": 3,
+      "progress": 3004.754987,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-19T09:07:22.288Z",
+      "completedAt": "2026-05-19T09:15:37.443Z",
+      "updatedAt": "2026-05-19T09:15:39Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt16030542:s2e3:started:2026-05-19T09:07:23Z",
       "contentId": "tt16030542",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-19T09:07:44.163Z",
+  "generatedAt": "2026-05-19T09:15:52.465Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 329,
+  "totalEvents": 330,
   "totalStarts": 201,
-  "totalCompletions": 38,
-  "overallCompletionRate": 0.1891,
+  "totalCompletions": 39,
+  "overallCompletionRate": 0.194,
   "trackedTitles": 114,
   "mostWatchedContent": [
     {
@@ -25,20 +25,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt31596104",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "contentId": "tt16030542",
+      "title": "The Recruit",
       "type": "series",
       "totalEvents": 25,
       "uniqueUsers": 1,
       "completionRate": 0.6667
     },
     {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
+      "contentId": "tt31596104",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 24,
+      "totalEvents": 25,
       "uniqueUsers": 1,
-      "completionRate": 0.6
+      "completionRate": 0.6667
     },
     {
       "contentId": "tt1632701",

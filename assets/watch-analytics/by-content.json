@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T03:09:21.639Z",
+  "generatedAt": "2026-05-19T03:09:50.596Z",
   "items": [
     {
       "contentId": "tt3359350",
@@ -51,27 +51,41 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 28,
-      "totalStarts": 22,
+      "totalEvents": 29,
+      "totalStarts": 23,
       "totalCompletions": 5,
       "totalPlaybackProgress": 10396.550204693138,
       "uniqueUsers": 1,
-      "completionRate": 0.2273,
-      "lastActivityAt": "2026-05-19T03:09:11Z",
+      "completionRate": 0.2174,
+      "lastActivityAt": "2026-05-19T03:09:42Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 28,
+          "playCount": 29,
           "completedCount": 5,
-          "startedCount": 22,
+          "startedCount": 23,
           "totalPlaybackProgress": 10396.550204693138,
-          "lastSeenAt": "2026-05-19T03:09:11Z",
+          "lastSeenAt": "2026-05-19T03:09:42Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s2e1": {
+          "season": 2,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 4,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T03:09:42Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e5": {
           "season": 1,
           "episode": 5,
@@ -99,20 +113,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.25
-        },
-        "s2e1": {
-          "season": 2,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T02:58:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         },
         "s1e8": {
           "season": 1,
@@ -199,7 +199,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 371.3054
+      "avgPlaybackProgress": 358.5017
     },
     {
       "contentId": "tt31596104",

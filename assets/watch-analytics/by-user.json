@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T17:49:09.710Z",
+  "generatedAt": "2026-05-19T18:30:46.366Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T17:48:30Z",
-      "totalEvents": 293,
+      "updatedAt": "2026-05-19T18:30:31Z",
+      "totalEvents": 294,
       "totalStarts": 179,
       "totalCompletions": 39,
       "totalPlaybackProgress": 147351.57515548394,
-      "uniqueContentCount": 100,
-      "lastActivityAt": "2026-05-19T17:48:30Z",
+      "uniqueContentCount": 101,
+      "lastActivityAt": "2026-05-19T18:30:31Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -45,6 +45,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt3032476": {
+          "contentId": "tt3032476",
+          "imdbId": "tt3032476",
+          "tmdbId": "60059",
+          "title": "Better Call Saul",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T18:30:31Z"
         },
         "tt1234721": {
           "contentId": "tt1234721",
@@ -1235,7 +1247,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 502.9064
+      "avgPlaybackProgress": 501.1958
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T07:51:52.657Z",
+  "generatedAt": "2026-05-19T07:59:09.577Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T07:51:41Z",
-      "totalEvents": 269,
+      "updatedAt": "2026-05-19T07:58:59Z",
+      "totalEvents": 270,
       "totalStarts": 163,
-      "totalCompletions": 31,
-      "totalPlaybackProgress": 116903.59497848396,
+      "totalCompletions": 32,
+      "totalPlaybackProgress": 119954.32547548394,
       "uniqueContentCount": 100,
-      "lastActivityAt": "2026-05-19T07:51:41Z",
+      "lastActivityAt": "2026-05-19T07:58:59Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -52,11 +52,11 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 9,
+          "playCount": 10,
           "completed": true,
           "maxProgressValue": 3476.723785,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T07:51:41Z"
+          "lastSeenAt": "2026-05-19T07:58:59Z"
         },
         "tt2140479": {
           "contentId": "tt2140479",
@@ -1235,7 +1235,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 434.5859
+      "avgPlaybackProgress": 444.2753
     },
     {
       "userEmail": "liz-munera@hotmail.com",

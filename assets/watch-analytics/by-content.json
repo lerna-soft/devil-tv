@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T03:44:05.379Z",
+  "generatedAt": "2026-05-19T03:48:01.895Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -7,22 +7,22 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 32,
-      "totalStarts": 25,
+      "totalEvents": 33,
+      "totalStarts": 26,
       "totalCompletions": 6,
       "totalPlaybackProgress": 12142.669204693138,
       "uniqueUsers": 1,
-      "completionRate": 0.24,
-      "lastActivityAt": "2026-05-19T03:43:44Z",
+      "completionRate": 0.2308,
+      "lastActivityAt": "2026-05-19T03:47:54Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 32,
+          "playCount": 33,
           "completedCount": 6,
-          "startedCount": 25,
+          "startedCount": 26,
           "totalPlaybackProgress": 12142.669204693138,
-          "lastSeenAt": "2026-05-19T03:43:44Z",
+          "lastSeenAt": "2026-05-19T03:47:54Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,12 +31,12 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T03:43:44Z",
+          "lastActivityAt": "2026-05-19T03:47:54Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -169,7 +169,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 379.4584
+      "avgPlaybackProgress": 367.9597
     },
     {
       "contentId": "tt3359350",

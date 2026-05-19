@@ -1,13 +1,21 @@
 {
-  "generatedAt": "2026-05-19T03:14:09.554Z",
+  "generatedAt": "2026-05-19T03:17:15.326Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 286,
-  "totalStarts": 170,
+  "totalEvents": 287,
+  "totalStarts": 171,
   "totalCompletions": 27,
-  "overallCompletionRate": 0.1588,
+  "overallCompletionRate": 0.1579,
   "trackedTitles": 112,
   "mostWatchedContent": [
+    {
+      "contentId": "tt14452776",
+      "title": "The Bear",
+      "type": "series",
+      "totalEvents": 30,
+      "uniqueUsers": 1,
+      "completionRate": 0.2083
+    },
     {
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
@@ -15,14 +23,6 @@
       "totalEvents": 30,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 29,
-      "uniqueUsers": 1,
-      "completionRate": 0.2174
     },
     {
       "contentId": "tt31596104",

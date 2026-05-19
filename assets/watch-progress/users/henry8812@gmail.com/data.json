@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T08:12:20Z",
+  "updatedAt": "2026-05-19T08:14:05Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -998,9 +998,9 @@
       "tmdbId": "",
       "lastSeason": 1,
       "lastEpisode": 7,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-19T08:12:20Z",
+      "progress": 3486.708389,
+      "lastProgress": 3486.708389,
+      "updatedAt": "2026-05-19T08:14:05Z",
       "watched": {}
     }
   },
@@ -1075,11 +1075,30 @@
     "tmdbId": "",
     "season": 1,
     "episode": 7,
-    "progress": 0,
-    "updatedAt": "2026-05-19T08:12:20Z"
+    "progress": 3486.708389,
+    "updatedAt": "2026-05-19T08:14:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt16030542:s1e7:completed:2026-05-19T08:14:05Z",
+      "contentId": "tt16030542",
+      "episodeKey": "s1e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt16030542",
+      "tmdbId": "",
+      "title": "The Recruit",
+      "type": "series",
+      "season": 1,
+      "episode": 7,
+      "progress": 3486.708389,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-19T08:12:19.138Z",
+      "completedAt": "2026-05-19T08:14:04.420Z",
+      "updatedAt": "2026-05-19T08:14:05Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt16030542:s1e7:started:2026-05-19T08:12:20Z",
       "contentId": "tt16030542",

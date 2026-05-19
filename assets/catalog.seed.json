@@ -1,6 +1,6 @@
 {
-  "version": 144,
-  "generatedAt": "2026-05-19T17:40:18.276Z",
+  "version": 145,
+  "generatedAt": "2026-05-19T17:40:33.058Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26321,6 +26321,22 @@
       "releaseDate": null,
       "overview": "Peter Weller, John Glover",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzFiZDU1ODktYTljOS00YWU3LThiYTYtNWRmMTdhMDg3OGE4XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0107978",
+      "title": "RoboCop 3",
+      "year": 1993,
+      "releaseDate": null,
+      "overview": "Robert John Burke, Nancy Allen",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODc0YjFmZDgtNWY4Zi00MjQ3LThiZWYtNmVlNjZjNTE5OTEwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

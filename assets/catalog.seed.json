@@ -1,6 +1,6 @@
 {
-  "version": 145,
-  "generatedAt": "2026-05-19T17:40:33.058Z",
+  "version": 146,
+  "generatedAt": "2026-05-19T17:40:48.405Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26337,6 +26337,22 @@
       "releaseDate": null,
       "overview": "Robert John Burke, Nancy Allen",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODc0YjFmZDgtNWY4Zi00MjQ3LThiZWYtNmVlNjZjNTE5OTEwXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt3528906",
+      "title": "Our RoboCop Remake",
+      "year": 2014,
+      "releaseDate": null,
+      "overview": "Chase Fein, Nichole Bagby",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjgyODhiM2MtZTVjMi00ZWM0LWE1MDItNTFjOTYxZjY4NTMxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

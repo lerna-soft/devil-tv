@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#08090f"/>
-      <stop offset="100%" stop-color="#34111f"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
-  <path d="M138 142h96c82 0 144 45 144 122 0 78-62 124-144 124h-24v58h-72zm72 60v126h18c47 0 76-21 76-64 0-41-29-62-76-62z" fill="#f5f7fb"/>
-  <path d="M236 214l110 61-110 61z" fill="#ff5879"/>
-  <path d="M314 156c20 10 34 28 42 52-18-7-33-6-48 3 2-21 4-38 6-55z" fill="#ff5879"/>
-  <path d="M368 174c16 11 27 27 32 47-14-6-28-7-42-4 2-16 5-29 10-43z" fill="#ff8aa3"/>
+  <rect width="512" height="512" rx="128" fill="#0a0b12"/>
+  <circle cx="256" cy="256" r="152" fill="#ff101f"/>
+  <path d="M181 122c-9 37 1 80 29 108-40-8-63-56-51-99 4-13 11-25 22-34z" fill="#ff0f1f" stroke="#2a060c" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M331 122c9 37-1 80-29 108 40-8 63-56 51-99-4-13-11-25-22-34z" fill="#ff0f1f" stroke="#2a060c" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M240 109c-8 23-6 47 9 66-26-9-39-39-30-66 4-11 11-20 21-27z" fill="#ff0f1f" stroke="#2a060c" stroke-width="14" stroke-linejoin="round"/>
+  <ellipse cx="210" cy="259" rx="24" ry="40" fill="#22171b"/>
+  <ellipse cx="302" cy="259" rx="24" ry="40" fill="#22171b"/>
+  <circle cx="199" cy="242" r="10" fill="#ffffff"/>
+  <circle cx="291" cy="242" r="10" fill="#ffffff"/>
+  <path d="M154 228c30-21 62-22 94 2" fill="none" stroke="#22171b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M264 230c29-23 62-24 95-3" fill="none" stroke="#22171b" stroke-width="16" stroke-linecap="round"/>
+  <path d="M220 334c41 14 84 8 113-24" fill="none" stroke="#22171b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M327 308c15 3 26 15 28 31" fill="none" stroke="#22171b" stroke-width="14" stroke-linecap="round"/>
+  <path d="M135 214c20 18 40 28 65 35-16 5-31 11-46 22-17-13-28-34-30-57z" fill="#d40013" opacity=".85"/>
+  <path d="M377 214c-20 18-40 28-65 35 16 5 31 11 46 22 17-13 28-34 30-57z" fill="#d40013" opacity=".85"/>
 </svg>

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T13:57:38Z",
+  "updatedAt": "2026-05-20T14:19:20Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -638,9 +638,9 @@
       "tmdbId": "97020",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 2801.429116108,
-      "lastProgress": 2801.429116108,
-      "updatedAt": "2026-05-19T21:40:59Z",
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T14:19:20Z",
       "watched": {}
     },
     "tt2911666": {
@@ -1237,15 +1237,34 @@
     "updatedAt": "2026-05-20T06:54:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
-    "season": 5,
-    "episode": 7,
+    "imdbId": "tt1234721",
+    "tmdbId": "97020",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T13:57:38Z"
+    "updatedAt": "2026-05-20T14:19:20Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-20T14:19:20Z",
+      "contentId": "tt1234721",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-19T18:39:24.126Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T14:19:20Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s5e7:started:2026-05-20T13:57:38Z",
       "contentId": "tt1190634",

@@ -1,6 +1,6 @@
 {
-  "version": 157,
-  "generatedAt": "2026-05-20T04:21:47.481Z",
+  "version": 158,
+  "generatedAt": "2026-05-20T04:32:10.722Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -49617,6 +49617,22 @@
       "releaseDate": null,
       "overview": "Bihter Yöreoğlu es una joven hermosa que lleva una vida de lujos. Odia a su madre, la codiciosa Fatma Yöreoglu, por haberle causado la muerte a su querido padre. En sus visitas al cementerio, Bihter nota el interés del viudo millonario Adnan Ziyagil en ella. Fatma intentará conquistar a Adnan para su beneficio, pero Bihter no desea que su madre se salga con la suya, así que acepta la propuesta de matrimonio que le hizo Adnan y así poder arruinar los planes de su madre. Cuando todo iba bien en la familia Ziyagil, el sobrino de Adnan a quien ama como a un hijo, Behlül, un joven atractivo e inmaduro, mujeriego y sin agallas, se enamora de Bihter, la esposa de su tío. Al darse cuenta que no puede controlar sus sentimientos, Behlul le confiesa a Bihter que está enamorado de ella, y la besa a la fuerza, pero ella lo rechaza. A Bihter no le agrada él. Tras la insistencia de Behlül, Bihter empieza a sentirse atraída hacia él, y termina por corresponderle al conocerlo más. Ambos se dan cuenta que no pueden controlar sus sentimientos, y comienzan a vivir su amor prohibido, al tiempo que se desatan grandes consecuencias para el clan familiar dado que además, la hija de Adnan, Nihal, está enamorada de su primo Behlül, pero este solo la quiere como una hermana.",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTUzODU0MjQ4NV5BMl5BanBnXkFtZTcwMDQwMjEyOQ@@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "88580",
+      "imdbId": null,
+      "title": "王牌对王牌",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2016-01-29",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dJLq9SHSJ04sVghgStXR1ypGHDA.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

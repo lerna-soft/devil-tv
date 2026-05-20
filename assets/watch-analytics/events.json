@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-20T11:34:30.312Z",
+  "generatedAt": "2026-05-20T13:57:54.940Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1190634:s5e7:started:2026-05-20T13:57:38Z",
+      "contentId": "tt1190634",
+      "episodeKey": "s5e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1190634",
+      "tmdbId": "76479",
+      "title": "The Boys",
+      "type": "series",
+      "season": 5,
+      "episode": 7,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T02:08:07.075Z",
+      "completedAt": "2026-05-20T06:53:08.127Z",
+      "updatedAt": "2026-05-20T13:57:38Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s1e8:started:2026-05-20T11:21:22Z",
       "contentId": "tt1190634",

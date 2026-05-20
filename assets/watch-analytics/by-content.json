@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T11:34:30.314Z",
+  "generatedAt": "2026-05-20T13:57:54.943Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -871,27 +871,41 @@
       "tmdbId": "76479",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 10,
+      "totalEvents": 12,
+      "totalStarts": 11,
       "totalCompletions": 1,
       "totalPlaybackProgress": 7864.041254433182,
       "uniqueUsers": 1,
-      "completionRate": 0.1,
-      "lastActivityAt": "2026-05-20T11:21:22Z",
+      "completionRate": 0.0909,
+      "lastActivityAt": "2026-05-20T13:57:38Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
+          "playCount": 12,
           "completedCount": 1,
-          "startedCount": 10,
+          "startedCount": 11,
           "totalPlaybackProgress": 7864.041254433182,
-          "lastSeenAt": "2026-05-20T11:21:22Z",
+          "lastSeenAt": "2026-05-20T13:57:38Z",
           "lastSeason": 1,
           "lastEpisode": 8
         }
       },
       "episodes": {
+        "s5e7": {
+          "season": 5,
+          "episode": 7,
+          "totalEvents": 7,
+          "totalStarts": 6,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 7864.041254433182,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T13:57:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.1667
+        },
         "s1e8": {
           "season": 1,
           "episode": 8,
@@ -920,20 +934,6 @@
           },
           "completionRate": 0
         },
-        "s5e7": {
-          "season": 5,
-          "episode": 7,
-          "totalEvents": 6,
-          "totalStarts": 5,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 7864.041254433182,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:53:08Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.2
-        },
         "s1e7": {
           "season": 1,
           "episode": 7,
@@ -949,7 +949,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 714.9128
+      "avgPlaybackProgress": 655.3368
     },
     {
       "contentId": "tt29552248",

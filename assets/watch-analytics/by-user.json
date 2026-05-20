@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T11:34:30.316Z",
+  "generatedAt": "2026-05-20T13:57:54.945Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T11:21:22Z",
-      "totalEvents": 322,
-      "totalStarts": 190,
+      "updatedAt": "2026-05-20T13:57:38Z",
+      "totalEvents": 323,
+      "totalStarts": 191,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T11:21:22Z",
+      "lastActivityAt": "2026-05-20T13:57:38Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -54,11 +54,11 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 11,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T11:21:22Z"
+          "lastSeenAt": "2026-05-20T13:57:38Z"
         },
         "tt2948372": {
           "contentId": "tt2948372",
@@ -1417,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 488.2491
+      "avgPlaybackProgress": 486.7375
     },
     {
       "userEmail": "liz-munera@hotmail.com",

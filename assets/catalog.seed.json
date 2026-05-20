@@ -1,6 +1,6 @@
 {
-  "version": 189,
-  "generatedAt": "2026-05-20T05:22:20.244Z",
+  "version": 190,
+  "generatedAt": "2026-05-20T05:22:30.394Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50129,6 +50129,22 @@
       "releaseDate": null,
       "overview": "Matt Borlenghi, Rod Crawford",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTY2NzU0MDAtNzAwNi00MTA1LWE4MTktMmY4M2I4MmI4NzkxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt32244582",
+      "title": "Scooby-Doo: Origins",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Mckenna Grace, Abby Ryder Fortson",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmY4NmFkMWMtZDI5Zi00MGMzLTgwYWUtMGExNTk3YTg4NzUwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

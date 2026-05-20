@@ -1,6 +1,6 @@
 {
-  "version": 186,
-  "generatedAt": "2026-05-20T05:19:12.127Z",
+  "version": 187,
+  "generatedAt": "2026-05-20T05:19:25.776Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26785,6 +26785,22 @@
       "releaseDate": null,
       "overview": "John Krasinski, Wendell Pierce",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGVkZjAxMzYtNGE5YS00ZWEwLTk0NGMtY2Q4MWJiN2YyZDA2XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0087332",
+      "title": "Ghostbusters",
+      "year": 1984,
+      "releaseDate": null,
+      "overview": "Bill Murray, Dan Aykroyd",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWE0YzYxNDUtMjk2ZC00NTEyLWE1MjktNzFkMjdjOWEwNTcyXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

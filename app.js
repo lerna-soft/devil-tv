@@ -4916,6 +4916,7 @@ async function handleRouteChange() {
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       renderDetail({ skipHydratePlayback: shouldOpenPlayer });
+      hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
       if (shouldOpenPlayer) {
         // iOS Safari can be flaky about repainting fixed overlays immediately;
         // deferring a tick makes the modal+hash transition more reliable.

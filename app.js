@@ -1055,7 +1055,7 @@ function matchesSearchFilters(title, search) {
   const cast = Array.isArray(title?.metadata?.cast) ? title.metadata.cast : [];
   const directors = Array.isArray(title?.metadata?.directors) ? title.metadata.directors : [];
   const year = String(title?.year || '').trim();
-  const titleHaystack = normalizeSearchText([title?.title, title?.showTitle].join(' '));
+  const titleHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.metadata?.originalTitle].join(' '));
   const textHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.imdbId, title?.tmdbId, ...genres, ...cast, ...directors].join(' '));
 
   if (type !== 'all' && title?.type !== type) return false;
@@ -1123,6 +1123,7 @@ async function hydrateSelectedFromTmdb() {
         ...(title.metadata || {}),
         posterUrl: sanitizePosterUrl(title.metadata?.posterUrl) || sanitizePosterUrl(title.posterUrl) || posterUrl,
         releaseDate: details.first_air_date || details.release_date || (title.metadata?.releaseDate ?? null),
+        originalTitle: details.original_title || details.original_name || (title.metadata?.originalTitle ?? ''),
         genres,
         cast: castNames,
         directors: directorNames,
@@ -1229,6 +1230,7 @@ function normalizeSeedEntry(entry, defaultType) {
     metadata: {
       posterUrl,
       releaseDate: entry?.releaseDate || null,
+      originalTitle: entry?.originalTitle || entry?.originalName || '',
       genres: entry?.genres || [],
       cast: Array.isArray(entry?.cast) ? uniqNames(entry.cast) : [],
       directors: Array.isArray(entry?.directors) ? uniqNames(entry.directors) : [],
@@ -4028,6 +4030,7 @@ function normalizePersonCreditResult(entry, role, personName, personRole = 'any'
     metadata: {
       posterUrl: entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '',
       releaseDate: entry?.first_air_date || entry?.release_date || null,
+      originalTitle: String(entry?.original_title || entry?.original_name || '').trim(),
       genres: [],
       cast: role === 'cast' ? [personName] : [],
       directors: role === 'director' ? [personName] : [],
@@ -4476,6 +4479,7 @@ function mergeEquivalentTitles(a, b) {
       ...(a.metadata || {}),
       ...(b.metadata || {}),
       posterUrl: choose(a.posterUrl, b.posterUrl) || choose(a.metadata?.posterUrl, b.metadata?.posterUrl) || choose(b.posterUrl, a.posterUrl) || choose(b.metadata?.posterUrl, a.metadata?.posterUrl),
+      originalTitle: choose(a.metadata?.originalTitle, b.metadata?.originalTitle) || choose(b.metadata?.originalTitle, a.metadata?.originalTitle) || '',
       genres: uniqNames([...(a.metadata?.genres || []), ...(b.metadata?.genres || []), ...(a.categories || []), ...(b.categories || [])]),
       cast: uniqNames([...(a.metadata?.cast || []), ...(b.metadata?.cast || [])]),
       directors: uniqNames([...(a.metadata?.directors || []), ...(b.metadata?.directors || [])])

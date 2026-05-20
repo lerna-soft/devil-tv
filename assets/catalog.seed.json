@@ -1,6 +1,6 @@
 {
-  "version": 205,
-  "generatedAt": "2026-05-20T15:56:17.981Z",
+  "version": 206,
+  "generatedAt": "2026-05-20T15:56:30.942Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50321,6 +50321,22 @@
       "releaseDate": null,
       "overview": "Houko Kuwashima, Kotono Mitsuishi",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTc1MTI0NTUwM15BMl5BanBnXkFtZTcwMTQwMjIyMQ@@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0203082",
+      "title": "Rurouni Kenshin: Trust & Betrayal",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "Mayo Suzukaze, Junko Iwao",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOGNmMzUzOTItMjJjOC00MzMwLWJhMmQtNDE0NjFhNjM5YzhhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

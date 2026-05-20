@@ -122,6 +122,11 @@ function clearSelection({ closePlayer = false } = {}) {
   if (closePlayer) closePlayerModal();
 }
 
+function prepareManualRouteTransition() {
+  routeChangeToken += 1;
+  suppressRouteSync = false;
+}
+
 function isAuthenticated() {
   return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
 }
@@ -3039,6 +3044,7 @@ function bindLocalCardEvents() {
       if (!key) return;
       const selected = resolveTitleByCatalogKey(key);
       if (!selected) return;
+      prepareManualRouteTransition();
       suspendSearchUiForSelection();
       state.selected = selected;
       state.seriesEpisodes = null;
@@ -3064,6 +3070,7 @@ function bindLocalCardEvents() {
         const lastDragAt = homeCarouselLastDragAt.get(homeCarousel) || 0;
         if (Date.now() - lastDragAt < 350) return;
       }
+      prepareManualRouteTransition();
       state.selected = resolveTitleByCatalogKey(item.dataset.key);
       if (!state.selected) return;
       suspendSearchUiForSelection();
@@ -3074,7 +3081,7 @@ function bindLocalCardEvents() {
       renderCatalog();
       renderDetail();
       if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
-      syncRoute();
+      syncRoute({ force: true });
       hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
     });
   });
@@ -3647,11 +3654,12 @@ function renderDetail(options = {}) {
     </div>`;
 
     document.querySelector('#closeDetail')?.addEventListener('click', () => {
+      prepareManualRouteTransition();
       clearSelection();
       document.body.classList.remove('detail-active');
       renderCatalog();
       renderDetail();
-      syncRoute();
+      syncRoute({ force: true });
     });
 
     bindEvaluationPanel(title);
@@ -3822,11 +3830,12 @@ function renderDetail(options = {}) {
     });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
+    prepareManualRouteTransition();
     clearSelection();
     document.body.classList.remove('detail-active');
     renderCatalog();
     renderDetail();
-    syncRoute();
+    syncRoute({ force: true });
   });
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => {
@@ -4897,8 +4906,9 @@ function renderPlayerControls() {
   });
 }
 
-function syncRoute() {
-  if (suppressRouteSync) return;
+function syncRoute(options = {}) {
+  const { force = false } = options;
+  if (suppressRouteSync && !force) return;
   const params = new URLSearchParams();
   const q = elements.search.value.trim();
   const type = elements.typeFilter.value;

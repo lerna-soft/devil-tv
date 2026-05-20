@@ -1,6 +1,6 @@
 {
-  "version": 197,
-  "generatedAt": "2026-05-20T06:08:53.839Z",
+  "version": 198,
+  "generatedAt": "2026-05-20T06:09:05.451Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50209,6 +50209,22 @@
       "releaseDate": null,
       "overview": "Mary-Louise Parker, Daisy Head",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZWFhYWMwNjAtNGU5Mi00ODQzLTkwMDItODQ0OGQ5ODJmZWNkXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt35052656",
+      "title": "The Anatomy of a Moment",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Álvaro Morte, Eduard Fernández",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjdlYmYyYzEtNzcwNi00NDI3LThmOGQtM2ExYTNmOTdjMjQzXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

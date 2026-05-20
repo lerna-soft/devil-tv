@@ -63,7 +63,7 @@ const WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS = 2 * 60 * 1000;
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
-const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v1';
+const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v2';
 const RELEASE_NOTES_CACHE_TTL_MS = 1000 * 60 * 15;
 const RELEASES_REPO_OWNER = 'lerna-admin';
 const RELEASES_REPO_NAME = 'media-evaluation-platform-static';
@@ -180,9 +180,10 @@ function normalizeReleaseEntry(entry) {
   const message = String(entry?.message || entry?.title || '').trim();
   const notes = String(entry?.notes || '').trim();
   const type = classifyReleaseType(message || notes);
+  const displayVersion = /^v?\d+\.\d+\.\d+([.-][0-9A-Za-z]+)?$/i.test(version) ? version : (version.slice(0, 7) || 'local');
   return {
     version,
-    shortVersion: version.slice(0, 7) || 'local',
+    shortVersion: displayVersion,
     message,
     notes,
     type,

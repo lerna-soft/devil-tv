@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T06:40:42.789Z",
+  "generatedAt": "2026-05-20T06:52:47.854Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -939,22 +939,22 @@
       "tmdbId": "76479",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 7,
-      "totalStarts": 7,
+      "totalEvents": 8,
+      "totalStarts": 8,
       "totalCompletions": 0,
       "totalPlaybackProgress": 3653.288239013681,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-20T02:08:07Z",
+      "lastActivityAt": "2026-05-20T06:52:38Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 7,
+          "playCount": 8,
           "completedCount": 0,
-          "startedCount": 7,
+          "startedCount": 8,
           "totalPlaybackProgress": 3653.288239013681,
-          "lastSeenAt": "2026-05-20T02:08:07Z",
+          "lastSeenAt": "2026-05-20T06:52:38Z",
           "lastSeason": 1,
           "lastEpisode": 8
         }
@@ -963,12 +963,12 @@
         "s5e7": {
           "season": 5,
           "episode": 7,
-          "totalEvents": 4,
-          "totalStarts": 4,
+          "totalEvents": 5,
+          "totalStarts": 5,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3653.288239013681,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T02:08:07Z",
+          "lastActivityAt": "2026-05-20T06:52:38Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1003,7 +1003,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 521.8983
+      "avgPlaybackProgress": 456.661
     },
     {
       "contentId": "tt1234721",

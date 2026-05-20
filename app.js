@@ -15,7 +15,7 @@ const state = {
   playerFallbackUrls: [],
   playerEventAt: 0,
   searchIntentId: 0,
-  lastCountLabel: '0 items',
+  lastCountLabel: '0 títulos',
   searchingTerm: ''
 };
 let suppressRouteSync = false;
@@ -86,6 +86,7 @@ const elements = {
   items: document.querySelector('#items'),
   count: document.querySelector('#count'),
   detail: document.querySelector('#detail'),
+  toolbarNote: document.querySelector('#toolbarNote'),
   playerModal: document.querySelector('#playerModal'),
   playerIframe: document.querySelector('#player'),
   playerControls: document.querySelector('#playerControls'),
@@ -110,6 +111,14 @@ const elements = {
 };
 
 let authMode = 'login';
+
+function clearSelection({ closePlayer = false } = {}) {
+  state.selected = null;
+  state.seriesEpisodes = null;
+  state.seriesEpisodesLoading = false;
+  state.hydratedProgressId = '';
+  if (closePlayer) closePlayerModal();
+}
 
 function isAuthenticated() {
   return localStorage.getItem(AUTH_STORAGE_KEY) === '1';
@@ -536,7 +545,7 @@ function ensureCatalogEntriesFromWatchData(watchData) {
       tmdbId,
       title: String(item?.title || id).trim(),
       year: null,
-      description: 'Sincronizado desde historial',
+      description: '',
       posterUrl: '',
       playable: true,
       metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
@@ -689,28 +698,42 @@ async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
   state.searchingTerm = elements.search.value.trim();
-  if (elements.search.value.trim().length > 0) {
+  if (state.selected) {
+    clearSelection({ closePlayer: true });
+    renderDetail();
+  }
+  if (elements.search.value.trim().length >= 3) {
     state.homeSectionView = null;
     state.isSearching = true;
-    setCatalogCount(state.lastCountLabel || '0 items');
+    setCatalogCount(state.lastCountLabel || '0 títulos');
   }
   scheduleSearchCommit();
 });
 elements.typeFilter.addEventListener('change', () => {
   state.searchIntentId += 1;
   state.homeSectionView = null;
+  clearSelection({ closePlayer: true });
   syncTabs(elements.typeFilter.value);
   renderCatalog();
+  renderDetail();
   scheduleRemoteSearch();
 });
 elements.genreFilter?.addEventListener('change', () => {
   state.searchIntentId += 1;
   state.homeSectionView = null;
+  if (state.selected) {
+    clearSelection({ closePlayer: true });
+    renderDetail();
+  }
   renderCatalog();
   scheduleRemoteSearch();
 });
 elements.sortFilter?.addEventListener('change', () => {
   if (elements.search.value.trim().length > 0) state.homeSectionView = null;
+  if (state.selected) {
+    clearSelection({ closePlayer: true });
+    renderDetail();
+  }
   renderCatalog();
   if (state.remoteResults.length > 0 && elements.search.value.trim().length >= 3) {
     renderRemoteResults(elements.search.value.trim());
@@ -731,9 +754,7 @@ elements.tabs.forEach((tab) => {
       if (elements.genreFilter) elements.genreFilter.value = 'all';
       if (elements.sortFilter) elements.sortFilter.value = 'relevance';
       syncTabs('all');
-      state.selected = null;
-      state.seriesEpisodes = null;
-      closePlayerModal();
+      clearSelection({ closePlayer: true });
       renderCatalog();
       renderDetail();
       syncRoute();
@@ -741,9 +762,11 @@ elements.tabs.forEach((tab) => {
     }
 
     state.homeSectionView = null;
+    clearSelection({ closePlayer: true });
     elements.typeFilter.value = nextType;
     syncTabs(nextType);
     renderCatalog();
+    renderDetail();
     scheduleRemoteSearch();
   });
 });
@@ -766,6 +789,20 @@ function sanitizePosterUrl(value) {
   if (!/^https?:\/\//i.test(poster)) return '';
   if (/^description\s*:/i.test(poster)) return '';
   return poster;
+}
+
+function isPlaceholderDescription(value) {
+  const text = String(value || '').trim().toLowerCase();
+  if (!text) return true;
+  return text === 'sincronizado desde historial' || text === 'imdb result' || text === 'cargado desde ruta';
+}
+
+function hasWeakCatalogMetadata(title) {
+  if (!title) return true;
+  const description = String(title.description || '').trim();
+  const posterUrl = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
+  const genres = Array.isArray(title.metadata?.genres) ? title.metadata.genres.filter(Boolean) : [];
+  return !posterUrl || !description || isPlaceholderDescription(description) || !Number(title.year) || genres.length === 0;
 }
 
 async function resolvePosterForTitle(title) {
@@ -901,7 +938,7 @@ async function hydrateSelectedFromTmdb() {
   const cache = loadTmdbMetaCache();
   const key = getMetaCacheKey(title);
   const cached = cache[key];
-  if (cached && cached.payload) {
+  if (cached && cached.payload && !hasWeakCatalogMetadata({ ...title, ...cached.payload })) {
     Object.assign(title, cached.payload);
     return;
   }
@@ -915,7 +952,7 @@ async function hydrateSelectedFromTmdb() {
       const pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
       if (pick?.id) tmdbId = String(pick.id);
       if (pick?.poster_path && !sanitizePosterUrl(title.posterUrl)) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
-      if (pick?.overview && (!title.description || title.description === 'IMDb result')) title.description = pick.overview;
+      if (pick?.overview && isPlaceholderDescription(title.description)) title.description = pick.overview;
     }
 
     if (!tmdbId) return;
@@ -932,12 +969,13 @@ async function hydrateSelectedFromTmdb() {
     const payload = {
       tmdbId,
       title: title.title || details.name || details.title || title.title,
-      year: title.year || Number(String((details.first_air_date || details.release_date || '')).slice(0, 4)) || title.year,
-      description: details.overview || title.description,
+      year: Number(String((details.first_air_date || details.release_date || '')).slice(0, 4)) || title.year,
+      description: details.overview || (isPlaceholderDescription(title.description) ? '' : title.description),
       posterUrl: sanitizePosterUrl(title.posterUrl) || posterUrl,
       metadata: {
         ...(title.metadata || {}),
         posterUrl: sanitizePosterUrl(title.metadata?.posterUrl) || sanitizePosterUrl(title.posterUrl) || posterUrl,
+        releaseDate: details.first_air_date || details.release_date || (title.metadata?.releaseDate ?? null),
         genres,
         cast: castNames,
         endYear: endYear || (title.metadata?.endYear ?? ''),
@@ -946,6 +984,8 @@ async function hydrateSelectedFromTmdb() {
     };
 
     Object.assign(title, payload);
+    persistPosterForTitle(title);
+    queueCatalogSeedSyncForTitle(title);
     cache[key] = { cachedAt: Date.now(), payload };
     saveTmdbMetaCache(cache);
   } catch {
@@ -962,7 +1002,7 @@ function updateAuthUi() {
     elements.userChip.setAttribute('aria-hidden', authenticated ? 'false' : 'true');
   }
   if (elements.logoutBtn) {
-    elements.logoutBtn.textContent = authenticated ? 'Logout' : 'Login';
+    elements.logoutBtn.textContent = authenticated ? 'Salir' : 'Entrar';
     elements.logoutBtn.title = authenticated ? 'Cerrar sesión' : 'Iniciar sesión';
   }
   if (authenticated) {
@@ -1649,6 +1689,9 @@ function buildCatalogSeedSyncIssueBody(title) {
     `Year: ${Number(title?.year) || ''}`,
     `PosterUrl: ${String(title?.posterUrl || '').trim()}`,
     `Description: ${String(title?.description || '').trim()}`,
+    `ReleaseDate: ${String(title?.metadata?.releaseDate || '').trim()}`,
+    `BackdropUrl: ${String(title?.metadata?.backdropUrl || '').trim()}`,
+    `Genres: ${Array.isArray(title?.metadata?.genres) ? title.metadata.genres.filter(Boolean).join(', ') : ''}`,
     `Page: ${window.location.href}`,
     `CreatedAt: ${new Date().toISOString()}`
   ].join('\n');
@@ -1760,8 +1803,39 @@ bindTap(elements.floatingReportBtn, () => {
   });
 });
 
+function getBrowseHeading() {
+  const type = elements.typeFilter?.value || 'all';
+  if (type === 'movie') return 'Películas';
+  if (type === 'series') return 'Series';
+  return 'Inicio';
+}
+
+function updateToolbarNote() {
+  if (!elements.toolbarNote) return;
+  const query = String(elements.search?.value || '').trim();
+  const type = elements.typeFilter?.value || 'all';
+  if (query.length > 0 && query.length < 3) {
+    elements.toolbarNote.textContent = 'Sigue escribiendo: con 3 letras o más ampliamos la búsqueda con resultados externos.';
+    return;
+  }
+  if (query.length >= 3) {
+    elements.toolbarNote.textContent = 'Mostramos coincidencias locales primero y luego ampliamos con resultados externos reproducibles.';
+    return;
+  }
+  if (type === 'movie') {
+    elements.toolbarNote.textContent = 'Explora todas las películas o filtra por género y relevancia.';
+    return;
+  }
+  if (type === 'series') {
+    elements.toolbarNote.textContent = 'Explora todas las series o filtra por género y relevancia.';
+    return;
+  }
+  elements.toolbarNote.textContent = 'Explora por categorías o escribe al menos 3 letras para ampliar la búsqueda.';
+}
+
 function renderCatalog() {
   updateFloatingReportButtonVisibility();
+  updateToolbarNote();
   if (isAdminUser()) {
     const titleEl = document.querySelector('.catalog-header h2');
     if (titleEl) titleEl.textContent = 'Dashboard';
@@ -1770,13 +1844,13 @@ function renderCatalog() {
     return;
   }
   const titleEl = document.querySelector('.catalog-header h2');
-  if (titleEl) titleEl.textContent = 'Results';
+  if (titleEl) titleEl.textContent = getBrowseHeading();
   if (elements.sortFilter) elements.sortFilter.hidden = false;
   const query = elements.search.value.trim();
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
   const filtered = sortTitles(baseFiltered);
-  const shouldShowHome = query.length === 0 && !state.selected;
+  const shouldShowHome = query.length === 0 && !state.selected && (elements.typeFilter?.value || 'all') === 'all';
 
   if (shouldShowHome) {
     if (state.homeSectionView) {
@@ -1787,12 +1861,14 @@ function renderCatalog() {
     return;
   }
 
-  setCatalogCount(`${filtered.length} items`);
+  setCatalogCount(`${filtered.length} títulos`);
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
 
   if (filtered.length === 0 && query.length >= 3 && state.isSearching) {
-    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Searching IMDb/TMDB</strong><p>Looking for playable titles...</p></div>`;
+    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Buscando en fuentes externas</strong><p>Estamos revisando títulos reproducibles para complementar el catálogo.</p></div>`;
+  } else if (filtered.length === 0 && query.length > 0 && query.length < 3) {
+    elements.items.innerHTML = '<div class="empty">Escribe al menos 3 letras para ampliar la búsqueda. Mientras tanto puedes seguir explorando el catálogo local.</div>';
   }
 }
 
@@ -2130,7 +2206,7 @@ function renderAdminDashboard() {
             <article class="admin-kpi"><strong>${openReports.length}</strong><span>Reportes abiertos</span></article>
             <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización global</span></article>
             <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas seed</span></article>
-            <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series seed</span></article>
+            <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series en seed</span></article>
             <article class="admin-kpi"><strong>${permissionsCount}</strong><span>Roles con permisos</span></article>
             <article class="admin-kpi"><strong>${pendingRequests.length}</strong><span>Pendientes</span></article>
             <article class="admin-kpi"><strong>${approvedRequests.length}</strong><span>Aprobadas</span></article>
@@ -2155,7 +2231,7 @@ function renderAdminDashboard() {
 
             <section class="admin-panel">
               <h4>Top títulos por consumo</h4>
-              <div class="admin-chart">${topTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><div class="admin-bar-track"><i style="width:${Math.max(8, Math.round((row.plays / maxTopPlays) * 100))}%"></i></div><small>${row.plays} plays · ${row.completed} completados</small></div>`).join('') || '<p>Sin datos.</p>'}</div>
+              <div class="admin-chart">${topTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><div class="admin-bar-track"><i style="width:${Math.max(8, Math.round((row.plays / maxTopPlays) * 100))}%"></i></div><small>${row.plays} reproducciones · ${row.completed} completados</small></div>`).join('') || '<p>Sin datos.</p>'}</div>
             </section>
 
             <section class="admin-panel">
@@ -2276,8 +2352,10 @@ function renderHomeCatalog(baseFiltered) {
   const watchLaterItems = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
   const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const latestItems = sortTitles(baseFiltered).slice(0, 24);
 
   const section = (key, title, subtitle, items) => {
+    if (!items.length) return '';
     const preview = items.slice(0, 10);
     const showMore = items.length > preview.length;
     const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
@@ -2300,22 +2378,23 @@ function renderHomeCatalog(baseFiltered) {
   `;
   };
 
-  setCatalogCount(`${baseFiltered.length} items`);
+  setCatalogCount(`${baseFiltered.length} títulos`);
   const sections = [
-    section('watch_later', 'Ver mas tarde', 'Titulos que guardaste para despues', watchLaterItems),
-    section('continue', 'Continuar viendo', 'Peliculas incompletas y series en curso', continueItems),
-    section('movies_recommended', 'Peliculas que podrian gustarte', 'Basado en tus generos y actores', movieRecommended),
-    section('series_recommended', 'Series que podrian gustarte', 'Basado en tus generos y actores', seriesRecommended)
-  ];
+    section('continue', 'Continuar viendo', 'Retoma donde lo dejaste', continueItems),
+    section('watch_later', 'Ver más tarde', 'Tu lista guardada', watchLaterItems),
+    section('movies_recommended', 'Películas para ti', 'Sugerencias según lo que has visto', movieRecommended),
+    section('series_recommended', 'Series para ti', 'Sugerencias según lo que has visto', seriesRecommended)
+  ].filter(Boolean);
   for (const group of HOME_STREAMING_GROUPS) {
-    const movies = sortTitles(baseFiltered.filter((t) => t.type === 'movie' && titleHasProvider(t, group.aliases || [group.key])));
-    const series = sortTitles(baseFiltered.filter((t) => t.type === 'series' && titleHasProvider(t, group.aliases || [group.key])));
-    if (movies.length === 0 && series.length === 0) continue;
-    sections.push(section(`platform_${group.key}_movies`, `${group.label} Movies`, `Peliculas disponibles en ${group.label}`, movies));
-    sections.push(section(`platform_${group.key}_series`, `${group.label} Series`, `Series disponibles en ${group.label}`, series));
+    const available = sortTitles(baseFiltered.filter((t) => titleHasProvider(t, group.aliases || [group.key])));
+    if (available.length < 4) continue;
+    sections.push(section(`platform_${group.key}`, group.label, `Disponible ahora en ${group.label}`, available));
   }
-  sections.push(section('rewatch', 'Volver a ver', 'Titulos que ya completaste', rewatchItems));
-  elements.items.innerHTML = sections.join('');
+  sections.push(section('rewatch', 'Volver a ver', 'Títulos que ya completaste', rewatchItems));
+  if (!sections.length) {
+    sections.push(section('latest', 'Catálogo destacado', 'Una selección para comenzar', latestItems));
+  }
+  elements.items.innerHTML = sections.filter(Boolean).join('');
   bindLocalCardEvents();
   bindHomeSectionEvents();
   bindHomeCarouselEvents();
@@ -2328,7 +2407,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   let title = 'Listado';
   let items = [];
   if (sectionKey === 'watch_later') {
-    title = 'Ver mas tarde';
+    title = 'Ver más tarde';
     items = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
@@ -2337,28 +2416,30 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
     title = 'Volver a ver';
     items = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   } else if (sectionKey === 'movies_recommended') {
-    title = 'Peliculas que podrian gustarte';
+    title = 'Películas para ti';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   } else if (sectionKey === 'series_recommended') {
-    title = 'Series que podrian gustarte';
+    title = 'Series para ti';
     items = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  } else if (sectionKey === 'latest') {
+    title = 'Catálogo destacado';
+    items = sortTitles(baseFiltered).slice(0, 24);
   } else if (sectionKey.startsWith('platform_')) {
-    const match = sectionKey.match(/^platform_([a-z0-9]+)_(movies|series)$/);
+    const match = sectionKey.match(/^platform_([a-z0-9]+)$/);
     if (match) {
       const providerKey = match[1];
-      const kind = match[2] === 'movies' ? 'movie' : 'series';
       const group = HOME_STREAMING_GROUPS.find((entry) => entry.key === providerKey);
       const providerLabel = group?.label || providerKey;
-      title = `${providerLabel} ${kind === 'movie' ? 'Movies' : 'Series'}`;
-      items = sortTitles(baseFiltered.filter((t) => t.type === kind && titleHasProvider(t, group?.aliases || [providerKey])));
+      title = providerLabel;
+      items = sortTitles(baseFiltered.filter((t) => titleHasProvider(t, group?.aliases || [providerKey])));
     }
   }
-  setCatalogCount(`${items.length} items`);
+  setCatalogCount(`${items.length} títulos`);
   elements.items.innerHTML = `
     <section class="home-section-list">
       <div class="home-section-list-head">
         <h3>${escapeHtml(title)}</h3>
-        <button type="button" id="homeBack">Volver al Home</button>
+        <button type="button" id="homeBack">Volver al inicio</button>
       </div>
       <div class="items">${items.length ? renderLocalCards(items) : '<div class="empty">Sin resultados por ahora.</div>'}</div>
     </section>`;
@@ -2643,7 +2724,7 @@ function populateGenreFilter() {
     }
   }
   const sorted = [...genres].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
-  select.innerHTML = `<option value="all">Todos los generos</option>${sorted.map((g) => `<option value="${escapeAttribute(g.toLowerCase())}">${escapeHtml(g)}</option>`).join('')}`;
+  select.innerHTML = `<option value="all">Todos los géneros</option>${sorted.map((g) => `<option value="${escapeAttribute(g.toLowerCase())}">${escapeHtml(g)}</option>`).join('')}`;
   const next = [...select.options].some((opt) => opt.value === current) ? current : 'all';
   select.value = next;
 }
@@ -2660,9 +2741,9 @@ function renderLocalCards(titles) {
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
     const canPlay = !isAdmin && isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
-    const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Play" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
+    const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Reproducir ${escapeAttribute(title.title || 'título')}" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
-      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${playOverlay}
       <div><strong>${escapeHtml(title.title)}</strong>${getCardQuickActions(title, prefs)}${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
@@ -2810,7 +2891,7 @@ function scheduleSearchCommit() {
       return;
     }
     state.isSearching = true;
-    setCatalogCount(state.lastCountLabel || '0 items');
+    setCatalogCount(state.lastCountLabel || '0 títulos');
     await searchRemoteCatalog(query, intentId);
   }, 1200);
 }
@@ -2832,11 +2913,11 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
     renderRemoteResults(query);
   } catch (error) {
     if (intentId !== state.searchIntentId) return;
-    elements.items.innerHTML = `<div class="empty error">Search failed: ${escapeHtml(error.message)}</div>`;
+    elements.items.innerHTML = `<div class="empty error">La búsqueda falló: ${escapeHtml(error.message)}</div>`;
   } finally {
     if (intentId === state.searchIntentId) {
       state.isSearching = false;
-      setCatalogCount(state.lastCountLabel || '0 items');
+      setCatalogCount(state.lastCountLabel || '0 títulos');
     }
   }
 }
@@ -2846,7 +2927,7 @@ function renderRemoteResults(query) {
   const prefs = loadTitlePrefs();
   const localResults = getFilteredLocalTitles();
   const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, query));
-  setCatalogCount(`${merged.length} matches for "${query}"`);
+  setCatalogCount(`${merged.length} coincidencias para "${query}"`);
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
     const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
@@ -2856,11 +2937,11 @@ function renderRemoteResults(query) {
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
     return `<article class="item" data-key="${escapeHtml(title.catalogKey)}" ${entry.source === 'remote' ? `data-remote-index="${index}"` : ''}>
-      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${getCardQuickActions(title, prefs)}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
-  }).join('') || '<div class="empty">No results found for this query.</div>';
+  }).join('') || '<div class="empty">No encontramos resultados para esa búsqueda.</div>';
 
   elements.items.querySelectorAll('[data-remote-index]').forEach((item) => {
     item.addEventListener('click', () => {
@@ -2975,7 +3056,7 @@ function buildWatchInsights() {
       tmdbId,
       title: String(event?.title || (imdbId || tmdbId || key)).trim(),
       year: null,
-      description: 'Sincronizado desde historial',
+      description: '',
       posterUrl: '',
       playable: true,
       metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
@@ -3170,8 +3251,8 @@ function getCardQuickActions(title, prefs = loadTitlePrefs()) {
   const likedClass = flags.like === 1 ? ' active-like' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
   return `<div class="item-quick-actions">
-    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="Me gusta">❤</button>
-    <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="Ver mas tarde">+</button>
+    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="Me gusta" aria-pressed="${flags.like === 1 ? 'true' : 'false'}">❤</button>
+    <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="Guardar para ver después" aria-pressed="${flags.watchLater ? 'true' : 'false'}">+</button>
   </div>`;
 }
 
@@ -3182,9 +3263,15 @@ function updateQuickActionButtons(prefId) {
   const likeActive = Number(prefs?.likes?.[id] || 0) === 1;
   const laterActive = Boolean(prefs?.watchLater?.[id]);
   document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="like"]`)
-    .forEach((btn) => btn.classList.toggle('active-like', likeActive));
+    .forEach((btn) => {
+      btn.classList.toggle('active-like', likeActive);
+      btn.setAttribute('aria-pressed', likeActive ? 'true' : 'false');
+    });
   document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="later"]`)
-    .forEach((btn) => btn.classList.toggle('active-later', laterActive));
+    .forEach((btn) => {
+      btn.classList.toggle('active-later', laterActive);
+      btn.setAttribute('aria-pressed', laterActive ? 'true' : 'false');
+    });
 }
 
 function isSeriesCompletedByLastEpisode(title) {
@@ -3300,10 +3387,11 @@ function renderDetail(options = {}) {
       <section class="title-hero">
         <div class="title-hero-bg" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}"></div>
         <div class="title-copy">
+          <span class="title-kicker">Vista previa</span>
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
           ${getCardQuickActions(title)}
-          <p class="title-meta">${escapeHtml([title.year].filter(Boolean).join(' | '))}</p>
+          <div class="detail-meta-row">${title.year ? `<span class="detail-meta-chip">${escapeHtml(String(title.year))}</span>` : ''}</div>
           <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
           ${isBareRoute ? '<p class="title-description">Metadata no disponible para este ID. Busca por nombre para obtener información.</p>' : ''}
           ${renderEvaluationPanel(title)}
@@ -3312,8 +3400,7 @@ function renderDetail(options = {}) {
     </div>`;
 
     document.querySelector('#closeDetail')?.addEventListener('click', () => {
-      state.selected = null;
-      state.seriesEpisodes = null;
+      clearSelection();
       document.body.classList.remove('detail-active');
       renderCatalog();
       renderDetail();
@@ -3337,22 +3424,27 @@ function renderDetail(options = {}) {
   const resumeTarget = hasEpisodes ? getResumeTarget(progress, state.seriesEpisodes) : null;
   const startTarget = hasEpisodes ? getStartTarget(state.seriesEpisodes) : null;
   const isPlayable = title.playable !== false;
+  const titleMetaChips = [
+    title.year ? String(title.year) : '',
+    ...genres.slice(0, 3)
+  ].filter(Boolean).map((entry) => `<span class="detail-meta-chip">${escapeHtml(entry)}</span>`).join('');
   const seasonsTabs = hasEpisodes ? state.seriesEpisodes.seasons.map((entry) => `<button class="season-tab${entry.seasonNumber === state.playback.season ? ' active' : ''}" data-season="${entry.seasonNumber}">T${entry.seasonNumber}</button>`).join('') : '';
   const episodeCards = hasEpisodes ? getEpisodesForSeason(state.playback.season).map((entry) => {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
+    const statusLabel = inProgress ? 'En progreso' : watched ? 'Visto' : 'Listo para ver';
     return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
       <div class="episode-copy">
         <span class="episode-code">E${entry.episode}</span>
-        <span class="episode-title">${escapeHtml(entry.title || `Episode ${entry.episode}`)}</span>
-        ${watched ? '<span class="episode-status">Visto</span>' : ''}
+        <span class="episode-title">${escapeHtml(entry.title || `Episodio ${entry.episode}`)}</span>
+        <span class="episode-subtitle">${escapeHtml(statusLabel)}</span>
       </div>
       <div class="episode-actions">
         <button class="episode-report-btn" type="button" data-episode-report="${entry.episode}">
           Reportar
         </button>
         <button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">
-          ${inProgress ? 'Continuar' : 'Play'}
+          ${inProgress ? 'Continuar' : 'Ver'}
         </button>
       </div>
     </article>`;
@@ -3384,20 +3476,23 @@ function renderDetail(options = {}) {
     <section class="title-hero">
       <div class="title-hero-bg" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}"></div>
       <div class="title-copy">
+        <span class="title-kicker">${isSeriesLike(title) ? 'Serie seleccionada' : 'Película seleccionada'}</span>
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>
         ${getCardQuickActions(title)}
-        <p class="title-meta">${escapeHtml([title.year, genres.length ? genres.slice(0, 3).join(', ') : ''].filter(Boolean).join(' | '))}</p>
+        <div class="detail-meta-row">${titleMetaChips}</div>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
-        ${castNames.length ? `<p class="title-meta">${escapeHtml(`Cast: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
+        ${castNames.length ? `<p class="title-meta">${escapeHtml(`Reparto: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
         ${metadataBlock}
         ${availabilityBlock}
         <div class="actions hero-actions">
-          ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Play' : 'No disponible'}</button>` : ''}
-          ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Play T${startTarget.season}E${startTarget.episode}</button>` : ''}
+          ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Reproducir' : 'No disponible'}</button>` : ''}
+          ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Ver T${startTarget.season}E${startTarget.episode}</button>` : ''}
           ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
-          <button id="reportIssue" type="button">${escapeHtml(issueActionLabel)}</button>
-          ${isSeriesLike(title) && isAuthenticated() ? `<button id="refreshEpisodes"${state.seriesEpisodesLoading ? ' disabled' : ''}>Actualizar capítulos</button>` : ''}
+        </div>
+        <div class="detail-support-actions">
+          <button id="reportIssue" type="button" class="ghost">${escapeHtml(issueActionLabel)}</button>
+          ${isSeriesLike(title) && isAuthenticated() ? `<button id="refreshEpisodes" type="button" class="ghost"${state.seriesEpisodesLoading ? ' disabled' : ''}>Actualizar capítulos</button>` : ''}
         </div>
       </div>
     </section>
@@ -3480,8 +3575,7 @@ function renderDetail(options = {}) {
     });
   });
   document.querySelector('#closeDetail')?.addEventListener('click', () => {
-    state.selected = null;
-    state.seriesEpisodes = null;
+    clearSelection();
     document.body.classList.remove('detail-active');
     renderCatalog();
     renderDetail();
@@ -3489,21 +3583,16 @@ function renderDetail(options = {}) {
   });
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => {
-    const onSelect = (playNow = false) => {
+    const onSelect = () => {
       state.playback.episode = positiveInteger(button.dataset.episode, 1);
-      if (playNow) {
-        openPlayerForCurrentSelection();
-        return;
-      }
       renderDetail();
       syncRoute();
     };
-    // Direct episode jump: clicking an episode starts playback immediately.
-    button.addEventListener('click', () => onSelect(true));
+    button.addEventListener('click', () => onSelect());
     button.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
-      onSelect(true);
+      onSelect();
     });
   });
 
@@ -3919,7 +4008,7 @@ function buildEpisodesFromIdList(imdbId, text) {
     const episode = Number(episodeRaw);
     if (!Number.isInteger(season) || !Number.isInteger(episode)) continue;
     const entries = bySeason.get(season) ?? [];
-    entries.push({ season, episode, title: `Episode ${episode}` });
+    entries.push({ season, episode, title: `Episodio ${episode}` });
     bySeason.set(season, entries);
   }
 
@@ -4000,7 +4089,7 @@ async function buildEpisodesFromTmdb(title) {
         .map((episode) => ({
           season: seasonNumber,
           episode: Number(episode?.episode_number) || 0,
-          title: String(episode?.name || '').trim() || `Episode ${episode?.episode_number}`
+          title: String(episode?.name || '').trim() || `Episodio ${episode?.episode_number}`
         }))
         .filter((episode) => Number.isInteger(episode.episode) && episode.episode > 0)
         .sort((a, b) => a.episode - b.episode);

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T14:10:25.196Z",
+  "generatedAt": "2026-05-20T14:19:50.951Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T13:57:38Z",
-      "totalEvents": 323,
-      "totalStarts": 191,
+      "updatedAt": "2026-05-20T14:19:20Z",
+      "totalEvents": 324,
+      "totalStarts": 192,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T13:57:38Z",
+      "lastActivityAt": "2026-05-20T14:19:20Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -25,8 +25,8 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
-        "tt0865556",
         "tt1234721",
+        "tt0865556",
         "tt7068946",
         "tt0032186",
         "tt31938062",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt1234721": {
+          "contentId": "tt1234721",
+          "imdbId": "tt1234721",
+          "tmdbId": "97020",
+          "title": "RoboCop",
+          "type": "movie",
+          "playCount": 7,
+          "completed": false,
+          "maxProgressValue": 2801.429116108,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T14:19:20Z"
         },
         "tt1190634": {
           "contentId": "tt1190634",
@@ -215,18 +227,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T00:55:37Z"
-        },
-        "tt1234721": {
-          "contentId": "tt1234721",
-          "imdbId": "tt1234721",
-          "tmdbId": "97020",
-          "title": "RoboCop",
-          "type": "movie",
-          "playCount": 6,
-          "completed": false,
-          "maxProgressValue": 2801.429116108,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T21:40:59Z"
         },
         "tt2883512": {
           "contentId": "tt2883512",
@@ -1417,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 486.7375
+      "avgPlaybackProgress": 485.2352
     },
     {
       "userEmail": "liz-munera@hotmail.com",

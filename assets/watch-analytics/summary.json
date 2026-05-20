@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-20T14:10:25.193Z",
+  "generatedAt": "2026-05-20T14:19:50.934Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 368,
-  "totalStarts": 220,
+  "totalEvents": 369,
+  "totalStarts": 221,
   "totalCompletions": 41,
-  "overallCompletionRate": 0.1864,
+  "overallCompletionRate": 0.1855,
   "trackedTitles": 129,
   "mostWatchedContent": [
     {
@@ -76,7 +76,7 @@
       "contentId": "tt1234721",
       "title": "RoboCop",
       "type": "movie",
-      "totalEvents": 6,
+      "totalEvents": 7,
       "uniqueUsers": 1,
       "completionRate": 0
     },

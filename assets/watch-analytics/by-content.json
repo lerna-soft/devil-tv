@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T14:10:25.195Z",
+  "generatedAt": "2026-05-20T14:19:50.950Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1025,22 +1025,22 @@
       "tmdbId": "97020",
       "title": "RoboCop",
       "type": "movie",
-      "totalEvents": 6,
-      "totalStarts": 5,
+      "totalEvents": 7,
+      "totalStarts": 6,
       "totalCompletions": 0,
       "totalPlaybackProgress": 3085.362560914,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-19T21:40:59Z",
+      "lastActivityAt": "2026-05-20T14:19:20Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 6,
+          "playCount": 7,
           "completedCount": 0,
-          "startedCount": 5,
+          "startedCount": 6,
           "totalPlaybackProgress": 3085.362560914,
-          "lastSeenAt": "2026-05-19T21:40:59Z",
+          "lastSeenAt": "2026-05-20T14:19:20Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -1049,19 +1049,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 6,
-          "totalStarts": 5,
+          "totalEvents": 7,
+          "totalStarts": 6,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3085.362560914,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T21:40:59Z",
+          "lastActivityAt": "2026-05-20T14:19:20Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 514.2271
+      "avgPlaybackProgress": 440.7661
     },
     {
       "contentId": "tt26443616",

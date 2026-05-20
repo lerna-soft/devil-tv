@@ -697,12 +697,13 @@ async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
 
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
-  state.searchingTerm = elements.search.value.trim();
+  const search = getActiveSearchQuery();
+  state.searchingTerm = getSearchInputValue();
   if (state.selected) {
     clearSelection({ closePlayer: true });
     renderDetail();
   }
-  if (elements.search.value.trim().length >= 3) {
+  if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) {
     state.homeSectionView = null;
     state.isSearching = true;
     setCatalogCount(state.lastCountLabel || '0 títulos');
@@ -942,6 +943,39 @@ function uniqNames(values) {
     names.push(name);
   }
   return names;
+}
+
+function parseSearchQuery(rawQuery) {
+  const raw = String(rawQuery || '').trim();
+  const prefixed = raw.match(/^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+)\s*:\s*(.+)$/);
+  if (!prefixed) return { mode: 'text', term: raw, normalizedTerm: normalizeSearchText(raw) };
+
+  const prefix = normalizeSearchText(prefixed[1]);
+  const term = String(prefixed[2] || '').trim();
+  const normalizedTerm = normalizeSearchText(term);
+  if (!normalizedTerm) return { mode: 'text', term: '', normalizedTerm: '' };
+
+  if (prefix === 'a' || prefix === 'actor') return { mode: 'actor', term, normalizedTerm };
+  if (prefix === 'd' || prefix === 'director') return { mode: 'director', term, normalizedTerm };
+  if (prefix === 'g' || prefix === 'genero' || prefix === 'genre') return { mode: 'genre', term, normalizedTerm };
+  if (prefix === 'y' || prefix === 'ano' || prefix === 'anio' || prefix === 'year') return { mode: 'year', term, normalizedTerm };
+  return { mode: 'text', term: raw, normalizedTerm: normalizeSearchText(raw) };
+}
+
+function getSearchInputValue() {
+  return String(elements.search?.value || '').trim();
+}
+
+function getActiveSearchQuery() {
+  return parseSearchQuery(getSearchInputValue());
+}
+
+function searchSupportsRemote(mode) {
+  return mode === 'text' || mode === 'actor' || mode === 'director';
+}
+
+function getSearchTermLength(search) {
+  return String(search?.normalizedTerm || '').length;
 }
 
 function getMetaCacheKey(title) {
@@ -1838,25 +1872,41 @@ function getBrowseHeading() {
 
 function updateToolbarNote() {
   if (!elements.toolbarNote) return;
-  const query = String(elements.search?.value || '').trim();
+  const search = getActiveSearchQuery();
   const type = elements.typeFilter?.value || 'all';
-  if (query.length > 0 && query.length < 3) {
-    elements.toolbarNote.textContent = 'Sigue escribiendo: con 3 letras o más ampliamos la búsqueda con resultados externos.';
+  if (search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
+    elements.toolbarNote.textContent = 'Sigue escribiendo: con 3 letras o más ampliamos la búsqueda externa. También puedes usar a:, d:, g: y y:.';
     return;
   }
-  if (query.length >= 3) {
-    elements.toolbarNote.textContent = 'Mostramos coincidencias locales primero y luego ampliamos con resultados externos reproducibles.';
+  if (search.term) {
+    if (search.mode === 'actor') {
+      elements.toolbarNote.textContent = 'Búsqueda por actor activa. Ejemplo: a:Pedro Pascal.';
+      return;
+    }
+    if (search.mode === 'director') {
+      elements.toolbarNote.textContent = 'Búsqueda por director activa. Ejemplo: d:Christopher Nolan.';
+      return;
+    }
+    if (search.mode === 'genre') {
+      elements.toolbarNote.textContent = 'Búsqueda por género activa. Ejemplo: g:drama.';
+      return;
+    }
+    if (search.mode === 'year') {
+      elements.toolbarNote.textContent = 'Búsqueda por año activa. Usa y:2024 o ano:2024.';
+      return;
+    }
+    elements.toolbarNote.textContent = 'Mostramos coincidencias locales primero y luego ampliamos con resultados externos reproducibles. Prueba a:, d:, g: o y:.';
     return;
   }
   if (type === 'movie') {
-    elements.toolbarNote.textContent = 'Explora todas las películas o filtra por género y relevancia.';
+    elements.toolbarNote.textContent = 'Explora películas o usa a:actor, d:director, g:genero o y:2024.';
     return;
   }
   if (type === 'series') {
-    elements.toolbarNote.textContent = 'Explora todas las series o filtra por género y relevancia.';
+    elements.toolbarNote.textContent = 'Explora series o usa a:actor, d:director, g:genero o y:2024.';
     return;
   }
-  elements.toolbarNote.textContent = 'Explora por categorías o escribe al menos 3 letras para ampliar la búsqueda.';
+  elements.toolbarNote.textContent = 'Busca por texto o usa a:actor, d:director, g:genero y y:2024 para refinar.';
 }
 
 function renderCatalog() {
@@ -1872,7 +1922,7 @@ function renderCatalog() {
   const titleEl = document.querySelector('.catalog-header h2');
   if (titleEl) titleEl.textContent = getBrowseHeading();
   if (elements.sortFilter) elements.sortFilter.hidden = false;
-  const query = elements.search.value.trim();
+  const query = getSearchInputValue();
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
   const filtered = sortTitles(baseFiltered);
@@ -1891,10 +1941,11 @@ function renderCatalog() {
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
 
-  if (filtered.length === 0 && query.length >= 3 && state.isSearching) {
+  const search = getActiveSearchQuery();
+  if (filtered.length === 0 && getSearchTermLength(search) >= 3 && state.isSearching) {
     elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Buscando en fuentes externas</strong><p>Estamos revisando títulos reproducibles para complementar el catálogo.</p></div>`;
-  } else if (filtered.length === 0 && query.length > 0 && query.length < 3) {
-    elements.items.innerHTML = '<div class="empty">Escribe al menos 3 letras para ampliar la búsqueda. Mientras tanto puedes seguir explorando el catálogo local.</div>';
+  } else if (filtered.length === 0 && search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
+    elements.items.innerHTML = '<div class="empty">Escribe al menos 3 letras para ampliar la búsqueda externa. Mientras tanto puedes seguir explorando el catálogo local.</div>';
   }
 }
 
@@ -2722,7 +2773,8 @@ function bindEpisodeCarouselEvents() {
 }
 
 function getFilteredLocalTitles() {
-  const query = normalizeSearchText(elements.search.value);
+  const search = getActiveSearchQuery();
+  const query = search.normalizedTerm;
   const type = elements.typeFilter.value;
   const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
@@ -2734,7 +2786,19 @@ function getFilteredLocalTitles() {
     const directors = title.metadata?.directors || [];
     const haystack = normalizeSearchText([title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres, ...cast, ...directors].join(' '));
     const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
-    return (type === 'all' || title.type === type) && genreMatches && (!query || haystack.includes(query));
+    const year = String(title.year || '').trim();
+    const matchesQuery = !query
+      ? true
+      : search.mode === 'actor'
+        ? cast.some((name) => normalizeSearchText(name).includes(query))
+        : search.mode === 'director'
+          ? directors.some((name) => normalizeSearchText(name).includes(query))
+          : search.mode === 'genre'
+            ? genres.some((name) => normalizeSearchText(name).includes(query))
+            : search.mode === 'year'
+              ? year === query
+              : haystack.includes(query);
+    return (type === 'all' || title.type === type) && genreMatches && matchesQuery;
   });
 }
 
@@ -2875,16 +2939,18 @@ function bindPosterFallbacks(root = document) {
 function scheduleRemoteSearch() {
   clearTimeout(state.remoteSearchTimer);
   const intentId = state.searchIntentId;
-  const query = elements.search.value.trim();
-  state.searchingTerm = query;
-  if (query.length < 3) {
+  const search = getActiveSearchQuery();
+  const query = search.term;
+  state.searchingTerm = getSearchInputValue();
+  if (getSearchTermLength(search) < 3 || !searchSupportsRemote(search.mode)) {
     state.isSearching = false;
     renderCatalog();
     return;
   }
   if (!isAuthenticated()) return;
   const remoteKey = [
-    query.toLowerCase(),
+    search.mode,
+    search.normalizedTerm,
     elements.typeFilter.value || 'all'
   ].join('|');
   state.isSearching = true;
@@ -2893,7 +2959,7 @@ function scheduleRemoteSearch() {
     if (intentId !== state.searchIntentId) return;
     if (state.lastRemoteQuery === remoteKey) return;
     state.lastRemoteQuery = remoteKey;
-    await searchRemoteCatalog(query, intentId);
+    await searchRemoteCatalog(search, intentId);
     state.isSearching = false;
     syncRoute();
   }, 700);
@@ -2904,8 +2970,8 @@ function scheduleSearchCommit() {
   const intentId = state.searchIntentId;
   state.searchCommitTimer = setTimeout(async () => {
     if (intentId !== state.searchIntentId) return;
-    const query = elements.search.value.trim();
-    state.searchingTerm = query;
+    const search = getActiveSearchQuery();
+    state.searchingTerm = getSearchInputValue();
     state.lastRemoteQuery = '';
     syncRoute();
     if (!isAuthenticated()) {
@@ -2913,20 +2979,22 @@ function scheduleSearchCommit() {
       renderCatalog();
       return;
     }
-    if (query.length < 3) {
+    if (getSearchTermLength(search) < 3 || !searchSupportsRemote(search.mode)) {
       state.isSearching = false;
       renderCatalog();
       return;
     }
     state.isSearching = true;
     setCatalogCount(state.lastCountLabel || '0 títulos');
-    await searchRemoteCatalog(query, intentId);
+    await searchRemoteCatalog(search, intentId);
   }, 1200);
 }
 
-async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
+async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId) {
+  const search = typeof searchInput === 'string' ? parseSearchQuery(searchInput) : (searchInput || getActiveSearchQuery());
+  const query = search.term;
   try {
-    const results = await searchViaListingsAndImdb(query, elements.typeFilter.value);
+    const results = await searchViaListingsAndImdb(search, elements.typeFilter.value);
     if (intentId !== state.searchIntentId) return;
     for (const item of results) {
       if (sanitizePosterUrl(item.posterUrl || item.metadata?.posterUrl || '')) continue;
@@ -2938,7 +3006,7 @@ async function searchRemoteCatalog(query, intentId = state.searchIntentId) {
     for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
     cacheSearchResults(state.remoteResults);
     if (intentId !== state.searchIntentId) return;
-    renderRemoteResults(query);
+    renderRemoteResults(getSearchInputValue());
   } catch (error) {
     if (intentId !== state.searchIntentId) return;
     elements.items.innerHTML = `<div class="empty error">La búsqueda falló: ${escapeHtml(error.message)}</div>`;
@@ -3743,11 +3811,19 @@ function jumpEpisode(direction, baseEmbed) {
   openPlayerModal(getCurrentEmbedUrl(baseEmbed));
 }
 
-async function searchViaListingsAndImdb(query, typeFilter) {
+async function searchViaListingsAndImdb(searchInput, typeFilter) {
+  const search = typeof searchInput === 'string' ? parseSearchQuery(searchInput) : searchInput;
+  const query = search?.term || '';
   const [fromListings, fromImdb, fromPeople] = await Promise.all([
-    searchVidapiListings(query, typeFilter),
-    searchImdbSuggestionsViaJina(query, typeFilter),
-    searchTmdbPeopleCredits(query, typeFilter)
+    search.mode === 'text' ? searchVidapiListings(query, typeFilter) : Promise.resolve([]),
+    search.mode === 'text' ? searchImdbSuggestionsViaJina(query, typeFilter) : Promise.resolve([]),
+    search.mode === 'actor'
+      ? searchTmdbPeopleCredits(query, typeFilter, 'actor')
+      : search.mode === 'director'
+        ? searchTmdbPeopleCredits(query, typeFilter, 'director')
+        : search.mode === 'text'
+          ? searchTmdbPeopleCredits(query, typeFilter, 'any')
+          : Promise.resolve([])
   ]);
   return [...fromListings, ...fromImdb, ...fromPeople].filter((item) => hasPosterAsset(item));
 }
@@ -3777,7 +3853,7 @@ async function searchVidapiListings(query, typeFilter) {
   return results;
 }
 
-async function searchTmdbPeopleCredits(query, typeFilter) {
+async function searchTmdbPeopleCredits(query, typeFilter, personRole = 'any') {
   const normalizedQuery = normalizeSearchText(query);
   if (!normalizedQuery || normalizedQuery.length < 3) return [];
 
@@ -3791,7 +3867,7 @@ async function searchTmdbPeopleCredits(query, typeFilter) {
     const creditsByPerson = await Promise.all(matches.map(async (person) => {
       try {
         const credits = await tmdbFetchJson(`/person/${encodeURIComponent(person.id)}/combined_credits`, { language: 'es-ES' });
-        return buildTitlesFromPersonCredits(person, credits, typeFilter);
+        return buildTitlesFromPersonCredits(person, credits, typeFilter, personRole);
       } catch {
         return [];
       }
@@ -3802,12 +3878,12 @@ async function searchTmdbPeopleCredits(query, typeFilter) {
   }
 }
 
-function buildTitlesFromPersonCredits(person, credits, typeFilter) {
+function buildTitlesFromPersonCredits(person, credits, typeFilter, personRole = 'any') {
   const personName = String(person?.name || '').trim();
   if (!personName) return [];
 
-  const castItems = (credits?.cast || []).map((entry) => ({ entry, role: 'cast' }));
-  const directedItems = (credits?.crew || [])
+  const castItems = personRole === 'director' ? [] : (credits?.cast || []).map((entry) => ({ entry, role: 'cast' }));
+  const directedItems = personRole === 'actor' ? [] : (credits?.crew || [])
     .filter((entry) => String(entry?.job || '').trim().toLowerCase() === 'director')
     .map((entry) => ({ entry, role: 'director' }));
 

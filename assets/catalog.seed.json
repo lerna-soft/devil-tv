@@ -1,6 +1,6 @@
 {
-  "version": 208,
-  "generatedAt": "2026-05-20T17:47:35.594Z",
+  "version": 209,
+  "generatedAt": "2026-05-20T17:48:36.086Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26961,6 +26961,22 @@
       "releaseDate": null,
       "overview": "Después de acabar con el temido pirata Lo, Dragon Ma regresa y se incorpora a la policía. Ma recibe el encargo de eliminar el crimen en un barrio, y entra en contacto con un grupo de revolucionarios.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/yDmRzz6nIv8ZDniKQu4WaJSmyFD.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt5702420",
+      "title": "El Extranjero",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "Claudio Cleves, Anatoliy O",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTA1YWFlNmMtMmUxNy00MGQ3LThiYWQtOGYzMWYzNjJhMjVjXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

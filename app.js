@@ -947,17 +947,30 @@ function uniqNames(values) {
 
 function parseSearchQuery(rawQuery) {
   const raw = String(rawQuery || '').trim();
-  if (!raw) return { mode: 'text', term: '', normalizedTerm: '', typeFilter: 'all' };
+  if (!raw) return {
+    mode: 'text',
+    term: '',
+    normalizedTerm: '',
+    textTerm: '',
+    actorTerm: '',
+    directorTerm: '',
+    genreTerm: '',
+    yearTerm: '',
+    typeFilter: 'all'
+  };
 
-  const pieces = raw.split(/\s+/).filter(Boolean);
-  let mode = 'text';
+  const clauses = raw.split(',').map((part) => String(part || '').trim()).filter(Boolean);
   let typeFilter = 'all';
-  const termParts = [];
+  let textTerm = '';
+  let actorTerm = '';
+  let directorTerm = '';
+  let genreTerm = '';
+  let yearTerm = '';
 
-  for (const piece of pieces) {
-    const match = piece.match(/^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+)\s*:\s*(.+)$/);
+  for (const clause of clauses) {
+    const match = clause.match(/^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+)\s*:\s*(.+)$/);
     if (!match) {
-      termParts.push(piece);
+      textTerm = [textTerm, clause].filter(Boolean).join(' ').trim();
       continue;
     }
 
@@ -967,23 +980,19 @@ function parseSearchQuery(rawQuery) {
     if (!normalizedValue) continue;
 
     if (prefix === 'a' || prefix === 'actor') {
-      mode = 'actor';
-      termParts.push(value);
+      actorTerm = value;
       continue;
     }
     if (prefix === 'd' || prefix === 'director') {
-      mode = 'director';
-      termParts.push(value);
+      directorTerm = value;
       continue;
     }
     if (prefix === 'g' || prefix === 'genero' || prefix === 'genre') {
-      mode = 'genre';
-      termParts.push(value);
+      genreTerm = value;
       continue;
     }
     if (prefix === 'y' || prefix === 'ano' || prefix === 'anio' || prefix === 'year') {
-      mode = 'year';
-      termParts.push(value);
+      yearTerm = value;
       continue;
     }
     if (prefix === 't' || prefix === 'tipo' || prefix === 'type') {
@@ -992,11 +1001,22 @@ function parseSearchQuery(rawQuery) {
       continue;
     }
 
-    termParts.push(piece);
+    textTerm = [textTerm, clause].filter(Boolean).join(' ').trim();
   }
 
-  const term = termParts.join(' ').trim();
-  return { mode, term, normalizedTerm: normalizeSearchText(term), typeFilter };
+  const mode = actorTerm ? 'actor' : directorTerm ? 'director' : textTerm ? 'text' : genreTerm ? 'genre' : yearTerm ? 'year' : 'text';
+  const term = actorTerm || directorTerm || textTerm || genreTerm || yearTerm || '';
+  return {
+    mode,
+    term,
+    normalizedTerm: normalizeSearchText(term),
+    textTerm,
+    actorTerm,
+    directorTerm,
+    genreTerm,
+    yearTerm,
+    typeFilter
+  };
 }
 
 function getSearchInputValue() {
@@ -1019,6 +1039,24 @@ function getEffectiveTypeFilter(search = getActiveSearchQuery()) {
   return search?.typeFilter && search.typeFilter !== 'all'
     ? search.typeFilter
     : (elements.typeFilter?.value || 'all');
+}
+
+function matchesSearchFilters(title, search) {
+  const query = search || getActiveSearchQuery();
+  const type = getEffectiveTypeFilter(query);
+  const genres = (title?.metadata?.genres || title?.categories || []).map((g) => String(g || '').trim());
+  const cast = Array.isArray(title?.metadata?.cast) ? title.metadata.cast : [];
+  const directors = Array.isArray(title?.metadata?.directors) ? title.metadata.directors : [];
+  const year = String(title?.year || '').trim();
+  const textHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.imdbId, title?.tmdbId, ...genres, ...cast, ...directors].join(' '));
+
+  if (type !== 'all' && title?.type !== type) return false;
+  if (query.textTerm && !textHaystack.includes(normalizeSearchText(query.textTerm))) return false;
+  if (query.actorTerm && !cast.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.actorTerm)))) return false;
+  if (query.directorTerm && !directors.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.directorTerm)))) return false;
+  if (query.genreTerm && !genres.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.genreTerm)))) return false;
+  if (query.yearTerm && year !== normalizeSearchText(query.yearTerm)) return false;
+  return true;
 }
 
 function getMetaCacheKey(title) {
@@ -1934,13 +1972,14 @@ function openSearchHelp() {
     html: `
       <div style="text-align:left; display:grid; gap:0.65rem;">
         <p style="margin:0;">También puedes buscar normalmente por texto libre.</p>
+        <p style="margin:0;">Si combinas filtros, sepáralos con comas.</p>
         <p style="margin:0;"><strong>t:</strong> tipo. Ejemplos: <code>t:serie</code> o <code>t:pelicula</code></p>
         <p style="margin:0;"><strong>a:</strong> actor. Ejemplo: <code>a:Jackie Chan</code></p>
         <p style="margin:0;"><strong>d:</strong> director. Ejemplo: <code>d:Christopher Nolan</code></p>
         <p style="margin:0;"><strong>g:</strong> género. Ejemplo: <code>g:drama</code></p>
         <p style="margin:0;"><strong>y:</strong> año. Ejemplo: <code>y:2024</code></p>
         <p style="margin:0;"><strong>ano:</strong> alias de año. Ejemplo: <code>ano:2024</code></p>
-        <p style="margin:0;">Puedes combinarlos. Ejemplo: <code>t:serie a:Jackie Chan</code></p>
+        <p style="margin:0;">Puedes combinarlos. Ejemplo: <code>a:Jason Statham, y:2024, t:pelicula</code></p>
       </div>
     `,
     confirmButtonText: 'Entendido'
@@ -2817,31 +2856,14 @@ function bindEpisodeCarouselEvents() {
 
 function getFilteredLocalTitles() {
   const search = getActiveSearchQuery();
-  const query = search.normalizedTerm;
-  const type = getEffectiveTypeFilter(search);
   const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
   return titles.filter((title) => {
     if (title.type === 'episode') return false;
     if (!hasPosterAsset(title)) return false;
     const genres = (title.metadata?.genres || title.categories || []).map((g) => String(g).toLowerCase());
-    const cast = title.metadata?.cast || [];
-    const directors = title.metadata?.directors || [];
-    const haystack = normalizeSearchText([title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres, ...cast, ...directors].join(' '));
     const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
-    const year = String(title.year || '').trim();
-    const matchesQuery = !query
-      ? true
-      : search.mode === 'actor'
-        ? cast.some((name) => normalizeSearchText(name).includes(query))
-        : search.mode === 'director'
-          ? directors.some((name) => normalizeSearchText(name).includes(query))
-          : search.mode === 'genre'
-            ? genres.some((name) => normalizeSearchText(name).includes(query))
-            : search.mode === 'year'
-              ? year === query
-              : haystack.includes(query);
-    return (type === 'all' || title.type === type) && genreMatches && matchesQuery;
+    return genreMatches && matchesSearchFilters(title, search);
   });
 }
 
@@ -3044,7 +3066,7 @@ async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId)
       await ensurePosterForTitle(item, { registerSeed: true }).catch(() => {});
     }
     if (intentId !== state.searchIntentId) return;
-    const withPlayable = filterTitlesWithPoster(results.map((item) => ({ ...item, playable: true })));
+    const withPlayable = filterTitlesWithPoster(results.map((item) => ({ ...item, playable: true }))).filter((item) => matchesSearchFilters(item, search));
     state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
     for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
     cacheSearchResults(state.remoteResults);

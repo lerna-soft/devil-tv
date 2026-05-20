@@ -1,6 +1,6 @@
 {
-  "version": 202,
-  "generatedAt": "2026-05-20T06:40:26.596Z",
+  "version": 203,
+  "generatedAt": "2026-05-20T14:19:42.109Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26301,7 +26301,7 @@
       "tmdbId": "97020",
       "imdbId": "tt1234721",
       "title": "RoboCop",
-      "year": null,
+      "year": 2014,
       "releaseDate": null,
       "overview": "Sincronizado desde historial",
       "posterUrl": "https://image.tmdb.org/t/p/w500/2ej8wIzOYBgWQ5XlpeFulnkHAoI.jpg",

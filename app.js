@@ -952,6 +952,7 @@ function parseSearchQuery(rawQuery) {
     term: '',
     normalizedTerm: '',
     textTerm: '',
+    nameTerm: '',
     actorTerm: '',
     directorTerm: '',
     genreTerm: '',
@@ -962,6 +963,7 @@ function parseSearchQuery(rawQuery) {
   const clauses = raw.split(',').map((part) => String(part || '').trim()).filter(Boolean);
   let typeFilter = 'all';
   let textTerm = '';
+  let nameTerm = '';
   let actorTerm = '';
   let directorTerm = '';
   let genreTerm = '';
@@ -981,6 +983,10 @@ function parseSearchQuery(rawQuery) {
 
     if (prefix === 'a' || prefix === 'actor') {
       actorTerm = value;
+      continue;
+    }
+    if (prefix === 'n' || prefix === 'nombre' || prefix === 'name' || prefix === 'title' || prefix === 'titulo') {
+      nameTerm = value;
       continue;
     }
     if (prefix === 'd' || prefix === 'director') {
@@ -1004,13 +1010,14 @@ function parseSearchQuery(rawQuery) {
     textTerm = [textTerm, clause].filter(Boolean).join(' ').trim();
   }
 
-  const mode = actorTerm ? 'actor' : directorTerm ? 'director' : textTerm ? 'text' : genreTerm ? 'genre' : yearTerm ? 'year' : 'text';
-  const term = actorTerm || directorTerm || textTerm || genreTerm || yearTerm || '';
+  const mode = actorTerm ? 'actor' : directorTerm ? 'director' : nameTerm ? 'name' : textTerm ? 'text' : genreTerm ? 'genre' : yearTerm ? 'year' : 'text';
+  const term = actorTerm || directorTerm || nameTerm || textTerm || genreTerm || yearTerm || '';
   return {
     mode,
     term,
     normalizedTerm: normalizeSearchText(term),
     textTerm,
+    nameTerm,
     actorTerm,
     directorTerm,
     genreTerm,
@@ -1028,7 +1035,7 @@ function getActiveSearchQuery() {
 }
 
 function searchSupportsRemote(mode) {
-  return mode === 'text' || mode === 'actor' || mode === 'director';
+  return mode === 'text' || mode === 'name' || mode === 'actor' || mode === 'director';
 }
 
 function getSearchTermLength(search) {
@@ -1048,10 +1055,12 @@ function matchesSearchFilters(title, search) {
   const cast = Array.isArray(title?.metadata?.cast) ? title.metadata.cast : [];
   const directors = Array.isArray(title?.metadata?.directors) ? title.metadata.directors : [];
   const year = String(title?.year || '').trim();
+  const titleHaystack = normalizeSearchText([title?.title, title?.showTitle].join(' '));
   const textHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.imdbId, title?.tmdbId, ...genres, ...cast, ...directors].join(' '));
 
   if (type !== 'all' && title?.type !== type) return false;
   if (query.textTerm && !textHaystack.includes(normalizeSearchText(query.textTerm))) return false;
+  if (query.nameTerm && !titleHaystack.includes(normalizeSearchText(query.nameTerm))) return false;
   if (query.actorTerm && !cast.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.actorTerm)))) return false;
   if (query.directorTerm && !directors.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.directorTerm)))) return false;
   if (query.genreTerm && !genres.some((name) => normalizeSearchText(name).includes(normalizeSearchText(query.genreTerm)))) return false;
@@ -1974,12 +1983,13 @@ function openSearchHelp() {
         <p style="margin:0;">También puedes buscar normalmente por texto libre.</p>
         <p style="margin:0;">Si combinas filtros, sepáralos con comas.</p>
         <p style="margin:0;"><strong>t:</strong> tipo. Ejemplos: <code>t:serie</code> o <code>t:pelicula</code></p>
+        <p style="margin:0;"><strong>n:</strong> nombre del título. Ejemplo: <code>n:transporter</code></p>
         <p style="margin:0;"><strong>a:</strong> actor. Ejemplo: <code>a:Jackie Chan</code></p>
         <p style="margin:0;"><strong>d:</strong> director. Ejemplo: <code>d:Christopher Nolan</code></p>
         <p style="margin:0;"><strong>g:</strong> género. Ejemplo: <code>g:drama</code></p>
         <p style="margin:0;"><strong>y:</strong> año. Ejemplo: <code>y:2024</code></p>
         <p style="margin:0;"><strong>ano:</strong> alias de año. Ejemplo: <code>ano:2024</code></p>
-        <p style="margin:0;">Puedes combinarlos. Ejemplo: <code>a:Jason Statham, y:2024, t:pelicula</code></p>
+        <p style="margin:0;">Puedes combinarlos. Ejemplo: <code>n:transporter, a:jason statham, t:pelicula</code></p>
       </div>
     `,
     confirmButtonText: 'Entendido'
@@ -3883,8 +3893,8 @@ async function searchViaListingsAndImdb(searchInput, typeFilter) {
   const search = typeof searchInput === 'string' ? parseSearchQuery(searchInput) : searchInput;
   const query = search?.term || '';
   const [fromListings, fromImdb, fromPeople] = await Promise.all([
-    search.mode === 'text' ? searchVidapiListings(query, typeFilter) : Promise.resolve([]),
-    search.mode === 'text' ? searchImdbSuggestionsViaJina(query, typeFilter) : Promise.resolve([]),
+    (search.mode === 'text' || search.mode === 'name') ? searchVidapiListings(query, typeFilter) : Promise.resolve([]),
+    (search.mode === 'text' || search.mode === 'name') ? searchImdbSuggestionsViaJina(query, typeFilter) : Promise.resolve([]),
     search.mode === 'actor'
       ? searchTmdbPeopleCredits(query, typeFilter, 'actor')
       : search.mode === 'director'

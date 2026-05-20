@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T05:29:59.748Z",
+  "generatedAt": "2026-05-20T05:32:26.898Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T05:29:51Z",
-      "totalEvents": 310,
+      "updatedAt": "2026-05-20T05:32:16Z",
+      "totalEvents": 311,
       "totalStarts": 186,
       "totalCompletions": 39,
       "totalPlaybackProgress": 153005.4648453979,
-      "uniqueContentCount": 111,
-      "lastActivityAt": "2026-05-20T05:29:51Z",
+      "uniqueContentCount": 112,
+      "lastActivityAt": "2026-05-20T05:32:16Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0267913": {
+          "contentId": "tt0267913",
+          "imdbId": "tt0267913",
+          "tmdbId": "9637",
+          "title": "Scooby-Doo",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T05:32:16Z"
         },
         "tt0166792": {
           "contentId": "tt0166792",
@@ -1369,7 +1381,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 493.566
+      "avgPlaybackProgress": 491.979
     },
     {
       "userEmail": "liz-munera@hotmail.com",

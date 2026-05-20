@@ -3025,6 +3025,7 @@ function bindLocalCardEvents() {
 
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
+    if (item.dataset.remoteIndex) return;
     item.addEventListener('click', async () => {
       if (isAdminUser()) return;
       const homeCarousel = item.closest('[data-home-carousel]');

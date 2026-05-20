@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T14:19:50.951Z",
+  "generatedAt": "2026-05-20T15:31:49.547Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T14:19:20Z",
-      "totalEvents": 324,
-      "totalStarts": 192,
+      "updatedAt": "2026-05-20T15:31:36Z",
+      "totalEvents": 325,
+      "totalStarts": 193,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "lastActivityAt": "2026-05-20T15:31:36Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt29552248": {
+          "contentId": "tt29552248",
+          "imdbId": "tt29552248",
+          "tmdbId": "1007757",
+          "title": "Intercambiados",
+          "type": "movie",
+          "playCount": 5,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T15:31:36Z"
         },
         "tt1234721": {
           "contentId": "tt1234721",
@@ -95,18 +107,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:36Z"
-        },
-        "tt29552248": {
-          "contentId": "tt29552248",
-          "imdbId": "tt29552248",
-          "tmdbId": "1007757",
-          "title": "Intercambiados",
-          "type": "movie",
-          "playCount": 4,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T06:54:10Z"
         },
         "tt0294154": {
           "contentId": "tt0294154",
@@ -1417,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 485.2352
+      "avgPlaybackProgress": 483.7422
     },
     {
       "userEmail": "liz-munera@hotmail.com",

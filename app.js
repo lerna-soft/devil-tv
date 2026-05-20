@@ -2974,6 +2974,24 @@ function renderLocalCards(titles) {
   }).join('');
 }
 
+function getUnifiedTitlePool() {
+  const pool = [...loadLocalCatalog(), ...(Array.isArray(state.remoteResults) ? state.remoteResults : [])];
+  if (state.selected) pool.push(state.selected);
+  return dedupe(pool, { consolidateEquivalent: true });
+}
+
+function resolveTitleByCatalogKey(key) {
+  const target = String(key || '').trim();
+  if (!target) return null;
+  return getUnifiedTitlePool().find((entry) => String(entry?.catalogKey || '').trim() === target) || null;
+}
+
+function resolveTitleByPreferenceId(prefId) {
+  const target = String(prefId || '').trim();
+  if (!target) return null;
+  return getUnifiedTitlePool().find((entry) => String(getTitleId(entry) || '').trim() === target) || null;
+}
+
 function bindLocalCardEvents() {
   bindPosterFallbacks(elements.items);
   elements.items.querySelectorAll('.item-quick-btn').forEach((btn) => {
@@ -2986,8 +3004,8 @@ function bindLocalCardEvents() {
       const key = String(card?.dataset?.key || '').trim();
       if (!action || (!prefId && !key)) return;
       let title = null;
-      if (key) title = loadLocalCatalog().find((entry) => entry.catalogKey === key) || null;
-      if (!title && prefId) title = loadLocalCatalog().find((entry) => String(getTitleId(entry) || '').trim() === prefId) || null;
+      if (key) title = resolveTitleByCatalogKey(key);
+      if (!title && prefId) title = resolveTitleByPreferenceId(prefId);
       if (!title && state.selected && String(getTitleId(state.selected) || '').trim() === prefId) title = state.selected;
       if (!title) return;
       setTitlePreference(title, action);
@@ -3006,7 +3024,7 @@ function bindLocalCardEvents() {
       event.stopPropagation();
       const key = btn.dataset.playKey;
       if (!key) return;
-      const selected = loadLocalCatalog().find((title) => title.catalogKey === key);
+      const selected = resolveTitleByCatalogKey(key);
       if (!selected) return;
       state.selected = selected;
       state.seriesEpisodes = null;
@@ -3025,7 +3043,6 @@ function bindLocalCardEvents() {
 
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
-    if (item.dataset.remoteIndex) return;
     item.addEventListener('click', async () => {
       if (isAdminUser()) return;
       const homeCarousel = item.closest('[data-home-carousel]');
@@ -3033,7 +3050,8 @@ function bindLocalCardEvents() {
         const lastDragAt = homeCarouselLastDragAt.get(homeCarousel) || 0;
         if (Date.now() - lastDragAt < 350) return;
       }
-      state.selected = loadLocalCatalog().find((title) => title.catalogKey === item.dataset.key);
+      state.selected = resolveTitleByCatalogKey(item.dataset.key);
+      if (!state.selected) return;
       if (isAuthenticated() && state.selected) queueCatalogSeedSyncForTitle(state.selected);
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
@@ -3054,7 +3072,7 @@ function bindPosterFallbacks(root = document) {
       img.dataset.posterFallbackApplied = '1';
       const card = img.closest('.item');
       const key = String(card?.dataset?.key || '').trim();
-      let title = key ? loadLocalCatalog().find((entry) => entry.catalogKey === key) || null : null;
+      let title = key ? resolveTitleByCatalogKey(key) : null;
       if (!title && state.selected && String(state.selected.catalogKey || '').trim() === key) title = state.selected;
       const repaired = title ? await ensurePosterForTitle(title, { registerSeed: true }).catch(() => '') : '';
       if (repaired) {
@@ -3168,29 +3186,12 @@ function renderRemoteResults(query) {
     const startYear = title.year ?? '';
     const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
-    return `<article class="item" data-key="${escapeHtml(title.catalogKey)}" ${entry.source === 'remote' ? `data-remote-index="${index}"` : ''}>
+    return `<article class="item" data-key="${escapeHtml(title.catalogKey)}" data-source="${escapeAttribute(entry.source || 'remote')}">
       ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${getCardQuickActions(title, prefs)}
       <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
   }).join('') || '<div class="empty">No encontramos resultados para esa búsqueda.</div>';
-
-  elements.items.querySelectorAll('[data-remote-index]').forEach((item) => {
-    item.addEventListener('click', () => {
-      const remote = merged[Number(item.dataset.remoteIndex)]?.title;
-      if (!remote) return;
-      queueCatalogSeedSyncForTitle(remote);
-      state.selected = remote;
-      state.seriesEpisodes = null;
-      state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
-      state.hydratedProgressId = '';
-      renderRemoteResults(elements.search.value.trim());
-      renderDetail();
-      if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
-      syncRoute();
-      hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
-    });
-  });
   bindLocalCardEvents();
 }
 

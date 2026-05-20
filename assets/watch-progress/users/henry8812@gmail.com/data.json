@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T00:55:47Z",
+  "updatedAt": "2026-05-20T02:00:42Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1082,6 +1082,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-20T00:55:47Z",
       "watched": {}
+    },
+    "tt1869454": {
+      "imdbId": "tt1869454",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T02:00:42Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1154,20 +1164,40 @@
       "tt2883512": true,
       "tt0088853": true,
       "tt28788888": true,
-      "tt0398808": true
+      "tt0398808": true,
+      "tt1869454": true
     },
-    "updatedAt": "2026-05-20T00:55:47Z"
+    "updatedAt": "2026-05-20T02:00:42Z"
   },
   "lastWatch": {
-    "imdbId": "tt0398808",
-    "tmdbId": "1265",
+    "imdbId": "tt1869454",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T00:55:47Z"
+    "updatedAt": "2026-05-20T02:00:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1869454:s1e1:preference:2026-05-20T02:00:42Z",
+      "contentId": "tt1869454",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1869454",
+      "tmdbId": "",
+      "title": "Good Omens",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T02:00:42Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0398808:s1e1:preference:2026-05-20T00:55:47Z",
       "contentId": "tt0398808",

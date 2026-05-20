@@ -1,6 +1,6 @@
 {
-  "version": 182,
-  "generatedAt": "2026-05-20T05:17:24.021Z",
+  "version": 183,
+  "generatedAt": "2026-05-20T05:17:35.216Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50017,6 +50017,22 @@
       "releaseDate": null,
       "overview": "Leslie Nielsen, Alan North",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGFlYWNlMTAtOTIxZS00NGYyLTg4ZTAtZjBkYzJkZWVhMjI0XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0126168",
+      "title": "Police Academy: The Series",
+      "year": 1997,
+      "releaseDate": null,
+      "overview": "Matt Borlenghi, Rod Crawford",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYTY2NzU0MDAtNzAwNi00MTA1LWE4MTktMmY4M2I4MmI4NzkxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

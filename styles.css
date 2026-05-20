@@ -340,6 +340,11 @@ h1 {
   align-items: center;
 }
 
+.search-shell {
+  position: relative;
+  min-width: 0;
+}
+
 .user-chip {
   align-items: center;
   background: rgba(255, 255, 255, 0.06);
@@ -392,11 +397,37 @@ h1 {
   min-height: 2.5rem;
 }
 
-.toolbar-note {
-  color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.35;
-  margin: 0.55rem 0 0;
+#search {
+  padding-right: 3rem;
+  width: 100%;
+}
+
+.search-help-btn {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--soft);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 900;
+  height: 2rem;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+}
+
+.search-help-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.search-help-btn:focus-visible {
+  border-color: rgba(229, 9, 20, 0.68);
+  box-shadow: 0 0 0 4px var(--focus);
+  outline: 0;
 }
 
 .ghost {
@@ -2207,11 +2238,6 @@ code {
   .catalog-header-tools {
     justify-content: space-between;
     width: 100%;
-  }
-
-  .toolbar-note {
-    font-size: 0.75rem;
-    margin-top: 0.45rem;
   }
 
   .item strong {

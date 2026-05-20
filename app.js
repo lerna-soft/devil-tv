@@ -19,6 +19,7 @@ const state = {
   searchingTerm: ''
 };
 let suppressRouteSync = false;
+let routeChangeToken = 0;
 let episodeIndexPromise = null;
 let episodeManifestPromise = null;
 let watchProgressHeartbeatStarted = false;
@@ -4929,6 +4930,8 @@ function syncRoute() {
 }
 
 async function handleRouteChange() {
+  const currentRouteToken = ++routeChangeToken;
+  const isStaleRouteChange = () => currentRouteToken !== routeChangeToken;
   suppressRouteSync = true;
   try {
     const route = parseHashRoute();
@@ -4986,17 +4989,27 @@ async function handleRouteChange() {
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       renderDetail({ skipHydratePlayback: shouldOpenPlayer });
-      hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
+      const selectedId = String(state.selected.imdbId || state.selected.tmdbId || '').trim();
+      hydrateSelectedFromTmdb().then(() => {
+        const activeId = String(state.selected?.imdbId || state.selected?.tmdbId || '').trim();
+        if (isStaleRouteChange() || activeId !== selectedId) return;
+        renderDetail({ skipHydratePlayback: true });
+      });
       if (shouldOpenPlayer) {
         // iOS Safari can be flaky about repainting fixed overlays immediately;
         // deferring a tick makes the modal+hash transition more reliable.
         const target = getCurrentEmbedUrl(buildEmbedUrl(state.selected));
-        setTimeout(() => openPlayerModal(target), 0);
+        setTimeout(() => {
+          if (isStaleRouteChange()) return;
+          openPlayerModal(target);
+        }, 0);
       }
       if (isAuthenticated() && isSeriesLike(state.selected)) {
         await loadSeriesEpisodes();
+        if (isStaleRouteChange()) return;
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
+      if (isStaleRouteChange()) return;
       renderCatalog();
       if (!shouldOpenPlayer) closePlayerModal();
     } else {
@@ -5004,6 +5017,7 @@ async function handleRouteChange() {
       if (isAuthenticated()) {
         const search = parseSearchQuery(q);
         if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) await searchRemoteCatalog(search);
+        if (isStaleRouteChange()) return;
       }
       state.selected = null;
       state.seriesEpisodes = null;

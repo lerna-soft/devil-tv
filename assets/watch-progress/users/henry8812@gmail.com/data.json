@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T19:30:45Z",
+  "updatedAt": "2026-05-20T20:32:53Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1162,6 +1162,16 @@
       "lastProgress": 11.138896,
       "updatedAt": "2026-05-20T18:24:47Z",
       "watched": {}
+    },
+    "tt0293662": {
+      "imdbId": "tt0293662",
+      "tmdbId": "4108",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T20:32:53Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1247,15 +1257,34 @@
     "updatedAt": "2026-05-20T06:54:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "tt0293662",
+    "tmdbId": "4108",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T19:30:45Z"
+    "updatedAt": "2026-05-20T20:32:53Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0293662:s1e1:started:2026-05-20T20:32:53Z",
+      "contentId": "tt0293662",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0293662",
+      "tmdbId": "4108",
+      "title": "Transporter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T20:32:51.727Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T20:32:53Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33046197:s1e1:started:2026-05-20T19:30:45Z",
       "contentId": "tt33046197",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T19:38:48.957Z",
+  "generatedAt": "2026-05-20T20:33:04.362Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T19:30:45Z",
-      "totalEvents": 333,
-      "totalStarts": 201,
+      "updatedAt": "2026-05-20T20:32:53Z",
+      "totalEvents": 334,
+      "totalStarts": 202,
       "totalCompletions": 40,
       "totalPlaybackProgress": 163618.97008381737,
-      "uniqueContentCount": 116,
-      "lastActivityAt": "2026-05-20T19:30:45Z",
+      "uniqueContentCount": 117,
+      "lastActivityAt": "2026-05-20T20:32:53Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -49,6 +49,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt0293662": {
+          "contentId": "tt0293662",
+          "imdbId": "tt0293662",
+          "tmdbId": "4108",
+          "title": "Transporter",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T20:32:53Z"
         },
         "tt33046197": {
           "contentId": "tt33046197",
@@ -1431,7 +1443,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 491.3483
+      "avgPlaybackProgress": 489.8772
     },
     {
       "userEmail": "liz-munera@hotmail.com",

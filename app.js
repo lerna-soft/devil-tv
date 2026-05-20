@@ -52,6 +52,7 @@ const TMDB_ALERT_LABEL = 'tmdb-token-alert';
 const TMDB_ALERT_DEDUPE_PREFIX = 'mep_tmdb_alert_once_';
 const SEED_SYNC_LABEL = 'catalog-seed-sync';
 const SEED_SYNC_DEDUPE_PREFIX = 'mep_seed_sync_once_';
+const SEED_METADATA_REPAIR_DEDUPE_PREFIX = 'mep_seed_metadata_repair_once_';
 const SEED_CATALOG_KEYS_STORAGE = 'mep_seed_catalog_keys_v1';
 const SEED_SYNC_WINDOW_MS = 12 * 60 * 60 * 1000;
 const WATCH_PROGRESS_HEARTBEAT_MS = 30 * 1000;
@@ -1084,8 +1085,15 @@ async function hydrateSelectedFromTmdb() {
   const cache = loadTmdbMetaCache();
   const key = getMetaCacheKey(title);
   const cached = cache[key];
+  const wasWeakBeforeHydration = hasWeakCatalogMetadata(title);
   if (cached && cached.payload && !hasWeakCatalogMetadata({ ...title, ...cached.payload })) {
     Object.assign(title, cached.payload);
+    persistPosterForTitle(title);
+    if (existsInSeedCatalog(title) && wasWeakBeforeHydration) {
+      queueCatalogMetadataRepairForTitle(title, 'cached_tmdb_metadata_completed');
+    } else if (!existsInSeedCatalog(title)) {
+      queueCatalogSeedSyncForTitle(title);
+    }
     return;
   }
 
@@ -1134,10 +1142,22 @@ async function hydrateSelectedFromTmdb() {
 
     Object.assign(title, payload);
     persistPosterForTitle(title);
-    queueCatalogSeedSyncForTitle(title);
+    if (existsInSeedCatalog(title)) {
+      if (wasWeakBeforeHydration || hasWeakCatalogMetadata(title)) {
+        queueCatalogMetadataRepairForTitle(title, hasWeakCatalogMetadata(title) ? 'tmdb_metadata_still_incomplete' : 'tmdb_metadata_completed');
+      }
+    } else {
+      queueCatalogSeedSyncForTitle(title);
+    }
     cache[key] = { cachedAt: Date.now(), payload };
     saveTmdbMetaCache(cache);
+    if (existsInSeedCatalog(title) && hasWeakCatalogMetadata(title)) {
+      queueCatalogMetadataRepairForTitle(title, 'tmdb_metadata_missing_after_hydration');
+    }
   } catch {
+    if (existsInSeedCatalog(title) && wasWeakBeforeHydration) {
+      queueCatalogMetadataRepairForTitle(title, 'tmdb_hydration_failed');
+    }
     // Ignore TMDB failures; keep existing metadata.
   }
 }
@@ -1860,6 +1880,24 @@ function buildCatalogSeedSyncIssueBody(title) {
   ].join('\n');
 }
 
+function getCatalogMissingFields(title) {
+  const missing = [];
+  if (!sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')) missing.push('poster');
+  if (isPlaceholderDescription(title?.description || '')) missing.push('description');
+  if (!Number(title?.year)) missing.push('year');
+  if (!Array.isArray(title?.metadata?.genres) || title.metadata.genres.filter(Boolean).length === 0) missing.push('genres');
+  return missing;
+}
+
+function buildCatalogMetadataRepairIssueBody(title, reason = '') {
+  return [
+    'CATALOG_METADATA_REPAIR_REQUEST',
+    `RepairReason: ${String(reason || '').trim()}`,
+    `MissingFields: ${getCatalogMissingFields(title).join(', ')}`,
+    buildCatalogSeedSyncIssueBody(title)
+  ].filter(Boolean).join('\n');
+}
+
 function getSeedSyncKey(title) {
   const type = String(title?.type || '').trim().toLowerCase();
   const imdb = String(title?.imdbId || '').trim();
@@ -1894,6 +1932,23 @@ function queueCatalogSeedSyncForTitle(title) {
   void openGitHubIssue(
     `Catalog seed sync: ${String(title?.title || dedupeKey)}`,
     buildCatalogSeedSyncIssueBody(title),
+    [SEED_SYNC_LABEL]
+  ).catch(() => {
+    localStorage.removeItem(onceKey);
+  });
+}
+
+function queueCatalogMetadataRepairForTitle(title, reason = '') {
+  const dedupeKey = getSeedSyncKey(title);
+  if (!dedupeKey) return;
+  const onceKey = `${SEED_METADATA_REPAIR_DEDUPE_PREFIX}${dedupeKey}`;
+  const now = Date.now();
+  const lastAt = Number(localStorage.getItem(onceKey) || '0');
+  if (lastAt && (now - lastAt) < SEED_SYNC_WINDOW_MS) return;
+  localStorage.setItem(onceKey, String(now));
+  void openGitHubIssue(
+    `Catalog metadata repair: ${String(title?.title || dedupeKey)}`,
+    buildCatalogMetadataRepairIssueBody(title, reason),
     [SEED_SYNC_LABEL]
   ).catch(() => {
     localStorage.removeItem(onceKey);

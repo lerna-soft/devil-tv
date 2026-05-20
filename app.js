@@ -947,19 +947,56 @@ function uniqNames(values) {
 
 function parseSearchQuery(rawQuery) {
   const raw = String(rawQuery || '').trim();
-  const prefixed = raw.match(/^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+)\s*:\s*(.+)$/);
-  if (!prefixed) return { mode: 'text', term: raw, normalizedTerm: normalizeSearchText(raw) };
+  if (!raw) return { mode: 'text', term: '', normalizedTerm: '', typeFilter: 'all' };
 
-  const prefix = normalizeSearchText(prefixed[1]);
-  const term = String(prefixed[2] || '').trim();
-  const normalizedTerm = normalizeSearchText(term);
-  if (!normalizedTerm) return { mode: 'text', term: '', normalizedTerm: '' };
+  const pieces = raw.split(/\s+/).filter(Boolean);
+  let mode = 'text';
+  let typeFilter = 'all';
+  const termParts = [];
 
-  if (prefix === 'a' || prefix === 'actor') return { mode: 'actor', term, normalizedTerm };
-  if (prefix === 'd' || prefix === 'director') return { mode: 'director', term, normalizedTerm };
-  if (prefix === 'g' || prefix === 'genero' || prefix === 'genre') return { mode: 'genre', term, normalizedTerm };
-  if (prefix === 'y' || prefix === 'ano' || prefix === 'anio' || prefix === 'year') return { mode: 'year', term, normalizedTerm };
-  return { mode: 'text', term: raw, normalizedTerm: normalizeSearchText(raw) };
+  for (const piece of pieces) {
+    const match = piece.match(/^([a-zA-ZáéíóúÁÉÍÓÚñÑ]+)\s*:\s*(.+)$/);
+    if (!match) {
+      termParts.push(piece);
+      continue;
+    }
+
+    const prefix = normalizeSearchText(match[1]);
+    const value = String(match[2] || '').trim();
+    const normalizedValue = normalizeSearchText(value);
+    if (!normalizedValue) continue;
+
+    if (prefix === 'a' || prefix === 'actor') {
+      mode = 'actor';
+      termParts.push(value);
+      continue;
+    }
+    if (prefix === 'd' || prefix === 'director') {
+      mode = 'director';
+      termParts.push(value);
+      continue;
+    }
+    if (prefix === 'g' || prefix === 'genero' || prefix === 'genre') {
+      mode = 'genre';
+      termParts.push(value);
+      continue;
+    }
+    if (prefix === 'y' || prefix === 'ano' || prefix === 'anio' || prefix === 'year') {
+      mode = 'year';
+      termParts.push(value);
+      continue;
+    }
+    if (prefix === 't' || prefix === 'tipo' || prefix === 'type') {
+      if (['serie', 'series', 'tv'].includes(normalizedValue)) typeFilter = 'series';
+      if (['pelicula', 'peliculas', 'movie', 'movies'].includes(normalizedValue)) typeFilter = 'movie';
+      continue;
+    }
+
+    termParts.push(piece);
+  }
+
+  const term = termParts.join(' ').trim();
+  return { mode, term, normalizedTerm: normalizeSearchText(term), typeFilter };
 }
 
 function getSearchInputValue() {
@@ -976,6 +1013,12 @@ function searchSupportsRemote(mode) {
 
 function getSearchTermLength(search) {
   return String(search?.normalizedTerm || '').length;
+}
+
+function getEffectiveTypeFilter(search = getActiveSearchQuery()) {
+  return search?.typeFilter && search.typeFilter !== 'all'
+    ? search.typeFilter
+    : (elements.typeFilter?.value || 'all');
 }
 
 function getMetaCacheKey(title) {
@@ -1880,11 +1923,13 @@ function openSearchHelp() {
     html: `
       <div style="text-align:left; display:grid; gap:0.65rem;">
         <p style="margin:0;">También puedes buscar normalmente por texto libre.</p>
+        <p style="margin:0;"><strong>t:</strong> tipo. Ejemplos: <code>t:serie</code> o <code>t:pelicula</code></p>
         <p style="margin:0;"><strong>a:</strong> actor. Ejemplo: <code>a:Jackie Chan</code></p>
         <p style="margin:0;"><strong>d:</strong> director. Ejemplo: <code>d:Christopher Nolan</code></p>
         <p style="margin:0;"><strong>g:</strong> género. Ejemplo: <code>g:drama</code></p>
         <p style="margin:0;"><strong>y:</strong> año. Ejemplo: <code>y:2024</code></p>
         <p style="margin:0;"><strong>ano:</strong> alias de año. Ejemplo: <code>ano:2024</code></p>
+        <p style="margin:0;">Puedes combinarlos. Ejemplo: <code>t:serie a:Jackie Chan</code></p>
       </div>
     `,
     confirmButtonText: 'Entendido'
@@ -2756,7 +2801,7 @@ function bindEpisodeCarouselEvents() {
 function getFilteredLocalTitles() {
   const search = getActiveSearchQuery();
   const query = search.normalizedTerm;
-  const type = elements.typeFilter.value;
+  const type = getEffectiveTypeFilter(search);
   const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
   return titles.filter((title) => {
@@ -2975,7 +3020,7 @@ async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId)
   const search = typeof searchInput === 'string' ? parseSearchQuery(searchInput) : (searchInput || getActiveSearchQuery());
   const query = search.term;
   try {
-    const results = await searchViaListingsAndImdb(search, elements.typeFilter.value);
+    const results = await searchViaListingsAndImdb(search, getEffectiveTypeFilter(search));
     if (intentId !== state.searchIntentId) return;
     for (const item of results) {
       if (sanitizePosterUrl(item.posterUrl || item.metadata?.posterUrl || '')) continue;

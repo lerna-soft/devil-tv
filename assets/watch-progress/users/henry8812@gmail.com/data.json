@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T17:34:14Z",
+  "updatedAt": "2026-05-20T17:53:40Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1152,6 +1152,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-20T06:40:28Z",
       "watched": {}
+    },
+    "tt1615160": {
+      "imdbId": "tt1615160",
+      "tmdbId": "379149",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T17:53:40Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1237,15 +1247,34 @@
     "updatedAt": "2026-05-20T06:54:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt29552248",
-    "tmdbId": "1007757",
+    "imdbId": "tt1615160",
+    "tmdbId": "379149",
     "season": 1,
     "episode": 1,
-    "progress": 4299.974232,
-    "updatedAt": "2026-05-20T17:34:14Z"
+    "progress": 0,
+    "updatedAt": "2026-05-20T17:53:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1615160:s1e1:started:2026-05-20T17:53:40Z",
+      "contentId": "tt1615160",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1615160",
+      "tmdbId": "379149",
+      "title": "The Foreigner",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T17:53:38.965Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T17:53:40Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt29552248:s1e1:started:2026-05-20T17:34:14Z",
       "contentId": "tt29552248",

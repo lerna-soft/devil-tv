@@ -1,6 +1,6 @@
 {
-  "version": 175,
-  "generatedAt": "2026-05-20T05:05:23.356Z",
+  "version": 176,
+  "generatedAt": "2026-05-20T05:09:11.749Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26641,6 +26641,22 @@
       "releaseDate": null,
       "overview": "Cansado de la poca atención que le prestan sus padres, un brillante niño de 10 años decide divorciarse de ellos y salir en busca de unos padres ejemplares. Así comienza una aventura por medio planeta, y con fecha límite, al encuentro de los progenitores ideales.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1tb1cm2pvyMuNGC2hGBUK683NlQ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "126314",
+      "imdbId": null,
+      "title": "Final Cut: Ladies & Gentlemen",
+      "year": 2012,
+      "releaseDate": null,
+      "overview": "La auténtica película de amor narra la historia del hombre real y de la mujer real. ¿Qué es el hombre real en la vida? ¿Y la mujer real? Mediante el reciclaje de los héroes y las heroínas de celuloide de 500 películas (objetos de tantos sueños y deseos), esta \"película collage\" de György Palfi nos muestra a qué se parecen y también qué sucede cuando se encuentran.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gWosAW69lxRNQ8ksnCizUHsVeGU.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

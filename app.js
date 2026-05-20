@@ -4379,16 +4379,35 @@ function cacheSearchResults(results) {
 function dedupe(items, options = {}) {
   const { consolidateEquivalent = false } = options;
   const map = new Map();
+  const aliasToCanonical = new Map();
   for (const item of items) {
     const primaryKey = `${item.type}:${item.imdbId || ''}:${item.tmdbId || ''}:${item.season || ''}:${item.episode || ''}`;
     const fallbackKey = `${item.type}:title:${String(item.title || '').trim().toLowerCase()}:${String(item.year || '')}`;
-    const key = consolidateEquivalent ? (item.imdbId ? `${item.type}:imdb:${item.imdbId}` : item.tmdbId ? `${item.type}:tmdb:${item.tmdbId}` : fallbackKey) : primaryKey;
+    const equivalentKeys = consolidateEquivalent
+      ? [
+          item.imdbId ? `${item.type}:imdb:${item.imdbId}` : '',
+          item.tmdbId ? `${item.type}:tmdb:${item.tmdbId}` : '',
+          fallbackKey
+        ].filter(Boolean)
+      : [primaryKey];
+    const key = equivalentKeys.map((candidate) => aliasToCanonical.get(candidate) || candidate).find((candidate) => map.has(candidate)) || equivalentKeys[0];
     const existing = map.get(key);
     if (!existing) {
       map.set(key, item);
+      for (const alias of equivalentKeys) aliasToCanonical.set(alias, key);
       continue;
     }
-    map.set(key, mergeEquivalentTitles(existing, item));
+    const merged = mergeEquivalentTitles(existing, item);
+    map.set(key, merged);
+    const mergedFallbackKey = `${merged.type}:title:${String(merged.title || '').trim().toLowerCase()}:${String(merged.year || '')}`;
+    const mergedAliases = consolidateEquivalent
+      ? [
+          merged.imdbId ? `${merged.type}:imdb:${merged.imdbId}` : '',
+          merged.tmdbId ? `${merged.type}:tmdb:${merged.tmdbId}` : '',
+          mergedFallbackKey
+        ].filter(Boolean)
+      : [key];
+    for (const alias of [...equivalentKeys, ...mergedAliases]) aliasToCanonical.set(alias, key);
   }
   return [...map.values()];
 }

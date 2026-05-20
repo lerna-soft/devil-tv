@@ -63,6 +63,10 @@ const WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS = 2 * 60 * 1000;
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
+const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v1';
+const RELEASE_NOTES_CACHE_TTL_MS = 1000 * 60 * 15;
+const RELEASES_REPO_OWNER = 'lerna-admin';
+const RELEASES_REPO_NAME = 'media-evaluation-platform-static';
 const HOME_STREAMING_GROUPS = [
   { key: 'netflix', label: 'Netflix', aliases: ['netflix'] },
   { key: 'primevideo', label: 'Prime Video', aliases: ['primevideo', 'amazonprimevideo', 'primevideoamazonchannel'] },
@@ -109,7 +113,9 @@ const elements = {
   authToggleRegister: document.querySelector('#authToggleRegister'),
   loginCard: document.querySelector('#loginCard'),
   registerCard: document.querySelector('#registerCard'),
-  floatingReportBtn: document.querySelector('#floatingReportBtn')
+  floatingReportBtn: document.querySelector('#floatingReportBtn'),
+  releaseNotesBtn: document.querySelector('#releaseNotesBtn'),
+  releaseVersionText: document.querySelector('#releaseVersionText')
 };
 
 let authMode = 'login';
@@ -125,6 +131,206 @@ function clearSelection({ closePlayer = false } = {}) {
 function prepareManualRouteTransition() {
   routeChangeToken += 1;
   suppressRouteSync = false;
+}
+
+function classifyReleaseType(message) {
+  const normalized = String(message || '').trim().toLowerCase();
+  if (!normalized) return 'minor';
+  if (/breaking|major|migration|overhaul|redesign|rewrite/.test(normalized)) return 'major';
+  if (/fix|bug|avoid|ignore|hide|reduce|cancel|stale|prioritize|dedupe|repair|correct/.test(normalized)) return 'fix';
+  return 'minor';
+}
+
+function getReleaseTypeLabel(type) {
+  if (type === 'major') return 'Major';
+  if (type === 'fix') return 'Fix';
+  return 'Minor';
+}
+
+function localizeReleaseSummary(message) {
+  const text = String(message || '').trim();
+  if (!text) return 'Actualización del producto.';
+  if (/^prioritize manual title switches over stale route sync$/i.test(text)) return 'Se priorizó el cambio manual entre títulos para evitar cierres por sincronizaciones viejas.';
+  if (/^ignore stale route changes when switching titles$/i.test(text)) return 'Se bloquearon cambios de ruta obsoletos al cambiar rápido entre títulos.';
+  if (/^hide partial results during active search$/i.test(text)) return 'La búsqueda espera el listado final antes de mostrar resultados.';
+  if (/^cancel pending search work on selection$/i.test(text)) return 'Al abrir un título se cancelan búsquedas pendientes que podían desestabilizar la vista.';
+  if (/^reduce search rerender churn$/i.test(text)) return 'Se redujeron rerenders intermedios para que la búsqueda no haga saltar la pantalla.';
+  if (/^unify title resolution across search results$/i.test(text)) return 'Todos los resultados resuelven el título desde un flujo único en memoria.';
+  if (/^avoid double-click handling on remote results$/i.test(text)) return 'Se evitó el doble manejo de clics que podía reabrir o cerrar resultados.';
+  if (/^drain watch-progress queue$/i.test(text)) return 'Se estabilizó la cola de sincronización del progreso de visualización.';
+  const catalogSeedMatch = text.match(/^sync catalog seed from issue #(\d+)$/i);
+  if (catalogSeedMatch) return `Se sincronizó el catálogo base con el ajuste registrado en el issue #${catalogSeedMatch[1]}.`;
+  const watchProgressMatch = text.match(/^sync watch progress from issue #(\d+)$/i);
+  if (watchProgressMatch) return `Se sincronizó progreso de visualización desde el issue #${watchProgressMatch[1]}.`;
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function formatReleaseDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Sin fecha';
+  return date.toLocaleDateString('es-CO', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+
+function normalizeReleaseEntry(entry) {
+  const version = String(entry?.version || entry?.sha || '').trim();
+  const message = String(entry?.message || '').trim();
+  const type = classifyReleaseType(message);
+  return {
+    version,
+    shortVersion: version.slice(0, 7) || 'local',
+    message,
+    type,
+    typeLabel: getReleaseTypeLabel(type),
+    summary: localizeReleaseSummary(message),
+    date: String(entry?.date || '').trim(),
+    url: String(entry?.url || '').trim()
+  };
+}
+
+function loadReleaseNotesCache() {
+  try {
+    const raw = localStorage.getItem(RELEASE_NOTES_CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed?.entries)) return null;
+    const fetchedAt = Number(parsed?.fetchedAt || 0);
+    if (!fetchedAt || (Date.now() - fetchedAt) > RELEASE_NOTES_CACHE_TTL_MS) return null;
+    return parsed.entries.map(normalizeReleaseEntry).filter((entry) => entry.version);
+  } catch {
+    return null;
+  }
+}
+
+function saveReleaseNotesCache(entries) {
+  try {
+    localStorage.setItem(RELEASE_NOTES_CACHE_KEY, JSON.stringify({
+      fetchedAt: Date.now(),
+      entries
+    }));
+  } catch {}
+}
+
+async function fetchReleaseNotes(force = false) {
+  if (!force) {
+    const cached = loadReleaseNotesCache();
+    if (cached?.length) return cached;
+  }
+  const url = `https://api.github.com/repos/${encodeURIComponent(RELEASES_REPO_OWNER)}/${encodeURIComponent(RELEASES_REPO_NAME)}/commits?per_page=20`;
+  const response = await fetch(url, {
+    headers: { accept: 'application/vnd.github+json' },
+    cache: 'no-store'
+  }).catch(() => null);
+  if (!response?.ok) {
+    const cached = loadReleaseNotesCache();
+    if (cached?.length) return cached;
+    return [];
+  }
+  const commits = await response.json().catch(() => []);
+  const entries = commits.map((commit) => normalizeReleaseEntry({
+    version: String(commit?.sha || '').trim(),
+    message: String(commit?.commit?.message || '').split('\n')[0].trim(),
+    date: String(commit?.commit?.author?.date || '').trim(),
+    url: String(commit?.html_url || '').trim()
+  })).filter((entry) => entry.version && entry.message);
+  if (entries.length) saveReleaseNotesCache(entries);
+  return entries;
+}
+
+function renderReleaseBadge(entries = []) {
+  if (!elements.releaseVersionText) return;
+  const current = Array.isArray(entries) && entries.length ? entries[0] : null;
+  if (!current) {
+    const seedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
+    elements.releaseVersionText.textContent = seedVersion ? `Seed ${seedVersion}` : 'Historial';
+    return;
+  }
+  elements.releaseVersionText.textContent = `${current.shortVersion} · ${current.typeLabel}`;
+}
+
+function buildReleaseNotesHtml(entries = []) {
+  if (!entries.length) {
+    return `<div class="release-notes-modal"><p class="release-empty-copy">No fue posible cargar el historial de versiones en este momento.</p></div>`;
+  }
+  const current = entries[0];
+  const previous = entries.slice(1);
+  const jumps = previous.slice(0, 8).map((entry) => (
+    `<button type="button" class="release-jump" data-release-target="release-${escapeAttribute(entry.shortVersion)}">${escapeHtml(entry.shortVersion)}</button>`
+  )).join('');
+  const previousHtml = previous.map((entry) => (
+    `<article class="release-entry" id="release-${escapeAttribute(entry.shortVersion)}">
+      <div class="release-entry-header">
+        <span class="release-type release-type-${escapeAttribute(entry.type)}">${escapeHtml(entry.typeLabel)}</span>
+        <span class="release-version">${escapeHtml(entry.shortVersion)}</span>
+        <span class="release-date">${escapeHtml(formatReleaseDate(entry.date))}</span>
+      </div>
+      <p>${escapeHtml(entry.summary)}</p>
+      <div class="release-links">
+        <a href="${escapeAttribute(entry.url)}" target="_blank" rel="noreferrer">Ver commit</a>
+        <span>${escapeHtml(entry.message)}</span>
+      </div>
+    </article>`
+  )).join('');
+  return `<div class="release-notes-modal">
+    <section class="release-current">
+      <div class="release-current-header">
+        <span class="release-kicker">Versión actual</span>
+        <span class="release-type release-type-${escapeAttribute(current.type)}">${escapeHtml(current.typeLabel)}</span>
+        <span class="release-version">${escapeHtml(current.shortVersion)}</span>
+        <span class="release-date">${escapeHtml(formatReleaseDate(current.date))}</span>
+      </div>
+      <p>${escapeHtml(current.summary)}</p>
+      <div class="release-links">
+        <a href="${escapeAttribute(current.url)}" target="_blank" rel="noreferrer">Ver commit actual</a>
+        <span>${escapeHtml(current.message)}</span>
+      </div>
+    </section>
+    ${jumps ? `<div class="release-nav">${jumps}</div>` : ''}
+    <section class="release-list">${previousHtml}</section>
+  </div>`;
+}
+
+async function openReleaseNotes() {
+  if (typeof Swal === 'undefined') return;
+  const loadingText = elements.releaseVersionText?.textContent || 'Cargando...';
+  void Swal.fire({
+    title: 'Historial de versiones',
+    html: `<div class="release-notes-modal"><p class="release-empty-copy">Cargando versiones publicadas...</p></div>`,
+    width: 860,
+    customClass: { popup: 'release-notes-popup' },
+    showCloseButton: true,
+    showConfirmButton: false,
+    didOpen: async (popup) => {
+      const htmlContainer = popup.querySelector('.swal2-html-container');
+      const entries = await fetchReleaseNotes().catch(() => []);
+      renderReleaseBadge(entries);
+      if (!htmlContainer) return;
+      htmlContainer.innerHTML = buildReleaseNotesHtml(entries);
+      htmlContainer.querySelectorAll('[data-release-target]').forEach((button) => button.addEventListener('click', () => {
+        const targetId = String(button.getAttribute('data-release-target') || '').trim();
+        const target = htmlContainer.querySelector(`#${CSS.escape(targetId)}`);
+        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }));
+    }
+  });
+  if (elements.releaseVersionText && loadingText && !loadingText.includes('·')) {
+    renderReleaseBadge([]);
+  }
+}
+
+function bindReleaseNotes() {
+  if (!elements.releaseNotesBtn) return;
+  elements.releaseNotesBtn.addEventListener('click', () => {
+    void openReleaseNotes();
+  });
+  void fetchReleaseNotes().then((entries) => {
+    renderReleaseBadge(entries);
+  }).catch(() => {
+    renderReleaseBadge([]);
+  });
 }
 
 function isAuthenticated() {
@@ -1200,6 +1406,7 @@ function updateAuthUi() {
 }
 
 updateAuthUi();
+bindReleaseNotes();
 startWatchProgressQueueHeartbeat();
 hydrateWatchProgressForCurrentUser().catch(() => {});
 

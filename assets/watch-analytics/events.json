@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-20T17:53:53.581Z",
+  "generatedAt": "2026-05-20T18:24:58.990Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1615160:s1e1:started:2026-05-20T18:24:47Z",
+      "contentId": "tt1615160",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1615160",
+      "tmdbId": "379149",
+      "title": "The Foreigner",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 11.138896,
+      "progressValue": 11.138896,
+      "progressPercent": 11.138896,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T17:53:38.965Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T18:24:47Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1615160:s1e1:started:2026-05-20T17:53:40Z",
       "contentId": "tt1615160",

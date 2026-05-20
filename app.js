@@ -1552,6 +1552,35 @@ function getTitleId(title) {
   return getCanonicalExternalId(title);
 }
 
+function getTitlePreferenceKeys(title) {
+  const keys = [
+    getCanonicalExternalId(title),
+    String(title?.imdbId || '').trim(),
+    String(title?.tmdbId || '').trim(),
+    String(title?.catalogKey || '').trim()
+  ].filter(Boolean);
+  return [...new Set(keys)];
+}
+
+function readTitlePreferenceValue(map, title, fallback = 0) {
+  const source = map && typeof map === 'object' ? map : {};
+  for (const key of getTitlePreferenceKeys(title)) {
+    if (source[key] !== undefined) return source[key];
+  }
+  return fallback;
+}
+
+function writeTitlePreferenceValue(map, title, value) {
+  const source = map && typeof map === 'object' ? map : {};
+  const keys = getTitlePreferenceKeys(title);
+  if (!keys.length) return source;
+  for (const key of keys) {
+    if (value === undefined || value === null || value === false || value === 0) delete source[key];
+    else source[key] = value;
+  }
+  return source;
+}
+
 function hash32(input) {
   // FNV-1a 32-bit
   let h = 0x811c9dc5;
@@ -2820,7 +2849,7 @@ function renderHomeCatalog(baseFiltered) {
   const uniqueTitles = getUniqueRenderableTitles(baseFiltered);
   const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
-  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
+  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))));
   const movieRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const latestItems = sortTitles(uniqueTitles).slice(0, 24);
@@ -2880,7 +2909,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   let items = [];
   if (sectionKey === 'watch_later') {
     title = 'Ver más tarde';
-    items = sortTitles(uniqueTitles.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
+    items = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
@@ -3029,6 +3058,12 @@ function bindHomeCarouselEvents() {
         moved: false,
         captured: false
       };
+      if (event.pointerType === 'touch') {
+        try {
+          viewport.setPointerCapture(event.pointerId);
+          dragState.captured = true;
+        } catch {}
+      }
     });
 
     viewport.addEventListener('pointermove', (event) => {
@@ -3059,6 +3094,8 @@ function bindHomeCarouselEvents() {
 
     viewport.addEventListener('pointerup', endDrag);
     viewport.addEventListener('pointercancel', endDrag);
+    viewport.addEventListener('lostpointercapture', endDrag);
+    viewport.addEventListener('pointerleave', endDrag);
 
     window.addEventListener('resize', apply);
     apply();
@@ -3156,7 +3193,9 @@ function bindEpisodeCarouselEvents() {
         moved: false
       };
       carousel.classList.add('is-dragging');
-      viewport.setPointerCapture?.(event.pointerId);
+      try {
+        viewport.setPointerCapture?.(event.pointerId);
+      } catch {}
     });
     viewport.addEventListener('pointermove', (event) => updateDrag(event.clientX, event.clientY));
     viewport.addEventListener('pointerup', finishDrag);
@@ -3266,7 +3305,7 @@ function bindLocalCardEvents() {
       updateQuickActionButtons(id);
       if (action === 'later' && state.homeSectionView === 'watch_later' && card) {
         const prefs = loadTitlePrefs();
-        if (!prefs.watchLater?.[id]) card.remove();
+        if (!Boolean(readTitlePreferenceValue(prefs.watchLater, title, false))) card.remove();
       }
     });
   });
@@ -3725,11 +3764,11 @@ function saveTitlePrefs(next) {
 }
 
 function getTitleFlags(title, prefs = loadTitlePrefs()) {
-  const id = getTitleId(title);
-  if (!id) return { like: 0, watchLater: false };
+  const keys = getTitlePreferenceKeys(title);
+  if (!keys.length) return { like: 0, watchLater: false };
   return {
-    like: Number(prefs?.likes?.[id] || 0),
-    watchLater: Boolean(prefs?.watchLater?.[id])
+    like: Number(readTitlePreferenceValue(prefs?.likes, title, 0) || 0),
+    watchLater: Boolean(readTitlePreferenceValue(prefs?.watchLater, title, false))
   };
 }
 
@@ -3749,18 +3788,24 @@ function updateQuickActionButtons(prefId) {
   const id = String(prefId || '').trim();
   if (!id) return;
   const prefs = loadTitlePrefs();
-  const likeActive = Number(prefs?.likes?.[id] || 0) === 1;
-  const laterActive = Boolean(prefs?.watchLater?.[id]);
-  document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="like"]`)
-    .forEach((btn) => {
-      btn.classList.toggle('active-like', likeActive);
-      btn.setAttribute('aria-pressed', likeActive ? 'true' : 'false');
-    });
-  document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(id)}"][data-quick-action="later"]`)
-    .forEach((btn) => {
-      btn.classList.toggle('active-later', laterActive);
-      btn.setAttribute('aria-pressed', laterActive ? 'true' : 'false');
-    });
+  const relatedKeys = new Set([id]);
+  getUnifiedTitlePool()
+    .filter((title) => getTitlePreferenceKeys(title).includes(id))
+    .forEach((title) => getTitlePreferenceKeys(title).forEach((key) => relatedKeys.add(key)));
+  const likeActive = [...relatedKeys].some((key) => Number(prefs?.likes?.[key] || 0) === 1);
+  const laterActive = [...relatedKeys].some((key) => Boolean(prefs?.watchLater?.[key]));
+  for (const key of relatedKeys) {
+    document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="like"]`)
+      .forEach((btn) => {
+        btn.classList.toggle('active-like', likeActive);
+        btn.setAttribute('aria-pressed', likeActive ? 'true' : 'false');
+      });
+    document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="later"]`)
+      .forEach((btn) => {
+        btn.classList.toggle('active-later', laterActive);
+        btn.setAttribute('aria-pressed', laterActive ? 'true' : 'false');
+      });
+  }
 }
 
 function isSeriesCompletedByLastEpisode(title) {
@@ -3789,11 +3834,11 @@ function cleanupWatchLaterFromCompleted(baseFiltered = null) {
   const titles = Array.isArray(baseFiltered) ? baseFiltered : getFilteredLocalTitles();
   let changed = false;
   for (const title of titles) {
-    const id = getTitleId(title);
-    if (!id || !current[id]) continue;
-    const completed = watch.completedIds.has(id) || isSeriesCompletedByLastEpisode(title);
+    const ids = getTitlePreferenceKeys(title);
+    if (!ids.length || !ids.some((id) => current[id])) continue;
+    const completed = ids.some((id) => watch.completedIds.has(id)) || isSeriesCompletedByLastEpisode(title);
     if (!completed) continue;
-    delete current[id];
+    for (const id of ids) delete current[id];
     changed = true;
   }
   if (changed) saveTitlePrefs({ ...prefs, watchLater: current });
@@ -3802,22 +3847,24 @@ function cleanupWatchLaterFromCompleted(baseFiltered = null) {
 function setTitlePreference(title, action) {
   if (!isAuthenticated() || !title) return;
   const id = getTitleId(title);
-  if (!id) return;
+  if (!id || !getTitlePreferenceKeys(title).length) return;
   const prefs = loadTitlePrefs();
   const next = {
     likes: { ...(prefs.likes || {}) },
     watchLater: { ...(prefs.watchLater || {}) }
   };
-  if (action === 'like') next.likes[id] = next.likes[id] === 1 ? 0 : 1;
-  else if (action === 'later') {
-    if (next.watchLater[id]) delete next.watchLater[id];
-    else next.watchLater[id] = true;
+  if (action === 'like') {
+    const nextLike = Number(readTitlePreferenceValue(next.likes, title, 0) || 0) === 1 ? 0 : 1;
+    writeTitlePreferenceValue(next.likes, title, nextLike);
   }
-  if (!next.likes[id]) delete next.likes[id];
+  else if (action === 'later') {
+    const nextLater = !Boolean(readTitlePreferenceValue(next.watchLater, title, false));
+    writeTitlePreferenceValue(next.watchLater, title, nextLater);
+  }
   saveTitlePrefs(next);
   void queueTitlePreferenceSync(title, action, {
-    liked: next.likes[id] === 1,
-    watchLater: Boolean(next.watchLater[id])
+    liked: Number(readTitlePreferenceValue(next.likes, title, 0) || 0) === 1,
+    watchLater: Boolean(readTitlePreferenceValue(next.watchLater, title, false))
   });
 }
 

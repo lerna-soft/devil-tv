@@ -1,6 +1,6 @@
 {
-  "version": 187,
-  "generatedAt": "2026-05-20T05:19:25.776Z",
+  "version": 188,
+  "generatedAt": "2026-05-20T05:22:06.154Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26801,6 +26801,22 @@
       "releaseDate": null,
       "overview": "Bill Murray, Dan Aykroyd",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWE0YzYxNDUtMjk2ZC00NTEyLWE1MjktNzFkMjdjOWEwNTcyXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0196931",
+      "title": "Scooby-Doo and the Witch's Ghost",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "Scott Innes, Mary Kay Bergman",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGU0NmFiYTMtMDE0MC00OGY2LThmMjQtMDU0YWUwMDc5MDNiXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

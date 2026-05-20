@@ -50,8 +50,6 @@ body.player-active {
     gap: 0.8rem;
   }
 
-  body.detail-active .topbar,
-  body.detail-active .toolbar,
   body.detail-active .catalog,
   body.detail-active .catalog-header,
   body.detail-active #items,
@@ -338,7 +336,7 @@ h1 {
 .filters {
   display: grid;
   gap: 0.65rem;
-  grid-template-columns: minmax(14rem, 1fr) repeat(2, minmax(8.5rem, auto)) auto;
+  grid-template-columns: minmax(15rem, 1.6fr) repeat(2, minmax(10rem, auto));
   align-items: center;
 }
 
@@ -389,9 +387,16 @@ h1 {
 }
 
 #search,
-#typeFilter,
-#genreFilter {
+#genreFilter,
+#sortFilter {
   min-height: 2.5rem;
+}
+
+.toolbar-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  margin: 0.55rem 0 0;
 }
 
 .ghost {
@@ -615,7 +620,7 @@ h1 {
 .items {
   display: grid;
   gap: 0.95rem;
-  grid-template-columns: repeat(auto-fill, minmax(9.2rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
 }
 
 .home-section {
@@ -632,7 +637,7 @@ h1 {
 }
 
 .home-section-head h3 {
-  font-size: 1rem;
+  font-size: 1.08rem;
   margin: 0;
 }
 
@@ -766,6 +771,7 @@ h1 {
 
 .item-quick-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: 0.4rem;
 }
@@ -777,13 +783,13 @@ h1 {
   border-radius: 999px;
   color: rgba(255, 255, 255, 0.92);
   display: inline-flex;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  height: 1.85rem;
+  height: 2.05rem;
   justify-content: center;
   line-height: 1;
-  min-width: 1.85rem;
-  padding: 0;
+  min-width: 2.05rem;
+  padding: 0 0.68rem;
 }
 
 .item-quick-btn.active-like {
@@ -915,11 +921,6 @@ body.detail-active .catalog {
   display: none;
 }
 
-body.detail-active .topbar,
-body.detail-active .toolbar {
-  display: none;
-}
-
 .back-chip {
   background: rgba(12, 12, 16, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -986,7 +987,7 @@ body.detail-active .toolbar {
 .title-copy {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.5rem;
   justify-content: flex-start;
   min-height: 0;
   max-width: 46rem;
@@ -999,6 +1000,14 @@ body.detail-active .toolbar {
   font-size: clamp(2.8rem, 7vw, 6.4rem);
   line-height: 0.86;
   margin: 0.65rem 0 0.85rem;
+}
+
+.title-kicker {
+  color: var(--soft);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .pill {
@@ -1048,6 +1057,29 @@ body.detail-active .toolbar {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.85rem;
   line-height: 1.35;
+}
+
+.detail-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.detail-meta-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.42rem 0.72rem;
+}
+
+.detail-support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.4rem;
 }
 
 .report-issue {
@@ -1714,6 +1746,15 @@ body.detail-active .toolbar {
   justify-content: space-between;
   text-align: left;
   padding: 0.65rem 0.75rem;
+  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+}
+
+.episode-card:hover,
+.episode-card:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .episode-copy {
@@ -1724,6 +1765,7 @@ body.detail-active .toolbar {
 
 .episode-card.current {
   border-color: var(--brand);
+  background: rgba(229, 9, 20, 0.12);
 }
 
 .episode-card.watched {
@@ -1742,6 +1784,12 @@ body.detail-active .toolbar {
   line-height: 1.3;
   overflow-wrap: anywhere;
   white-space: normal;
+}
+
+.episode-subtitle {
+  color: var(--muted);
+  font-size: 0.73rem;
+  line-height: 1.35;
 }
 
 .episode-nav {
@@ -1942,6 +1990,7 @@ body.detail-active .toolbar {
 
 .empty {
   color: var(--muted);
+  line-height: 1.5;
   padding: 2rem;
 }
 
@@ -2104,8 +2153,8 @@ code {
   }
 
   #search,
-  #typeFilter,
-  #genreFilter {
+  #genreFilter,
+  #sortFilter {
     min-height: 2.6rem;
   }
 
@@ -2129,7 +2178,7 @@ code {
 
   .items {
     gap: 0.8rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-track {
@@ -2160,8 +2209,13 @@ code {
     width: 100%;
   }
 
+  .toolbar-note {
+    font-size: 0.75rem;
+    margin-top: 0.45rem;
+  }
+
   .item strong {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
   }
 
   .meta {
@@ -2212,6 +2266,10 @@ code {
     line-height: 0.95;
   }
 
+  .detail-meta-row {
+    gap: 0.45rem;
+  }
+
   .title-description {
     font-size: 0.88rem;
     line-height: 1.45;
@@ -2239,8 +2297,8 @@ code {
   }
 
   .episodes-track .episode-card {
-    flex-basis: 15.5rem;
-    max-width: 15.5rem;
+    flex-basis: 16rem;
+    max-width: 16rem;
   }
 
   .episode-card {

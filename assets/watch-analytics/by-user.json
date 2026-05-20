@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T19:13:04.745Z",
+  "generatedAt": "2026-05-20T19:30:54.435Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T19:12:53Z",
-      "totalEvents": 332,
-      "totalStarts": 200,
+      "updatedAt": "2026-05-20T19:30:45Z",
+      "totalEvents": 333,
+      "totalStarts": 201,
       "totalCompletions": 40,
       "totalPlaybackProgress": 163618.97008381737,
       "uniqueContentCount": 116,
-      "lastActivityAt": "2026-05-20T19:12:53Z",
+      "lastActivityAt": "2026-05-20T19:30:45Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -49,6 +49,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt33046197": {
+          "contentId": "tt33046197",
+          "imdbId": "tt33046197",
+          "tmdbId": "1168190",
+          "title": "Los hermanos demolición",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T19:30:45Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1070,18 +1082,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:50:54Z"
         },
-        "tt33046197": {
-          "contentId": "tt33046197",
-          "imdbId": "tt33046197",
-          "tmdbId": "1168190",
-          "title": "Los hermanos demolición",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:50:49Z"
-        },
         "tt37989803": {
           "contentId": "tt37989803",
           "imdbId": "tt37989803",
@@ -1431,7 +1431,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 492.8282
+      "avgPlaybackProgress": 491.3483
     },
     {
       "userEmail": "liz-munera@hotmail.com",

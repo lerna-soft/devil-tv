@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T18:24:58.995Z",
+  "generatedAt": "2026-05-20T18:59:02.701Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T18:24:47Z",
-      "totalEvents": 330,
-      "totalStarts": 198,
+      "updatedAt": "2026-05-20T18:58:52Z",
+      "totalEvents": 331,
+      "totalStarts": 199,
       "totalCompletions": 40,
       "totalPlaybackProgress": 163618.97008381737,
       "uniqueContentCount": 116,
-      "lastActivityAt": "2026-05-20T18:24:47Z",
+      "lastActivityAt": "2026-05-20T18:58:52Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -49,6 +49,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt0089374": {
+          "contentId": "tt0089374",
+          "imdbId": "tt0089374",
+          "tmdbId": "9056",
+          "title": "Police Story",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T18:58:52Z"
         },
         "tt1615160": {
           "contentId": "tt1615160",
@@ -1010,18 +1022,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:58:59Z"
         },
-        "tt0089374": {
-          "contentId": "tt0089374",
-          "imdbId": "tt0089374",
-          "tmdbId": "",
-          "title": "Police Story",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:58:57Z"
-        },
         "tt0069620": {
           "contentId": "tt0069620",
           "imdbId": "tt0069620",
@@ -1431,7 +1431,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 495.8151
+      "avgPlaybackProgress": 494.3171
     },
     {
       "userEmail": "liz-munera@hotmail.com",

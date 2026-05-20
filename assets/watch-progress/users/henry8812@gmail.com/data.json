@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T18:24:47Z",
+  "updatedAt": "2026-05-20T18:58:52Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -415,12 +415,12 @@
     },
     "tt0089374": {
       "imdbId": "tt0089374",
-      "tmdbId": "",
+      "tmdbId": "9056",
       "lastSeason": 1,
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T06:58:57Z",
+      "updatedAt": "2026-05-20T18:58:52Z",
       "watched": {}
     },
     "tt0095403": {
@@ -1247,15 +1247,34 @@
     "updatedAt": "2026-05-20T06:54:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt1615160",
-    "tmdbId": "379149",
+    "imdbId": "tt0089374",
+    "tmdbId": "9056",
     "season": 1,
     "episode": 1,
-    "progress": 11.138896,
-    "updatedAt": "2026-05-20T18:24:47Z"
+    "progress": 0,
+    "updatedAt": "2026-05-20T18:58:52Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0089374:s1e1:started:2026-05-20T18:58:52Z",
+      "contentId": "tt0089374",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0089374",
+      "tmdbId": "9056",
+      "title": "Police Story",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T18:58:50.996Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T18:58:52Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1615160:s1e1:started:2026-05-20T18:24:47Z",
       "contentId": "tt1615160",

@@ -1,6 +1,6 @@
 {
-  "version": 193,
-  "generatedAt": "2026-05-20T05:57:58.694Z",
+  "version": 194,
+  "generatedAt": "2026-05-20T06:08:14.004Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26833,6 +26833,22 @@
       "releaseDate": null,
       "overview": "Freddie Prinze Jr., Sarah Michelle Gellar",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTc2NDUwYmEtNDBlMi00Y2FhLWE1NDAtNDYyY2Q1MDAyZjE3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "8491",
+      "imdbId": null,
+      "title": "Este muerto está muy vivo",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "Dos jóvenes empleados de una compañía de seguros, Larry y Richard, se van a la costa a pasar tranquilamente el primer lunes de septiembre, el Día del Trabajo. Larry y Richard se han comportado como empleados modélicos, y han descubierto un importante plan en el que se pensaba realizar un importante desfalco en la empresa donde trabajan. El director de la compañía, Bernie Lomax, les recompensa invitándoles a una casa que posee en Hampton, una zona muy lujosa de la costa de Long Island. Bernie sería el anfitrión ideal... si no fuera por un pequeño detalle: está muerto.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wfUzRJTHGhVPeIdH9IDvJABZoc3.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

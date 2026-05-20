@@ -2446,16 +2446,21 @@ function renderAdminDashboard() {
 
 window.mepAdminCreateAgent = createAgentByAdmin;
 
+function getUniqueRenderableTitles(items) {
+  return dedupe(Array.isArray(items) ? items : [], { consolidateEquivalent: true });
+}
+
 function renderHomeCatalog(baseFiltered) {
   cleanupWatchLaterFromCompleted(baseFiltered);
   const prefs = loadTitlePrefs();
   const watch = buildWatchInsights();
-  const continueItems = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
-  const rewatchItems = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
-  const watchLaterItems = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
-  const movieRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const seriesRecommended = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const latestItems = sortTitles(baseFiltered).slice(0, 24);
+  const uniqueTitles = getUniqueRenderableTitles(baseFiltered);
+  const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
+  const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
+  const movieRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const seriesRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const latestItems = sortTitles(uniqueTitles).slice(0, 24);
 
   const section = (key, title, subtitle, items) => {
     if (!items.length) return '';
@@ -2507,26 +2512,27 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   cleanupWatchLaterFromCompleted(baseFiltered);
   const prefs = loadTitlePrefs();
   const watch = buildWatchInsights();
+  const uniqueTitles = getUniqueRenderableTitles(baseFiltered);
   let title = 'Listado';
   let items = [];
   if (sectionKey === 'watch_later') {
     title = 'Ver más tarde';
-    items = sortTitles(baseFiltered.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
+    items = sortTitles(uniqueTitles.filter((t) => Boolean(prefs.watchLater?.[getTitleId(t)])));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
-    items = sortTitles(baseFiltered.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
+    items = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   } else if (sectionKey === 'rewatch') {
     title = 'Volver a ver';
-    items = sortTitles(baseFiltered.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+    items = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
   } else if (sectionKey === 'movies_recommended') {
     title = 'Películas para ti';
-    items = sortTitles(baseFiltered.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+    items = sortTitles(uniqueTitles.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   } else if (sectionKey === 'series_recommended') {
     title = 'Series para ti';
-    items = sortTitles(baseFiltered.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+    items = sortTitles(uniqueTitles.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   } else if (sectionKey === 'latest') {
     title = 'Catálogo destacado';
-    items = sortTitles(baseFiltered).slice(0, 24);
+    items = sortTitles(uniqueTitles).slice(0, 24);
   } else if (sectionKey.startsWith('platform_')) {
     const match = sectionKey.match(/^platform_([a-z0-9]+)$/);
     if (match) {

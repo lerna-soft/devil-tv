@@ -86,7 +86,7 @@ const elements = {
   items: document.querySelector('#items'),
   count: document.querySelector('#count'),
   detail: document.querySelector('#detail'),
-  toolbarNote: document.querySelector('#toolbarNote'),
+  searchHelpBtn: document.querySelector('#searchHelpBtn'),
   playerModal: document.querySelector('#playerModal'),
   playerIframe: document.querySelector('#player'),
   playerControls: document.querySelector('#playerControls'),
@@ -1863,6 +1863,10 @@ bindTap(elements.floatingReportBtn, () => {
   });
 });
 
+bindTap(elements.searchHelpBtn, () => {
+  openSearchHelp();
+});
+
 function getBrowseHeading() {
   const type = elements.typeFilter?.value || 'all';
   if (type === 'movie') return 'Películas';
@@ -1870,48 +1874,25 @@ function getBrowseHeading() {
   return 'Inicio';
 }
 
-function updateToolbarNote() {
-  if (!elements.toolbarNote) return;
-  const search = getActiveSearchQuery();
-  const type = elements.typeFilter?.value || 'all';
-  if (search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
-    elements.toolbarNote.textContent = 'Sigue escribiendo: con 3 letras o más ampliamos la búsqueda externa. También puedes usar a:, d:, g: y y:.';
-    return;
-  }
-  if (search.term) {
-    if (search.mode === 'actor') {
-      elements.toolbarNote.textContent = 'Búsqueda por actor activa. Ejemplo: a:Pedro Pascal.';
-      return;
-    }
-    if (search.mode === 'director') {
-      elements.toolbarNote.textContent = 'Búsqueda por director activa. Ejemplo: d:Christopher Nolan.';
-      return;
-    }
-    if (search.mode === 'genre') {
-      elements.toolbarNote.textContent = 'Búsqueda por género activa. Ejemplo: g:drama.';
-      return;
-    }
-    if (search.mode === 'year') {
-      elements.toolbarNote.textContent = 'Búsqueda por año activa. Usa y:2024 o ano:2024.';
-      return;
-    }
-    elements.toolbarNote.textContent = 'Mostramos coincidencias locales primero y luego ampliamos con resultados externos reproducibles. Prueba a:, d:, g: o y:.';
-    return;
-  }
-  if (type === 'movie') {
-    elements.toolbarNote.textContent = 'Explora películas o usa a:actor, d:director, g:genero o y:2024.';
-    return;
-  }
-  if (type === 'series') {
-    elements.toolbarNote.textContent = 'Explora series o usa a:actor, d:director, g:genero o y:2024.';
-    return;
-  }
-  elements.toolbarNote.textContent = 'Busca por texto o usa a:actor, d:director, g:genero y y:2024 para refinar.';
+function openSearchHelp() {
+  void Swal.fire({
+    title: 'Cómo usar el buscador',
+    html: `
+      <div style="text-align:left; display:grid; gap:0.65rem;">
+        <p style="margin:0;">También puedes buscar normalmente por texto libre.</p>
+        <p style="margin:0;"><strong>a:</strong> actor. Ejemplo: <code>a:Jackie Chan</code></p>
+        <p style="margin:0;"><strong>d:</strong> director. Ejemplo: <code>d:Christopher Nolan</code></p>
+        <p style="margin:0;"><strong>g:</strong> género. Ejemplo: <code>g:drama</code></p>
+        <p style="margin:0;"><strong>y:</strong> año. Ejemplo: <code>y:2024</code></p>
+        <p style="margin:0;"><strong>ano:</strong> alias de año. Ejemplo: <code>ano:2024</code></p>
+      </div>
+    `,
+    confirmButtonText: 'Entendido'
+  });
 }
 
 function renderCatalog() {
   updateFloatingReportButtonVisibility();
-  updateToolbarNote();
   if (isAdminUser()) {
     const titleEl = document.querySelector('.catalog-header h2');
     if (titleEl) titleEl.textContent = 'Dashboard';

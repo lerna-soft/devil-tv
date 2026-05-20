@@ -1,6 +1,6 @@
 {
-  "version": 167,
-  "generatedAt": "2026-05-20T04:45:17.135Z",
+  "version": 168,
+  "generatedAt": "2026-05-20T04:46:25.695Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26529,6 +26529,22 @@
       "releaseDate": null,
       "overview": "Corre el año 1881 y Chon Wang (Jackie Chan) es un guardián del emperador chino. Cuando la princesa Pei Pei (Lucy Liu) es secuestrada y retenida en el oeste de Nevada en los Estados Unidos de América, él decide ir en su búsqueda junto con otros guardias imperiales. Una vez allí, se encuentra con una banda de pistoleros liderados por Roy O'Bannon (Owen Wilson), quien se muestra muy interesado por la princesa y en su recompensa, por lo cual decide ayudar a Chon en su ardua tarea de búsqueda.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1HTFEi2aifnmNMWYb5amvyAG86z.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt6502208",
+      "title": "Master of the Drunken Fist",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "Jun Cao, Zhihui Chen",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjI0OTE1NDctYmQ5OC00ZWE4LWJiM2UtZWE0MDJjNTg4MGE5XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

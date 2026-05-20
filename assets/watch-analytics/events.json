@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-20T02:08:17.661Z",
+  "generatedAt": "2026-05-20T03:27:09.574Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0865556:s1e1:preference:2026-05-20T03:27:01Z",
+      "contentId": "tt0865556",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0865556",
+      "tmdbId": "1729",
+      "title": "El reino prohibido",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T03:27:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s5e7:started:2026-05-20T02:08:07Z",
       "contentId": "tt1190634",

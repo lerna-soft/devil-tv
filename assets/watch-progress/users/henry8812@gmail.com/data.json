@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T02:08:07Z",
+  "updatedAt": "2026-05-20T03:27:01Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1092,6 +1092,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-20T02:00:42Z",
       "watched": {}
+    },
+    "tt0865556": {
+      "imdbId": "tt0865556",
+      "tmdbId": "1729",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T03:27:01Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1165,20 +1175,40 @@
       "tt0088853": true,
       "tt28788888": true,
       "tt0398808": true,
-      "tt1869454": true
+      "tt1869454": true,
+      "tt0865556": true
     },
-    "updatedAt": "2026-05-20T02:00:42Z"
+    "updatedAt": "2026-05-20T03:27:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
-    "season": 5,
-    "episode": 7,
+    "imdbId": "tt0865556",
+    "tmdbId": "1729",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T02:08:07Z"
+    "updatedAt": "2026-05-20T03:27:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0865556:s1e1:preference:2026-05-20T03:27:01Z",
+      "contentId": "tt0865556",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0865556",
+      "tmdbId": "1729",
+      "title": "El reino prohibido",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T03:27:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s5e7:started:2026-05-20T02:08:07Z",
       "contentId": "tt1190634",

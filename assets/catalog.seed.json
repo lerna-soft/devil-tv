@@ -1,6 +1,6 @@
 {
-  "version": 174,
-  "generatedAt": "2026-05-20T05:05:10.571Z",
+  "version": 175,
+  "generatedAt": "2026-05-20T05:05:23.356Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26625,6 +26625,22 @@
       "releaseDate": null,
       "overview": "Devastado por un fallo en una operación, el negociador de rehenes de la Policía de Los Ángeles Jeff Talley (Bruce Willis) se marcha de la ciudad y se va a vivir con su mujer e hija a una pequeña población en el tranquilo condado de Ventura. Un año después, se deberá volver a enfrentar a otro difícil caso de secuestro con rehenes...",
       "posterUrl": "https://image.tmdb.org/t/p/w500/nzUE4EsngobPaDL9jvRLaYb2Tbs.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "31586",
+      "imdbId": null,
+      "title": "Un muchacho llamado Norte",
+      "year": 1994,
+      "releaseDate": null,
+      "overview": "Cansado de la poca atención que le prestan sus padres, un brillante niño de 10 años decide divorciarse de ellos y salir en busca de unos padres ejemplares. Así comienza una aventura por medio planeta, y con fecha límite, al encuentro de los progenitores ideales.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1tb1cm2pvyMuNGC2hGBUK683NlQ.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

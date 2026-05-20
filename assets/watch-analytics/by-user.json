@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T00:56:01.066Z",
+  "generatedAt": "2026-05-20T00:56:34.563Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T00:55:42Z",
-      "totalEvents": 303,
+      "updatedAt": "2026-05-20T00:55:47Z",
+      "totalEvents": 304,
       "totalStarts": 182,
       "totalCompletions": 39,
       "totalPlaybackProgress": 150436.9377163979,
-      "uniqueContentCount": 107,
-      "lastActivityAt": "2026-05-20T00:55:42Z",
+      "uniqueContentCount": 108,
+      "lastActivityAt": "2026-05-20T00:55:47Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -46,6 +46,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0398808": {
+          "contentId": "tt0398808",
+          "imdbId": "tt0398808",
+          "tmdbId": "1265",
+          "title": "Un puente hacia Terabithia",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T00:55:47Z"
         },
         "tt28788888": {
           "contentId": "tt28788888",
@@ -1320,7 +1332,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 496.4915
+      "avgPlaybackProgress": 494.8583
     },
     {
       "userEmail": "liz-munera@hotmail.com",

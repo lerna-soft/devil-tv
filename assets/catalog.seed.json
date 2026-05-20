@@ -1,6 +1,6 @@
 {
-  "version": 184,
-  "generatedAt": "2026-05-20T05:18:44.692Z",
+  "version": 185,
+  "generatedAt": "2026-05-20T05:18:57.148Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26753,6 +26753,22 @@
       "releaseDate": null,
       "overview": "Scott Alan Richards, Andrew Greer",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzVjZDMwNWEtNTM4NC00YzZkLWJmNWQtMGRjODJjODA3ZTkxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt26923135",
+      "title": "Día de caza",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Rossy de Palma, Carmen Machi",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDljODExNTktYWVmOS00MTJjLWJhZWYtMTVkMjg1OWJiNDQzXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

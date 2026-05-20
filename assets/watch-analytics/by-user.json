@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T03:27:09.579Z",
+  "generatedAt": "2026-05-20T03:41:37.566Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T03:27:01Z",
-      "totalEvents": 307,
-      "totalStarts": 183,
+      "updatedAt": "2026-05-20T03:41:29Z",
+      "totalEvents": 308,
+      "totalStarts": 184,
       "totalCompletions": 39,
       "totalPlaybackProgress": 150436.9377163979,
       "uniqueContentCount": 110,
-      "lastActivityAt": "2026-05-20T03:27:01Z",
+      "lastActivityAt": "2026-05-20T03:41:29Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -53,11 +53,11 @@
           "tmdbId": "1729",
           "title": "El reino prohibido",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T03:27:01Z"
+          "lastSeenAt": "2026-05-20T03:41:29Z"
         },
         "tt1190634": {
           "contentId": "tt1190634",
@@ -1356,7 +1356,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 490.0226
+      "avgPlaybackProgress": 488.4316
     },
     {
       "userEmail": "liz-munera@hotmail.com",

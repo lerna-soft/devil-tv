@@ -3884,14 +3884,41 @@ function buildTitlesFromPersonCredits(person, credits, typeFilter, personRole = 
     .map((entry) => ({ entry, role: 'director' }));
 
   return [...castItems, ...directedItems]
-    .map(({ entry, role }) => normalizePersonCreditResult(entry, role, personName))
+    .map(({ entry, role }) => normalizePersonCreditResult(entry, role, personName, personRole))
     .filter((item) => item && (typeFilter === 'all' || item.type === typeFilter));
 }
 
-function normalizePersonCreditResult(entry, role, personName) {
+function isSelfLikeCredit(entry) {
+  const character = normalizeSearchText(entry?.character || entry?.job || '');
+  if (!character) return false;
+  return ['self', 'host', 'guest', 'himself', 'herself', 'presenter'].some((term) => character.includes(term));
+}
+
+function isNoisyPersonCredit(entry, role, personName, personRole) {
+  const mediaType = String(entry?.media_type || '').trim().toLowerCase();
+  const genreIds = Array.isArray(entry?.genre_ids) ? entry.genre_ids.map((id) => Number(id) || 0) : [];
+  const title = normalizeSearchText(entry?.title || entry?.name || '');
+  const person = normalizeSearchText(personName);
+  const episodeCount = Number(entry?.episode_count || 0) || 0;
+  const selfLike = isSelfLikeCredit(entry);
+  const isDocumentary = genreIds.includes(99);
+  const isTalkOrVariety = genreIds.some((id) => [10763, 10764, 10767].includes(id));
+  const isShortGuestSpot = mediaType === 'tv' && episodeCount > 0 && episodeCount <= 2;
+  const titleMentionsPerson = person && title.includes(person);
+
+  if (mediaType === 'tv' && isTalkOrVariety) return true;
+  if (mediaType === 'tv' && isShortGuestSpot && (selfLike || !String(entry?.character || '').trim())) return true;
+  if (role === 'cast' && personRole === 'actor' && isDocumentary && selfLike) return true;
+  if (role === 'cast' && personRole === 'actor' && isDocumentary && titleMentionsPerson) return true;
+  if (role === 'cast' && personRole === 'actor' && mediaType === 'movie' && selfLike && titleMentionsPerson) return true;
+  return false;
+}
+
+function normalizePersonCreditResult(entry, role, personName, personRole = 'any') {
   const mediaType = String(entry?.media_type || '').trim().toLowerCase();
   const type = mediaType === 'tv' ? 'series' : mediaType === 'movie' ? 'movie' : '';
   if (!type) return null;
+  if (isNoisyPersonCredit(entry, role, personName, personRole)) return null;
 
   const title = String(entry?.title || entry?.name || '').trim();
   if (!title) return null;

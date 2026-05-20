@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T06:54:51.134Z",
+  "generatedAt": "2026-05-20T06:55:54.870Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T06:54:36Z",
-      "totalEvents": 319,
+      "updatedAt": "2026-05-20T06:54:38Z",
+      "totalEvents": 320,
       "totalStarts": 188,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T06:54:36Z",
+      "lastActivityAt": "2026-05-20T06:54:38Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt2948372": {
+          "contentId": "tt2948372",
+          "imdbId": "tt2948372",
+          "tmdbId": "508442",
+          "title": "Soul",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T06:54:38Z"
         },
         "tt26735622": {
           "contentId": "tt26735622",
@@ -1403,21 +1415,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-11T21:00:45Z"
-        },
-        "tt2948372": {
-          "contentId": "tt2948372",
-          "imdbId": "tt2948372",
-          "tmdbId": "508442",
-          "title": "Soul",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 492.8408
+      "avgPlaybackProgress": 491.3007
     },
     {
       "userEmail": "liz-munera@hotmail.com",

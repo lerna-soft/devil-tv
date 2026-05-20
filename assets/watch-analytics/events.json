@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-20T04:11:50.272Z",
+  "generatedAt": "2026-05-20T05:29:59.742Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0166792:s1e1:started:2026-05-20T05:29:51Z",
+      "contentId": "tt0166792",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0166792",
+      "tmdbId": "",
+      "title": "tt0166792",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T05:29:49.216Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T05:29:51Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0865556:s1e1:started:2026-05-20T04:11:38Z",
       "contentId": "tt0865556",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T04:11:38Z",
+  "updatedAt": "2026-05-20T05:29:51Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1102,6 +1102,16 @@
       "lastProgress": 2568.527129,
       "updatedAt": "2026-05-20T04:11:38Z",
       "watched": {}
+    },
+    "tt0166792": {
+      "imdbId": "tt0166792",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T05:29:51Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1181,15 +1191,34 @@
     "updatedAt": "2026-05-20T03:27:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt0865556",
-    "tmdbId": "1729",
+    "imdbId": "tt0166792",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 2568.527129,
-    "updatedAt": "2026-05-20T04:11:38Z"
+    "progress": 0,
+    "updatedAt": "2026-05-20T05:29:51Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0166792:s1e1:started:2026-05-20T05:29:51Z",
+      "contentId": "tt0166792",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0166792",
+      "tmdbId": "",
+      "title": "",
+      "type": "",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T05:29:49.216Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T05:29:51Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0865556:s1e1:started:2026-05-20T04:11:38Z",
       "contentId": "tt0865556",

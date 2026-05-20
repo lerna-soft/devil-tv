@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T16:35:13.627Z",
+  "generatedAt": "2026-05-20T17:04:46.424Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T16:34:07Z",
-      "totalEvents": 326,
-      "totalStarts": 194,
+      "updatedAt": "2026-05-20T17:04:10Z",
+      "totalEvents": 327,
+      "totalStarts": 195,
       "totalCompletions": 40,
-      "totalPlaybackProgress": 157216.21786081739,
+      "totalPlaybackProgress": 159307.85695581738,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T16:34:07Z",
+      "lastActivityAt": "2026-05-20T17:04:10Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -25,6 +25,7 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
+        "tt29552248",
         "tt1234721",
         "tt0865556",
         "tt7068946",
@@ -54,11 +55,11 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 6,
+          "playCount": 7,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 2091.639095,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T16:34:07Z"
+          "lastSeenAt": "2026-05-20T17:04:10Z"
         },
         "tt1234721": {
           "contentId": "tt1234721",
@@ -1417,7 +1418,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 482.2583
+      "avgPlaybackProgress": 487.18
     },
     {
       "userEmail": "liz-munera@hotmail.com",

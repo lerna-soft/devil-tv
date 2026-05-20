@@ -1,6 +1,6 @@
 {
-  "version": 165,
-  "generatedAt": "2026-05-20T04:41:48.694Z",
+  "version": 166,
+  "generatedAt": "2026-05-20T04:45:02.032Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26497,6 +26497,22 @@
       "releaseDate": null,
       "overview": "Bei trabaja en una tienda de deportes mientras sueña con tener una vida llena de aventuras. Todo cambia para él cuando un día corriente decide salir del trabajo para seguir a unos hombres sospechosos. Pronto descubre que están a punto de cometer el asalto a una joyería y decide entrar en acción.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/quQ5YxFwJuoYCIjefNh7VF9czXU.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "8697",
+      "imdbId": null,
+      "title": "¿Quién soy?",
+      "year": 1998,
+      "releaseDate": null,
+      "overview": "Jackie es reclutado por la CIA para formar parte de un comando de élite, que recibe la orden de asaltar un laboratorio secreto de armamento tecnológico en la jungla africana. Traicionados por su jefe, todo el equipo muere excepto Jackie, que es abandonado inconsciente en la jungla. Una tribu le recoge y le cura, aunque sufre de amnesia que le impide saber quién es y cómo llegó hasta allí. Su lucha por descubrir su verdadera identidad le hará sufrir la persecución de sus antiguos enemigos, y no podrá confiar en nadie nunca más. (FILMAFFINITY)",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dev4QedPHqgSEtH6qPVujDoOklt.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

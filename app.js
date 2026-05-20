@@ -707,6 +707,7 @@ elements.search.addEventListener('input', () => {
   if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) {
     state.homeSectionView = null;
     state.isSearching = true;
+    state.remoteResults = [];
     setCatalogCount(state.lastCountLabel || '0 títulos');
   }
   scheduleSearchCommit();
@@ -2066,6 +2067,7 @@ function renderCatalog() {
   if (titleEl) titleEl.textContent = getBrowseHeading();
   if (elements.sortFilter) elements.sortFilter.hidden = false;
   const query = getSearchInputValue();
+  const search = getActiveSearchQuery();
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
   const filtered = sortTitles(baseFiltered);
@@ -2080,14 +2082,17 @@ function renderCatalog() {
     return;
   }
 
+  if (state.isSearching && getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) {
+    setCatalogCount(state.lastCountLabel || '0 títulos');
+    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Buscando en fuentes externas</strong><p>Estamos reuniendo el listado completo antes de mostrar resultados.</p></div>`;
+    return;
+  }
+
   setCatalogCount(`${filtered.length} títulos`);
   elements.items.innerHTML = renderLocalCards(filtered);
   bindLocalCardEvents();
 
-  const search = getActiveSearchQuery();
-  if (filtered.length === 0 && getSearchTermLength(search) >= 3 && state.isSearching) {
-    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Buscando en fuentes externas</strong><p>Estamos revisando títulos reproducibles para complementar el catálogo.</p></div>`;
-  } else if (filtered.length === 0 && search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
+  if (filtered.length === 0 && search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
     elements.items.innerHTML = '<div class="empty">Escribe al menos 3 letras para ampliar la búsqueda externa. Mientras tanto puedes seguir explorando el catálogo local.</div>';
   }
 }

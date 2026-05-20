@@ -1,6 +1,6 @@
 {
-  "version": 173,
-  "generatedAt": "2026-05-20T05:03:28.482Z",
+  "version": 174,
+  "generatedAt": "2026-05-20T05:05:10.571Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26609,6 +26609,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 1992-05-13",
       "posterUrl": "https://image.tmdb.org/t/p/w500/6fLc2xBZ3lK6AToG7iO1v1UAeqJ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "2026",
+      "imdbId": null,
+      "title": "Hostage",
+      "year": 2005,
+      "releaseDate": null,
+      "overview": "Devastado por un fallo en una operación, el negociador de rehenes de la Policía de Los Ángeles Jeff Talley (Bruce Willis) se marcha de la ciudad y se va a vivir con su mujer e hija a una pequeña población en el tranquilo condado de Ventura. Un año después, se deberá volver a enfrentar a otro difícil caso de secuestro con rehenes...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nzUE4EsngobPaDL9jvRLaYb2Tbs.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

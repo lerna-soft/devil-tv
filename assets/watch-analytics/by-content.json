@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T06:54:22.045Z",
+  "generatedAt": "2026-05-20T06:54:35.701Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -871,14 +871,25 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 10,
+      "totalEvents": 11,
       "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 10064.210153999999,
       "uniqueUsers": 3,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-19T02:20:43Z",
+      "lastActivityAt": "2026-05-20T06:54:10Z",
       "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-20T06:54:10Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
@@ -887,17 +898,6 @@
           "startedCount": 5,
           "totalPlaybackProgress": 10064.210153999999,
           "lastSeenAt": "2026-05-19T02:20:43Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-18T03:44:08Z",
           "lastSeason": 1,
           "lastEpisode": 1
         },
@@ -917,21 +917,21 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 10,
+          "totalEvents": 11,
           "totalStarts": 5,
           "totalCompletions": 0,
           "totalPlaybackProgress": 10064.210153999999,
           "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-19T02:20:43Z",
+          "lastActivityAt": "2026-05-20T06:54:10Z",
           "users": {
-            "luzenithc1994@gmail.com": true,
             "henry8812@gmail.com": true,
+            "luzenithc1994@gmail.com": true,
             "liz-munera@hotmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1006.421
+      "avgPlaybackProgress": 914.9282
     },
     {
       "contentId": "tt1190634",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T06:52:47.854Z",
+  "generatedAt": "2026-05-20T06:53:20.173Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -939,22 +939,22 @@
       "tmdbId": "76479",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 8,
+      "totalEvents": 9,
       "totalStarts": 8,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3653.288239013681,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 7864.041254433182,
       "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T06:52:38Z",
+      "completionRate": 0.125,
+      "lastActivityAt": "2026-05-20T06:53:08Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
-          "completedCount": 0,
+          "playCount": 9,
+          "completedCount": 1,
           "startedCount": 8,
-          "totalPlaybackProgress": 3653.288239013681,
-          "lastSeenAt": "2026-05-20T06:52:38Z",
+          "totalPlaybackProgress": 7864.041254433182,
+          "lastSeenAt": "2026-05-20T06:53:08Z",
           "lastSeason": 1,
           "lastEpisode": 8
         }
@@ -963,16 +963,16 @@
         "s5e7": {
           "season": 5,
           "episode": 7,
-          "totalEvents": 5,
+          "totalEvents": 6,
           "totalStarts": 5,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3653.288239013681,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 7864.041254433182,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:52:38Z",
+          "lastActivityAt": "2026-05-20T06:53:08Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.2
         },
         "s1e7": {
           "season": 1,
@@ -1003,7 +1003,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 456.661
+      "avgPlaybackProgress": 873.7824
     },
     {
       "contentId": "tt1234721",

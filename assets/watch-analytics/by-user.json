@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T06:53:20.174Z",
+  "generatedAt": "2026-05-20T06:54:22.047Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T06:53:08Z",
-      "totalEvents": 316,
+      "updatedAt": "2026-05-20T06:54:07Z",
+      "totalEvents": 317,
       "totalStarts": 188,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T06:53:08Z",
+      "lastActivityAt": "2026-05-20T06:54:07Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -42,11 +42,11 @@
           "tmdbId": "296232",
           "title": "Snowball Earth",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T21:35:06Z"
+          "lastSeenAt": "2026-05-20T06:54:07Z"
         },
         "tt1190634": {
           "contentId": "tt1190634",
@@ -1417,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 497.5197
+      "avgPlaybackProgress": 495.9502
     },
     {
       "userEmail": "liz-munera@hotmail.com",

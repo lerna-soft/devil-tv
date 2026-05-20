@@ -1,16 +1,16 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T06:53:08Z",
+  "updatedAt": "2026-05-20T06:54:07Z",
   "progress": {
     "296232": {
       "imdbId": "",
       "tmdbId": "296232",
       "lastSeason": 1,
-      "lastEpisode": 7,
+      "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T21:35:06Z",
+      "updatedAt": "2026-05-20T06:54:07Z",
       "watched": {}
     },
     "tt3359350": {
@@ -1159,6 +1159,7 @@
       "tt0267913": 1
     },
     "watchLater": {
+      "296232": true,
       "tt14452776": true,
       "tt35521922": true,
       "tt7587890": true,
@@ -1232,18 +1233,37 @@
       "tt30460310": true,
       "tt0294154": true
     },
-    "updatedAt": "2026-05-20T06:40:28Z"
+    "updatedAt": "2026-05-20T06:54:07Z"
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
-    "season": 5,
-    "episode": 7,
-    "progress": 4210.753015419501,
-    "updatedAt": "2026-05-20T06:53:08Z"
+    "imdbId": "",
+    "tmdbId": "296232",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-05-20T06:54:07Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:296232:s1e1:preference:2026-05-20T06:54:07Z",
+      "contentId": "296232",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "296232",
+      "title": "Snowball Earth",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T06:54:07Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s5e7:completed:2026-05-20T06:53:08Z",
       "contentId": "tt1190634",

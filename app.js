@@ -3022,8 +3022,11 @@ function renderRemoteResults(query) {
   cleanupWatchLaterFromCompleted();
   const prefs = loadTitlePrefs();
   const localResults = getFilteredLocalTitles();
-  const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, query));
-  setCatalogCount(`${merged.length} coincidencias para "${query}"`);
+  const search = typeof query === 'string' ? parseSearchQuery(query) : getActiveSearchQuery();
+  const rankingQuery = search.mode === 'text' ? query : search.term;
+  const labelQuery = typeof query === 'string' ? query : getSearchInputValue();
+  const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, rankingQuery));
+  setCatalogCount(`${merged.length} coincidencias para "${labelQuery}"`);
   elements.items.innerHTML = merged.map((entry, index) => {
     const title = entry.title;
     const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
@@ -3859,8 +3862,20 @@ async function searchTmdbPeopleCredits(query, typeFilter, personRole = 'any') {
 
   try {
     const people = await tmdbFetchJson('/search/person', { query, language: 'es-ES', page: 1, include_adult: false });
-    const matches = (people.results || [])
-      .filter((person) => normalizeSearchText(person?.name).includes(normalizedQuery))
+    const rankedPeople = (people.results || []).map((person) => {
+      const normalizedName = normalizeSearchText(person?.name);
+      let score = 0;
+      if (normalizedName === normalizedQuery) score += 300;
+      if (normalizedName.startsWith(normalizedQuery)) score += 180;
+      if (normalizedName.includes(normalizedQuery)) score += 120;
+      if (String(person?.known_for_department || '').trim().toLowerCase() === 'acting' && personRole === 'actor') score += 40;
+      if (String(person?.known_for_department || '').trim().toLowerCase() === 'directing' && personRole === 'director') score += 40;
+      score += Number(person?.popularity || 0);
+      return { person, score };
+    });
+    const matches = rankedPeople
+      .sort((a, b) => b.score - a.score)
+      .map((entry) => entry.person)
       .slice(0, 3);
     if (!matches.length) return [];
 
@@ -4780,11 +4795,17 @@ async function handleRouteChange() {
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
       renderCatalog();
-      if (isAuthenticated() && q.length >= 3) searchRemoteCatalog(q);
+      if (isAuthenticated()) {
+        const search = parseSearchQuery(q);
+        if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) searchRemoteCatalog(search);
+      }
       if (!shouldOpenPlayer) closePlayerModal();
     } else {
       renderCatalog();
-      if (isAuthenticated() && q.length >= 3) await searchRemoteCatalog(q);
+      if (isAuthenticated()) {
+        const search = parseSearchQuery(q);
+        if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) await searchRemoteCatalog(search);
+      }
       state.selected = null;
       state.seriesEpisodes = null;
       renderDetail();

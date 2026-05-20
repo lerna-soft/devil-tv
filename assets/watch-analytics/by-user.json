@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T08:44:03.183Z",
+  "generatedAt": "2026-05-20T11:21:22.470Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T06:54:38Z",
-      "totalEvents": 320,
-      "totalStarts": 188,
+      "updatedAt": "2026-05-20T11:21:10Z",
+      "totalEvents": 321,
+      "totalStarts": 189,
       "totalCompletions": 40,
       "totalPlaybackProgress": 157216.21786081739,
       "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-20T06:54:38Z",
+      "lastActivityAt": "2026-05-20T11:21:10Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt1190634": {
+          "contentId": "tt1190634",
+          "imdbId": "tt1190634",
+          "tmdbId": "76479",
+          "title": "The Boys",
+          "type": "series",
+          "playCount": 10,
+          "completed": true,
+          "maxProgressValue": 4210.753015419501,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T11:21:10Z"
         },
         "tt2948372": {
           "contentId": "tt2948372",
@@ -83,18 +95,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:10Z"
-        },
-        "tt1190634": {
-          "contentId": "tt1190634",
-          "imdbId": "tt1190634",
-          "tmdbId": "76479",
-          "title": "The Boys",
-          "type": "series",
-          "playCount": 9,
-          "completed": true,
-          "maxProgressValue": 4210.753015419501,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T06:53:08Z"
         },
         "tt0294154": {
           "contentId": "tt0294154",
@@ -1417,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 491.3007
+      "avgPlaybackProgress": 489.7701
     },
     {
       "userEmail": "liz-munera@hotmail.com",

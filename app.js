@@ -2980,6 +2980,13 @@ function getUnifiedTitlePool() {
   return dedupe(pool, { consolidateEquivalent: true });
 }
 
+function suspendSearchUiForSelection() {
+  state.searchIntentId += 1;
+  state.isSearching = false;
+  clearTimeout(state.remoteSearchTimer);
+  clearTimeout(state.searchCommitTimer);
+}
+
 function resolveTitleByCatalogKey(key) {
   const target = String(key || '').trim();
   if (!target) return null;
@@ -3026,6 +3033,7 @@ function bindLocalCardEvents() {
       if (!key) return;
       const selected = resolveTitleByCatalogKey(key);
       if (!selected) return;
+      suspendSearchUiForSelection();
       state.selected = selected;
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
@@ -3052,6 +3060,7 @@ function bindLocalCardEvents() {
       }
       state.selected = resolveTitleByCatalogKey(item.dataset.key);
       if (!state.selected) return;
+      suspendSearchUiForSelection();
       if (isAuthenticated() && state.selected) queueCatalogSeedSyncForTitle(state.selected);
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
@@ -4984,10 +4993,6 @@ async function handleRouteChange() {
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
       renderCatalog();
-      if (isAuthenticated()) {
-        const search = parseSearchQuery(q);
-        if (getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) searchRemoteCatalog(search);
-      }
       if (!shouldOpenPlayer) closePlayerModal();
     } else {
       renderCatalog();

@@ -176,16 +176,18 @@ function formatReleaseDate(value) {
 }
 
 function normalizeReleaseEntry(entry) {
-  const version = String(entry?.version || entry?.sha || '').trim();
-  const message = String(entry?.message || '').trim();
-  const type = classifyReleaseType(message);
+  const version = String(entry?.version || entry?.tag || entry?.sha || '').trim();
+  const message = String(entry?.message || entry?.title || '').trim();
+  const notes = String(entry?.notes || '').trim();
+  const type = classifyReleaseType(message || notes);
   return {
     version,
     shortVersion: version.slice(0, 7) || 'local',
     message,
+    notes,
     type,
     typeLabel: getReleaseTypeLabel(type),
-    summary: localizeReleaseSummary(message),
+    summary: localizeReleaseSummary(message || notes),
     date: String(entry?.date || '').trim(),
     url: String(entry?.url || '').trim()
   };
@@ -219,17 +221,35 @@ async function fetchReleaseNotes(force = false) {
     const cached = loadReleaseNotesCache();
     if (cached?.length) return cached;
   }
-  const url = `https://api.github.com/repos/${encodeURIComponent(RELEASES_REPO_OWNER)}/${encodeURIComponent(RELEASES_REPO_NAME)}/commits?per_page=20`;
-  const response = await fetch(url, {
+  const baseUrl = `https://api.github.com/repos/${encodeURIComponent(RELEASES_REPO_OWNER)}/${encodeURIComponent(RELEASES_REPO_NAME)}`;
+  const releaseResponse = await fetch(`${baseUrl}/releases?per_page=20`, {
     headers: { accept: 'application/vnd.github+json' },
     cache: 'no-store'
   }).catch(() => null);
-  if (!response?.ok) {
+  if (releaseResponse?.ok) {
+    const releases = await releaseResponse.json().catch(() => []);
+    const releaseEntries = releases.map((release) => normalizeReleaseEntry({
+      version: String(release?.tag_name || '').trim(),
+      title: String(release?.name || release?.tag_name || '').trim(),
+      notes: String(release?.body || '').trim(),
+      date: String(release?.published_at || release?.created_at || '').trim(),
+      url: String(release?.html_url || '').trim()
+    })).filter((entry) => entry.version);
+    if (releaseEntries.length) {
+      saveReleaseNotesCache(releaseEntries);
+      return releaseEntries;
+    }
+  }
+  const commitResponse = await fetch(`${baseUrl}/commits?per_page=20`, {
+    headers: { accept: 'application/vnd.github+json' },
+    cache: 'no-store'
+  }).catch(() => null);
+  if (!commitResponse?.ok) {
     const cached = loadReleaseNotesCache();
     if (cached?.length) return cached;
     return [];
   }
-  const commits = await response.json().catch(() => []);
+  const commits = await commitResponse.json().catch(() => []);
   const entries = commits.map((commit) => normalizeReleaseEntry({
     version: String(commit?.sha || '').trim(),
     message: String(commit?.commit?.message || '').split('\n')[0].trim(),
@@ -257,6 +277,11 @@ function buildReleaseNotesHtml(entries = []) {
   }
   const current = entries[0];
   const previous = entries.slice(1);
+  const renderNotes = (entry) => {
+    const notes = String(entry?.notes || '').trim();
+    if (!notes) return '';
+    return `<p>${escapeHtml(notes).replaceAll('\n', '<br>')}</p>`;
+  };
   const jumps = previous.slice(0, 8).map((entry) => (
     `<button type="button" class="release-jump" data-release-target="release-${escapeAttribute(entry.shortVersion)}">${escapeHtml(entry.shortVersion)}</button>`
   )).join('');
@@ -268,6 +293,7 @@ function buildReleaseNotesHtml(entries = []) {
         <span class="release-date">${escapeHtml(formatReleaseDate(entry.date))}</span>
       </div>
       <p>${escapeHtml(entry.summary)}</p>
+      ${renderNotes(entry)}
       <div class="release-links">
         <a href="${escapeAttribute(entry.url)}" target="_blank" rel="noreferrer">Ver commit</a>
         <span>${escapeHtml(entry.message)}</span>
@@ -283,6 +309,7 @@ function buildReleaseNotesHtml(entries = []) {
         <span class="release-date">${escapeHtml(formatReleaseDate(current.date))}</span>
       </div>
       <p>${escapeHtml(current.summary)}</p>
+      ${renderNotes(current)}
       <div class="release-links">
         <a href="${escapeAttribute(current.url)}" target="_blank" rel="noreferrer">Ver commit actual</a>
         <span>${escapeHtml(current.message)}</span>

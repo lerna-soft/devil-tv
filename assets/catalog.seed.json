@@ -1,6 +1,6 @@
 {
-  "version": 213,
-  "generatedAt": "2026-05-20T18:58:54.993Z",
+  "version": 214,
+  "generatedAt": "2026-05-20T19:07:49.505Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27041,6 +27041,22 @@
       "releaseDate": null,
       "overview": "Sincronizado desde historial",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTMxMWUxNjctOGNiOC00MzRkLWI1NjktZWUzOGJiZTM2ZDg1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "41293",
+      "imdbId": null,
+      "title": "Caballero a la medida",
+      "year": 1954,
+      "releaseDate": null,
+      "overview": "Un sastre combina su trabajo con el de hombre anuncio, para así poder ayudar a un amigo, que se encuentra en graves apuros.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6BL6X90watifbuaPXMDpbt7tsG5.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

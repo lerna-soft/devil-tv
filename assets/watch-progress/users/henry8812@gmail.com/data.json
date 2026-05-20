@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-19T21:40:59Z",
+  "updatedAt": "2026-05-20T00:55:37Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1052,6 +1052,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-19T18:31:25Z",
       "watched": {}
+    },
+    "tt0088853": {
+      "imdbId": "tt0088853",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T00:55:37Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1121,20 +1131,40 @@
       "tt0903747": true,
       "tt31392119": true,
       "tt9243946": true,
-      "tt2883512": true
+      "tt2883512": true,
+      "tt0088853": true
     },
-    "updatedAt": "2026-05-19T18:31:25Z"
+    "updatedAt": "2026-05-20T00:55:37Z"
   },
   "lastWatch": {
-    "imdbId": "tt1234721",
-    "tmdbId": "97020",
+    "imdbId": "tt0088853",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
-    "progress": 2801.429116108,
-    "updatedAt": "2026-05-19T21:40:59Z"
+    "progress": 0,
+    "updatedAt": "2026-05-20T00:55:37Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0088853:s1e1:preference:2026-05-20T00:55:37Z",
+      "contentId": "tt0088853",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0088853",
+      "tmdbId": "",
+      "title": "Bridge to Terabithia",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T00:55:37Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T21:40:59Z",
       "contentId": "tt1234721",

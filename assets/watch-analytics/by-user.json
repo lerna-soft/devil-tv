@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-19T23:20:17.432Z",
+  "generatedAt": "2026-05-20T00:55:51.334Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-19T21:40:59Z",
-      "totalEvents": 301,
+      "updatedAt": "2026-05-20T00:55:37Z",
+      "totalEvents": 302,
       "totalStarts": 182,
       "totalCompletions": 39,
       "totalPlaybackProgress": 150436.9377163979,
-      "uniqueContentCount": 105,
-      "lastActivityAt": "2026-05-19T21:40:59Z",
+      "uniqueContentCount": 106,
+      "lastActivityAt": "2026-05-20T00:55:37Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -46,6 +46,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0088853": {
+          "contentId": "tt0088853",
+          "imdbId": "tt0088853",
+          "tmdbId": "",
+          "title": "Bridge to Terabithia",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T00:55:37Z"
         },
         "tt1234721": {
           "contentId": "tt1234721",
@@ -1296,7 +1308,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 499.7905
+      "avgPlaybackProgress": 498.1356
     },
     {
       "userEmail": "liz-munera@hotmail.com",

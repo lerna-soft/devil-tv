@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T06:40:32.841Z",
+  "generatedAt": "2026-05-20T06:40:42.790Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T06:40:24Z",
-      "totalEvents": 313,
+      "updatedAt": "2026-05-20T06:40:28Z",
+      "totalEvents": 314,
       "totalStarts": 187,
       "totalCompletions": 39,
       "totalPlaybackProgress": 153005.4648453979,
-      "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-20T06:40:24Z",
+      "uniqueContentCount": 115,
+      "lastActivityAt": "2026-05-20T06:40:28Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0294154": {
+          "contentId": "tt0294154",
+          "imdbId": "tt0294154",
+          "tmdbId": "",
+          "title": "Noir",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T06:40:28Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1405,7 +1417,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 488.8354
+      "avgPlaybackProgress": 487.2786
     },
     {
       "userEmail": "liz-munera@hotmail.com",

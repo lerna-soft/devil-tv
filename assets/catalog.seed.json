@@ -1,6 +1,6 @@
 {
-  "version": 171,
-  "generatedAt": "2026-05-20T05:02:36.036Z",
+  "version": 172,
+  "generatedAt": "2026-05-20T05:03:14.670Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26577,6 +26577,22 @@
       "releaseDate": null,
       "overview": "Levon Cade dejó atrás una condecorada carrera militar en las operaciones encubiertas para vivir una vida sencilla trabajando en la construcción. Pero cuando la hija de su jefe, que para él es como de la familia, es secuestrada por traficantes de personas, su búsqueda para traerla a casa descubre un mundo de corrupción mucho mayor de lo que jamás podría haber imaginado.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/eLBWBW4hariYCgTS5BL1tpMAYiG.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "9942",
+      "imdbId": null,
+      "title": "Una mujer en la liga",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "Los Indians de Cleveland son el peor equipo de béisbol de la liga nacional. Su nueva propietaria, una antigua show girl, quiere que acaben los últimos de la liga para poder trasladarse a Miami, pero ahora el equipo empieza a ganar.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/m6kyDggJcVeuzc8WFX0uIwAelJ8.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

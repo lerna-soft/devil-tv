@@ -1,6 +1,6 @@
 {
-  "version": 218,
-  "generatedAt": "2026-05-20T19:59:07.999Z",
+  "version": 219,
+  "generatedAt": "2026-05-20T20:32:11.971Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27105,6 +27105,22 @@
       "releaseDate": null,
       "overview": "Tony Taylor, Shawn Cain",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDRiNjllODItZmQyNS00OWIzLWI3MmYtZDRjNjE1YTQzNGQyXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "9995",
+      "imdbId": null,
+      "title": "Turn It Up",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "Diamond, cantante de rap, trata de salir de las malas calles de Brooklyn. Con su mejor amigo Gage actuando como manager intentan sacar una demo mientras venden drogas para Mr. B. Cuando su madre muere repentinamente, su padre aparece tras una ausencia de 12 años y su novia Kia le dice que está embarazada. Gage roba 100.000 dólares para financiar un disco completo sin confesar que es dinero de Mr. B. Todo se complica, B quiere su dinero, Diamond su música y Kia una respuesta.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1LqMTyQJnI7IfeDjjGRcDh1vv0r.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

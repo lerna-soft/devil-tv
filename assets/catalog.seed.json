@@ -1,6 +1,6 @@
 {
-  "version": 188,
-  "generatedAt": "2026-05-20T05:22:06.154Z",
+  "version": 189,
+  "generatedAt": "2026-05-20T05:22:20.244Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26817,6 +26817,22 @@
       "releaseDate": null,
       "overview": "Scott Innes, Mary Kay Bergman",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGU0NmFiYTMtMDE0MC00OGY2LThmMjQtMDU0YWUwMDc5MDNiXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0331632",
+      "title": "Scooby-Doo 2: Monsters Unleashed",
+      "year": 2004,
+      "releaseDate": null,
+      "overview": "Freddie Prinze Jr., Sarah Michelle Gellar",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTc2NDUwYmEtNDBlMi00Y2FhLWE1NDAtNDYyY2Q1MDAyZjE3XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

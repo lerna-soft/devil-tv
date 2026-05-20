@@ -922,6 +922,28 @@ function saveTmdbMetaCache(cache) {
   try { localStorage.setItem(TMDB_META_CACHE_KEY, JSON.stringify(cache || {})); } catch {}
 }
 
+function normalizeSearchText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function uniqNames(values) {
+  const seen = new Set();
+  const names = [];
+  for (const value of Array.isArray(values) ? values : []) {
+    const name = String(value || '').trim();
+    const key = normalizeSearchText(name);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    names.push(name);
+  }
+  return names;
+}
+
 function getMetaCacheKey(title) {
   const id = title?.imdbId || title?.tmdbId || '';
   return `${title?.type || 'unknown'}:${id}`;
@@ -961,7 +983,8 @@ async function hydrateSelectedFromTmdb() {
     const credits = await tmdbFetchJson(`/${tmdbType}/${encodeURIComponent(tmdbId)}/credits`, { language: 'es-ES' });
 
     const genres = (details.genres || []).map((g) => g.name).filter(Boolean);
-    const castNames = (credits.cast || []).slice(0, 10).map((c) => c.name).filter(Boolean);
+    const castNames = uniqNames((credits.cast || []).slice(0, 10).map((c) => c.name));
+    const directorNames = uniqNames((credits.crew || []).filter((c) => String(c?.job || '').trim().toLowerCase() === 'director').map((c) => c.name));
     const endYear = tmdbType === 'tv' && details.last_air_date ? String(details.last_air_date).slice(0, 4) : '';
     const backdropUrl = details.backdrop_path ? `https://image.tmdb.org/t/p/w780${details.backdrop_path}` : '';
     const posterUrl = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '';
@@ -978,6 +1001,7 @@ async function hydrateSelectedFromTmdb() {
         releaseDate: details.first_air_date || details.release_date || (title.metadata?.releaseDate ?? null),
         genres,
         cast: castNames,
+        directors: directorNames,
         endYear: endYear || (title.metadata?.endYear ?? ''),
         backdropUrl: backdropUrl || (title.metadata?.backdropUrl ?? null)
       }
@@ -1082,6 +1106,8 @@ function normalizeSeedEntry(entry, defaultType) {
       posterUrl,
       releaseDate: entry?.releaseDate || null,
       genres: entry?.genres || [],
+      cast: Array.isArray(entry?.cast) ? uniqNames(entry.cast) : [],
+      directors: Array.isArray(entry?.directors) ? uniqNames(entry.directors) : [],
       backdropUrl: entry?.backdropUrl || null,
       watchProviders: {
         region: entry?.watchProviders?.region || '',
@@ -2696,7 +2722,7 @@ function bindEpisodeCarouselEvents() {
 }
 
 function getFilteredLocalTitles() {
-  const query = elements.search.value.trim().toLowerCase();
+  const query = normalizeSearchText(elements.search.value);
   const type = elements.typeFilter.value;
   const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
@@ -2704,7 +2730,9 @@ function getFilteredLocalTitles() {
     if (title.type === 'episode') return false;
     if (!hasPosterAsset(title)) return false;
     const genres = (title.metadata?.genres || title.categories || []).map((g) => String(g).toLowerCase());
-    const haystack = [title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres].join(' ').toLowerCase();
+    const cast = title.metadata?.cast || [];
+    const directors = title.metadata?.directors || [];
+    const haystack = normalizeSearchText([title.title, title.showTitle, title.imdbId, title.tmdbId, ...genres, ...cast, ...directors].join(' '));
     const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
     return (type === 'all' || title.type === type) && genreMatches && (!query || haystack.includes(query));
   });
@@ -3716,13 +3744,16 @@ function jumpEpisode(direction, baseEmbed) {
 }
 
 async function searchViaListingsAndImdb(query, typeFilter) {
-  const fromListings = await searchVidapiListings(query, typeFilter);
-  const fromImdb = await searchImdbSuggestionsViaJina(query, typeFilter);
-  return [...fromListings, ...fromImdb].filter((item) => hasPosterAsset(item));
+  const [fromListings, fromImdb, fromPeople] = await Promise.all([
+    searchVidapiListings(query, typeFilter),
+    searchImdbSuggestionsViaJina(query, typeFilter),
+    searchTmdbPeopleCredits(query, typeFilter)
+  ]);
+  return [...fromListings, ...fromImdb, ...fromPeople].filter((item) => hasPosterAsset(item));
 }
 
 async function searchVidapiListings(query, typeFilter) {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = normalizeSearchText(query);
   const kinds = typeFilter === 'movie' ? ['movie'] : typeFilter === 'series' ? ['series'] : ['movie', 'series'];
   const results = [];
   for (const kind of kinds) {
@@ -3737,13 +3768,79 @@ async function searchVidapiListings(query, typeFilter) {
         const normalized = kind === 'movie'
           ? { imdbId: item.imdb_id || '', tmdbId: String(item.tmdb_id ?? ''), title: item.title || '', year: Number(item.year) || null, type: 'movie', posterUrl: item.poster_url || '', description: item.genre || '' }
           : { imdbId: item.imdb_id || '', tmdbId: String(item.tmdb_id ?? ''), title: item.title || '', year: Number(item.year) || null, type: 'series', posterUrl: item.poster_url || '', description: item.genre || '' };
-        const haystack = [normalized.title, normalized.description, normalized.imdbId].join(' ').toLowerCase();
+        const haystack = normalizeSearchText([normalized.title, normalized.description, normalized.imdbId].join(' '));
         if (haystack.includes(normalizedQuery)) results.push(normalized);
       }
       await sleep(50);
     }
   }
   return results;
+}
+
+async function searchTmdbPeopleCredits(query, typeFilter) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery || normalizedQuery.length < 3) return [];
+
+  try {
+    const people = await tmdbFetchJson('/search/person', { query, language: 'es-ES', page: 1, include_adult: false });
+    const matches = (people.results || [])
+      .filter((person) => normalizeSearchText(person?.name).includes(normalizedQuery))
+      .slice(0, 3);
+    if (!matches.length) return [];
+
+    const creditsByPerson = await Promise.all(matches.map(async (person) => {
+      try {
+        const credits = await tmdbFetchJson(`/person/${encodeURIComponent(person.id)}/combined_credits`, { language: 'es-ES' });
+        return buildTitlesFromPersonCredits(person, credits, typeFilter);
+      } catch {
+        return [];
+      }
+    }));
+    return dedupe(creditsByPerson.flat(), { consolidateEquivalent: true });
+  } catch {
+    return [];
+  }
+}
+
+function buildTitlesFromPersonCredits(person, credits, typeFilter) {
+  const personName = String(person?.name || '').trim();
+  if (!personName) return [];
+
+  const castItems = (credits?.cast || []).map((entry) => ({ entry, role: 'cast' }));
+  const directedItems = (credits?.crew || [])
+    .filter((entry) => String(entry?.job || '').trim().toLowerCase() === 'director')
+    .map((entry) => ({ entry, role: 'director' }));
+
+  return [...castItems, ...directedItems]
+    .map(({ entry, role }) => normalizePersonCreditResult(entry, role, personName))
+    .filter((item) => item && (typeFilter === 'all' || item.type === typeFilter));
+}
+
+function normalizePersonCreditResult(entry, role, personName) {
+  const mediaType = String(entry?.media_type || '').trim().toLowerCase();
+  const type = mediaType === 'tv' ? 'series' : mediaType === 'movie' ? 'movie' : '';
+  if (!type) return null;
+
+  const title = String(entry?.title || entry?.name || '').trim();
+  if (!title) return null;
+
+  return {
+    imdbId: '',
+    tmdbId: entry?.id ? String(entry.id) : '',
+    title,
+    year: Number(String(entry?.release_date || entry?.first_air_date || '').slice(0, 4)) || null,
+    type,
+    posterUrl: entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '',
+    description: String(entry?.overview || '').trim(),
+    metadata: {
+      posterUrl: entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '',
+      releaseDate: entry?.first_air_date || entry?.release_date || null,
+      genres: [],
+      cast: role === 'cast' ? [personName] : [],
+      directors: role === 'director' ? [personName] : [],
+      backdropUrl: entry?.backdrop_path ? `https://image.tmdb.org/t/p/w780${entry.backdrop_path}` : null
+    }
+  };
 }
 
 async function fetchWithTimeout(url, options = {}, timeoutMs = 4500) {
@@ -4162,7 +4259,9 @@ function mergeEquivalentTitles(a, b) {
       ...(a.metadata || {}),
       ...(b.metadata || {}),
       posterUrl: choose(a.posterUrl, b.posterUrl) || choose(a.metadata?.posterUrl, b.metadata?.posterUrl) || choose(b.posterUrl, a.posterUrl) || choose(b.metadata?.posterUrl, a.metadata?.posterUrl),
-      genres: [...new Set([...(a.metadata?.genres || []), ...(b.metadata?.genres || []), ...(a.categories || []), ...(b.categories || [])])]
+      genres: uniqNames([...(a.metadata?.genres || []), ...(b.metadata?.genres || []), ...(a.categories || []), ...(b.categories || [])]),
+      cast: uniqNames([...(a.metadata?.cast || []), ...(b.metadata?.cast || [])]),
+      directors: uniqNames([...(a.metadata?.directors || []), ...(b.metadata?.directors || [])])
     }
   };
 }
@@ -4170,8 +4269,24 @@ function mergeAndRankResults(localResults, remoteResults, query) {
   return sortByRelevance(dedupe([...localResults.map((title) => ({ ...title, source: 'local' })), ...remoteResults.map((title) => ({ ...title, source: 'remote' }))], { consolidateEquivalent: true }), query)
     .map((title) => ({ source: title.source || 'remote', title }));
 }
-function sortByRelevance(items, query) { const q = query.toLowerCase(); return [...items].sort((a, b) => relevanceScore(b, q) - relevanceScore(a, q)); }
-function relevanceScore(item, query) { const t = (item.title || '').toLowerCase(); let s = 0; if (t === query) s += 200; if (t.startsWith(query)) s += 120; if (t.includes(query)) s += 80; if (item.type === 'series') s += 8; if (item.posterUrl) s += 5; return s; }
+function sortByRelevance(items, query) { const q = normalizeSearchText(query); return [...items].sort((a, b) => relevanceScore(b, q) - relevanceScore(a, q)); }
+function relevanceScore(item, query) {
+  const title = normalizeSearchText(item.title);
+  const cast = (item.metadata?.cast || []).map((name) => normalizeSearchText(name));
+  const directors = (item.metadata?.directors || []).map((name) => normalizeSearchText(name));
+  const genres = (item.metadata?.genres || item.categories || []).map((name) => normalizeSearchText(name));
+  let score = 0;
+  if (title === query) score += 200;
+  if (title.startsWith(query)) score += 120;
+  if (title.includes(query)) score += 80;
+  if (cast.some((name) => name === query) || directors.some((name) => name === query)) score += 145;
+  if (cast.some((name) => name.includes(query)) || directors.some((name) => name.includes(query))) score += 95;
+  if (genres.some((name) => name === query)) score += 40;
+  if (genres.some((name) => name.includes(query))) score += 18;
+  if (item.type === 'series') score += 8;
+  if (item.posterUrl) score += 5;
+  return score;
+}
 
 function normalizeSelection(remote) {
   const id = remote.imdbId || remote.tmdbId;

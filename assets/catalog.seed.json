@@ -1,6 +1,6 @@
 {
-  "version": 166,
-  "generatedAt": "2026-05-20T04:45:02.032Z",
+  "version": 167,
+  "generatedAt": "2026-05-20T04:45:17.135Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26513,6 +26513,22 @@
       "releaseDate": null,
       "overview": "Jackie es reclutado por la CIA para formar parte de un comando de élite, que recibe la orden de asaltar un laboratorio secreto de armamento tecnológico en la jungla africana. Traicionados por su jefe, todo el equipo muere excepto Jackie, que es abandonado inconsciente en la jungla. Una tribu le recoge y le cura, aunque sufre de amnesia que le impide saber quién es y cómo llegó hasta allí. Su lucha por descubrir su verdadera identidad le hará sufrir la persecución de sus antiguos enemigos, y no podrá confiar en nadie nunca más. (FILMAFFINITY)",
       "posterUrl": "https://image.tmdb.org/t/p/w500/dev4QedPHqgSEtH6qPVujDoOklt.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "8584",
+      "imdbId": null,
+      "title": "Shanghai Kid, del este al oeste",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "Corre el año 1881 y Chon Wang (Jackie Chan) es un guardián del emperador chino. Cuando la princesa Pei Pei (Lucy Liu) es secuestrada y retenida en el oeste de Nevada en los Estados Unidos de América, él decide ir en su búsqueda junto con otros guardias imperiales. Una vez allí, se encuentra con una banda de pistoleros liderados por Roy O'Bannon (Owen Wilson), quien se muestra muy interesado por la princesa y en su recompensa, por lo cual decide ayudar a Chon en su ardua tarea de búsqueda.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1HTFEi2aifnmNMWYb5amvyAG86z.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

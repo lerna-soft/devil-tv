@@ -1,6 +1,6 @@
 {
-  "version": 179,
-  "generatedAt": "2026-05-20T05:14:09.185Z",
+  "version": 180,
+  "generatedAt": "2026-05-20T05:16:23.070Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26705,6 +26705,22 @@
       "releaseDate": null,
       "overview": "Después de matar a un miembro del sindicato de la droga mientras protege a una persona en libertad condicional, Connor Connolly tiene un día para pagar dos millones de dólares en reparaciones, dinero que no tiene, a Tyrone Pettis. Se ve obligado a pedirle a su antiguo equipo de operaciones militares, liderado por Brice Mason, que se una y de alguna manera obtenga dos millones de dólares antes de que Connor pierda a todos los que ama.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1lFDVqeys3ARP1pQjQEhhDoKHMY.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0112864",
+      "title": "Die Hard: With a Vengeance",
+      "year": 1995,
+      "releaseDate": null,
+      "overview": "Bruce Willis, Jeremy Irons",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjkzNzdkMTctNzMwMS00M2Q0LWIyOTMtNmM2NDY5NWZjNTJlXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

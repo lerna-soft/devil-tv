@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T02:00:50.443Z",
+  "generatedAt": "2026-05-20T02:08:17.665Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T02:00:42Z",
-      "totalEvents": 305,
-      "totalStarts": 182,
+      "updatedAt": "2026-05-20T02:08:07Z",
+      "totalEvents": 306,
+      "totalStarts": 183,
       "totalCompletions": 39,
       "totalPlaybackProgress": 150436.9377163979,
       "uniqueContentCount": 109,
-      "lastActivityAt": "2026-05-20T02:00:42Z",
+      "lastActivityAt": "2026-05-20T02:08:07Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -24,11 +24,11 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
+        "tt1190634",
         "tt1234721",
         "tt7068946",
         "tt0032186",
         "tt31938062",
-        "tt1190634",
         "tt16431870",
         "tt34610311",
         "tt3359350",
@@ -46,6 +46,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt1190634": {
+          "contentId": "tt1190634",
+          "imdbId": "tt1190634",
+          "tmdbId": "76479",
+          "title": "The Boys",
+          "type": "series",
+          "playCount": 7,
+          "completed": false,
+          "maxProgressValue": 3653.288239013681,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T02:08:07Z"
         },
         "tt1869454": {
           "contentId": "tt1869454",
@@ -1139,18 +1151,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-14T19:21:17Z"
         },
-        "tt1190634": {
-          "contentId": "tt1190634",
-          "imdbId": "tt1190634",
-          "tmdbId": "76479",
-          "title": "The Boys",
-          "type": "series",
-          "playCount": 6,
-          "completed": false,
-          "maxProgressValue": 3653.288239013681,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-14T19:20:10Z"
-        },
         "tt16431870": {
           "contentId": "tt16431870",
           "imdbId": "tt16431870",
@@ -1344,7 +1344,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 493.2359
+      "avgPlaybackProgress": 491.624
     },
     {
       "userEmail": "liz-munera@hotmail.com",

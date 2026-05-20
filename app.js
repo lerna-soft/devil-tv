@@ -700,7 +700,7 @@ elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
   const search = getActiveSearchQuery();
   state.searchingTerm = getSearchInputValue();
-  if (state.selected) {
+  if (state.selected && !state.isSearching) {
     clearSelection({ closePlayer: true });
     renderDetail();
   }
@@ -3105,7 +3105,6 @@ function scheduleRemoteSearch() {
     elements.typeFilter.value || 'all'
   ].join('|');
   state.isSearching = true;
-  renderCatalog();
   state.remoteSearchTimer = setTimeout(async () => {
     if (intentId !== state.searchIntentId) return;
     if (state.lastRemoteQuery === remoteKey) return;
@@ -3136,7 +3135,7 @@ function scheduleSearchCommit() {
       return;
     }
     state.isSearching = true;
-    setCatalogCount(state.lastCountLabel || '0 títulos');
+    renderCatalog();
     await searchRemoteCatalog(search, intentId);
   }, 1200);
 }

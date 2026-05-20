@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T05:42:00.549Z",
+  "generatedAt": "2026-05-20T06:09:27.183Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T05:32:16Z",
-      "totalEvents": 311,
-      "totalStarts": 186,
+      "updatedAt": "2026-05-20T06:09:13Z",
+      "totalEvents": 312,
+      "totalStarts": 187,
       "totalCompletions": 39,
       "totalPlaybackProgress": 153005.4648453979,
-      "uniqueContentCount": 112,
-      "lastActivityAt": "2026-05-20T05:32:16Z",
+      "uniqueContentCount": 113,
+      "lastActivityAt": "2026-05-20T06:09:13Z",
       "completedContentIds": [
         "tt16030542",
         "tt14452776",
@@ -47,6 +47,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:35:06Z"
+        },
+        "tt0899258": {
+          "contentId": "tt0899258",
+          "imdbId": "tt0899258",
+          "tmdbId": "34141",
+          "title": "D.Gray-man",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-20T06:09:13Z"
         },
         "tt0267913": {
           "contentId": "tt0267913",
@@ -1381,7 +1393,7 @@
           "lastSeenAt": "2026-05-11T20:40:57Z"
         }
       },
-      "avgPlaybackProgress": 491.979
+      "avgPlaybackProgress": 490.4021
     },
     {
       "userEmail": "liz-munera@hotmail.com",

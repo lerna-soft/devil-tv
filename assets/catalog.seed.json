@@ -1,6 +1,6 @@
 {
-  "version": 176,
-  "generatedAt": "2026-05-20T05:09:11.749Z",
+  "version": 177,
+  "generatedAt": "2026-05-20T05:13:42.077Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -26657,6 +26657,22 @@
       "releaseDate": null,
       "overview": "La auténtica película de amor narra la historia del hombre real y de la mujer real. ¿Qué es el hombre real en la vida? ¿Y la mujer real? Mediante el reciclaje de los héroes y las heroínas de celuloide de 500 películas (objetos de tantos sueños y deseos), esta \"película collage\" de György Palfi nos muestra a qué se parecen y también qué sucede cuando se encuentran.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/gWosAW69lxRNQ8ksnCizUHsVeGU.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "724989",
+      "imdbId": null,
+      "title": "Mercenarios de élite",
+      "year": 2020,
+      "releaseDate": null,
+      "overview": "El trabajo del multimillonario CEO de tecnología Donovan Chalmers es tan valioso que contrata mercenarios para protegerlo, y un grupo terrorista secuestra a su hija solo para conseguirlo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/x7Dc6FTBYOfwMDEHSGW6EOitidk.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

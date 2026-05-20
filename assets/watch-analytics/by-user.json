@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-20T17:53:53.585Z",
+  "generatedAt": "2026-05-20T18:24:58.995Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-20T17:53:40Z",
-      "totalEvents": 329,
-      "totalStarts": 197,
+      "updatedAt": "2026-05-20T18:24:47Z",
+      "totalEvents": 330,
+      "totalStarts": 198,
       "totalCompletions": 40,
-      "totalPlaybackProgress": 163607.83118781738,
+      "totalPlaybackProgress": 163618.97008381737,
       "uniqueContentCount": 116,
-      "lastActivityAt": "2026-05-20T17:53:40Z",
+      "lastActivityAt": "2026-05-20T18:24:47Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -25,6 +25,7 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
+        "tt1615160",
         "tt29552248",
         "tt1234721",
         "tt0865556",
@@ -55,11 +56,11 @@
           "tmdbId": "379149",
           "title": "The Foreigner",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T17:53:40Z"
+          "maxProgressValue": 11.138896,
+          "maxProgressPercent": 11.138896,
+          "lastSeenAt": "2026-05-20T18:24:47Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1430,7 +1431,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 497.2882
+      "avgPlaybackProgress": 495.8151
     },
     {
       "userEmail": "liz-munera@hotmail.com",

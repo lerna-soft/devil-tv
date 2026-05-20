@@ -1,6 +1,6 @@
 {
-  "version": 221,
-  "generatedAt": "2026-05-20T20:58:15.310Z",
+  "version": 222,
+  "generatedAt": "2026-05-20T22:36:12.522Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50561,6 +50561,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2011-03-03",
       "posterUrl": "https://image.tmdb.org/t/p/w500/jD328BJJkyRPTwAGOFvsUndFWTD.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "220102",
+      "imdbId": "tt30460310",
+      "title": "Spider-Noir",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "La historia sigue a Ben Reilly, un experimentado investigador privado en mala racha en el Nueva York de los años 30, que se ve obligado a enfrentarse a su pasado tras una tragedia profundamente personal, mientras la ciudad cuenta con un único superhéroe.",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjU3NjEwNTItMzc1Mi00Y2QyLTljNDItOTQ4YjU4NjZjN2EyXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

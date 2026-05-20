@@ -1,6 +1,6 @@
 {
-  "version": 181,
-  "generatedAt": "2026-05-20T05:16:35.383Z",
+  "version": 182,
+  "generatedAt": "2026-05-20T05:17:24.021Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50001,6 +50001,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2024-04-18",
       "posterUrl": "https://image.tmdb.org/t/p/w500/sYPALWpfdzqgQ7lkTkZkyfzggDT.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0083466",
+      "title": "Police Squad!",
+      "year": 1982,
+      "releaseDate": null,
+      "overview": "Leslie Nielsen, Alan North",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGFlYWNlMTAtOTIxZS00NGYyLTg4ZTAtZjBkYzJkZWVhMjI0XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

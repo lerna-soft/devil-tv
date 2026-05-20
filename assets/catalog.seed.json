@@ -1,6 +1,6 @@
 {
-  "version": 212,
-  "generatedAt": "2026-05-20T17:51:09.949Z",
+  "version": 213,
+  "generatedAt": "2026-05-20T18:58:54.993Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27025,6 +27025,22 @@
       "releaseDate": null,
       "overview": "En mayo de 2017, la legendaria banda de rock 'n' roll Foreigner realizó dos shows con entradas agotadas junto con la Orquesta Sinfónica y Coro del Siglo XXI, dirigida por Ernst van Tiel, grabados durante tres noches espectaculares en Lucerna, Suiza. \"Foreigner with the 21st Century Symphony Orchestra and Chorus\" representa una colaboración de un año entre el miembro fundador y guitarrista principal de Foreigner, Mick Jones, y el equipo de compositores y arreglistas nominados al Grammy, Dave Eggar y Chuck Palmer, que explora el profundo potencial sinfónico de estas canciones clásicas e icónicas. Celebrando 40 años de éxitos que encabezan las listas, la banda interpreta \"Juke Box Hero\", \"Cold as Ice\", \"Blue Morning, Blue Day\", \"Waiting For a Girl Like You\", \"Starrider\", \"Double Vision\", \"Urgent\" y \"I Want to Know What Love Is\".",
       "posterUrl": "https://image.tmdb.org/t/p/w500/aMZ8XiHR0GOebxCN0L55bZdbri4.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0089374",
+      "title": "Police Story",
+      "year": 1985,
+      "releaseDate": null,
+      "overview": "Sincronizado desde historial",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTMxMWUxNjctOGNiOC00MzRkLWI1NjktZWUzOGJiZTM2ZDg1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

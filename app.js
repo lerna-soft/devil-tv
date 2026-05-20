@@ -3278,6 +3278,18 @@ function resolveTitleByCatalogKey(key) {
   return getUnifiedTitlePool().find((entry) => String(entry?.catalogKey || '').trim() === target) || null;
 }
 
+function resolveTitleForInteraction(key) {
+  const target = String(key || '').trim();
+  if (!target) return null;
+  const pool = getUnifiedTitlePool();
+  return pool.find((entry) => (
+    String(entry?.catalogKey || '').trim() === target ||
+    String(entry?.imdbId || '').trim() === target ||
+    String(entry?.tmdbId || '').trim() === target ||
+    String(getTitleId(entry) || '').trim() === target
+  )) || null;
+}
+
 function resolveTitleByPreferenceId(prefId) {
   const target = String(prefId || '').trim();
   if (!target) return null;
@@ -3311,12 +3323,12 @@ function bindLocalCardEvents() {
   });
 
   elements.items.querySelectorAll('.item-play').forEach((btn) => {
-    btn.addEventListener('click', async (event) => {
+    bindTap(btn, async (event) => {
       event.preventDefault();
       event.stopPropagation();
       const key = btn.dataset.playKey;
       if (!key) return;
-      const selected = resolveTitleByCatalogKey(key);
+      const selected = resolveTitleForInteraction(key);
       if (!selected) return;
       prepareManualRouteTransition();
       suspendSearchUiForSelection();
@@ -3337,7 +3349,7 @@ function bindLocalCardEvents() {
 
   elements.items.querySelectorAll('.item').forEach((item) => {
     if (!item.dataset.key) return;
-    item.addEventListener('click', async () => {
+    bindTap(item, async () => {
       if (isAdminUser()) return;
       const homeCarousel = item.closest('[data-home-carousel]');
       if (homeCarousel) {
@@ -3345,7 +3357,7 @@ function bindLocalCardEvents() {
         if (Date.now() - lastDragAt < 350) return;
       }
       prepareManualRouteTransition();
-      state.selected = resolveTitleByCatalogKey(item.dataset.key);
+      state.selected = resolveTitleForInteraction(item.dataset.key);
       if (!state.selected) return;
       suspendSearchUiForSelection();
       if (isAuthenticated() && state.selected) queueCatalogSeedSyncForTitle(state.selected);

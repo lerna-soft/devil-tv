@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-20T06:40:42.778Z",
+  "generatedAt": "2026-05-20T06:52:47.851Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 359,
-  "totalStarts": 216,
+  "totalEvents": 360,
+  "totalStarts": 217,
   "totalCompletions": 40,
-  "overallCompletionRate": 0.1852,
+  "overallCompletionRate": 0.1843,
   "trackedTitles": 129,
   "mostWatchedContent": [
     {
@@ -68,7 +68,7 @@
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 7,
+      "totalEvents": 8,
       "uniqueUsers": 1,
       "completionRate": 0
     },

@@ -539,7 +539,7 @@ function ensureCatalogEntriesFromWatchData(watchData) {
     const id = imdbId || tmdbId;
     if (!id || hasById(imdbId, tmdbId)) continue;
     additions.push({
-      catalogKey: `${String(item?.type || 'movie').trim() || 'movie'}:${imdbId ? 'imdb' : 'tmdb'}:${id}`,
+      catalogKey: getCanonicalCatalogKey(item?.type || 'movie', imdbId, tmdbId, item?.title || id, ''),
       type: String(item?.type || 'movie').trim() || 'movie',
       imdbId,
       tmdbId,
@@ -1170,7 +1170,7 @@ function normalizeSeedEntry(entry, defaultType) {
   const posterUrl = sanitizePosterUrl(entry?.posterUrl || '');
   const playable = type === 'series' ? (entry?.playable ?? true) : true;
   return {
-    catalogKey: `${type}:${imdbId ? 'imdb' : 'tmdb'}:${id}`,
+    catalogKey: getCanonicalCatalogKey(type, imdbId, tmdbId, title, year),
     type,
     imdbId,
     tmdbId,
@@ -1222,12 +1222,23 @@ function saveEvaluations(evals) {
   localStorage.setItem(EVAL_STORAGE_KEY, JSON.stringify(evals || {}));
 }
 
+function getCanonicalExternalId(entry) {
+  return String(entry?.tmdbId || entry?.imdbId || entry?.catalogKey || '').trim();
+}
+
+function getCanonicalCatalogKey(type, imdbId, tmdbId, title = '', year = '') {
+  const normalizedType = String(type || 'movie').trim() || 'movie';
+  const canonicalId = String(tmdbId || imdbId || '').trim();
+  if (canonicalId) return `${normalizedType}:canonical:${canonicalId}`;
+  return `${normalizedType}:title:${String(title || '').trim().toLowerCase()}:${String(year || '').trim()}`;
+}
+
 function getPlaybackTitleKey(entry) {
   return String(entry?.imdbId || entry?.tmdbId || '').trim();
 }
 
 function getTitleId(title) {
-  return title?.imdbId || title?.tmdbId || title?.catalogKey || '';
+  return getCanonicalExternalId(title);
 }
 
 function hash32(input) {
@@ -3181,7 +3192,7 @@ function buildWatchInsights() {
     const imdbId = String(event?.imdbId || '').trim();
     const tmdbId = String(event?.tmdbId || '').trim();
     const entry = {
-      catalogKey: `${String(event?.type || 'movie').trim() || 'movie'}:${imdbId ? 'imdb' : 'tmdb'}:${imdbId || tmdbId}`,
+      catalogKey: getCanonicalCatalogKey(event?.type || 'movie', imdbId, tmdbId, event?.title || (imdbId || tmdbId || key), ''),
       type: String(event?.type || 'movie').trim() || 'movie',
       imdbId,
       tmdbId,
@@ -4414,13 +4425,18 @@ function dedupe(items, options = {}) {
 
 function mergeEquivalentTitles(a, b) {
   const choose = (first, second) => (first !== undefined && first !== null && String(first) !== '' ? first : second);
+  const imdbId = choose(a.imdbId, b.imdbId) || choose(b.imdbId, a.imdbId);
+  const tmdbId = choose(a.tmdbId, b.tmdbId) || choose(b.tmdbId, a.tmdbId);
+  const title = choose(a.title, b.title);
+  const year = choose(a.year, b.year);
   return {
     ...a,
     ...b,
-    imdbId: choose(a.imdbId, b.imdbId) || choose(b.imdbId, a.imdbId),
-    tmdbId: choose(a.tmdbId, b.tmdbId) || choose(b.tmdbId, a.tmdbId),
-    title: choose(a.title, b.title),
-    year: choose(a.year, b.year),
+    catalogKey: getCanonicalCatalogKey(a.type || b.type, imdbId, tmdbId, title, year),
+    imdbId,
+    tmdbId,
+    title,
+    year,
     description: choose(a.description, b.description),
     posterUrl: choose(a.posterUrl, b.posterUrl) || choose(a.metadata?.posterUrl, b.metadata?.posterUrl) || choose(b.posterUrl, a.posterUrl) || choose(b.metadata?.posterUrl, a.metadata?.posterUrl),
     playable: a.playable === false && b.playable !== false ? b.playable : (b.playable === false && a.playable !== false ? a.playable : (a.playable === false || b.playable === false ? false : true)),
@@ -4458,8 +4474,10 @@ function relevanceScore(item, query) {
 }
 
 function normalizeSelection(remote) {
-  const id = remote.imdbId || remote.tmdbId;
-  return { catalogKey: `${remote.type}:${remote.imdbId ? 'imdb' : 'tmdb'}:${id}`, ...remote };
+  return {
+    catalogKey: getCanonicalCatalogKey(remote.type, remote.imdbId, remote.tmdbId, remote.title, remote.year),
+    ...remote
+  };
 }
 function getPlaybackId(entry) {
   return getPlaybackCandidateIds(entry)[0] || '';

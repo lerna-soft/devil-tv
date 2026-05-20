@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T06:54:10Z",
+  "updatedAt": "2026-05-20T06:54:36Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -360,7 +360,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-19T17:37:01Z",
+      "updatedAt": "2026-05-20T06:54:36Z",
       "watched": {}
     },
     "tt33046197": {
@@ -1233,18 +1233,37 @@
       "tt30460310": true,
       "tt0294154": true
     },
-    "updatedAt": "2026-05-20T06:54:10Z"
+    "updatedAt": "2026-05-20T06:54:36Z"
   },
   "lastWatch": {
-    "imdbId": "tt29552248",
-    "tmdbId": "1007757",
+    "imdbId": "tt26735622",
+    "tmdbId": "1084577",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T06:54:10Z"
+    "updatedAt": "2026-05-20T06:54:36Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt26735622:s1e1:preference:2026-05-20T06:54:36Z",
+      "contentId": "tt26735622",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt26735622",
+      "tmdbId": "1084577",
+      "title": "Balls Up: Con un par",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T06:54:36Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt29552248:s1e1:preference:2026-05-20T06:54:10Z",
       "contentId": "tt29552248",

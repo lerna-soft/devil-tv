@@ -265,10 +265,10 @@ function renderReleaseBadge(entries = []) {
   const current = Array.isArray(entries) && entries.length ? entries[0] : null;
   if (!current) {
     const seedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
-    elements.releaseVersionText.textContent = seedVersion ? `Seed ${seedVersion}` : 'Historial';
+    elements.releaseVersionText.textContent = seedVersion ? `vseed-${seedVersion}` : 'Versiones';
     return;
   }
-  elements.releaseVersionText.textContent = `${current.shortVersion} · ${current.typeLabel}`;
+  elements.releaseVersionText.textContent = current.shortVersion;
 }
 
 function buildReleaseNotesHtml(entries = []) {

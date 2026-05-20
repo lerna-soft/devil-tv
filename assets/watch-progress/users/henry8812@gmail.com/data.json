@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-20T06:09:13Z",
+  "updatedAt": "2026-05-20T06:40:24Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1132,6 +1132,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-20T06:09:13Z",
       "watched": {}
+    },
+    "tt30460310": {
+      "imdbId": "tt30460310",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-20T06:40:24Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1208,20 +1218,40 @@
       "tt28788888": true,
       "tt0398808": true,
       "tt1869454": true,
-      "tt0865556": true
+      "tt0865556": true,
+      "tt30460310": true
     },
-    "updatedAt": "2026-05-20T05:32:16Z"
+    "updatedAt": "2026-05-20T06:40:24Z"
   },
   "lastWatch": {
-    "imdbId": "tt0899258",
-    "tmdbId": "34141",
+    "imdbId": "tt30460310",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-20T06:09:13Z"
+    "updatedAt": "2026-05-20T06:40:24Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt30460310:s1e1:preference:2026-05-20T06:40:24Z",
+      "contentId": "tt30460310",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt30460310",
+      "tmdbId": "",
+      "title": "Spider-Noir",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-20T06:40:24Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0899258:s1e1:started:2026-05-20T06:09:13Z",
       "contentId": "tt0899258",

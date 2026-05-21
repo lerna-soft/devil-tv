@@ -1,6 +1,6 @@
 {
-  "version": 236,
-  "generatedAt": "2026-05-21T20:32:16.745Z",
+  "version": 237,
+  "generatedAt": "2026-05-21T20:33:20.378Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27297,6 +27297,22 @@
       "releaseDate": null,
       "overview": "Una pareja, Steve y Jenny, se escapa de fin de semana romántico. Sin embargo, su tranquilidad se verá interrumpida cuando una banda de chicos jóvenes aparezca por el lugar. Estos, como acto de rebeldía, robarán las cosas a la pareja y destrozarán su coche. Steve les hará frente pero sufrirá un violento ataque. A partir de ese momento, Jenny tratará de escapar a través del bosque...",
       "posterUrl": "https://image.tmdb.org/t/p/w500/juDdVU8RijF3ovORzC4EJvUbmTk.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "321697",
+      "imdbId": null,
+      "title": "Steve Jobs",
+      "year": 2015,
+      "releaseDate": null,
+      "overview": "Biopic del mítico empresario y programador informático Steve Jobs (1955-2011), centrado en la época en la que lanzó los tres productos icónicos de Apple.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tifv0KBpDWCcrIwlScgZeUKwq2m.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

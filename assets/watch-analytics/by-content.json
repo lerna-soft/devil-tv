@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T22:03:30.101Z",
+  "generatedAt": "2026-05-21T22:15:32.318Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -191,22 +191,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 33,
+      "totalEvents": 34,
       "totalStarts": 22,
-      "totalCompletions": 10,
-      "totalPlaybackProgress": 32163.984892399432,
+      "totalCompletions": 11,
+      "totalPlaybackProgress": 34977.79589239944,
       "uniqueUsers": 1,
-      "completionRate": 0.4545,
-      "lastActivityAt": "2026-05-21T22:02:37Z",
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-21T22:15:23Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 33,
-          "completedCount": 10,
+          "playCount": 34,
+          "completedCount": 11,
           "startedCount": 22,
-          "totalPlaybackProgress": 32163.984892399432,
-          "lastSeenAt": "2026-05-21T22:02:37Z",
+          "totalPlaybackProgress": 34977.79589239944,
+          "lastSeenAt": "2026-05-21T22:15:23Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -215,16 +215,16 @@
         "s2e3": {
           "season": 2,
           "episode": 3,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2084.117563472,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4897.928563472,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T22:02:37Z",
+          "lastActivityAt": "2026-05-21T22:15:23Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s2e2": {
           "season": 2,
@@ -353,7 +353,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 974.6662
+      "avgPlaybackProgress": 1028.7587
     },
     {
       "contentId": "tt16030542",

@@ -62,6 +62,10 @@ const SEED_SYNC_LABEL = 'catalog-seed-sync';
 const SEED_SYNC_DEDUPE_PREFIX = 'mep_seed_sync_once_';
 const SEED_METADATA_REPAIR_DEDUPE_PREFIX = 'mep_seed_metadata_repair_once_';
 const SEED_CATALOG_KEYS_STORAGE = 'mep_seed_catalog_keys_v1';
+const SEED_BOOTSTRAP_VERSION_STORAGE = 'mep_seed_bootstrap_version';
+const SEED_VERSION_HINT_PATH = './assets/catalog.version.json';
+const SEED_BOOTSTRAP_PATH = './assets/catalog.bootstrap.json';
+const SEED_CHUNKS_INDEX_PATH = './assets/catalog.chunks/index.json';
 const SEED_SYNC_WINDOW_MS = 12 * 60 * 60 * 1000;
 const WATCH_PROGRESS_HEARTBEAT_MS = 30 * 1000;
 const WATCH_PROGRESS_HEARTBEAT_LOCK_KEY = 'mep_watch_progress_queue_heartbeat_lock_v1';
@@ -370,11 +374,14 @@ function bindReleaseNotes() {
   elements.releaseNotesBtn.addEventListener('click', () => {
     void openReleaseNotes();
   });
-  void fetchReleaseNotes().then((entries) => {
-    renderReleaseBadge(entries);
-  }).catch(() => {
-    renderReleaseBadge([]);
-  });
+  renderReleaseBadge(loadReleaseNotesCache() || []);
+  scheduleDelayedIdleTask(() => {
+    void fetchReleaseNotes().then((entries) => {
+      renderReleaseBadge(entries);
+    }).catch(() => {
+      renderReleaseBadge([]);
+    });
+  }, 8000, 5000);
 }
 
 function isAuthenticated() {
@@ -473,9 +480,9 @@ function bindAuth() {
       saveAuthSession(validated.user);
       hideAuthGate();
       updateAuthUi();
-      startWatchProgressQueueHeartbeat();
-      void hydrateWatchProgressForCurrentUser();
       renderCatalog();
+      scheduleSeedStartupWork();
+      scheduleAuthenticatedStartupWork();
       return;
     }
     if (elements.authErrorLogin) elements.authErrorLogin.textContent = validated.error || 'Credenciales incorrectas.';
@@ -506,9 +513,9 @@ function bindAuth() {
     saveAuthSession(created.user || { name, email, role: 'viewer' });
     hideAuthGate();
     updateAuthUi();
-    startWatchProgressQueueHeartbeat();
-    void hydrateWatchProgressForCurrentUser();
     renderCatalog();
+    scheduleSeedStartupWork();
+    scheduleAuthenticatedStartupWork();
     renderDetail({ skipHydratePlayback: true });
   });
 
@@ -1056,10 +1063,22 @@ elements.tabs.forEach((tab) => {
 window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
 handleRouteChange();
-hydrateSeedCatalog().then(() => renderCatalog()).catch(() => {});
+scheduleSeedStartupWork();
 
 if (isAuthenticated()) hideAuthGate();
 else showAuthGate();
+
+function scheduleSeedStartupWork() {
+  if (!isAuthenticated()) return;
+  scheduleAfterFirstPaint(() => {
+    hydrateSeedCatalog({ bootstrap: true }).then((changed) => {
+      if (changed) renderCatalogIfCurrentView();
+      scheduleDelayedIdleTask(() => {
+        hydrateSeedCatalog().catch(() => {});
+      }, 3500, 2200);
+    }).catch(() => {});
+  });
+}
 
 function getTmdbReadToken() {
   return decodeIssueToken(TMDB_READ_TOKEN_CIPHER, TMDB_READ_TOKEN_SEED);
@@ -1071,6 +1090,12 @@ function sanitizePosterUrl(value) {
   if (!/^https?:\/\//i.test(poster)) return '';
   if (/^description\s*:/i.test(poster)) return '';
   return poster;
+}
+
+function getCardPosterUrl(value) {
+  const poster = sanitizePosterUrl(value);
+  if (!poster) return '';
+  return poster.replace('/t/p/w500/', '/t/p/w342/');
 }
 
 function isPlaceholderDescription(value) {
@@ -1474,39 +1499,139 @@ function updateAuthUi() {
 
 updateAuthUi();
 bindReleaseNotes();
-startWatchProgressQueueHeartbeat();
-hydrateWatchProgressForCurrentUser().catch(() => {});
+scheduleAuthenticatedStartupWork();
 
-async function hydrateSeedCatalog() {
-  const seedUrl = `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
-  const response = await fetch(seedUrl, { cache: 'no-store' }).catch(() => null);
-  if (!response?.ok) return;
-  const seed = await response.json().catch(() => null);
-  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) return;
+function scheduleAfterFirstPaint(callback) {
+  if (typeof window.requestAnimationFrame === 'function') {
+    window.requestAnimationFrame(() => window.setTimeout(callback, 0));
+    return;
+  }
+  window.setTimeout(callback, 0);
+}
 
-  const seedVersion = Number(seed.version || 0);
-  const appliedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
-  const current = loadLocalCatalog();
-  const hasLocalCatalog = Array.isArray(current) && current.length > 0;
-  if (seedVersion && appliedVersion === seedVersion && hasLocalCatalog) return;
+function scheduleIdleTask(callback, timeoutMs = 1500) {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(callback, { timeout: timeoutMs });
+    return;
+  }
+  window.setTimeout(callback, timeoutMs);
+}
 
+function scheduleDelayedIdleTask(callback, delayMs = 1000, timeoutMs = 1500) {
+  window.setTimeout(() => scheduleIdleTask(callback, timeoutMs), delayMs);
+}
+
+function renderCatalogIfCurrentView() {
+  if (!elements.appShell || elements.appShell.hidden) return;
+  renderCatalog();
+}
+
+function scheduleAuthenticatedStartupWork() {
+  if (!isAuthenticated()) return;
+  scheduleDelayedIdleTask(() => {
+    hydrateWatchProgressForCurrentUser().finally(() => {
+      scheduleDelayedIdleTask(() => startWatchProgressQueueHeartbeat(), 6000, 4000);
+    });
+  }, 3000, 1800);
+}
+
+async function loadSeedVersionHint() {
+  const hint = await fetchJsonWithTimeout(`${SEED_VERSION_HINT_PATH}?v=${window.__mep_build || ''}`, 1200).catch(() => null);
+  const version = Number(hint?.version || 0);
+  return Number.isFinite(version) ? version : 0;
+}
+
+function normalizeSeedItems(seed) {
   const items = [];
-  for (const entry of seed.movies ?? []) {
+  for (const entry of seed?.movies ?? []) {
     items.push(normalizeSeedEntry(entry, 'movie'));
   }
-  for (const entry of seed.series ?? []) {
+  for (const entry of seed?.series ?? []) {
     items.push(normalizeSeedEntry(entry, 'series'));
   }
+  for (const entry of seed?.items ?? []) {
+    items.push(normalizeSeedEntry(entry, entry?.type || 'movie'));
+  }
+  return items;
+}
+
+function storeSeedCatalogKeys(items) {
   try {
     const keys = dedupe(items, { consolidateEquivalent: true })
       .map((entry) => getSeedSyncKey(entry))
       .filter(Boolean);
     localStorage.setItem(SEED_CATALOG_KEYS_STORAGE, JSON.stringify(keys));
   } catch {}
+}
+
+async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
+  const index = await fetchJsonWithTimeout(`${SEED_CHUNKS_INDEX_PATH}?v=${window.__mep_build || ''}`, 1500).catch(() => null);
+  const chunks = Array.isArray(index?.chunks) ? index.chunks : [];
+  if (!chunks.length) return false;
+
+  const seedVersion = Number(index?.version || hintedVersion || 0);
+  const expectedTotal = Number(index?.total || 0);
+  let merged = Array.isArray(current) ? current : [];
+  const allSeedItems = [];
+  let loadedCount = 0;
+
+  for (const chunk of chunks) {
+    const file = String(chunk?.file || '').trim();
+    if (!file) continue;
+    await new Promise((resolve) => window.setTimeout(resolve, 250));
+    const seed = await fetchJsonWithTimeout(`./assets/catalog.chunks/${encodeURIComponent(file)}?v=${window.__mep_build || ''}`, 2500).catch(() => null);
+    const items = normalizeSeedItems(seed);
+    if (!items.length) continue;
+    loadedCount += items.length;
+    allSeedItems.push(...items);
+    merged = dedupe([...merged, ...items]);
+  }
+
+  if (!allSeedItems.length) return false;
+  setRuntimeCatalog(merged);
+  if (!expectedTotal || loadedCount >= expectedTotal) {
+    storeSeedCatalogKeys(allSeedItems);
+  }
+  return true;
+}
+
+async function hydrateSeedCatalog(options = {}) {
+  const bootstrap = options.bootstrap === true;
+  const current = loadLocalCatalog();
+  const hasLocalCatalog = Array.isArray(current) && current.length > 0;
+  if (bootstrap && hasLocalCatalog) return false;
+
+  if (!bootstrap && hasLocalCatalog) {
+    const hintedVersion = await loadSeedVersionHint();
+    const appliedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
+    if (hintedVersion && appliedVersion === hintedVersion) return false;
+  }
+
+  if (!bootstrap) {
+    const chunked = await hydrateSeedCatalogChunks(current);
+    if (chunked) return true;
+  }
+
+  const seedUrl = bootstrap
+    ? `${SEED_BOOTSTRAP_PATH}?v=${window.__mep_build || ''}`
+    : `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
+  const response = await fetch(seedUrl, { cache: 'no-store' }).catch(() => null);
+  if (!response?.ok) return false;
+  const seed = await response.json().catch(() => null);
+  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) return false;
+
+  const seedVersion = Number(seed.version || 0);
+  const versionKey = bootstrap ? SEED_BOOTSTRAP_VERSION_STORAGE : 'mep_seed_version';
+  const appliedVersion = Number(localStorage.getItem(versionKey) || '0');
+  if (seedVersion && appliedVersion === seedVersion && hasLocalCatalog) return false;
+
+  const items = normalizeSeedItems(seed);
+  storeSeedCatalogKeys(items);
 
   const merged = dedupe([...current, ...items]);
   saveLocalCatalog(merged);
-  if (seedVersion) localStorage.setItem('mep_seed_version', String(seedVersion));
+  if (seedVersion) localStorage.setItem(versionKey, String(seedVersion));
+  return true;
 }
 
 function normalizeSeedEntry(entry, defaultType) {
@@ -1795,7 +1920,6 @@ function startWatchProgressQueueHeartbeat() {
   if (watchProgressHeartbeatStarted) return;
   if (!isAuthenticated()) return;
   watchProgressHeartbeatStarted = true;
-  triggerWatchProgressQueueDrainIfNeeded().catch(() => {});
   window.setInterval(() => {
     triggerWatchProgressQueueDrainIfNeeded().catch(() => {});
   }, WATCH_PROGRESS_HEARTBEAT_MS);
@@ -2897,25 +3021,30 @@ function getUniqueRenderableTitles(items) {
 }
 
 function renderHomeCatalog(baseFiltered) {
-  cleanupWatchLaterFromCompleted(baseFiltered);
-  const prefs = loadTitlePrefs();
   const watch = buildWatchInsights();
+  cleanupWatchLaterFromCompleted(baseFiltered, watch);
+  const prefs = loadTitlePrefs();
   const uniqueTitles = getUniqueRenderableTitles(baseFiltered);
-  const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
-  const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
-  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))));
-  const movieRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'movie')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const seriesRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const latestItems = sortTitles(uniqueTitles).slice(0, 24);
+  const discoveryLimit = isCompactViewport() ? 360 : 720;
+  const discoveryTitles = uniqueTitles.slice(0, discoveryLimit);
+  const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t))), watch).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
+  const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t))), watch).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))), watch);
+  const movieRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'movie'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const seriesRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'series'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
+  const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
 
   const previewLimit = isCompactViewport() ? 6 : 10;
   const providerSectionLimit = isCompactViewport() ? 4 : HOME_STREAMING_GROUPS.length;
+  let eagerHomeSectionUsed = false;
 
   const section = (key, title, subtitle, items) => {
     if (!items.length) return '';
     const preview = items.slice(0, previewLimit);
     const showMore = items.length > preview.length;
-    const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
+    const eagerCount = eagerHomeSectionUsed ? 0 : 2;
+    eagerHomeSectionUsed = true;
+    const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
     return `
     <section class="home-section">
       <div class="home-section-head">
@@ -2943,7 +3072,7 @@ function renderHomeCatalog(baseFiltered) {
     section('series_recommended', 'Series para ti', 'Sugerencias según lo que has visto', seriesRecommended)
   ].filter(Boolean);
   for (const group of HOME_STREAMING_GROUPS.slice(0, providerSectionLimit)) {
-    const available = sortTitles(baseFiltered.filter((t) => titleHasProvider(t, group.aliases || [group.key])));
+    const available = sortTitles(discoveryTitles.filter((t) => titleHasProvider(t, group.aliases || [group.key])), watch);
     if (available.length < 4) continue;
     sections.push(section(`platform_${group.key}`, group.label, `Disponible ahora en ${group.label}`, available));
   }
@@ -3029,7 +3158,7 @@ function renderPaginatedLocalList(items) {
   const visible = safeItems.slice(0, state.catalogVisibleCount);
   const remaining = Math.max(0, safeItems.length - visible.length);
   if (!visible.length) return '<div class="empty">Sin resultados por ahora.</div>';
-  return `<div class="items">${renderLocalCards(visible)}${renderLoadMoreCard(remaining)}</div>`;
+  return `<div class="items">${renderLocalCards(visible, { eagerCount: 8 })}${renderLoadMoreCard(remaining)}</div>`;
 }
 
 function bindHomeCarouselEvents() {
@@ -3334,12 +3463,14 @@ function populateGenreFilter() {
   select.value = next;
 }
 
-function renderLocalCards(titles) {
+function renderLocalCards(titles, options = {}) {
   const isAdmin = isAdminUser();
   const prefs = loadTitlePrefs();
-  return titles.filter((title) => hasPosterAsset(title)).map((title) => {
+  const eagerCount = Math.max(0, Number(options.eagerCount || 0));
+  return titles.filter((title) => hasPosterAsset(title)).map((title, index) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
-    const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
+    const poster = getCardPosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
+    const eagerAttrs = index < eagerCount ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
     const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
     const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
     const startYear = title.year ?? '';
@@ -3348,7 +3479,7 @@ function renderLocalCards(titles) {
     const canPlay = !isAdmin && isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
     const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Reproducir ${escapeAttribute(title.title || 'título')}" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
-      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" ${eagerAttrs} referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
       ${playOverlay}
       <div><strong>${escapeHtml(title.title)}</strong>${getCardQuickActions(title, prefs)}${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
@@ -3615,10 +3746,10 @@ function setCatalogCount(baseText) {
   elements.count.innerHTML = `${escapeHtml(text)} <span class="count-searching" aria-live="polite"><span class="count-pulse" aria-hidden="true"></span>${escapeHtml(label)}</span>`;
 }
 
-function sortTitles(titles) {
+function sortTitles(titles, watchOverride = null) {
   const mode = getSortMode();
   const items = [...titles];
-  const watch = buildWatchInsights();
+  const watch = watchOverride || buildWatchInsights();
   if (mode === 'az') return items.sort((a, b) => String(a.title || '').localeCompare(String(b.title || ''), 'es', { sensitivity: 'base' }));
   if (mode === 'za') return items.sort((a, b) => String(b.title || '').localeCompare(String(a.title || ''), 'es', { sensitivity: 'base' }));
   if (mode === 'year_desc') return items.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
@@ -3934,11 +4065,12 @@ function isSeriesCompletedByLastEpisode(title) {
   return Boolean(entry?.completedAt);
 }
 
-function cleanupWatchLaterFromCompleted(baseFiltered = null) {
+function cleanupWatchLaterFromCompleted(baseFiltered = null, watchOverride = null) {
   if (!isAuthenticated()) return;
   const prefs = loadTitlePrefs();
   const current = { ...(prefs.watchLater || {}) };
-  const watch = buildWatchInsights();
+  if (!Object.keys(current).length) return;
+  const watch = watchOverride || buildWatchInsights();
   const titles = Array.isArray(baseFiltered) ? baseFiltered : getFilteredLocalTitles();
   let changed = false;
   for (const title of titles) {
@@ -4871,7 +5003,14 @@ async function buildEpisodesFromTmdb(title) {
 function loadLocalCatalog() {
   if (Array.isArray(state.localCatalogCache)) return state.localCatalogCache;
   try {
-    state.localCatalogCache = (JSON.parse(localStorage.getItem('mep_static_catalog') || '[]') || []).map((item) => normalizeCatalogPoster(item));
+    const raw = localStorage.getItem('mep_static_catalog') || '[]';
+    if (raw.length > 800000) {
+      localStorage.removeItem('mep_static_catalog');
+      localStorage.removeItem('mep_seed_version');
+      state.localCatalogCache = [];
+      return state.localCatalogCache;
+    }
+    state.localCatalogCache = (JSON.parse(raw) || []).map((item) => normalizeCatalogPoster(item));
     return state.localCatalogCache;
   } catch {
     state.localCatalogCache = [];
@@ -4892,11 +5031,20 @@ function normalizeCatalogPoster(title) {
 function saveLocalCatalog(items) {
   const normalized = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
   state.localCatalogCache = normalized;
+  invalidateCatalogCaches();
+  localStorage.setItem('mep_static_catalog', JSON.stringify(normalized));
+}
+
+function setRuntimeCatalog(items) {
+  state.localCatalogCache = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
+  invalidateCatalogCaches();
+}
+
+function invalidateCatalogCaches() {
   state.genreFilterCacheKey = '';
   state.genreFilterOptionsHtml = '';
   state.filteredCatalogCacheKey = '';
   state.filteredCatalogCache = null;
-  localStorage.setItem('mep_static_catalog', JSON.stringify(normalized));
 }
 function hasPosterAsset(title) { return Boolean(sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')); }
 function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }

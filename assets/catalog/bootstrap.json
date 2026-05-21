@@ -1,0 +1,1420 @@
+{
+  "version": 222,
+  "count": 65,
+  "items": [
+    {
+      "type": "movie",
+      "tmdbId": "1007757",
+      "imdbId": "tt29552248",
+      "title": "Intercambiados",
+      "year": 2026,
+      "releaseDate": "2026-05-01",
+      "overview": "Una pequeña criatura del bosque intercambia el cuerpo con un majestuoso pájaro del valle, lo que los obliga a colaborar para sobrevivir a la aventura más salvaje de sus vidas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/i89vUDwNhAEWUZSFYITSiv1RIbK.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wpabGmGA3IaJNGudbzGritmR8Km.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Drama",
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "319338",
+      "imdbId": "",
+      "title": "Travis Japan Summer Vacation!! ―7人のアメリカ旅―",
+      "year": 2026,
+      "releaseDate": "2026-05-01",
+      "overview": "Travis Japan embarks on a summer road trip through the Rocky Mountains in North America. Divided into teams, one hits the road by RV, the other dives into local culture. With new horizons to explore and heartfelt connections to make, this road trip promises to be unlike any other.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yd10Gq4aLGAWAqmsIedjR0181Sp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/sSUHTRthxHDsjyIDejTeZah1Ybv.jpg",
+      "genres": [
+        "Documental",
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "US",
+        "flatrate": [
+          "Disney Plus"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "223386",
+      "imdbId": "tt27331527",
+      "title": "El fuego de la venganza",
+      "year": 2026,
+      "releaseDate": "2026-04-30",
+      "overview": "Atormentado por su pasado y perseguido por sus enemigos, un veterano de las Fuerzas Especiales lucha por salvar a una joven en las peligrosas calles de Río de Janeiro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9jQSxMZuadcnzKb1OYJ9Jn3V6g0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/dMCfHJRnAZfKoPTjYyZk2QCL8au.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1314481",
+      "imdbId": "tt33612209",
+      "title": "El diablo viste de Prada 2",
+      "year": 2026,
+      "releaseDate": "2026-04-29",
+      "overview": "Sigue la lucha de Miranda Priestly contra Emily Charlton, su ex asistente convertida en ejecutiva rival, mientras compiten por los ingresos por publicidad en medio de la decadencia de los medios impresos y Miranda se acerca a la jubilación.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sz687EF7yJMS4VNEdHKT9ebkhA9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/y3fQa7pytlysovXzovpXc1OQlTW.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1318447",
+      "imdbId": "tt16431404",
+      "title": "Depredador dominante",
+      "year": 2026,
+      "releaseDate": "2026-04-24",
+      "overview": "Una mujer en duelo se adentra en la naturaleza de Australia para ponerse a prueba y queda atrapada en un juego mortal con un astuto asesino que la considera su presa.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mV7uFS1U8iP0p4CcXZp4znBVpch.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg",
+      "genres": [
+        "Acción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "285838",
+      "imdbId": "tt36104233",
+      "title": "Si los deseos mataran...",
+      "year": 2026,
+      "releaseDate": "2026-04-24",
+      "overview": "Una enigmática aplicación concede deseos, pero inicia una cuenta atrás mortal. Un grupo de adolescentes se ven atrapados en este círculo y deberán romperlo para sobrevivir.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sk8icdCLOKcCbMeDGvwvTLw67mM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zV9WYOfFr4MAnzXXD8PR5J6JnN3.jpg",
+      "genres": [
+        "Misterio",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "224263",
+      "imdbId": "tt27486290",
+      "title": "Stranger Things: Relatos del 85",
+      "year": 2026,
+      "releaseDate": "2026-04-23",
+      "overview": "Hawkins. Invierno de 1985. En un pueblo lleno de secretos, unos héroes se enfrentan a nuevos misterios... y a una nueva y extraña amenaza.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ssls8OpHHXtHcvIy7AiXipBddQX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/ulBGaxq9GmJexyEOi4Xci74g6Vt.jpg",
+      "genres": [
+        "Animación",
+        "Sci-Fi & Fantasy",
+        "Misterio",
+        "Action & Adventure"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "936075",
+      "imdbId": "tt11378946",
+      "title": "Michael",
+      "year": 2026,
+      "releaseDate": "2026-04-22",
+      "overview": "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2uK36ujoDXOfNiJ5Yp3raVprB51.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/xBT0oNq6rsTFv4SxG5uGRIEOrq6.jpg",
+      "genres": [
+        "Música",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "262848",
+      "imdbId": "tt31631142",
+      "title": "Los no elegidos",
+      "year": 2026,
+      "releaseDate": "2026-04-21",
+      "overview": "Una joven madre de una secta aislada se cruza con un misterioso desconocido e inicia una relación arriesgada que despierta deseos y desvela secretos oscuros.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cssRL2zNmTlxrvDNpKHBEV2FkAs.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/rfUT32eWuaYcs7pFSyhT08vfCaF.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1659087",
+      "imdbId": "tt40891145",
+      "title": "180",
+      "year": 2026,
+      "releaseDate": "2026-04-16",
+      "overview": "Un inesperado incidente de tráfico deja a su hijo en estado crítico. El padre, enfurecido, se adentra en una oscura espiral de confusión emocional y venganza.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4nNuv41aosADsoQYYJDg7Y829YK.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/iQSXJs6RbTumcwxMjCedDoK99rx.jpg",
+      "genres": [
+        "Suspense",
+        "Crimen",
+        "Drama",
+        "Película de TV"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1084577",
+      "imdbId": "tt26735622",
+      "title": "Balls Up: Con un par",
+      "year": 2026,
+      "releaseDate": "2026-04-15",
+      "overview": "Los ejecutivos de marketing Brad y Elijah lanzan un audaz patrocinio de preservativos de cobertura total directamente a la Copa del Mundo. Después de que su ebria celebración en Brasil desencadene un escándalo mundial, deberán huir de hinchas furiosos, delincuentes y funcionarios sedientos de poder para salvar sus carreras y volver a casa con vida.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/50V1E3NE3UDFmq0fhMpByx1b4Ka.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/jRsjWwZzI39bTm44FNhRtiICd9k.jpg",
+      "genres": [
+        "Comedia",
+        "Acción",
+        "Aventura"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1304313",
+      "imdbId": "tt32612507",
+      "title": "La momia de Lee Cronin",
+      "year": 2026,
+      "releaseDate": "2026-04-15",
+      "overview": "La joven hija de un periodista desaparece en el desierto sin dejar rastro—ocho años más tarde, la familia rota se conmociona cuando ella es devuelta a ellos, y lo que debiera haber sido una reunión jubilosa se convierte en una auténtica pesadilla.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qlLsNgRUiPPEIVbcqZR2KmOBL7e.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/zc08qkHtWfZ2cQGQBK1S5yafJmR.jpg",
+      "genres": [
+        "Terror",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "245318",
+      "imdbId": "tt31137273",
+      "title": "Margo tiene problemas de dinero",
+      "year": 2026,
+      "releaseDate": "2026-04-14",
+      "overview": "La escritora en ciernes Margo Millet se queda embarazada, lo que la obliga a dejar la universidad y la lleva a la ruina. Pero cuando aparece su padre, un ex luchador profesional con el que no tenía relación, Margo halla una forma inesperada de rentabilizar su talento para contar historias.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zqUvfOQtaffnkQL0ZVKPD7Z1KIR.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/r1lGjwTRF0RGYFHzvt3SupArmRy.jpg",
+      "genres": [
+        "Drama",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Apple TV",
+          "Apple TV Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1290417",
+      "imdbId": "tt32362890",
+      "title": "Embestida",
+      "year": 2026,
+      "releaseDate": "2026-04-10",
+      "overview": "Cuando un catastrófico huracán azota un pueblo costero, el nivel del mar sube rápidamente y sus habitantes deben sobrevivir a un montón de hambrientos tiburones.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/osYy4GDE4nr69MGTJxRaZlqU82S.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/bPqv6PSsqa2tgO1qb2Gq2iQ1VXf.jpg",
+      "genres": [
+        "Terror",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "279471",
+      "imdbId": "tt35466672",
+      "title": "Malcolm: De mal en peor",
+      "year": 2026,
+      "releaseDate": "2026-04-10",
+      "overview": "Han pasado veinte años y Malcolm y su familia siguen sin aprender absolutamente nada.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hsRxfDXuecLGIKxe9rz7aJSgRdD.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uekZzyLReK777QKO9xKwiPOelCQ.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "287527",
+      "imdbId": "tt10970762",
+      "title": "Los testamentos",
+      "year": 2026,
+      "releaseDate": "2026-04-08",
+      "overview": "\"Los testamentos\", la continuación de \"El cuento de la criada\", es un drama sobre el paso a la adultez ambientado en Gilead. La historia sigue a dos adolescentes: la devota y obediente Agnes Mackenzie y Daisy, una conversa recién llegada de fuera de las fronteras de Gilead.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/h5f0Apc2aENV2IMegrPHIhQMice.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uCndE341njionskk1pK9SbHqwZh.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "289219",
+      "imdbId": "tt36594331",
+      "title": "Star Wars: Maul - Señor de las sombras",
+      "year": 2026,
+      "releaseDate": "2026-04-06",
+      "overview": "Maul se alza de nuevo para liderar las facciones del hampa, conspirando para reconstruir su sindicato criminal y entrenar a un nuevo aprendiz en un planeta no tocado por el Imperio Galáctico.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9T4ECKFMBWqT7msxdaCGtsa3g5R.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/5SrsdKcN9Flvccq59sIfJbhq1Fk.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Animación",
+        "Sci-Fi & Fantasy"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1226863",
+      "imdbId": "tt28650488",
+      "title": "Super Mario Galaxy la película",
+      "year": 2026,
+      "releaseDate": "2026-04-01",
+      "overview": "Secuela de 'Super Mario Bros: La película', basada en la saga 'Mario Galaxy'. Los hermanos Mario y Luigi y la princesa Peach emprenden una aventura hasta los confines del espacio y a través de la galaxia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4Js0gYWxuvTN6b8iAaSF1cSQzBs.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9Z2uDYXqJrlmePznQQJhL6d92Rq.jpg",
+      "genres": [
+        "Familia",
+        "Comedia",
+        "Aventura",
+        "Fantasía",
+        "Animación"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "259265",
+      "imdbId": "tt32937780",
+      "title": "Algo terrible está a punto de suceder",
+      "year": 2026,
+      "releaseDate": "2026-03-26",
+      "overview": "Una novia presiente que algo terrible ocurrirá en su boda... y cuanto más se acerca al altar, peor se vuelve todo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6a89uiHWkYE2DQvZfTAP8HrzGUT.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1bdq9FKVyBUpOM9qE09WgG9o8Ek.jpg",
+      "genres": [
+        "Drama",
+        "Misterio",
+        "Sci-Fi & Fantasy"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1325734",
+      "imdbId": "tt33071426",
+      "title": "El drama",
+      "year": 2026,
+      "releaseDate": "2026-03-26",
+      "overview": "Una pareja, en los días previos a su boda, se enfrenta a una crisis cuando unas inesperadas revelaciones desbaratan lo que uno de ellos creía saber sobre el otro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zgfBYGYCNcOZ51JDbr6tm45H8y0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1oKLEA9JOhvaBwLpqjROisvWMy7.jpg",
+      "genres": [
+        "Romance",
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "249597",
+      "imdbId": "tt31810018",
+      "title": "Harry Hole",
+      "year": 2026,
+      "releaseDate": "2026-03-26",
+      "overview": "Una serie de asesinatos rituales azota Oslo y un detective brillante debe enfrentarse a un rompecabezas de patrones, corrupción y a sus propios demonios para atrapar al culpable.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ubHwrufeIkNynTjkRDIbliWX9dM.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/e9HhOb3o22t89lnpN511GzZE0Fp.jpg",
+      "genres": [
+        "Misterio",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1523145",
+      "imdbId": "tt38190257",
+      "title": "Tu corazón se romperá",
+      "year": 2026,
+      "releaseDate": "2026-03-26",
+      "overview": "Polina, una estudiante de secundaria, encuentra un salvavidas inesperado frente al acoso que sufre en su nuevo instituto. Para frenar el bullying, sella un pacto con Bars, el cabecilla de los abusadores: él fingirá ser su novio y se convertirá en su protector, pero a cambio, ella tendrá que obedecerle en todo lo que él le pida. Lo que empieza como un juego de supervivencia se complica cuando la química entre los dos se vuelve real. Sin embargo, su historia tiene los días contados: tanto sus familias como sus propios compañeros harán lo imposible por dinamitar una relación que nadie aprueba.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iGpMm603GUKH2SiXB2S5m4sZ17t.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1292695",
+      "imdbId": "tt31728330",
+      "title": "Te van a matar",
+      "year": 2026,
+      "releaseDate": "2026-03-25",
+      "overview": "Una mujer acepta un trabajo como ama de llaves en un rascacielos de Nueva York, sin conocer el historial de desapariciones del edificio. Pronto se da cuenta de que la comunidad está rodeada de misterio.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9dEn8a12dqkQw48zxQhPcpQ7D5W.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/q05WV8DwEiyLbCgSVtg55RbUzou.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1266127",
+      "imdbId": "tt33978029",
+      "title": "Noche de bodas 2",
+      "year": 2026,
+      "releaseDate": "2026-03-19",
+      "overview": "Momentos después de sobrevivir a un ataque de la familia Le Domas, Grace descubre que ha alcanzado el siguiente nivel del juego, y esta vez acompañada por su hermana Faith, con quien mantiene una relación distante. Grace tiene una oportunidad para sobrevivir, mantener con vida a su hermana y reclamar el Alto Trono del Consejo que controla el mundo. Cuatro familias rivales la persiguen para hacerse con el trono, y quien gane lo gobernará todo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nDXKMOLJuBUKhYmHAY9qJdikuAq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9dMp9t0d0nIGhiil8TyqChwiNwA.jpg",
+      "genres": [
+        "Terror",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "108181",
+      "imdbId": "tt31937954",
+      "title": "Mujeres imperfectas",
+      "year": 2026,
+      "releaseDate": "2026-03-17",
+      "overview": "Tras un asesinato que destruye las vidas de tres amigos, su vínculo de décadas se pone a prueba cuando una investigación revela verdades impactantes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hD3M24I0AJm0ZKzrZ0N7p18fkPO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/1RejXo8s6ot7ZbrgR8J16DVaaTi.jpg",
+      "genres": [
+        "Drama",
+        "Misterio",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Apple TV",
+          "Apple TV Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1084187",
+      "imdbId": "tt26678938",
+      "title": "Lindas y letales",
+      "year": 2026,
+      "releaseDate": "2026-03-13",
+      "overview": "Un grupo de bailarinas lucha por sobrevivir mientras intentan escapar de una remota posada después de que su autobús se averíe de camino a una competición.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cmZqxJQ9MdNQEoD49HYghOXsiwH.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/z3bzhmC0CPikWeerUkLO73YvGrC.jpg",
+      "genres": [
+        "Música",
+        "Suspense",
+        "Acción",
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "240740",
+      "imdbId": "tt14786934",
+      "title": "Scarpetta",
+      "year": 2026,
+      "releaseDate": "2026-03-11",
+      "overview": "La prestigiosa patóloga Kay Scarpetta vuelve a su cargo de jefa médica forense de Virginia para investigar un inquietante asesinato que le recuerda a su primer gran caso de hace décadas. En 1998, Scarpetta colabora con el inspector Pete Marino y el agente Benton Wesley del FBI mientras investigan una serie de brutales estrangulamientos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/35EbNCepwjLr9AmFUn5VGcHXHIX.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/oHnlulBoE3XbI3HIYWY0dZfh5RH.jpg",
+      "genres": [
+        "Drama",
+        "Crimen",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "255661",
+      "imdbId": "tt8599532",
+      "title": "El joven Sherlock",
+      "year": 2026,
+      "releaseDate": "2026-03-04",
+      "overview": "Un Sherlock Holmes de 19 años se ve enredado en un asesinato en Oxford que pone en peligro su libertad. Su primer caso, abordado imprudentemente, le lleva a descubrir una conspiración de gran alcance que altera su camino para siempre.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/w426ObBzvHyTISiAqaeMujydmpi.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8mmDLb108DoFZlE8sfc64TRqLvm.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1613798",
+      "imdbId": "tt37989803",
+      "title": "Venganza",
+      "year": 2026,
+      "releaseDate": "2026-02-26",
+      "overview": "Carlos y Miguel son dos soldados de élite de las fuerzas especiales mexicanas y mejores amigos cuyas vidas cambian para siempre cuando Carlos es testigo del brutal asesinato de su esposa por manos de un despiadado asesino. Determinado a buscar justicia, emprende un peligroso viaje de venganza, alimentado por el dolor y armado con una lotería que cambia su vida.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ggJGx8fwwy21gEIXYusIlHcUn8z.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/jJmlCFi5EjpH5vHmOczRiVDm0qS.jpg",
+      "genres": [
+        "Acción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "241372",
+      "imdbId": "tt30412869",
+      "title": "56 días",
+      "year": 2026,
+      "releaseDate": "2026-02-18",
+      "overview": "Cuando se descubre un cadáver sin identificar en un piso de lujo vinculado a Oliver Kennedy y su novia Ciara Wyse, los inspectores Lee Reardon y Karl Connolly reconstruyen los últimos 56 días del romance mortal de la pareja.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sq7dGBq8yqtEouPyyMDfz2HFwjO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/dnEljhBkw53ra7tEl2JNKGrI0wk.jpg",
+      "genres": [
+        "Drama",
+        "Crimen",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1171145",
+      "imdbId": "tt32430579",
+      "title": "Ruta de escape",
+      "year": 2026,
+      "releaseDate": "2026-02-11",
+      "overview": "Davis es un escurridizo ladrón cuyos atracos de alto riesgo tienen desconcertada a la policía. Davis está planeando su mayor golpe, con la esperanza de que sea el último, cuando se cruza en su camino Sharon, una desilusionada ejecutiva de seguros con la que se ve obligado a trabajar, y Orman un ladrón rival, con métodos mucho más inquietantes que los de Davis. A medida que se acerca el golpe multimillonario, el implacable teniente Lubesnik, se acerca a la operación, aumentando considerablemente el riesgo de lo que está en juego y difuminando la línea entre cazador y presa. Pronto, cada uno tendrá que aceptar el coste de sus decisiones asumiendo que no hay vuelta atrás.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oUF0tTmbwlfkhiYSU5nXJccr5K0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/sl2649wlcocfFU7HKxQgNUEBMnT.jpg",
+      "genres": [
+        "Crimen",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1168190",
+      "imdbId": "tt33046197",
+      "title": "Los hermanos demolición",
+      "year": 2026,
+      "releaseDate": "2026-01-28",
+      "overview": "Un improbable dúo de hermanastros, uno un impulsivo detective y el otro un disciplinado, se ven atraídos por el asesinato de su padre en Hawai, lo que les lleva a un peligroso viaje para desenmascarar una conspiración de largo alcance.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ttEESBvVrO8ngZr19qp6eBMVS9F.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "680493",
+      "imdbId": "tt22868010",
+      "title": "Return to Silent Hill",
+      "year": 2026,
+      "releaseDate": "2026-01-21",
+      "overview": "Impulsado por las sombras de su pasado, James Sunderland regresa a Silent Hill para encontrar a su amor perdido, Mary Crane. Pero el pequeño pueblo oscuro y deprimente ya no es el lugar de sus recuerdos. James se encuentra con personajes que le parecen demasiado familiares y que intentan distraerlo de su búsqueda de Mary. Cuanto más busca a Mary, más comienza a preguntarse si esto sigue siendo la realidad, o si ha caído en el oscuro inframundo de Jacob Crane.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5Y2TeCVEnwPbd4FDShGbkKYw6GE.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/v0NEB75SZjxY8GS3ho8WeEvjIT3.jpg",
+      "genres": [
+        "Misterio",
+        "Drama",
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1236153",
+      "imdbId": "tt31050594",
+      "title": "Sin piedad",
+      "year": 2026,
+      "releaseDate": "2026-01-20",
+      "overview": "En un futuro próximo, un detective (Chris Pratt) es acusado de asesinar a su esposa. Tiene 90 minutos para demostrar su inocencia ante la Jueza de la I.A. avanzada (Rebecca Ferguson), a la que él mismo defendió en su día, antes de que esta decida su destino.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9zBNg8koM3fjUTPT7QeJHuGG2r9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/po1niVuud0tX86xOFegO5omQ2wX.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Acción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video",
+          "MGM+ Apple TV Channel",
+          "MGM Plus Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1115544",
+      "imdbId": "tt27552099",
+      "title": "Mike y Nick y Nick y Alice",
+      "year": 2026,
+      "releaseDate": "2026-03-14",
+      "overview": "Dos gángsters y la mujer a la que aman intentan sobrevivir a la noche más peligrosa de sus vidas, en la que está implicada una máquina del tiempo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/k6PSvLUs84QJsWLt0Zlkoa8ih6V.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uNToXatdunyvWXyXMrTI1nLvh6r.jpg",
+      "genres": [
+        "Comedia",
+        "Ciencia ficción",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1327819",
+      "imdbId": "tt26443616",
+      "title": "Hoppers",
+      "year": 2026,
+      "releaseDate": "2026-03-04",
+      "overview": "Una amante de los animales aprovecha la oportunidad de utilizar una tecnología que coloca su conciencia en un castor robótico, descubriendo misterios dentro del mundo animal que van más allá de lo que podría haber imaginado.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4Z0E1W7YvQ0aVtgj7KKtktb9ukd.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/u53UYu5XG2hNgWGvs3xGhAVzypl.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Comedia",
+        "Familia",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1032892",
+      "imdbId": "",
+      "title": "En un instante",
+      "year": 2026,
+      "releaseDate": "2026-01-26",
+      "overview": "Tres historias interconectadas reflexionan sobre la esperanza, las relaciones humanas y el ciclo de la vida a lo largo de miles de años.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bN130HxJYMXPDEIO03wtpdhwj6K.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/uM5i623wwNfoGD97iwwQWQ7GlZL.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1198994",
+      "imdbId": "tt8036976",
+      "title": "SEND HELP (Enviad ayuda)",
+      "year": 2026,
+      "releaseDate": "2026-01-22",
+      "overview": "Después de que un accidente de avión deje varados en una isla remota a una competente empleada y a su insoportable jefe, ella deberá utilizar sus habilidades de supervivencia para mantenerlos a ambos con vida, a pesar de su difícil relación.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qXZZtyzuTX3KMfSLssCR6J0mODd.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/gCmfeKmEAZBP5gcXpiqb0gii9rS.jpg",
+      "genres": [
+        "Terror",
+        "Suspense",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1140498",
+      "imdbId": "",
+      "title": "Sin conexión",
+      "year": 2025,
+      "releaseDate": "2025-12-19",
+      "overview": "Mientras su matrimonio se desmorona silenciosamente, Alex se enfrenta a la mediana edad y a un divorcio inminente, buscando un nuevo propósito en el mundo de la comedia neoyorquina, mientras que Tess se enfrenta a los sacrificios que ha hecho por su familia, lo que les obliga a lidiar con la crianza compartida, la identidad y si el amor puede adoptar una nueva forma.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ulxREzIzqoXjfvFUM3R2mUgK4wx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/bcw0QrKe9cM7MbjypxMPFdT6hrM.jpg",
+      "genres": [
+        "Comedia",
+        "Drama",
+        "Romance"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "83533",
+      "imdbId": "tt1757678",
+      "title": "Avatar: Fuego y ceniza",
+      "year": 2025,
+      "releaseDate": "2025-12-17",
+      "overview": "Jake Sully y Neytiri enfrentan una nueva amenaza en Pandora: los Ash People, una tribu Na'vi violenta y sedienta de poder, liderada por la implacable Varang. Tras la devastadora guerra contra la RDA y la pérdida de su hijo mayor, la familia de Jake deberá luchar por su supervivencia y el futuro de Pandora en un conflicto que llevará a los personajes a sus límites emocionales y físicos. Con nuevos y antiguos aliados, esta épica visual y emocional redefine el destino de un mundo al borde del abismo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4n1U0Mwn7djux6VKNYDRWPgS2x6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/iN41Ccw4DctL8npfmYg1j5Tr1eb.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Aventura",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1206008",
+      "imdbId": "",
+      "title": "Ella McCay",
+      "year": 2025,
+      "releaseDate": "2025-12-11",
+      "overview": "Una joven política idealista hace malabarismos con sus problemas familiares y su estresante vida laboral mientras se prepara para ocupar nada menos que el puesto de gobernadora de su estado, ocupando el puesto de su mentor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7dkh168bJBPAl3tjcnhDHXowyWt.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9cd1zsxcOAcBW01WDOWz8EODTS0.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "254953",
+      "imdbId": "tt32420734",
+      "title": "Rooster",
+      "year": 2026,
+      "releaseDate": "2026-03-08",
+      "overview": "Un aclamado escritor llamado Greg Russo se ve arrastrado al mundo académico por su hija adulta Katie, profesora en una universidad de élite cuyo marido la engaña. Él intenta apoyarla sin sobrepasarse, tratando de lidiar con esta complicada y cambiante relación, al tiempo que transita un nuevo entorno que siente fuera de su alcance.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aikvD4Nu7N6ekbrXNua8vJlO8JU.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mhZAT8ktiNi7YwuL50kmumsau69.jpg",
+      "genres": [
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "206828",
+      "imdbId": "tt34385331",
+      "title": "DTF St. Louis",
+      "year": 2026,
+      "releaseDate": "2026-03-01",
+      "overview": "Tres personas de mediana edad se enredan en un triángulo amoroso que conduce a la muerte prematura de una de ellas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xHfafw9UmomDc7jO25s9MpiL4Zs.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8mO4cYZI1X8sanR4u6f07FiQ8dC.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1316092",
+      "imdbId": "tt32897959",
+      "title": "“Cumbres Borrascosas”",
+      "year": 2026,
+      "releaseDate": "2026-02-11",
+      "overview": "Una audaz y original reinterpretación de una de una de las historias de amor más grandes de todos los tiempos, 'Cumbres Borrascosas' de Emerald Fennell está protagonizada por Margot Robbie como Cathy y Jacob Elordi como Heathcliff, cuya pasión prohibida se transforma de romántica a intoxicante en una épica historia de lujuria, amor y locura.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/afGUJcMBJloAUp9uC27MQiqkD7X.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vSQSYd2zZTqc0zmHImwWEGGluMI.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "291339",
+      "imdbId": "tt35707374",
+      "title": "Memoria de un Asesino",
+      "year": 2026,
+      "releaseDate": "2026-01-25",
+      "overview": "Angelo lleva una doble vida, como asesino y como padre de familia, y todo funcionaba bien hasta que le sobrevino un principio de Alzheimer. Ahora sus mundos chocan, poniendo a su familia en peligro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/79EO16C4zs8fwxKEjRENVvIQHIB.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/llrSuUkFiR6EjDnh79dq8HEeziF.jpg",
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "224372",
+      "imdbId": "tt27497448",
+      "title": "El caballero de los Siete Reinos",
+      "year": 2026,
+      "releaseDate": "2026-01-18",
+      "overview": "Un siglo antes de los acontecimientos de \"Juego de Tronos\", dos héroes improbables vagaban por Poniente: un joven e ingenuo, pero valiente caballero, Ser Duncan el Alto, y su pequeño escudero, Egg. Ambientada en una época en la que el linaje Targaryen aún ostenta el Trono de Hierro y el recuerdo del último dragón aún no ha desaparecido de la memoria viva, grandes destinos, poderosos enemigos y peligrosas hazañas aguardan a estos improbables e incomparables amigos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pKWuCnx1DAjLFamTdYVRfK0cck6.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/7mkUu1F2hVUNgz24xO8HPx0D6mK.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1272837",
+      "imdbId": "tt32141377",
+      "title": "28 años después: El templo de los huesos",
+      "year": 2026,
+      "releaseDate": "2026-01-14",
+      "overview": "El Dr. Kelson (Ralph Fiennes) se ve envuelto en una nueva y sorprendente relación, cuyas consecuencias podrían cambiar el mundo tal y como se conoce. Por otra parte, el encuentro de Spike (Alfie Williams) con el Gran Lord Jimmy Crystal (Jack O'Connell) se convierte en una pesadilla de la que el chico no puede escapar. En este mundo, los infectados ya no son la mayor amenaza para la supervivencia, ya que la inhumanidad de los supervivientes puede ser aún más extraña y aterradora.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2DTPapravB7kVBWjm6RsqEWyNqn.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/hHDNOlATHhre4eZ7aYz5cdyJLik.jpg",
+      "genres": [
+        "Terror",
+        "Suspense",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1234731",
+      "imdbId": "tt33244668",
+      "title": "Anaconda",
+      "year": 2025,
+      "releaseDate": "2025-12-24",
+      "overview": "Doug y Griff son muy buenos amigos desde que eran niños y siempre han soñado con hacer un remake de su película favorita de todos los tiempos: el «clásico cinematográfico» Anaconda. Cuando una crisis de mediana edad les anima a lanzarse por fin a la aventura, se adentran en la selva amazónica para empezar a rodar. Pero las cosas se ponen serias cuando aparece una anaconda gigante de verdad, convirtiendo su caótico y cómico plató de rodaje en una situación mortal.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zX1KJPiGTrzpFcjfOWlmqdRgpQd.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/swxhEJsAWms6X1fDZ4HdbvYBSf9.jpg",
+      "genres": [
+        "Aventura",
+        "Comedia",
+        "Terror"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "301507",
+      "imdbId": "tt35495073",
+      "title": "Más que rivales",
+      "year": 2025,
+      "releaseDate": "2025-11-28",
+      "overview": "Dos de las mayores estrellas de la Major League Hockey están unidas por la ambición, la rivalidad y una atracción magnética que ninguna de las dos comprende del todo. Lo que comienza como una aventura secreta entre dos novatos se convierte en un viaje de años de amor, negación y autodescubrimiento. Durante los siguientes ocho años, mientras buscan la gloria sobre el hielo, luchan por comprender sus sentimientos mutuos. Divididos entre el deporte que les apasiona y el amor que no pueden ignorar, deben decidir si hay espacio en su mundo ferozmente competitivo para algo tan frágil —y poderoso— como el amor verdadero.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rFZLFbuAOIQGZxXJT9XWhE87XMY.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/QbRbCULZVBcrN2uydpmIOQLV5O.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "200875",
+      "imdbId": "tt19244304",
+      "title": "It: Bienvenidos a Derry",
+      "year": 2025,
+      "releaseDate": "2025-10-26",
+      "overview": "Precuela de las películas de 'IT' basadas en las novelas de Stephen King. Comienza en la década de 1960, en la época previa a los acontecimientos de la película de 2017, y cuenta los orígenes del payaso Pennywise.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2titW404dPYOzK5NElQoAJ2ivK5.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/2fOKVDoc2O3eZmBZesWPuE5kgPN.jpg",
+      "genres": [
+        "Drama",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1223601",
+      "imdbId": "tt31844586",
+      "title": "Sisu: Camino a la venganza",
+      "year": 2025,
+      "releaseDate": "2025-10-21",
+      "overview": "Al regresar a la casa donde su familia fue brutalmente asesinada durante la guerra, «el hombre que se niega a morir» la desmantela, la carga en un camión y se propone reconstruirla en un lugar seguro en honor a ellos. Cuando el comandante del Ejército Rojo que mató a su familia regresa empeñado en terminar el trabajo, se produce una implacable y espectacular persecución a través del país, una lucha a muerte llena de escenas de acción increíbles e ingeniosas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qQyc6t9dHS5dlIUt3ccCQnRIAc1.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yCatt8lmp3oRFEcOZF8KHhsiASQ.jpg",
+      "genres": [
+        "Acción",
+        "Bélica",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "225891",
+      "imdbId": "tt33204276",
+      "title": "The Madison",
+      "year": 2026,
+      "releaseDate": "2026-03-14",
+      "overview": "Tras una tragedia, una adinerada familia neoyorquina se traslada al idílico estado de Montana rural, explorando la conexión humana en medio de un profundo dolor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nZVRyqVbDqfLSOrLcsGGTUHccZ8.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/lhQQE9vlNCKOYWamaHW8CBiI09B.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "290856",
+      "imdbId": "tt36849871",
+      "title": "Marshals: Una historia de Yellowstone",
+      "year": 2026,
+      "releaseDate": "2026-03-01",
+      "overview": "Kayce Dutton, un ex SEAL de la Marina, deja el rancho Yellowstone para unirse a los U.S. Marshals. Utiliza sus habilidades como vaquero y militar para luchar contra el crimen en Montana mientras lidia con los lazos familiares y el desgaste mental de las fuerzas del orden.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eYY0w7tyAQrwoAT6fpw8gIxeWhv.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/yGJGwt7DdIWTUXuahLfhcH1gi7G.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "223530",
+      "imdbId": "tt8622160",
+      "title": "Star Trek: Academia de la Flota Estelar",
+      "year": 2026,
+      "releaseDate": "2026-01-15",
+      "overview": "Una nueva promoción de cadetes se entrenan bajo la atenta y exigente mirada de los mejores de la Flota Estelar. Juntos, se enfrentarán a los altibajos de la vida en la Academia: forjarán amistades inquebrantables, chocarán en explosivas rivalidades, experimentarán sus primeros amores y se adentrarán en su destino como la próxima generación de oficiales de la Flota Estelar. Cuando un nuevo y misterioso enemigo amenace tanto a la Academia como a la propia Federación, estos cadetes deberán estar a la altura del desafío o arriesgarse a perder todo por lo que acaban de empezar a luchar.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vmo8SYv8AacIViGZ6hj0d3mxuYN.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/rXtSdCGmG07zjAg5h7GR1v52ogX.jpg",
+      "genres": [
+        "Sci-Fi & Fantasy",
+        "Action & Adventure"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "240459",
+      "imdbId": "tt29921437",
+      "title": "Spartacus: La Casa de Ashur",
+      "year": 2025,
+      "releaseDate": "2025-12-05",
+      "overview": "¿Y si Ashur hubiese vivido y hubiese recibido el ludus donde antes sangró? Con Achillia, una gladiadora, desata espectáculos que desafían a Roma y sorprenden a la élite.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bV50amPMtGHJuosHgQylN43oWaD.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/c78kbj781ddvmSn5mgLWFQbC7di.jpg",
+      "genres": [
+        "Drama",
+        "Action & Adventure"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "MGM+ Apple TV Channel",
+          "MGM Plus Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "225171",
+      "imdbId": "tt22202452",
+      "title": "Pluribus",
+      "year": 2025,
+      "releaseDate": "2025-11-06",
+      "overview": "La persona más desgraciada de la Tierra tiene que salvar al mundo de la felicidad.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/stkYbERuo2YYuay37rYaE41Izyu.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vNCNUxNHHgP0WsA19hxztUsG3yG.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi & Fantasy"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Apple TV",
+          "Apple TV Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "911430",
+      "imdbId": "tt16311594",
+      "title": "F1 la película",
+      "year": 2025,
+      "releaseDate": "2025-06-25",
+      "overview": "El mítico piloto Sonny Hayes vuelve de su retiro, persuadido para liderar un equipo de Fórmula 1 en apuros y guiar a su joven promesa, en busca de una nueva oportunidad de éxito.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wfpqaxoPKvcqzLy8FO0enGXBzU.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/rZWkXnIyTLzUJpHSUpOb7vgB0BL.jpg",
+      "genres": [
+        "Acción",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Apple TV",
+          "Apple TV Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "241609",
+      "imdbId": "tt30459041",
+      "title": "Vicios ocultos",
+      "year": 2025,
+      "releaseDate": "2025-04-10",
+      "overview": "Cuando un titán financiero se encuentra de repente divorciado y en paro, empieza a robar a sus vecinos ricos para mantenerse a flote. Curiosamente, robar a su círculo social le entusiasma, pero poco a poco, va enredándose en una red mortal.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nnhMYhoIZl997vJ03YWkulhUlQO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/d8LvQj79fgowZkX4NTZaEG3NwsH.jpg",
+      "genres": [
+        "Drama",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Apple TV",
+          "Apple TV Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "798645",
+      "imdbId": "tt14107334",
+      "title": "The Running Man",
+      "year": 2025,
+      "releaseDate": "2025-11-11",
+      "overview": "En una América distópica en el año 2025, Ben Richards participa en el violento reality show \"The Running Man\" con el fin de ganar suficiente dinero para revivir a su hija gravemente enferma.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iw4akkBscNvCLJZIbMT3PTc7csP.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/aHj7d7wSLqrg5cjAcgHhiGr97Ih.jpg",
+      "genres": [
+        "Acción",
+        "Suspense",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "247718",
+      "imdbId": "tt31510819",
+      "title": "Tierra de mafiosos",
+      "year": 2025,
+      "releaseDate": "2025-03-30",
+      "overview": "El poder está en juego cuando los Harrigan y los Stevenson, dos familias criminales londinenses en guerra, se enfrentan en una batalla de matar o morir que amenaza con derribar imperios y arruinar vidas. Atrapado en el fuego cruzado está Harry Da Souza, el astuto \"solucionador\" tan peligroso como atractivo, que sabe muy bien dónde están las lealtades cuando las fuerzas opuestas chocan. A medida que los reinos se enfrentan, se cruzarán las líneas, y la única gracia salvadora es una garantía de vida o muerte: la familia por encima de todo.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xOBnonAeHiZuiTPOLBFMFSPI6jy.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/tQqbbxBAdW2ql8vbOqMOJbtSQ7O.jpg",
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "157741",
+      "imdbId": "tt14186672",
+      "title": "Landman: Un negocio crudo",
+      "year": 2024,
+      "releaseDate": "2024-11-17",
+      "overview": "Ambientada en las proverbiales ciudades en auge del oeste de Texas, se trata de un drama sobre la búsqueda de la fortuna en el mundo de las plataformas petrolíferas basada en el podcast 'Boomtown', una historia de clases, con matones y multimillonarios salvajes que impulsan un boom tan grande que está cambiando nuestro clima, nuestra economía y nuestra geopolítica.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hGbYOuUVoxfXa96pmNLFJ9a7U5T.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mh2UczqEXJJVgqohbyZbHTuxwhL.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "262469",
+      "imdbId": "tt33262257",
+      "title": "Dating Naked UK",
+      "year": 2024,
+      "releaseDate": "2024-08-23",
+      "overview": "In the pursuit of love, 10 singles take the brave steps of stripping off before entering a daring, dating experience. Unclothed they must begin to get to know each other, before their connections are put at risk.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tWHl9QaUaz4sKEUk1qCaGqQDARq.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/nC5gyHQB5zrWOkKMquBueGW7gb5.jpg",
+      "genres": [
+        "Reality"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "113962",
+      "imdbId": "tt13111078",
+      "title": "Operaciones Especiales: Lioness",
+      "year": 2023,
+      "releaseDate": "2023-07-23",
+      "overview": "Cruz Manuelos, una joven infante de marina ruda pero apasionada, es reclutada para unirse al Equipo Lioness Engagement de la CIA para ayudar a acabar con una organización terrorista desde adentro. Joe, el jefe de estación del programa Lioness, tiene la tarea de capacitar, administrar y liderar a sus agentes encubiertos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/d0r0rxI9UjMVvD5Krc5oET2O0gU.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/r0Zg70jpcDAD7IMDhVqajSnG9vb.jpg",
+      "genres": [
+        "Drama",
+        "War & Politics"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Claro video",
+          "Paramount Plus Apple TV Channel "
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "157744",
+      "imdbId": "tt18335752",
+      "title": "1923",
+      "year": 2022,
+      "releaseDate": "2022-12-18",
+      "overview": "Sigue a una nueva generación de la familia Dutton a principios del siglo XX cuando las pandemias, la sequía histórica, el fin de la Prohibición y la Gran Depresión plagan el oeste montañoso y los Dutton que lo llaman hogar.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aE7pMhO58iCn9CdU1VYcyTfKr1o.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vIioWssbxRtEkIzgj8r0pCWYkYM.jpg",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix",
+          "Paramount Plus",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "153312",
+      "imdbId": "tt16358384",
+      "title": "Tulsa King",
+      "year": 2022,
+      "releaseDate": "2022-11-13",
+      "overview": "Justo después de ser liberado de prisión después de 25 años, el capo de la mafia de Nueva York, Dwight \"El General\" Manfredi, es exiliado sin contemplaciones por su jefe para instalarse en Tulsa, Oklahoma. Al darse cuenta de que su familia de la mafia puede no tener sus mejores intereses en mente, Dwight construye lentamente una \"tripulación\" a partir de un grupo de personajes inverosímiles, para ayudarlo a establecer un nuevo imperio criminal en un lugar que para él bien podría ser otro planeta.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6ryay9RQfT5jrY9i1dveUUGryAO.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/mNHRGO1gFpR2CYZdANe72kcKq7G.jpg",
+      "genres": [
+        "Crimen",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Paramount Plus",
+          "Claro video",
+          "Paramount Plus Apple TV Channel ",
+          "Paramount+ Amazon Channel"
+        ]
+      }
+    }
+  ]
+}

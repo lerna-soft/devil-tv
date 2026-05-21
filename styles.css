@@ -871,6 +871,27 @@ h1 {
   margin-bottom: 1.1rem;
 }
 
+.catalog-loading-status {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.16), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.65rem;
+  grid-column: 1 / -1;
+  margin-bottom: 0.3rem;
+  padding: 0.8rem 0.95rem;
+}
+
+.catalog-loading-status strong {
+  color: var(--text);
+}
+
+.catalog-loading-status span:last-child {
+  margin-left: auto;
+}
+
 .home-section-head {
   align-items: baseline;
   display: flex;
@@ -2263,6 +2284,13 @@ body.detail-active .catalog {
   border-radius: 999px;
   height: 2rem;
   width: 2rem;
+}
+
+.spinner-small {
+  border-width: 2px;
+  flex: 0 0 auto;
+  height: 1rem;
+  width: 1rem;
 }
 
 @keyframes spin {

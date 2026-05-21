@@ -548,7 +548,7 @@ h1 {
 .filters {
   display: grid;
   gap: 0.65rem;
-  grid-template-columns: minmax(15rem, 1.6fr) repeat(2, minmax(10rem, auto));
+  grid-template-columns: minmax(15rem, 1fr);
   align-items: center;
 }
 
@@ -830,7 +830,19 @@ h1 {
 .catalog-header-tools {
   align-items: center;
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.catalog-header-tools #count {
+  white-space: nowrap;
+}
+
+.catalog-header-tools #genreFilter,
+.catalog-header-tools #sortFilter {
+  max-width: 12rem;
+  min-width: 9.5rem;
 }
 
 .count-searching {
@@ -1160,6 +1172,10 @@ h1 {
   padding: 0 0.68rem;
 }
 
+.quick-label {
+  margin-left: 0.35rem;
+}
+
 .item-quick-btn.active-like {
   background: rgba(229, 9, 20, 0.92);
   border-color: rgba(229, 9, 20, 0.92);
@@ -1176,6 +1192,27 @@ h1 {
   background: rgba(5, 125, 255, 0.92);
   border-color: rgba(5, 125, 255, 0.92);
   color: #fff;
+}
+
+.title-copy .item-quick-actions {
+  gap: 0.55rem;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.title-copy .item-quick-btn {
+  background: rgba(255, 255, 255, 0.11);
+  font-size: 0.88rem;
+  height: 2.35rem;
+  min-width: 0;
+  padding: 0 0.9rem;
+}
+
+.title-copy .item-quick-btn.active-like {
+  background: rgba(229, 9, 20, 0.92);
+}
+
+.title-copy .item-quick-btn.active-later {
+  background: rgba(5, 125, 255, 0.92);
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 941px) {
@@ -2535,7 +2572,7 @@ code {
   .filters {
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   #search,
@@ -2544,8 +2581,10 @@ code {
     min-height: 2.6rem;
   }
 
+  .search-shell,
   #search {
     grid-column: 1 / -1;
+    width: 100%;
   }
 
   .user-chip {
@@ -2586,13 +2625,32 @@ code {
   }
 
   .catalog-header {
-    align-items: stretch;
-    flex-direction: column;
+    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 
   .catalog-header-tools {
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    width: auto;
+  }
+
+  .catalog-header-tools #count {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+
+  .catalog-header-tools #genreFilter,
+  .catalog-header-tools #sortFilter {
+    font-size: 0.78rem;
+    max-width: 8.9rem;
+    min-height: 2.25rem;
+    min-width: 0;
+    padding-left: 0.55rem;
+    padding-right: 1.65rem;
   }
 
   .item strong {

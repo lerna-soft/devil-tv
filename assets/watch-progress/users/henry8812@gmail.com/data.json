@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-21T20:35:33Z",
+  "updatedAt": "2026-05-21T20:35:38Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1140,7 +1140,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-20T05:32:16Z",
+      "updatedAt": "2026-05-21T20:35:38Z",
       "watched": {}
     },
     "tt0899258": {
@@ -1226,8 +1226,7 @@
   },
   "preferences": {
     "likes": {
-      "379149": 1,
-      "tt0267913": 1
+      "379149": 1
     },
     "watchLater": {
       "296232": true,
@@ -1308,18 +1307,37 @@
       "tt33244668": true,
       "tt28650488": true
     },
-    "updatedAt": "2026-05-21T20:35:33Z"
+    "updatedAt": "2026-05-21T20:35:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt28650488",
-    "tmdbId": "1226863",
+    "imdbId": "tt0267913",
+    "tmdbId": "9637",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-21T20:35:33Z"
+    "updatedAt": "2026-05-21T20:35:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0267913:s1e1:preference:2026-05-21T20:35:38Z",
+      "contentId": "tt0267913",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0267913",
+      "tmdbId": "9637",
+      "title": "Scooby-Doo",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T20:35:38Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt28650488:s1e1:preference:2026-05-21T20:35:33Z",
       "contentId": "tt28650488",

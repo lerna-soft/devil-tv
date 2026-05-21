@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-21T20:41:12Z",
+  "updatedAt": "2026-05-21T20:41:19Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1225,12 +1225,12 @@
     },
     "tt0096708": {
       "imdbId": "tt0096708",
-      "tmdbId": "",
+      "tmdbId": "2391",
       "lastSeason": 1,
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-21T20:41:12Z",
+      "updatedAt": "2026-05-21T20:41:19Z",
       "watched": {}
     }
   },
@@ -1322,14 +1322,33 @@
   },
   "lastWatch": {
     "imdbId": "tt0096708",
-    "tmdbId": "",
+    "tmdbId": "2391",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-21T20:41:12Z"
+    "updatedAt": "2026-05-21T20:41:19Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0096708:s1e1:started:2026-05-21T20:41:19Z",
+      "contentId": "tt0096708",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0096708",
+      "tmdbId": "2391",
+      "title": "Tales from the Crypt",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-21T20:41:18.653Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T20:41:19Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0096708:s1e1:preference:2026-05-21T20:41:12Z",
       "contentId": "tt0096708",

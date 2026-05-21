@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T13:45:29.122Z",
+  "generatedAt": "2026-05-21T13:46:21.105Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1153,22 +1153,22 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 7,
+      "totalEvents": 8,
       "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1420.1324260770975,
       "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T13:43:20Z",
+      "completionRate": 1,
+      "lastActivityAt": "2026-05-21T13:46:06Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 7,
-          "completedCount": 0,
+          "playCount": 8,
+          "completedCount": 1,
           "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T13:43:20Z",
+          "totalPlaybackProgress": 1420.1324260770975,
+          "lastSeenAt": "2026-05-21T13:46:06Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -1177,19 +1177,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 7,
+          "totalEvents": 8,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.1324260770975,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T13:43:20Z",
+          "lastActivityAt": "2026-05-21T13:46:06Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 0
+      "avgPlaybackProgress": 177.5166
     },
     {
       "contentId": "tt1234721",

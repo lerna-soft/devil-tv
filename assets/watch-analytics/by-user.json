@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-21T11:11:39.635Z",
+  "generatedAt": "2026-05-21T11:12:06.212Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T11:11:27Z",
-      "totalEvents": 346,
-      "totalStarts": 207,
+      "updatedAt": "2026-05-21T11:11:54Z",
+      "totalEvents": 347,
+      "totalStarts": 208,
       "totalCompletions": 40,
       "totalPlaybackProgress": 172415.52857503667,
       "uniqueContentCount": 120,
-      "lastActivityAt": "2026-05-21T11:11:27Z",
+      "lastActivityAt": "2026-05-21T11:11:54Z",
       "completedContentIds": [
+        "tt2911666",
         "tt1190634",
         "tt16030542",
         "tt14452776",
-        "tt2911666",
         "tt7587890",
         "tt0259141",
         "tt31596104",
@@ -62,6 +62,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:55:29Z"
+        },
+        "tt2911666": {
+          "contentId": "tt2911666",
+          "imdbId": "tt2911666",
+          "tmdbId": "245891",
+          "title": "John Wick (Otro día para matar)",
+          "type": "movie",
+          "playCount": 4,
+          "completed": true,
+          "maxProgressValue": 6072.9,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T11:11:54Z"
         },
         "tt4425200": {
           "contentId": "tt4425200",
@@ -807,18 +819,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:50Z"
         },
-        "tt2911666": {
-          "contentId": "tt2911666",
-          "imdbId": "tt2911666",
-          "tmdbId": "245891",
-          "title": "John Wick (Otro día para matar)",
-          "type": "movie",
-          "playCount": 3,
-          "completed": true,
-          "maxProgressValue": 6072.9,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:38:27Z"
-        },
         "tt10366206": {
           "contentId": "tt10366206",
           "imdbId": "tt10366206",
@@ -1480,7 +1480,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 498.3108
+      "avgPlaybackProgress": 496.8747
     },
     {
       "userEmail": "liz-munera@hotmail.com",

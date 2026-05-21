@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T11:11:39.634Z",
+  "generatedAt": "2026-05-21T11:12:06.210Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1238,6 +1238,50 @@
       "avgPlaybackProgress": 509.9056
     },
     {
+      "contentId": "tt2911666",
+      "imdbId": "tt2911666",
+      "tmdbId": "245891",
+      "title": "John Wick (Otro día para matar)",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 6072.9,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-21T11:11:54Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 6072.9,
+          "lastSeenAt": "2026-05-21T11:11:54Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 6072.9,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-21T11:11:54Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.5
+        }
+      },
+      "avgPlaybackProgress": 1518.225
+    },
+    {
       "contentId": "tt0293662",
       "imdbId": "tt0293662",
       "tmdbId": "4108",
@@ -1974,50 +2018,6 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
-    },
-    {
-      "contentId": "tt2911666",
-      "imdbId": "tt2911666",
-      "tmdbId": "245891",
-      "title": "John Wick (Otro día para matar)",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 6072.9,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-05-16T07:38:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 6072.9,
-          "lastSeenAt": "2026-05-16T07:38:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 6072.9,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:38:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 2024.3
     },
     {
       "contentId": "tt34610311",

@@ -39,6 +39,7 @@ let episodeManifestPromise = null;
 let watchProgressHeartbeatStarted = false;
 const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
+let detailEpisodePointerHandledAt = 0;
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const ADMIN_EMAIL = 'admin@deviltv.local';
@@ -1069,6 +1070,7 @@ elements.tabs.forEach((tab) => {
 
 window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
+bindDetailEpisodeEvents();
 primeCatalogHydrationStatus();
 handleRouteChange();
 scheduleSeedStartupWork();
@@ -2559,6 +2561,37 @@ function bindTap(element, handler) {
   element.addEventListener('click', (event) => {
     if (Date.now() - pointerHandledAt < 600) return;
     onTap(event);
+  });
+}
+
+function playEpisodeCard(card) {
+  if (!card || !state.selected || !isSeriesLike(state.selected)) return;
+  state.playback.episode = positiveInteger(card.dataset.episode, 1);
+  openPlayerForCurrentSelection();
+}
+
+function bindDetailEpisodeEvents() {
+  if (!elements.detail) return;
+  const resolveCard = (event) => {
+    if (!(event.target instanceof Element)) return null;
+    if (event.target.closest('button, a, input, textarea, select')) return null;
+    return event.target.closest('.episode-card[data-episode]');
+  };
+  elements.detail.addEventListener('pointerup', (event) => {
+    const card = resolveCard(event);
+    if (!card) return;
+    detailEpisodePointerHandledAt = Date.now();
+    event.preventDefault?.();
+    event.stopPropagation?.();
+    playEpisodeCard(card);
+  }, { passive: false });
+  elements.detail.addEventListener('click', (event) => {
+    const card = resolveCard(event);
+    if (!card) return;
+    event.preventDefault?.();
+    event.stopPropagation?.();
+    if (Date.now() - detailEpisodePointerHandledAt < 600) return;
+    playEpisodeCard(card);
   });
 }
 
@@ -4371,11 +4404,28 @@ function renderDetail(options = {}) {
     ...genres.slice(0, 3)
   ].filter(Boolean).map((entry) => `<span class="detail-meta-chip">${escapeHtml(entry)}</span>`).join('');
   const seasonsTabs = hasEpisodes ? state.seriesEpisodes.seasons.map((entry) => `<button class="season-tab${entry.seasonNumber === state.playback.season ? ' active' : ''}" data-season="${entry.seasonNumber}">T${entry.seasonNumber}</button>`).join('') : '';
-  const episodeCards = hasEpisodes ? getEpisodesForSeason(state.playback.season).map((entry) => {
+  const currentSeasonEpisodes = hasEpisodes ? getEpisodesForSeason(state.playback.season) : [];
+  const currentEpisodeEntry = currentSeasonEpisodes.find((entry) => entry.episode === state.playback.episode) || currentSeasonEpisodes[0] || null;
+  const currentEpisodeStatus = currentEpisodeEntry
+    ? (isEpisodeInProgress(progress, state.playback.season, currentEpisodeEntry.episode) ? 'En progreso' : isEpisodeWatched(progress, state.playback.season, currentEpisodeEntry.episode) ? 'Visto' : 'Listo para ver')
+    : '';
+  const episodeSpotlight = currentEpisodeEntry ? `<section class="episode-spotlight">
+    <div class="episode-spotlight-art" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
+      <span>T${escapeHtml(String(state.playback.season))}:E${escapeHtml(String(currentEpisodeEntry.episode))}</span>
+    </div>
+    <div class="episode-spotlight-copy">
+      <span class="episode-spotlight-kicker">Capítulo seleccionado · ${escapeHtml(currentEpisodeStatus)}</span>
+      <h3>${escapeHtml(currentEpisodeEntry.title || `Episodio ${currentEpisodeEntry.episode}`)}</h3>
+      ${currentEpisodeEntry.overview ? `<p>${escapeHtml(currentEpisodeEntry.overview)}</p>` : '<p>Selecciona cualquier capítulo de la lista para reproducirlo directamente.</p>'}
+      <button id="playSelectedEpisode" type="button">Reproducir T${escapeHtml(String(state.playback.season))}E${escapeHtml(String(currentEpisodeEntry.episode))}</button>
+    </div>
+  </section>` : '';
+  const episodeCards = hasEpisodes ? currentSeasonEpisodes.map((entry) => {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
     const statusLabel = inProgress ? 'En progreso' : watched ? 'Visto' : 'Listo para ver';
     return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
+      <span class="episode-index">${String(entry.episode).padStart(2, '0')}</span>
       <div class="episode-copy">
         <span class="episode-code">Capítulo ${entry.episode}</span>
         <span class="episode-title">${escapeHtml(entry.title || `Episodio ${entry.episode}`)}</span>
@@ -4431,7 +4481,7 @@ function renderDetail(options = {}) {
         </div>
       </div>
     </section>
-    ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div>${episodeCards ? `<div class="episodes-carousel" data-episodes-carousel><button class="episode-nav" type="button" data-episodes-prev aria-label="Capítulos anteriores">‹</button><div class="episodes-viewport"><div class="episodes-track">${episodeCards}</div></div><button class="episode-nav" type="button" data-episodes-next aria-label="Siguientes capítulos">›</button></div>` : `<div class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</div>`}</section>` : ''}
+    ${isSeriesLike(title) ? `<section class="seasons-panel"><div class="seasons-tabs">${seasonsTabs || `<span class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando temporadas...' : 'No se encontraron temporadas.'}</span>`}</div>${episodeSpotlight}${episodeCards ? `<div class="episodes-carousel" data-episodes-carousel><button class="episode-nav" type="button" data-episodes-prev aria-label="Capítulos anteriores">‹</button><div class="episodes-viewport"><div class="episodes-track">${episodeCards}</div></div><button class="episode-nav" type="button" data-episodes-next aria-label="Siguientes capítulos">›</button></div>` : `<div class="episode-hint">${state.seriesEpisodesLoading ? 'Cargando capítulos...' : 'No se encontraron capítulos.'}</div>`}</section>` : ''}
   </div>`;
 
   updateFloatingReportButtonVisibility();
@@ -4461,6 +4511,10 @@ function renderDetail(options = {}) {
     renderDetail({ skipHydratePlayback: true });
     await loadSeriesEpisodes({ forceRefresh: true });
     renderDetail({ skipHydratePlayback: true });
+  });
+  bindTap(document.querySelector('#playSelectedEpisode'), () => {
+    if (currentEpisodeEntry) state.playback.episode = currentEpisodeEntry.episode;
+    openPlayerForCurrentSelection();
   });
   bindTap(document.querySelector('#requestTitle'), () => {
     const id = title.imdbId || title.tmdbId || '';
@@ -4514,11 +4568,9 @@ function renderDetail(options = {}) {
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => {
     const onSelect = () => {
-      state.playback.episode = positiveInteger(button.dataset.episode, 1);
-      openPlayerForCurrentSelection();
-      syncRoute();
+      playEpisodeCard(button);
     };
-    button.addEventListener('click', () => onSelect());
+    bindTap(button, () => onSelect());
     button.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
@@ -5111,7 +5163,8 @@ async function buildEpisodesFromTmdb(title) {
         .map((episode) => ({
           season: seasonNumber,
           episode: Number(episode?.episode_number) || 0,
-          title: String(episode?.name || '').trim() || `Episodio ${episode?.episode_number}`
+          title: String(episode?.name || '').trim() || `Episodio ${episode?.episode_number}`,
+          overview: String(episode?.overview || '').trim()
         }))
         .filter((episode) => Number.isInteger(episode.episode) && episode.episode > 0)
         .sort((a, b) => a.episode - b.episode);

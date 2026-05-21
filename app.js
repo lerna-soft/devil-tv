@@ -1469,7 +1469,9 @@ async function hydrateSeedCatalog() {
 
   const seedVersion = Number(seed.version || 0);
   const appliedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
-  if (seedVersion && appliedVersion === seedVersion) return;
+  const current = loadLocalCatalog();
+  const hasLocalCatalog = Array.isArray(current) && current.length > 0;
+  if (seedVersion && appliedVersion === seedVersion && hasLocalCatalog) return;
 
   const items = [];
   for (const entry of seed.movies ?? []) {
@@ -1485,7 +1487,6 @@ async function hydrateSeedCatalog() {
     localStorage.setItem(SEED_CATALOG_KEYS_STORAGE, JSON.stringify(keys));
   } catch {}
 
-  const current = loadLocalCatalog();
   const merged = dedupe([...current, ...items]);
   saveLocalCatalog(merged);
   if (seedVersion) localStorage.setItem('mep_seed_version', String(seedVersion));

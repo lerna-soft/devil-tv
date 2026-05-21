@@ -23,7 +23,8 @@ const state = {
   genreFilterCacheKey: '',
   genreFilterOptionsHtml: '',
   filteredCatalogCacheKey: '',
-  filteredCatalogCache: null
+  filteredCatalogCache: null,
+  catalogHydrationRenderTimer: null
 };
 let suppressRouteSync = false;
 let routeChangeToken = 0;
@@ -1526,6 +1527,16 @@ function renderCatalogIfCurrentView() {
   renderCatalog();
 }
 
+function scheduleCatalogHydrationRender(delayMs = 700) {
+  if (!elements.appShell || elements.appShell.hidden) return;
+  if (state.catalogHydrationRenderTimer) return;
+  state.catalogHydrationRenderTimer = window.setTimeout(() => {
+    state.catalogHydrationRenderTimer = null;
+    if (!elements.appShell || elements.appShell.hidden) return;
+    renderCatalog();
+  }, delayMs);
+}
+
 function scheduleAuthenticatedStartupWork() {
   if (!isAuthenticated()) return;
   scheduleDelayedIdleTask(() => {
@@ -1585,10 +1596,12 @@ async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
     loadedCount += items.length;
     allSeedItems.push(...items);
     merged = dedupe([...merged, ...items]);
+    setRuntimeCatalog(merged);
+    scheduleCatalogHydrationRender();
   }
 
   if (!allSeedItems.length) return false;
-  setRuntimeCatalog(merged);
+  scheduleCatalogHydrationRender(0);
   if (!expectedTotal || loadedCount >= expectedTotal) {
     storeSeedCatalogKeys(allSeedItems);
   }

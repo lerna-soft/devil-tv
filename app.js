@@ -16,7 +16,14 @@ const state = {
   playerEventAt: 0,
   searchIntentId: 0,
   lastCountLabel: '0 títulos',
-  searchingTerm: ''
+  searchingTerm: '',
+  localCatalogCache: null,
+  catalogVisibleCount: 72,
+  lastCatalogRenderKey: '',
+  genreFilterCacheKey: '',
+  genreFilterOptionsHtml: '',
+  filteredCatalogCacheKey: '',
+  filteredCatalogCache: null
 };
 let suppressRouteSync = false;
 let routeChangeToken = 0;
@@ -63,6 +70,7 @@ const WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS = 2 * 60 * 1000;
 const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
+const CATALOG_PAGE_SIZE = 72;
 const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v2';
 const RELEASE_NOTES_CACHE_TTL_MS = 1000 * 60 * 15;
 const RELEASES_REPO_OWNER = 'lerna-admin';
@@ -126,6 +134,14 @@ function clearSelection({ closePlayer = false } = {}) {
   state.seriesEpisodesLoading = false;
   state.hydratedProgressId = '';
   if (closePlayer) closePlayerModal();
+}
+
+function resetCatalogViewport() {
+  state.catalogVisibleCount = CATALOG_PAGE_SIZE;
+}
+
+function isCompactViewport() {
+  return window.matchMedia('(max-width: 720px)').matches;
 }
 
 function prepareManualRouteTransition() {
@@ -938,6 +954,7 @@ async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
 
 elements.search.addEventListener('input', () => {
   state.searchIntentId += 1;
+  resetCatalogViewport();
   const search = getActiveSearchQuery();
   state.searchingTerm = getSearchInputValue();
   if (state.selected && !state.isSearching) {
@@ -954,6 +971,7 @@ elements.search.addEventListener('input', () => {
 });
 elements.typeFilter.addEventListener('change', () => {
   state.searchIntentId += 1;
+  resetCatalogViewport();
   state.homeSectionView = null;
   clearSelection({ closePlayer: true });
   syncTabs(elements.typeFilter.value);
@@ -963,6 +981,7 @@ elements.typeFilter.addEventListener('change', () => {
 });
 elements.genreFilter?.addEventListener('change', () => {
   state.searchIntentId += 1;
+  resetCatalogViewport();
   state.homeSectionView = null;
   if (state.selected) {
     clearSelection({ closePlayer: true });
@@ -972,6 +991,7 @@ elements.genreFilter?.addEventListener('change', () => {
   scheduleRemoteSearch();
 });
 elements.sortFilter?.addEventListener('change', () => {
+  resetCatalogViewport();
   if (elements.search.value.trim().length > 0) state.homeSectionView = null;
   if (state.selected) {
     clearSelection({ closePlayer: true });
@@ -986,6 +1006,7 @@ elements.tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     const nextType = tab.dataset.typeTab;
     if (nextType === 'all') {
+      resetCatalogViewport();
       clearTimeout(state.remoteSearchTimer);
       clearTimeout(state.searchCommitTimer);
       state.homeSectionView = null;
@@ -1005,6 +1026,7 @@ elements.tabs.forEach((tab) => {
     }
 
     state.homeSectionView = null;
+    resetCatalogViewport();
     clearSelection({ closePlayer: true });
     elements.typeFilter.value = nextType;
     syncTabs(nextType);
@@ -2341,6 +2363,20 @@ function renderCatalog() {
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
   const filtered = sortTitles(baseFiltered);
+  const renderKey = [
+    query,
+    search.mode,
+    search.term,
+    elements.typeFilter?.value || 'all',
+    elements.genreFilter?.value || 'all',
+    elements.sortFilter?.value || 'relevance',
+    state.homeSectionView || '',
+    state.selected?.catalogKey || ''
+  ].join('|');
+  if (state.lastCatalogRenderKey !== renderKey) {
+    state.lastCatalogRenderKey = renderKey;
+    resetCatalogViewport();
+  }
   const shouldShowHome = query.length === 0 && !state.selected && (elements.typeFilter?.value || 'all') === 'all';
 
   if (shouldShowHome) {
@@ -2359,7 +2395,7 @@ function renderCatalog() {
   }
 
   setCatalogCount(`${filtered.length} títulos`);
-  elements.items.innerHTML = renderLocalCards(filtered);
+  elements.items.innerHTML = renderPaginatedLocalList(filtered);
   bindLocalCardEvents();
 
   if (filtered.length === 0 && search.term && getSearchTermLength(search) < 3 && searchSupportsRemote(search.mode)) {
@@ -2854,9 +2890,12 @@ function renderHomeCatalog(baseFiltered) {
   const seriesRecommended = sortTitles(uniqueTitles.filter((t) => t.type === 'series')).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const latestItems = sortTitles(uniqueTitles).slice(0, 24);
 
+  const previewLimit = isCompactViewport() ? 6 : 10;
+  const providerSectionLimit = isCompactViewport() ? 4 : HOME_STREAMING_GROUPS.length;
+
   const section = (key, title, subtitle, items) => {
     if (!items.length) return '';
-    const preview = items.slice(0, 10);
+    const preview = items.slice(0, previewLimit);
     const showMore = items.length > preview.length;
     const cards = `${preview.length ? renderLocalCards(preview) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
     return `
@@ -2885,7 +2924,7 @@ function renderHomeCatalog(baseFiltered) {
     section('movies_recommended', 'Películas para ti', 'Sugerencias según lo que has visto', movieRecommended),
     section('series_recommended', 'Series para ti', 'Sugerencias según lo que has visto', seriesRecommended)
   ].filter(Boolean);
-  for (const group of HOME_STREAMING_GROUPS) {
+  for (const group of HOME_STREAMING_GROUPS.slice(0, providerSectionLimit)) {
     const available = sortTitles(baseFiltered.filter((t) => titleHasProvider(t, group.aliases || [group.key])));
     if (available.length < 4) continue;
     sections.push(section(`platform_${group.key}`, group.label, `Disponible ahora en ${group.label}`, available));
@@ -2942,11 +2981,12 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
         <h3>${escapeHtml(title)}</h3>
         <button type="button" id="homeBack">Volver al inicio</button>
       </div>
-      <div class="items">${items.length ? renderLocalCards(items) : '<div class="empty">Sin resultados por ahora.</div>'}</div>
+      ${renderPaginatedLocalList(items)}
     </section>`;
   bindLocalCardEvents();
   document.querySelector('#homeBack')?.addEventListener('click', () => {
     state.homeSectionView = null;
+    resetCatalogViewport();
     renderCatalog();
   });
 }
@@ -2955,9 +2995,23 @@ function bindHomeSectionEvents() {
   elements.items.querySelectorAll('[data-home-seeall]').forEach((entry) => {
     entry.addEventListener('click', () => {
       state.homeSectionView = entry.dataset.homeSeeall || null;
+      resetCatalogViewport();
       renderCatalog();
     });
   });
+}
+
+function renderLoadMoreCard(remaining) {
+  if (remaining <= 0) return '';
+  return `<article class="home-more" data-catalog-more="1"><div class="home-more-icon" aria-hidden="true">+</div><strong>Cargar más</strong><span>Quedan ${remaining} títulos por mostrar</span></article>`;
+}
+
+function renderPaginatedLocalList(items) {
+  const safeItems = Array.isArray(items) ? items : [];
+  const visible = safeItems.slice(0, state.catalogVisibleCount);
+  const remaining = Math.max(0, safeItems.length - visible.length);
+  if (!visible.length) return '<div class="empty">Sin resultados por ahora.</div>';
+  return `<div class="items">${renderLocalCards(visible)}${renderLoadMoreCard(remaining)}</div>`;
 }
 
 function bindHomeCarouselEvents() {
@@ -3210,21 +3264,42 @@ function getFilteredLocalTitles() {
   const search = getActiveSearchQuery();
   const selectedGenre = (elements.genreFilter?.value || 'all').toLowerCase();
   const titles = loadLocalCatalog();
-  return titles.filter((title) => {
+  const cacheKey = [
+    titles.length,
+    search.mode,
+    search.normalizedTerm,
+    selectedGenre,
+    elements.typeFilter?.value || 'all'
+  ].join('|');
+  if (state.filteredCatalogCacheKey === cacheKey && Array.isArray(state.filteredCatalogCache)) {
+    return state.filteredCatalogCache;
+  }
+  const filtered = titles.filter((title) => {
     if (title.type === 'episode') return false;
     if (!hasPosterAsset(title)) return false;
     const genres = (title.metadata?.genres || title.categories || []).map((g) => String(g).toLowerCase());
     const genreMatches = selectedGenre === 'all' || genres.some((g) => g === selectedGenre);
     return genreMatches && matchesSearchFilters(title, search);
   });
+  state.filteredCatalogCacheKey = cacheKey;
+  state.filteredCatalogCache = filtered;
+  return filtered;
 }
 
 function populateGenreFilter() {
   const select = elements.genreFilter;
   if (!select) return;
   const current = select.value || 'all';
+  const titles = loadLocalCatalog();
+  const cacheKey = `${titles.length}|${localStorage.getItem('mep_seed_version') || '0'}`;
+  if (state.genreFilterCacheKey === cacheKey && state.genreFilterOptionsHtml) {
+    select.innerHTML = state.genreFilterOptionsHtml;
+    const nextCached = [...select.options].some((opt) => opt.value === current) ? current : 'all';
+    select.value = nextCached;
+    return;
+  }
   const genres = new Set();
-  for (const title of loadLocalCatalog()) {
+  for (const title of titles) {
     if (!hasPosterAsset(title)) continue;
     const list = title.metadata?.genres || title.categories || [];
     for (const genre of list) {
@@ -3233,7 +3308,10 @@ function populateGenreFilter() {
     }
   }
   const sorted = [...genres].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
-  select.innerHTML = `<option value="all">Todos los géneros</option>${sorted.map((g) => `<option value="${escapeAttribute(g.toLowerCase())}">${escapeHtml(g)}</option>`).join('')}`;
+  const optionsHtml = `<option value="all">Todos los géneros</option>${sorted.map((g) => `<option value="${escapeAttribute(g.toLowerCase())}">${escapeHtml(g)}</option>`).join('')}`;
+  state.genreFilterCacheKey = cacheKey;
+  state.genreFilterOptionsHtml = optionsHtml;
+  select.innerHTML = optionsHtml;
   const next = [...select.options].some((opt) => opt.value === current) ? current : 'all';
   select.value = next;
 }
@@ -3298,6 +3376,18 @@ function resolveTitleByPreferenceId(prefId) {
 
 function bindLocalCardEvents() {
   bindPosterFallbacks(elements.items);
+  elements.items.querySelectorAll('[data-catalog-more="1"]').forEach((entry) => {
+    bindTap(entry, (event) => {
+      event.preventDefault();
+      state.catalogVisibleCount += CATALOG_PAGE_SIZE;
+      const search = getActiveSearchQuery();
+      if (state.remoteResults.length > 0 && getSearchTermLength(search) >= 3 && searchSupportsRemote(search.mode)) {
+        renderRemoteResults(getSearchInputValue());
+        return;
+      }
+      renderCatalog();
+    });
+  });
   elements.items.querySelectorAll('.item-quick-btn').forEach((btn) => {
     btn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -3478,27 +3568,15 @@ async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId)
 
 function renderRemoteResults(query) {
   cleanupWatchLaterFromCompleted();
-  const prefs = loadTitlePrefs();
   const localResults = getFilteredLocalTitles();
   const search = typeof query === 'string' ? parseSearchQuery(query) : getActiveSearchQuery();
   const rankingQuery = search.mode === 'text' ? query : search.term;
   const labelQuery = typeof query === 'string' ? query : getSearchInputValue();
   const merged = sortResultEntries(mergeAndRankResults(localResults, state.remoteResults, rankingQuery));
   setCatalogCount(`${merged.length} coincidencias para "${labelQuery}"`);
-  elements.items.innerHTML = merged.map((entry, index) => {
-    const title = entry.title;
-    const poster = sanitizePosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
-    const unavailable = isAuthenticated() && title.playable === false ? '<span class="pill pill-warn">No disponible</span>' : '';
-    const typeLabel = title.type === 'series' ? 'Serie' : title.type === 'movie' ? 'Película' : String(title.type || '');
-    const startYear = title.year ?? '';
-    const endYear = title.type === 'series' ? (title.metadata?.endYear ?? '') : '';
-    const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
-    return `<article class="item" data-key="${escapeHtml(title.catalogKey)}" data-source="${escapeAttribute(entry.source || 'remote')}">
-      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" loading="lazy" referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
-      ${getCardQuickActions(title, prefs)}
-      <div><strong>${escapeHtml(title.title)}</strong>${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
-    </article>`;
-  }).join('') || '<div class="empty">No encontramos resultados para esa búsqueda.</div>';
+  elements.items.innerHTML = merged.length
+    ? renderPaginatedLocalList(merged.map((entry) => entry.title))
+    : '<div class="empty">No encontramos resultados para esa búsqueda.</div>';
   bindLocalCardEvents();
 }
 
@@ -4773,7 +4851,14 @@ async function buildEpisodesFromTmdb(title) {
 }
 
 function loadLocalCatalog() {
-  try { return (JSON.parse(localStorage.getItem('mep_static_catalog') || '[]') || []).map((item) => normalizeCatalogPoster(item)); } catch { return []; }
+  if (Array.isArray(state.localCatalogCache)) return state.localCatalogCache;
+  try {
+    state.localCatalogCache = (JSON.parse(localStorage.getItem('mep_static_catalog') || '[]') || []).map((item) => normalizeCatalogPoster(item));
+    return state.localCatalogCache;
+  } catch {
+    state.localCatalogCache = [];
+    return state.localCatalogCache;
+  }
 }
 function normalizeCatalogPoster(title) {
   const posterUrl = sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '');
@@ -4786,14 +4871,26 @@ function normalizeCatalogPoster(title) {
     }
   };
 }
-function saveLocalCatalog(items) { localStorage.setItem('mep_static_catalog', JSON.stringify((Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item)))); }
+function saveLocalCatalog(items) {
+  const normalized = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
+  state.localCatalogCache = normalized;
+  state.genreFilterCacheKey = '';
+  state.genreFilterOptionsHtml = '';
+  state.filteredCatalogCacheKey = '';
+  state.filteredCatalogCache = null;
+  localStorage.setItem('mep_static_catalog', JSON.stringify(normalized));
+}
 function hasPosterAsset(title) { return Boolean(sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')); }
 function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }
 
 function cacheSearchResults(results) {
   const current = loadLocalCatalog();
   const merged = dedupe([...current, ...filterTitlesWithPoster(results)], { consolidateEquivalent: true });
-  saveLocalCatalog(merged);
+  state.localCatalogCache = merged;
+  state.genreFilterCacheKey = '';
+  state.genreFilterOptionsHtml = '';
+  state.filteredCatalogCacheKey = '';
+  state.filteredCatalogCache = null;
 }
 
 function dedupe(items, options = {}) {

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T10:49:13.892Z",
+  "generatedAt": "2026-05-21T11:11:39.635Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T10:49:04Z",
-      "totalEvents": 345,
-      "totalStarts": 206,
+      "updatedAt": "2026-05-21T11:11:27Z",
+      "totalEvents": 346,
+      "totalStarts": 207,
       "totalCompletions": 40,
       "totalPlaybackProgress": 172415.52857503667,
       "uniqueContentCount": 120,
-      "lastActivityAt": "2026-05-21T10:49:04Z",
+      "lastActivityAt": "2026-05-21T11:11:27Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -62,6 +62,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:55:29Z"
+        },
+        "tt4425200": {
+          "contentId": "tt4425200",
+          "imdbId": "tt4425200",
+          "tmdbId": "324552",
+          "title": "John Wick: Pacto de sangre",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T11:11:27Z"
         },
         "tt0293662": {
           "contentId": "tt0293662",
@@ -831,18 +843,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:16:13Z"
         },
-        "tt4425200": {
-          "contentId": "tt4425200",
-          "imdbId": "tt4425200",
-          "tmdbId": "324552",
-          "title": "John Wick: Pacto de sangre",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:16:10Z"
-        },
         "tt0107978": {
           "contentId": "tt0107978",
           "imdbId": "tt0107978",
@@ -1480,7 +1480,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 499.7552
+      "avgPlaybackProgress": 498.3108
     },
     {
       "userEmail": "liz-munera@hotmail.com",

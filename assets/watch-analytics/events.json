@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-21T13:43:27.377Z",
+  "generatedAt": "2026-05-21T13:43:39.917Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209804:s1e1:preference:2026-05-21T13:42:42Z",
+      "contentId": "tt21209804",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T13:42:42Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209804:s1e1:preference:2026-05-21T13:42:41Z",
       "contentId": "tt21209804",

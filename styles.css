@@ -878,6 +878,11 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
 }
 
+.catalog-results-grid {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
 .home-section {
   grid-column: 1 / -1;
   margin-bottom: 1.1rem;

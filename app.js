@@ -3283,7 +3283,7 @@ function renderPaginatedLocalList(items) {
   const visible = safeItems.slice(0, state.catalogVisibleCount);
   const remaining = Math.max(0, safeItems.length - visible.length);
   if (!visible.length) return '<div class="empty">Sin resultados por ahora.</div>';
-  return `<div class="items">${renderLocalCards(visible, { eagerCount: 8 })}${renderLoadMoreCard(remaining)}</div>`;
+  return `<div class="items catalog-results-grid">${renderLocalCards(visible, { eagerCount: 8 })}${renderLoadMoreCard(remaining)}</div>`;
 }
 
 function bindHomeCarouselEvents() {

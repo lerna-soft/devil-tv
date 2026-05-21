@@ -4,11 +4,6 @@ const state = {
   seriesEpisodesLoading: false,
   hydratedProgressId: '',
   remoteResults: [],
-  catalogManifest: null,
-  catalogBootstrapReady: false,
-  catalogBootstrapLoading: false,
-  catalogFullReady: false,
-  seedCatalogCache: [],
   remoteSearchTimer: null,
   searchCommitTimer: null,
   lastRemoteQuery: '',
@@ -23,14 +18,12 @@ const state = {
   lastCountLabel: '0 títulos',
   searchingTerm: '',
   localCatalogCache: null,
-  combinedCatalogCache: null,
   catalogVisibleCount: 72,
   lastCatalogRenderKey: '',
   genreFilterCacheKey: '',
   genreFilterOptionsHtml: '',
   filteredCatalogCacheKey: '',
-  filteredCatalogCache: null,
-  activeCatalogScope: 'bootstrap'
+  filteredCatalogCache: null
 };
 let suppressRouteSync = false;
 let routeChangeToken = 0;
@@ -39,10 +32,6 @@ let episodeManifestPromise = null;
 let watchProgressHeartbeatStarted = false;
 const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
-const catalogChunkPromises = new Map();
-const loadedCatalogChunks = new Set();
-let usersIndexPromise = null;
-const userRecordPromises = new Map();
 
 const AUTH_EMAIL = 'usuario@mail.com';
 const ADMIN_EMAIL = 'admin@deviltv.local';
@@ -62,8 +51,6 @@ const USER_REPORT_TITLE_LABEL = 'user-report-title';
 const USER_REPORT_EPISODE_LABEL = 'user-report-episode';
 const TITLE_PREFS_STORAGE_PREFIX = 'mep_title_prefs_';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
-const LOCAL_CATALOG_STORAGE_KEY = 'mep_catalog_overrides_v2';
-const LEGACY_CATALOG_STORAGE_KEY = 'mep_static_catalog';
 const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
 const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
 const TMDB_READ_TOKEN_SEED = 'mep_tmdb_token_key_v1';
@@ -84,8 +71,6 @@ const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
 const CATALOG_PAGE_SIZE = 72;
-const CATALOG_BOOTSTRAP_PATH = './assets/catalog/bootstrap.json';
-const CATALOG_MANIFEST_PATH = './assets/catalog/index.json';
 const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v2';
 const RELEASE_NOTES_CACHE_TTL_MS = 1000 * 60 * 15;
 const RELEASES_REPO_OWNER = 'lerna-admin';
@@ -157,43 +142,6 @@ function resetCatalogViewport() {
 
 function isCompactViewport() {
   return window.matchMedia('(max-width: 720px)').matches;
-}
-
-function invalidateCatalogDerivedCaches() {
-  state.combinedCatalogCache = null;
-  state.genreFilterCacheKey = '';
-  state.genreFilterOptionsHtml = '';
-  state.filteredCatalogCacheKey = '';
-  state.filteredCatalogCache = null;
-}
-
-function readStoredCatalogOverrides() {
-  if (Array.isArray(state.localCatalogCache)) return state.localCatalogCache;
-  try {
-    state.localCatalogCache = (JSON.parse(localStorage.getItem(LOCAL_CATALOG_STORAGE_KEY) || '[]') || []).map((item) => normalizeCatalogPoster(item));
-  } catch {
-    state.localCatalogCache = [];
-  }
-  return state.localCatalogCache;
-}
-
-function writeStoredCatalogOverrides(items) {
-  state.localCatalogCache = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
-  localStorage.setItem(LOCAL_CATALOG_STORAGE_KEY, JSON.stringify(state.localCatalogCache));
-  invalidateCatalogDerivedCaches();
-}
-
-function setSeedCatalogItems(items, options = {}) {
-  const { append = true } = options;
-  const normalized = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
-  state.seedCatalogCache = append
-    ? dedupe([...(Array.isArray(state.seedCatalogCache) ? state.seedCatalogCache : []), ...normalized], { consolidateEquivalent: true })
-    : normalized;
-  invalidateCatalogDerivedCaches();
-}
-
-function upsertSeedCatalogItems(items) {
-  setSeedCatalogItems(items, { append: true });
 }
 
 function prepareManualRouteTransition() {
@@ -580,7 +528,6 @@ function bindAuth() {
 }
 
 bindAuth();
-usersIndexPromise = fetchJsonWithTimeout(`${AUTH_USERS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
 
 function syncAuthModeUi() {
   const isRegister = authMode === 'register';
@@ -726,20 +673,14 @@ async function loadRemoteWatchProgress(email) {
   return primary?.email ? primary : null;
 }
 
-async function hydrateWatchProgressForCurrentUser(options = {}) {
-  const { suppressRender = false } = options;
+async function hydrateWatchProgressForCurrentUser() {
   const user = getAuthUser();
   if (!user?.email) return;
-  const [remote] = await Promise.all([
-    loadRemoteWatchProgress(user.email),
-    ensureUserCatalogSeedLoaded(user.email).catch(() => false)
-  ]);
+  const remote = await loadRemoteWatchProgress(user.email);
   if (!remote) return;
   mergeRemoteWatchProgress(remote);
-  if (!suppressRender) {
-    renderCatalog();
-    renderDetail({ skipHydratePlayback: true });
-  }
+  renderCatalog();
+  renderDetail({ skipHydratePlayback: true });
 }
 
 function mergeRemoteWatchProgress(remote) {
@@ -986,28 +927,17 @@ async function createAgentByAdmin({ name, email, password }) {
 async function loadUserRecord(email) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!normalizedEmail) return null;
-  if (userRecordPromises.has(normalizedEmail)) return userRecordPromises.get(normalizedEmail);
-  const promise = (async () => {
-    if (!usersIndexPromise) {
-      usersIndexPromise = fetchJsonWithTimeout(`${AUTH_USERS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`).catch(() => null);
-    }
-    const index = await usersIndexPromise;
-    if (!index) return null;
-    const entry = Array.isArray(index?.users)
-      ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
-      : null;
-    const file = String(entry?.file || `${normalizedEmail}.json`);
-    const record = await fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`);
-    if (!record?.email) return null;
-    return {
-      ...record,
-      role: String(record?.role || 'viewer').trim().toLowerCase() || 'viewer'
-    };
-  })().finally(() => {
-    userRecordPromises.delete(normalizedEmail);
-  });
-  userRecordPromises.set(normalizedEmail, promise);
-  return promise;
+  const index = await fetchJsonWithTimeout(`${AUTH_USERS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`);
+  const entry = Array.isArray(index?.users)
+    ? index.users.find((item) => String(item.email || '').toLowerCase() === normalizedEmail)
+    : null;
+  const file = String(entry?.file || `${normalizedEmail}.json`);
+  const record = await fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`);
+  if (!record?.email) return null;
+  return {
+    ...record,
+    role: String(record?.role || 'viewer').trim().toLowerCase() || 'viewer'
+  };
 }
 
 async function fetchJsonWithTimeout(url, timeoutMs = 2500) {
@@ -1109,7 +1039,7 @@ elements.tabs.forEach((tab) => {
 window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
 handleRouteChange();
-ensureBootstrapCatalogLoaded().then(() => renderCatalog()).catch(() => {});
+hydrateSeedCatalog().then(() => renderCatalog()).catch(() => {});
 
 if (isAuthenticated()) hideAuthGate();
 else showAuthGate();
@@ -1525,141 +1455,40 @@ function updateAuthUi() {
   updateFloatingReportButtonVisibility();
 }
 
-function migrateLegacyCatalogStorage() {
-  const migratedKey = 'mep_catalog_storage_migrated_v2';
-  if (localStorage.getItem(migratedKey) === '1') return;
-  try {
-    localStorage.removeItem(LEGACY_CATALOG_STORAGE_KEY);
-  } catch {}
-  localStorage.setItem(migratedKey, '1');
-}
-
-migrateLegacyCatalogStorage();
 updateAuthUi();
 bindReleaseNotes();
 startWatchProgressQueueHeartbeat();
 hydrateWatchProgressForCurrentUser().catch(() => {});
 
-async function loadCatalogManifest() {
-  if (state.catalogManifest) return state.catalogManifest;
-  const manifest = await fetchJsonWithTimeout(`${CATALOG_MANIFEST_PATH}?v=${window.__mep_build || ''}`, 2500).catch(() => null);
-  if (!manifest) return null;
-  state.catalogManifest = manifest;
-  try {
-    if (Array.isArray(manifest.seedKeys) && manifest.seedKeys.length) {
-      localStorage.setItem(SEED_CATALOG_KEYS_STORAGE, JSON.stringify(manifest.seedKeys));
-    }
-  } catch {}
-  return manifest;
-}
+async function hydrateSeedCatalog() {
+  const seedUrl = `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
+  const response = await fetch(seedUrl, { cache: 'no-store' }).catch(() => null);
+  if (!response?.ok) return;
+  const seed = await response.json().catch(() => null);
+  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) return;
 
-function persistSeedKeys(items) {
+  const seedVersion = Number(seed.version || 0);
+  const appliedVersion = Number(localStorage.getItem('mep_seed_version') || '0');
+  if (seedVersion && appliedVersion === seedVersion) return;
+
+  const items = [];
+  for (const entry of seed.movies ?? []) {
+    items.push(normalizeSeedEntry(entry, 'movie'));
+  }
+  for (const entry of seed.series ?? []) {
+    items.push(normalizeSeedEntry(entry, 'series'));
+  }
   try {
     const keys = dedupe(items, { consolidateEquivalent: true })
       .map((entry) => getSeedSyncKey(entry))
       .filter(Boolean);
     localStorage.setItem(SEED_CATALOG_KEYS_STORAGE, JSON.stringify(keys));
   } catch {}
-}
 
-async function loadCatalogChunk(pathname, cacheKey = pathname, options = {}) {
-  const { append = true, markLoaded = true } = options;
-  if (markLoaded && loadedCatalogChunks.has(cacheKey)) return true;
-  if (catalogChunkPromises.has(cacheKey)) return catalogChunkPromises.get(cacheKey);
-  const promise = (async () => {
-    const payload = await fetchJsonWithTimeout(`./assets/catalog/${pathname}?v=${window.__mep_build || ''}`, 6000).catch(() => null);
-    const entries = Array.isArray(payload?.items) ? payload.items.map((entry) => normalizeSeedEntry(entry, entry?.type || 'movie')) : [];
-    if (entries.length) {
-      append ? upsertSeedCatalogItems(entries) : setSeedCatalogItems(entries, { append: false });
-      persistSeedKeys(state.seedCatalogCache);
-      const version = Number(payload?.version || state.catalogManifest?.version || 0);
-      if (version) localStorage.setItem('mep_seed_version', String(version));
-    }
-    if (markLoaded) loadedCatalogChunks.add(cacheKey);
-    return true;
-  })().finally(() => {
-    catalogChunkPromises.delete(cacheKey);
-  });
-  catalogChunkPromises.set(cacheKey, promise);
-  return promise;
-}
-
-async function ensureBootstrapCatalogLoaded() {
-  if (state.catalogBootstrapReady) return true;
-  if (state.catalogBootstrapLoading) {
-    return catalogChunkPromises.get('bootstrap') || true;
-  }
-  state.catalogBootstrapLoading = true;
-  try {
-    await loadCatalogManifest().catch(() => null);
-    await loadCatalogChunk(CATALOG_BOOTSTRAP_PATH.replace('./assets/catalog/', ''), 'bootstrap', { append: false, markLoaded: true });
-    state.catalogBootstrapReady = true;
-    state.activeCatalogScope = 'bootstrap';
-    return true;
-  } finally {
-    state.catalogBootstrapLoading = false;
-  }
-}
-
-async function ensureUserCatalogSeedLoaded(email) {
-  const normalizedEmail = String(email || '').trim().toLowerCase();
-  if (!normalizedEmail) return false;
-  const manifest = await loadCatalogManifest();
-  const record = Array.isArray(manifest?.users) ? manifest.users.find((entry) => String(entry?.email || '').trim().toLowerCase() === normalizedEmail) : null;
-  if (!record?.path) return false;
-  await loadCatalogChunk(record.path, `user:${normalizedEmail}`, { append: true, markLoaded: true });
-  return true;
-}
-
-async function ensureCatalogScope(scope = 'bootstrap') {
-  await ensureBootstrapCatalogLoaded();
-  if (scope === 'bootstrap') return true;
-  const manifest = await loadCatalogManifest();
-  if (!manifest) return false;
-
-  if (scope === 'all') {
-    await Promise.all([
-      ensureCatalogScope('movie'),
-      ensureCatalogScope('series')
-    ]);
-    state.catalogFullReady = true;
-    state.activeCatalogScope = 'all';
-    return true;
-  }
-
-  if (scope === 'movie' || scope === 'series') {
-    const chunk = manifest?.chunks?.[scope];
-    if (!chunk?.path) return false;
-    await loadCatalogChunk(chunk.path, scope, { append: true, markLoaded: true });
-    state.activeCatalogScope = scope;
-    return true;
-  }
-
-  if (scope.startsWith('platform:')) {
-    const key = scope.slice('platform:'.length);
-    const chunk = manifest?.platforms?.[key];
-    if (!chunk?.path) return false;
-    await loadCatalogChunk(chunk.path, scope, { append: true, markLoaded: true });
-    state.activeCatalogScope = scope;
-    return true;
-  }
-
-  return false;
-}
-
-function getRequiredCatalogScope() {
-  const query = getSearchInputValue();
-  const search = getActiveSearchQuery();
-  const typeValue = elements.typeFilter?.value || 'all';
-  if (state.homeSectionView?.startsWith('platform_')) return `platform:${state.homeSectionView.replace(/^platform_/, '')}`;
-  if (getSearchTermLength(search) >= 3 || query.length > 0 || state.homeSectionView) {
-    if (typeValue === 'movie') return 'movie';
-    if (typeValue === 'series') return 'series';
-    return 'all';
-  }
-  if (typeValue === 'movie') return 'movie';
-  if (typeValue === 'series') return 'series';
-  return 'bootstrap';
+  const current = loadLocalCatalog();
+  const merged = dedupe([...current, ...items]);
+  saveLocalCatalog(merged);
+  if (seedVersion) localStorage.setItem('mep_seed_version', String(seedVersion));
 }
 
 function normalizeSeedEntry(entry, defaultType) {
@@ -2529,21 +2358,8 @@ function renderCatalog() {
   const titleEl = document.querySelector('.catalog-header h2');
   if (titleEl) titleEl.textContent = getBrowseHeading();
   if (elements.sortFilter) elements.sortFilter.hidden = false;
-  if (!state.catalogBootstrapReady) {
-    setCatalogCount('Preparando catálogo');
-    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Cargando catálogo</strong><p>Estamos preparando la vista inicial.</p></div>`;
-    void ensureBootstrapCatalogLoaded().then(() => renderCatalog());
-    return;
-  }
   const query = getSearchInputValue();
   const search = getActiveSearchQuery();
-  const requiredScope = getRequiredCatalogScope();
-  if (requiredScope !== 'bootstrap' && !loadedCatalogChunks.has(requiredScope) && !(requiredScope === 'all' && loadedCatalogChunks.has('movie') && loadedCatalogChunks.has('series'))) {
-    setCatalogCount('Cargando más títulos');
-    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Cargando más contenido</strong><p>Estamos trayendo el catálogo necesario para esta vista.</p></div>`;
-    void ensureCatalogScope(requiredScope).then(() => renderCatalog());
-    return;
-  }
   populateGenreFilter();
   const baseFiltered = getFilteredLocalTitles();
   const filtered = sortTitles(baseFiltered);
@@ -5035,11 +4851,14 @@ async function buildEpisodesFromTmdb(title) {
 }
 
 function loadLocalCatalog() {
-  if (Array.isArray(state.combinedCatalogCache)) return state.combinedCatalogCache;
-  const seedItems = Array.isArray(state.seedCatalogCache) ? state.seedCatalogCache : [];
-  const localItems = readStoredCatalogOverrides();
-  state.combinedCatalogCache = dedupe([...seedItems, ...localItems], { consolidateEquivalent: true });
-  return state.combinedCatalogCache;
+  if (Array.isArray(state.localCatalogCache)) return state.localCatalogCache;
+  try {
+    state.localCatalogCache = (JSON.parse(localStorage.getItem('mep_static_catalog') || '[]') || []).map((item) => normalizeCatalogPoster(item));
+    return state.localCatalogCache;
+  } catch {
+    state.localCatalogCache = [];
+    return state.localCatalogCache;
+  }
 }
 function normalizeCatalogPoster(title) {
   const posterUrl = sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '');
@@ -5054,20 +4873,24 @@ function normalizeCatalogPoster(title) {
 }
 function saveLocalCatalog(items) {
   const normalized = (Array.isArray(items) ? items : []).map((item) => normalizeCatalogPoster(item));
-  const seedKeys = new Set((Array.isArray(state.seedCatalogCache) ? state.seedCatalogCache : []).map((item) => getSeedSyncKey(item)).filter(Boolean));
-  const localOnly = normalized.filter((item) => {
-    const key = getSeedSyncKey(item);
-    return !key || !seedKeys.has(key);
-  });
-  writeStoredCatalogOverrides(localOnly);
+  state.localCatalogCache = normalized;
+  state.genreFilterCacheKey = '';
+  state.genreFilterOptionsHtml = '';
+  state.filteredCatalogCacheKey = '';
+  state.filteredCatalogCache = null;
+  localStorage.setItem('mep_static_catalog', JSON.stringify(normalized));
 }
 function hasPosterAsset(title) { return Boolean(sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')); }
 function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }
 
 function cacheSearchResults(results) {
-  const currentLocal = readStoredCatalogOverrides();
-  const merged = dedupe([...currentLocal, ...filterTitlesWithPoster(results)], { consolidateEquivalent: true });
-  writeStoredCatalogOverrides(merged);
+  const current = loadLocalCatalog();
+  const merged = dedupe([...current, ...filterTitlesWithPoster(results)], { consolidateEquivalent: true });
+  state.localCatalogCache = merged;
+  state.genreFilterCacheKey = '';
+  state.genreFilterOptionsHtml = '';
+  state.filteredCatalogCacheKey = '';
+  state.filteredCatalogCache = null;
 }
 
 function dedupe(items, options = {}) {

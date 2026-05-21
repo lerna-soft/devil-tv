@@ -1,6 +1,6 @@
 {
-  "version": 237,
-  "generatedAt": "2026-05-21T20:33:20.378Z",
+  "version": 238,
+  "generatedAt": "2026-05-21T20:33:32.668Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27313,6 +27313,22 @@
       "releaseDate": null,
       "overview": "Biopic del mítico empresario y programador informático Steve Jobs (1955-2011), centrado en la época en la que lanzó los tres productos icónicos de Apple.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/tifv0KBpDWCcrIwlScgZeUKwq2m.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1233575",
+      "imdbId": null,
+      "title": "Confidencial (Black Bag)",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Cuando su amada esposa Kathryn es sospechosa de traicionar a la nación, el legendario agente de inteligencia George Woodhouse se enfrenta a la prueba definitiva: la lealtad a su matrimonio o a su país.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1MTMK7xcZECsUir3EptGGI1fE2n.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

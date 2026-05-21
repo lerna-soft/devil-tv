@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-21T13:50:41.550Z",
+  "generatedAt": "2026-05-21T15:24:44.516Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 416,
-  "totalStarts": 246,
+  "totalEvents": 417,
+  "totalStarts": 247,
   "totalCompletions": 48,
-  "overallCompletionRate": 0.1951,
+  "overallCompletionRate": 0.1943,
   "trackedTitles": 134,
   "mostWatchedContent": [
     {
@@ -84,9 +84,9 @@
       "contentId": "tt21209804",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 9,
+      "totalEvents": 10,
       "uniqueUsers": 1,
-      "completionRate": 0.5
+      "completionRate": 0.3333
     }
   ]
 }

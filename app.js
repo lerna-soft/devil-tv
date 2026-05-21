@@ -1107,16 +1107,12 @@ elements.tabs.forEach((tab) => {
 });
 
 window.addEventListener('hashchange', handleRouteChange);
-queueMicrotask(() => {
-  bindReleaseNotes();
-  startWatchProgressQueueHeartbeat();
-  if (isAuthenticated()) {
-    void hydrateWatchProgressForCurrentUser().catch(() => {});
-  }
-  bindPlayerModalEvents();
-  handleRouteChange();
-  void ensureBootstrapCatalogLoaded().then(() => renderCatalog()).catch(() => renderCatalog());
-});
+bindPlayerModalEvents();
+handleRouteChange();
+ensureBootstrapCatalogLoaded().then(() => renderCatalog()).catch(() => {});
+
+if (isAuthenticated()) hideAuthGate();
+else showAuthGate();
 
 function getTmdbReadToken() {
   return decodeIssueToken(TMDB_READ_TOKEN_CIPHER, TMDB_READ_TOKEN_SEED);
@@ -1539,11 +1535,10 @@ function migrateLegacyCatalogStorage() {
 }
 
 migrateLegacyCatalogStorage();
-try {
-  if (isAuthenticated()) hideAuthGate();
-  else showAuthGate();
-  updateAuthUi();
-} catch {}
+updateAuthUi();
+bindReleaseNotes();
+startWatchProgressQueueHeartbeat();
+hydrateWatchProgressForCurrentUser().catch(() => {});
 
 async function loadCatalogManifest() {
   if (state.catalogManifest) return state.catalogManifest;

@@ -1,6 +1,6 @@
 {
-  "version": 239,
-  "generatedAt": "2026-05-21T20:35:11.073Z",
+  "version": 240,
+  "generatedAt": "2026-05-21T20:41:13.559Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27345,6 +27345,22 @@
       "releaseDate": null,
       "overview": "Después de un fatídico error, un asesino se enfrenta a sus jefes —y a sí mismo— en una persecución internacional de castigo, según él, no es nada personal.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wXbAPrZTqJzlqmmRaUh95DJ5Lv1.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0069341",
+      "title": "Tales from the Crypt",
+      "year": 1972,
+      "releaseDate": null,
+      "overview": "Joan Collins, Peter Cushing",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjVmMmVkODQtMzYzMS00MjA1LTgyNGEtNWY4YTVkMzYyOGUyXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

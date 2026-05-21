@@ -1,6 +1,6 @@
 {
-  "version": 224,
-  "generatedAt": "2026-05-21T03:41:58.778Z",
+  "version": 225,
+  "generatedAt": "2026-05-21T04:24:38.583Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50609,6 +50609,22 @@
       "releaseDate": null,
       "overview": "La historia sigue a Ben Reilly, un experimentado investigador privado en mala racha en el Nueva York de los años 30, que se ve obligado a enfrentarse a su pasado tras una tragedia profundamente personal, mientras la ciudad cuenta con un único superhéroe.",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjU3NjEwNTItMzc1Mi00Y2QyLTljNDItOTQ4YjU4NjZjN2EyXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "2875",
+      "imdbId": null,
+      "title": "MacGyver",
+      "year": 1985,
+      "releaseDate": null,
+      "overview": "La serie gira en torno a las misiones que realiza el personaje principal Angus MacGyver para distintas instituciones, sobre todo para la Fundación Phoenix. En la serie, MacGyver resuelve todos los problemas que se le plantean haciendo uso de su gran inteligencia, su conocimiento académico en ciencias e ingeniería y su habilidad para la construcción de herramientas con elementos cotidianos de su entorno.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zhgJNHbFxGkqdsKdkZLBrDWagOv.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

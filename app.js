@@ -580,7 +580,6 @@ function bindAuth() {
 }
 
 bindAuth();
-usersIndexPromise = fetchJsonWithTimeout(`${AUTH_USERS_INDEX_PATH}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
 
 function syncAuthModeUi() {
   const isRegister = authMode === 'register';
@@ -1109,8 +1108,8 @@ elements.tabs.forEach((tab) => {
 window.addEventListener('hashchange', handleRouteChange);
 queueMicrotask(() => {
   bindReleaseNotes();
-  startWatchProgressQueueHeartbeat();
   if (isAuthenticated()) {
+    startWatchProgressQueueHeartbeat();
     void hydrateWatchProgressForCurrentUser().catch(() => {});
   }
   bindPlayerModalEvents();

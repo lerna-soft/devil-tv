@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T20:15:48.079Z",
+  "generatedAt": "2026-05-21T20:35:17.590Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T20:03:23Z",
-      "totalEvents": 381,
+      "updatedAt": "2026-05-21T20:35:07Z",
+      "totalEvents": 382,
       "totalStarts": 224,
       "totalCompletions": 50,
       "totalPlaybackProgress": 203665.51493251926,
-      "uniqueContentCount": 121,
-      "lastActivityAt": "2026-05-21T20:03:23Z",
+      "uniqueContentCount": 122,
+      "lastActivityAt": "2026-05-21T20:35:07Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -64,6 +64,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:55:29Z"
+        },
+        "800158": {
+          "contentId": "800158",
+          "imdbId": "",
+          "tmdbId": "800158",
+          "title": "El asesino",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T20:35:07Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1494,7 +1506,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 534.5552
+      "avgPlaybackProgress": 533.1558
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T20:35:36.626Z",
+  "generatedAt": "2026-05-21T20:35:54.725Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T20:35:27Z",
-      "totalEvents": 383,
+      "updatedAt": "2026-05-21T20:35:33Z",
+      "totalEvents": 384,
       "totalStarts": 224,
       "totalCompletions": 50,
       "totalPlaybackProgress": 203665.51493251926,
       "uniqueContentCount": 122,
-      "lastActivityAt": "2026-05-21T20:35:27Z",
+      "lastActivityAt": "2026-05-21T20:35:33Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -76,6 +76,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt28650488": {
+          "contentId": "tt28650488",
+          "imdbId": "tt28650488",
+          "tmdbId": "1226863",
+          "title": "Super Mario Galaxy la película",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T20:35:33Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -160,18 +172,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:49:52Z"
-        },
-        "tt28650488": {
-          "contentId": "tt28650488",
-          "imdbId": "tt28650488",
-          "tmdbId": "1226863",
-          "title": "Super Mario Galaxy la película",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T04:45:19Z"
         },
         "tt0089374": {
           "contentId": "tt0089374",
@@ -1506,7 +1506,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 531.7637
+      "avgPlaybackProgress": 530.3789
     },
     {
       "userEmail": "liz-munera@hotmail.com",

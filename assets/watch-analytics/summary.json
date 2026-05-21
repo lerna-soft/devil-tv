@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-21T13:07:40.680Z",
+  "generatedAt": "2026-05-21T13:07:51.948Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 402,
-  "totalStarts": 241,
+  "totalEvents": 403,
+  "totalStarts": 242,
   "totalCompletions": 45,
-  "overallCompletionRate": 0.1867,
+  "overallCompletionRate": 0.186,
   "trackedTitles": 133,
   "mostWatchedContent": [
     {
@@ -65,20 +65,20 @@
       "completionRate": 0.1111
     },
     {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.5714
+    },
+    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 12,
       "uniqueUsers": 1,
       "completionRate": 0.0909
-    },
-    {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 11,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667
     },
     {
       "contentId": "tt1234721",

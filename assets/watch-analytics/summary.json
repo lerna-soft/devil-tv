@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-21T19:33:45.286Z",
+  "generatedAt": "2026-05-21T20:03:33.096Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 425,
-  "totalStarts": 252,
+  "totalEvents": 426,
+  "totalStarts": 253,
   "totalCompletions": 51,
-  "overallCompletionRate": 0.2024,
+  "overallCompletionRate": 0.2016,
   "trackedTitles": 134,
   "mostWatchedContent": [
     {
@@ -33,20 +33,20 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 25,
+      "uniqueUsers": 1,
+      "completionRate": 0.6
+    },
+    {
       "contentId": "tt31596104",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
       "totalEvents": 25,
       "uniqueUsers": 1,
       "completionRate": 0.6667
-    },
-    {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 24,
-      "uniqueUsers": 1,
-      "completionRate": 0.6429
     },
     {
       "contentId": "tt1632701",

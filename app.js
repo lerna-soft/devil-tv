@@ -203,6 +203,16 @@ function formatReleaseDate(value) {
   });
 }
 
+function formatDateShort(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toLocaleDateString('es-CO', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+  });
+}
+
 function normalizeReleaseEntry(entry) {
   const version = String(entry?.version || entry?.tag || entry?.sha || '').trim();
   const message = String(entry?.message || entry?.title || '').trim();
@@ -4409,13 +4419,19 @@ function renderDetail(options = {}) {
   const currentEpisodeStatus = currentEpisodeEntry
     ? (isEpisodeInProgress(progress, state.playback.season, currentEpisodeEntry.episode) ? 'En progreso' : isEpisodeWatched(progress, state.playback.season, currentEpisodeEntry.episode) ? 'Visto' : 'Listo para ver')
     : '';
+  const episodeMeta = (entry) => [
+    entry?.airDate ? formatDateShort(entry.airDate) : '',
+    entry?.runtime ? `${positiveInteger(entry.runtime, 0)} min` : ''
+  ].filter(Boolean).join(' · ');
+  const currentEpisodeStill = sanitizePosterUrl(currentEpisodeEntry?.stillUrl || '');
   const episodeSpotlight = currentEpisodeEntry ? `<section class="episode-spotlight">
-    <div class="episode-spotlight-art" aria-hidden="true" style="${poster ? `--poster: url('${escapeAttribute(poster)}')` : ''}">
+    <div class="episode-spotlight-art" aria-hidden="true" style="${currentEpisodeStill || poster ? `--poster: url('${escapeAttribute(currentEpisodeStill || poster)}')` : ''}">
       <span>T${escapeHtml(String(state.playback.season))}:E${escapeHtml(String(currentEpisodeEntry.episode))}</span>
     </div>
     <div class="episode-spotlight-copy">
       <span class="episode-spotlight-kicker">Capítulo seleccionado · ${escapeHtml(currentEpisodeStatus)}</span>
       <h3>${escapeHtml(currentEpisodeEntry.title || `Episodio ${currentEpisodeEntry.episode}`)}</h3>
+      ${episodeMeta(currentEpisodeEntry) ? `<div class="episode-meta-row">${escapeHtml(episodeMeta(currentEpisodeEntry))}</div>` : ''}
       ${currentEpisodeEntry.overview ? `<p>${escapeHtml(currentEpisodeEntry.overview)}</p>` : '<p>Selecciona cualquier capítulo de la lista para reproducirlo directamente.</p>'}
       <button id="playSelectedEpisode" type="button">Reproducir T${escapeHtml(String(state.playback.season))}E${escapeHtml(String(currentEpisodeEntry.episode))}</button>
     </div>
@@ -4424,11 +4440,16 @@ function renderDetail(options = {}) {
     const watched = isEpisodeWatched(progress, state.playback.season, entry.episode);
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
     const statusLabel = inProgress ? 'En progreso' : watched ? 'Visto' : 'Listo para ver';
+    const stillUrl = sanitizePosterUrl(entry.stillUrl || '');
     return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
-      <span class="episode-index">${String(entry.episode).padStart(2, '0')}</span>
+      <div class="episode-thumb" aria-hidden="true" style="${stillUrl || poster ? `--poster: url('${escapeAttribute(stillUrl || poster)}')` : ''}">
+        <span>${String(entry.episode).padStart(2, '0')}</span>
+      </div>
       <div class="episode-copy">
         <span class="episode-code">Capítulo ${entry.episode}</span>
         <span class="episode-title">${escapeHtml(entry.title || `Episodio ${entry.episode}`)}</span>
+        ${episodeMeta(entry) ? `<span class="episode-meta-row">${escapeHtml(episodeMeta(entry))}</span>` : ''}
+        ${entry.overview ? `<span class="episode-overview">${escapeHtml(entry.overview)}</span>` : ''}
         <span class="episode-subtitle">${escapeHtml(statusLabel)}</span>
       </div>
       <span class="episode-play-cue" aria-hidden="true">${inProgress ? 'Continuar' : 'Ver ahora'}</span>
@@ -5164,7 +5185,10 @@ async function buildEpisodesFromTmdb(title) {
           season: seasonNumber,
           episode: Number(episode?.episode_number) || 0,
           title: String(episode?.name || '').trim() || `Episodio ${episode?.episode_number}`,
-          overview: String(episode?.overview || '').trim()
+          overview: String(episode?.overview || '').trim(),
+          airDate: String(episode?.air_date || '').trim(),
+          runtime: Number(episode?.runtime || 0) || 0,
+          stillUrl: episode?.still_path ? `https://image.tmdb.org/t/p/w300${episode.still_path}` : ''
         }))
         .filter((episode) => Number.isInteger(episode.episode) && episode.episode > 0)
         .sort((a, b) => a.episode - b.episode);

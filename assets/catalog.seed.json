@@ -1,6 +1,6 @@
 {
-  "version": 227,
-  "generatedAt": "2026-05-21T04:41:32.776Z",
+  "version": 228,
+  "generatedAt": "2026-05-21T04:50:39.575Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27185,6 +27185,22 @@
       "releaseDate": null,
       "overview": "Jimmy Tong (Jackie Chan), un taxista que ahora tiene el oficio de chófer, aprende pronto que a la hora de trabajar para el playboy millonario Clark Devlin (Jason Isaacs) sólo existe una regla: jamás se debe tocar el esmoquin, el traje de etiqueta que tanto aprecia Devlin. Pero cuando éste queda temporalmente fuera de combate tras sufrir un explosivo \"accidente\", Jimmy se pone el esmoquin y descubre que es un traje extraordinario: más que vestirse de color negro, ponérselo equivale a convertirse en cinturón negro. Jimmy se ve bruscamente sumergido en el peligroso mundo del espionaje en unión de una novata compañera (Jennifer Love Hewitt), tan inexperta como él: nuestro héroe se convierte en un involuntario, si bien muy elegante, agente secreto.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/llxvvAnudmk8sGJDyYxF9sp1zAL.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "897451",
+      "imdbId": null,
+      "title": "Lú Belmonte",
+      "year": 2021,
+      "releaseDate": null,
+      "overview": "Lú es actriz, ha perdido su inteligencia emocional y quiere volver a brillar, a su manera, pero el cine y la vida no dan tregua en un Madrid en blanco y negro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nYMDqgiUkaEF5XGHg9gt3phWpcY.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 228,
-  "generatedAt": "2026-05-21T04:50:39.575Z",
+  "version": 229,
+  "generatedAt": "2026-05-21T04:50:50.785Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27201,6 +27201,22 @@
       "releaseDate": null,
       "overview": "Lú es actriz, ha perdido su inteligencia emocional y quiere volver a brillar, a su manera, pero el cine y la vida no dan tregua en un Madrid en blanco y negro.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/nYMDqgiUkaEF5XGHg9gt3phWpcY.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1058128",
+      "imdbId": null,
+      "title": "Los amantes astronautas",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Pedro llega a la costa para pasar sus vacaciones en la casa de sus tíos, donde se reencuentra con Maxi, un amigo de la infancia. Maxi se sorprende al descubrir que Pedro es gay. Cuando Maxi se encuentra con su ex novia, le pide a Pedro que finja ser su novio para reconquistarla. Pedro acepta divertido, sin advertir los peligros de jugar con el amor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yQ5iYpYjVNZXgslPTgIbrb62c5.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

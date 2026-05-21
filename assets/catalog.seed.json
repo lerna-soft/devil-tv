@@ -1,6 +1,6 @@
 {
-  "version": 223,
-  "generatedAt": "2026-05-21T03:41:48.681Z",
+  "version": 224,
+  "generatedAt": "2026-05-21T03:41:58.778Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27169,6 +27169,22 @@
       "releaseDate": null,
       "overview": "Eddie Yang (Jackie Chan), un simpático detective de Hong-Kong, sufre un accidente casi mortal mientras investiga un caso que involucra a un misterioso medallón con poderes de talismán. Eddie descubre que con el talismán adquiere los poderes de un guerrero inmortal, que le confieren una velocidad, una fuerza y una habilidad increíbles. Con la ayuda de la guapa agente inglesa de la Interpole Nicole James (Claire Forlani), Eddie intentará descubrir el secreto del talismán y detener una operación secreta de trata de esclavos organizada por el diabólico Snakehead, que pretende utilizar los poderes para sus terribles planes.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/4vsTMm9HttoWkqhCoFVV9rPb5cS.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "10771",
+      "imdbId": null,
+      "title": "El esmoquin",
+      "year": 2002,
+      "releaseDate": null,
+      "overview": "Jimmy Tong (Jackie Chan), un taxista que ahora tiene el oficio de chófer, aprende pronto que a la hora de trabajar para el playboy millonario Clark Devlin (Jason Isaacs) sólo existe una regla: jamás se debe tocar el esmoquin, el traje de etiqueta que tanto aprecia Devlin. Pero cuando éste queda temporalmente fuera de combate tras sufrir un explosivo \"accidente\", Jimmy se pone el esmoquin y descubre que es un traje extraordinario: más que vestirse de color negro, ponérselo equivale a convertirse en cinturón negro. Jimmy se ve bruscamente sumergido en el peligroso mundo del espionaje en unión de una novata compañera (Jennifer Love Hewitt), tan inexperta como él: nuestro héroe se convierte en un involuntario, si bien muy elegante, agente secreto.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/llxvvAnudmk8sGJDyYxF9sp1zAL.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T21:08:38.849Z",
+  "generatedAt": "2026-05-21T21:20:38.692Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -461,27 +461,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 26,
-      "totalStarts": 16,
+      "totalEvents": 27,
+      "totalStarts": 17,
       "totalCompletions": 9,
       "totalPlaybackProgress": 29278.226892399434,
       "uniqueUsers": 1,
-      "completionRate": 0.5625,
-      "lastActivityAt": "2026-05-21T21:08:24Z",
+      "completionRate": 0.5294,
+      "lastActivityAt": "2026-05-21T21:20:29Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 26,
+          "playCount": 27,
           "completedCount": 9,
-          "startedCount": 16,
+          "startedCount": 17,
           "totalPlaybackProgress": 29278.226892399434,
-          "lastSeenAt": "2026-05-21T21:08:24Z",
+          "lastSeenAt": "2026-05-21T21:20:29Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 3,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2885.77594,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-21T21:20:29Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.5
+        },
         "s1e4": {
           "season": 1,
           "episode": 4,
@@ -594,20 +608,6 @@
           },
           "completionRate": 1
         },
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2885.77594,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T12:59:45Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -623,7 +623,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1126.0856
+      "avgPlaybackProgress": 1084.3788
     },
     {
       "contentId": "tt31596104",

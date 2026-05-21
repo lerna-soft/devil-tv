@@ -3471,6 +3471,7 @@ function bindEpisodeCarouselEvents() {
       }
       dragState = null;
       carousel.classList.remove('is-dragging');
+      if (wasDragged) carousel.dataset.lastDragAt = String(Date.now());
       apply();
     };
 
@@ -3507,7 +3508,7 @@ function bindEpisodeCarouselEvents() {
     viewport.addEventListener('pointerdown', (event) => {
       if (event.pointerType === 'mouse' && event.button !== 0) return;
       const interactiveTarget = event.target instanceof Element
-        ? event.target.closest('button, a, input, textarea, select, [data-episode-play], [data-episode-report]')
+        ? event.target.closest('button, a, input, textarea, select')
         : null;
       if (interactiveTarget) return;
       const { step } = metrics();
@@ -3767,6 +3768,7 @@ function bindQuickActionButtons(root = document) {
         card.remove();
       }
     });
+    btn.addEventListener('click', stopCardNavigation, { passive: false });
   });
 }
 
@@ -4375,18 +4377,11 @@ function renderDetail(options = {}) {
     const statusLabel = inProgress ? 'En progreso' : watched ? 'Visto' : 'Listo para ver';
     return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
       <div class="episode-copy">
-        <span class="episode-code">E${entry.episode}</span>
+        <span class="episode-code">Capítulo ${entry.episode}</span>
         <span class="episode-title">${escapeHtml(entry.title || `Episodio ${entry.episode}`)}</span>
         <span class="episode-subtitle">${escapeHtml(statusLabel)}</span>
       </div>
-      <div class="episode-actions">
-        <button class="episode-report-btn" type="button" data-episode-report="${entry.episode}">
-          Reportar
-        </button>
-        <button class="episode-play-btn" type="button" data-episode-play="${entry.episode}">
-          ${inProgress ? 'Continuar' : 'Ver'}
-        </button>
-      </div>
+      <span class="episode-play-cue" aria-hidden="true">${inProgress ? 'Continuar' : 'Ver ahora'}</span>
     </article>`;
   }).join('') : '';
 
@@ -4520,7 +4515,7 @@ function renderDetail(options = {}) {
   document.querySelectorAll('[data-episode]').forEach((button) => {
     const onSelect = () => {
       state.playback.episode = positiveInteger(button.dataset.episode, 1);
-      renderDetail();
+      openPlayerForCurrentSelection();
       syncRoute();
     };
     button.addEventListener('click', () => onSelect());
@@ -4530,31 +4525,6 @@ function renderDetail(options = {}) {
       onSelect();
     });
   });
-
-  document.querySelectorAll('[data-episode-play]').forEach((playBtn) => bindTap(playBtn, (event) => {
-    // Prevent the click from also selecting the parent episode card.
-    event?.stopPropagation?.();
-    const episode = positiveInteger(playBtn.dataset.episodePlay, 1);
-    state.playback.episode = episode;
-    openPlayerForCurrentSelection();
-  }));
-  document.querySelectorAll('[data-episode-report]').forEach((reportBtn) => bindTap(reportBtn, (event) => {
-    event?.stopPropagation?.();
-    const episode = positiveInteger(reportBtn.dataset.episodeReport, 1);
-    const episodeEntry = getEpisodesForSeason(state.playback.season).find((item) => item.episode === episode);
-    void openUserProblemReportForm({
-      scope: 'episode',
-      label: `${title.title || 'Serie'} T${state.playback.season}E${episode}`,
-      title: title.title || '',
-      type: title.type || '',
-      imdbId: title.imdbId || '',
-      tmdbId: title.tmdbId || '',
-      season: state.playback.season,
-      episode,
-      episodeTitle: episodeEntry?.title || ''
-    });
-  }));
-  bindEpisodeCarouselEvents();
 }
 
 function openPlayerModal(embedUrl) {

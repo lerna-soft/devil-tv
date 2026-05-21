@@ -1,6 +1,6 @@
 {
-  "version": 232,
-  "generatedAt": "2026-05-21T12:18:24.779Z",
+  "version": 233,
+  "generatedAt": "2026-05-21T12:18:39.399Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50721,6 +50721,22 @@
       "releaseDate": null,
       "overview": "Tras la muerte de su marido, Jessica Fletcher (Angela Lansbury), una profesora de inglés, empieza a escribir novelas de misterio y, además, a resolver numerosos casos de asesinato, gran parte de ellos ocurridos en Cabot Cove, lugar de residencia de la protagonista. Serie inspirada en el personaje de Miss Marple de Agatha Christie.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/jto8lXA6E6EpVqn91KYAyNS5wUZ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt6196192",
+      "title": "Prueba de Fe",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "Maria Antonieta Hidalgo, Jessica la Forgia",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYmE0YWQzNzEtNDI5My00OTY5LWJjZTgtYzVlODAxNDI0YjI0XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

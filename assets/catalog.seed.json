@@ -1,6 +1,6 @@
 {
-  "version": 238,
-  "generatedAt": "2026-05-21T20:33:32.668Z",
+  "version": 239,
+  "generatedAt": "2026-05-21T20:35:11.073Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27329,6 +27329,22 @@
       "releaseDate": null,
       "overview": "Cuando su amada esposa Kathryn es sospechosa de traicionar a la nación, el legendario agente de inteligencia George Woodhouse se enfrenta a la prueba definitiva: la lealtad a su matrimonio o a su país.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1MTMK7xcZECsUir3EptGGI1fE2n.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "800158",
+      "imdbId": null,
+      "title": "El asesino",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Después de un fatídico error, un asesino se enfrenta a sus jefes —y a sí mismo— en una persecución internacional de castigo, según él, no es nada personal.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wXbAPrZTqJzlqmmRaUh95DJ5Lv1.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

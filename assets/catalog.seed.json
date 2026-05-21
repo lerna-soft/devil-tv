@@ -1,6 +1,6 @@
 {
-  "version": 225,
-  "generatedAt": "2026-05-21T04:24:38.583Z",
+  "version": 226,
+  "generatedAt": "2026-05-21T04:24:50.646Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50625,6 +50625,22 @@
       "releaseDate": null,
       "overview": "La serie gira en torno a las misiones que realiza el personaje principal Angus MacGyver para distintas instituciones, sobre todo para la Fundación Phoenix. En la serie, MacGyver resuelve todos los problemas que se le plantean haciendo uso de su gran inteligencia, su conocimiento académico en ciencias e ingeniería y su habilidad para la construcción de herramientas con elementos cotidianos de su entorno.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/zhgJNHbFxGkqdsKdkZLBrDWagOv.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "484",
+      "imdbId": null,
+      "title": "Se ha escrito un crimen",
+      "year": 1984,
+      "releaseDate": null,
+      "overview": "Tras la muerte de su marido, Jessica Fletcher (Angela Lansbury), una profesora de inglés, empieza a escribir novelas de misterio y, además, a resolver numerosos casos de asesinato, gran parte de ellos ocurridos en Cabot Cove, lugar de residencia de la protagonista. Serie inspirada en el personaje de Miss Marple de Agatha Christie.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jto8lXA6E6EpVqn91KYAyNS5wUZ.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

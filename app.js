@@ -1069,6 +1069,7 @@ elements.tabs.forEach((tab) => {
 
 window.addEventListener('hashchange', handleRouteChange);
 bindPlayerModalEvents();
+primeCatalogHydrationStatus();
 handleRouteChange();
 scheduleSeedStartupWork();
 
@@ -1085,6 +1086,18 @@ function scheduleSeedStartupWork() {
       }, 3500, 2200);
     }).catch(() => {});
   });
+}
+
+function primeCatalogHydrationStatus() {
+  if (!isAuthenticated() || isAdminUser()) return;
+  const currentCount = loadLocalCatalog().length;
+  if (currentCount >= 2000) return;
+  state.catalogHydration = {
+    active: true,
+    loaded: currentCount,
+    total: 0,
+    phase: currentCount > 0 ? 'chunks-pending' : 'bootstrap'
+  };
 }
 
 function getTmdbReadToken() {
@@ -1548,17 +1561,33 @@ function scheduleCatalogHydrationRender(delayMs = 700) {
 
 function getCatalogHydrationMessage() {
   if (!state.catalogHydration?.active) return '';
+  if (state.catalogHydration.phase === 'bootstrap') return 'Preparando catálogo inicial';
+  if (state.catalogHydration.phase === 'chunks-pending') return 'Preparando carga progresiva';
+  return 'Cargando catálogo';
+}
+
+function getCatalogHydrationPercent() {
+  if (!state.catalogHydration?.active) return 0;
   const loaded = Number(state.catalogHydration.loaded || 0);
   const total = Number(state.catalogHydration.total || 0);
-  if (total > 0 && loaded > 0) return `Cargando catálogo: ${Math.min(loaded, total)} de ${total} títulos`;
-  if (state.catalogHydration.phase === 'bootstrap') return 'Preparando catálogo inicial';
-  return 'Cargando catálogo';
+  if (total > 0 && loaded > 0) return Math.max(8, Math.min(96, Math.round((loaded / total) * 100)));
+  if (state.catalogHydration.phase === 'bootstrap') return 8;
+  if (state.catalogHydration.phase === 'chunks-pending') return 18;
+  return 12;
 }
 
 function renderCatalogHydrationStatus() {
   const message = getCatalogHydrationMessage();
   if (!message) return '';
-  return `<div class="catalog-loading-status" role="status" aria-live="polite"><span class="spinner spinner-small" aria-hidden="true"></span><strong>${escapeHtml(message)}</strong><span>Las secciones se completan automáticamente.</span></div>`;
+  const percent = getCatalogHydrationPercent();
+  return `<section class="catalog-loading-status" role="status" aria-live="polite" aria-label="${escapeAttribute(`${message}. ${percent}%`)}">
+    <div class="catalog-loading-orb" aria-hidden="true"><span>${escapeHtml(String(percent))}%</span></div>
+    <div class="catalog-loading-copy">
+      <strong>${escapeHtml(message)}</strong>
+      <p>Estamos armando las secciones en segundo plano. Puedes empezar a explorar mientras el catálogo se completa.</p>
+      <div class="catalog-loading-progress" aria-hidden="true"><span style="width: ${escapeAttribute(`${percent}%`)}"></span></div>
+    </div>
+  </section>`;
 }
 
 function scheduleAuthenticatedStartupWork() {
@@ -1709,7 +1738,8 @@ async function hydrateSeedCatalog(options = {}) {
   if (seedVersion) localStorage.setItem(versionKey, String(seedVersion));
   if (bootstrap) {
     state.catalogHydration.loaded = merged.length;
-    state.catalogHydration.total = merged.length;
+    state.catalogHydration.total = 0;
+    state.catalogHydration.phase = 'chunks-pending';
     scheduleCatalogHydrationRender(0);
   } else {
     state.catalogHydration.active = false;
@@ -3165,7 +3195,7 @@ function renderHomeCatalog(baseFiltered) {
   }
   const statusHtml = renderCatalogHydrationStatus();
   if (!sections.length && statusHtml) {
-    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Armando tu catálogo</strong><p>${escapeHtml(getCatalogHydrationMessage())}</p></div>`;
+    elements.items.innerHTML = statusHtml;
   } else {
     elements.items.innerHTML = [statusHtml, ...sections.filter(Boolean)].filter(Boolean).join('');
   }

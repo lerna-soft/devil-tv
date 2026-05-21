@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-21T20:41:35.676Z",
+  "generatedAt": "2026-05-21T20:44:00.458Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 432,
+  "totalEvents": 433,
   "totalStarts": 254,
   "totalCompletions": 51,
   "overallCompletionRate": 0.2008,
@@ -73,20 +73,20 @@
       "completionRate": 0.1111
     },
     {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.3333
+    },
+    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 12,
       "uniqueUsers": 1,
       "completionRate": 0.0909
-    },
-    {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 11,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333
     }
   ]
 }

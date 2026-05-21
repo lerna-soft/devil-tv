@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T21:51:10.937Z",
+  "generatedAt": "2026-05-21T22:02:07.644Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T21:33:53Z",
-      "totalEvents": 392,
-      "totalStarts": 227,
+      "updatedAt": "2026-05-21T22:01:58Z",
+      "totalEvents": 393,
+      "totalStarts": 228,
       "totalCompletions": 50,
       "totalPlaybackProgress": 203665.51493251926,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-21T21:33:53Z",
+      "lastActivityAt": "2026-05-21T22:01:58Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -77,6 +77,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt0903747": {
+          "contentId": "tt0903747",
+          "imdbId": "tt0903747",
+          "tmdbId": "1396",
+          "title": "Breaking Bad",
+          "type": "series",
+          "playCount": 28,
+          "completed": true,
+          "maxProgressValue": 3479.858479,
+          "maxProgressPercent": 47.018032,
+          "lastSeenAt": "2026-05-21T22:01:58Z"
+        },
         "tt28650488": {
           "contentId": "tt28650488",
           "imdbId": "tt28650488",
@@ -88,18 +100,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T21:33:53Z"
-        },
-        "tt0903747": {
-          "contentId": "tt0903747",
-          "imdbId": "tt0903747",
-          "tmdbId": "1396",
-          "title": "Breaking Bad",
-          "type": "series",
-          "playCount": 27,
-          "completed": true,
-          "maxProgressValue": 3479.858479,
-          "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-21T21:20:29Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1518,7 +1518,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 519.5549
+      "avgPlaybackProgress": 518.2329
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-21T04:41:25.318Z",
+  "generatedAt": "2026-05-21T04:41:36.403Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0089374:s1e1:preference:2026-05-21T04:41:21Z",
+      "contentId": "tt0089374",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0089374",
+      "tmdbId": "9056",
+      "title": "Police Story",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T04:41:21Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33244668:s1e1:preference:2026-05-21T04:41:15Z",
       "contentId": "tt33244668",

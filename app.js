@@ -4336,7 +4336,7 @@ function renderDetail(options = {}) {
           <span class="title-kicker">Vista previa</span>
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
-          ${getCardQuickActions(title, loadTitlePrefs(), { labels: true })}
+          ${getCardQuickActions(title)}
           <div class="detail-meta-row">${title.year ? `<span class="detail-meta-chip">${escapeHtml(String(title.year))}</span>` : ''}</div>
           <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
           ${isBareRoute ? '<p class="title-description">Metadata no disponible para este ID. Busca por nombre para obtener información.</p>' : ''}
@@ -4419,7 +4419,7 @@ function renderDetail(options = {}) {
         <span class="title-kicker">${isSeriesLike(title) ? 'Serie seleccionada' : 'Película seleccionada'}</span>
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>
-        ${getCardQuickActions(title, loadTitlePrefs(), { labels: true })}
+        ${getCardQuickActions(title)}
         <div class="detail-meta-row">${titleMetaChips}</div>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Reparto: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}

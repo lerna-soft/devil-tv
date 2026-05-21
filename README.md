@@ -6,8 +6,8 @@ Este repositorio está optimizado para correr en GitHub Pages y usar `localStora
 
 ## Estado actual
 
-- Repositorio: `lerna-admin/media-evaluation-platform-static`
-- URL pública: `https://lerna-admin.github.io/media-evaluation-platform-static/`
+- Repositorio: `lerna-admin/devil-tv`
+- URL pública: `https://lerna-admin.github.io/devil-tv/`
 - Publicación activa desde rama: `gh-pages`
 - Rama de desarrollo: `main`
 - Reproductor primario: VidAPI (`https://vaplayer.ru/embed/...`)
@@ -159,20 +159,20 @@ git checkout main
 ### 3) Forzar build de Pages (si es necesario)
 
 ```bash
-gh api -X POST repos/lerna-admin/media-evaluation-platform-static/pages/builds
+gh api -X POST repos/lerna-admin/devil-tv/pages/builds
 ```
 
 Ver último estado:
 
 ```bash
-gh api repos/lerna-admin/media-evaluation-platform-static/pages/builds/latest
+gh api repos/lerna-admin/devil-tv/pages/builds/latest
 ```
 
 ## Continuidad desde otro computador
 
 1. Instalar `git` y `gh` (opcional pero recomendado).
 2. Clonar repo:
-   - `git clone https://github.com/lerna-admin/media-evaluation-platform-static.git`
+   - `git clone https://github.com/lerna-admin/devil-tv.git`
 3. Entrar al repo y verificar ramas:
    - `git branch -a`
 4. Trabajar en `main`.

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T20:36:07.724Z",
+  "generatedAt": "2026-05-21T20:41:23.536Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T20:35:38Z",
-      "totalEvents": 385,
+      "updatedAt": "2026-05-21T20:41:12Z",
+      "totalEvents": 386,
       "totalStarts": 224,
       "totalCompletions": 50,
       "totalPlaybackProgress": 203665.51493251926,
-      "uniqueContentCount": 122,
-      "lastActivityAt": "2026-05-21T20:35:38Z",
+      "uniqueContentCount": 123,
+      "lastActivityAt": "2026-05-21T20:41:12Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -76,6 +76,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0096708": {
+          "contentId": "tt0096708",
+          "imdbId": "tt0096708",
+          "tmdbId": "",
+          "title": "Tales from the Crypt",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T20:41:12Z"
         },
         "tt0267913": {
           "contentId": "tt0267913",
@@ -1506,7 +1518,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 529.0013
+      "avgPlaybackProgress": 527.6309
     },
     {
       "userEmail": "liz-munera@hotmail.com",

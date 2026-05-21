@@ -1,6 +1,6 @@
 {
-  "version": 229,
-  "generatedAt": "2026-05-21T04:50:50.785Z",
+  "version": 230,
+  "generatedAt": "2026-05-21T04:54:30.947Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27217,6 +27217,22 @@
       "releaseDate": null,
       "overview": "Pedro llega a la costa para pasar sus vacaciones en la casa de sus tíos, donde se reencuentra con Maxi, un amigo de la infancia. Maxi se sorprende al descubrir que Pedro es gay. Cuando Maxi se encuentra con su ex novia, le pide a Pedro que finja ser su novio para reconquistarla. Pedro acepta divertido, sin advertir los peligros de jugar con el amor.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/yQ5iYpYjVNZXgslPTgIbrb62c5.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "189",
+      "imdbId": null,
+      "title": "Sin City: Una dama por la que matar",
+      "year": 2014,
+      "releaseDate": null,
+      "overview": "En las sórdidas calles de Sin City, un hombre busca su venganza. Dwight trata de ajustar cuentas con la misteriosa Ava Lord, la letal mujer que le traicionó. Nancy intenta superar la muerte de Hartigan, y Johny tiene una peligrosa misión: acabar con el mayor villano de Sin City. En su propósito, conocerá a la joven stripper Marcy.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xmCF5CB8ogqUy9K6AmYaAL7x0jV.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

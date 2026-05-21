@@ -2607,12 +2607,14 @@ function renderCatalog() {
     const titleEl = document.querySelector('.catalog-header h2');
     if (titleEl) titleEl.textContent = 'Dashboard';
     if (elements.sortFilter) elements.sortFilter.hidden = true;
+    if (elements.genreFilter) elements.genreFilter.hidden = true;
     renderAdminDashboard();
     return;
   }
   const titleEl = document.querySelector('.catalog-header h2');
   if (titleEl) titleEl.textContent = getBrowseHeading();
   if (elements.sortFilter) elements.sortFilter.hidden = false;
+  if (elements.genreFilter) elements.genreFilter.hidden = false;
   const query = getSearchInputValue();
   const search = getActiveSearchQuery();
   populateGenreFilter();
@@ -3142,6 +3144,7 @@ function renderHomeCatalog(baseFiltered) {
   const discoveryTitles = uniqueTitles.slice(0, discoveryLimit);
   const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t))), watch).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
   const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t))), watch).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
+  const likedItems = sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1), watch);
   const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))), watch);
   const movieRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'movie'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
   const seriesRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'series'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
@@ -3180,6 +3183,7 @@ function renderHomeCatalog(baseFiltered) {
   setCatalogCount(isCompactViewport() ? 'Explora por secciones' : `${baseFiltered.length} títulos`);
   const sections = [
     section('continue', 'Continuar viendo', 'Retoma donde lo dejaste', continueItems),
+    section('liked', 'Me gusta', 'Tus favoritos guardados', likedItems),
     section('watch_later', 'Ver más tarde', 'Tu lista guardada', watchLaterItems),
     section('movies_recommended', 'Películas para ti', 'Sugerencias según lo que has visto', movieRecommended),
     section('series_recommended', 'Series para ti', 'Sugerencias según lo que has visto', seriesRecommended)
@@ -3214,6 +3218,9 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   if (sectionKey === 'watch_later') {
     title = 'Ver más tarde';
     items = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))));
+  } else if (sectionKey === 'liked') {
+    title = 'Me gusta';
+    items = sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
@@ -3675,29 +3682,7 @@ function bindLocalCardEvents() {
       renderCatalog();
     });
   });
-  elements.items.querySelectorAll('.item-quick-btn').forEach((btn) => {
-    btn.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const action = String(btn.dataset.quickAction || '').trim();
-      const prefId = String(btn.dataset.prefId || '').trim();
-      const card = btn.closest('.item');
-      const key = String(card?.dataset?.key || '').trim();
-      if (!action || (!prefId && !key)) return;
-      let title = null;
-      if (key) title = resolveTitleByCatalogKey(key);
-      if (!title && prefId) title = resolveTitleByPreferenceId(prefId);
-      if (!title && state.selected && String(getTitleId(state.selected) || '').trim() === prefId) title = state.selected;
-      if (!title) return;
-      setTitlePreference(title, action);
-      const id = String(getTitleId(title) || '').trim();
-      updateQuickActionButtons(id);
-      if (action === 'later' && state.homeSectionView === 'watch_later' && card) {
-        const prefs = loadTitlePrefs();
-        if (!Boolean(readTitlePreferenceValue(prefs.watchLater, title, false))) card.remove();
-      }
-    });
-  });
+  bindQuickActionButtons(elements.items);
 
   elements.items.querySelectorAll('.item-play').forEach((btn) => {
     bindTap(btn, async (event) => {
@@ -3748,6 +3733,39 @@ function bindLocalCardEvents() {
       if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute({ force: true });
       hydrateSelectedFromTmdb().then(() => renderDetail({ skipHydratePlayback: true }));
+    });
+  });
+}
+
+function bindQuickActionButtons(root = document) {
+  root.querySelectorAll?.('.item-quick-btn').forEach((btn) => {
+    const stopCardNavigation = (event) => {
+      event.preventDefault?.();
+      event.stopPropagation?.();
+    };
+    btn.addEventListener('pointerdown', stopCardNavigation, { passive: false });
+    bindTap(btn, (event) => {
+      stopCardNavigation(event);
+      const action = String(btn.dataset.quickAction || '').trim();
+      const prefId = String(btn.dataset.prefId || '').trim();
+      const card = btn.closest('.item');
+      const key = String(card?.dataset?.key || '').trim();
+      if (!action || (!prefId && !key)) return;
+      let title = null;
+      if (key) title = resolveTitleByCatalogKey(key);
+      if (!title && prefId) title = resolveTitleByPreferenceId(prefId);
+      if (!title && state.selected && String(getTitleId(state.selected) || '').trim() === prefId) title = state.selected;
+      if (!title) return;
+      setTitlePreference(title, action);
+      const id = String(getTitleId(title) || '').trim();
+      updateQuickActionButtons(id);
+      const prefs = loadTitlePrefs();
+      if (action === 'later' && state.homeSectionView === 'watch_later' && card && !Boolean(readTitlePreferenceValue(prefs.watchLater, title, false))) {
+        card.remove();
+      }
+      if (action === 'like' && state.homeSectionView === 'liked' && card && Number(readTitlePreferenceValue(prefs.likes, title, 0) || 0) !== 1) {
+        card.remove();
+      }
     });
   });
 }
@@ -4151,15 +4169,20 @@ function getTitleFlags(title, prefs = loadTitlePrefs()) {
   };
 }
 
-function getCardQuickActions(title, prefs = loadTitlePrefs()) {
+function getCardQuickActions(title, prefs = loadTitlePrefs(), options = {}) {
   if (!isAuthenticated()) return '';
   const prefId = escapeAttribute(String(getTitleId(title) || ''));
   const flags = getTitleFlags(title, prefs);
   const likedClass = flags.like === 1 ? ' active-like' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
+  const withLabels = options.labels === true;
+  const likeLabel = flags.like === 1 ? 'Quitar me gusta' : 'Me gusta';
+  const laterLabel = flags.watchLater ? 'Quitar de ver más tarde' : 'Ver más tarde';
+  const likeContent = `❤${withLabels ? `<span class="quick-label">${escapeHtml(likeLabel)}</span>` : ''}`;
+  const laterContent = `${flags.watchLater ? '✓' : '+'}${withLabels ? `<span class="quick-label">${escapeHtml(laterLabel)}</span>` : ''}`;
   return `<div class="item-quick-actions">
-    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="Me gusta" aria-pressed="${flags.like === 1 ? 'true' : 'false'}">❤</button>
-    <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="Guardar para ver después" aria-pressed="${flags.watchLater ? 'true' : 'false'}">+</button>
+    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="${escapeAttribute(likeLabel)}" aria-pressed="${flags.like === 1 ? 'true' : 'false'}">${likeContent}</button>
+    <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="${escapeAttribute(laterLabel)}" aria-pressed="${flags.watchLater ? 'true' : 'false'}">${laterContent}</button>
   </div>`;
 }
 
@@ -4178,11 +4201,18 @@ function updateQuickActionButtons(prefId) {
       .forEach((btn) => {
         btn.classList.toggle('active-like', likeActive);
         btn.setAttribute('aria-pressed', likeActive ? 'true' : 'false');
+        btn.setAttribute('aria-label', likeActive ? 'Quitar me gusta' : 'Me gusta');
+        const label = btn.querySelector('.quick-label');
+        if (label) label.textContent = likeActive ? 'Quitar me gusta' : 'Me gusta';
       });
     document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="later"]`)
       .forEach((btn) => {
         btn.classList.toggle('active-later', laterActive);
         btn.setAttribute('aria-pressed', laterActive ? 'true' : 'false');
+        btn.setAttribute('aria-label', laterActive ? 'Quitar de ver más tarde' : 'Ver más tarde');
+        const label = btn.querySelector('.quick-label');
+        if (label) label.textContent = laterActive ? 'Quitar de ver más tarde' : 'Ver más tarde';
+        if (btn.firstChild && btn.firstChild.nodeType === Node.TEXT_NODE) btn.firstChild.textContent = laterActive ? '✓' : '+';
       });
   }
 }
@@ -4306,7 +4336,7 @@ function renderDetail(options = {}) {
           <span class="title-kicker">Vista previa</span>
           <span class="pill">${escapeHtml(title.type)}</span>
           <h2>${escapeHtml(title.title)}</h2>
-          ${getCardQuickActions(title)}
+          ${getCardQuickActions(title, loadTitlePrefs(), { labels: true })}
           <div class="detail-meta-row">${title.year ? `<span class="detail-meta-chip">${escapeHtml(String(title.year))}</span>` : ''}</div>
           <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
           ${isBareRoute ? '<p class="title-description">Metadata no disponible para este ID. Busca por nombre para obtener información.</p>' : ''}
@@ -4389,7 +4419,7 @@ function renderDetail(options = {}) {
         <span class="title-kicker">${isSeriesLike(title) ? 'Serie seleccionada' : 'Película seleccionada'}</span>
         <span class="pill">${escapeHtml(title.type)}</span>
         <h2>${escapeHtml(title.title)}</h2>
-        ${getCardQuickActions(title)}
+        ${getCardQuickActions(title, loadTitlePrefs(), { labels: true })}
         <div class="detail-meta-row">${titleMetaChips}</div>
         <p class="title-description">${escapeHtml(title.description || 'Información no disponible.')}</p>
         ${castNames.length ? `<p class="title-meta">${escapeHtml(`Reparto: ${castNames.slice(0, 6).join(', ')}`)}</p>` : ''}
@@ -4410,6 +4440,7 @@ function renderDetail(options = {}) {
   </div>`;
 
   updateFloatingReportButtonVisibility();
+  bindQuickActionButtons(elements.detail);
 
   bindTap(document.querySelector('#loadPlayer'), () => {
     if (!isPlayable) return;

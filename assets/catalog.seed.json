@@ -1,6 +1,6 @@
 {
-  "version": 230,
-  "generatedAt": "2026-05-21T04:54:30.947Z",
+  "version": 231,
+  "generatedAt": "2026-05-21T04:55:27.336Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27233,6 +27233,22 @@
       "releaseDate": null,
       "overview": "En las sórdidas calles de Sin City, un hombre busca su venganza. Dwight trata de ajustar cuentas con la misteriosa Ava Lord, la letal mujer que le traicionó. Nancy intenta superar la muerte de Hartigan, y Johny tiene una peligrosa misión: acabar con el mayor villano de Sin City. En su propósito, conocerá a la joven stripper Marcy.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/xmCF5CB8ogqUy9K6AmYaAL7x0jV.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "379149",
+      "imdbId": null,
+      "title": "El extranjero",
+      "year": 2017,
+      "releaseDate": null,
+      "overview": "Quan es un humilde empresario londinense cuyo pasado, largamente sepultado, estalla en una venganza feroz cuando la única persona que le queda en la vida, su hija adolescente, muere en un atentado terrorista del IRA. Su implacable búsqueda de los terroristas le lleva a un juego del gato y el ratón con un funcionario del gobierno británico, en cuyo pasado puede estar la pista de las identidades de los escurridizos asesinos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tvJcP62XCRSWD7SxFoeLM89ttuj.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

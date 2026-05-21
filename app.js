@@ -24,7 +24,13 @@ const state = {
   genreFilterOptionsHtml: '',
   filteredCatalogCacheKey: '',
   filteredCatalogCache: null,
-  catalogHydrationRenderTimer: null
+  catalogHydrationRenderTimer: null,
+  catalogHydration: {
+    active: false,
+    loaded: 0,
+    total: 0,
+    phase: ''
+  }
 };
 let suppressRouteSync = false;
 let routeChangeToken = 0;
@@ -1524,17 +1530,35 @@ function scheduleDelayedIdleTask(callback, delayMs = 1000, timeoutMs = 1500) {
 
 function renderCatalogIfCurrentView() {
   if (!elements.appShell || elements.appShell.hidden) return;
+  if (document.body.classList.contains('detail-active')) return;
   renderCatalog();
 }
 
 function scheduleCatalogHydrationRender(delayMs = 700) {
   if (!elements.appShell || elements.appShell.hidden) return;
+  if (document.body.classList.contains('detail-active')) return;
   if (state.catalogHydrationRenderTimer) return;
   state.catalogHydrationRenderTimer = window.setTimeout(() => {
     state.catalogHydrationRenderTimer = null;
     if (!elements.appShell || elements.appShell.hidden) return;
+    if (document.body.classList.contains('detail-active')) return;
     renderCatalog();
   }, delayMs);
+}
+
+function getCatalogHydrationMessage() {
+  if (!state.catalogHydration?.active) return '';
+  const loaded = Number(state.catalogHydration.loaded || 0);
+  const total = Number(state.catalogHydration.total || 0);
+  if (total > 0 && loaded > 0) return `Cargando catálogo: ${Math.min(loaded, total)} de ${total} títulos`;
+  if (state.catalogHydration.phase === 'bootstrap') return 'Preparando catálogo inicial';
+  return 'Cargando catálogo';
+}
+
+function renderCatalogHydrationStatus() {
+  const message = getCatalogHydrationMessage();
+  if (!message) return '';
+  return `<div class="catalog-loading-status" role="status" aria-live="polite"><span class="spinner spinner-small" aria-hidden="true"></span><strong>${escapeHtml(message)}</strong><span>Las secciones se completan automáticamente.</span></div>`;
 }
 
 function scheduleAuthenticatedStartupWork() {
@@ -1578,13 +1602,24 @@ function storeSeedCatalogKeys(items) {
 async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
   const index = await fetchJsonWithTimeout(`${SEED_CHUNKS_INDEX_PATH}?v=${window.__mep_build || ''}`, 1500).catch(() => null);
   const chunks = Array.isArray(index?.chunks) ? index.chunks : [];
-  if (!chunks.length) return false;
+  if (!chunks.length) {
+    state.catalogHydration.active = false;
+    scheduleCatalogHydrationRender(0);
+    return false;
+  }
 
   const seedVersion = Number(index?.version || hintedVersion || 0);
   const expectedTotal = Number(index?.total || 0);
   let merged = Array.isArray(current) ? current : [];
   const allSeedItems = [];
   let loadedCount = 0;
+  state.catalogHydration = {
+    active: true,
+    loaded: merged.length,
+    total: expectedTotal || merged.length,
+    phase: 'chunks'
+  };
+  scheduleCatalogHydrationRender(0);
 
   for (const chunk of chunks) {
     const file = String(chunk?.file || '').trim();
@@ -1596,11 +1631,18 @@ async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
     loadedCount += items.length;
     allSeedItems.push(...items);
     merged = dedupe([...merged, ...items]);
+    state.catalogHydration.loaded = merged.length;
+    state.catalogHydration.total = expectedTotal || merged.length;
     setRuntimeCatalog(merged);
     scheduleCatalogHydrationRender();
   }
 
-  if (!allSeedItems.length) return false;
+  if (!allSeedItems.length) {
+    state.catalogHydration.active = false;
+    scheduleCatalogHydrationRender(0);
+    return false;
+  }
+  state.catalogHydration.active = false;
   scheduleCatalogHydrationRender(0);
   if (!expectedTotal || loadedCount >= expectedTotal) {
     storeSeedCatalogKeys(allSeedItems);
@@ -1628,15 +1670,36 @@ async function hydrateSeedCatalog(options = {}) {
   const seedUrl = bootstrap
     ? `${SEED_BOOTSTRAP_PATH}?v=${window.__mep_build || ''}`
     : `./assets/catalog.seed.json?v=${window.__mep_build || ''}`;
+  if (bootstrap) {
+    state.catalogHydration = {
+      active: true,
+      loaded: current.length,
+      total: 0,
+      phase: 'bootstrap'
+    };
+    scheduleCatalogHydrationRender(0);
+  }
   const response = await fetch(seedUrl, { cache: 'no-store' }).catch(() => null);
-  if (!response?.ok) return false;
+  if (!response?.ok) {
+    if (bootstrap) state.catalogHydration.active = false;
+    scheduleCatalogHydrationRender(0);
+    return false;
+  }
   const seed = await response.json().catch(() => null);
-  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) return false;
+  if (!seed || (!Array.isArray(seed.movies) && !Array.isArray(seed.series))) {
+    if (bootstrap) state.catalogHydration.active = false;
+    scheduleCatalogHydrationRender(0);
+    return false;
+  }
 
   const seedVersion = Number(seed.version || 0);
   const versionKey = bootstrap ? SEED_BOOTSTRAP_VERSION_STORAGE : 'mep_seed_version';
   const appliedVersion = Number(localStorage.getItem(versionKey) || '0');
-  if (seedVersion && appliedVersion === seedVersion && hasLocalCatalog) return false;
+  if (seedVersion && appliedVersion === seedVersion && hasLocalCatalog) {
+    if (bootstrap) state.catalogHydration.active = false;
+    scheduleCatalogHydrationRender(0);
+    return false;
+  }
 
   const items = normalizeSeedItems(seed);
   storeSeedCatalogKeys(items);
@@ -1644,6 +1707,13 @@ async function hydrateSeedCatalog(options = {}) {
   const merged = dedupe([...current, ...items]);
   saveLocalCatalog(merged);
   if (seedVersion) localStorage.setItem(versionKey, String(seedVersion));
+  if (bootstrap) {
+    state.catalogHydration.loaded = merged.length;
+    state.catalogHydration.total = merged.length;
+    scheduleCatalogHydrationRender(0);
+  } else {
+    state.catalogHydration.active = false;
+  }
   return true;
 }
 
@@ -3093,7 +3163,12 @@ function renderHomeCatalog(baseFiltered) {
   if (!sections.length) {
     sections.push(section('latest', 'Catálogo destacado', 'Una selección para comenzar', latestItems));
   }
-  elements.items.innerHTML = sections.filter(Boolean).join('');
+  const statusHtml = renderCatalogHydrationStatus();
+  if (!sections.length && statusHtml) {
+    elements.items.innerHTML = `<div class="loader-card"><span class="spinner"></span><strong>Armando tu catálogo</strong><p>${escapeHtml(getCatalogHydrationMessage())}</p></div>`;
+  } else {
+    elements.items.innerHTML = [statusHtml, ...sections.filter(Boolean)].filter(Boolean).join('');
+  }
   bindLocalCardEvents();
   bindHomeSectionEvents();
   bindHomeCarouselEvents();
@@ -3512,28 +3587,48 @@ function suspendSearchUiForSelection() {
   clearTimeout(state.searchCommitTimer);
 }
 
+function findTitleInLoadedCollections(predicate) {
+  const local = loadLocalCatalog();
+  for (const entry of local) {
+    if (predicate(entry)) return entry;
+  }
+  const remote = Array.isArray(state.remoteResults) ? state.remoteResults : [];
+  for (const entry of remote) {
+    if (predicate(entry)) return entry;
+  }
+  if (state.selected && predicate(state.selected)) return state.selected;
+  return null;
+}
+
 function resolveTitleByCatalogKey(key) {
   const target = String(key || '').trim();
   if (!target) return null;
-  return getUnifiedTitlePool().find((entry) => String(entry?.catalogKey || '').trim() === target) || null;
+  return findTitleInLoadedCollections((entry) => String(entry?.catalogKey || '').trim() === target);
 }
 
 function resolveTitleForInteraction(key) {
   const target = String(key || '').trim();
   if (!target) return null;
-  const pool = getUnifiedTitlePool();
-  return pool.find((entry) => (
+  return findTitleInLoadedCollections((entry) => (
     String(entry?.catalogKey || '').trim() === target ||
     String(entry?.imdbId || '').trim() === target ||
     String(entry?.tmdbId || '').trim() === target ||
     String(getTitleId(entry) || '').trim() === target
-  )) || null;
+  ));
 }
 
 function resolveTitleByPreferenceId(prefId) {
   const target = String(prefId || '').trim();
   if (!target) return null;
-  return getUnifiedTitlePool().find((entry) => String(getTitleId(entry) || '').trim() === target) || null;
+  return findTitleInLoadedCollections((entry) => String(getTitleId(entry) || '').trim() === target);
+}
+
+function returnToCatalogHome() {
+  prepareManualRouteTransition();
+  clearSelection();
+  document.body.classList.remove('detail-active');
+  renderDetail();
+  syncRoute({ force: true });
 }
 
 function bindLocalCardEvents() {
@@ -3612,11 +3707,13 @@ function bindLocalCardEvents() {
       state.selected = resolveTitleForInteraction(item.dataset.key);
       if (!state.selected) return;
       suspendSearchUiForSelection();
-      if (isAuthenticated() && state.selected) queueCatalogSeedSyncForTitle(state.selected);
+      if (isAuthenticated() && state.selected) {
+        const selectedForSeedSync = state.selected;
+        scheduleDelayedIdleTask(() => queueCatalogSeedSyncForTitle(selectedForSeedSync), 1200, 1000);
+      }
       state.seriesEpisodes = null;
       state.seriesEpisodesLoading = isAuthenticated() && isSeriesLike(state.selected);
       state.hydratedProgressId = '';
-      renderCatalog();
       renderDetail();
       if (isAuthenticated() && isSeriesLike(state.selected)) loadSeriesEpisodes().then(renderDetail);
       syncRoute({ force: true });
@@ -4188,14 +4285,7 @@ function renderDetail(options = {}) {
       </section>
     </div>`;
 
-    document.querySelector('#closeDetail')?.addEventListener('click', () => {
-      prepareManualRouteTransition();
-      clearSelection();
-      document.body.classList.remove('detail-active');
-      renderCatalog();
-      renderDetail();
-      syncRoute({ force: true });
-    });
+    document.querySelector('#closeDetail')?.addEventListener('click', returnToCatalogHome);
 
     bindEvaluationPanel(title);
     return;
@@ -4364,14 +4454,7 @@ function renderDetail(options = {}) {
       tmdbId: title.tmdbId || ''
     });
   });
-  document.querySelector('#closeDetail')?.addEventListener('click', () => {
-    prepareManualRouteTransition();
-    clearSelection();
-    document.body.classList.remove('detail-active');
-    renderCatalog();
-    renderDetail();
-    syncRoute({ force: true });
-  });
+  document.querySelector('#closeDetail')?.addEventListener('click', returnToCatalogHome);
   document.querySelectorAll('[data-season]').forEach((button) => button.addEventListener('click', () => { state.playback.season = positiveInteger(button.dataset.season, 1); renderDetail(); syncRoute(); }));
   document.querySelectorAll('[data-episode]').forEach((button) => {
     const onSelect = () => {
@@ -5590,7 +5673,7 @@ async function handleRouteChange() {
         renderDetail({ skipHydratePlayback: shouldOpenPlayer });
       }
       if (isStaleRouteChange()) return;
-      renderCatalog();
+      if (!document.body.classList.contains('detail-active')) renderCatalog();
       if (!shouldOpenPlayer) closePlayerModal();
     } else {
       renderCatalog();

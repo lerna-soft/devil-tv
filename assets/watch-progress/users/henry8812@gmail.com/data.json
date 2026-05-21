@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-21T04:49:52Z",
+  "updatedAt": "2026-05-21T04:55:26Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -11,6 +11,16 @@
       "progress": 0,
       "lastProgress": 0,
       "updatedAt": "2026-05-20T06:54:07Z",
+      "watched": {}
+    },
+    "379149": {
+      "imdbId": "",
+      "tmdbId": "379149",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-21T04:55:26Z",
       "watched": {}
     },
     "tt3359350": {
@@ -1196,6 +1206,7 @@
   },
   "preferences": {
     "likes": {
+      "379149": 1,
       "tt0267913": 1,
       "tt28650488": 1
     },
@@ -1276,18 +1287,37 @@
       "tt33244668": true,
       "tt28650488": true
     },
-    "updatedAt": "2026-05-21T04:49:52Z"
+    "updatedAt": "2026-05-21T04:55:26Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "",
+    "tmdbId": "379149",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-21T04:49:52Z"
+    "updatedAt": "2026-05-21T04:55:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:379149:s1e1:preference:2026-05-21T04:55:26Z",
+      "contentId": "379149",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "379149",
+      "title": "El extranjero",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T04:55:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33046197:s1e1:preference:2026-05-21T04:49:52Z",
       "contentId": "tt33046197",

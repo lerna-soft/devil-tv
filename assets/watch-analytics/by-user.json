@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T04:50:02.111Z",
+  "generatedAt": "2026-05-21T04:55:35.058Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T04:49:52Z",
-      "totalEvents": 340,
+      "updatedAt": "2026-05-21T04:55:26Z",
+      "totalEvents": 341,
       "totalStarts": 203,
       "totalCompletions": 40,
       "totalPlaybackProgress": 163618.97008381737,
-      "uniqueContentCount": 119,
-      "lastActivityAt": "2026-05-21T04:49:52Z",
+      "uniqueContentCount": 120,
+      "lastActivityAt": "2026-05-21T04:55:26Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -49,6 +49,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "379149": {
+          "contentId": "379149",
+          "imdbId": "",
+          "tmdbId": "379149",
+          "title": "El extranjero",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T04:55:26Z"
         },
         "tt33046197": {
           "contentId": "tt33046197",
@@ -1467,7 +1479,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 481.2323
+      "avgPlaybackProgress": 479.821
     },
     {
       "userEmail": "liz-munera@hotmail.com",

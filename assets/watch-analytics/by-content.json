@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T23:07:55.564Z",
+  "generatedAt": "2026-05-21T23:32:39.958Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 43,
+      "totalEvents": 44,
       "totalStarts": 28,
-      "totalCompletions": 14,
-      "totalPlaybackProgress": 43485.14607227019,
+      "totalCompletions": 15,
+      "totalPlaybackProgress": 46319.58269227019,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-21T23:07:38Z",
+      "completionRate": 0.5357,
+      "lastActivityAt": "2026-05-21T23:32:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 43,
-          "completedCount": 14,
+          "playCount": 44,
+          "completedCount": 15,
           "startedCount": 28,
-          "totalPlaybackProgress": 43485.14607227019,
-          "lastSeenAt": "2026-05-21T23:07:38Z",
+          "totalPlaybackProgress": 46319.58269227019,
+          "lastSeenAt": "2026-05-21T23:32:31Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s2e8": {
           "season": 2,
           "episode": 8,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2834.43662,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T23:07:38Z",
+          "lastActivityAt": "2026-05-21T23:32:31Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s2e7": {
           "season": 2,
@@ -239,7 +239,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1011.2825
+      "avgPlaybackProgress": 1052.7178
     },
     {
       "contentId": "tt14452776",

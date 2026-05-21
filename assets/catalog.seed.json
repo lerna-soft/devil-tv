@@ -1,6 +1,6 @@
 {
-  "version": 235,
-  "generatedAt": "2026-05-21T20:04:32.405Z",
+  "version": 236,
+  "generatedAt": "2026-05-21T20:32:16.745Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27281,6 +27281,22 @@
       "releaseDate": null,
       "overview": "Nick (Jackie Chan) es un inmigrante chino, que ha entrado ilegalmente en Japón en busca de su novia y de un futuro mejor. Al principio, malvive explotado junto a otros compatriotas con los que arriesga su vida y su libertad a cambio de un mísero salario. Al descubrir, por azar, que su novia es ahora la esposa de un jefe Yakuza, decide entrar en el mundo del crimen organizado convirtiéndose en poco tiempo, con la ayuda del jefe Yakuza a quién casualmente salva la vida, en un auténtico líder, aprendiendo como sobrevivir en un mundo donde la corrupción, el asesinato y las luchas internas entre las distintas mafias, ponen constantemente a prueba su liderazgo y sus principios.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/fRy3hPQc8w1ap2RWDi6e3kH3Ay8.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "13510",
+      "imdbId": null,
+      "title": "Eden Lake",
+      "year": 2008,
+      "releaseDate": null,
+      "overview": "Una pareja, Steve y Jenny, se escapa de fin de semana romántico. Sin embargo, su tranquilidad se verá interrumpida cuando una banda de chicos jóvenes aparezca por el lugar. Estos, como acto de rebeldía, robarán las cosas a la pareja y destrozarán su coche. Steve les hará frente pero sufrirá un violento ataque. A partir de ese momento, Jenny tratará de escapar a través del bosque...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/juDdVU8RijF3ovORzC4EJvUbmTk.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

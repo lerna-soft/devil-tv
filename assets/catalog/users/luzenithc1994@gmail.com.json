@@ -1,0 +1,72 @@
+{
+  "version": 222,
+  "email": "luzenithc1994@gmail.com",
+  "count": 3,
+  "items": [
+    {
+      "type": "movie",
+      "tmdbId": "1316092",
+      "imdbId": "tt32897959",
+      "title": "“Cumbres Borrascosas”",
+      "year": 2026,
+      "releaseDate": "2026-02-11",
+      "overview": "Una audaz y original reinterpretación de una de una de las historias de amor más grandes de todos los tiempos, 'Cumbres Borrascosas' de Emerald Fennell está protagonizada por Margot Robbie como Cathy y Jacob Elordi como Heathcliff, cuya pasión prohibida se transforma de romántica a intoxicante en una épica historia de lujuria, amor y locura.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/afGUJcMBJloAUp9uC27MQiqkD7X.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vSQSYd2zZTqc0zmHImwWEGGluMI.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1007757",
+      "imdbId": "tt29552248",
+      "title": "Intercambiados",
+      "year": 2026,
+      "releaseDate": "2026-05-01",
+      "overview": "Una pequeña criatura del bosque intercambia el cuerpo con un majestuoso pájaro del valle, lo que los obliga a colaborar para sobrevivir a la aventura más salvaje de sus vidas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/i89vUDwNhAEWUZSFYITSiv1RIbK.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wpabGmGA3IaJNGudbzGritmR8Km.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Drama",
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1367642",
+      "imdbId": "tt33714084",
+      "title": "No te olvidaré",
+      "year": 2026,
+      "releaseDate": "2026-03-11",
+      "overview": "Cuando los abuelos y tutores de Diem se niegan categóricamente a permitir que la vea, Kenna descubre una compasión inesperada seguida de un sentimiento más profundo y real con Ledger, exjugador de la NFL y propietario de un bar local. A medida que su romance secreto va cobrando forma, surgen problemas para los dos, lo que llevará a Kenna a una situación sentimental desoladora y, en último término, a reavivar la esperanza de una segunda oportunidad.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iPJ4V6o5PttdBmHoehdOtWqQ6gx.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/5rxEnsgriw8z065q51lrvPKYmCL.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    }
+  ]
+}

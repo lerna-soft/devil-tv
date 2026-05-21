@@ -1,0 +1,29 @@
+{
+  "version": 222,
+  "email": "ornebe@hotmail.com",
+  "count": 1,
+  "items": [
+    {
+      "type": "movie",
+      "tmdbId": "1316092",
+      "imdbId": "tt32897959",
+      "title": "“Cumbres Borrascosas”",
+      "year": 2026,
+      "releaseDate": "2026-02-11",
+      "overview": "Una audaz y original reinterpretación de una de una de las historias de amor más grandes de todos los tiempos, 'Cumbres Borrascosas' de Emerald Fennell está protagonizada por Margot Robbie como Cathy y Jacob Elordi como Heathcliff, cuya pasión prohibida se transforma de romántica a intoxicante en una épica historia de lujuria, amor y locura.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/afGUJcMBJloAUp9uC27MQiqkD7X.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/vSQSYd2zZTqc0zmHImwWEGGluMI.jpg",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "HBO Max",
+          "HBO Max Amazon Channel"
+        ]
+      }
+    }
+  ]
+}

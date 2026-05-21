@@ -1,0 +1,223 @@
+{
+  "version": 222,
+  "email": "liz-munera@hotmail.com",
+  "count": 10,
+  "items": [
+    {
+      "type": "movie",
+      "tmdbId": "1318447",
+      "imdbId": "tt16431404",
+      "title": "Depredador dominante",
+      "year": 2026,
+      "releaseDate": "2026-04-24",
+      "overview": "Una mujer en duelo se adentra en la naturaleza de Australia para ponerse a prueba y queda atrapada en un juego mortal con un astuto asesino que la considera su presa.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mV7uFS1U8iP0p4CcXZp4znBVpch.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg",
+      "genres": [
+        "Acción",
+        "Suspense"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "936075",
+      "imdbId": "tt11378946",
+      "title": "Michael",
+      "year": 2026,
+      "releaseDate": "2026-04-22",
+      "overview": "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2uK36ujoDXOfNiJ5Yp3raVprB51.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/xBT0oNq6rsTFv4SxG5uGRIEOrq6.jpg",
+      "genres": [
+        "Música",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1198994",
+      "imdbId": "tt8036976",
+      "title": "SEND HELP (Enviad ayuda)",
+      "year": 2026,
+      "releaseDate": "2026-01-22",
+      "overview": "Después de que un accidente de avión deje varados en una isla remota a una competente empleada y a su insoportable jefe, ella deberá utilizar sus habilidades de supervivencia para mantenerlos a ambos con vida, a pesar de su difícil relación.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qXZZtyzuTX3KMfSLssCR6J0mODd.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/gCmfeKmEAZBP5gcXpiqb0gii9rS.jpg",
+      "genres": [
+        "Terror",
+        "Suspense",
+        "Comedia"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1327819",
+      "imdbId": "tt26443616",
+      "title": "Hoppers",
+      "year": 2026,
+      "releaseDate": "2026-03-04",
+      "overview": "Una amante de los animales aprovecha la oportunidad de utilizar una tecnología que coloca su conciencia en un castor robótico, descubriendo misterios dentro del mundo animal que van más allá de lo que podría haber imaginado.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4Z0E1W7YvQ0aVtgj7KKtktb9ukd.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/u53UYu5XG2hNgWGvs3xGhAVzypl.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Comedia",
+        "Familia",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1168190",
+      "imdbId": "tt33046197",
+      "title": "Los hermanos demolición",
+      "year": 2026,
+      "releaseDate": "2026-01-28",
+      "overview": "Un improbable dúo de hermanastros, uno un impulsivo detective y el otro un disciplinado, se ven atraídos por el asesinato de su padre en Hawai, lo que les lleva a un peligroso viaje para desenmascarar una conspiración de largo alcance.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ttEESBvVrO8ngZr19qp6eBMVS9F.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
+      "genres": [
+        "Acción",
+        "Comedia",
+        "Crimen",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "223386",
+      "imdbId": "tt27331527",
+      "title": "El fuego de la venganza",
+      "year": 2026,
+      "releaseDate": "2026-04-30",
+      "overview": "Atormentado por su pasado y perseguido por sus enemigos, un veterano de las Fuerzas Especiales lucha por salvar a una joven en las peligrosas calles de Río de Janeiro.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9jQSxMZuadcnzKb1OYJ9Jn3V6g0.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/dMCfHJRnAZfKoPTjYyZk2QCL8au.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Crimen"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1007757",
+      "imdbId": "tt29552248",
+      "title": "Intercambiados",
+      "year": 2026,
+      "releaseDate": "2026-05-01",
+      "overview": "Una pequeña criatura del bosque intercambia el cuerpo con un majestuoso pájaro del valle, lo que los obliga a colaborar para sobrevivir a la aventura más salvaje de sus vidas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/i89vUDwNhAEWUZSFYITSiv1RIbK.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/wpabGmGA3IaJNGudbzGritmR8Km.jpg",
+      "genres": [
+        "Aventura",
+        "Animación",
+        "Drama",
+        "Familia",
+        "Fantasía"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Netflix"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "255661",
+      "imdbId": "tt8599532",
+      "title": "El joven Sherlock",
+      "year": 2026,
+      "releaseDate": "2026-03-04",
+      "overview": "Un Sherlock Holmes de 19 años se ve enredado en un asesinato en Oxford que pone en peligro su libertad. Su primer caso, abordado imprudentemente, le lleva a descubrir una conspiración de gran alcance que altera su camino para siempre.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/w426ObBzvHyTISiAqaeMujydmpi.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/8mmDLb108DoFZlE8sfc64TRqLvm.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Misterio"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Amazon Prime Video"
+        ]
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "289219",
+      "imdbId": "tt36594331",
+      "title": "Star Wars: Maul - Señor de las sombras",
+      "year": 2026,
+      "releaseDate": "2026-04-06",
+      "overview": "Maul se alza de nuevo para liderar las facciones del hampa, conspirando para reconstruir su sindicato criminal y entrenar a un nuevo aprendiz en un planeta no tocado por el Imperio Galáctico.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9T4ECKFMBWqT7msxdaCGtsa3g5R.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/5SrsdKcN9Flvccq59sIfJbhq1Fk.jpg",
+      "genres": [
+        "Action & Adventure",
+        "Animación",
+        "Sci-Fi & Fantasy"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1314481",
+      "imdbId": "tt33612209",
+      "title": "El diablo viste de Prada 2",
+      "year": 2026,
+      "releaseDate": "2026-04-29",
+      "overview": "Sigue la lucha de Miranda Priestly contra Emily Charlton, su ex asistente convertida en ejecutiva rival, mientras compiten por los ingresos por publicidad en medio de la decadencia de los medios impresos y Miranda se acerca a la jubilación.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sz687EF7yJMS4VNEdHKT9ebkhA9.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/y3fQa7pytlysovXzovpXc1OQlTW.jpg",
+      "genres": [
+        "Comedia",
+        "Drama"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    }
+  ]
+}

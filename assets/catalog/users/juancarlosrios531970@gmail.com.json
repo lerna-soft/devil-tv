@@ -1,0 +1,74 @@
+{
+  "version": 222,
+  "email": "juancarlosrios531970@gmail.com",
+  "count": 3,
+  "items": [
+    {
+      "type": "movie",
+      "tmdbId": "617126",
+      "imdbId": "tt10676052",
+      "title": "Los Cuatro Fantásticos: Primeros pasos",
+      "year": 2025,
+      "releaseDate": "2025-07-23",
+      "overview": "Con un mundo retrofuturista inspirado en los años 60 como telón de fondo, la Primera Familia de Marvel deberá hacer frente a su mayor desafío hasta la fecha. Obligados a buscar el equilibrio entre su papel de héroes y sus fuertes vínculos familiares, tendrán que defender la Tierra de un hambriento dios espacial llamado Galactus y su intrigante heraldo, Estela Plateada.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ckfiXWGEMWrUP53cc6QyHijLlhl.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/s94NjfKkcSczZ1FembwmQZwsuwY.jpg",
+      "genres": [
+        "Ciencia ficción",
+        "Aventura",
+        "Acción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "76600",
+      "imdbId": "tt1630029",
+      "title": "Avatar: El sentido del agua",
+      "year": 2022,
+      "releaseDate": "2022-12-14",
+      "overview": "Más de una década después de los acontecimientos de 'Avatar', los Na'vi Jake Sully, Neytiri y sus hijos viven en paz en los bosques de Pandora hasta que regresan los hombres del cielo. Entonces comienzan los problemas que persiguen sin descanso a la familia Sully, que decide hacer un gran sacrificio para mantener a su pueblo a salvo y seguir ellos con vida.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ckeTumMS4G31UQ9NNkmtW2QhfMF.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "Disney Plus (inferred)"
+        ]
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "505642",
+      "imdbId": "tt9114286",
+      "title": "Black Panther: Wakanda Forever",
+      "year": 2022,
+      "releaseDate": "2022-11-09",
+      "overview": "La reina Ramonda, Shuri, M’Baku, Okoye y las Dora Milaje, luchan para proteger su nación de la injerencia de potencias mundiales a raíz de la muerte del rey T’Challa. Mientras los wakandianos se esfuerzan por adaptarse a su nueva etapa, los héroes deben actuar unidos, con la ayuda del Perro de la Guerra Nakia y Everett Ross, y forzar un nuevo destino para el reino de Wakanda.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mYpT2R7639KvKZ668uoQGS2QNFp.jpg",
+      "backdropUrl": "https://image.tmdb.org/t/p/w780/83H0C66AcvkwpG2738VCTHMY9uv.jpg",
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Ciencia ficción"
+      ],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": [
+          "MovistarTV",
+          "Disney Plus (inferred)"
+        ]
+      }
+    }
+  ]
+}

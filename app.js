@@ -586,21 +586,22 @@ async function registerAuthUser({ name, email, password }) {
 
 async function validateAuthUser(email, password) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
-  const user = await loadUserRecord(normalizedEmail).catch(() => null);
-  if (user) {
-    const candidate = await hashPassword(password, String(user.salt || ''));
-    if (candidate === user.passwordHash) {
-      markLocalUserAsSynced(normalizedEmail, user);
-      return { ok: true, user };
+  const localUsers = loadLocalAuthUsers();
+  const localUser = localUsers[normalizedEmail];
+  if (localUser?.salt && localUser?.passwordHash) {
+    const localCandidate = await hashPassword(password, String(localUser.salt || ''));
+    if (localCandidate === localUser.passwordHash) {
+      return { ok: true, user: { name: localUser.name, email: normalizedEmail, role: localUser.role || 'viewer' } };
     }
   }
 
-  const localUsers = loadLocalAuthUsers();
-  const localUser = localUsers[normalizedEmail];
-  if (!localUser) return { ok: false, error: 'Credenciales incorrectas.' };
-  const candidate = await hashPassword(password, String(localUser.salt || ''));
-  if (candidate !== localUser.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
-  return { ok: true, user: { name: localUser.name, email: normalizedEmail, role: localUser.role || 'viewer' } };
+  const user = await loadUserRecord(normalizedEmail).catch(() => null);
+  if (!user) return { ok: false, error: 'Credenciales incorrectas.' };
+  const candidate = await hashPassword(password, String(user.salt || ''));
+  if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
+  cacheRemoteUserLocally(normalizedEmail, user);
+  markLocalUserAsSynced(normalizedEmail, user);
+  return { ok: true, user };
 }
 
 function loadLocalAuthUsers() {
@@ -616,6 +617,22 @@ function saveLocalAuthUsers(users) {
   try {
     localStorage.setItem(AUTH_LOCAL_USERS_KEY, JSON.stringify(users || {}));
   } catch {}
+}
+
+function cacheRemoteUserLocally(email, remoteUser) {
+  const key = String(email || '').trim().toLowerCase();
+  if (!key || !remoteUser) return;
+  const users = loadLocalAuthUsers();
+  users[key] = {
+    ...users[key],
+    name: String(remoteUser?.name || users[key]?.name || key).trim(),
+    role: String(remoteUser?.role || users[key]?.role || 'viewer').trim().toLowerCase(),
+    salt: String(remoteUser?.salt || users[key]?.salt || ''),
+    passwordHash: String(remoteUser?.passwordHash || users[key]?.passwordHash || ''),
+    pendingSync: false,
+    syncedAt: new Date().toISOString()
+  };
+  saveLocalAuthUsers(users);
 }
 
 function markLocalUserAsSynced(email, remoteUser) {
@@ -2918,7 +2935,7 @@ function renderHomeCatalog(baseFiltered) {
   `;
   };
 
-  setCatalogCount(`${baseFiltered.length} títulos`);
+  setCatalogCount(isCompactViewport() ? 'Explora por secciones' : `${baseFiltered.length} títulos`);
   const sections = [
     section('continue', 'Continuar viendo', 'Retoma donde lo dejaste', continueItems),
     section('watch_later', 'Ver más tarde', 'Tu lista guardada', watchLaterItems),

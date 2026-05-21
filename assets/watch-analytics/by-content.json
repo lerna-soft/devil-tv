@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T11:12:06.210Z",
+  "generatedAt": "2026-05-21T11:32:26.603Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -815,22 +815,22 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 15,
+      "totalEvents": 16,
       "totalStarts": 9,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
       "uniqueUsers": 3,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-20T17:34:14Z",
+      "lastActivityAt": "2026-05-21T11:32:14Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
+          "playCount": 9,
           "completedCount": 0,
           "startedCount": 4,
           "totalPlaybackProgress": 6391.613326999999,
-          "lastSeenAt": "2026-05-20T17:34:14Z",
+          "lastSeenAt": "2026-05-21T11:32:14Z",
           "lastSeason": 1,
           "lastEpisode": 1
         },
@@ -861,12 +861,12 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 15,
+          "totalEvents": 16,
           "totalStarts": 9,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
           "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-20T17:34:14Z",
+          "lastActivityAt": "2026-05-21T11:32:14Z",
           "users": {
             "henry8812@gmail.com": true,
             "luzenithc1994@gmail.com": true,
@@ -875,7 +875,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1097.0549
+      "avgPlaybackProgress": 1028.489
     },
     {
       "contentId": "tt32897959",

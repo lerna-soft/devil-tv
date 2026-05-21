@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-21T19:09:19.126Z",
+  "generatedAt": "2026-05-21T19:28:59.710Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s2e1:completed:2026-05-21T19:28:47Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s2e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 2832.7648120181407,
+      "progressValue": 2832.7648120181407,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-21T19:09:06.931Z",
+      "completedAt": "2026-05-21T19:28:46.507Z",
+      "updatedAt": "2026-05-21T19:28:47Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s2e1:started:2026-05-21T19:09:07Z",
       "contentId": "tt0903747",

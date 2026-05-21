@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T22:02:49.514Z",
+  "generatedAt": "2026-05-21T22:03:18.514Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -191,27 +191,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 31,
-      "totalStarts": 20,
+      "totalEvents": 32,
+      "totalStarts": 21,
       "totalCompletions": 10,
       "totalPlaybackProgress": 32163.984892399432,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-21T22:02:08Z",
+      "completionRate": 0.4762,
+      "lastActivityAt": "2026-05-21T22:02:16Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 31,
+          "playCount": 32,
           "completedCount": 10,
-          "startedCount": 20,
+          "startedCount": 21,
           "totalPlaybackProgress": 32163.984892399432,
-          "lastSeenAt": "2026-05-21T22:02:08Z",
+          "lastSeenAt": "2026-05-21T22:02:16Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s2e2": {
+          "season": 2,
+          "episode": 2,
+          "totalEvents": 3,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2874.583939909297,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-21T22:02:16Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.5
+        },
         "s1e7": {
           "season": 1,
           "episode": 7,
@@ -282,20 +296,6 @@
           },
           "completionRate": 0
         },
-        "s2e2": {
-          "season": 2,
-          "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2874.583939909297,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T19:33:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
         "s2e1": {
           "season": 2,
           "episode": 1,
@@ -353,7 +353,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1037.5479
+      "avgPlaybackProgress": 1005.1245
     },
     {
       "contentId": "tt16030542",

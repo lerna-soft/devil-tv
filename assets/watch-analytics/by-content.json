@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T13:01:44.939Z",
+  "generatedAt": "2026-05-21T13:07:40.683Z",
   "items": [
     {
       "contentId": "tt14452776",
@@ -1025,22 +1025,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 11,
       "totalStarts": 6,
-      "totalCompletions": 3,
-      "totalPlaybackProgress": 9297.592472,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 12186.247686,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-21T13:01:19Z",
+      "completionRate": 0.6667,
+      "lastActivityAt": "2026-05-21T13:07:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
-          "completedCount": 3,
+          "playCount": 11,
+          "completedCount": 4,
           "startedCount": 6,
-          "totalPlaybackProgress": 9297.592472,
-          "lastSeenAt": "2026-05-21T13:01:19Z",
+          "totalPlaybackProgress": 12186.247686,
+          "lastSeenAt": "2026-05-21T13:07:28Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -1049,16 +1049,16 @@
         "s1e4": {
           "season": 1,
           "episode": 4,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2888.655214,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T13:01:19Z",
+          "lastActivityAt": "2026-05-21T13:07:28Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e3": {
           "season": 1,
@@ -1103,7 +1103,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 929.7592
+      "avgPlaybackProgress": 1107.8407
     },
     {
       "contentId": "tt1234721",

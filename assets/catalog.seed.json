@@ -1,6 +1,6 @@
 {
-  "version": 233,
-  "generatedAt": "2026-05-21T12:18:39.399Z",
+  "version": 234,
+  "generatedAt": "2026-05-21T13:42:47.650Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50737,6 +50737,22 @@
       "releaseDate": null,
       "overview": "Maria Antonieta Hidalgo, Jessica la Forgia",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYmE0YWQzNzEtNDI5My00OTY5LWJjZTgtYzVlODAxNDI0YjI0XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0084969",
+      "title": "AfterMASH",
+      "year": 1983,
+      "releaseDate": null,
+      "overview": "Harry Morgan, Jamie Farr",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODRiMDQzMTEtYTNhYi00MjE2LTk1ZjUtZDhkYTQ1OGE3MTZlXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

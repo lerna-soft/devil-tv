@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-21T04:41:36.408Z",
+  "generatedAt": "2026-05-21T04:44:36.773Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
+      "userName": "Henry",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-21T04:41:21Z",
-      "totalEvents": 337,
+      "updatedAt": "2026-05-21T04:44:26Z",
+      "totalEvents": 338,
       "totalStarts": 203,
       "totalCompletions": 40,
       "totalPlaybackProgress": 163618.97008381737,
-      "uniqueContentCount": 118,
-      "lastActivityAt": "2026-05-21T04:41:21Z",
+      "uniqueContentCount": 119,
+      "lastActivityAt": "2026-05-21T04:44:26Z",
       "completedContentIds": [
         "tt1190634",
         "tt16030542",
@@ -49,6 +49,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:07Z"
+        },
+        "tt28650488": {
+          "contentId": "tt28650488",
+          "imdbId": "tt28650488",
+          "tmdbId": "1226863",
+          "title": "Super Mario Galaxy la película",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-21T04:44:26Z"
         },
         "tt0089374": {
           "contentId": "tt0089374",
@@ -1455,7 +1467,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 485.5162
+      "avgPlaybackProgress": 484.0798
     },
     {
       "userEmail": "liz-munera@hotmail.com",

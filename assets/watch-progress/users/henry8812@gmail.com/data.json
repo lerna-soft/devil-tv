@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
-  "name": "Henry Gomez",
-  "updatedAt": "2026-05-21T04:41:21Z",
+  "name": "Henry",
+  "updatedAt": "2026-05-21T04:44:26Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1182,11 +1182,22 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-21T04:41:15Z",
       "watched": {}
+    },
+    "tt28650488": {
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-21T04:44:26Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {
-      "tt0267913": 1
+      "tt0267913": 1,
+      "tt28650488": 1
     },
     "watchLater": {
       "296232": true,
@@ -1265,18 +1276,37 @@
       "tt2948372": true,
       "tt33244668": true
     },
-    "updatedAt": "2026-05-21T04:41:21Z"
+    "updatedAt": "2026-05-21T04:44:26Z"
   },
   "lastWatch": {
-    "imdbId": "tt0089374",
-    "tmdbId": "9056",
+    "imdbId": "tt28650488",
+    "tmdbId": "1226863",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-21T04:41:21Z"
+    "updatedAt": "2026-05-21T04:44:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt28650488:s1e1:preference:2026-05-21T04:44:26Z",
+      "contentId": "tt28650488",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry",
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "title": "Super Mario Galaxy la película",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-21T04:44:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0089374:s1e1:preference:2026-05-21T04:41:21Z",
       "contentId": "tt0089374",

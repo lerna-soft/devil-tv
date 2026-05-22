@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:08:52Z",
+  "updatedAt": "2026-05-22T20:09:05Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1372,6 +1372,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:08:52Z",
       "watched": {}
+    },
+    "tt4881806": {
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:09:05Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1470,20 +1480,40 @@
       "tt3741700": true,
       "tt2386490": true,
       "tt6966692": true,
-      "tt6806448": true
+      "tt6806448": true,
+      "tt4881806": true
     },
-    "updatedAt": "2026-05-22T20:08:52Z"
+    "updatedAt": "2026-05-22T20:09:05Z"
   },
   "lastWatch": {
-    "imdbId": "tt6806448",
-    "tmdbId": "384018",
+    "imdbId": "tt4881806",
+    "tmdbId": "351286",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:08:52Z"
+    "updatedAt": "2026-05-22T20:09:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4881806:s1e1:preference:2026-05-22T20:09:05Z",
+      "contentId": "tt4881806",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:09:05Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt6806448:s1e1:preference:2026-05-22T20:08:52Z",
       "contentId": "tt6806448",

@@ -1,6 +1,6 @@
 {
-  "version": 242,
-  "generatedAt": "2026-05-22T19:50:00.325Z",
+  "version": 243,
+  "generatedAt": "2026-05-22T19:50:11.545Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50881,6 +50881,22 @@
       "releaseDate": null,
       "overview": "David Anzuelo, Edwin J. Birmingham",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjU3Y2FmZjItZGNkNi00ODA1LTlhYjQtNWFlY2ViNTU2MGY3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0106145",
+      "title": "Star Trek: Deep Space Nine",
+      "year": 1993,
+      "releaseDate": null,
+      "overview": "Avery Brooks, Rene Auberjonois",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzg3Mzg5ZmYtYTZhNy00NTQ4LWFiYjAtODYxODBlNDViMzYxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

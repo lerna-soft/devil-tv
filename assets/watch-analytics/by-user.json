@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T18:28:31.334Z",
+  "generatedAt": "2026-05-22T19:09:34.372Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T18:28:21Z",
-      "totalEvents": 457,
-      "totalStarts": 271,
+      "updatedAt": "2026-05-22T19:09:24Z",
+      "totalEvents": 458,
+      "totalStarts": 272,
       "totalCompletions": 71,
-      "totalPlaybackProgress": 264954.09524779825,
+      "totalPlaybackProgress": 266179.9417837982,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-22T18:28:21Z",
+      "lastActivityAt": "2026-05-22T19:09:24Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -27,6 +27,7 @@
         "tt0398417"
       ],
       "inProgressContentIds": [
+        "tt33046197",
         "tt29552248",
         "tt0293662",
         "tt1615160",
@@ -76,6 +77,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt33046197": {
+          "contentId": "tt33046197",
+          "imdbId": "tt33046197",
+          "tmdbId": "1168190",
+          "title": "Los hermanos demolición",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 1225.846536,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T19:09:24Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -184,18 +197,6 @@
           "maxProgressValue": 4461.4374871,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T10:49:04Z"
-        },
-        "tt33046197": {
-          "contentId": "tt33046197",
-          "imdbId": "tt33046197",
-          "tmdbId": "1168190",
-          "title": "Los hermanos demolición",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T04:49:52Z"
         },
         "tt0089374": {
           "contentId": "tt0089374",
@@ -1518,7 +1519,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 579.7683
+      "avgPlaybackProgress": 581.1789
     },
     {
       "userEmail": "liz-munera@hotmail.com",

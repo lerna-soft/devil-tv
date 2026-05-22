@@ -1,6 +1,6 @@
 {
-  "version": 258,
-  "generatedAt": "2026-05-22T20:28:57.297Z",
+  "version": 259,
+  "generatedAt": "2026-05-22T20:29:08.981Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27569,6 +27569,22 @@
       "releaseDate": null,
       "overview": "Comedia que se acerca al espíritu y al humor de las películas inglesas de la Productora Ealing. Un enredo muy humano y unos diálogos chispeantes, en un film en el que Hopkins (El silencio de los corderos) cambia por completo de registro para interpretar a un estricto consejero económico contratado para reflotar una pequeña empresa en la que nadie da ni golpe.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/t7YiAgDrraufIDlwAFU3fKtm0Hz.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1106739",
+      "imdbId": null,
+      "title": "Jurado Nº 2",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Justin Kemp, un hombre de familia, mientras forma parte de un jurado en un juicio por asesinato, se encuentra luchando con un serio dilema moral... uno que podría utilizar para influir en el veredicto del jurado y potencialmente condenar (o liberar) al asesino acusado.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8GxazBs1iKffJHAdeyhD9jS1aOz.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

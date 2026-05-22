@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T20:32:05.497Z",
+  "generatedAt": "2026-05-22T20:40:20.490Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2684,6 +2684,50 @@
       "avgPlaybackProgress": 0.9908
     },
     {
+      "contentId": "274870",
+      "imdbId": "",
+      "tmdbId": "274870",
+      "title": "Passengers",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 957.276019,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T20:40:04Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 2,
+          "totalPlaybackProgress": 957.276019,
+          "lastSeenAt": "2026-05-22T20:40:04Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 957.276019,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T20:40:04Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 478.638
+    },
+    {
       "contentId": "tt0096708",
       "imdbId": "tt0096708",
       "tmdbId": "2391",
@@ -4635,50 +4679,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:06:48Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "274870",
-      "imdbId": "",
-      "tmdbId": "274870",
-      "title": "Passengers",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T19:53:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T19:53:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T19:53:56Z",
           "users": {
             "henry8812@gmail.com": true
           },

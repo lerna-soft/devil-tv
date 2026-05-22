@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T04:32:12Z",
+  "updatedAt": "2026-05-22T04:38:54Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1217,10 +1217,10 @@
       "imdbId": "tt21209804",
       "tmdbId": "204832",
       "lastSeason": 1,
-      "lastEpisode": 5,
+      "lastEpisode": 6,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-22T04:32:12Z",
+      "updatedAt": "2026-05-22T04:38:54Z",
       "watched": {}
     },
     "tt0096708": {
@@ -1325,12 +1325,31 @@
     "imdbId": "tt21209804",
     "tmdbId": "204832",
     "season": 1,
-    "episode": 5,
+    "episode": 6,
     "progress": 0,
-    "updatedAt": "2026-05-22T04:32:12Z"
+    "updatedAt": "2026-05-22T04:38:54Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209804:s1e6:started:2026-05-22T04:38:54Z",
+      "contentId": "tt21209804",
+      "episodeKey": "s1e6",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "season": 1,
+      "episode": 6,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-22T04:38:53.115Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T04:38:54Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209804:s1e5:started:2026-05-22T04:32:12Z",
       "contentId": "tt21209804",

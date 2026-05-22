@@ -1,6 +1,6 @@
 {
-  "version": 255,
-  "generatedAt": "2026-05-22T20:14:59.974Z",
+  "version": 256,
+  "generatedAt": "2026-05-22T20:28:26.960Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51089,6 +51089,22 @@
       "releaseDate": null,
       "overview": "Después de una noche en Filadelfia con su hermano que amenaza con sabotear algo más que su éxito, un famoso humorista busca desesperadamente una escapatoria.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/kadLgphdpZiltvHqZHXYoCMtP3d.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "86799",
+      "imdbId": null,
+      "title": "The Hot Zone",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "En 1989, el virus del Ébola aparece en chimpancés de un laboratorio de Washington D. C. y no parece existir ninguna cura. Una científica del Ejército pone su vida en juego para impedir que el mal se extienda a la población humana.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6CSPieuzXvp4gcSSPZzuUwBXjaP.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

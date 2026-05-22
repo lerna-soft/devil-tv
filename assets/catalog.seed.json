@@ -1,6 +1,6 @@
 {
-  "version": 247,
-  "generatedAt": "2026-05-22T20:10:25.443Z",
+  "version": 248,
+  "generatedAt": "2026-05-22T20:10:38.839Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -50961,6 +50961,22 @@
       "releaseDate": null,
       "overview": "Avery Brooks, Rene Auberjonois",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzg3Mzg5ZmYtYTZhNy00NTQ4LWFiYjAtODYxODBlNDViMzYxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "1871",
+      "imdbId": null,
+      "title": "Gente de barrio",
+      "year": 1985,
+      "releaseDate": null,
+      "overview": "Cuenta la vida doméstica y profesional de los habitantes de la ciudad ficticia de Walford, situada en el East End londinense. A lo largo de sus 32 temporadas ha ganado 268 premios y aun sigue en antena.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/z4jgyI5TpoRZiJTNchkVkMrGQyz.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 252,
-  "generatedAt": "2026-05-22T20:14:05.957Z",
+  "version": 253,
+  "generatedAt": "2026-05-22T20:14:20.451Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27489,6 +27489,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2024-08-30",
       "posterUrl": "https://image.tmdb.org/t/p/w500/hDa9OSxIifjagLuVaCfRt5DQBvk.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "9721",
+      "imdbId": null,
+      "title": "7 segundos",
+      "year": 2005,
+      "releaseDate": null,
+      "overview": "Jack Tolliver es un antiguo miembro de los Delta Force al mando de lo que iba a ser un robo de coches perfectamente sincronizado. En lugar de ello, acaba con una obra de Van Gogh de valor incalculable entre las manos, y uno de sus hombres es tomado como rehén por los mafiosos rusos que se han entrometido en el golpe. Un rescate suicida es la única opción que le queda para sobrevivir a la pesadilla en la que se ha convertido su objetivo",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iyqF0oijrzKXyW2GH0yiwZ1Tiiz.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

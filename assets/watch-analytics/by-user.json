@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T04:58:56.567Z",
+  "generatedAt": "2026-05-22T04:59:58.710Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T04:58:46Z",
-      "totalEvents": 430,
-      "totalStarts": 253,
+      "updatedAt": "2026-05-22T04:59:50Z",
+      "totalEvents": 431,
+      "totalStarts": 254,
       "totalCompletions": 62,
       "totalPlaybackProgress": 233473.29902779814,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-22T04:58:46Z",
+      "lastActivityAt": "2026-05-22T04:59:50Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -83,11 +83,11 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 24,
+          "playCount": 25,
           "completed": true,
           "maxProgressValue": 1420.1324260770975,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T04:58:46Z"
+          "lastSeenAt": "2026-05-22T04:59:50Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1518,7 +1518,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 542.9612
+      "avgPlaybackProgress": 541.7014
     },
     {
       "userEmail": "liz-munera@hotmail.com",

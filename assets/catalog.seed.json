@@ -1,6 +1,6 @@
 {
-  "version": 261,
-  "generatedAt": "2026-05-22T20:30:27.970Z",
+  "version": 262,
+  "generatedAt": "2026-05-22T20:30:39.921Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27585,6 +27585,22 @@
       "releaseDate": null,
       "overview": "Justin Kemp, un hombre de familia, mientras forma parte de un jurado en un juicio por asesinato, se encuentra luchando con un serio dilema moral... uno que podría utilizar para influir en el veredicto del jurado y potencialmente condenar (o liberar) al asesino acusado.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/8GxazBs1iKffJHAdeyhD9jS1aOz.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "67252",
+      "imdbId": null,
+      "title": "Hotel Splendide",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2000-09-21",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/td1G4qqhCnOQ4ZliPU3BnWVbRrG.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

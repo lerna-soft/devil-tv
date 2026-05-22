@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-22T22:31:00.212Z",
+  "generatedAt": "2026-05-22T22:40:50.372Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T22:30:43Z",
+      "updatedAt": "2026-05-22T22:40:38Z",
       "totalEvents": 500,
       "totalStarts": 284,
       "totalCompletions": 78,
-      "totalPlaybackProgress": 297664.7582857982,
+      "totalPlaybackProgress": 297300.7899537982,
       "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-22T22:30:43Z",
+      "lastActivityAt": "2026-05-22T22:40:38Z",
       "completedContentIds": [
+        "tt1190634",
         "tt0903747",
         "tt21209804",
         "tt2911666",
-        "tt1190634",
         "tt16030542",
         "tt14452776",
         "tt7587890",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1190634": {
+          "contentId": "tt1190634",
+          "imdbId": "tt1190634",
+          "tmdbId": "76479",
+          "title": "The Boys",
+          "type": "series",
+          "playCount": 13,
+          "completed": true,
+          "maxProgressValue": 4210.753015419501,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T22:40:38Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -522,18 +534,6 @@
           "maxProgressValue": 2801.429116108,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T14:19:20Z"
-        },
-        "tt1190634": {
-          "contentId": "tt1190634",
-          "imdbId": "tt1190634",
-          "tmdbId": "76479",
-          "title": "The Boys",
-          "type": "series",
-          "playCount": 12,
-          "completed": true,
-          "maxProgressValue": 4210.753015419501,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T13:57:38Z"
         },
         "tt2948372": {
           "contentId": "tt2948372",
@@ -1729,7 +1729,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 29,
+          "playCount": 28,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
@@ -1796,7 +1796,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 595.3295
+      "avgPlaybackProgress": 594.6016
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:31:00.206Z",
+  "generatedAt": "2026-05-22T22:40:50.319Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 545,
@@ -44,7 +44,7 @@
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 29,
+      "totalEvents": 28,
       "uniqueUsers": 1,
       "completionRate": 0
     },
@@ -73,20 +73,20 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt1190634",
+      "title": "The Boys",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0.0833
+    },
+    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
-    },
-    {
-      "contentId": "tt1190634",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 12,
-      "uniqueUsers": 1,
-      "completionRate": 0.0909
     }
   ]
 }

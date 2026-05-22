@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T21:30:22.919Z",
+  "generatedAt": "2026-05-22T21:34:23.827Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s3e8:completed:2026-05-22T21:34:10Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s3e8",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 3,
+      "episode": 8,
+      "progress": 2833.461382,
+      "progressValue": 2833.461382,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-22T17:40:27.880Z",
+      "completedAt": "2026-05-22T21:34:08.422Z",
+      "updatedAt": "2026-05-22T21:34:10Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s3e8:started:2026-05-22T21:30:11Z",
       "contentId": "tt0903747",

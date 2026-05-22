@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:16:05.630Z",
+  "generatedAt": "2026-05-22T20:32:05.499Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:14:56Z",
-      "totalEvents": 483,
-      "totalStarts": 274,
+      "updatedAt": "2026-05-22T20:31:56Z",
+      "totalEvents": 484,
+      "totalStarts": 275,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 145,
-      "lastActivityAt": "2026-05-22T20:14:56Z",
+      "uniqueContentCount": 146,
+      "lastActivityAt": "2026-05-22T20:31:56Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt7784604": {
+          "contentId": "tt7784604",
+          "imdbId": "tt7784604",
+          "tmdbId": "493922",
+          "title": "Hereditary",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:31:56Z"
         },
         "tt3344680": {
           "contentId": "tt3344680",
@@ -1783,7 +1795,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 559.9037
+      "avgPlaybackProgress": 558.7469
     },
     {
       "userEmail": "liz-munera@hotmail.com",

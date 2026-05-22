@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:14:56Z",
+  "updatedAt": "2026-05-22T20:31:56Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1452,6 +1452,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:09:23Z",
       "watched": {}
+    },
+    "tt7784604": {
+      "imdbId": "tt7784604",
+      "tmdbId": "493922",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:31:56Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1563,15 +1573,34 @@
     "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "15070",
+    "imdbId": "tt7784604",
+    "tmdbId": "493922",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:14:56Z"
+    "updatedAt": "2026-05-22T20:31:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt7784604:s1e1:started:2026-05-22T20:31:56Z",
+      "contentId": "tt7784604",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt7784604",
+      "tmdbId": "493922",
+      "title": "Hereditary",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-22T20:31:55.007Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:31:56Z"
+    },
     {
       "eventId": "henry8812@gmail.com:15070:s1e1:preference:2026-05-22T20:14:56Z",
       "contentId": "15070",

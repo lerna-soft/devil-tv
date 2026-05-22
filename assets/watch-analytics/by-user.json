@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T15:39:59.041Z",
+  "generatedAt": "2026-05-22T15:55:42.249Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T15:29:33Z",
-      "totalEvents": 443,
+      "updatedAt": "2026-05-22T15:55:33Z",
+      "totalEvents": 444,
       "totalStarts": 263,
-      "totalCompletions": 65,
-      "totalPlaybackProgress": 245469.66049779818,
+      "totalCompletions": 66,
+      "totalPlaybackProgress": 248297.9206097982,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-22T15:29:33Z",
+      "lastActivityAt": "2026-05-22T15:55:33Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -83,11 +83,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 59,
+          "playCount": 60,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-22T15:29:33Z"
+          "lastSeenAt": "2026-05-22T15:55:33Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1518,7 +1518,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 554.1076
+      "avgPlaybackProgress": 559.2296
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-22T04:45:55.458Z",
+  "generatedAt": "2026-05-22T04:53:52.018Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 473,
-  "totalStarts": 280,
+  "totalEvents": 474,
+  "totalStarts": 281,
   "totalCompletions": 63,
-  "overallCompletionRate": 0.225,
+  "overallCompletionRate": 0.2242,
   "trackedTitles": 136,
   "mostWatchedContent": [
     {
@@ -49,20 +49,20 @@
       "completionRate": 0.6667
     },
     {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 23,
+      "uniqueUsers": 1,
+      "completionRate": 0.3636
+    },
+    {
       "contentId": "tt1632701",
       "title": "Suits: la clave del éxito",
       "type": "series",
       "totalEvents": 23,
       "uniqueUsers": 1,
       "completionRate": 0.3529
-    },
-    {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 22,
-      "uniqueUsers": 1,
-      "completionRate": 0.4
     },
     {
       "contentId": "tt29552248",

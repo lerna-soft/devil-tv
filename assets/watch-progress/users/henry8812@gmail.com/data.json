@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T15:29:33Z",
+  "updatedAt": "2026-05-22T15:55:33Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1038,9 +1038,9 @@
       "tmdbId": "1396",
       "lastSeason": 3,
       "lastEpisode": 2,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-22T15:29:33Z",
+      "progress": 2828.260112,
+      "lastProgress": 2828.260112,
+      "updatedAt": "2026-05-22T15:55:33Z",
       "watched": {}
     },
     "tt31392119": {
@@ -1326,11 +1326,30 @@
     "tmdbId": "1396",
     "season": 3,
     "episode": 2,
-    "progress": 0,
-    "updatedAt": "2026-05-22T15:29:33Z"
+    "progress": 2828.260112,
+    "updatedAt": "2026-05-22T15:55:33Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s3e2:completed:2026-05-22T15:55:33Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s3e2",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 3,
+      "episode": 2,
+      "progress": 2828.260112,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-22T15:29:31.287Z",
+      "completedAt": "2026-05-22T15:55:31.362Z",
+      "updatedAt": "2026-05-22T15:55:33Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s3e2:started:2026-05-22T15:29:33Z",
       "contentId": "tt0903747",

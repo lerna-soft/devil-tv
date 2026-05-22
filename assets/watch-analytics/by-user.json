@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:15:08.747Z",
+  "generatedAt": "2026-05-22T20:15:56.006Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:10:42Z",
-      "totalEvents": 482,
+      "updatedAt": "2026-05-22T20:14:56Z",
+      "totalEvents": 483,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 144,
-      "lastActivityAt": "2026-05-22T20:10:42Z",
+      "uniqueContentCount": 145,
+      "lastActivityAt": "2026-05-22T20:14:56Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -42,6 +42,18 @@
         "tt38121182"
       ],
       "content": {
+        "15070": {
+          "contentId": "15070",
+          "imdbId": "",
+          "tmdbId": "15070",
+          "title": "Invicto",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:14:56Z"
+        },
         "15255": {
           "contentId": "15255",
           "imdbId": "",
@@ -1771,7 +1783,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 561.0654
+      "avgPlaybackProgress": 559.9037
     },
     {
       "userEmail": "liz-munera@hotmail.com",

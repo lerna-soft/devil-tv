@@ -1,8 +1,18 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:10:42Z",
+  "updatedAt": "2026-05-22T20:14:56Z",
   "progress": {
+    "15070": {
+      "imdbId": "",
+      "tmdbId": "15070",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:14:56Z",
+      "watched": {}
+    },
     "15255": {
       "imdbId": "",
       "tmdbId": "15255",
@@ -1449,6 +1459,7 @@
       "379149": 1
     },
     "watchLater": {
+      "15070": true,
       "15255": true,
       "38234": true,
       "296232": true,
@@ -1549,18 +1560,37 @@
       "tt2345759": true,
       "tt3344680": true
     },
-    "updatedAt": "2026-05-22T20:10:42Z"
+    "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastWatch": {
     "imdbId": "",
-    "tmdbId": "38234",
+    "tmdbId": "15070",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:10:42Z"
+    "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:15070:s1e1:preference:2026-05-22T20:14:56Z",
+      "contentId": "15070",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "15070",
+      "title": "Invicto",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:14:56Z"
+    },
     {
       "eventId": "henry8812@gmail.com:38234:s1e1:preference:2026-05-22T20:10:42Z",
       "contentId": "38234",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:07:40.008Z",
+  "generatedAt": "2026-05-22T20:07:56.449Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:07:01Z",
-      "totalEvents": 465,
+      "updatedAt": "2026-05-22T20:07:04Z",
+      "totalEvents": 466,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 127,
-      "lastActivityAt": "2026-05-22T20:07:01Z",
+      "uniqueContentCount": 128,
+      "lastActivityAt": "2026-05-22T20:07:04Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt20215234": {
+          "contentId": "tt20215234",
+          "imdbId": "tt20215234",
+          "tmdbId": "974576",
+          "title": "Cónclave",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:07:04Z"
         },
         "tt16366836": {
           "contentId": "tt16366836",
@@ -1567,7 +1579,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 581.5774
+      "avgPlaybackProgress": 580.3294
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:07:19.641Z",
+  "generatedAt": "2026-05-22T20:07:30.686Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:06:57Z",
-      "totalEvents": 463,
+      "updatedAt": "2026-05-22T20:07:00Z",
+      "totalEvents": 464,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
       "uniqueContentCount": 126,
-      "lastActivityAt": "2026-05-22T20:06:57Z",
+      "lastActivityAt": "2026-05-22T20:07:00Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -96,11 +96,11 @@
           "tmdbId": "866398",
           "title": "Beekeeper: El protector",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:06:57Z"
+          "lastSeenAt": "2026-05-22T20:07:00Z"
         },
         "tt21692408": {
           "contentId": "tt21692408",
@@ -1555,7 +1555,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 584.0896
+      "avgPlaybackProgress": 582.8308
     },
     {
       "userEmail": "liz-munera@hotmail.com",

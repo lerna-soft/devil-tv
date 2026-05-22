@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:06:57Z",
+  "updatedAt": "2026-05-22T20:07:00Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1260,14 +1260,13 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-22T20:06:57Z",
+      "updatedAt": "2026-05-22T20:07:00Z",
       "watched": {}
     }
   },
   "preferences": {
     "likes": {
-      "379149": 1,
-      "tt15314262": 1
+      "379149": 1
     },
     "watchLater": {
       "296232": true,
@@ -1352,7 +1351,7 @@
       "tt21692408": true,
       "tt15314262": true
     },
-    "updatedAt": "2026-05-22T20:06:57Z"
+    "updatedAt": "2026-05-22T20:07:00Z"
   },
   "lastWatch": {
     "imdbId": "tt15314262",
@@ -1360,10 +1359,29 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:06:57Z"
+    "updatedAt": "2026-05-22T20:07:00Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:07:00Z",
+      "contentId": "tt15314262",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt15314262",
+      "tmdbId": "866398",
+      "title": "Beekeeper: El protector",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:07:00Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:06:57Z",
       "contentId": "tt15314262",

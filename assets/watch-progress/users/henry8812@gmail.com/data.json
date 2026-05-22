@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:09:16Z",
+  "updatedAt": "2026-05-22T20:09:21Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1402,6 +1402,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:09:16Z",
       "watched": {}
+    },
+    "tt2345759": {
+      "imdbId": "tt2345759",
+      "tmdbId": "282035",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:09:21Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1503,20 +1513,40 @@
       "tt6806448": true,
       "tt4881806": true,
       "tt3766354": true,
-      "tt4972582": true
+      "tt4972582": true,
+      "tt2345759": true
     },
-    "updatedAt": "2026-05-22T20:09:16Z"
+    "updatedAt": "2026-05-22T20:09:21Z"
   },
   "lastWatch": {
-    "imdbId": "tt4972582",
-    "tmdbId": "381288",
+    "imdbId": "tt2345759",
+    "tmdbId": "282035",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:09:16Z"
+    "updatedAt": "2026-05-22T20:09:21Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2345759:s1e1:preference:2026-05-22T20:09:21Z",
+      "contentId": "tt2345759",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2345759",
+      "tmdbId": "282035",
+      "title": "La momia",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:09:21Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt4972582:s1e1:preference:2026-05-22T20:09:16Z",
       "contentId": "tt4972582",

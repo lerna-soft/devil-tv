@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:12:36.665Z",
+  "generatedAt": "2026-05-22T20:12:55.527Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:09:16Z",
-      "totalEvents": 478,
+      "updatedAt": "2026-05-22T20:09:21Z",
+      "totalEvents": 479,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 140,
-      "lastActivityAt": "2026-05-22T20:09:16Z",
+      "uniqueContentCount": 141,
+      "lastActivityAt": "2026-05-22T20:09:21Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt2345759": {
+          "contentId": "tt2345759",
+          "imdbId": "tt2345759",
+          "tmdbId": "282035",
+          "title": "La momia",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:09:21Z"
         },
         "tt4972582": {
           "contentId": "tt4972582",
@@ -1723,7 +1735,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 565.7605
+      "avgPlaybackProgress": 564.5793
     },
     {
       "userEmail": "liz-munera@hotmail.com",

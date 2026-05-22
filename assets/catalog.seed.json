@@ -1,6 +1,6 @@
 {
-  "version": 253,
-  "generatedAt": "2026-05-22T20:14:20.451Z",
+  "version": 254,
+  "generatedAt": "2026-05-22T20:14:49.319Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27505,6 +27505,22 @@
       "releaseDate": null,
       "overview": "Jack Tolliver es un antiguo miembro de los Delta Force al mando de lo que iba a ser un robo de coches perfectamente sincronizado. En lugar de ello, acaba con una obra de Van Gogh de valor incalculable entre las manos, y uno de sus hombres es tomado como rehén por los mafiosos rusos que se han entrometido en el golpe. Un rescate suicida es la única opción que le queda para sobrevivir a la pesadilla en la que se ha convertido su objetivo",
       "posterUrl": "https://image.tmdb.org/t/p/w500/iyqF0oijrzKXyW2GH0yiwZ1Tiiz.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "29355",
+      "imdbId": null,
+      "title": "Gatos salvajes",
+      "year": 1986,
+      "releaseDate": null,
+      "overview": "Molly McGrath, una tranquila profesora muy aficionada al fútbol americano, sueña con seguir los pasos de su padre que fue un entrenador famoso. Cuando el puesto de entrenador del equipo de su colegio queda vacante, ella solicita el trabajo, provocando las burlas de sus colegas y de su ex marido. Finalmente, consigue el trabajo, pero el equipo, formado por chicos inadaptados, es el más torpe e inexperto de la ciudad. (FILMAFFINITY)",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zqhoG55rXOCaSsGq78TyJ2wSpkc.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

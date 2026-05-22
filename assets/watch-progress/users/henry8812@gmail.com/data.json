@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:08:01Z",
+  "updatedAt": "2026-05-22T20:08:15Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1322,6 +1322,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:08:01Z",
       "watched": {}
+    },
+    "tt8367814": {
+      "imdbId": "tt8367814",
+      "tmdbId": "522627",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:08:15Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1415,20 +1425,40 @@
       "tt26047818": true,
       "tt17024450": true,
       "tt9764362": true,
-      "tt9777666": true
+      "tt9777666": true,
+      "tt8367814": true
     },
-    "updatedAt": "2026-05-22T20:08:01Z"
+    "updatedAt": "2026-05-22T20:08:15Z"
   },
   "lastWatch": {
-    "imdbId": "tt9777666",
-    "tmdbId": "588228",
+    "imdbId": "tt8367814",
+    "tmdbId": "522627",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:08:01Z"
+    "updatedAt": "2026-05-22T20:08:15Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt8367814:s1e1:preference:2026-05-22T20:08:15Z",
+      "contentId": "tt8367814",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8367814",
+      "tmdbId": "522627",
+      "title": "The Gentlemen: Los señores de la mafia",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:08:15Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9777666:s1e1:preference:2026-05-22T20:08:01Z",
       "contentId": "tt9777666",

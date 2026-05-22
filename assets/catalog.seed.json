@@ -1,6 +1,6 @@
 {
-  "version": 262,
-  "generatedAt": "2026-05-22T20:30:39.921Z",
+  "version": 263,
+  "generatedAt": "2026-05-22T20:30:54.216Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27601,6 +27601,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2000-09-21",
       "posterUrl": "https://image.tmdb.org/t/p/w500/td1G4qqhCnOQ4ZliPU3BnWVbRrG.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "90214",
+      "imdbId": null,
+      "title": "Adorable locura",
+      "year": 1996,
+      "releaseDate": null,
+      "overview": "A Lewis, un joven director de teatro aficionado, le ofrecen un trabajo en un programa gubernamental para la rehabilitación de pacientes con enfermedades mentales en una institución de Sydney. Su proyecto se ve invadido por uno de los pacientes que quiere montar la ópera Cosi Fan Tutte de Mozart a pesar de que ninguno de los pacientes sabe cantar y ninguno habla italiano. Se produce una comedia de errores, pero que une a los pacientes y a su director de formas inesperadas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/g4b3tEgmPSq7mZ7db1r9i5jHEHV.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

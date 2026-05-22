@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:10:40Z",
+  "updatedAt": "2026-05-22T20:10:42Z",
   "progress": {
     "15255": {
       "imdbId": "",
@@ -11,6 +11,16 @@
       "progress": 0,
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:10:40Z",
+      "watched": {}
+    },
+    "38234": {
+      "imdbId": "",
+      "tmdbId": "38234",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:10:42Z",
       "watched": {}
     },
     "274870": {
@@ -1440,6 +1450,7 @@
     },
     "watchLater": {
       "15255": true,
+      "38234": true,
       "296232": true,
       "379149": true,
       "800158": true,
@@ -1538,18 +1549,37 @@
       "tt2345759": true,
       "tt3344680": true
     },
-    "updatedAt": "2026-05-22T20:10:40Z"
+    "updatedAt": "2026-05-22T20:10:42Z"
   },
   "lastWatch": {
     "imdbId": "",
-    "tmdbId": "15255",
+    "tmdbId": "38234",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:10:40Z"
+    "updatedAt": "2026-05-22T20:10:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:38234:s1e1:preference:2026-05-22T20:10:42Z",
+      "contentId": "38234",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "38234",
+      "title": "Invicto 3: Redención",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:10:42Z"
+    },
     {
       "eventId": "henry8812@gmail.com:15255:s1e1:preference:2026-05-22T20:10:40Z",
       "contentId": "15255",

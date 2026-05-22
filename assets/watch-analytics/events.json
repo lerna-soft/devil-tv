@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T20:08:59.263Z",
+  "generatedAt": "2026-05-22T20:09:11.062Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt3741700:s1e1:preference:2026-05-22T20:08:35Z",
+      "contentId": "tt3741700",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3741700",
+      "tmdbId": "373571",
+      "title": "Godzilla: Rey de los Monstruos",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:08:35Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8367814:s1e1:preference:2026-05-22T20:08:15Z",
       "contentId": "tt8367814",

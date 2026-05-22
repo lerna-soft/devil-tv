@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T20:12:55.520Z",
+  "generatedAt": "2026-05-22T20:13:52.370Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt3344680:s1e1:preference:2026-05-22T20:09:23Z",
+      "contentId": "tt3344680",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3344680",
+      "tmdbId": "348893",
+      "title": "Boyka: Invicto IV",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:09:23Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2345759:s1e1:preference:2026-05-22T20:09:21Z",
       "contentId": "tt2345759",

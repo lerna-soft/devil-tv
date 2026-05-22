@@ -1252,11 +1252,22 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:06:48Z",
       "watched": {}
+    },
+    "tt15314262": {
+      "imdbId": "tt15314262",
+      "tmdbId": "866398",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:06:48Z",
+      "watched": {}
     }
   },
   "preferences": {
     "likes": {
-      "379149": 1
+      "379149": 1,
+      "tt15314262": 1
     },
     "watchLater": {
       "296232": true,
@@ -1343,8 +1354,8 @@
     "updatedAt": "2026-05-22T20:06:48Z"
   },
   "lastWatch": {
-    "imdbId": "tt21692408",
-    "tmdbId": "1011985",
+    "imdbId": "tt15314262",
+    "tmdbId": "866398",
     "season": 1,
     "episode": 1,
     "progress": 0,
@@ -1361,6 +1372,25 @@
       "imdbId": "tt21692408",
       "tmdbId": "1011985",
       "title": "Kung Fu Panda 4",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:06:48Z"
+    },
+    {
+      "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:06:48Z",
+      "contentId": "tt15314262",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt15314262",
+      "tmdbId": "866398",
+      "title": "Beekeeper: El protector",
       "type": "movie",
       "season": 1,
       "episode": 1,

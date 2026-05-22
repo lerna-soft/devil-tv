@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T19:39:36.334Z",
+  "generatedAt": "2026-05-22T19:54:04.687Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T19:39:26Z",
-      "totalEvents": 459,
-      "totalStarts": 273,
+      "updatedAt": "2026-05-22T19:53:56Z",
+      "totalEvents": 460,
+      "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-22T19:39:26Z",
+      "uniqueContentCount": 124,
+      "lastActivityAt": "2026-05-22T19:53:56Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -42,6 +42,18 @@
         "tt38121182"
       ],
       "content": {
+        "274870": {
+          "contentId": "274870",
+          "imdbId": "",
+          "tmdbId": "274870",
+          "title": "Passengers",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T19:53:56Z"
+        },
         "296232": {
           "contentId": "296232",
           "imdbId": "",
@@ -1519,7 +1531,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 589.1797
+      "avgPlaybackProgress": 587.8989
     },
     {
       "userEmail": "liz-munera@hotmail.com",

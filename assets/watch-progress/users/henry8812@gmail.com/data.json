@@ -1,8 +1,18 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T19:39:26Z",
+  "updatedAt": "2026-05-22T19:53:56Z",
   "progress": {
+    "274870": {
+      "imdbId": "",
+      "tmdbId": "274870",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T19:53:56Z",
+      "watched": {}
+    },
     "296232": {
       "imdbId": "",
       "tmdbId": "296232",
@@ -1322,15 +1332,34 @@
     "updatedAt": "2026-05-21T21:33:53Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "",
+    "tmdbId": "274870",
     "season": 1,
     "episode": 1,
-    "progress": 4253.558003,
-    "updatedAt": "2026-05-22T19:39:26Z"
+    "progress": 0,
+    "updatedAt": "2026-05-22T19:53:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:274870:s1e1:started:2026-05-22T19:53:56Z",
+      "contentId": "274870",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "274870",
+      "title": "Passengers",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-22T19:53:53.953Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T19:53:56Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33046197:s1e1:started:2026-05-22T19:39:26Z",
       "contentId": "tt33046197",

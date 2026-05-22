@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:30:50.546Z",
+  "generatedAt": "2026-05-22T22:31:00.209Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,27 +7,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 87,
-      "totalStarts": 53,
+      "totalEvents": 88,
+      "totalStarts": 54,
       "totalCompletions": 33,
       "totalPlaybackProgress": 106479.15724627016,
       "uniqueUsers": 1,
-      "completionRate": 0.6226,
-      "lastActivityAt": "2026-05-22T22:30:41Z",
+      "completionRate": 0.6111,
+      "lastActivityAt": "2026-05-22T22:30:43Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 87,
+          "playCount": 88,
           "completedCount": 33,
-          "startedCount": 53,
+          "startedCount": 54,
           "totalPlaybackProgress": 106479.15724627016,
-          "lastSeenAt": "2026-05-22T22:30:41Z",
+          "lastSeenAt": "2026-05-22T22:30:43Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s4e2": {
+          "season": 4,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T22:30:43Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s4e1": {
           "season": 4,
           "episode": 1,
@@ -505,7 +519,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1223.8984
+      "avgPlaybackProgress": 1209.9904
     },
     {
       "contentId": "tt14452776",
@@ -1121,10 +1135,10 @@
       "tmdbId": "359410",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 30,
-      "totalStarts": 30,
+      "totalEvents": 29,
+      "totalStarts": 29,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 30260.583266846672,
+      "totalPlaybackProgress": 29982.41639484667,
       "uniqueUsers": 1,
       "completionRate": 0,
       "lastActivityAt": "2026-05-12T05:01:04Z",
@@ -1132,10 +1146,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 30,
+          "playCount": 29,
           "completedCount": 0,
-          "startedCount": 30,
-          "totalPlaybackProgress": 30260.583266846672,
+          "startedCount": 29,
+          "totalPlaybackProgress": 29982.41639484667,
           "lastSeenAt": "2026-05-12T05:01:04Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -1145,10 +1159,10 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 30,
-          "totalStarts": 30,
+          "totalEvents": 29,
+          "totalStarts": 29,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 30260.583266846672,
+          "totalPlaybackProgress": 29982.41639484667,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-12T05:01:04Z",
           "users": {
@@ -1157,7 +1171,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1008.6861
+      "avgPlaybackProgress": 1033.8764
     },
     {
       "contentId": "tt31596104",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T21:58:19.700Z",
+  "generatedAt": "2026-05-22T22:02:59.868Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 78,
+      "totalEvents": 79,
       "totalStarts": 49,
-      "totalCompletions": 28,
-      "totalPlaybackProgress": 92321.0221962702,
+      "totalCompletions": 29,
+      "totalPlaybackProgress": 95152.5795412702,
       "uniqueUsers": 1,
-      "completionRate": 0.5714,
-      "lastActivityAt": "2026-05-22T21:58:02Z",
+      "completionRate": 0.5918,
+      "lastActivityAt": "2026-05-22T22:02:50Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 78,
-          "completedCount": 28,
+          "playCount": 79,
+          "completedCount": 29,
           "startedCount": 49,
-          "totalPlaybackProgress": 92321.0221962702,
-          "lastSeenAt": "2026-05-22T21:58:02Z",
+          "totalPlaybackProgress": 95152.5795412702,
+          "lastSeenAt": "2026-05-22T22:02:50Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s3e10": {
           "season": 3,
           "episode": 10,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2831.557345,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T21:58:02Z",
+          "lastActivityAt": "2026-05-22T22:02:50Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s3e9": {
           "season": 3,
@@ -449,7 +449,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1183.6028
+      "avgPlaybackProgress": 1204.463
     },
     {
       "contentId": "tt14452776",

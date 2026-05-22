@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:08:06.396Z",
+  "generatedAt": "2026-05-22T20:08:17.053Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:07:13Z",
-      "totalEvents": 467,
+      "updatedAt": "2026-05-22T20:07:16Z",
+      "totalEvents": 468,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 129,
-      "lastActivityAt": "2026-05-22T20:07:13Z",
+      "uniqueContentCount": 130,
+      "lastActivityAt": "2026-05-22T20:07:16Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt17024450": {
+          "contentId": "tt17024450",
+          "imdbId": "tt17024450",
+          "tmdbId": "926393",
+          "title": "The Equalizer 3",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:07:16Z"
         },
         "tt26047818": {
           "contentId": "tt26047818",
@@ -1591,7 +1603,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 579.0867
+      "avgPlaybackProgress": 577.8494
     },
     {
       "userEmail": "liz-munera@hotmail.com",

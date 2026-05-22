@@ -1,6 +1,6 @@
 {
-  "version": 246,
-  "generatedAt": "2026-05-22T20:10:13.342Z",
+  "version": 247,
+  "generatedAt": "2026-05-22T20:10:25.443Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27425,6 +27425,22 @@
       "releaseDate": null,
       "overview": "Jackson Chao, Ruth Bidner",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTM5NTkzYjYtMGRiOC00OTgzLTllOTctMDY2ZmNmMWM0MmI1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0331910",
+      "title": "Boyka",
+      "year": 1947,
+      "releaseDate": null,
+      "overview": "Stoyan Bachvarov, Lyuben Lambrev",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGUxYzFlYzctMTI4Yi00YTVhLWIyMjItZTAyMzIyNzU0MTRlXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

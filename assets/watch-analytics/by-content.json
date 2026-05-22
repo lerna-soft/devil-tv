@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T22:44:36.357Z",
+  "generatedAt": "2026-05-22T23:10:50.096Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1135,10 +1135,10 @@
       "tmdbId": "359410",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 28,
-      "totalStarts": 28,
+      "totalEvents": 27,
+      "totalStarts": 27,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 29618.44806284667,
+      "totalPlaybackProgress": 29219.15002284667,
       "uniqueUsers": 1,
       "completionRate": 0,
       "lastActivityAt": "2026-05-12T05:01:04Z",
@@ -1146,10 +1146,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 28,
+          "playCount": 27,
           "completedCount": 0,
-          "startedCount": 28,
-          "totalPlaybackProgress": 29618.44806284667,
+          "startedCount": 27,
+          "totalPlaybackProgress": 29219.15002284667,
           "lastSeenAt": "2026-05-12T05:01:04Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -1159,10 +1159,10 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 28,
-          "totalStarts": 28,
+          "totalEvents": 27,
+          "totalStarts": 27,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 29618.44806284667,
+          "totalPlaybackProgress": 29219.15002284667,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-12T05:01:04Z",
           "users": {
@@ -1171,7 +1171,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1057.8017
+      "avgPlaybackProgress": 1082.1907
     },
     {
       "contentId": "tt31596104",
@@ -1601,22 +1601,22 @@
       "tmdbId": "76479",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 12,
+      "totalEvents": 14,
+      "totalStarts": 13,
       "totalCompletions": 1,
-      "totalPlaybackProgress": 7864.041254433182,
+      "totalPlaybackProgress": 10482.269520847183,
       "uniqueUsers": 1,
-      "completionRate": 0.0833,
-      "lastActivityAt": "2026-05-22T22:40:38Z",
+      "completionRate": 0.0769,
+      "lastActivityAt": "2026-05-22T23:10:41Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 14,
           "completedCount": 1,
-          "startedCount": 12,
-          "totalPlaybackProgress": 7864.041254433182,
-          "lastSeenAt": "2026-05-22T22:40:38Z",
+          "startedCount": 13,
+          "totalPlaybackProgress": 10482.269520847183,
+          "lastSeenAt": "2026-05-22T23:10:41Z",
           "lastSeason": 1,
           "lastEpisode": 8
         }
@@ -1625,12 +1625,12 @@
         "s5e8": {
           "season": 5,
           "episode": 8,
-          "totalEvents": 1,
-          "totalStarts": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalPlaybackProgress": 2618.228266414001,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T22:40:38Z",
+          "lastActivityAt": "2026-05-22T23:10:41Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1693,7 +1693,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 604.9263
+      "avgPlaybackProgress": 748.7335
     },
     {
       "contentId": "tt32897959",

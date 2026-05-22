@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T04:22:00.465Z",
+  "generatedAt": "2026-05-22T04:32:18.531Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1111,22 +1111,22 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 17,
+      "totalEvents": 18,
       "totalStarts": 7,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 3391.891870752032,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 4812.024285491261,
       "uniqueUsers": 1,
-      "completionRate": 0.2857,
-      "lastActivityAt": "2026-05-22T04:21:50Z",
+      "completionRate": 0.4286,
+      "lastActivityAt": "2026-05-22T04:32:08Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
-          "completedCount": 2,
+          "playCount": 18,
+          "completedCount": 3,
           "startedCount": 7,
-          "totalPlaybackProgress": 3391.891870752032,
-          "lastSeenAt": "2026-05-22T04:21:50Z",
+          "totalPlaybackProgress": 4812.024285491261,
+          "lastSeenAt": "2026-05-22T04:32:08Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -1135,16 +1135,16 @@
         "s1e4": {
           "season": 1,
           "episode": 4,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.132414739229,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:21:50Z",
+          "lastActivityAt": "2026-05-22T04:32:08Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e3": {
           "season": 1,
@@ -1189,7 +1189,7 @@
           "completionRate": 0.5
         }
       },
-      "avgPlaybackProgress": 199.5231
+      "avgPlaybackProgress": 267.3347
     },
     {
       "contentId": "tt29552248",

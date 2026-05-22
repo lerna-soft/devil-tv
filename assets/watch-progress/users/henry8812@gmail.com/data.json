@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:09:05Z",
+  "updatedAt": "2026-05-22T20:09:09Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1382,6 +1382,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:09:05Z",
       "watched": {}
+    },
+    "tt3766354": {
+      "imdbId": "tt3766354",
+      "tmdbId": "345887",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:09:09Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1481,20 +1491,40 @@
       "tt2386490": true,
       "tt6966692": true,
       "tt6806448": true,
-      "tt4881806": true
+      "tt4881806": true,
+      "tt3766354": true
     },
-    "updatedAt": "2026-05-22T20:09:05Z"
+    "updatedAt": "2026-05-22T20:09:09Z"
   },
   "lastWatch": {
-    "imdbId": "tt4881806",
-    "tmdbId": "351286",
+    "imdbId": "tt3766354",
+    "tmdbId": "345887",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:09:05Z"
+    "updatedAt": "2026-05-22T20:09:09Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt3766354:s1e1:preference:2026-05-22T20:09:09Z",
+      "contentId": "tt3766354",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3766354",
+      "tmdbId": "345887",
+      "title": "The Equalizer 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:09:09Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt4881806:s1e1:preference:2026-05-22T20:09:05Z",
       "contentId": "tt4881806",

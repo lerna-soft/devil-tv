@@ -1,6 +1,6 @@
 {
-  "version": 257,
-  "generatedAt": "2026-05-22T20:28:37.674Z",
+  "version": 258,
+  "generatedAt": "2026-05-22T20:28:57.297Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27553,6 +27553,22 @@
       "releaseDate": null,
       "overview": "Bunyip Bluegum es un joven koala que siempre había creído que era huérfano, pero un día descubre que sus padres aún viven. Bunyip emprenderá un viaje en su busca de su familia y que le llevará a encontrar amigos como Bill Barnacle, un rudo marinero, el pingüino Sam Swanoff, y su inseparable compañero Albert, un pudding mágico al que persiguen una pareja de ladrones. Juntos fundan la Noble Sociedad de los Propietarios de Pudding, que ayudará a su amigo Bunyip a encontrar a sus padres.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/5bifqYXdl6xbHpmOWn6lYp9xKgQ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "16982",
+      "imdbId": null,
+      "title": "Spotswood",
+      "year": 1992,
+      "releaseDate": null,
+      "overview": "Comedia que se acerca al espíritu y al humor de las películas inglesas de la Productora Ealing. Un enredo muy humano y unos diálogos chispeantes, en un film en el que Hopkins (El silencio de los corderos) cambia por completo de registro para interpretar a un estricto consejero económico contratado para reflotar una pequeña empresa en la que nadie da ni golpe.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/t7YiAgDrraufIDlwAFU3fKtm0Hz.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

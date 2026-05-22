@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-22T21:10:17.615Z",
+  "generatedAt": "2026-05-22T21:30:22.919Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 531,
-  "totalStarts": 306,
+  "totalEvents": 532,
+  "totalStarts": 307,
   "totalCompletions": 72,
-  "overallCompletionRate": 0.2353,
+  "overallCompletionRate": 0.2345,
   "trackedTitles": 159,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 73,
+      "totalEvents": 74,
       "uniqueUsers": 1,
-      "completionRate": 0.5652
+      "completionRate": 0.5532
     },
     {
       "contentId": "tt14452776",

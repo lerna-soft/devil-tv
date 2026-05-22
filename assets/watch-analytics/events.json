@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T20:07:30.681Z",
+  "generatedAt": "2026-05-22T20:07:40.002Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt16366836:s1e1:preference:2026-05-22T20:07:01Z",
+      "contentId": "tt16366836",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt16366836",
+      "tmdbId": "912649",
+      "title": "Venom: El último baile",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:07:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:07:00Z",
       "contentId": "tt15314262",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:07:00Z",
+  "updatedAt": "2026-05-22T20:07:01Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1262,6 +1262,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:07:00Z",
       "watched": {}
+    },
+    "tt16366836": {
+      "imdbId": "tt16366836",
+      "tmdbId": "912649",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:07:01Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1349,20 +1359,40 @@
       "tt0096708": true,
       "tt21209804": true,
       "tt21692408": true,
-      "tt15314262": true
+      "tt15314262": true,
+      "tt16366836": true
     },
-    "updatedAt": "2026-05-22T20:07:00Z"
+    "updatedAt": "2026-05-22T20:07:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt15314262",
-    "tmdbId": "866398",
+    "imdbId": "tt16366836",
+    "tmdbId": "912649",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:07:00Z"
+    "updatedAt": "2026-05-22T20:07:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt16366836:s1e1:preference:2026-05-22T20:07:01Z",
+      "contentId": "tt16366836",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt16366836",
+      "tmdbId": "912649",
+      "title": "Venom: El último baile",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:07:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:07:00Z",
       "contentId": "tt15314262",

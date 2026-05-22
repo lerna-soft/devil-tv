@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T14:36:30.562Z",
+  "generatedAt": "2026-05-22T15:06:32.579Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 54,
-      "totalStarts": 35,
+      "totalEvents": 55,
+      "totalStarts": 36,
       "totalCompletions": 18,
-      "totalPlaybackProgress": 57629.35009727019,
+      "totalPlaybackProgress": 59721.63377727019,
       "uniqueUsers": 1,
-      "completionRate": 0.5143,
-      "lastActivityAt": "2026-05-22T14:36:19Z",
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-22T15:06:21Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 54,
+          "playCount": 55,
           "completedCount": 18,
-          "startedCount": 35,
-          "totalPlaybackProgress": 57629.35009727019,
-          "lastSeenAt": "2026-05-22T14:36:19Z",
+          "startedCount": 36,
+          "totalPlaybackProgress": 59721.63377727019,
+          "lastSeenAt": "2026-05-22T15:06:21Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,12 +31,12 @@
         "s2e13": {
           "season": 2,
           "episode": 13,
-          "totalEvents": 1,
-          "totalStarts": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalPlaybackProgress": 2092.28368,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T14:36:19Z",
+          "lastActivityAt": "2026-05-22T15:06:21Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -309,7 +309,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1067.2102
+      "avgPlaybackProgress": 1085.8479
     },
     {
       "contentId": "tt14452776",

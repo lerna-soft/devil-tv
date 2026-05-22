@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:09:09Z",
+  "updatedAt": "2026-05-22T20:09:16Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1392,6 +1392,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:09:09Z",
       "watched": {}
+    },
+    "tt4972582": {
+      "imdbId": "tt4972582",
+      "tmdbId": "381288",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:09:16Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1492,20 +1502,40 @@
       "tt6966692": true,
       "tt6806448": true,
       "tt4881806": true,
-      "tt3766354": true
+      "tt3766354": true,
+      "tt4972582": true
     },
-    "updatedAt": "2026-05-22T20:09:09Z"
+    "updatedAt": "2026-05-22T20:09:16Z"
   },
   "lastWatch": {
-    "imdbId": "tt3766354",
-    "tmdbId": "345887",
+    "imdbId": "tt4972582",
+    "tmdbId": "381288",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:09:09Z"
+    "updatedAt": "2026-05-22T20:09:16Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4972582:s1e1:preference:2026-05-22T20:09:16Z",
+      "contentId": "tt4972582",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4972582",
+      "tmdbId": "381288",
+      "title": "Múltiple",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:09:16Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt3766354:s1e1:preference:2026-05-22T20:09:09Z",
       "contentId": "tt3766354",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:09:23.315Z",
+  "generatedAt": "2026-05-22T20:09:33.069Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:08:39Z",
-      "totalEvents": 473,
+      "updatedAt": "2026-05-22T20:08:47Z",
+      "totalEvents": 474,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 135,
-      "lastActivityAt": "2026-05-22T20:08:39Z",
+      "uniqueContentCount": 136,
+      "lastActivityAt": "2026-05-22T20:08:47Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt6966692": {
+          "contentId": "tt6966692",
+          "imdbId": "tt6966692",
+          "tmdbId": "490132",
+          "title": "Green Book",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:08:47Z"
         },
         "tt2386490": {
           "contentId": "tt2386490",
@@ -1663,7 +1675,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 571.741
+      "avgPlaybackProgress": 570.5348
     },
     {
       "userEmail": "liz-munera@hotmail.com",

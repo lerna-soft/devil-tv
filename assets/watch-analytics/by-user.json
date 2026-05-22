@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:08:17.053Z",
+  "generatedAt": "2026-05-22T20:08:28.212Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:07:16Z",
-      "totalEvents": 468,
+      "updatedAt": "2026-05-22T20:07:26Z",
+      "totalEvents": 469,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 130,
-      "lastActivityAt": "2026-05-22T20:07:16Z",
+      "uniqueContentCount": 131,
+      "lastActivityAt": "2026-05-22T20:07:26Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt9764362": {
+          "contentId": "tt9764362",
+          "imdbId": "tt9764362",
+          "tmdbId": "593643",
+          "title": "El menú",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:07:26Z"
         },
         "tt17024450": {
           "contentId": "tt17024450",
@@ -1603,7 +1615,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 577.8494
+      "avgPlaybackProgress": 576.6173
     },
     {
       "userEmail": "liz-munera@hotmail.com",

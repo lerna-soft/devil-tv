@@ -1,6 +1,6 @@
 {
-  "version": 254,
-  "generatedAt": "2026-05-22T20:14:49.319Z",
+  "version": 255,
+  "generatedAt": "2026-05-22T20:14:59.974Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27521,6 +27521,22 @@
       "releaseDate": null,
       "overview": "Molly McGrath, una tranquila profesora muy aficionada al fútbol americano, sueña con seguir los pasos de su padre que fue un entrenador famoso. Cuando el puesto de entrenador del equipo de su colegio queda vacante, ella solicita el trabajo, provocando las burlas de sus colegas y de su ex marido. Finalmente, consigue el trabajo, pero el equipo, formado por chicos inadaptados, es el más torpe e inexperto de la ciudad. (FILMAFFINITY)",
       "posterUrl": "https://image.tmdb.org/t/p/w500/zqhoG55rXOCaSsGq78TyJ2wSpkc.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "45602",
+      "imdbId": null,
+      "title": "Actos desesperados",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "Franklin, empleado de la construcción, está algo desengañado de las mujeres y no quiere enamorarse de ninguna de las maneras. Pero cuando se cruza en su camino Zora, una loca de la música, la pasión se dispara.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mgMH81TKLQ2w7lzQKjYc16DmA1j.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

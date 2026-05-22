@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T22:44:36.359Z",
+  "generatedAt": "2026-05-22T23:10:50.099Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T22:40:38Z",
+      "updatedAt": "2026-05-22T23:10:41Z",
       "totalEvents": 500,
       "totalStarts": 284,
       "totalCompletions": 78,
-      "totalPlaybackProgress": 297300.7899537982,
+      "totalPlaybackProgress": 299519.7201802121,
       "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-22T22:40:38Z",
+      "lastActivityAt": "2026-05-22T23:10:41Z",
       "completedContentIds": [
         "tt1190634",
         "tt0903747",
@@ -133,11 +133,11 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 13,
+          "playCount": 14,
           "completed": true,
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T22:40:38Z"
+          "lastSeenAt": "2026-05-22T23:10:41Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1729,7 +1729,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 28,
+          "playCount": 27,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
@@ -1796,7 +1796,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 594.6016
+      "avgPlaybackProgress": 599.0394
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T20:07:01Z",
+  "updatedAt": "2026-05-22T20:07:04Z",
   "progress": {
     "274870": {
       "imdbId": "",
@@ -1272,6 +1272,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:07:01Z",
       "watched": {}
+    },
+    "tt20215234": {
+      "imdbId": "tt20215234",
+      "tmdbId": "974576",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-22T20:07:04Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1360,20 +1370,40 @@
       "tt21209804": true,
       "tt21692408": true,
       "tt15314262": true,
-      "tt16366836": true
+      "tt16366836": true,
+      "tt20215234": true
     },
-    "updatedAt": "2026-05-22T20:07:01Z"
+    "updatedAt": "2026-05-22T20:07:04Z"
   },
   "lastWatch": {
-    "imdbId": "tt16366836",
-    "tmdbId": "912649",
+    "imdbId": "tt20215234",
+    "tmdbId": "974576",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-22T20:07:01Z"
+    "updatedAt": "2026-05-22T20:07:04Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt20215234:s1e1:preference:2026-05-22T20:07:04Z",
+      "contentId": "tt20215234",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt20215234",
+      "tmdbId": "974576",
+      "title": "Cónclave",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:07:04Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt16366836:s1e1:preference:2026-05-22T20:07:01Z",
       "contentId": "tt16366836",

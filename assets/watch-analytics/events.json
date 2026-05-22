@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T20:08:28.205Z",
+  "generatedAt": "2026-05-22T20:08:45.736Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt9777666:s1e1:preference:2026-05-22T20:08:01Z",
+      "contentId": "tt9777666",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9777666",
+      "tmdbId": "588228",
+      "title": "La guerra del mañana",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:08:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9764362:s1e1:preference:2026-05-22T20:07:26Z",
       "contentId": "tt9764362",

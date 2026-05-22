@@ -1,6 +1,6 @@
 {
-  "version": 244,
-  "generatedAt": "2026-05-22T19:53:50.630Z",
+  "version": 245,
+  "generatedAt": "2026-05-22T20:10:00.375Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27393,6 +27393,22 @@
       "releaseDate": null,
       "overview": "Una nave espacial, que viaja a un planeta lejano transportando a miles de personas, tiene una avería en una de las cápsulas de hibernación tras el impacto con un gran meteorito. Como resultado, un pasajero se despierta noventa años antes del final del viaje.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/iLMtX4MGl8WjKCPfMgCdDuceOth.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt10438392",
+      "title": "Invictus",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "Brendan Conroy",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2E3NjA2NjEtZmQ2Ny00ODgyLThjMjctNjBmNTUxNzk1NDFlXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

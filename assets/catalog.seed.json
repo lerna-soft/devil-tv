@@ -1,6 +1,6 @@
 {
-  "version": 256,
-  "generatedAt": "2026-05-22T20:28:26.960Z",
+  "version": 257,
+  "generatedAt": "2026-05-22T20:28:37.674Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27537,6 +27537,22 @@
       "releaseDate": null,
       "overview": "Franklin, empleado de la construcción, está algo desengañado de las mujeres y no quiere enamorarse de ninguna de las maneras. Pero cuando se cruza en su camino Zora, una loca de la música, la pasión se dispara.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/mgMH81TKLQ2w7lzQKjYc16DmA1j.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "34037",
+      "imdbId": null,
+      "title": "El pudding mágico",
+      "year": 2000,
+      "releaseDate": null,
+      "overview": "Bunyip Bluegum es un joven koala que siempre había creído que era huérfano, pero un día descubre que sus padres aún viven. Bunyip emprenderá un viaje en su busca de su familia y que le llevará a encontrar amigos como Bill Barnacle, un rudo marinero, el pingüino Sam Swanoff, y su inseparable compañero Albert, un pudding mágico al que persiguen una pareja de ladrones. Juntos fundan la Noble Sociedad de los Propietarios de Pudding, que ayudará a su amigo Bunyip a encontrar a sus padres.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5bifqYXdl6xbHpmOWn6lYp9xKgQ.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 260,
-  "generatedAt": "2026-05-22T20:30:17.583Z",
+  "version": 261,
+  "generatedAt": "2026-05-22T20:30:27.970Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51169,6 +51169,22 @@
       "releaseDate": null,
       "overview": "Los Soprano (The Sopranos) es una serie de televisión estadounidense creada y producida por David Chase. La serie se estrenó en Estados Unidos el 10 de enero de 1999 por el canal de televisión por cable HBO, que la emitió ininterrumpidamente hasta su desenlace, el 10 de junio de 2007. La trama de la serie gira en torno al mafioso de Nueva Jersey Tony Soprano (James Gandolfini) y las dificultades que enfrenta tanto en su hogar como en la organización criminal que dirige. A su vez, la serie también se centra en la historia de los personajes cercanos a Tony, especialmente su esposa Carmela (Edie Falco) y su sobrino y protegido Christopher Moltisanti (Michael Imperioli).",
       "posterUrl": "https://image.tmdb.org/t/p/w500/p7XPjx5jTFl32TGbbIW8exdY8QW.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "30240",
+      "imdbId": null,
+      "title": "The Comedy Factory",
+      "year": 1985,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1985-06-21",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/j92XqAbTCKKNEMt3fM4nugwSVFr.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

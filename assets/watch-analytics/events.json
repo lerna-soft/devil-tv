@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-22T20:09:33.062Z",
+  "generatedAt": "2026-05-22T20:10:30.176Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt6806448:s1e1:preference:2026-05-22T20:08:52Z",
+      "contentId": "tt6806448",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt6806448",
+      "tmdbId": "384018",
+      "title": "Fast & Furious: Hobbs & Shaw",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T20:08:52Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt6966692:s1e1:preference:2026-05-22T20:08:47Z",
       "contentId": "tt6966692",

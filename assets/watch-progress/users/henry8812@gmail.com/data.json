@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T19:09:24Z",
+  "updatedAt": "2026-05-22T19:39:26Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -388,9 +388,9 @@
       "tmdbId": "1168190",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 1225.846536,
-      "lastProgress": 1225.846536,
-      "updatedAt": "2026-05-22T19:09:24Z",
+      "progress": 4253.558003,
+      "lastProgress": 4253.558003,
+      "updatedAt": "2026-05-22T19:39:26Z",
       "watched": {}
     },
     "tt32916440": {
@@ -1326,11 +1326,30 @@
     "tmdbId": "1168190",
     "season": 1,
     "episode": 1,
-    "progress": 1225.846536,
-    "updatedAt": "2026-05-22T19:09:24Z"
+    "progress": 4253.558003,
+    "updatedAt": "2026-05-22T19:39:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt33046197:s1e1:started:2026-05-22T19:39:26Z",
+      "contentId": "tt33046197",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 4253.558003,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-20T19:30:43.376Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T19:39:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33046197:s1e1:started:2026-05-22T19:09:24Z",
       "contentId": "tt33046197",

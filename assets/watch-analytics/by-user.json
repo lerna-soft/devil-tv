@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T19:12:37.296Z",
+  "generatedAt": "2026-05-22T19:39:36.334Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T19:09:24Z",
-      "totalEvents": 458,
-      "totalStarts": 272,
+      "updatedAt": "2026-05-22T19:39:26Z",
+      "totalEvents": 459,
+      "totalStarts": 273,
       "totalCompletions": 71,
-      "totalPlaybackProgress": 266179.9417837982,
+      "totalPlaybackProgress": 270433.4997867982,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-22T19:09:24Z",
+      "lastActivityAt": "2026-05-22T19:39:26Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -84,11 +84,11 @@
           "tmdbId": "1168190",
           "title": "Los hermanos demolición",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
-          "maxProgressValue": 1225.846536,
+          "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T19:09:24Z"
+          "lastSeenAt": "2026-05-22T19:39:26Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1519,7 +1519,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 581.1789
+      "avgPlaybackProgress": 589.1797
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T21:10:17.621Z",
+  "generatedAt": "2026-05-22T21:30:22.923Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T21:10:08Z",
-      "totalEvents": 486,
-      "totalStarts": 277,
+      "updatedAt": "2026-05-22T21:30:11Z",
+      "totalEvents": 487,
+      "totalStarts": 278,
       "totalCompletions": 71,
-      "totalPlaybackProgress": 276350.1338967982,
+      "totalPlaybackProgress": 278120.07323979825,
       "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-22T21:10:08Z",
+      "lastActivityAt": "2026-05-22T21:30:11Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0903747": {
+          "contentId": "tt0903747",
+          "imdbId": "tt0903747",
+          "tmdbId": "1396",
+          "title": "Breaking Bad",
+          "type": "series",
+          "playCount": 74,
+          "completed": true,
+          "maxProgressValue": 3479.858479,
+          "maxProgressPercent": 47.018032,
+          "lastSeenAt": "2026-05-22T21:30:11Z"
         },
         "tt7784604": {
           "contentId": "tt7784604",
@@ -366,18 +378,6 @@
           "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T19:39:26Z"
-        },
-        "tt0903747": {
-          "contentId": "tt0903747",
-          "imdbId": "tt0903747",
-          "tmdbId": "1396",
-          "title": "Breaking Bad",
-          "type": "series",
-          "playCount": 73,
-          "completed": true,
-          "maxProgressValue": 3479.858479,
-          "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-22T18:28:21Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1796,7 +1796,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 568.6217
+      "avgPlaybackProgress": 571.0884
     },
     {
       "userEmail": "liz-munera@hotmail.com",

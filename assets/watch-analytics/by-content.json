@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T12:38:54.657Z",
+  "generatedAt": "2026-05-22T14:19:23.206Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -757,27 +757,41 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 27,
-      "totalStarts": 15,
+      "totalEvents": 28,
+      "totalStarts": 16,
       "totalCompletions": 4,
       "totalPlaybackProgress": 6232.068285491261,
       "uniqueUsers": 1,
-      "completionRate": 0.2667,
-      "lastActivityAt": "2026-05-22T10:55:56Z",
+      "completionRate": 0.25,
+      "lastActivityAt": "2026-05-22T14:19:13Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 27,
+          "playCount": 28,
           "completedCount": 4,
-          "startedCount": 15,
+          "startedCount": 16,
           "totalPlaybackProgress": 6232.068285491261,
-          "lastSeenAt": "2026-05-22T10:55:56Z",
+          "lastSeenAt": "2026-05-22T14:19:13Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 12,
+          "totalStarts": 3,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.1324260770975,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T14:19:13Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.3333
+        },
         "s1e11": {
           "season": 1,
           "episode": 11,
@@ -917,23 +931,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.3333
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 11,
-          "totalStarts": 2,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.1324260770975,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T03:58:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.5
         }
       },
-      "avgPlaybackProgress": 230.8173
+      "avgPlaybackProgress": 222.5739
     },
     {
       "contentId": "tt31596104",

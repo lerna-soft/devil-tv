@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T04:00:51.064Z",
+  "generatedAt": "2026-05-22T04:13:53.924Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1179,22 +1179,22 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 14,
+      "totalEvents": 15,
       "totalStarts": 5,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1971.7594650830974,
+      "totalCompletions": 2,
+      "totalPlaybackProgress": 3391.891870752032,
       "uniqueUsers": 1,
-      "completionRate": 0.2,
-      "lastActivityAt": "2026-05-22T04:00:39Z",
+      "completionRate": 0.4,
+      "lastActivityAt": "2026-05-22T04:13:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
-          "completedCount": 1,
+          "playCount": 15,
+          "completedCount": 2,
           "startedCount": 5,
-          "totalPlaybackProgress": 1971.7594650830974,
-          "lastSeenAt": "2026-05-22T04:00:39Z",
+          "totalPlaybackProgress": 3391.891870752032,
+          "lastSeenAt": "2026-05-22T04:13:44Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -1203,16 +1203,16 @@
         "s1e2": {
           "season": 1,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 551.627039006,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1971.7594446749345,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:00:39Z",
+          "lastActivityAt": "2026-05-22T04:13:44Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s1e1": {
           "season": 1,
@@ -1229,7 +1229,7 @@
           "completionRate": 0.5
         }
       },
-      "avgPlaybackProgress": 140.84
+      "avgPlaybackProgress": 226.1261
     },
     {
       "contentId": "tt32897959",

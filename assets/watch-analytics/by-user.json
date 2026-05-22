@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T20:10:30.182Z",
+  "generatedAt": "2026-05-22T20:10:48.603Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T20:08:52Z",
-      "totalEvents": 475,
+      "updatedAt": "2026-05-22T20:09:05Z",
+      "totalEvents": 476,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 137,
-      "lastActivityAt": "2026-05-22T20:08:52Z",
+      "uniqueContentCount": 138,
+      "lastActivityAt": "2026-05-22T20:09:05Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt4881806": {
+          "contentId": "tt4881806",
+          "imdbId": "tt4881806",
+          "tmdbId": "351286",
+          "title": "Jurassic World: El reino caído",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:09:05Z"
         },
         "tt6806448": {
           "contentId": "tt6806448",
@@ -1687,7 +1699,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 569.3337
+      "avgPlaybackProgress": 568.1376
     },
     {
       "userEmail": "liz-munera@hotmail.com",

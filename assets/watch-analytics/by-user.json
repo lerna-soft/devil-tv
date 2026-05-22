@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T20:06:57.960Z",
+  "generatedAt": "2026-05-22T20:07:07.816Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -7,11 +7,11 @@
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
       "updatedAt": "2026-05-22T20:06:48Z",
-      "totalEvents": 461,
+      "totalEvents": 462,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 125,
+      "uniqueContentCount": 126,
       "lastActivityAt": "2026-05-22T20:06:48Z",
       "completedContentIds": [
         "tt0903747",
@@ -95,6 +95,18 @@
           "imdbId": "tt21692408",
           "tmdbId": "1011985",
           "title": "Kung Fu Panda 4",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:06:48Z"
+        },
+        "tt15314262": {
+          "contentId": "tt15314262",
+          "imdbId": "tt15314262",
+          "tmdbId": "866398",
+          "title": "Beekeeper: El protector",
           "type": "movie",
           "playCount": 1,
           "completed": false,
@@ -1543,7 +1555,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 586.6236
+      "avgPlaybackProgress": 585.3539
     },
     {
       "userEmail": "liz-munera@hotmail.com",

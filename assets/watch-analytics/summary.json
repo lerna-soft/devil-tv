@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-22T14:20:20.664Z",
+  "generatedAt": "2026-05-22T14:34:21.401Z",
   "totalUsers": 11,
   "activeUsers": 6,
-  "totalEvents": 480,
+  "totalEvents": 481,
   "totalStarts": 287,
-  "totalCompletions": 63,
-  "overallCompletionRate": 0.2195,
+  "totalCompletions": 64,
+  "overallCompletionRate": 0.223,
   "trackedTitles": 136,
   "mostWatchedContent": [
     {
@@ -33,20 +33,20 @@
       "completionRate": 0.55
     },
     {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 30,
+      "uniqueUsers": 1,
+      "completionRate": 0.2941
+    },
+    {
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
       "totalEvents": 30,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 29,
-      "uniqueUsers": 1,
-      "completionRate": 0.2353
     },
     {
       "contentId": "tt31596104",

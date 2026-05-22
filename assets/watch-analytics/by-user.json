@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-22T19:54:04.687Z",
+  "generatedAt": "2026-05-22T20:06:57.960Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T19:53:56Z",
-      "totalEvents": 460,
+      "updatedAt": "2026-05-22T20:06:48Z",
+      "totalEvents": 461,
       "totalStarts": 274,
       "totalCompletions": 71,
       "totalPlaybackProgress": 270433.4997867982,
-      "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-22T19:53:56Z",
+      "uniqueContentCount": 125,
+      "lastActivityAt": "2026-05-22T20:06:48Z",
       "completedContentIds": [
         "tt0903747",
         "tt21209804",
@@ -89,6 +89,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt21692408": {
+          "contentId": "tt21692408",
+          "imdbId": "tt21692408",
+          "tmdbId": "1011985",
+          "title": "Kung Fu Panda 4",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-22T20:06:48Z"
         },
         "tt33046197": {
           "contentId": "tt33046197",
@@ -1531,7 +1543,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 587.8989
+      "avgPlaybackProgress": 586.6236
     },
     {
       "userEmail": "liz-munera@hotmail.com",

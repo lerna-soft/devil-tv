@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-21T23:49:18Z",
+  "updatedAt": "2026-05-22T03:15:44Z",
   "progress": {
     "296232": {
       "imdbId": "",
@@ -1040,7 +1040,7 @@
       "lastEpisode": 12,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-21T23:49:18Z",
+      "updatedAt": "2026-05-22T03:15:44Z",
       "watched": {}
     },
     "tt31392119": {
@@ -1327,10 +1327,29 @@
     "season": 2,
     "episode": 12,
     "progress": 0,
-    "updatedAt": "2026-05-21T23:49:18Z"
+    "updatedAt": "2026-05-22T03:15:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s2e12:started:2026-05-22T03:15:44Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s2e12",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 2,
+      "episode": 12,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-21T23:49:17.898Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-22T03:15:44Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s2e12:started:2026-05-21T23:49:18Z",
       "contentId": "tt0903747",

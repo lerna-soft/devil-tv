@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:41:59.763Z",
+  "generatedAt": "2026-05-23T06:42:25.355Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:26:24Z",
+      "updatedAt": "2026-05-23T06:26:26Z",
       "totalEvents": 500,
-      "totalStarts": 262,
+      "totalStarts": 261,
       "totalCompletions": 83,
       "totalPlaybackProgress": 295769.45126161573,
-      "uniqueContentCount": 163,
-      "lastActivityAt": "2026-05-23T06:26:24Z",
+      "uniqueContentCount": 164,
+      "lastActivityAt": "2026-05-23T06:26:26Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0455944": {
+          "contentId": "tt0455944",
+          "imdbId": "tt0455944",
+          "tmdbId": "156022",
+          "title": "The equalizer (El protector)",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:26:26Z"
         },
         "tt2582802": {
           "contentId": "tt2582802",
@@ -1980,7 +1992,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,

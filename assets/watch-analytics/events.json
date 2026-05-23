@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:41:59.754Z",
+  "generatedAt": "2026-05-23T06:42:25.348Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0455944:s1e1:preference:2026-05-23T06:26:26Z",
+      "contentId": "tt0455944",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "title": "The equalizer (El protector)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2582802:s1e1:preference:2026-05-23T06:26:24Z",
       "contentId": "tt2582802",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T03:21:15Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T03:01:54Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T03:01:54Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

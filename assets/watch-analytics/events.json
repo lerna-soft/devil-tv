@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T09:25:07.507Z",
+  "generatedAt": "2026-05-23T10:49:38.577Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt33428606:s1e1:started:2026-05-23T06:41:50Z",
+      "contentId": "tt33428606",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt33428606",
+      "tmdbId": "1357633",
+      "title": "Solo Leveling: ReAwakening",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:41:49.672Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:41:50Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt32820897:s1e1:started:2026-05-23T06:41:22Z",
       "contentId": "tt32820897",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:31:04Z"
-    },
-    {
-      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-12T04:10:47Z",
-      "contentId": "tt34610311",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T04:10:47Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

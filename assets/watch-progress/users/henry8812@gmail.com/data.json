@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:41:22Z",
+  "updatedAt": "2026-05-23T06:41:50Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1702,6 +1702,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:41:22Z",
       "watched": {}
+    },
+    "tt33428606": {
+      "imdbId": "tt33428606",
+      "tmdbId": "1357633",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:41:50Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1833,15 +1843,34 @@
     "updatedAt": "2026-05-23T06:26:35Z"
   },
   "lastWatch": {
-    "imdbId": "tt32820897",
-    "tmdbId": "1311031",
+    "imdbId": "tt33428606",
+    "tmdbId": "1357633",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:41:22Z"
+    "updatedAt": "2026-05-23T06:41:50Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt33428606:s1e1:started:2026-05-23T06:41:50Z",
+      "contentId": "tt33428606",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt33428606",
+      "tmdbId": "1357633",
+      "title": "Solo Leveling: ReAwakening",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:41:49.672Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:41:50Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt32820897:s1e1:started:2026-05-23T06:41:22Z",
       "contentId": "tt32820897",
@@ -11322,25 +11351,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:31:04Z"
-    },
-    {
-      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-12T04:10:47Z",
-      "contentId": "tt34610311",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T04:10:47Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:55:51.927Z",
+  "generatedAt": "2026-05-23T16:56:04.955Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 550,
@@ -12,9 +12,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 123,
+      "totalEvents": 124,
       "uniqueUsers": 1,
-      "completionRate": 0.6486
+      "completionRate": 0.64
     },
     {
       "contentId": "tt14452776",
@@ -73,20 +73,20 @@
       "completionRate": 0.1111
     },
     {
-      "contentId": "tt1632701",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.125
-    },
-    {
       "contentId": "tt33046197",
       "title": "Los hermanos demolición",
       "type": "movie",
       "totalEvents": 8,
       "uniqueUsers": 3,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt1632701",
+      "title": "Suits: la clave del éxito",
+      "type": "series",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0.1429
     }
   ]
 }

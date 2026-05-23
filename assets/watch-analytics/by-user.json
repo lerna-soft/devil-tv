@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T01:30:03.729Z",
+  "generatedAt": "2026-05-23T02:18:48.459Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-22T23:10:41Z",
+      "updatedAt": "2026-05-23T02:18:39Z",
       "totalEvents": 500,
       "totalStarts": 284,
       "totalCompletions": 78,
-      "totalPlaybackProgress": 299519.7201802121,
-      "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-22T23:10:41Z",
+      "totalPlaybackProgress": 299090.1452362121,
+      "uniqueContentCount": 147,
+      "lastActivityAt": "2026-05-23T02:18:39Z",
       "completedContentIds": [
         "tt1190634",
         "tt0903747",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt37287335": {
+          "contentId": "tt37287335",
+          "imdbId": "tt37287335",
+          "tmdbId": "1339713",
+          "title": "Obsession",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T02:18:39Z"
         },
         "tt1190634": {
           "contentId": "tt1190634",
@@ -1729,7 +1741,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 27,
+          "playCount": 26,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
@@ -1796,7 +1808,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 599.0394
+      "avgPlaybackProgress": 598.1803
     },
     {
       "userEmail": "liz-munera@hotmail.com",

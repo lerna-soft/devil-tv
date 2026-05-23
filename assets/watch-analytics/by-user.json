@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T15:34:36.803Z",
+  "generatedAt": "2026-05-23T16:08:32.640Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T14:11:48Z",
+      "updatedAt": "2026-05-23T16:08:22Z",
       "totalEvents": 500,
       "totalStarts": 258,
       "totalCompletions": 84,
       "totalPlaybackProgress": 294129.61294078,
-      "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-23T14:11:48Z",
+      "uniqueContentCount": 164,
+      "lastActivityAt": "2026-05-23T16:08:22Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 117,
+          "playCount": 118,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 72.392792,
-          "lastSeenAt": "2026-05-23T14:11:48Z"
+          "lastSeenAt": "2026-05-23T16:08:22Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -2008,18 +2008,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T20:53:48Z"
-        },
-        "tt1416765": {
-          "contentId": "tt1416765",
-          "imdbId": "tt1416765",
-          "tmdbId": "21762",
-          "title": "Parenthood",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-13T11:16:27Z"
         }
       },
       "avgPlaybackProgress": 588.2592

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T07:40:21.568Z",
+  "generatedAt": "2026-05-23T09:25:07.512Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:26:35Z",
+      "updatedAt": "2026-05-23T06:41:22Z",
       "totalEvents": 500,
       "totalStarts": 259,
       "totalCompletions": 83,
-      "totalPlaybackProgress": 295759.5759306157,
-      "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-23T06:26:35Z",
+      "totalPlaybackProgress": 295703.62970037974,
+      "uniqueContentCount": 166,
+      "lastActivityAt": "2026-05-23T06:41:22Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt32820897": {
+          "contentId": "tt32820897",
+          "imdbId": "tt32820897",
+          "tmdbId": "1311031",
+          "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:41:22Z"
         },
         "tt1631867": {
           "contentId": "tt1631867",
@@ -1955,10 +1967,10 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 12,
+          "playCount": 11,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
-          "maxProgressPercent": 55.946230236,
+          "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         },
         "tt15940132": {
@@ -2022,7 +2034,7 @@
           "lastSeenAt": "2026-05-12T05:01:04Z"
         }
       },
-      "avgPlaybackProgress": 591.5192
+      "avgPlaybackProgress": 591.4073
     },
     {
       "userEmail": "liz-munera@hotmail.com",

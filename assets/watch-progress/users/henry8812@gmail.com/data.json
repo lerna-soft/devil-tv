@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:24:43Z",
+  "updatedAt": "2026-05-23T06:25:39Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1582,6 +1582,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:24:43Z",
       "watched": {}
+    },
+    "tt1038686": {
+      "imdbId": "tt1038686",
+      "tmdbId": "22894",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:25:39Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1696,20 +1706,40 @@
       "tt0412142": true,
       "tt0360486": true,
       "tt0259324": true,
-      "tt0898266": true
+      "tt0898266": true,
+      "tt1038686": true
     },
-    "updatedAt": "2026-05-23T06:24:43Z"
+    "updatedAt": "2026-05-23T06:25:39Z"
   },
   "lastWatch": {
-    "imdbId": "tt1196946",
-    "tmdbId": "5920",
+    "imdbId": "tt1038686",
+    "tmdbId": "22894",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:24:43Z"
+    "updatedAt": "2026-05-23T06:25:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1038686:s1e1:preference:2026-05-23T06:25:39Z",
+      "contentId": "tt1038686",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1038686",
+      "tmdbId": "22894",
+      "title": "Legión",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:25:39Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1196946:s1e1:preference:2026-05-23T06:24:43Z",
       "contentId": "tt1196946",
@@ -11190,25 +11220,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:42:38Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e11:playing:2026-05-12T02:40:58Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e11",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 11,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:40:58Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:14:03.146Z",
+  "generatedAt": "2026-05-23T06:14:12.621Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,27 +7,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 112,
-      "totalStarts": 66,
+      "totalEvents": 113,
+      "totalStarts": 67,
       "totalCompletions": 45,
       "totalPlaybackProgress": 143015.46742727008,
       "uniqueUsers": 1,
-      "completionRate": 0.6818,
-      "lastActivityAt": "2026-05-23T06:13:52Z",
+      "completionRate": 0.6716,
+      "lastActivityAt": "2026-05-23T06:13:56Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 112,
+          "playCount": 113,
           "completedCount": 45,
-          "startedCount": 66,
+          "startedCount": 67,
           "totalPlaybackProgress": 143015.46742727008,
-          "lastSeenAt": "2026-05-23T06:13:52Z",
+          "lastSeenAt": "2026-05-23T06:13:56Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s5e1": {
+          "season": 5,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:13:56Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s4e13": {
           "season": 4,
           "episode": 13,
@@ -673,7 +687,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1276.9238
+      "avgPlaybackProgress": 1265.6236
     },
     {
       "contentId": "tt14452776",
@@ -3429,50 +3443,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-17T07:16:34Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0441773",
-      "imdbId": "tt0441773",
-      "tmdbId": "9502",
-      "title": "Kung Fu Panda",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-17T03:38:04Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T03:38:04Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-17T03:38:04Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -6335,6 +6305,50 @@
           "lastActivityAt": "2026-05-17T17:56:08Z",
           "users": {
             "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt0441773",
+      "imdbId": "tt0441773",
+      "tmdbId": "9502",
+      "title": "Kung Fu Panda",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-17T03:38:04Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T03:38:04Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-17T03:38:04Z",
+          "users": {
+            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }

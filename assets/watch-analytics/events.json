@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T11:47:01.504Z",
+  "generatedAt": "2026-05-23T12:13:03.263Z",
   "events": [
+    {
+      "eventId": "liz-munera@hotmail.com:tt35707374:s1e1:preference:2026-05-23T12:12:49Z",
+      "contentId": "tt35707374",
+      "episodeKey": "s1e1",
+      "userEmail": "liz-munera@hotmail.com",
+      "userName": "Lizeth Munera",
+      "imdbId": "tt35707374",
+      "tmdbId": "291339",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T12:12:49Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s5e1:started:2026-05-23T11:46:52Z",
       "contentId": "tt0903747",

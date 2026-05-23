@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:56:04.958Z",
+  "generatedAt": "2026-05-23T17:26:36.503Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 124,
-      "totalStarts": 75,
+      "totalEvents": 125,
+      "totalStarts": 76,
       "totalCompletions": 48,
-      "totalPlaybackProgress": 151085.50037894273,
+      "totalPlaybackProgress": 151881.12720567174,
       "uniqueUsers": 1,
-      "completionRate": 0.64,
-      "lastActivityAt": "2026-05-23T16:55:45Z",
+      "completionRate": 0.6316,
+      "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 124,
+          "playCount": 125,
           "completedCount": 48,
-          "startedCount": 75,
-          "totalPlaybackProgress": 151085.50037894273,
-          "lastSeenAt": "2026-05-23T16:55:45Z",
+          "startedCount": 76,
+          "totalPlaybackProgress": 151881.12720567174,
+          "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,12 +31,12 @@
         "s5e3": {
           "season": 5,
           "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalPlaybackProgress": 795.626826729,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:55:45Z",
+          "lastActivityAt": "2026-05-23T17:26:28Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -715,7 +715,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1218.4315
+      "avgPlaybackProgress": 1215.049
     },
     {
       "contentId": "tt14452776",
@@ -1816,29 +1816,73 @@
       "avgPlaybackProgress": 861.3589
     },
     {
+      "contentId": "tt1234721",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 6,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3085.362560914,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 7,
+          "completedCount": 0,
+          "startedCount": 6,
+          "totalPlaybackProgress": 3085.362560914,
+          "lastSeenAt": "2026-05-20T14:19:20Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 6,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3085.362560914,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T14:19:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 440.7661
+    },
+    {
       "contentId": "tt1632701",
       "imdbId": "tt1632701",
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 8,
-      "totalStarts": 7,
+      "totalEvents": 7,
+      "totalStarts": 6,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2575.000090249433,
       "uniqueUsers": 1,
-      "completionRate": 0.1429,
+      "completionRate": 0.1667,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
+          "playCount": 7,
           "completedCount": 1,
-          "startedCount": 7,
+          "startedCount": 6,
           "totalPlaybackProgress": 2575.000090249433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
-          "lastEpisode": 10
+          "lastEpisode": 11
         }
       },
       "episodes": {
@@ -1925,67 +1969,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s3e10": {
-          "season": 3,
-          "episode": 10,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:07:41Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 321.875
-    },
-    {
-      "contentId": "tt1234721",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
-      "totalEvents": 7,
-      "totalStarts": 6,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3085.362560914,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T14:19:20Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 7,
-          "completedCount": 0,
-          "startedCount": 6,
-          "totalPlaybackProgress": 3085.362560914,
-          "lastSeenAt": "2026-05-20T14:19:20Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 6,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3085.362560914,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T14:19:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 440.7661
+      "avgPlaybackProgress": 367.8572
     },
     {
       "contentId": "tt28650488",

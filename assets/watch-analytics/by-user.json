@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:26:43.361Z",
+  "generatedAt": "2026-05-23T06:26:54.603Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:25:50Z",
+      "updatedAt": "2026-05-23T06:25:52Z",
       "totalEvents": 500,
-      "totalStarts": 265,
+      "totalStarts": 264,
       "totalCompletions": 85,
       "totalPlaybackProgress": 300929.2732616158,
-      "uniqueContentCount": 158,
-      "lastActivityAt": "2026-05-23T06:25:50Z",
+      "uniqueContentCount": 159,
+      "lastActivityAt": "2026-05-23T06:25:52Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1570728": {
+          "contentId": "tt1570728",
+          "imdbId": "tt1570728",
+          "tmdbId": "50646",
+          "title": "Crazy, Stupid, Love.",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:25:52Z"
         },
         "tt1219289": {
           "contentId": "tt1219289",
@@ -1860,7 +1872,7 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 17,
+          "playCount": 16,
           "completed": true,
           "maxProgressValue": 2581.079,
           "maxProgressPercent": 55.946230236,

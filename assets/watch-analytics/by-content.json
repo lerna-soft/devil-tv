@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:26:43.357Z",
+  "generatedAt": "2026-05-23T06:26:54.600Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1569,20 +1569,20 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 17,
-      "totalStarts": 14,
+      "totalEvents": 16,
+      "totalStarts": 13,
       "totalCompletions": 3,
       "totalPlaybackProgress": 7790.768320485433,
       "uniqueUsers": 1,
-      "completionRate": 0.2143,
+      "completionRate": 0.2308,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
+          "playCount": 16,
           "completedCount": 3,
-          "startedCount": 14,
+          "startedCount": 13,
           "totalPlaybackProgress": 7790.768320485433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
@@ -1635,8 +1635,8 @@
         "s3e13": {
           "season": 3,
           "episode": 13,
-          "totalEvents": 3,
-          "totalStarts": 2,
+          "totalEvents": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2581.079,
           "uniqueUsers": 1,
@@ -1644,7 +1644,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s3e12": {
           "season": 3,
@@ -1717,7 +1717,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 458.2805
+      "avgPlaybackProgress": 486.923
     },
     {
       "contentId": "tt1190634",
@@ -3892,6 +3892,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt1570728",
+      "imdbId": "tt1570728",
+      "tmdbId": "50646",
+      "title": "Crazy, Stupid, Love.",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:25:52Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:25:52Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:25:52Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt1219289",

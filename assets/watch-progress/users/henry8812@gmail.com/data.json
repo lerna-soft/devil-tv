@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:24:29Z",
+  "updatedAt": "2026-05-23T06:24:38Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1562,6 +1562,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:24:29Z",
       "watched": {}
+    },
+    "tt0898266": {
+      "imdbId": "tt0898266",
+      "tmdbId": "1418",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:24:38Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1674,20 +1684,40 @@
       "tt0320691": true,
       "tt0412142": true,
       "tt0360486": true,
-      "tt0259324": true
+      "tt0259324": true,
+      "tt0898266": true
     },
-    "updatedAt": "2026-05-23T06:24:29Z"
+    "updatedAt": "2026-05-23T06:24:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt0259324",
-    "tmdbId": "1250",
+    "imdbId": "tt0898266",
+    "tmdbId": "1418",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:24:29Z"
+    "updatedAt": "2026-05-23T06:24:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0898266:s1e1:preference:2026-05-23T06:24:38Z",
+      "contentId": "tt0898266",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0898266",
+      "tmdbId": "1418",
+      "title": "Big Bang",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:24:38Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0259324:s1e1:preference:2026-05-23T06:24:29Z",
       "contentId": "tt0259324",
@@ -11168,25 +11198,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:40:56Z"
-    },
-    {
-      "eventId": "unknown:tt0398417:s2e1:playing:2026-05-12T02:38:32Z",
-      "contentId": "tt0398417",
-      "episodeKey": "s2e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0398417",
-      "tmdbId": "2022",
-      "title": "The Batman",
-      "type": "series",
-      "season": 2,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:38:32Z"
     }
   ]
 }

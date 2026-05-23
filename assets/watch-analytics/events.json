@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:40:29.957Z",
+  "generatedAt": "2026-05-23T06:41:30.908Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1870479:s1e1:preference:2026-05-23T06:26:08Z",
+      "contentId": "tt1870479",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1870479",
+      "tmdbId": "15621",
+      "title": "The Newsroom",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:08Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1845307:s1e1:preference:2026-05-23T06:25:58Z",
       "contentId": "tt1845307",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T03:01:44Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e14:completed:2026-05-12T03:01:42Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e14",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 14,
-      "progress": 2578.743,
-      "progressValue": 2578.743,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T03:01:42Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

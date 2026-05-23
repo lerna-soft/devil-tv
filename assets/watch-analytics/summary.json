@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-23T06:40:29.957Z",
+  "generatedAt": "2026-05-23T06:41:30.908Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
   "totalStarts": 295,
-  "totalCompletions": 85,
-  "overallCompletionRate": 0.2881,
-  "trackedTitles": 175,
+  "totalCompletions": 84,
+  "overallCompletionRate": 0.2847,
+  "trackedTitles": 176,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -65,20 +65,20 @@
       "completionRate": 0.0769
     },
     {
-      "contentId": "tt1632701",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "totalEvents": 14,
-      "uniqueUsers": 1,
-      "completionRate": 0.1667
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
+    },
+    {
+      "contentId": "tt1632701",
+      "title": "Suits: la clave del éxito",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0.0833
     },
     {
       "contentId": "tt33046197",

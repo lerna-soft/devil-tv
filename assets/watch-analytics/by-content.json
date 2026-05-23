@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:10:56.194Z",
+  "generatedAt": "2026-05-23T06:14:03.146Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 111,
+      "totalEvents": 112,
       "totalStarts": 66,
-      "totalCompletions": 44,
-      "totalPlaybackProgress": 139992.4383352701,
+      "totalCompletions": 45,
+      "totalPlaybackProgress": 143015.46742727008,
       "uniqueUsers": 1,
-      "completionRate": 0.6667,
-      "lastActivityAt": "2026-05-23T06:10:27Z",
+      "completionRate": 0.6818,
+      "lastActivityAt": "2026-05-23T06:13:52Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 111,
-          "completedCount": 44,
+          "playCount": 112,
+          "completedCount": 45,
           "startedCount": 66,
-          "totalPlaybackProgress": 139992.4383352701,
-          "lastSeenAt": "2026-05-23T06:10:27Z",
+          "totalPlaybackProgress": 143015.46742727008,
+          "lastSeenAt": "2026-05-23T06:13:52Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s4e13": {
           "season": 4,
           "episode": 13,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3023.029092,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:10:27Z",
+          "lastActivityAt": "2026-05-23T06:13:52Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s4e12": {
           "season": 4,
@@ -673,7 +673,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1261.1931
+      "avgPlaybackProgress": 1276.9238
     },
     {
       "contentId": "tt14452776",
@@ -3238,50 +3238,6 @@
       "avgPlaybackProgress": 5.5694
     },
     {
-      "contentId": "tt2948372",
-      "imdbId": "tt2948372",
-      "tmdbId": "508442",
-      "title": "Soul",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T06:54:38Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-20T06:54:38Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:54:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt33612209",
       "imdbId": "tt33612209",
       "tmdbId": "1314481",
@@ -5145,6 +5101,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T04:41:15Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt2948372",
+      "imdbId": "tt2948372",
+      "tmdbId": "508442",
+      "title": "Soul",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-20T06:54:38Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-20T06:54:38Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T06:54:38Z",
           "users": {
             "henry8812@gmail.com": true
           },

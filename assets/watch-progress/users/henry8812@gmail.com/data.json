@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:10:27Z",
+  "updatedAt": "2026-05-23T06:13:52Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1078,9 +1078,9 @@
       "tmdbId": "1396",
       "lastSeason": 4,
       "lastEpisode": 13,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-23T06:10:27Z",
+      "progress": 3023.029092,
+      "lastProgress": 3023.029092,
+      "updatedAt": "2026-05-23T06:13:52Z",
       "watched": {}
     },
     "tt31392119": {
@@ -1587,11 +1587,30 @@
     "tmdbId": "1396",
     "season": 4,
     "episode": 13,
-    "progress": 0,
-    "updatedAt": "2026-05-23T06:10:27Z"
+    "progress": 3023.029092,
+    "updatedAt": "2026-05-23T06:13:52Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s4e13:completed:2026-05-23T06:13:52Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s4e13",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 4,
+      "episode": 13,
+      "progress": 3023.029092,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-23T06:10:25.105Z",
+      "completedAt": "2026-05-23T06:13:50.125Z",
+      "updatedAt": "2026-05-23T06:13:52Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s4e13:started:2026-05-23T06:10:27Z",
       "contentId": "tt0903747",
@@ -11072,25 +11091,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T20:54:22Z"
-    },
-    {
-      "eventId": "unknown:tt2948372:s1e1:playing:2026-05-11T20:40:57Z",
-      "contentId": "tt2948372",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt2948372",
-      "tmdbId": "508442",
-      "title": "Soul",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T20:40:57Z"
     }
   ]
 }

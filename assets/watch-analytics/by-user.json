@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T16:08:48.356Z",
+  "generatedAt": "2026-05-23T16:11:48.055Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T16:08:40Z",
+      "updatedAt": "2026-05-23T16:11:36Z",
       "totalEvents": 500,
-      "totalStarts": 258,
-      "totalCompletions": 84,
-      "totalPlaybackProgress": 294129.61294078,
+      "totalStarts": 257,
+      "totalCompletions": 85,
+      "totalPlaybackProgress": 295274.40840199613,
       "uniqueContentCount": 164,
-      "lastActivityAt": "2026-05-23T16:08:40Z",
+      "lastActivityAt": "2026-05-23T16:11:36Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 119,
+          "playCount": 120,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 72.392792,
-          "lastSeenAt": "2026-05-23T16:08:40Z"
+          "lastSeenAt": "2026-05-23T16:11:36Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -1091,7 +1091,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 36,
+          "playCount": 35,
           "completed": true,
           "maxProgressValue": 1880.723439229025,
           "maxProgressPercent": 0,
@@ -2010,7 +2010,7 @@
           "lastSeenAt": "2026-05-13T20:53:48Z"
         }
       },
-      "avgPlaybackProgress": 588.2592
+      "avgPlaybackProgress": 590.5488
     },
     {
       "userEmail": "liz-munera@hotmail.com",

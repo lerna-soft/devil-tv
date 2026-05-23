@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:26:54.603Z",
+  "generatedAt": "2026-05-23T06:27:58.736Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:25:52Z",
+      "updatedAt": "2026-05-23T06:25:56Z",
       "totalEvents": 500,
       "totalStarts": 264,
-      "totalCompletions": 85,
-      "totalPlaybackProgress": 300929.2732616158,
-      "uniqueContentCount": 159,
-      "lastActivityAt": "2026-05-23T06:25:52Z",
+      "totalCompletions": 84,
+      "totalPlaybackProgress": 298348.19426161575,
+      "uniqueContentCount": 160,
+      "lastActivityAt": "2026-05-23T06:25:56Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0944947": {
+          "contentId": "tt0944947",
+          "imdbId": "tt0944947",
+          "tmdbId": "1399",
+          "title": "Juego de tronos",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:25:56Z"
         },
         "tt1570728": {
           "contentId": "tt1570728",
@@ -1872,9 +1884,9 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 16,
+          "playCount": 15,
           "completed": true,
-          "maxProgressValue": 2581.079,
+          "maxProgressValue": 2578.743,
           "maxProgressPercent": 55.946230236,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         },
@@ -1951,7 +1963,7 @@
           "lastSeenAt": "2026-05-12T04:01:31Z"
         }
       },
-      "avgPlaybackProgress": 601.8585
+      "avgPlaybackProgress": 596.6964
     },
     {
       "userEmail": "liz-munera@hotmail.com",

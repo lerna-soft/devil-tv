@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:26:54.600Z",
+  "generatedAt": "2026-05-23T06:27:58.732Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1569,24 +1569,24 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 16,
+      "totalEvents": 15,
       "totalStarts": 13,
-      "totalCompletions": 3,
-      "totalPlaybackProgress": 7790.768320485433,
+      "totalCompletions": 2,
+      "totalPlaybackProgress": 5209.689320485433,
       "uniqueUsers": 1,
-      "completionRate": 0.2308,
+      "completionRate": 0.1538,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 16,
-          "completedCount": 3,
+          "playCount": 15,
+          "completedCount": 2,
           "startedCount": 13,
-          "totalPlaybackProgress": 7790.768320485433,
+          "totalPlaybackProgress": 5209.689320485433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
-          "lastEpisode": 13
+          "lastEpisode": 14
         }
       },
       "episodes": {
@@ -1635,16 +1635,16 @@
         "s3e13": {
           "season": 3,
           "episode": 13,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2581.079,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-13T21:09:16Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         },
         "s3e12": {
           "season": 3,
@@ -1717,7 +1717,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 486.923
+      "avgPlaybackProgress": 347.3126
     },
     {
       "contentId": "tt1190634",
@@ -3892,6 +3892,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt0944947",
+      "imdbId": "tt0944947",
+      "tmdbId": "1399",
+      "title": "Juego de tronos",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:25:56Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:25:56Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:25:56Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt1570728",

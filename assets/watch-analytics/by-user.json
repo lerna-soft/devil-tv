@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:47:01.510Z",
+  "generatedAt": "2026-05-23T12:13:03.315Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -2041,18 +2041,30 @@
       "userName": "Lizeth Munera",
       "role": "viewer",
       "createdAt": "2026-05-17T17:33:37.581Z",
-      "updatedAt": "2026-05-23T02:47:39Z",
-      "totalEvents": 18,
+      "updatedAt": "2026-05-23T12:12:49Z",
+      "totalEvents": 19,
       "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 12840.95939,
-      "uniqueContentCount": 12,
-      "lastActivityAt": "2026-05-23T02:47:39Z",
+      "uniqueContentCount": 13,
+      "lastActivityAt": "2026-05-23T12:12:49Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt26443616"
       ],
       "content": {
+        "tt35707374": {
+          "contentId": "tt35707374",
+          "imdbId": "tt35707374",
+          "tmdbId": "291339",
+          "title": "Memoria de un Asesino",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T12:12:49Z"
+        },
         "tt32430579": {
           "contentId": "tt32430579",
           "imdbId": "tt32430579",
@@ -2198,7 +2210,7 @@
           "lastSeenAt": "2026-05-17T17:56:00Z"
         }
       },
-      "avgPlaybackProgress": 713.3866
+      "avgPlaybackProgress": 675.84
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

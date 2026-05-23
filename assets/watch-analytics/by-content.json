@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:42:25.352Z",
+  "generatedAt": "2026-05-23T06:43:08.882Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3850,27 +3850,27 @@
       "avgPlaybackProgress": 2286.3829
     },
     {
-      "contentId": "tt38121182",
-      "imdbId": "tt38121182",
-      "tmdbId": "1539104",
-      "title": "JUJUTSU KAISEN: Ejecución",
+      "contentId": "tt1646971",
+      "imdbId": "tt1646971",
+      "tmdbId": "82702",
+      "title": "Cómo entrenar a tu dragón 2",
       "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
+      "totalEvents": 1,
+      "totalStarts": 0,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 9.875331,
+      "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-12T04:01:31Z",
+      "lastActivityAt": "2026-05-23T06:26:32Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 2,
+          "playCount": 1,
           "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 9.875331,
-          "lastSeenAt": "2026-05-12T04:01:31Z",
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:26:32Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -3879,19 +3879,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 9.875331,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T04:01:31Z",
+          "lastActivityAt": "2026-05-23T06:26:32Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 4.9377
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0455944",
@@ -9480,6 +9480,50 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt38121182",
+      "imdbId": "tt38121182",
+      "tmdbId": "1539104",
+      "title": "JUJUTSU KAISEN: Ejecución",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 9.875331,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-12T04:01:31Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 9.875331,
+          "lastSeenAt": "2026-05-12T04:01:31Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 9.875331,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T04:01:31Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 9.8753
     }
   ]
 }

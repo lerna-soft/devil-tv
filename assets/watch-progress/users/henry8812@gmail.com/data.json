@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:26:26Z",
+  "updatedAt": "2026-05-23T06:26:32Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1672,6 +1672,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:26:24Z",
       "watched": {}
+    },
+    "tt1646971": {
+      "imdbId": "tt1646971",
+      "tmdbId": "82702",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:26:32Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1796,20 +1806,40 @@
       "tt1845307": true,
       "tt1870479": true,
       "tt2582802": true,
-      "tt0455944": true
+      "tt0455944": true,
+      "tt1646971": true
     },
-    "updatedAt": "2026-05-23T06:26:26Z"
+    "updatedAt": "2026-05-23T06:26:32Z"
   },
   "lastWatch": {
-    "imdbId": "tt0455944",
-    "tmdbId": "156022",
+    "imdbId": "tt1646971",
+    "tmdbId": "82702",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:26:26Z"
+    "updatedAt": "2026-05-23T06:26:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1646971:s1e1:preference:2026-05-23T06:26:32Z",
+      "contentId": "tt1646971",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1646971",
+      "tmdbId": "82702",
+      "title": "Cómo entrenar a tu dragón 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:32Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0455944:s1e1:preference:2026-05-23T06:26:26Z",
       "contentId": "tt0455944",
@@ -11290,25 +11320,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:01:31Z"
-    },
-    {
-      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T03:21:15Z",
-      "contentId": "tt38121182",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt38121182",
-      "tmdbId": "1539104",
-      "title": "JUJUTSU KAISEN: Ejecución",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T03:21:15Z"
     }
   ]
 }

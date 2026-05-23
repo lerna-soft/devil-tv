@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T00:38:00.336Z",
+  "generatedAt": "2026-05-23T01:08:02.637Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1757,22 +1757,22 @@
       "tmdbId": "1168190",
       "title": "Los hermanos demolición",
       "type": "movie",
-      "totalEvents": 7,
-      "totalStarts": 4,
+      "totalEvents": 8,
+      "totalStarts": 5,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 5479.404539,
+      "totalPlaybackProgress": 6890.871176,
       "uniqueUsers": 3,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-23T00:37:50Z",
+      "lastActivityAt": "2026-05-23T01:07:52Z",
       "users": {
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
-          "playCount": 1,
+          "playCount": 2,
           "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T00:37:50Z",
+          "startedCount": 2,
+          "totalPlaybackProgress": 1411.466637,
+          "lastSeenAt": "2026-05-23T01:07:52Z",
           "lastSeason": 1,
           "lastEpisode": 1
         },
@@ -1803,12 +1803,12 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 4,
+          "totalEvents": 8,
+          "totalStarts": 5,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 5479.404539,
+          "totalPlaybackProgress": 6890.871176,
           "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-23T00:37:50Z",
+          "lastActivityAt": "2026-05-23T01:07:52Z",
           "users": {
             "luzenithc1994@gmail.com": true,
             "henry8812@gmail.com": true,
@@ -1817,7 +1817,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 782.7721
+      "avgPlaybackProgress": 861.3589
     },
     {
       "contentId": "tt1234721",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T02:47:23.496Z",
+  "generatedAt": "2026-05-23T02:47:49.189Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1815,18 +1815,30 @@
       "userName": "Lizeth Munera",
       "role": "viewer",
       "createdAt": "2026-05-17T17:33:37.581Z",
-      "updatedAt": "2026-05-23T02:47:14Z",
-      "totalEvents": 17,
+      "updatedAt": "2026-05-23T02:47:39Z",
+      "totalEvents": 18,
       "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 12840.95939,
-      "uniqueContentCount": 11,
-      "lastActivityAt": "2026-05-23T02:47:14Z",
+      "uniqueContentCount": 12,
+      "lastActivityAt": "2026-05-23T02:47:39Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt26443616"
       ],
       "content": {
+        "tt32430579": {
+          "contentId": "tt32430579",
+          "imdbId": "tt32430579",
+          "tmdbId": "1171145",
+          "title": "Ruta de escape",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T02:47:39Z"
+        },
         "tt0032186": {
           "contentId": "tt0032186",
           "imdbId": "tt0032186",
@@ -1960,7 +1972,7 @@
           "lastSeenAt": "2026-05-17T17:56:00Z"
         }
       },
-      "avgPlaybackProgress": 755.3506
+      "avgPlaybackProgress": 713.3866
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

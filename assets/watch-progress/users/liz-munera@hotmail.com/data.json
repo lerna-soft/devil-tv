@@ -1,7 +1,7 @@
 {
   "email": "liz-munera@hotmail.com",
   "name": "Lizeth Munera",
-  "updatedAt": "2026-05-23T02:47:14Z",
+  "updatedAt": "2026-05-23T02:47:39Z",
   "progress": {
     "tt36594331": {
       "imdbId": "tt36594331",
@@ -112,10 +112,22 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T02:47:14Z",
       "watched": {}
+    },
+    "tt32430579": {
+      "imdbId": "tt32430579",
+      "tmdbId": "1171145",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T02:47:39Z",
+      "watched": {}
     }
   },
   "preferences": {
-    "likes": {},
+    "likes": {
+      "tt32430579": 1
+    },
     "watchLater": {
       "tt16431404": true,
       "tt11378946": true,
@@ -126,18 +138,37 @@
       "tt29552248": true,
       "tt8599532": true
     },
-    "updatedAt": "2026-05-17T17:58:30Z"
+    "updatedAt": "2026-05-23T02:47:39Z"
   },
   "lastWatch": {
-    "imdbId": "tt0032186",
-    "tmdbId": "69060",
+    "imdbId": "tt32430579",
+    "tmdbId": "1171145",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T02:47:14Z"
+    "updatedAt": "2026-05-23T02:47:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",
+      "contentId": "tt32430579",
+      "episodeKey": "s1e1",
+      "userEmail": "liz-munera@hotmail.com",
+      "userName": "Lizeth Munera",
+      "imdbId": "tt32430579",
+      "tmdbId": "1171145",
+      "title": "Ruta de escape",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T02:47:39Z"
+    },
     {
       "eventId": "liz-munera@hotmail.com:tt0032186:s1e1:started:2026-05-23T02:47:14Z",
       "contentId": "tt0032186",

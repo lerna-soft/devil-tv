@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T16:11:48.055Z",
+  "generatedAt": "2026-05-23T16:11:58.747Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T16:11:36Z",
+      "updatedAt": "2026-05-23T16:11:38Z",
       "totalEvents": 500,
       "totalStarts": 257,
       "totalCompletions": 85,
       "totalPlaybackProgress": 295274.40840199613,
       "uniqueContentCount": 164,
-      "lastActivityAt": "2026-05-23T16:11:36Z",
+      "lastActivityAt": "2026-05-23T16:11:38Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 120,
+          "playCount": 121,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 72.392792,
-          "lastSeenAt": "2026-05-23T16:11:36Z"
+          "lastSeenAt": "2026-05-23T16:11:38Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -2003,7 +2003,7 @@
           "tmdbId": "1265609",
           "title": "Máquina de guerra",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

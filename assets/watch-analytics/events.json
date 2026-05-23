@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:42:25.348Z",
+  "generatedAt": "2026-05-23T06:43:08.878Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1646971:s1e1:preference:2026-05-23T06:26:32Z",
+      "contentId": "tt1646971",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1646971",
+      "tmdbId": "82702",
+      "title": "Cómo entrenar a tu dragón 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:32Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0455944:s1e1:preference:2026-05-23T06:26:26Z",
       "contentId": "tt0455944",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:01:31Z"
-    },
-    {
-      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T03:21:15Z",
-      "contentId": "tt38121182",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt38121182",
-      "tmdbId": "1539104",
-      "title": "JUJUTSU KAISEN: Ejecución",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T03:21:15Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

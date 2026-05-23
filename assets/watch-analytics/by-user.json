@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:23:12.423Z",
+  "generatedAt": "2026-05-23T06:23:35.462Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:23:00Z",
+      "updatedAt": "2026-05-23T06:23:26Z",
       "totalEvents": 500,
-      "totalStarts": 272,
+      "totalStarts": 271,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
       "uniqueContentCount": 148,
-      "lastActivityAt": "2026-05-23T06:23:00Z",
+      "lastActivityAt": "2026-05-23T06:23:26Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0292800": {
+          "contentId": "tt0292800",
+          "imdbId": "tt0292800",
+          "tmdbId": "897",
+          "title": "Las macabras aventuras de Billy y Mandy",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:23:26Z"
         },
         "tt0278238": {
           "contentId": "tt0278238",
@@ -1806,18 +1818,6 @@
           "maxProgressValue": 1275.588184,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T02:38:32Z"
-        },
-        "tt1345836": {
-          "contentId": "tt1345836",
-          "imdbId": "tt1345836",
-          "tmdbId": "49026",
-          "title": "El caballero oscuro: La leyenda renace",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-11T21:30:15Z"
         }
       },
       "avgPlaybackProgress": 622.8193

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T02:47:49.182Z",
+  "generatedAt": "2026-05-23T05:04:02.067Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
@@ -12,9 +12,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 88,
+      "totalEvents": 89,
       "uniqueUsers": 1,
-      "completionRate": 0.6111
+      "completionRate": 0.6
     },
     {
       "contentId": "tt14452776",
@@ -41,20 +41,20 @@
       "completionRate": 0.2941
     },
     {
-      "contentId": "tt3359350",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 26,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt31596104",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
       "totalEvents": 25,
       "uniqueUsers": 1,
       "completionRate": 0.6667
+    },
+    {
+      "contentId": "tt3359350",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 25,
+      "uniqueUsers": 1,
+      "completionRate": 0
     },
     {
       "contentId": "tt1632701",

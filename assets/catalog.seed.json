@@ -1,6 +1,6 @@
 {
-  "version": 270,
-  "generatedAt": "2026-05-23T02:45:48.669Z",
+  "version": 271,
+  "generatedAt": "2026-05-23T02:45:59.853Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27713,6 +27713,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2001-01-01",
       "posterUrl": "https://image.tmdb.org/t/p/w500/zkBHxQBkebgPhsdeckyKobsJIAZ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "11950",
+      "imdbId": null,
+      "title": "Los locos del Cannonball 2",
+      "year": 1984,
+      "releaseDate": null,
+      "overview": "\"Los locos del Cannonball\" vuelven con otra edición de la carrera automovilística en la que el ganador es el que consiga cruzar los Estados Unidos más rápido. Viejos conocidos y nuevos personajes participan en esta peculiar carrera sin reglas para ser el vencedor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/smLJtFLeIqTsBBUuYPQ5fixNmOx.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-22T23:10:41Z",
+  "updatedAt": "2026-05-23T02:18:39Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1462,6 +1462,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:31:56Z",
       "watched": {}
+    },
+    "tt37287335": {
+      "imdbId": "tt37287335",
+      "tmdbId": "1339713",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T02:18:39Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1573,15 +1583,34 @@
     "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastWatch": {
-    "imdbId": "tt1190634",
-    "tmdbId": "76479",
-    "season": 5,
-    "episode": 8,
-    "progress": 2618.228266414001,
-    "updatedAt": "2026-05-22T23:10:41Z"
+    "imdbId": "tt37287335",
+    "tmdbId": "1339713",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-05-23T02:18:39Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt37287335:s1e1:started:2026-05-23T02:18:39Z",
+      "contentId": "tt37287335",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt37287335",
+      "tmdbId": "1339713",
+      "title": "Obsession",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T02:18:39.009Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T02:18:39Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1190634:s5e8:started:2026-05-22T23:10:41Z",
       "contentId": "tt1190634",
@@ -11062,25 +11091,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T20:23:51Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:23:31Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 429.574944,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T20:23:31Z"
     }
   ]
 }

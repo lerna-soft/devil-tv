@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T01:30:03.726Z",
+  "generatedAt": "2026-05-23T02:18:48.456Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1135,10 +1135,10 @@
       "tmdbId": "359410",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 27,
-      "totalStarts": 27,
+      "totalEvents": 26,
+      "totalStarts": 26,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 29219.15002284667,
+      "totalPlaybackProgress": 28789.57507884667,
       "uniqueUsers": 1,
       "completionRate": 0,
       "lastActivityAt": "2026-05-12T05:01:04Z",
@@ -1146,10 +1146,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 27,
+          "playCount": 26,
           "completedCount": 0,
-          "startedCount": 27,
-          "totalPlaybackProgress": 29219.15002284667,
+          "startedCount": 26,
+          "totalPlaybackProgress": 28789.57507884667,
           "lastSeenAt": "2026-05-12T05:01:04Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -1159,10 +1159,10 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 27,
-          "totalStarts": 27,
+          "totalEvents": 26,
+          "totalStarts": 26,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 29219.15002284667,
+          "totalPlaybackProgress": 28789.57507884667,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-12T05:01:04Z",
           "users": {
@@ -1171,7 +1171,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1082.1907
+      "avgPlaybackProgress": 1107.2913
     },
     {
       "contentId": "tt31596104",
@@ -3886,6 +3886,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt37287335",
+      "imdbId": "tt37287335",
+      "tmdbId": "1339713",
+      "title": "Obsession",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T02:18:39Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T02:18:39Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T02:18:39Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt7784604",

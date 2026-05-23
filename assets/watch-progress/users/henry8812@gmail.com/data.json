@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:20:18Z",
+  "updatedAt": "2026-05-23T06:23:00Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1492,6 +1492,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:20:18Z",
       "watched": {}
+    },
+    "tt0278238": {
+      "imdbId": "tt0278238",
+      "tmdbId": "2723",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:23:00Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1603,15 +1613,34 @@
     "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastWatch": {
-    "imdbId": "tt0877057",
-    "tmdbId": "13916",
+    "imdbId": "tt0278238",
+    "tmdbId": "2723",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:20:18Z"
+    "updatedAt": "2026-05-23T06:23:00Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0278238:s1e1:started:2026-05-23T06:23:00Z",
+      "contentId": "tt0278238",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0278238",
+      "tmdbId": "2723",
+      "title": "Samurai Jack",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:22:57.938Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:23:00Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0877057:s1e1:started:2026-05-23T06:20:18Z",
       "contentId": "tt0877057",
@@ -11092,25 +11121,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T21:30:15Z"
-    },
-    {
-      "eventId": "unknown:tt6587046:s1e1:playing:2026-05-11T21:12:18Z",
-      "contentId": "tt6587046",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt6587046",
-      "tmdbId": "508883",
-      "title": "El chico y la garza",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T21:12:18Z"
     }
   ]
 }

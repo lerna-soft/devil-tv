@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T17:38:57.539Z",
+  "generatedAt": "2026-05-23T17:55:43.499Z",
   "events": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt11378946:s1e1:started:2026-05-23T17:55:36Z",
+      "contentId": "tt11378946",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt11378946",
+      "tmdbId": "936075",
+      "title": "Michael",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T17:55:34.290Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T17:55:36Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1878870:s1e1:started:2026-05-23T17:27:05Z",
       "contentId": "tt1878870",

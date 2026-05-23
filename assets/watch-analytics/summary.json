@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-23T06:26:33.513Z",
+  "generatedAt": "2026-05-23T06:26:43.354Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
   "totalStarts": 297,
-  "totalCompletions": 87,
-  "overallCompletionRate": 0.2929,
-  "trackedTitles": 171,
+  "totalCompletions": 86,
+  "overallCompletionRate": 0.2896,
+  "trackedTitles": 172,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -49,20 +49,20 @@
       "completionRate": 0.6667
     },
     {
-      "contentId": "tt1632701",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "totalEvents": 18,
-      "uniqueUsers": 1,
-      "completionRate": 0.2857
-    },
-    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 17,
       "uniqueUsers": 3,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt1632701",
+      "title": "Suits: la clave del éxito",
+      "type": "series",
+      "totalEvents": 17,
+      "uniqueUsers": 1,
+      "completionRate": 0.2143
     },
     {
       "contentId": "tt1190634",

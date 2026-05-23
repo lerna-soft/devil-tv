@@ -1,6 +1,6 @@
 {
-  "version": 269,
-  "generatedAt": "2026-05-23T02:13:34.618Z",
+  "version": 270,
+  "generatedAt": "2026-05-23T02:45:48.669Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27697,6 +27697,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wi60kA5MobTAc2F2HeeQQ6QFjFs.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "311494",
+      "imdbId": null,
+      "title": "Jackie Chan Adventures: The Search for the Talismans",
+      "year": 2001,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2001-01-01",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zkBHxQBkebgPhsdeckyKobsJIAZ.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

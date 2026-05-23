@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:24:07.729Z",
+  "generatedAt": "2026-05-23T06:24:19.804Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0412142:s1e1:preference:2026-05-23T06:23:57Z",
+      "contentId": "tt0412142",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0412142",
+      "tmdbId": "1408",
+      "title": "House",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:23:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0320691:s1e1:preference:2026-05-23T06:23:37Z",
       "contentId": "tt0320691",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:17:13Z"
-    },
-    {
-      "eventId": "unknown:tt0398417:s1e12:completed:2026-05-12T02:17:11Z",
-      "contentId": "tt0398417",
-      "episodeKey": "s1e12",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0398417",
-      "tmdbId": "2022",
-      "title": "The Batman",
-      "type": "series",
-      "season": 1,
-      "episode": 12,
-      "progress": 1275.588184,
-      "progressValue": 1275.588184,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:17:11Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

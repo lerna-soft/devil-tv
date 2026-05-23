@@ -1,6 +1,6 @@
 {
-  "version": 272,
-  "generatedAt": "2026-05-23T02:46:54.121Z",
+  "version": 273,
+  "generatedAt": "2026-05-23T02:47:05.185Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27745,6 +27745,22 @@
       "releaseDate": null,
       "overview": "Pepe, el mozo de cuadras de un rancho mexicano, está muy encariñado con uno de los caballos, pero su jefe se lo vende a un director de cine americano que piensa utilizarlo en su próxima película. Entonces Pepe decide buscar trabajo en Hollywood para estar cerca del caballo. Film con numerosos cameos de grandes estrellas como Frank Sinatra, Judy Garland, Jack Lemmon, Zsa Zsa Gabor, Janet Leigh, Kim Novak, Tony Curtis y Dean Martin, entre otros.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/xz7RkiflJHTMCEG44IfxBqHagzR.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "41307",
+      "imdbId": null,
+      "title": "El Signo de la Muerte",
+      "year": 1939,
+      "releaseDate": null,
+      "overview": "Un científico planea la vuelta del pueblo azteca sacrificando doncellas que tengan una marca en la mano pero que solo la puede ver un brujo. Esto surge a partir de la interpretación que éste hace de un antiguo códice. Cantinflas es su despistado secretario que posee poderes sobrenaturales.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hGoGz6rQINeLZvyhjNNB9qSHOC0.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

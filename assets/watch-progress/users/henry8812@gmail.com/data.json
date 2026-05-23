@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:25:42Z",
+  "updatedAt": "2026-05-23T06:25:44Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1602,6 +1602,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:25:42Z",
       "watched": {}
+    },
+    "tt0979432": {
+      "imdbId": "tt0979432",
+      "tmdbId": "1621",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:25:44Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1718,20 +1728,40 @@
       "tt0259324": true,
       "tt0898266": true,
       "tt1038686": true,
-      "tt1037705": true
+      "tt1037705": true,
+      "tt0979432": true
     },
-    "updatedAt": "2026-05-23T06:25:42Z"
+    "updatedAt": "2026-05-23T06:25:44Z"
   },
   "lastWatch": {
-    "imdbId": "tt1037705",
-    "tmdbId": "20504",
+    "imdbId": "tt0979432",
+    "tmdbId": "1621",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:25:42Z"
+    "updatedAt": "2026-05-23T06:25:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0979432:s1e1:preference:2026-05-23T06:25:44Z",
+      "contentId": "tt0979432",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0979432",
+      "tmdbId": "1621",
+      "title": "Boardwalk Empire",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:25:44Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1037705:s1e1:preference:2026-05-23T06:25:42Z",
       "contentId": "tt1037705",
@@ -11212,25 +11242,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:45:46Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e12:playing:2026-05-12T02:42:40Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e12",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 12,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:42:40Z"
     }
   ]
 }

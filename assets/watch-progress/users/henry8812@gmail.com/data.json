@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T17:26:51Z",
+  "updatedAt": "2026-05-23T17:27:05Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1725,12 +1725,12 @@
     },
     "tt1878870": {
       "imdbId": "tt1878870",
-      "tmdbId": "",
+      "tmdbId": "376660",
       "lastSeason": 1,
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-23T17:26:51Z",
+      "updatedAt": "2026-05-23T17:27:05Z",
       "watched": {}
     }
   },
@@ -1865,14 +1865,33 @@
   },
   "lastWatch": {
     "imdbId": "tt1878870",
-    "tmdbId": "",
+    "tmdbId": "376660",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T17:26:51Z"
+    "updatedAt": "2026-05-23T17:27:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1878870:s1e1:started:2026-05-23T17:27:05Z",
+      "contentId": "tt1878870",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1878870",
+      "tmdbId": "376660",
+      "title": "The Edge of Seventeen",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T17:27:04.575Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T17:27:05Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1878870:s1e1:preference:2026-05-23T17:26:51Z",
       "contentId": "tt1878870",
@@ -11353,25 +11372,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-13T21:09:16Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e12:playing:2026-05-13T21:08:18Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e12",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 12,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-13T21:08:18Z"
     }
   ]
 }

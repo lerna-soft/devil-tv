@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:18:06.412Z",
+  "generatedAt": "2026-05-23T06:20:32.179Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:17:58Z",
+      "updatedAt": "2026-05-23T06:20:18Z",
       "totalEvents": 500,
       "totalStarts": 272,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
-      "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-23T06:17:58Z",
+      "uniqueContentCount": 148,
+      "lastActivityAt": "2026-05-23T06:20:18Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0877057": {
+          "contentId": "tt0877057",
+          "imdbId": "tt0877057",
+          "tmdbId": "13916",
+          "title": "Death Note",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:20:18Z"
         },
         "tt0093773": {
           "contentId": "tt0093773",
@@ -1669,7 +1681,7 @@
           "tmdbId": "1419406",
           "title": "Escuadrón letal",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 2.972405,
           "maxProgressPercent": 2.972405,

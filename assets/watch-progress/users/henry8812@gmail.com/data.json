@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:17:58Z",
+  "updatedAt": "2026-05-23T06:20:18Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1482,6 +1482,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:17:58Z",
       "watched": {}
+    },
+    "tt0877057": {
+      "imdbId": "tt0877057",
+      "tmdbId": "13916",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:20:18Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1593,15 +1603,34 @@
     "updatedAt": "2026-05-22T20:14:56Z"
   },
   "lastWatch": {
-    "imdbId": "tt0093773",
-    "tmdbId": "106",
+    "imdbId": "tt0877057",
+    "tmdbId": "13916",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:17:58Z"
+    "updatedAt": "2026-05-23T06:20:18Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0877057:s1e1:started:2026-05-23T06:20:18Z",
+      "contentId": "tt0877057",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0877057",
+      "tmdbId": "13916",
+      "title": "Death Note",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:20:16.589Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:20:18Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0093773:s1e1:started:2026-05-23T06:17:58Z",
       "contentId": "tt0093773",
@@ -11082,25 +11111,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T21:12:18Z"
-    },
-    {
-      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-11T21:06:14Z",
-      "contentId": "tt34610311",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T21:06:14Z"
     }
   ]
 }

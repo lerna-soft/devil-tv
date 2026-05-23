@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T10:49:38.580Z",
+  "generatedAt": "2026-05-23T11:46:15.569Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3762,27 +3762,27 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt3359350",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
+      "contentId": "tt2294629",
+      "imdbId": "tt2294629",
+      "tmdbId": "109445",
+      "title": "Frozen: El reino del hielo",
       "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
+      "totalEvents": 1,
+      "totalStarts": 1,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 4572.765832846665,
+      "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-12T05:01:04Z",
+      "lastActivityAt": "2026-05-23T06:43:01Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 2,
+          "playCount": 1,
           "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 4572.765832846665,
-          "lastSeenAt": "2026-05-12T05:01:04Z",
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:43:01Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -3791,19 +3791,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 4572.765832846665,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T05:01:04Z",
+          "lastActivityAt": "2026-05-23T06:43:01Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 2286.3829
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt33428606",
@@ -9612,6 +9612,50 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt3359350",
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 4572.765832846665,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-12T05:01:04Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 4572.765832846665,
+          "lastSeenAt": "2026-05-12T05:01:04Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 4572.765832846665,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T05:01:04Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 4572.7658
     }
   ]
 }

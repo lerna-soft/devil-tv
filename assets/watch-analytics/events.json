@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T05:40:50.784Z",
+  "generatedAt": "2026-05-23T05:41:46.414Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s4e6:completed:2026-05-23T05:41:34Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s4e6",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 4,
+      "episode": 6,
+      "progress": 2830.883967,
+      "progressValue": 2830.883967,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-23T05:40:31.512Z",
+      "completedAt": "2026-05-23T05:41:32.573Z",
+      "updatedAt": "2026-05-23T05:41:34Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s4e6:started:2026-05-23T05:40:33Z",
       "contentId": "tt0903747",
@@ -11382,27 +11403,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T20:30:31Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:30:21Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 1135.446396,
-      "progressValue": 1135.446396,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T20:30:21Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T20:29:26Z",

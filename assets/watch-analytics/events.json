@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T02:18:48.453Z",
+  "generatedAt": "2026-05-23T02:47:23.489Z",
   "events": [
+    {
+      "eventId": "liz-munera@hotmail.com:tt0032186:s1e1:started:2026-05-23T02:47:14Z",
+      "contentId": "tt0032186",
+      "episodeKey": "s1e1",
+      "userEmail": "liz-munera@hotmail.com",
+      "userName": "Lizeth Munera",
+      "imdbId": "tt0032186",
+      "tmdbId": "69060",
+      "title": "You're Missing the Point",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T02:47:12.108Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T02:47:14Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt37287335:s1e1:started:2026-05-23T02:18:39Z",
       "contentId": "tt37287335",
@@ -6071,7 +6092,7 @@
       "updatedAt": "2026-05-18T15:57:35Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt33612209:s1e1:playing:2026-05-18T15:27:55Z",
+      "eventId": "unknown:tt33612209:s1e1:playing:2026-05-18T15:27:55Z",
       "contentId": "tt33612209",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6260,7 +6281,7 @@
       "updatedAt": "2026-05-18T03:44:08Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:playing:2026-05-18T01:26:53Z",
+      "eventId": "unknown:tt26443616:s1e1:playing:2026-05-18T01:26:53Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6302,7 +6323,7 @@
       "updatedAt": "2026-05-18T01:19:45Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:playing:2026-05-18T00:55:19Z",
+      "eventId": "unknown:tt26443616:s1e1:playing:2026-05-18T00:55:19Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6323,7 +6344,7 @@
       "updatedAt": "2026-05-18T00:55:19Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:playing:2026-05-18T00:25:15Z",
+      "eventId": "unknown:tt26443616:s1e1:playing:2026-05-18T00:25:15Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6344,7 +6365,7 @@
       "updatedAt": "2026-05-18T00:25:15Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:playing:2026-05-17T23:55:13Z",
+      "eventId": "unknown:tt26443616:s1e1:playing:2026-05-17T23:55:13Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6365,7 +6386,7 @@
       "updatedAt": "2026-05-17T23:55:13Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:playing:2026-05-17T23:25:11Z",
+      "eventId": "unknown:tt26443616:s1e1:playing:2026-05-17T23:25:11Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6386,7 +6407,7 @@
       "updatedAt": "2026-05-17T23:25:11Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt8599532:s1e1:preference:2026-05-17T17:58:30Z",
+      "eventId": "unknown:tt8599532:s1e1:preference:2026-05-17T17:58:30Z",
       "contentId": "tt8599532",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6407,7 +6428,7 @@
       "updatedAt": "2026-05-17T17:58:30Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt29552248:s1e1:preference:2026-05-17T17:57:33Z",
+      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-17T17:57:33Z",
       "contentId": "tt29552248",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6428,7 +6449,7 @@
       "updatedAt": "2026-05-17T17:57:33Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt27331527:s1e1:preference:2026-05-17T17:57:30Z",
+      "eventId": "unknown:tt27331527:s1e1:preference:2026-05-17T17:57:30Z",
       "contentId": "tt27331527",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6449,7 +6470,7 @@
       "updatedAt": "2026-05-17T17:57:30Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt33046197:s1e1:preference:2026-05-17T17:57:14Z",
+      "eventId": "unknown:tt33046197:s1e1:preference:2026-05-17T17:57:14Z",
       "contentId": "tt33046197",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6470,7 +6491,7 @@
       "updatedAt": "2026-05-17T17:57:14Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt26443616:s1e1:preference:2026-05-17T17:56:27Z",
+      "eventId": "unknown:tt26443616:s1e1:preference:2026-05-17T17:56:27Z",
       "contentId": "tt26443616",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6491,7 +6512,7 @@
       "updatedAt": "2026-05-17T17:56:27Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt8036976:s1e1:preference:2026-05-17T17:56:22Z",
+      "eventId": "unknown:tt8036976:s1e1:preference:2026-05-17T17:56:22Z",
       "contentId": "tt8036976",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6512,7 +6533,7 @@
       "updatedAt": "2026-05-17T17:56:22Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt11378946:s1e1:preference:2026-05-17T17:56:20Z",
+      "eventId": "unknown:tt11378946:s1e1:preference:2026-05-17T17:56:20Z",
       "contentId": "tt11378946",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6533,7 +6554,7 @@
       "updatedAt": "2026-05-17T17:56:20Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt16431404:s1e1:preference:2026-05-17T17:56:08Z",
+      "eventId": "unknown:tt16431404:s1e1:preference:2026-05-17T17:56:08Z",
       "contentId": "tt16431404",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6554,7 +6575,7 @@
       "updatedAt": "2026-05-17T17:56:08Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt36594331:s1e1:preference:2026-05-17T17:56:00Z",
+      "eventId": "unknown:tt36594331:s1e1:preference:2026-05-17T17:56:00Z",
       "contentId": "tt36594331",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",
@@ -6575,7 +6596,7 @@
       "updatedAt": "2026-05-17T17:56:00Z"
     },
     {
-      "eventId": "liz-munera@hotmail.com:tt36594331:s1e1:preference:2026-05-17T17:55:49Z",
+      "eventId": "unknown:tt36594331:s1e1:preference:2026-05-17T17:55:49Z",
       "contentId": "tt36594331",
       "episodeKey": "s1e1",
       "userEmail": "liz-munera@hotmail.com",

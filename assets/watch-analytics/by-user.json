@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T02:18:48.459Z",
+  "generatedAt": "2026-05-23T02:47:23.496Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1815,18 +1815,30 @@
       "userName": "Lizeth Munera",
       "role": "viewer",
       "createdAt": "2026-05-17T17:33:37.581Z",
-      "updatedAt": "2026-05-18T15:27:55Z",
-      "totalEvents": 16,
-      "totalStarts": 6,
+      "updatedAt": "2026-05-23T02:47:14Z",
+      "totalEvents": 17,
+      "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 12840.95939,
-      "uniqueContentCount": 10,
-      "lastActivityAt": "2026-05-18T15:27:55Z",
+      "uniqueContentCount": 11,
+      "lastActivityAt": "2026-05-23T02:47:14Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt26443616"
       ],
       "content": {
+        "tt0032186": {
+          "contentId": "tt0032186",
+          "imdbId": "tt0032186",
+          "tmdbId": "69060",
+          "title": "You're Missing the Point",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T02:47:14Z"
+        },
         "tt33612209": {
           "contentId": "tt33612209",
           "imdbId": "tt33612209",
@@ -1948,7 +1960,7 @@
           "lastSeenAt": "2026-05-17T17:56:00Z"
         }
       },
-      "avgPlaybackProgress": 802.56
+      "avgPlaybackProgress": 755.3506
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

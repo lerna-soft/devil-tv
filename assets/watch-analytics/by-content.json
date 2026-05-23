@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:25:59.824Z",
+  "generatedAt": "2026-05-23T06:26:10.771Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1501,20 +1501,20 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 21,
-      "totalStarts": 16,
+      "totalEvents": 20,
+      "totalStarts": 15,
       "totalCompletions": 5,
       "totalPlaybackProgress": 12933.639967877723,
       "uniqueUsers": 1,
-      "completionRate": 0.3125,
+      "completionRate": 0.3333,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 21,
+          "playCount": 20,
           "completedCount": 5,
-          "startedCount": 16,
+          "startedCount": 15,
           "totalPlaybackProgress": 12933.639967877723,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
@@ -1595,8 +1595,8 @@
         "s3e11": {
           "season": 3,
           "episode": 11,
-          "totalEvents": 3,
-          "totalStarts": 2,
+          "totalEvents": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2579.9691591836736,
           "uniqueUsers": 1,
@@ -1604,7 +1604,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s3e10": {
           "season": 3,
@@ -1649,7 +1649,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 615.8876
+      "avgPlaybackProgress": 646.682
     },
     {
       "contentId": "tt29552248",
@@ -3892,6 +3892,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt1038686",
+      "imdbId": "tt1038686",
+      "tmdbId": "22894",
+      "title": "Legión",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:25:39Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:25:39Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:25:39Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt1196946",

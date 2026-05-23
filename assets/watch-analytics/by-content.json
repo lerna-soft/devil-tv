@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:54:55.612Z",
+  "generatedAt": "2026-05-23T16:55:51.930Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 122,
+      "totalEvents": 123,
       "totalStarts": 74,
-      "totalCompletions": 47,
-      "totalPlaybackProgress": 148255.45231499712,
+      "totalCompletions": 48,
+      "totalPlaybackProgress": 151085.50037894273,
       "uniqueUsers": 1,
-      "completionRate": 0.6351,
-      "lastActivityAt": "2026-05-23T16:54:47Z",
+      "completionRate": 0.6486,
+      "lastActivityAt": "2026-05-23T16:55:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 122,
-          "completedCount": 47,
+          "playCount": 123,
+          "completedCount": 48,
           "startedCount": 74,
-          "totalPlaybackProgress": 148255.45231499712,
-          "lastSeenAt": "2026-05-23T16:54:47Z",
+          "totalPlaybackProgress": 151085.50037894273,
+          "lastSeenAt": "2026-05-23T16:55:44Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s5e2": {
           "season": 5,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 17.499065464,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2847.5471294095782,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:54:47Z",
+          "lastActivityAt": "2026-05-23T16:55:44Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s5e1": {
           "season": 5,
@@ -701,7 +701,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1215.2086
+      "avgPlaybackProgress": 1228.3374
     },
     {
       "contentId": "tt14452776",
@@ -1739,24 +1739,24 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 10,
-      "totalStarts": 9,
+      "totalEvents": 9,
+      "totalStarts": 8,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2575.000090249433,
       "uniqueUsers": 1,
-      "completionRate": 0.1111,
+      "completionRate": 0.125,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
+          "playCount": 9,
           "completedCount": 1,
-          "startedCount": 9,
+          "startedCount": 8,
           "totalPlaybackProgress": 2575.000090249433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
-          "lastSeason": 2,
-          "lastEpisode": 16
+          "lastSeason": 3,
+          "lastEpisode": 1
         }
       },
       "episodes": {
@@ -1871,23 +1871,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s2e16": {
-          "season": 2,
-          "episode": 16,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:07:21Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 257.5
+      "avgPlaybackProgress": 286.1111
     },
     {
       "contentId": "tt33046197",

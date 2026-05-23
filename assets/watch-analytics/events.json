@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:24:38.492Z",
+  "generatedAt": "2026-05-23T06:24:46.324Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0460681:s1e1:preference:2026-05-23T06:24:07Z",
+      "contentId": "tt0460681",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0460681",
+      "tmdbId": "1622",
+      "title": "Sobrenatural",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:24:07Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0360486:s1e1:preference:2026-05-23T06:24:01Z",
       "contentId": "tt0360486",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:38:28Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e10:playing:2026-05-12T02:27:43Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e10",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 10,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:27:43Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

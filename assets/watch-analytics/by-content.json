@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T14:10:31.337Z",
+  "generatedAt": "2026-05-23T14:11:57.757Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 115,
+      "totalEvents": 116,
       "totalStarts": 69,
-      "totalCompletions": 45,
-      "totalPlaybackProgress": 143087.86021927008,
+      "totalCompletions": 46,
+      "totalPlaybackProgress": 145662.9067252701,
       "uniqueUsers": 1,
-      "completionRate": 0.6522,
-      "lastActivityAt": "2026-05-23T14:10:18Z",
+      "completionRate": 0.6667,
+      "lastActivityAt": "2026-05-23T14:11:46Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 115,
-          "completedCount": 45,
+          "playCount": 116,
+          "completedCount": 46,
           "startedCount": 69,
-          "totalPlaybackProgress": 143087.86021927008,
-          "lastSeenAt": "2026-05-23T14:10:18Z",
+          "totalPlaybackProgress": 145662.9067252701,
+          "lastSeenAt": "2026-05-23T14:11:46Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s5e1": {
           "season": 5,
           "episode": 1,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 72.392792,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2647.4392980000002,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T14:10:18Z",
+          "lastActivityAt": "2026-05-23T14:11:46Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.3333
         },
         "s4e13": {
           "season": 4,
@@ -687,7 +687,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1244.2423
+      "avgPlaybackProgress": 1255.7147
     },
     {
       "contentId": "tt14452776",
@@ -9561,50 +9561,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-13T11:16:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0472219",
-      "imdbId": "tt0472219",
-      "tmdbId": "",
-      "title": "The Batman vs. Dracula",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-13T00:06:12Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-13T00:06:12Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T00:06:12Z",
           "users": {
             "henry8812@gmail.com": true
           },

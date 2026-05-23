@@ -1,14 +1,72 @@
 {
-  "generatedAt": "2026-05-23T02:18:48.450Z",
+  "generatedAt": "2026-05-23T02:47:23.487Z",
   "actor": {
     "objectType": "Agent",
     "name": "Lizeth Munera",
     "mbox": "mailto:liz-munera@hotmail.com"
   },
-  "statementCount": 16,
+  "statementCount": 17,
   "statements": [
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt33612209:s1e1:playing:2026-05-18T15:27:55Z",
+      "id": "urn:uuid:liz-munera-hotmail-com:tt0032186:s1e1:started:2026-05-23T02:47:14Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "Lizeth Munera",
+        "mbox": "mailto:liz-munera@hotmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt0032186",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "You're Missing the Point"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt0032186",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt0032186",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "69060",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "2026-05-23T02:47:12.108Z",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-05-23T02:47:14Z",
+      "stored": "2026-05-23T02:47:23.489Z"
+    },
+    {
+      "id": "urn:uuid:unknown:tt33612209:s1e1:playing:2026-05-18T15:27:55Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -63,10 +121,10 @@
         }
       },
       "timestamp": "2026-05-18T15:27:55Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:playing:2026-05-18T01:26:53Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:playing:2026-05-18T01:26:53Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -121,10 +179,10 @@
         }
       },
       "timestamp": "2026-05-18T01:26:53Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:playing:2026-05-18T00:55:19Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:playing:2026-05-18T00:55:19Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -179,10 +237,10 @@
         }
       },
       "timestamp": "2026-05-18T00:55:19Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:playing:2026-05-18T00:25:15Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:playing:2026-05-18T00:25:15Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -237,10 +295,10 @@
         }
       },
       "timestamp": "2026-05-18T00:25:15Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:playing:2026-05-17T23:55:13Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:playing:2026-05-17T23:55:13Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -295,10 +353,10 @@
         }
       },
       "timestamp": "2026-05-17T23:55:13Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:playing:2026-05-17T23:25:11Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:playing:2026-05-17T23:25:11Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -353,10 +411,10 @@
         }
       },
       "timestamp": "2026-05-17T23:25:11Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt8599532:s1e1:preference:2026-05-17T17:58:30Z",
+      "id": "urn:uuid:unknown:tt8599532:s1e1:preference:2026-05-17T17:58:30Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -411,10 +469,10 @@
         }
       },
       "timestamp": "2026-05-17T17:58:30Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt29552248:s1e1:preference:2026-05-17T17:57:33Z",
+      "id": "urn:uuid:unknown:tt29552248:s1e1:preference:2026-05-17T17:57:33Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -469,10 +527,10 @@
         }
       },
       "timestamp": "2026-05-17T17:57:33Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt27331527:s1e1:preference:2026-05-17T17:57:30Z",
+      "id": "urn:uuid:unknown:tt27331527:s1e1:preference:2026-05-17T17:57:30Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -527,10 +585,10 @@
         }
       },
       "timestamp": "2026-05-17T17:57:30Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt33046197:s1e1:preference:2026-05-17T17:57:14Z",
+      "id": "urn:uuid:unknown:tt33046197:s1e1:preference:2026-05-17T17:57:14Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -585,10 +643,10 @@
         }
       },
       "timestamp": "2026-05-17T17:57:14Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt26443616:s1e1:preference:2026-05-17T17:56:27Z",
+      "id": "urn:uuid:unknown:tt26443616:s1e1:preference:2026-05-17T17:56:27Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -643,10 +701,10 @@
         }
       },
       "timestamp": "2026-05-17T17:56:27Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt8036976:s1e1:preference:2026-05-17T17:56:22Z",
+      "id": "urn:uuid:unknown:tt8036976:s1e1:preference:2026-05-17T17:56:22Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -701,10 +759,10 @@
         }
       },
       "timestamp": "2026-05-17T17:56:22Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt11378946:s1e1:preference:2026-05-17T17:56:20Z",
+      "id": "urn:uuid:unknown:tt11378946:s1e1:preference:2026-05-17T17:56:20Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -759,10 +817,10 @@
         }
       },
       "timestamp": "2026-05-17T17:56:20Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt16431404:s1e1:preference:2026-05-17T17:56:08Z",
+      "id": "urn:uuid:unknown:tt16431404:s1e1:preference:2026-05-17T17:56:08Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -817,10 +875,10 @@
         }
       },
       "timestamp": "2026-05-17T17:56:08Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt36594331:s1e1:preference:2026-05-17T17:56:00Z",
+      "id": "urn:uuid:unknown:tt36594331:s1e1:preference:2026-05-17T17:56:00Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -875,10 +933,10 @@
         }
       },
       "timestamp": "2026-05-17T17:56:00Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     },
     {
-      "id": "urn:uuid:liz-munera-hotmail-com:tt36594331:s1e1:preference:2026-05-17T17:55:49Z",
+      "id": "urn:uuid:unknown:tt36594331:s1e1:preference:2026-05-17T17:55:49Z",
       "actor": {
         "objectType": "Agent",
         "name": "Lizeth Munera",
@@ -933,7 +991,7 @@
         }
       },
       "timestamp": "2026-05-17T17:55:49Z",
-      "stored": "2026-05-23T02:18:48.452Z"
+      "stored": "2026-05-23T02:47:23.489Z"
     }
   ]
 }

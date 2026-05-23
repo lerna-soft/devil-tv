@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T05:28:21Z",
+  "updatedAt": "2026-05-23T05:38:40Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1078,9 +1078,9 @@
       "tmdbId": "1396",
       "lastSeason": 4,
       "lastEpisode": 4,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-23T05:28:21Z",
+      "progress": 2711.928139,
+      "lastProgress": 2711.928139,
+      "updatedAt": "2026-05-23T05:38:40Z",
       "watched": {}
     },
     "tt31392119": {
@@ -1587,11 +1587,30 @@
     "tmdbId": "1396",
     "season": 4,
     "episode": 4,
-    "progress": 0,
-    "updatedAt": "2026-05-23T05:28:21Z"
+    "progress": 2711.928139,
+    "updatedAt": "2026-05-23T05:38:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0903747:s4e4:completed:2026-05-23T05:38:40Z",
+      "contentId": "tt0903747",
+      "episodeKey": "s4e4",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "season": 4,
+      "episode": 4,
+      "progress": 2711.928139,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-23T05:28:19.486Z",
+      "completedAt": "2026-05-23T05:38:38.049Z",
+      "updatedAt": "2026-05-23T05:38:40Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0903747:s4e4:started:2026-05-23T05:28:21Z",
       "contentId": "tt0903747",
@@ -11072,25 +11091,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T20:26:03Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-11T20:25:53Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 919.608165,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T20:25:53Z"
     }
   ]
 }

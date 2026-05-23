@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:41:50Z",
+  "updatedAt": "2026-05-23T06:43:01Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1712,6 +1712,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:41:50Z",
       "watched": {}
+    },
+    "tt2294629": {
+      "imdbId": "tt2294629",
+      "tmdbId": "109445",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:43:01Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1843,15 +1853,34 @@
     "updatedAt": "2026-05-23T06:26:35Z"
   },
   "lastWatch": {
-    "imdbId": "tt33428606",
-    "tmdbId": "1357633",
+    "imdbId": "tt2294629",
+    "tmdbId": "109445",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:41:50Z"
+    "updatedAt": "2026-05-23T06:43:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2294629:s1e1:started:2026-05-23T06:43:01Z",
+      "contentId": "tt2294629",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2294629",
+      "tmdbId": "109445",
+      "title": "Frozen: El reino del hielo",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:43:00.375Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:43:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt33428606:s1e1:started:2026-05-23T06:41:50Z",
       "contentId": "tt33428606",
@@ -11332,25 +11361,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T05:01:04Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T04:31:04Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T04:31:04Z"
     }
   ]
 }

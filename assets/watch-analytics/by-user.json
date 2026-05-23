@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T05:38:50.743Z",
+  "generatedAt": "2026-05-23T05:39:02.009Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T05:38:40Z",
+      "updatedAt": "2026-05-23T05:38:42Z",
       "totalEvents": 500,
       "totalStarts": 281,
       "totalCompletions": 81,
-      "totalPlaybackProgress": 306690.3486232121,
+      "totalPlaybackProgress": 305760.65178821207,
       "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-23T05:38:40Z",
+      "lastActivityAt": "2026-05-23T05:38:42Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -133,11 +133,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 94,
+          "playCount": 95,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-23T05:38:40Z"
+          "lastSeenAt": "2026-05-23T05:38:42Z"
         },
         "tt37287335": {
           "contentId": "tt37287335",
@@ -1741,7 +1741,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 20,
+          "playCount": 19,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
@@ -1808,7 +1808,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 613.3807
+      "avgPlaybackProgress": 611.5213
     },
     {
       "userEmail": "liz-munera@hotmail.com",

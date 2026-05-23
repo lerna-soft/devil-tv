@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T17:26:36.506Z",
+  "generatedAt": "2026-05-23T17:26:59.649Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T17:26:28Z",
+      "updatedAt": "2026-05-23T17:26:51Z",
       "totalEvents": 500,
-      "totalStarts": 256,
+      "totalStarts": 255,
       "totalCompletions": 86,
       "totalPlaybackProgress": 298917.5823581348,
-      "uniqueContentCount": 163,
-      "lastActivityAt": "2026-05-23T17:26:28Z",
+      "uniqueContentCount": 164,
+      "lastActivityAt": "2026-05-23T17:26:51Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1878870": {
+          "contentId": "tt1878870",
+          "imdbId": "tt1878870",
+          "tmdbId": "",
+          "title": "The Edge of Seventeen",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T17:26:51Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1991,7 +2003,7 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 7,
+          "playCount": 6,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 0,

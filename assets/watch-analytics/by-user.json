@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T16:56:04.961Z",
+  "generatedAt": "2026-05-23T17:26:36.506Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T16:55:45Z",
+      "updatedAt": "2026-05-23T17:26:28Z",
       "totalEvents": 500,
       "totalStarts": 256,
       "totalCompletions": 86,
-      "totalPlaybackProgress": 298121.95553140575,
+      "totalPlaybackProgress": 298917.5823581348,
       "uniqueContentCount": 163,
-      "lastActivityAt": "2026-05-23T16:55:45Z",
+      "lastActivityAt": "2026-05-23T17:26:28Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 124,
+          "playCount": 125,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 72.392792,
-          "lastSeenAt": "2026-05-23T16:55:45Z"
+          "lastSeenAt": "2026-05-23T17:26:28Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -1991,14 +1991,14 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 8,
+          "playCount": 7,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         }
       },
-      "avgPlaybackProgress": 596.2439
+      "avgPlaybackProgress": 597.8352
     },
     {
       "userEmail": "liz-munera@hotmail.com",
@@ -2447,6 +2447,23 @@
       "role": "viewer",
       "createdAt": "2026-05-17T03:57:11.864Z",
       "updatedAt": "2026-05-17T03:57:11.864Z",
+      "totalEvents": 0,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 0,
+      "lastActivityAt": "",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {},
+      "avgPlaybackProgress": 0
+    },
+    {
+      "userEmail": "garciaallex79@gmail.com",
+      "userName": "Alexis Garcia",
+      "role": "viewer",
+      "createdAt": "2026-05-23T17:23:07.868Z",
+      "updatedAt": "2026-05-23T17:23:07.868Z",
       "totalEvents": 0,
       "totalStarts": 0,
       "totalCompletions": 0,

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-23T16:56:04.905Z",
+  "generatedAt": "2026-05-23T17:26:36.497Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "statementCount": 500,
-      "lastStatementAt": "2026-05-23T16:55:45Z",
+      "lastStatementAt": "2026-05-23T17:26:28Z",
       "file": "users/henry8812@gmail.com.json"
     },
     {
@@ -80,6 +80,14 @@
       "statementCount": 0,
       "lastStatementAt": "",
       "file": "users/dianadussanrios@gmail.com.json"
+    },
+    {
+      "userEmail": "garciaallex79@gmail.com",
+      "userName": "Alexis Garcia",
+      "role": "viewer",
+      "statementCount": 0,
+      "lastStatementAt": "",
+      "file": "users/garciaallex79@gmail.com.json"
     },
     {
       "userEmail": "usuario@mail.com",

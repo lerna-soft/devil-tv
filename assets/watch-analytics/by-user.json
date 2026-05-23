@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:40:30.006Z",
+  "generatedAt": "2026-05-23T06:41:30.914Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:25:58Z",
+      "updatedAt": "2026-05-23T06:26:08Z",
       "totalEvents": 500,
       "totalStarts": 263,
-      "totalCompletions": 84,
-      "totalPlaybackProgress": 298348.19426161575,
-      "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-23T06:25:58Z",
+      "totalCompletions": 83,
+      "totalPlaybackProgress": 295769.45126161573,
+      "uniqueContentCount": 162,
+      "lastActivityAt": "2026-05-23T06:26:08Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1870479": {
+          "contentId": "tt1870479",
+          "imdbId": "tt1870479",
+          "tmdbId": "15621",
+          "title": "The Newsroom",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:26:08Z"
         },
         "tt1845307": {
           "contentId": "tt1845307",
@@ -1896,9 +1908,9 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 14,
+          "playCount": 13,
           "completed": true,
-          "maxProgressValue": 2578.743,
+          "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 55.946230236,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         },
@@ -1975,7 +1987,7 @@
           "lastSeenAt": "2026-05-12T04:01:31Z"
         }
       },
-      "avgPlaybackProgress": 596.6964
+      "avgPlaybackProgress": 591.5389
     },
     {
       "userEmail": "liz-munera@hotmail.com",

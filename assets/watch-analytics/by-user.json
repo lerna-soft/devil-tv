@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:14:03.149Z",
+  "generatedAt": "2026-05-23T06:14:12.623Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:13:52Z",
+      "updatedAt": "2026-05-23T06:13:56Z",
       "totalEvents": 500,
       "totalStarts": 272,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
       "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-23T06:13:52Z",
+      "lastActivityAt": "2026-05-23T06:13:56Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -133,11 +133,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 112,
+          "playCount": 113,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-23T06:13:52Z"
+          "lastSeenAt": "2026-05-23T06:13:56Z"
         },
         "tt37287335": {
           "contentId": "tt37287335",
@@ -925,7 +925,7 @@
           "tmdbId": "9502",
           "title": "Kung Fu Panda",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

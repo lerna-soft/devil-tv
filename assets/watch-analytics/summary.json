@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-23T06:24:38.492Z",
+  "generatedAt": "2026-05-23T06:24:46.323Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
-  "totalStarts": 301,
+  "totalStarts": 300,
   "totalCompletions": 90,
-  "overallCompletionRate": 0.299,
-  "trackedTitles": 165,
+  "overallCompletionRate": 0.3,
+  "trackedTitles": 166,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -52,9 +52,9 @@
       "contentId": "tt1632701",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 23,
+      "totalEvents": 22,
       "uniqueUsers": 1,
-      "completionRate": 0.3529
+      "completionRate": 0.375
     },
     {
       "contentId": "tt29552248",

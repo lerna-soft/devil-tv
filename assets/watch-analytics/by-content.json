@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T05:48:06.182Z",
+  "generatedAt": "2026-05-23T05:55:21.116Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 101,
+      "totalEvents": 102,
       "totalStarts": 61,
-      "totalCompletions": 39,
-      "totalPlaybackProgress": 125926.30074527014,
+      "totalCompletions": 40,
+      "totalPlaybackProgress": 128757.13827227014,
       "uniqueUsers": 1,
-      "completionRate": 0.6393,
-      "lastActivityAt": "2026-05-23T05:47:48Z",
+      "completionRate": 0.6557,
+      "lastActivityAt": "2026-05-23T05:55:10Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 101,
-          "completedCount": 39,
+          "playCount": 102,
+          "completedCount": 40,
           "startedCount": 61,
-          "totalPlaybackProgress": 125926.30074527014,
-          "lastSeenAt": "2026-05-23T05:47:48Z",
+          "totalPlaybackProgress": 128757.13827227014,
+          "lastSeenAt": "2026-05-23T05:55:10Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s4e8": {
           "season": 4,
           "episode": 8,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2830.837527,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T05:47:48Z",
+          "lastActivityAt": "2026-05-23T05:55:10Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s4e7": {
           "season": 4,
@@ -603,7 +603,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1246.7951
+      "avgPlaybackProgress": 1262.3249
     },
     {
       "contentId": "tt14452776",
@@ -1797,10 +1797,10 @@
       "tmdbId": "359410",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 13,
-      "totalStarts": 13,
+      "totalEvents": 12,
+      "totalStarts": 12,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 17605.904421846666,
+      "totalPlaybackProgress": 16384.662961846665,
       "uniqueUsers": 1,
       "completionRate": 0,
       "lastActivityAt": "2026-05-12T05:01:04Z",
@@ -1808,10 +1808,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 12,
           "completedCount": 0,
-          "startedCount": 13,
-          "totalPlaybackProgress": 17605.904421846666,
+          "startedCount": 12,
+          "totalPlaybackProgress": 16384.662961846665,
           "lastSeenAt": "2026-05-12T05:01:04Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -1821,10 +1821,10 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 13,
-          "totalStarts": 13,
+          "totalEvents": 12,
+          "totalStarts": 12,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 17605.904421846666,
+          "totalPlaybackProgress": 16384.662961846665,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-12T05:01:04Z",
           "users": {
@@ -1833,7 +1833,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1354.3003
+      "avgPlaybackProgress": 1365.3886
     },
     {
       "contentId": "tt33046197",

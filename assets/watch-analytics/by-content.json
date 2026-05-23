@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:24:19.807Z",
+  "generatedAt": "2026-05-23T06:24:38.496Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2902,64 +2902,6 @@
       "avgPlaybackProgress": 1524.2553
     },
     {
-      "contentId": "tt0398417",
-      "imdbId": "tt0398417",
-      "tmdbId": "2022",
-      "title": "The Batman",
-      "type": "series",
-      "totalEvents": 3,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1273.939568,
-      "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-12T02:38:32Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 1,
-          "startedCount": 2,
-          "totalPlaybackProgress": 1273.939568,
-          "lastSeenAt": "2026-05-12T02:38:32Z",
-          "lastSeason": 1,
-          "lastEpisode": 13
-        }
-      },
-      "episodes": {
-        "s2e1": {
-          "season": 2,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T02:38:32Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e13": {
-          "season": 1,
-          "episode": 13,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1273.939568,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T02:38:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 424.6465
-    },
-    {
       "contentId": "tt0096708",
       "imdbId": "tt0096708",
       "tmdbId": "2391",
@@ -3950,6 +3892,108 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt0398417",
+      "imdbId": "tt0398417",
+      "tmdbId": "2022",
+      "title": "The Batman",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1273.939568,
+      "uniqueUsers": 1,
+      "completionRate": 1,
+      "lastActivityAt": "2026-05-12T02:38:32Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 1,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1273.939568,
+          "lastSeenAt": "2026-05-12T02:38:32Z",
+          "lastSeason": 1,
+          "lastEpisode": 13
+        }
+      },
+      "episodes": {
+        "s2e1": {
+          "season": 2,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T02:38:32Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e13": {
+          "season": 1,
+          "episode": 13,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1273.939568,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T02:38:28Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 636.9698
+    },
+    {
+      "contentId": "tt0360486",
+      "imdbId": "tt0360486",
+      "tmdbId": "561",
+      "title": "Constantine",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:24:01Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:24:01Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:24:01Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0412142",

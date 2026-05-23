@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:23:57Z",
+  "updatedAt": "2026-05-23T06:24:01Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1532,6 +1532,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:23:57Z",
       "watched": {}
+    },
+    "tt0360486": {
+      "imdbId": "tt0360486",
+      "tmdbId": "561",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:24:01Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1641,20 +1651,40 @@
       "tt3344680": true,
       "tt0292800": true,
       "tt0320691": true,
-      "tt0412142": true
+      "tt0412142": true,
+      "tt0360486": true
     },
-    "updatedAt": "2026-05-23T06:23:57Z"
+    "updatedAt": "2026-05-23T06:24:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt0412142",
-    "tmdbId": "1408",
+    "imdbId": "tt0360486",
+    "tmdbId": "561",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:23:57Z"
+    "updatedAt": "2026-05-23T06:24:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0360486:s1e1:preference:2026-05-23T06:24:01Z",
+      "contentId": "tt0360486",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0360486",
+      "tmdbId": "561",
+      "title": "Constantine",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:24:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0412142:s1e1:preference:2026-05-23T06:23:57Z",
       "contentId": "tt0412142",
@@ -11135,25 +11165,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:27:43Z"
-    },
-    {
-      "eventId": "unknown:tt0398417:s1e13:playing:2026-05-12T02:17:13Z",
-      "contentId": "tt0398417",
-      "episodeKey": "s1e13",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0398417",
-      "tmdbId": "2022",
-      "title": "The Batman",
-      "type": "series",
-      "season": 1,
-      "episode": 13,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:17:13Z"
     }
   ]
 }

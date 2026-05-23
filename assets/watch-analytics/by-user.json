@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T11:46:15.572Z",
+  "generatedAt": "2026-05-23T11:46:25.560Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:43:01Z",
+      "updatedAt": "2026-05-23T11:46:05Z",
       "totalEvents": 500,
       "totalStarts": 259,
       "totalCompletions": 83,
-      "totalPlaybackProgress": 295703.62970037974,
-      "uniqueContentCount": 168,
-      "lastActivityAt": "2026-05-23T06:43:01Z",
+      "totalPlaybackProgress": 291482.17364278005,
+      "uniqueContentCount": 167,
+      "lastActivityAt": "2026-05-23T11:46:05Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -27,6 +27,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt2294629",
         "tt33046197",
         "tt29552248",
         "tt0293662",
@@ -37,8 +38,7 @@
         "tt0032186",
         "tt31938062",
         "tt16431870",
-        "tt34610311",
-        "tt3359350"
+        "tt34610311"
       ],
       "content": {
         "15070": {
@@ -131,11 +131,11 @@
           "tmdbId": "109445",
           "title": "Frozen: El reino del hielo",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 351.309775247,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:43:01Z"
+          "lastSeenAt": "2026-05-23T11:46:05Z"
         },
         "tt33428606": {
           "contentId": "tt33428606",
@@ -2044,21 +2044,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T09:36:57Z"
-        },
-        "tt3359350": {
-          "contentId": "tt3359350",
-          "imdbId": "tt3359350",
-          "tmdbId": "359410",
-          "title": "Road House (De profesión: duro)",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 4572.765832846665,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-12T05:01:04Z"
         }
       },
-      "avgPlaybackProgress": 591.4073
+      "avgPlaybackProgress": 582.9643
     },
     {
       "userEmail": "liz-munera@hotmail.com",

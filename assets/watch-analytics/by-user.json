@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T11:46:25.560Z",
+  "generatedAt": "2026-05-23T11:47:01.510Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T11:46:05Z",
+      "updatedAt": "2026-05-23T11:46:52Z",
       "totalEvents": 500,
       "totalStarts": 259,
       "totalCompletions": 83,
       "totalPlaybackProgress": 291482.17364278005,
-      "uniqueContentCount": 167,
-      "lastActivityAt": "2026-05-23T11:46:05Z",
+      "uniqueContentCount": 166,
+      "lastActivityAt": "2026-05-23T11:46:52Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0903747": {
+          "contentId": "tt0903747",
+          "imdbId": "tt0903747",
+          "tmdbId": "1396",
+          "title": "Breaking Bad",
+          "type": "series",
+          "playCount": 114,
+          "completed": true,
+          "maxProgressValue": 3479.858479,
+          "maxProgressPercent": 47.018032,
+          "lastSeenAt": "2026-05-23T11:46:52Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -436,18 +448,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:17:58Z"
-        },
-        "tt0903747": {
-          "contentId": "tt0903747",
-          "imdbId": "tt0903747",
-          "tmdbId": "1396",
-          "title": "Breaking Bad",
-          "type": "series",
-          "playCount": 113,
-          "completed": true,
-          "maxProgressValue": 3479.858479,
-          "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-23T06:13:56Z"
         },
         "tt37287335": {
           "contentId": "tt37287335",
@@ -2032,18 +2032,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T00:06:12Z"
-        },
-        "tt4303340": {
-          "contentId": "tt4303340",
-          "imdbId": "tt4303340",
-          "tmdbId": "",
-          "title": "I Am Not a Serial Killer",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-12T09:36:57Z"
         }
       },
       "avgPlaybackProgress": 582.9643

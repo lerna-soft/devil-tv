@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:24:46.331Z",
+  "generatedAt": "2026-05-23T06:24:53.871Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:24:07Z",
+      "updatedAt": "2026-05-23T06:24:29Z",
       "totalEvents": 500,
       "totalStarts": 268,
-      "totalCompletions": 89,
-      "totalPlaybackProgress": 310134.0579872121,
-      "uniqueContentCount": 152,
-      "lastActivityAt": "2026-05-23T06:24:07Z",
+      "totalCompletions": 88,
+      "totalPlaybackProgress": 308860.1184192121,
+      "uniqueContentCount": 153,
+      "lastActivityAt": "2026-05-23T06:24:29Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -23,8 +23,7 @@
         "tt7587890",
         "tt0259141",
         "tt31596104",
-        "tt1632701",
-        "tt0398417"
+        "tt1632701"
       ],
       "inProgressContentIds": [
         "274870",
@@ -126,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0259324": {
+          "contentId": "tt0259324",
+          "imdbId": "tt0259324",
+          "tmdbId": "1250",
+          "title": "Ghost Rider: El motorista fantasma",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:24:29Z"
         },
         "tt0460681": {
           "contentId": "tt0460681",
@@ -1861,14 +1872,14 @@
           "tmdbId": "2022",
           "title": "The Batman",
           "type": "series",
-          "playCount": 2,
-          "completed": true,
-          "maxProgressValue": 1273.939568,
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T02:38:32Z"
         }
       },
-      "avgPlaybackProgress": 620.2681
+      "avgPlaybackProgress": 617.7202
     },
     {
       "userEmail": "liz-munera@hotmail.com",

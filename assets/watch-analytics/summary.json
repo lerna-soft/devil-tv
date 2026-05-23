@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-23T05:04:02.067Z",
+  "generatedAt": "2026-05-23T05:05:15.617Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
-  "totalStarts": 316,
-  "totalCompletions": 79,
-  "overallCompletionRate": 0.25,
+  "totalStarts": 315,
+  "totalCompletions": 80,
+  "overallCompletionRate": 0.254,
   "trackedTitles": 161,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 89,
+      "totalEvents": 90,
       "uniqueUsers": 1,
-      "completionRate": 0.6
+      "completionRate": 0.6182
     },
     {
       "contentId": "tt14452776",
@@ -52,7 +52,7 @@
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 25,
+      "totalEvents": 24,
       "uniqueUsers": 1,
       "completionRate": 0
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T17:26:59.644Z",
+  "generatedAt": "2026-05-23T17:27:13.438Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1960,106 +1960,6 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
-      "contentId": "tt1632701",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 5,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 2575.000090249433,
-      "uniqueUsers": 1,
-      "completionRate": 0.2,
-      "lastActivityAt": "2026-05-13T21:10:31Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 1,
-          "startedCount": 5,
-          "totalPlaybackProgress": 2575.000090249433,
-          "lastSeenAt": "2026-05-13T21:10:31Z",
-          "lastSeason": 3,
-          "lastEpisode": 12
-        }
-      },
-      "episodes": {
-        "s3e16": {
-          "season": 3,
-          "episode": 16,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:10:31Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s3e15": {
-          "season": 3,
-          "episode": 15,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2575.000090249433,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:10:29Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s3e14": {
-          "season": 3,
-          "episode": 14,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:09:32Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s3e13": {
-          "season": 3,
-          "episode": 13,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:09:16Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s3e12": {
-          "season": 3,
-          "episode": 12,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:08:18Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 429.1667
-    },
-    {
       "contentId": "tt0032186",
       "imdbId": "tt0032186",
       "tmdbId": "69060",
@@ -2158,6 +2058,92 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt1632701",
+      "imdbId": "tt1632701",
+      "tmdbId": "37680",
+      "title": "Suits: la clave del éxito",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 4,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 2575.000090249433,
+      "uniqueUsers": 1,
+      "completionRate": 0.25,
+      "lastActivityAt": "2026-05-13T21:10:31Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 1,
+          "startedCount": 4,
+          "totalPlaybackProgress": 2575.000090249433,
+          "lastSeenAt": "2026-05-13T21:10:31Z",
+          "lastSeason": 3,
+          "lastEpisode": 13
+        }
+      },
+      "episodes": {
+        "s3e16": {
+          "season": 3,
+          "episode": 16,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-13T21:10:31Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s3e15": {
+          "season": 3,
+          "episode": 15,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2575.000090249433,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-13T21:10:29Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s3e14": {
+          "season": 3,
+          "episode": 14,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-13T21:09:32Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s3e13": {
+          "season": 3,
+          "episode": 13,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-13T21:09:16Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 515
     },
     {
       "contentId": "296232",
@@ -2828,6 +2814,50 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
+    },
+    {
+      "contentId": "tt1878870",
+      "imdbId": "tt1878870",
+      "tmdbId": "376660",
+      "title": "The Edge of Seventeen",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T17:27:05Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T17:27:05Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T17:27:05Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2294629",
@@ -3688,50 +3718,6 @@
         }
       },
       "avgPlaybackProgress": 1625.1439
-    },
-    {
-      "contentId": "tt1878870",
-      "imdbId": "tt1878870",
-      "tmdbId": "",
-      "title": "The Edge of Seventeen",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T17:26:51Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T17:26:51Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T17:26:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt35707374",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T09:25:07.512Z",
+  "generatedAt": "2026-05-23T10:49:38.583Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:41:22Z",
+      "updatedAt": "2026-05-23T06:41:50Z",
       "totalEvents": 500,
       "totalStarts": 259,
       "totalCompletions": 83,
       "totalPlaybackProgress": 295703.62970037974,
-      "uniqueContentCount": 166,
-      "lastActivityAt": "2026-05-23T06:41:22Z",
+      "uniqueContentCount": 167,
+      "lastActivityAt": "2026-05-23T06:41:50Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt33428606": {
+          "contentId": "tt33428606",
+          "imdbId": "tt33428606",
+          "tmdbId": "1357633",
+          "title": "Solo Leveling: ReAwakening",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:41:50Z"
         },
         "tt32820897": {
           "contentId": "tt32820897",
@@ -1943,7 +1955,7 @@
           "tmdbId": "1419406",
           "title": "Escuadrón letal",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 2.972405,
           "maxProgressPercent": 2.972405,

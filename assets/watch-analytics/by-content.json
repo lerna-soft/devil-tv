@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:11:48.050Z",
+  "generatedAt": "2026-05-23T16:11:58.745Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,27 +7,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 120,
-      "totalStarts": 72,
+      "totalEvents": 121,
+      "totalStarts": 73,
       "totalCompletions": 47,
       "totalPlaybackProgress": 148237.95324953314,
       "uniqueUsers": 1,
-      "completionRate": 0.6528,
-      "lastActivityAt": "2026-05-23T16:11:36Z",
+      "completionRate": 0.6438,
+      "lastActivityAt": "2026-05-23T16:11:38Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 120,
+          "playCount": 121,
           "completedCount": 47,
-          "startedCount": 72,
+          "startedCount": 73,
           "totalPlaybackProgress": 148237.95324953314,
-          "lastSeenAt": "2026-05-23T16:11:36Z",
+          "lastSeenAt": "2026-05-23T16:11:38Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s5e2": {
+          "season": 5,
+          "episode": 2,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:11:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s5e1": {
           "season": 5,
           "episode": 1,
@@ -55,20 +69,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.25
-        },
-        "s5e2": {
-          "season": 5,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T14:11:48Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         },
         "s4e13": {
           "season": 4,
@@ -701,7 +701,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1235.3163
+      "avgPlaybackProgress": 1225.1071
     },
     {
       "contentId": "tt14452776",
@@ -3730,50 +3730,6 @@
         }
       },
       "avgPlaybackProgress": 1625.1439
-    },
-    {
-      "contentId": "tt15940132",
-      "imdbId": "tt15940132",
-      "tmdbId": "1265609",
-      "title": "Máquina de guerra",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-13T20:53:48Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-13T20:53:48Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T20:53:48Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt35707374",
@@ -9487,6 +9443,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-14T03:41:41Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt15940132",
+      "imdbId": "tt15940132",
+      "tmdbId": "1265609",
+      "title": "Máquina de guerra",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-13T20:53:48Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-13T20:53:48Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-13T20:53:48Z",
           "users": {
             "henry8812@gmail.com": true
           },

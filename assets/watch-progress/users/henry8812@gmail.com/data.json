@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:26:32Z",
+  "updatedAt": "2026-05-23T06:26:35Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1682,6 +1682,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:26:32Z",
       "watched": {}
+    },
+    "tt1631867": {
+      "imdbId": "tt1631867",
+      "tmdbId": "137113",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:26:35Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1807,20 +1817,40 @@
       "tt1870479": true,
       "tt2582802": true,
       "tt0455944": true,
-      "tt1646971": true
+      "tt1646971": true,
+      "tt1631867": true
     },
-    "updatedAt": "2026-05-23T06:26:32Z"
+    "updatedAt": "2026-05-23T06:26:35Z"
   },
   "lastWatch": {
-    "imdbId": "tt1646971",
-    "tmdbId": "82702",
+    "imdbId": "tt1631867",
+    "tmdbId": "137113",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:26:32Z"
+    "updatedAt": "2026-05-23T06:26:35Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1631867:s1e1:preference:2026-05-23T06:26:35Z",
+      "contentId": "tt1631867",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1631867",
+      "tmdbId": "137113",
+      "title": "Al filo del mañana",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:35Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1646971:s1e1:preference:2026-05-23T06:26:32Z",
       "contentId": "tt1646971",
@@ -11301,25 +11331,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:04:50Z"
-    },
-    {
-      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T04:01:31Z",
-      "contentId": "tt38121182",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt38121182",
-      "tmdbId": "1539104",
-      "title": "JUJUTSU KAISEN: Ejecución",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 9.875331,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T04:01:31Z"
     }
   ]
 }

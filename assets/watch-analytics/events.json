@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:43:08.878Z",
+  "generatedAt": "2026-05-23T07:40:21.562Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1631867:s1e1:preference:2026-05-23T06:26:35Z",
+      "contentId": "tt1631867",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1631867",
+      "tmdbId": "137113",
+      "title": "Al filo del mañana",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:35Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1646971:s1e1:preference:2026-05-23T06:26:32Z",
       "contentId": "tt1646971",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T04:04:50Z"
-    },
-    {
-      "eventId": "unknown:tt38121182:s1e1:playing:2026-05-12T04:01:31Z",
-      "contentId": "tt38121182",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt38121182",
-      "tmdbId": "1539104",
-      "title": "JUJUTSU KAISEN: Ejecución",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 9.875331,
-      "progressValue": 9.875331,
-      "progressPercent": 9.875331,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T04:01:31Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

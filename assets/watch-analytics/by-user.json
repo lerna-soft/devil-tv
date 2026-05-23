@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:43:08.887Z",
+  "generatedAt": "2026-05-23T07:40:21.568Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:26:32Z",
+      "updatedAt": "2026-05-23T06:26:35Z",
       "totalEvents": 500,
-      "totalStarts": 260,
+      "totalStarts": 259,
       "totalCompletions": 83,
-      "totalPlaybackProgress": 295769.45126161573,
+      "totalPlaybackProgress": 295759.5759306157,
       "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-23T06:26:32Z",
+      "lastActivityAt": "2026-05-23T06:26:35Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -38,8 +38,7 @@
         "tt31938062",
         "tt16431870",
         "tt34610311",
-        "tt3359350",
-        "tt38121182"
+        "tt3359350"
       ],
       "content": {
         "15070": {
@@ -125,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1631867": {
+          "contentId": "tt1631867",
+          "imdbId": "tt1631867",
+          "tmdbId": "137113",
+          "title": "Al filo del mañana",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:26:35Z"
         },
         "tt1646971": {
           "contentId": "tt1646971",
@@ -2009,21 +2020,9 @@
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T05:01:04Z"
-        },
-        "tt38121182": {
-          "contentId": "tt38121182",
-          "imdbId": "tt38121182",
-          "tmdbId": "1539104",
-          "title": "JUJUTSU KAISEN: Ejecución",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 9.875331,
-          "maxProgressPercent": 9.875331,
-          "lastSeenAt": "2026-05-12T04:01:31Z"
         }
       },
-      "avgPlaybackProgress": 591.5389
+      "avgPlaybackProgress": 591.5192
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-23T06:20:32.173Z",
+  "generatedAt": "2026-05-23T06:23:12.416Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0278238:s1e1:started:2026-05-23T06:23:00Z",
+      "contentId": "tt0278238",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0278238",
+      "tmdbId": "2723",
+      "title": "Samurai Jack",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:22:57.938Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:23:00Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0877057:s1e1:started:2026-05-23T06:20:18Z",
       "contentId": "tt0877057",
@@ -11361,27 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T21:30:15Z"
-    },
-    {
-      "eventId": "unknown:tt6587046:s1e1:playing:2026-05-11T21:12:18Z",
-      "contentId": "tt6587046",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt6587046",
-      "tmdbId": "508883",
-      "title": "El chico y la garza",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T21:12:18Z"
     },
     {
       "eventId": "ornebe@hotmail.com:tt32897959:s1e1:paused:2026-05-11T21:06:22Z",

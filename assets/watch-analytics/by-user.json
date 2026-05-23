@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:20:32.179Z",
+  "generatedAt": "2026-05-23T06:23:12.423Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:20:18Z",
+      "updatedAt": "2026-05-23T06:23:00Z",
       "totalEvents": 500,
       "totalStarts": 272,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
       "uniqueContentCount": 148,
-      "lastActivityAt": "2026-05-23T06:20:18Z",
+      "lastActivityAt": "2026-05-23T06:23:00Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0278238": {
+          "contentId": "tt0278238",
+          "imdbId": "tt0278238",
+          "tmdbId": "2723",
+          "title": "Samurai Jack",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:23:00Z"
         },
         "tt0877057": {
           "contentId": "tt0877057",
@@ -1806,18 +1818,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-11T21:30:15Z"
-        },
-        "tt6587046": {
-          "contentId": "tt6587046",
-          "imdbId": "tt6587046",
-          "tmdbId": "508883",
-          "title": "El chico y la garza",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-11T21:12:18Z"
         }
       },
       "avgPlaybackProgress": 622.8193

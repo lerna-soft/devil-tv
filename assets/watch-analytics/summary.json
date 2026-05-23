@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T05:28:29.244Z",
+  "generatedAt": "2026-05-23T05:28:40.408Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
@@ -12,9 +12,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 92,
+      "totalEvents": 93,
       "uniqueUsers": 1,
-      "completionRate": 0.625
+      "completionRate": 0.614
     },
     {
       "contentId": "tt14452776",
@@ -60,7 +60,7 @@
       "contentId": "tt3359350",
       "title": "Road House (De profesión: duro)",
       "type": "movie",
-      "totalEvents": 22,
+      "totalEvents": 21,
       "uniqueUsers": 1,
       "completionRate": 0
     },

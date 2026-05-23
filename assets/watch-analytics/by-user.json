@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T16:54:55.616Z",
+  "generatedAt": "2026-05-23T16:55:51.933Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T16:54:47Z",
+      "updatedAt": "2026-05-23T16:55:44Z",
       "totalEvents": 500,
-      "totalStarts": 257,
-      "totalCompletions": 85,
-      "totalPlaybackProgress": 295291.9074674601,
+      "totalStarts": 256,
+      "totalCompletions": 86,
+      "totalPlaybackProgress": 298121.95553140575,
       "uniqueContentCount": 163,
-      "lastActivityAt": "2026-05-23T16:54:47Z",
+      "lastActivityAt": "2026-05-23T16:55:44Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 122,
+          "playCount": 123,
           "completed": true,
           "maxProgressValue": 3479.858479,
           "maxProgressPercent": 72.392792,
-          "lastSeenAt": "2026-05-23T16:54:47Z"
+          "lastSeenAt": "2026-05-23T16:55:44Z"
         },
         "tt2294629": {
           "contentId": "tt2294629",
@@ -1991,14 +1991,14 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 10,
+          "playCount": 9,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         }
       },
-      "avgPlaybackProgress": 590.5838
+      "avgPlaybackProgress": 596.2439
     },
     {
       "userEmail": "liz-munera@hotmail.com",

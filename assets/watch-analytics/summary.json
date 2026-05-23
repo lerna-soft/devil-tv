@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-23T16:54:55.609Z",
+  "generatedAt": "2026-05-23T16:55:51.927Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 550,
-  "totalStarts": 289,
-  "totalCompletions": 86,
-  "overallCompletionRate": 0.2976,
+  "totalStarts": 288,
+  "totalCompletions": 87,
+  "overallCompletionRate": 0.3021,
   "trackedTitles": 178,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 122,
+      "totalEvents": 123,
       "uniqueUsers": 1,
-      "completionRate": 0.6351
+      "completionRate": 0.6486
     },
     {
       "contentId": "tt14452776",
@@ -76,9 +76,9 @@
       "contentId": "tt1632701",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 9,
       "uniqueUsers": 1,
-      "completionRate": 0.1111
+      "completionRate": 0.125
     },
     {
       "contentId": "tt33046197",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:08:48.353Z",
+  "generatedAt": "2026-05-23T16:11:48.050Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 119,
+      "totalEvents": 120,
       "totalStarts": 72,
-      "totalCompletions": 46,
-      "totalPlaybackProgress": 145662.9067252701,
+      "totalCompletions": 47,
+      "totalPlaybackProgress": 148237.95324953314,
       "uniqueUsers": 1,
-      "completionRate": 0.6389,
-      "lastActivityAt": "2026-05-23T16:08:40Z",
+      "completionRate": 0.6528,
+      "lastActivityAt": "2026-05-23T16:11:36Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 119,
-          "completedCount": 46,
+          "playCount": 120,
+          "completedCount": 47,
           "startedCount": 72,
-          "totalPlaybackProgress": 145662.9067252701,
-          "lastSeenAt": "2026-05-23T16:08:40Z",
+          "totalPlaybackProgress": 148237.95324953314,
+          "lastSeenAt": "2026-05-23T16:11:36Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,16 +31,16 @@
         "s5e1": {
           "season": 5,
           "episode": 1,
-          "totalEvents": 5,
+          "totalEvents": 6,
           "totalStarts": 4,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2647.4392980000002,
+          "totalCompletions": 2,
+          "totalPlaybackProgress": 5222.485822263038,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:08:40Z",
+          "lastActivityAt": "2026-05-23T16:11:36Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.25
+          "completionRate": 0.5
         },
         "s1e1": {
           "season": 1,
@@ -701,7 +701,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1224.058
+      "avgPlaybackProgress": 1235.3163
     },
     {
       "contentId": "tt14452776",
@@ -709,21 +709,21 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 36,
-      "totalStarts": 28,
+      "totalEvents": 35,
+      "totalStarts": 27,
       "totalCompletions": 7,
-      "totalPlaybackProgress": 16009.327397164136,
+      "totalPlaybackProgress": 14579.076334117135,
       "uniqueUsers": 1,
-      "completionRate": 0.25,
+      "completionRate": 0.2593,
       "lastActivityAt": "2026-05-19T04:44:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 36,
+          "playCount": 35,
           "completedCount": 7,
-          "startedCount": 28,
-          "totalPlaybackProgress": 16009.327397164136,
+          "startedCount": 27,
+          "totalPlaybackProgress": 14579.076334117135,
           "lastSeenAt": "2026-05-19T04:44:02Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -789,16 +789,16 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 3,
+          "totalEvents": 4,
+          "totalStarts": 2,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 3098.334063047,
+          "totalPlaybackProgress": 1668.083,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T03:03:36Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 0.5
         },
         "s1e8": {
           "season": 1,
@@ -885,7 +885,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 444.7035
+      "avgPlaybackProgress": 416.545
     },
     {
       "contentId": "tt16030542",

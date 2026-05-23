@@ -1,6 +1,6 @@
 {
-  "version": 280,
-  "generatedAt": "2026-05-23T17:27:24.151Z",
+  "version": 281,
+  "generatedAt": "2026-05-23T17:55:10.818Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51473,6 +51473,22 @@
       "releaseDate": null,
       "overview": "Crime, Documentary, Reality",
       "posterUrl": "https://image.tmdb.org/t/p/w500/sSYZEBoWvFKConGwFGmPsuHvWnY.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "38780",
+      "imdbId": null,
+      "title": "Buccaneers & Bones",
+      "year": 2010,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2010-12-31",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4mSxDibG2xKS8rRbja7Hiipakf4.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

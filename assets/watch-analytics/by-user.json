@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:23:35.462Z",
+  "generatedAt": "2026-05-23T06:24:07.736Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:23:26Z",
+      "updatedAt": "2026-05-23T06:23:37Z",
       "totalEvents": 500,
-      "totalStarts": 271,
+      "totalStarts": 270,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
-      "uniqueContentCount": 148,
-      "lastActivityAt": "2026-05-23T06:23:26Z",
+      "uniqueContentCount": 149,
+      "lastActivityAt": "2026-05-23T06:23:37Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0320691": {
+          "contentId": "tt0320691",
+          "imdbId": "tt0320691",
+          "tmdbId": "277",
+          "title": "Underworld",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:23:37Z"
         },
         "tt0292800": {
           "contentId": "tt0292800",
@@ -1813,7 +1825,7 @@
           "tmdbId": "2022",
           "title": "The Batman",
           "type": "series",
-          "playCount": 5,
+          "playCount": 4,
           "completed": true,
           "maxProgressValue": 1275.588184,
           "maxProgressPercent": 0,

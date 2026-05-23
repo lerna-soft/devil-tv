@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:41:59.759Z",
+  "generatedAt": "2026-05-23T06:42:25.352Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2858,50 +2858,6 @@
       "avgPlaybackProgress": 1730.5124
     },
     {
-      "contentId": "tt3359350",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 3,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 4572.765832846665,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-12T05:01:04Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 3,
-          "totalPlaybackProgress": 4572.765832846665,
-          "lastSeenAt": "2026-05-12T05:01:04Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 4572.765832846665,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T05:01:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1524.2553
-    },
-    {
       "contentId": "tt0096708",
       "imdbId": "tt0096708",
       "tmdbId": "2391",
@@ -3850,6 +3806,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt3359350",
+      "imdbId": "tt3359350",
+      "tmdbId": "359410",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 4572.765832846665,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-12T05:01:04Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 2,
+          "totalPlaybackProgress": 4572.765832846665,
+          "lastSeenAt": "2026-05-12T05:01:04Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 4572.765832846665,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-12T05:01:04Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2286.3829
+    },
+    {
       "contentId": "tt38121182",
       "imdbId": "tt38121182",
       "tmdbId": "1539104",
@@ -3892,6 +3892,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt0455944",
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "title": "The equalizer (El protector)",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:26:26Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:26:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:26:26Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2582802",

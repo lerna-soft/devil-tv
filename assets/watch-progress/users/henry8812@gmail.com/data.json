@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:26:24Z",
+  "updatedAt": "2026-05-23T06:26:26Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -110,7 +110,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-11T21:00:45Z",
+      "updatedAt": "2026-05-23T06:26:26Z",
       "watched": {}
     },
     "tt34610311": {
@@ -1795,20 +1795,40 @@
       "tt0944947": true,
       "tt1845307": true,
       "tt1870479": true,
-      "tt2582802": true
+      "tt2582802": true,
+      "tt0455944": true
     },
-    "updatedAt": "2026-05-23T06:26:24Z"
+    "updatedAt": "2026-05-23T06:26:26Z"
   },
   "lastWatch": {
-    "imdbId": "tt2582802",
-    "tmdbId": "244786",
+    "imdbId": "tt0455944",
+    "tmdbId": "156022",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:26:24Z"
+    "updatedAt": "2026-05-23T06:26:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0455944:s1e1:preference:2026-05-23T06:26:26Z",
+      "contentId": "tt0455944",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0455944",
+      "tmdbId": "156022",
+      "title": "The equalizer (El protector)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:26:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2582802:s1e1:preference:2026-05-23T06:26:24Z",
       "contentId": "tt2582802",
@@ -11289,25 +11309,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T03:21:15Z"
-    },
-    {
-      "eventId": "unknown:tt3359350:s1e1:playing:2026-05-12T03:01:54Z",
-      "contentId": "tt3359350",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt3359350",
-      "tmdbId": "359410",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T03:01:54Z"
     }
   ]
 }

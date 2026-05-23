@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:23:00Z",
+  "updatedAt": "2026-05-23T06:23:26Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1502,6 +1502,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:23:00Z",
       "watched": {}
+    },
+    "tt0292800": {
+      "imdbId": "tt0292800",
+      "tmdbId": "897",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:23:26Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1608,20 +1618,40 @@
       "tt3766354": true,
       "tt4972582": true,
       "tt2345759": true,
-      "tt3344680": true
+      "tt3344680": true,
+      "tt0292800": true
     },
-    "updatedAt": "2026-05-22T20:14:56Z"
+    "updatedAt": "2026-05-23T06:23:26Z"
   },
   "lastWatch": {
-    "imdbId": "tt0278238",
-    "tmdbId": "2723",
+    "imdbId": "tt0292800",
+    "tmdbId": "897",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:23:00Z"
+    "updatedAt": "2026-05-23T06:23:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0292800:s1e1:preference:2026-05-23T06:23:26Z",
+      "contentId": "tt0292800",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0292800",
+      "tmdbId": "897",
+      "title": "Las macabras aventuras de Billy y Mandy",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:23:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0278238:s1e1:started:2026-05-23T06:23:00Z",
       "contentId": "tt0278238",
@@ -11102,25 +11132,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-11T21:45:28Z"
-    },
-    {
-      "eventId": "unknown:tt1345836:s1e1:playing:2026-05-11T21:30:15Z",
-      "contentId": "tt1345836",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1345836",
-      "tmdbId": "49026",
-      "title": "El caballero oscuro: La leyenda renace",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-11T21:30:15Z"
     }
   ]
 }

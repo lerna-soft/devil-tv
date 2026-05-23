@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T23:48:37.289Z",
+  "generatedAt": "2026-05-23T00:38:00.338Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1943,19 +1943,31 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-19T02:20:43Z",
-      "totalEvents": 13,
-      "totalStarts": 10,
+      "updatedAt": "2026-05-23T00:37:50Z",
+      "totalEvents": 14,
+      "totalStarts": 11,
       "totalCompletions": 0,
       "totalPlaybackProgress": 26755.179235999996,
-      "uniqueContentCount": 3,
-      "lastActivityAt": "2026-05-19T02:20:43Z",
+      "uniqueContentCount": 4,
+      "lastActivityAt": "2026-05-23T00:37:50Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt29552248",
         "tt32897959"
       ],
       "content": {
+        "tt33046197": {
+          "contentId": "tt33046197",
+          "imdbId": "tt33046197",
+          "tmdbId": "1168190",
+          "title": "Los hermanos demolición",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T00:37:50Z"
+        },
         "tt29552248": {
           "contentId": "tt29552248",
           "imdbId": "tt29552248",
@@ -1993,7 +2005,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 2058.0907
+      "avgPlaybackProgress": 1911.0842
     },
     {
       "userEmail": "juancarlosrios531970@gmail.com",

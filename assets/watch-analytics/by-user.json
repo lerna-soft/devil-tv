@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:24:53.871Z",
+  "generatedAt": "2026-05-23T06:25:48.159Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:24:29Z",
+      "updatedAt": "2026-05-23T06:24:38Z",
       "totalEvents": 500,
-      "totalStarts": 268,
+      "totalStarts": 267,
       "totalCompletions": 88,
       "totalPlaybackProgress": 308860.1184192121,
       "uniqueContentCount": 153,
-      "lastActivityAt": "2026-05-23T06:24:29Z",
+      "lastActivityAt": "2026-05-23T06:24:38Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0898266": {
+          "contentId": "tt0898266",
+          "imdbId": "tt0898266",
+          "tmdbId": "1418",
+          "title": "Big Bang",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:24:38Z"
         },
         "tt0259324": {
           "contentId": "tt0259324",
@@ -1865,18 +1877,6 @@
           "maxProgressValue": 9.875331,
           "maxProgressPercent": 9.875331,
           "lastSeenAt": "2026-05-12T04:01:31Z"
-        },
-        "tt0398417": {
-          "contentId": "tt0398417",
-          "imdbId": "tt0398417",
-          "tmdbId": "2022",
-          "title": "The Batman",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-12T02:38:32Z"
         }
       },
       "avgPlaybackProgress": 617.7202

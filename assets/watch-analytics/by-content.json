@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:46:25.374Z",
+  "generatedAt": "2026-05-23T11:47:01.507Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,22 +7,22 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 113,
-      "totalStarts": 67,
+      "totalEvents": 114,
+      "totalStarts": 68,
       "totalCompletions": 45,
       "totalPlaybackProgress": 143015.46742727008,
       "uniqueUsers": 1,
-      "completionRate": 0.6716,
-      "lastActivityAt": "2026-05-23T06:13:56Z",
+      "completionRate": 0.6618,
+      "lastActivityAt": "2026-05-23T11:46:52Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 113,
+          "playCount": 114,
           "completedCount": 45,
-          "startedCount": 67,
+          "startedCount": 68,
           "totalPlaybackProgress": 143015.46742727008,
-          "lastSeenAt": "2026-05-23T06:13:56Z",
+          "lastSeenAt": "2026-05-23T11:46:52Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -31,12 +31,12 @@
         "s5e1": {
           "season": 5,
           "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:13:56Z",
+          "lastActivityAt": "2026-05-23T11:46:52Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -687,7 +687,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1265.6236
+      "avgPlaybackProgress": 1254.5216
     },
     {
       "contentId": "tt14452776",
@@ -9561,50 +9561,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-13T11:16:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt4303340",
-      "imdbId": "tt4303340",
-      "tmdbId": "",
-      "title": "I Am Not a Serial Killer",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-12T09:36:57Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-12T09:36:57Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-12T09:36:57Z",
           "users": {
             "henry8812@gmail.com": true
           },

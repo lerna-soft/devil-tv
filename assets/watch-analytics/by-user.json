@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:26:10.774Z",
+  "generatedAt": "2026-05-23T06:26:19.770Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:25:39Z",
+      "updatedAt": "2026-05-23T06:25:42Z",
       "totalEvents": 500,
       "totalStarts": 266,
-      "totalCompletions": 87,
-      "totalPlaybackProgress": 306072.14490900806,
-      "uniqueContentCount": 155,
-      "lastActivityAt": "2026-05-23T06:25:39Z",
+      "totalCompletions": 86,
+      "totalPlaybackProgress": 303492.1757498244,
+      "uniqueContentCount": 156,
+      "lastActivityAt": "2026-05-23T06:25:42Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1037705": {
+          "contentId": "tt1037705",
+          "imdbId": "tt1037705",
+          "tmdbId": "20504",
+          "title": "El libro de Eli",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:25:42Z"
         },
         "tt1038686": {
           "contentId": "tt1038686",
@@ -1824,7 +1836,7 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 20,
+          "playCount": 19,
           "completed": true,
           "maxProgressValue": 2581.079,
           "maxProgressPercent": 55.946230236,
@@ -1903,7 +1915,7 @@
           "lastSeenAt": "2026-05-12T04:01:31Z"
         }
       },
-      "avgPlaybackProgress": 612.1443
+      "avgPlaybackProgress": 606.9844
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T06:25:48.156Z",
+  "generatedAt": "2026-05-23T06:25:59.824Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1501,24 +1501,24 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 22,
+      "totalEvents": 21,
       "totalStarts": 16,
-      "totalCompletions": 6,
-      "totalPlaybackProgress": 15721.613478081805,
+      "totalCompletions": 5,
+      "totalPlaybackProgress": 12933.639967877723,
       "uniqueUsers": 1,
-      "completionRate": 0.375,
+      "completionRate": 0.3125,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 22,
-          "completedCount": 6,
+          "playCount": 21,
+          "completedCount": 5,
           "startedCount": 16,
-          "totalPlaybackProgress": 15721.613478081805,
+          "totalPlaybackProgress": 12933.639967877723,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
-          "lastEpisode": 10
+          "lastEpisode": 11
         }
       },
       "episodes": {
@@ -1609,16 +1609,16 @@
         "s3e10": {
           "season": 3,
           "episode": 10,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2787.973510204082,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-13T21:07:41Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         },
         "s3e1": {
           "season": 3,
@@ -1649,7 +1649,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 714.6188
+      "avgPlaybackProgress": 615.8876
     },
     {
       "contentId": "tt29552248",
@@ -3892,6 +3892,50 @@
         }
       },
       "avgPlaybackProgress": 4.9377
+    },
+    {
+      "contentId": "tt1196946",
+      "imdbId": "tt1196946",
+      "tmdbId": "5920",
+      "title": "El mentalista",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:24:43Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:24:43Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:24:43Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0898266",

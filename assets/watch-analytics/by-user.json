@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:25:48.159Z",
+  "generatedAt": "2026-05-23T06:25:59.827Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:24:38Z",
+      "updatedAt": "2026-05-23T06:24:43Z",
       "totalEvents": 500,
       "totalStarts": 267,
-      "totalCompletions": 88,
-      "totalPlaybackProgress": 308860.1184192121,
-      "uniqueContentCount": 153,
-      "lastActivityAt": "2026-05-23T06:24:38Z",
+      "totalCompletions": 87,
+      "totalPlaybackProgress": 306072.14490900806,
+      "uniqueContentCount": 154,
+      "lastActivityAt": "2026-05-23T06:24:43Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt1196946": {
+          "contentId": "tt1196946",
+          "imdbId": "tt1196946",
+          "tmdbId": "5920",
+          "title": "El mentalista",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:24:43Z"
         },
         "tt0898266": {
           "contentId": "tt0898266",
@@ -1800,9 +1812,9 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 22,
+          "playCount": 21,
           "completed": true,
-          "maxProgressValue": 2787.973510204082,
+          "maxProgressValue": 2581.079,
           "maxProgressPercent": 55.946230236,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         },
@@ -1879,7 +1891,7 @@
           "lastSeenAt": "2026-05-12T04:01:31Z"
         }
       },
-      "avgPlaybackProgress": 617.7202
+      "avgPlaybackProgress": 612.1443
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T17:38:57.545Z",
+  "generatedAt": "2026-05-23T17:55:43.506Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -2263,13 +2263,13 @@
       "userName": "Juan carlos Rios",
       "role": "viewer",
       "createdAt": "2026-05-10T02:42:47.785Z",
-      "updatedAt": "2026-05-19T05:28:17Z",
-      "totalEvents": 7,
-      "totalStarts": 7,
+      "updatedAt": "2026-05-23T17:55:36Z",
+      "totalEvents": 8,
+      "totalStarts": 8,
       "totalCompletions": 0,
       "totalPlaybackProgress": 6326.763350000001,
-      "uniqueContentCount": 4,
-      "lastActivityAt": "2026-05-19T05:28:17Z",
+      "uniqueContentCount": 5,
+      "lastActivityAt": "2026-05-23T17:55:36Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9114286",
@@ -2277,6 +2277,18 @@
         "tt0480489"
       ],
       "content": {
+        "tt11378946": {
+          "contentId": "tt11378946",
+          "imdbId": "tt11378946",
+          "tmdbId": "936075",
+          "title": "Michael",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T17:55:36Z"
+        },
         "tt9114286": {
           "contentId": "tt9114286",
           "imdbId": "tt9114286",
@@ -2326,7 +2338,7 @@
           "lastSeenAt": "2026-05-13T17:00:31Z"
         }
       },
-      "avgPlaybackProgress": 903.8233
+      "avgPlaybackProgress": 790.8454
     },
     {
       "userEmail": "ornebe@hotmail.com",

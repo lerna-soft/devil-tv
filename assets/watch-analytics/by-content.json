@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T07:40:21.565Z",
+  "generatedAt": "2026-05-23T09:25:07.509Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1725,24 +1725,24 @@
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 12,
-      "totalStarts": 11,
+      "totalEvents": 11,
+      "totalStarts": 10,
       "totalCompletions": 1,
-      "totalPlaybackProgress": 2630.946320485433,
+      "totalPlaybackProgress": 2575.000090249433,
       "uniqueUsers": 1,
-      "completionRate": 0.0909,
+      "completionRate": 0.1,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 12,
+          "playCount": 11,
           "completedCount": 1,
-          "startedCount": 11,
-          "totalPlaybackProgress": 2630.946320485433,
+          "startedCount": 10,
+          "totalPlaybackProgress": 2575.000090249433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
-          "lastSeason": 3,
-          "lastEpisode": 15
+          "lastSeason": 2,
+          "lastEpisode": 16
         }
       },
       "episodes": {
@@ -1763,16 +1763,16 @@
         "s3e15": {
           "season": 3,
           "episode": 15,
-          "totalEvents": 3,
-          "totalStarts": 2,
+          "totalEvents": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 2630.946320485433,
+          "totalPlaybackProgress": 2575.000090249433,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-13T21:10:29Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s3e14": {
           "season": 3,
@@ -1873,7 +1873,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 219.2455
+      "avgPlaybackProgress": 234.0909
     },
     {
       "contentId": "tt33046197",
@@ -3848,6 +3848,50 @@
         }
       },
       "avgPlaybackProgress": 2286.3829
+    },
+    {
+      "contentId": "tt32820897",
+      "imdbId": "tt32820897",
+      "tmdbId": "1311031",
+      "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T06:41:22Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T06:41:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:41:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt1631867",

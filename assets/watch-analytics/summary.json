@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-23T05:41:56.008Z",
+  "generatedAt": "2026-05-23T05:47:56.559Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
-  "totalStarts": 311,
-  "totalCompletions": 84,
-  "overallCompletionRate": 0.2701,
+  "totalStarts": 310,
+  "totalCompletions": 85,
+  "overallCompletionRate": 0.2742,
   "trackedTitles": 161,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 99,
+      "totalEvents": 100,
       "uniqueUsers": 1,
-      "completionRate": 0.6333
+      "completionRate": 0.65
     },
     {
       "contentId": "tt14452776",
@@ -65,20 +65,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt3359350",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 15,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 14,
       "uniqueUsers": 1,
       "completionRate": 0.0769
+    },
+    {
+      "contentId": "tt3359350",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 14,
+      "uniqueUsers": 1,
+      "completionRate": 0
     },
     {
       "contentId": "tt32897959",

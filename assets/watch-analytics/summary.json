@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T05:05:15.617Z",
+  "generatedAt": "2026-05-23T05:05:26.323Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
@@ -12,9 +12,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 90,
+      "totalEvents": 91,
       "uniqueUsers": 1,
-      "completionRate": 0.6182
+      "completionRate": 0.6071
     },
     {
       "contentId": "tt14452776",
@@ -49,20 +49,20 @@
       "completionRate": 0.6667
     },
     {
-      "contentId": "tt3359350",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 24,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt1632701",
       "title": "Suits: la clave del éxito",
       "type": "series",
       "totalEvents": 23,
       "uniqueUsers": 1,
       "completionRate": 0.3529
+    },
+    {
+      "contentId": "tt3359350",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 23,
+      "uniqueUsers": 1,
+      "completionRate": 0
     },
     {
       "contentId": "tt29552248",

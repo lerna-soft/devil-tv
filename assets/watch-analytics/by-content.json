@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T16:55:51.930Z",
+  "generatedAt": "2026-05-23T16:56:04.958Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,27 +7,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 123,
-      "totalStarts": 74,
+      "totalEvents": 124,
+      "totalStarts": 75,
       "totalCompletions": 48,
       "totalPlaybackProgress": 151085.50037894273,
       "uniqueUsers": 1,
-      "completionRate": 0.6486,
-      "lastActivityAt": "2026-05-23T16:55:44Z",
+      "completionRate": 0.64,
+      "lastActivityAt": "2026-05-23T16:55:45Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 123,
+          "playCount": 124,
           "completedCount": 48,
-          "startedCount": 74,
+          "startedCount": 75,
           "totalPlaybackProgress": 151085.50037894273,
-          "lastSeenAt": "2026-05-23T16:55:44Z",
+          "lastSeenAt": "2026-05-23T16:55:45Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s5e3": {
+          "season": 5,
+          "episode": 3,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:55:45Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s5e2": {
           "season": 5,
           "episode": 2,
@@ -701,7 +715,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1228.3374
+      "avgPlaybackProgress": 1218.4315
     },
     {
       "contentId": "tt14452776",
@@ -1734,29 +1748,97 @@
       "avgPlaybackProgress": 1514.7235
     },
     {
+      "contentId": "tt33046197",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 8,
+      "totalStarts": 5,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 6890.871176,
+      "uniqueUsers": 3,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T01:07:52Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 2,
+          "totalPlaybackProgress": 1411.466637,
+          "lastSeenAt": "2026-05-23T01:07:52Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 3,
+          "totalPlaybackProgress": 5479.404539,
+          "lastSeenAt": "2026-05-22T19:39:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:14Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 8,
+          "totalStarts": 5,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 6890.871176,
+          "uniqueUsers": 3,
+          "lastActivityAt": "2026-05-23T01:07:52Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "henry8812@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 861.3589
+    },
+    {
       "contentId": "tt1632701",
       "imdbId": "tt1632701",
       "tmdbId": "37680",
       "title": "Suits: la clave del éxito",
       "type": "series",
-      "totalEvents": 9,
-      "totalStarts": 8,
+      "totalEvents": 8,
+      "totalStarts": 7,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2575.000090249433,
       "uniqueUsers": 1,
-      "completionRate": 0.125,
+      "completionRate": 0.1429,
       "lastActivityAt": "2026-05-13T21:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 9,
+          "playCount": 8,
           "completedCount": 1,
-          "startedCount": 8,
+          "startedCount": 7,
           "totalPlaybackProgress": 2575.000090249433,
           "lastSeenAt": "2026-05-13T21:10:31Z",
           "lastSeason": 3,
-          "lastEpisode": 1
+          "lastEpisode": 10
         }
       },
       "episodes": {
@@ -1857,91 +1939,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s3e1": {
-          "season": 3,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T21:07:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 286.1111
-    },
-    {
-      "contentId": "tt33046197",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "totalEvents": 8,
-      "totalStarts": 5,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 6890.871176,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T01:07:52Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 1411.466637,
-          "lastSeenAt": "2026-05-23T01:07:52Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 3,
-          "totalPlaybackProgress": 5479.404539,
-          "lastSeenAt": "2026-05-22T19:39:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 8,
-          "totalStarts": 5,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 6890.871176,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-23T01:07:52Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 861.3589
+      "avgPlaybackProgress": 321.875
     },
     {
       "contentId": "tt1234721",

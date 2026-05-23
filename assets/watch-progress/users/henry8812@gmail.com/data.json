@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:23:37Z",
+  "updatedAt": "2026-05-23T06:23:57Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1522,6 +1522,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:23:37Z",
       "watched": {}
+    },
+    "tt0412142": {
+      "imdbId": "tt0412142",
+      "tmdbId": "1408",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:23:57Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1630,20 +1640,40 @@
       "tt2345759": true,
       "tt3344680": true,
       "tt0292800": true,
-      "tt0320691": true
+      "tt0320691": true,
+      "tt0412142": true
     },
-    "updatedAt": "2026-05-23T06:23:37Z"
+    "updatedAt": "2026-05-23T06:23:57Z"
   },
   "lastWatch": {
-    "imdbId": "tt0320691",
-    "tmdbId": "277",
+    "imdbId": "tt0412142",
+    "tmdbId": "1408",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:23:37Z"
+    "updatedAt": "2026-05-23T06:23:57Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0412142:s1e1:preference:2026-05-23T06:23:57Z",
+      "contentId": "tt0412142",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0412142",
+      "tmdbId": "1408",
+      "title": "House",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:23:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0320691:s1e1:preference:2026-05-23T06:23:37Z",
       "contentId": "tt0320691",
@@ -11124,25 +11154,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T02:17:13Z"
-    },
-    {
-      "eventId": "unknown:tt0398417:s1e12:completed:2026-05-12T02:17:11Z",
-      "contentId": "tt0398417",
-      "episodeKey": "s1e12",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0398417",
-      "tmdbId": "2022",
-      "title": "The Batman",
-      "type": "series",
-      "season": 1,
-      "episode": 12,
-      "progress": 1275.588184,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:17:11Z"
     }
   ]
 }

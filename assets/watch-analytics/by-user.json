@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:24:07.736Z",
+  "generatedAt": "2026-05-23T06:24:19.845Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:23:37Z",
+      "updatedAt": "2026-05-23T06:23:57Z",
       "totalEvents": 500,
       "totalStarts": 270,
-      "totalCompletions": 90,
-      "totalPlaybackProgress": 311409.6461712121,
-      "uniqueContentCount": 149,
-      "lastActivityAt": "2026-05-23T06:23:37Z",
+      "totalCompletions": 89,
+      "totalPlaybackProgress": 310134.0579872121,
+      "uniqueContentCount": 150,
+      "lastActivityAt": "2026-05-23T06:23:57Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0412142": {
+          "contentId": "tt0412142",
+          "imdbId": "tt0412142",
+          "tmdbId": "1408",
+          "title": "House",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:23:57Z"
         },
         "tt0320691": {
           "contentId": "tt0320691",
@@ -1825,14 +1837,14 @@
           "tmdbId": "2022",
           "title": "The Batman",
           "type": "series",
-          "playCount": 4,
+          "playCount": 3,
           "completed": true,
-          "maxProgressValue": 1275.588184,
+          "maxProgressValue": 1273.939568,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T02:38:32Z"
         }
       },
-      "avgPlaybackProgress": 622.8193
+      "avgPlaybackProgress": 620.2681
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T05:47:56.559Z",
+  "generatedAt": "2026-05-23T05:48:06.179Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 549,
@@ -12,9 +12,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 100,
+      "totalEvents": 101,
       "uniqueUsers": 1,
-      "completionRate": 0.65
+      "completionRate": 0.6393
     },
     {
       "contentId": "tt14452776",
@@ -73,20 +73,20 @@
       "completionRate": 0.0769
     },
     {
-      "contentId": "tt3359350",
-      "title": "Road House (De profesión: duro)",
-      "type": "movie",
-      "totalEvents": 14,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
+    },
+    {
+      "contentId": "tt3359350",
+      "title": "Road House (De profesión: duro)",
+      "type": "movie",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0
     }
   ]
 }

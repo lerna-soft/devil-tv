@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T06:25:56Z",
+  "updatedAt": "2026-05-23T06:25:58Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1642,6 +1642,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T06:25:56Z",
       "watched": {}
+    },
+    "tt1845307": {
+      "imdbId": "tt1845307",
+      "tmdbId": "39340",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-23T06:25:58Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1762,20 +1772,40 @@
       "tt0979432": true,
       "tt1219289": true,
       "tt1570728": true,
-      "tt0944947": true
+      "tt0944947": true,
+      "tt1845307": true
     },
-    "updatedAt": "2026-05-23T06:25:56Z"
+    "updatedAt": "2026-05-23T06:25:58Z"
   },
   "lastWatch": {
-    "imdbId": "tt0944947",
-    "tmdbId": "1399",
+    "imdbId": "tt1845307",
+    "tmdbId": "39340",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T06:25:56Z"
+    "updatedAt": "2026-05-23T06:25:58Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1845307:s1e1:preference:2026-05-23T06:25:58Z",
+      "contentId": "tt1845307",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1845307",
+      "tmdbId": "39340",
+      "title": "Dos chicas sin blanca",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:25:58Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0944947:s1e1:preference:2026-05-23T06:25:56Z",
       "contentId": "tt0944947",
@@ -11256,25 +11286,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-12T03:01:42Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e14:playing:2026-05-12T02:49:06Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e14",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 14,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-12T02:49:06Z"
     }
   ]
 }

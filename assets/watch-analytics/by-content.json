@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T15:34:36.801Z",
+  "generatedAt": "2026-05-23T16:08:32.637Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,27 +7,41 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 117,
-      "totalStarts": 70,
+      "totalEvents": 118,
+      "totalStarts": 71,
       "totalCompletions": 46,
       "totalPlaybackProgress": 145662.9067252701,
       "uniqueUsers": 1,
-      "completionRate": 0.6571,
-      "lastActivityAt": "2026-05-23T14:11:48Z",
+      "completionRate": 0.6479,
+      "lastActivityAt": "2026-05-23T16:08:22Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 117,
+          "playCount": 118,
           "completedCount": 46,
-          "startedCount": 70,
+          "startedCount": 71,
           "totalPlaybackProgress": 145662.9067252701,
-          "lastSeenAt": "2026-05-23T14:11:48Z",
+          "lastSeenAt": "2026-05-23T16:08:22Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 4,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3526.876511,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:08:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.25
+        },
         "s5e2": {
           "season": 5,
           "episode": 2,
@@ -685,23 +699,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 3,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 3526.876511,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T12:53:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 1244.9821
+      "avgPlaybackProgress": 1234.4314
     },
     {
       "contentId": "tt14452776",
@@ -9538,50 +9538,6 @@
         }
       },
       "avgPlaybackProgress": 974.3218
-    },
-    {
-      "contentId": "tt1416765",
-      "imdbId": "tt1416765",
-      "tmdbId": "21762",
-      "title": "Parenthood",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-13T11:16:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-13T11:16:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-13T11:16:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     }
   ]
 }

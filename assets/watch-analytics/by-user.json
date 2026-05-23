@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-23T06:14:12.623Z",
+  "generatedAt": "2026-05-23T06:18:06.412Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T06:13:56Z",
+      "updatedAt": "2026-05-23T06:17:58Z",
       "totalEvents": 500,
       "totalStarts": 272,
       "totalCompletions": 90,
       "totalPlaybackProgress": 311409.6461712121,
       "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-23T06:13:56Z",
+      "lastActivityAt": "2026-05-23T06:17:58Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -126,6 +126,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0093773": {
+          "contentId": "tt0093773",
+          "imdbId": "tt0093773",
+          "tmdbId": "106",
+          "title": "Predator",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T06:17:58Z"
         },
         "tt0903747": {
           "contentId": "tt0903747",
@@ -1794,18 +1806,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-11T21:12:18Z"
-        },
-        "tt0455944": {
-          "contentId": "tt0455944",
-          "imdbId": "tt0455944",
-          "tmdbId": "156022",
-          "title": "The equalizer (El protector)",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
       "avgPlaybackProgress": 622.8193

@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-23T02:47:49.189Z",
+  "generatedAt": "2026-05-23T05:04:02.073Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T02:18:39Z",
+      "updatedAt": "2026-05-23T05:03:49Z",
       "totalEvents": 500,
       "totalStarts": 284,
       "totalCompletions": 78,
-      "totalPlaybackProgress": 299090.1452362121,
+      "totalPlaybackProgress": 301355.05989121215,
       "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-23T02:18:39Z",
+      "lastActivityAt": "2026-05-23T05:03:49Z",
       "completedContentIds": [
-        "tt1190634",
         "tt0903747",
+        "tt1190634",
         "tt21209804",
         "tt2911666",
         "tt16030542",
@@ -127,6 +127,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt0903747": {
+          "contentId": "tt0903747",
+          "imdbId": "tt0903747",
+          "tmdbId": "1396",
+          "title": "Breaking Bad",
+          "type": "series",
+          "playCount": 89,
+          "completed": true,
+          "maxProgressValue": 3479.858479,
+          "maxProgressPercent": 47.018032,
+          "lastSeenAt": "2026-05-23T05:03:49Z"
+        },
         "tt37287335": {
           "contentId": "tt37287335",
           "imdbId": "tt37287335",
@@ -150,18 +162,6 @@
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T23:10:41Z"
-        },
-        "tt0903747": {
-          "contentId": "tt0903747",
-          "imdbId": "tt0903747",
-          "tmdbId": "1396",
-          "title": "Breaking Bad",
-          "type": "series",
-          "playCount": 88,
-          "completed": true,
-          "maxProgressValue": 3479.858479,
-          "maxProgressPercent": 47.018032,
-          "lastSeenAt": "2026-05-22T22:30:43Z"
         },
         "tt7784604": {
           "contentId": "tt7784604",
@@ -1741,7 +1741,7 @@
           "tmdbId": "359410",
           "title": "Road House (De profesión: duro)",
           "type": "movie",
-          "playCount": 26,
+          "playCount": 25,
           "completed": false,
           "maxProgressValue": 4572.765832846665,
           "maxProgressPercent": 0,
@@ -1808,7 +1808,7 @@
           "lastSeenAt": "2026-05-11T21:00:45Z"
         }
       },
-      "avgPlaybackProgress": 598.1803
+      "avgPlaybackProgress": 602.7101
     },
     {
       "userEmail": "liz-munera@hotmail.com",

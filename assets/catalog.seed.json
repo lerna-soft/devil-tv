@@ -1,6 +1,6 @@
 {
-  "version": 276,
-  "generatedAt": "2026-05-23T06:40:53.243Z",
+  "version": 277,
+  "generatedAt": "2026-05-23T06:42:56.245Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27777,6 +27777,22 @@
       "releaseDate": null,
       "overview": "Danny Glover, Gary Busey",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjFjMjRkYWUtNmI4YS00ZmMwLWFiMmYtNWViY2RjZjMyODQ4XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt21235248",
+      "title": "Ghostbusters: Frozen Empire",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Paul Rudd, Carrie Coon",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOWI5NGUyMzUtMGFiNi00ZTc3LTk1YTQtMDU0NGRjNGIxZTZmXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

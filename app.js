@@ -667,23 +667,91 @@ async function requestPasswordReset() {
   }
   if (!email) return;
 
-  const base = 'https://github.com/lerna-soft/devil-tv/issues/new?template=password-reset.yml';
-  const url = `${base}&email=${encodeURIComponent(email)}`;
-
   if (swal?.fire) {
     const confirm = await swal.fire({
       title: '¿Solicitar recuperación?',
-      html: `Vamos a generarte un link de recuperación para <strong>${escapeHtml(email)}</strong>.<br><br>` +
-        'Se abrirá una página de GitHub para confirmar la solicitud — solo tienes que hacer click en <strong>"Submit new issue"</strong>. ' +
-        'Recibirás un correo con el link para crear una nueva contraseña en pocos minutos.',
+      html: `Vamos a enviarte un link de recuperación a <strong>${escapeHtml(email)}</strong>.<br><br>` +
+        'Recibirás un correo en pocos minutos con instrucciones para crear una nueva contraseña.<br><br>' +
+        '<small style="opacity:0.7">Si tu email no está registrado, no recibirás nada — pero por seguridad no te lo confirmamos.</small>',
       showCancelButton: true,
-      confirmButtonText: 'Abrir solicitud',
+      confirmButtonText: 'Enviar',
       cancelButtonText: 'Cancelar'
     });
     if (!confirm.isConfirmed) return;
   }
 
-  window.open(url, '_blank', 'noopener,noreferrer');
+  try {
+    if (swal?.fire) {
+      swal.fire({
+        title: 'Procesando…',
+        allowOutsideClick: false,
+        didOpen: () => swal.showLoading()
+      });
+    }
+
+    await createPasswordResetIssue(email);
+
+    if (swal?.fire) {
+      await swal.fire({
+        icon: 'success',
+        title: 'Solicitud enviada',
+        html: `Si <strong>${escapeHtml(email)}</strong> está registrado, recibirás un correo en pocos minutos con el link de recuperación.<br><br>Revisa también la carpeta de spam.`,
+        confirmButtonText: 'Entendido'
+      });
+    }
+  } catch (err) {
+    if (swal?.fire) {
+      await swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'No se pudo procesar tu solicitud en este momento. Intenta de nuevo en unos minutos.',
+        confirmButtonText: 'OK'
+      });
+    }
+    console.error('[password-reset] create issue failed:', err);
+  }
+}
+
+async function createPasswordResetIssue(email) {
+  const repo = 'lerna-soft/devil-tv';
+  const token = await getGitHubIssueToken();
+  const headers = {
+    accept: 'application/vnd.github+json',
+    authorization: `Bearer ${token}`,
+    'content-type': 'application/json',
+    'x-github-api-version': '2022-11-28'
+  };
+
+  // Ensure label existe (idempotente: 422 si ya existe, se ignora)
+  try {
+    await fetch(`https://api.github.com/repos/${repo}/labels`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        name: 'password-reset',
+        color: 'd73a4a',
+        description: 'Password reset request (procesado automáticamente)'
+      })
+    });
+  } catch {
+    // best effort
+  }
+
+  const body = `### Tu email\n\n${email}\n`;
+  const response = await fetch(`https://api.github.com/repos/${repo}/issues`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      title: 'Password reset request',
+      body,
+      labels: ['password-reset']
+    })
+  });
+  if (!response.ok) {
+    const text = await response.text().catch(() => '');
+    throw new Error(`Issue create failed (${response.status})${text ? `: ${text}` : ''}`);
+  }
+  return response.json();
 }
 
 function loadLocalAuthUsers() {

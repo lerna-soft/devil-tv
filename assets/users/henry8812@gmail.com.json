@@ -4,8 +4,8 @@
   "salt": "mep_auth_salt_v1_c5f193c024c459a5",
   "passwordHash": "f5d342f2af0a0649d7eec90ac3a39a6b6125069e4eb039946dc5809775300996",
   "createdAt": "2026-05-09T02:17:38.980Z",
-  "resetToken": null,
-  "resetTokenExpiresAt": null,
+  "resetToken": "a13531ed43656d67d1ef26fc449e03a338c2e39791f393ab609d2c8f7151e82a",
+  "resetTokenExpiresAt": "2026-05-24T07:38:14Z",
   "mustChangePassword": false,
-  "lastResetRequestAt": "2026-05-24T06:31:27Z"
+  "lastResetRequestAt": "2026-05-24T06:38:14Z"
 }

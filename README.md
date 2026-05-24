@@ -123,6 +123,10 @@ node tools/write-encrypted-vault.mjs <input-plano> assets/secure/<archivo>.vault
 
 Nota: EPE es una capa de ofuscación fuerte para operación estática, no reemplaza un KMS/backend dedicado.
 
+## Servicios externos
+
+Las cuentas, dashboards y secrets de servicios de terceros usados por este proyecto están listados en [`docs/services.md`](docs/services.md).
+
 ## Limitaciones (por ser estático)
 
 - Sin backend no hay verificación server-side robusta de disponibilidad por URL.

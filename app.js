@@ -123,6 +123,7 @@ const elements = {
   authErrorLogin: document.querySelector('#authErrorLogin'),
   authSubmitLogin: document.querySelector('#authSubmitLogin'),
   authToggleLogin: document.querySelector('#authToggleLogin'),
+  authForgotLogin: document.querySelector('#authForgotLogin'),
   authFormRegister: document.querySelector('#authFormRegister'),
   authNameRegister: document.querySelector('#authNameRegister'),
   authEmailRegister: document.querySelector('#authEmailRegister'),
@@ -482,6 +483,10 @@ function bindAuth() {
     else elements.authEmailLogin?.focus();
   });
 
+  elements.authForgotLogin?.addEventListener('click', () => {
+    void requestPasswordReset();
+  });
+
   elements.authToggleRegister?.addEventListener('click', () => {
     authMode = 'login';
     syncAuthModeUi();
@@ -635,6 +640,50 @@ async function validateAuthUser(email, password) {
   cacheRemoteUserLocally(normalizedEmail, user);
   markLocalUserAsSynced(normalizedEmail, user);
   return { ok: true, user: { ...user, mustChangePassword: Boolean(user.mustChangePassword) } };
+}
+
+async function requestPasswordReset() {
+  const presetEmail = String(elements.authEmailLogin?.value || '').trim().toLowerCase();
+  const swal = window.Swal;
+
+  let email = presetEmail;
+  if (!email && swal?.fire) {
+    const result = await swal.fire({
+      title: 'Recuperar contraseña',
+      input: 'email',
+      inputLabel: '¿Cuál es tu email registrado en Devil TV?',
+      inputPlaceholder: 'tu-email@ejemplo.com',
+      showCancelButton: true,
+      confirmButtonText: 'Continuar',
+      cancelButtonText: 'Cancelar',
+      inputValidator: (value) => {
+        if (!value) return 'Escribe tu email';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Email no válido';
+        return undefined;
+      }
+    });
+    if (!result.isConfirmed) return;
+    email = String(result.value || '').trim().toLowerCase();
+  }
+  if (!email) return;
+
+  const base = 'https://github.com/lerna-soft/devil-tv/issues/new?template=password-reset.yml';
+  const url = `${base}&email=${encodeURIComponent(email)}`;
+
+  if (swal?.fire) {
+    const confirm = await swal.fire({
+      title: '¿Solicitar recuperación?',
+      html: `Vamos a generarte un link de recuperación para <strong>${escapeHtml(email)}</strong>.<br><br>` +
+        'Se abrirá una página de GitHub para confirmar la solicitud — solo tienes que hacer click en <strong>"Submit new issue"</strong>. ' +
+        'Recibirás un correo con el link para crear una nueva contraseña en pocos minutos.',
+      showCancelButton: true,
+      confirmButtonText: 'Abrir solicitud',
+      cancelButtonText: 'Cancelar'
+    });
+    if (!confirm.isConfirmed) return;
+  }
+
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 function loadLocalAuthUsers() {

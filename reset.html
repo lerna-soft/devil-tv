@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recuperar contraseña — Devil TV</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      window.__mep_build = Date.now().toString(36);
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `./styles.css?v=${window.__mep_build}`;
+      document.head.appendChild(link);
+    </script>
+    <style>
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        background: #0a0b12;
+      }
+      .reset-wrap {
+        width: 100%;
+        max-width: 28rem;
+      }
+      .reset-state[hidden] { display: none !important; }
+      .reset-loading,
+      .reset-success-text {
+        margin: 0.6rem 0 1rem;
+        color: rgba(255, 255, 255, 0.72);
+        text-align: center;
+      }
+      .reset-action-link {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.85rem 1rem;
+        border-radius: 0.9rem;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+      }
+      .reset-action-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reset-wrap">
+      <!-- Loading -->
+      <section class="auth-card reset-state" id="stateLoading">
+        <div class="auth-hero">
+          <div class="auth-brand">Devil TV</div>
+          <h2>Recuperar contraseña</h2>
+        </div>
+        <p class="reset-loading">Validando link…</p>
+      </section>
+
+      <!-- Invalid token -->
+      <section class="auth-card reset-state" id="stateInvalid" hidden>
+        <div class="auth-hero">
+          <div class="auth-brand">Devil TV</div>
+          <h2>Link inválido</h2>
+        </div>
+        <p class="auth-hint" id="invalidMsg">El link de recuperación no es válido o ha expirado.</p>
+        <a href="./" class="reset-action-link">Volver al inicio</a>
+      </section>
+
+      <!-- Form -->
+      <form class="auth-card reset-state auth-form" id="stateForm" hidden>
+        <div class="auth-hero">
+          <div class="auth-brand">Devil TV</div>
+          <h2>Nueva contraseña</h2>
+        </div>
+        <p class="auth-hint">Define tu nueva contraseña para <strong id="userEmail"></strong></p>
+        <label class="auth-field">
+          <span>Nueva contraseña (mínimo 8 caracteres)</span>
+          <input type="password" id="pw1" required minlength="8" autocomplete="new-password" />
+        </label>
+        <label class="auth-field">
+          <span>Confirmar contraseña</span>
+          <input type="password" id="pw2" required minlength="8" autocomplete="new-password" />
+        </label>
+        <p class="auth-error" id="formError"></p>
+        <button type="submit" id="submitBtn">Guardar nueva contraseña</button>
+      </form>
+
+      <!-- Success -->
+      <section class="auth-card reset-state" id="stateSuccess" hidden>
+        <div class="auth-hero">
+          <div class="auth-brand">Devil TV</div>
+          <h2>Listo</h2>
+        </div>
+        <p class="reset-success-text">Tu contraseña se actualizó correctamente. Ya puedes iniciar sesión con la nueva.</p>
+        <a href="./" class="reset-action-link">Ir a iniciar sesión</a>
+      </section>
+    </div>
+
+    <script>
+      // ============================================================
+      // CONFIG
+      // ============================================================
+      // URL del Cloudflare Worker que valida el token y commitea el
+      // nuevo {salt, passwordHash} al JSON del usuario.
+      // PENDIENTE: configurar en pieza 5 (deploy del Worker).
+      const RESET_WORKER_URL = '';
+
+      // ============================================================
+      // Auth helpers (duplicados de app.js para mantener reset.html
+      // standalone, sin tener que cargar la app entera)
+      // ============================================================
+      const AUTH_SALT_PREFIX = 'mep_auth_salt_v1';
+
+      function cryptoRandomHex(length) {
+        const bytes = new Uint8Array(length);
+        crypto.getRandomValues(bytes);
+        return [...bytes].map((v) => v.toString(16).padStart(2, '0')).join('');
+      }
+
+      function makeSalt() {
+        return `${AUTH_SALT_PREFIX}_${cryptoRandomHex(8)}`;
+      }
+
+      async function hashPassword(password, salt) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(`${salt}:${password}`);
+        const digest = await crypto.subtle.digest('SHA-256', data);
+        return [...new Uint8Array(digest)].map((v) => v.toString(16).padStart(2, '0')).join('');
+      }
+
+      // ============================================================
+      // UI helpers
+      // ============================================================
+      function showState(id) {
+        document.querySelectorAll('.reset-state').forEach((el) => {
+          el.hidden = el.id !== id;
+        });
+      }
+
+      function showInvalid(msg) {
+        document.getElementById('invalidMsg').textContent =
+          msg || 'El link de recuperación no es válido o ha expirado.';
+        showState('stateInvalid');
+      }
+
+      // ============================================================
+      // Main
+      // ============================================================
+      (async function init() {
+        const params = new URLSearchParams(window.location.search);
+        const email = (params.get('email') || '').trim().toLowerCase();
+        const token = (params.get('token') || '').trim();
+
+        if (!email || !token) {
+          showInvalid('Link incompleto. Falta email o token.');
+          return;
+        }
+
+        let user;
+        try {
+          const resp = await fetch(
+            `./assets/users/${encodeURIComponent(email)}.json?v=${Date.now()}`,
+            { cache: 'no-store' }
+          );
+          if (!resp.ok) throw new Error('not found');
+          user = await resp.json();
+        } catch (err) {
+          showInvalid('No se pudo validar el link. Solicita un nuevo reset.');
+          return;
+        }
+
+        if (!user.resetToken || user.resetToken !== token) {
+          showInvalid(
+            'El link no coincide con ningún reset activo. Posiblemente ya fue usado o se generó uno nuevo.'
+          );
+          return;
+        }
+
+        const expiresAt = user.resetTokenExpiresAt
+          ? new Date(user.resetTokenExpiresAt).getTime()
+          : 0;
+        if (!expiresAt || expiresAt < Date.now()) {
+          showInvalid('El link ha expirado. Solicita uno nuevo desde la pantalla de login.');
+          return;
+        }
+
+        document.getElementById('userEmail').textContent = email;
+        showState('stateForm');
+
+        document.getElementById('stateForm').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const pw1 = document.getElementById('pw1').value;
+          const pw2 = document.getElementById('pw2').value;
+          const errEl = document.getElementById('formError');
+          const submitBtn = document.getElementById('submitBtn');
+          errEl.textContent = '';
+
+          if (pw1.length < 8) {
+            errEl.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+            return;
+          }
+          if (pw1 !== pw2) {
+            errEl.textContent = 'Las contraseñas no coinciden.';
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Guardando…';
+
+          try {
+            const newSalt = makeSalt();
+            const newHash = await hashPassword(pw1, newSalt);
+
+            if (!RESET_WORKER_URL) {
+              throw new Error(
+                'El servicio de reset no está configurado todavía. Por favor contacta al admin.'
+              );
+            }
+
+            const resp = await fetch(RESET_WORKER_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, token, newSalt, newHash })
+            });
+
+            if (!resp.ok) {
+              const data = await resp.json().catch(() => ({}));
+              throw new Error(data.error || `Error del servidor (HTTP ${resp.status}).`);
+            }
+
+            showState('stateSuccess');
+          } catch (err) {
+            errEl.textContent =
+              err.message || 'Error guardando la contraseña. Intenta de nuevo.';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Guardar nueva contraseña';
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

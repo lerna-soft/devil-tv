@@ -2132,57 +2132,27 @@ function renderEvaluationPanel(title) {
   </section>`;
 }
 
+// Delegamos al Worker en Cloudflare. El PAT ofuscado del cliente fue creado
+// para el repo viejo (lerna-admin/media-evaluation-platform-static) y no
+// tiene scope para lerna-soft/devil-tv. El Worker tiene su propio PAT con
+// permisos correctos y crea labels que falten on-demand.
 async function openGitHubIssue(title, body, labels = []) {
-  await ensureIssueLabels(Array.isArray(labels) ? labels : [labels].filter(Boolean));
-  const token = await getGitHubIssueToken();
-  const response = await fetch('https://api.github.com/repos/lerna-admin/media-evaluation-platform-static/issues', {
+  const labelsArr = [...new Set(
+    (Array.isArray(labels) ? labels : [labels])
+      .map((s) => String(s || '').trim())
+      .filter(Boolean)
+  )];
+  const WORKER_URL = 'https://devil-tv-recovery.hglerna.workers.dev/create-issue';
+  const response = await fetch(WORKER_URL, {
     method: 'POST',
-    headers: {
-      accept: 'application/vnd.github+json',
-      authorization: `Bearer ${token}`,
-      'content-type': 'application/json',
-      'x-github-api-version': '2022-11-28'
-    },
-    body: JSON.stringify({
-      title,
-      body,
-      labels: Array.isArray(labels) ? labels : [labels].filter(Boolean)
-    })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title, body, labels: labelsArr })
   });
-
   if (!response.ok) {
-    const text = await response.text().catch(() => '');
-    throw new Error(`GitHub issue create failed (${response.status} ${response.statusText})${text ? `: ${text}` : ''}`);
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || `GitHub issue create failed (HTTP ${response.status})`);
   }
-
   return response.json();
-}
-
-async function ensureIssueLabels(labels = []) {
-  const names = [...new Set((Array.isArray(labels) ? labels : [labels]).map((label) => String(label || '').trim()).filter(Boolean))];
-  if (!names.length) return;
-  const presets = {
-    [USER_REPORT_LABEL]: { color: 'D93F0B', description: 'User-submitted problem reports' },
-    [USER_REPORT_PLATFORM_LABEL]: { color: 'B60205', description: 'Platform-level reports from users' },
-    [USER_REPORT_TITLE_LABEL]: { color: 'FBCA04', description: 'Movie or series reports from users' },
-    [USER_REPORT_EPISODE_LABEL]: { color: '0E8A16', description: 'Episode-specific reports from users' }
-  };
-  await Promise.all(names.map(async (name) => {
-    const preset = presets[name] || { color: '5319E7', description: 'Auto-created label' };
-    try {
-      await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/labels', {
-        method: 'POST',
-        body: JSON.stringify({
-          name,
-          color: preset.color,
-          description: preset.description
-        })
-      });
-    } catch (error) {
-      const message = String(error?.message || error);
-      if (!message.includes('422')) throw error;
-    }
-  }));
 }
 
 async function githubApiJson(pathname, init = {}) {

@@ -5,6 +5,7 @@
 // Endpoints:
 //   POST /reset-password   { email, token, newSalt, newHash }
 //   POST /change-password  { email, currentHash, newSalt, newHash }
+//   POST /create-issue     { title, body, labels[] }
 //
 // Secrets/vars requeridos (configurar en Cloudflare dashboard):
 //   GITHUB_PAT  — fine-grained PAT con contents:write en lerna-soft/devil-tv
@@ -277,6 +278,63 @@ async function handleRequestReset(request, env) {
   return jsonResponse(200, { ok: true }, env);
 }
 
+async function handleCreateIssue(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse(400, { error: 'JSON inválido' }, env);
+  }
+
+  const title = String(body?.title || '').trim();
+  const issueBody = String(body?.body || '').trim();
+  const rawLabels = Array.isArray(body?.labels) ? body.labels : [];
+  const labels = [...new Set(
+    rawLabels.map((s) => String(s || '').trim()).filter(Boolean)
+  )];
+
+  if (!title) return jsonResponse(400, { error: 'title es requerido' }, env);
+  if (title.length > 256) return jsonResponse(400, { error: 'title demasiado largo' }, env);
+  if (issueBody.length > 65536) return jsonResponse(400, { error: 'body demasiado largo' }, env);
+
+  // Best-effort: create labels that don't exist yet. Ignore 422 (already exists).
+  await Promise.all(labels.map(async (name) => {
+    try {
+      await fetch(`${GITHUB_API}/repos/${env.GITHUB_REPO}/labels`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${env.GITHUB_PAT}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'devil-tv-recovery-worker'
+        },
+        body: JSON.stringify({ name, color: '5319E7', description: 'Auto-created label' })
+      });
+    } catch {
+      // ignored
+    }
+  }));
+
+  const resp = await fetch(`${GITHUB_API}/repos/${env.GITHUB_REPO}/issues`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${env.GITHUB_PAT}`,
+      'Accept': 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'devil-tv-recovery-worker'
+    },
+    body: JSON.stringify({ title, body: issueBody, labels })
+  });
+
+  if (!resp.ok) {
+    const text = await resp.text();
+    return jsonResponse(502, { error: `Issue create failed: ${resp.status} ${text.substring(0, 200)}` }, env);
+  }
+
+  const data = await resp.json();
+  return jsonResponse(200, { ok: true, number: data.number, html_url: data.html_url }, env);
+}
+
 export default {
   async fetch(request, env) {
     // CORS preflight
@@ -297,6 +355,9 @@ export default {
     }
     if (request.method === 'POST' && url.pathname === '/change-password') {
       return handleChangePassword(request, env);
+    }
+    if (request.method === 'POST' && url.pathname === '/create-issue') {
+      return handleCreateIssue(request, env);
     }
 
     return jsonResponse(404, { error: 'Not found' }, env);

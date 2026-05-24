@@ -40,6 +40,24 @@ El cliente computa el hash de la contraseña actual usando el `salt`
 que ya conoce del JSON del user. El Worker compara hash contra hash,
 nunca recibe la contraseña en plano.
 
+### `POST /create-issue`
+Crea un issue en `lerna-soft/devil-tv` usando el PAT del Worker.
+Lo usan `app.js` para reportes de usuario, role-provision, metadata
+request, watch-progress sync, etc. Antes esto se hacía con un PAT
+ofuscado en el cliente, pero después del transfer del repo de
+`lerna-admin` a `lerna-soft` ese PAT quedó sin scope.
+
+```json
+{
+  "title": "User report: ...",
+  "body": "<markdown>",
+  "labels": ["user-report"]
+}
+```
+
+Crea labels que no existan (best-effort, color genérico). Devuelve
+`{ ok: true, number, html_url }`.
+
 ---
 
 ## Variables y secrets (configurar en Cloudflare)

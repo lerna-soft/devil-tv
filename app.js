@@ -4,6 +4,8 @@ const state = {
   seriesEpisodesLoading: false,
   hydratedProgressId: '',
   remoteResults: [],
+  remoteResultsFull: [],
+  remoteResultsLimit: 36,
   remoteSearchTimer: null,
   searchCommitTimer: null,
   lastRemoteQuery: '',
@@ -83,6 +85,8 @@ const EPISODE_MANIFEST_CACHE_KEY = 'mep_episode_manifest_v1';
 const EPISODE_MANIFEST_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
 const PLAYER_FALLBACK_DELAY_MS = 6500;
 const CATALOG_PAGE_SIZE = 72;
+const REMOTE_INITIAL_LIMIT = 36;
+const REMOTE_PAGE_SIZE = 12;
 const RELEASE_NOTES_CACHE_KEY = 'mep_release_notes_cache_v2';
 const RELEASE_NOTES_CACHE_TTL_MS = 1000 * 60 * 15;
 const RELEASES_REPO_OWNER = 'lerna-admin';
@@ -1206,6 +1210,8 @@ elements.search.addEventListener('input', () => {
     state.homeSectionView = null;
     state.isSearching = true;
     state.remoteResults = [];
+    state.remoteResultsFull = [];
+    state.remoteResultsLimit = REMOTE_INITIAL_LIMIT;
     setCatalogCount(state.lastCountLabel || '0 títulos');
   }
   scheduleSearchCommit();
@@ -1252,6 +1258,8 @@ elements.tabs.forEach((tab) => {
       clearTimeout(state.searchCommitTimer);
       state.homeSectionView = null;
       state.remoteResults = [];
+      state.remoteResultsFull = [];
+      state.remoteResultsLimit = REMOTE_INITIAL_LIMIT;
       state.lastRemoteQuery = '';
       state.isSearching = false;
       elements.search.value = '';
@@ -3925,6 +3933,21 @@ function bindLocalCardEvents() {
       renderCatalog();
     });
   });
+  elements.items.querySelectorAll('[data-remote-more="1"]').forEach((entry) => {
+    bindTap(entry, (event) => {
+      event.preventDefault();
+      const total = Array.isArray(state.remoteResultsFull) ? state.remoteResultsFull.length : 0;
+      if (state.remoteResultsLimit >= total) return;
+      state.remoteResultsLimit = Math.min(total, state.remoteResultsLimit + REMOTE_PAGE_SIZE);
+      state.remoteResults = state.remoteResultsFull.slice(0, state.remoteResultsLimit);
+      // Keep the merged-list pagination ahead of remote growth so newly
+      // loaded items aren't gated behind the local catalog "Cargar más".
+      if (state.catalogVisibleCount < state.remoteResultsLimit + REMOTE_PAGE_SIZE) {
+        state.catalogVisibleCount = state.remoteResultsLimit + REMOTE_PAGE_SIZE;
+      }
+      renderRemoteResults(getSearchInputValue());
+    });
+  });
   bindQuickActionButtons(elements.items);
 
   elements.items.querySelectorAll('.item-play').forEach((btn) => {
@@ -4101,9 +4124,12 @@ async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId)
     }
     if (intentId !== state.searchIntentId) return;
     const withPlayable = filterTitlesWithPoster(results.map((item) => ({ ...item, playable: true }))).filter((item) => matchesSearchFilters(item, search));
-    state.remoteResults = sortByRelevance(dedupe(withPlayable), query).slice(0, 36).map(normalizeSelection);
-    for (const remoteTitle of state.remoteResults) queueCatalogSeedSyncForTitle(remoteTitle);
-    cacheSearchResults(state.remoteResults);
+    const fullList = sortByRelevance(dedupe(withPlayable), query).map(normalizeSelection);
+    state.remoteResultsFull = fullList;
+    state.remoteResultsLimit = REMOTE_INITIAL_LIMIT;
+    state.remoteResults = fullList.slice(0, state.remoteResultsLimit);
+    for (const remoteTitle of state.remoteResultsFull) queueCatalogSeedSyncForTitle(remoteTitle);
+    cacheSearchResults(state.remoteResultsFull);
     if (intentId !== state.searchIntentId) return;
     renderRemoteResults(getSearchInputValue());
   } catch (error) {
@@ -4128,7 +4154,26 @@ function renderRemoteResults(query) {
   elements.items.innerHTML = merged.length
     ? renderPaginatedLocalList(merged.map((entry) => entry.title))
     : '<div class="empty">No encontramos resultados para esa búsqueda.</div>';
+  appendRemoteLoadMoreAffordance();
   bindLocalCardEvents();
+}
+
+function appendRemoteLoadMoreAffordance() {
+  const total = Array.isArray(state.remoteResultsFull) ? state.remoteResultsFull.length : 0;
+  const shown = Math.min(state.remoteResultsLimit, total);
+  const remaining = Math.max(0, total - shown);
+  if (remaining <= 0) return;
+  const grid = elements.items.querySelector('.items.catalog-results-grid');
+  if (!grid) return;
+  // Avoid double-render if already present
+  if (grid.querySelector('[data-remote-more="1"]')) return;
+  const label = remaining >= REMOTE_PAGE_SIZE
+    ? `Cargar ${REMOTE_PAGE_SIZE} créditos más`
+    : `Cargar los últimos ${remaining}`;
+  grid.insertAdjacentHTML(
+    'beforeend',
+    `<article class="home-more home-more-remote" data-remote-more="1"><div class="home-more-icon" aria-hidden="true">+</div><strong>${escapeHtml(label)}</strong><span>${remaining} créditos remotos disponibles</span></article>`
+  );
 }
 
 function getSortMode() {

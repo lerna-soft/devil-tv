@@ -1,0 +1,11 @@
+name = "devil-tv-recovery"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+# Variables públicas (visibles en el dashboard).
+# Los secrets (GITHUB_PAT) se configuran aparte:
+#   wrangler secret put GITHUB_PAT
+# O via dashboard: Worker → Settings → Variables → Add secret.
+[vars]
+GITHUB_REPO = "lerna-soft/devil-tv"
+ALLOWED_ORIGIN = "https://lerna-soft.github.io"

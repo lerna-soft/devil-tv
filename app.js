@@ -14,6 +14,7 @@ const state = {
   playerFallbackTimer: null,
   playerFallbackUrls: [],
   playerEventAt: 0,
+  activeProviderId: '',
   searchIntentId: 0,
   lastCountLabel: '0 títulos',
   searchingTerm: '',
@@ -52,6 +53,31 @@ const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
+const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
+const PLAYBACK_PROVIDERS = [
+  {
+    id: 'vaplayer',
+    label: 'Servidor 1',
+    note: 'principal',
+    movie: (id) => `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
+  },
+  {
+    id: 'vidsrc',
+    label: 'Servidor 2',
+    note: 'audio original',
+    movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
+  },
+  {
+    id: '2embed',
+    label: 'Servidor 3',
+    note: 'LATAM',
+    movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
+  }
+];
+
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
 const USER_REPORT_LABEL = 'user-report';
 const USER_REPORT_PLATFORM_LABEL = 'user-report-platform';
@@ -116,6 +142,7 @@ const elements = {
   playerModal: document.querySelector('#playerModal'),
   playerIframe: document.querySelector('#player'),
   playerControls: document.querySelector('#playerControls'),
+  playerServerTabs: document.querySelector('#playerServerTabs'),
   authGate: document.querySelector('#authGate'),
   authFormLogin: document.querySelector('#authFormLogin'),
   authEmailLogin: document.querySelector('#authEmailLogin'),
@@ -4789,6 +4816,7 @@ function openPlayerModal(embedUrl) {
   }
 
   renderPlayerControls();
+  renderProviderTabs();
   iframe.src = embedUrl;
   schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
   modal.hidden = false;
@@ -5604,21 +5632,37 @@ function getPlaybackCandidateIds(entry) {
   }
   return ids.filter(Boolean);
 }
-function buildEmbedUrl(entry) {
+function getActiveProvider() {
+  if (!state.activeProviderId) {
+    const stored = (() => {
+      try { return localStorage.getItem(PLAYBACK_PROVIDER_STORAGE_KEY) || ''; } catch { return ''; }
+    })();
+    state.activeProviderId = PLAYBACK_PROVIDERS.find((p) => p.id === stored)?.id || PLAYBACK_PROVIDERS[0].id;
+  }
+  return PLAYBACK_PROVIDERS.find((p) => p.id === state.activeProviderId) || PLAYBACK_PROVIDERS[0];
+}
+
+function buildEmbedUrlWithProvider(entry, provider) {
   const id = getPlaybackId(entry);
   return entry.type === 'movie'
-    ? `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`
-    : `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${entry.season || 1}/${entry.episode || 1}`;
+    ? provider.movie(id)
+    : provider.tv(id, entry.season || 1, entry.episode || 1);
 }
+
+function buildEmbedUrl(entry) {
+  return buildEmbedUrlWithProvider(entry, getActiveProvider());
+}
+
 function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   if (!state.selected) return [primaryUrl];
   const ids = getPlaybackCandidateIds(state.selected);
   if (!ids.length) return [primaryUrl];
-  const media = state.selected.type === 'movie' ? 'movie' : 'tv';
-  const suffix = media === 'movie'
-    ? ''
-    : `/${state.playback.season || 1}/${state.playback.episode || 1}`;
-  const urls = ids.map((id) => `https://vaplayer.ru/embed/${media}/${encodeURIComponent(id)}${suffix}`);
+  const provider = getActiveProvider();
+  const season = state.playback.season || 1;
+  const episode = state.playback.episode || 1;
+  const urls = ids.map((id) => state.selected.type === 'movie'
+    ? provider.movie(id)
+    : provider.tv(id, season, episode));
   if (primaryUrl && !urls.includes(primaryUrl)) urls.unshift(primaryUrl);
   return [...new Set(urls)];
 }
@@ -5648,7 +5692,8 @@ function isSeriesLike(title) { return title.type === 'series' || title.type === 
 function getCurrentEmbedUrl(baseEmbed) {
   if (!isSeriesLike(state.selected)) return baseEmbed;
   const id = getPlaybackId(state.selected);
-  return `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${state.playback.season}/${state.playback.episode}`;
+  const provider = getActiveProvider();
+  return provider.tv(id, state.playback.season, state.playback.episode);
 }
 function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisodes?.seasons ?? []).find((entry) => entry.seasonNumber === seasonNumber); return season?.episodes ?? []; }
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }
@@ -5858,6 +5903,41 @@ function bindPlayerModalEvents() {
   const modal = elements.playerModal;
   if (!modal) return;
   modal.querySelector('[data-close-player]')?.addEventListener('click', closePlayerModal);
+}
+
+function renderProviderTabs() {
+  const container = elements.playerServerTabs;
+  if (!container) return;
+  const active = getActiveProvider();
+  container.innerHTML = PLAYBACK_PROVIDERS.map((provider) => {
+    const isActive = provider.id === active.id;
+    return `
+      <button type="button"
+              class="player-server-tab${isActive ? ' active' : ''}"
+              data-provider-id="${provider.id}"
+              aria-pressed="${isActive}"
+              title="${provider.note}">
+        <span class="player-server-tab-label">${provider.label}</span>
+        <span class="player-server-tab-note">${provider.note}</span>
+      </button>
+    `;
+  }).join('');
+  container.querySelectorAll('[data-provider-id]').forEach((button) => {
+    button.addEventListener('click', () => setActiveProvider(button.dataset.providerId));
+  });
+}
+
+function setActiveProvider(providerId) {
+  const provider = PLAYBACK_PROVIDERS.find((p) => p.id === providerId);
+  if (!provider || provider.id === state.activeProviderId) return;
+  state.activeProviderId = provider.id;
+  try { localStorage.setItem(PLAYBACK_PROVIDER_STORAGE_KEY, provider.id); } catch {}
+  renderProviderTabs();
+  if (state.selected && elements.playerModal && !elements.playerModal.hidden) {
+    const newUrl = buildEmbedUrl(state.selected);
+    elements.playerIframe.src = newUrl;
+    schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
+  }
 }
 
 function renderPlayerControls() {

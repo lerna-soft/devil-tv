@@ -2399,6 +2399,57 @@ body.detail-active .catalog {
   padding: 0.5rem 0.72rem;
 }
 
+.player-server-tabs {
+  background: rgba(10, 10, 12, 0.92);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding: 0.4rem 0.6rem;
+  scrollbar-width: thin;
+  flex: 0 0 auto;
+}
+
+.player-server-tab {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  gap: 0.1rem;
+  line-height: 1.1;
+  min-height: 2.4rem;
+  padding: 0.35rem 0.75rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.player-server-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.player-server-tab.active {
+  background: var(--accent, #e50914);
+  border-color: var(--accent, #e50914);
+  color: #fff;
+}
+
+.player-server-tab-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.player-server-tab-note {
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
 .player-modal-card iframe {
   border: 0;
   flex: 1 1 auto;

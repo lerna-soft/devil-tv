@@ -1,10 +1,11 @@
 {
   "name": "Henry Gomez",
   "email": "henry8812@gmail.com",
-  "salt": "mep_auth_salt_v1_68fc7327ba852920",
-  "passwordHash": "dbe3dda889eb8834245440de87128535aaf23cb5147ed1f5df963aca68339853",
+  "salt": "mep_auth_salt_v1_e764340e77658244",
+  "passwordHash": "96b12999925251320fc9212fbb14e31a6c7cef37f2dfefd81f5183f791456a05",
   "createdAt": "2026-05-09T02:17:38.980Z",
-  "resetToken": "81225c13d696374abd47dd56a1fea0892b48be40eb2ed8102a8db2a99a646e4c",
-  "resetTokenExpiresAt": "2026-05-24T07:01:03Z",
-  "lastResetRequestAt": "2026-05-24T06:01:03Z"
+  "resetToken": null,
+  "resetTokenExpiresAt": null,
+  "lastResetRequestAt": "2026-05-24T06:01:03Z",
+  "mustChangePassword": false
 }

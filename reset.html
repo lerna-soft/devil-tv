@@ -102,9 +102,9 @@
       // ============================================================
       // CONFIG
       // ============================================================
-      // URL del Cloudflare Worker que valida el token y commitea el
-      // nuevo {salt, passwordHash} al JSON del usuario.
-      const RESET_WORKER_URL = 'https://devil-tv-recovery.hglerna.workers.dev/reset-password';
+      const WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev';
+      const VALIDATE_URL = `${WORKER_BASE}/validate-token`;
+      const RESET_WORKER_URL = `${WORKER_BASE}/reset-password`;
 
       // ============================================================
       // Auth helpers (duplicados de app.js para mantener reset.html
@@ -157,31 +157,28 @@
           return;
         }
 
-        let user;
+        // Validación delegada al Worker (lee directo de GitHub API,
+        // sin pasar por el CDN de Pages → token disponible inmediatamente
+        // después del commit del workflow).
         try {
-          const resp = await fetch(
-            `./assets/users/${encodeURIComponent(email)}.json?v=${Date.now()}`,
-            { cache: 'no-store' }
-          );
-          if (!resp.ok) throw new Error('not found');
-          user = await resp.json();
+          const resp = await fetch(VALIDATE_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, token })
+          });
+          if (!resp.ok) {
+            const data = await resp.json().catch(() => ({}));
+            if (data.code === 'expired') {
+              showInvalid('El link ha expirado. Solicita uno nuevo desde la pantalla de login.');
+            } else if (data.code === 'invalid') {
+              showInvalid('El link no coincide con ningún reset activo. Posiblemente ya fue usado o se generó uno nuevo.');
+            } else {
+              showInvalid(data.error || 'No se pudo validar el link.');
+            }
+            return;
+          }
         } catch (err) {
-          showInvalid('No se pudo validar el link. Solicita un nuevo reset.');
-          return;
-        }
-
-        if (!user.resetToken || user.resetToken !== token) {
-          showInvalid(
-            'El link no coincide con ningún reset activo. Posiblemente ya fue usado o se generó uno nuevo.'
-          );
-          return;
-        }
-
-        const expiresAt = user.resetTokenExpiresAt
-          ? new Date(user.resetTokenExpiresAt).getTime()
-          : 0;
-        if (!expiresAt || expiresAt < Date.now()) {
-          showInvalid('El link ha expirado. Solicita uno nuevo desde la pantalla de login.');
+          showInvalid('No se pudo validar el link en este momento. Intenta de nuevo en unos segundos.');
           return;
         }
 

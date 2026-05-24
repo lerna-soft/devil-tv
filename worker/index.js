@@ -191,6 +191,35 @@ async function handleChangePassword(request, env) {
   return jsonResponse(200, { ok: true }, env);
 }
 
+async function handleValidateToken(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse(400, { error: 'Invalid JSON' }, env);
+  }
+
+  const { email, token } = body || {};
+  if (!isValidEmail(email)) return jsonResponse(400, { error: 'Email no válido' }, env);
+  if (!isValidHex(token, 64)) return jsonResponse(400, { error: 'Token inválido' }, env);
+
+  const normalizedEmail = email.trim().toLowerCase();
+  const file = await fetchUserFile(normalizedEmail, env);
+  if (file.notFound) return jsonResponse(404, { error: 'Usuario no encontrado' }, env);
+  if (file.error) return jsonResponse(502, { error: file.error }, env);
+
+  const user = file.content;
+  if (!user.resetToken || user.resetToken !== token) {
+    return jsonResponse(401, { error: 'Token inválido o ya usado', code: 'invalid' }, env);
+  }
+  const expiresAt = user.resetTokenExpiresAt ? Date.parse(user.resetTokenExpiresAt) : 0;
+  if (!expiresAt || expiresAt < Date.now()) {
+    return jsonResponse(401, { error: 'Token expirado. Solicita un nuevo reset.', code: 'expired' }, env);
+  }
+
+  return jsonResponse(200, { ok: true, expiresAt: user.resetTokenExpiresAt }, env);
+}
+
 async function handleRequestReset(request, env) {
   let body;
   try {
@@ -259,6 +288,9 @@ export default {
 
     if (request.method === 'POST' && url.pathname === '/request-reset') {
       return handleRequestReset(request, env);
+    }
+    if (request.method === 'POST' && url.pathname === '/validate-token') {
+      return handleValidateToken(request, env);
     }
     if (request.method === 'POST' && url.pathname === '/reset-password') {
       return handleResetPassword(request, env);

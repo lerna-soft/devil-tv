@@ -111,6 +111,23 @@ Convenciones EPE:
 - El índice vive en `assets/users/index.json`.
 - Esto facilita trazabilidad y búsqueda operativa por correo.
 
+Esquema del archivo `<email>.json` (campos opcionales tienen default seguro si faltan):
+
+```json
+{
+  "salt": "mep_auth_salt_v1_<16 hex>",
+  "passwordHash": "<sha256 hex>",
+  "mustChangePassword": false,
+  "resetToken": null,
+  "resetTokenExpiresAt": null,
+  "lastResetRequestAt": null
+}
+```
+
+- `mustChangePassword`: cuando es `true`, el próximo login obliga al usuario a cambiar su contraseña antes de continuar. Útil para resets manuales hechos por admin (el admin no necesita conocer la nueva contraseña: setea una temporal + este flag).
+- `resetToken`, `resetTokenExpiresAt`: lo escribe el workflow de password-reset cuando el usuario solicita recuperación. Token aleatorio de 32 hex, expira en 1h.
+- `lastResetRequestAt`: timestamp ISO del último request. Usado por el workflow como rate-limit (1 request/hora por email).
+
 Scripts:
 
 ```bash

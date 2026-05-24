@@ -616,7 +616,15 @@ async function validateAuthUser(email, password) {
   if (localUser?.salt && localUser?.passwordHash) {
     const localCandidate = await hashPassword(password, String(localUser.salt || ''));
     if (localCandidate === localUser.passwordHash) {
-      return { ok: true, user: { name: localUser.name, email: normalizedEmail, role: localUser.role || 'viewer' } };
+      return {
+        ok: true,
+        user: {
+          name: localUser.name,
+          email: normalizedEmail,
+          role: localUser.role || 'viewer',
+          mustChangePassword: Boolean(localUser.mustChangePassword)
+        }
+      };
     }
   }
 
@@ -626,7 +634,7 @@ async function validateAuthUser(email, password) {
   if (candidate !== user.passwordHash) return { ok: false, error: 'Credenciales incorrectas.' };
   cacheRemoteUserLocally(normalizedEmail, user);
   markLocalUserAsSynced(normalizedEmail, user);
-  return { ok: true, user };
+  return { ok: true, user: { ...user, mustChangePassword: Boolean(user.mustChangePassword) } };
 }
 
 function loadLocalAuthUsers() {
@@ -654,6 +662,7 @@ function cacheRemoteUserLocally(email, remoteUser) {
     role: String(remoteUser?.role || users[key]?.role || 'viewer').trim().toLowerCase(),
     salt: String(remoteUser?.salt || users[key]?.salt || ''),
     passwordHash: String(remoteUser?.passwordHash || users[key]?.passwordHash || ''),
+    mustChangePassword: Boolean(remoteUser?.mustChangePassword),
     pendingSync: false,
     syncedAt: new Date().toISOString()
   };

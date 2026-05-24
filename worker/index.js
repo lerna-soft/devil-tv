@@ -191,6 +191,63 @@ async function handleChangePassword(request, env) {
   return jsonResponse(200, { ok: true }, env);
 }
 
+async function handleRequestReset(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse(400, { error: 'Invalid JSON' }, env);
+  }
+
+  const { email } = body || {};
+  if (!isValidEmail(email)) return jsonResponse(400, { error: 'Email no válido' }, env);
+
+  const normalizedEmail = email.trim().toLowerCase();
+
+  // Ensure label exists (best effort)
+  try {
+    await fetch(`${GITHUB_API}/repos/${env.GITHUB_REPO}/labels`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.GITHUB_PAT}`,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json',
+        'User-Agent': 'devil-tv-recovery-worker'
+      },
+      body: JSON.stringify({
+        name: 'password-reset',
+        color: 'd73a4a',
+        description: 'Password reset request (procesado automáticamente)'
+      })
+    });
+  } catch {
+    // 422 if exists, ignored
+  }
+
+  const issueBody = `### Tu email\n\n${normalizedEmail}\n`;
+  const resp = await fetch(`${GITHUB_API}/repos/${env.GITHUB_REPO}/issues`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${env.GITHUB_PAT}`,
+      'Accept': 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'devil-tv-recovery-worker'
+    },
+    body: JSON.stringify({
+      title: 'Password reset request',
+      body: issueBody,
+      labels: ['password-reset']
+    })
+  });
+
+  if (!resp.ok) {
+    const text = await resp.text();
+    return jsonResponse(502, { error: `Issue create failed: ${resp.status} ${text.substring(0, 200)}` }, env);
+  }
+
+  return jsonResponse(200, { ok: true }, env);
+}
+
 export default {
   async fetch(request, env) {
     // CORS preflight
@@ -200,6 +257,9 @@ export default {
 
     const url = new URL(request.url);
 
+    if (request.method === 'POST' && url.pathname === '/request-reset') {
+      return handleRequestReset(request, env);
+    }
     if (request.method === 'POST' && url.pathname === '/reset-password') {
       return handleResetPassword(request, env);
     }

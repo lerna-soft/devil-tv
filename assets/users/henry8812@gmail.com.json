@@ -3,5 +3,8 @@
   "email": "henry8812@gmail.com",
   "salt": "mep_auth_salt_v1_68fc7327ba852920",
   "passwordHash": "dbe3dda889eb8834245440de87128535aaf23cb5147ed1f5df963aca68339853",
-  "createdAt": "2026-05-09T02:17:38.980Z"
+  "createdAt": "2026-05-09T02:17:38.980Z",
+  "resetToken": "81225c13d696374abd47dd56a1fea0892b48be40eb2ed8102a8db2a99a646e4c",
+  "resetTokenExpiresAt": "2026-05-24T07:01:03Z",
+  "lastResetRequestAt": "2026-05-24T06:01:03Z"
 }

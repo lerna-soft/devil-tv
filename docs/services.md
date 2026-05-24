@@ -12,6 +12,27 @@ Este documento registra qué cuentas y servicios de terceros usa el proyecto, ba
 - **Sender verificado**: `hglerna@gmail.com` (nombre: "Devil TV"). Sin dominio verificado, los correos llevan footer "Sent via Brevo" hasta agregar dominio propio.
 - **Usado por**: `.github/workflows/password-reset.yml`.
 
+## Cloudflare Workers (recovery worker)
+
+- **Propósito**: backend mínimo (~200 líneas) que commitea cambios de contraseña al repo via GitHub API. Necesario porque ni `reset.html` ni `app.js` pueden tener un PAT expuesto en el cliente.
+- **Cuenta**: `hglerna@gmail.com`
+- **Dashboard**: <https://dash.cloudflare.com/> → Workers & Pages
+- **Plan**: Workers Free (100.000 requests/día perpetuo, sin tarjeta).
+- **Worker name**: `devil-tv-recovery`
+- **Código fuente**: [`worker/`](../worker/) en este repo.
+- **Variables/Secrets configurados en Cloudflare**:
+  - `GITHUB_REPO` (variable, plain) = `lerna-soft/devil-tv`
+  - `ALLOWED_ORIGIN` (variable, plain) = `https://lerna-soft.github.io`
+  - `GITHUB_PAT` (**secret**) = PAT fine-grained con `contents:write` en `lerna-soft/devil-tv`. Para rotarlo: revocar en GitHub → generar nuevo → reemplazar el secret en Cloudflare (dashboard del Worker → Settings → Variables → editar `GITHUB_PAT`).
+
+## GitHub PAT (usado por el Worker)
+
+- **Token name**: `devil-tv-worker-reset`
+- **Tipo**: fine-grained PAT
+- **Scope**: solo repo `lerna-soft/devil-tv`, permiso `Contents: Read and write` únicamente.
+- **Dónde vive**: como secret `GITHUB_PAT` en el Worker `devil-tv-recovery` (Cloudflare). NO en este repo.
+- **Auditoría**: cada commit del Worker queda registrado como hecho por `lerna-admin` usando este PAT. Última vez usado visible en <https://github.com/settings/personal-access-tokens>.
+
 ## Notas históricas
 
 - **Resend** se evaluó y descartó (mayo 2026). Razón: su free tier sin dominio verificado solo permite enviar al email de la cuenta; necesitaríamos comprar dominio (~$12/año) para enviar a usuarios reales. Brevo no tiene esta restricción.

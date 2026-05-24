@@ -713,43 +713,19 @@ async function requestPasswordReset() {
 }
 
 async function createPasswordResetIssue(email) {
-  const repo = 'lerna-soft/devil-tv';
-  const token = await getGitHubIssueToken();
-  const headers = {
-    accept: 'application/vnd.github+json',
-    authorization: `Bearer ${token}`,
-    'content-type': 'application/json',
-    'x-github-api-version': '2022-11-28'
-  };
-
-  // Ensure label existe (idempotente: 422 si ya existe, se ignora)
-  try {
-    await fetch(`https://api.github.com/repos/${repo}/labels`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        name: 'password-reset',
-        color: 'd73a4a',
-        description: 'Password reset request (procesado automáticamente)'
-      })
-    });
-  } catch {
-    // best effort
-  }
-
-  const body = `### Tu email\n\n${email}\n`;
-  const response = await fetch(`https://api.github.com/repos/${repo}/issues`, {
+  // Delegamos al Worker en Cloudflare. Razón: el token ofuscado
+  // GITHUB_ISSUE_TOKEN_CIPHER fue creado para el repo viejo (antes del
+  // transfer a lerna-soft) y no tiene scope para el repo actual. El
+  // Worker tiene su propio PAT con permisos correctos.
+  const WORKER_URL = 'https://devil-tv-recovery.hglerna.workers.dev/request-reset';
+  const response = await fetch(WORKER_URL, {
     method: 'POST',
-    headers,
-    body: JSON.stringify({
-      title: 'Password reset request',
-      body,
-      labels: ['password-reset']
-    })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email })
   });
   if (!response.ok) {
-    const text = await response.text().catch(() => '');
-    throw new Error(`Issue create failed (${response.status})${text ? `: ${text}` : ''}`);
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || `Request reset failed (HTTP ${response.status})`);
   }
   return response.json();
 }

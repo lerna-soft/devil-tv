@@ -4945,13 +4945,25 @@ async function searchTmdbPeopleCredits(query, typeFilter, personRole = 'any') {
   if (!normalizedQuery || normalizedQuery.length < 3) return [];
 
   try {
-    const people = await tmdbFetchJson('/search/person', { query, language: 'es-ES', page: 1, include_adult: false });
-    const rankedPeople = (people.results || []).map((person) => {
+    // No `language` here on purpose: person names are not localized in a useful
+    // way by TMDB, and using es-ES for some records returns the primary name in
+    // the original script (e.g. 李连杰 for Jet Li), which would otherwise miss
+    // our latin-script `query` and tank the score.
+    const people = await tmdbFetchJson('/search/person', { query, page: 1, include_adult: false });
+    const rankedPeople = (people.results || []).map((person, idx) => {
       const normalizedName = normalizeSearchText(person?.name);
+      const alsoKnown = Array.isArray(person?.also_known_as)
+        ? person.also_known_as.map(normalizeSearchText).filter(Boolean)
+        : [];
+      const allNames = [normalizedName].concat(alsoKnown).filter(Boolean);
       let score = 0;
-      if (normalizedName === normalizedQuery) score += 300;
-      if (normalizedName.startsWith(normalizedQuery)) score += 180;
-      if (normalizedName.includes(normalizedQuery)) score += 120;
+      if (allNames.some((n) => n === normalizedQuery)) score += 300;
+      if (allNames.some((n) => n.startsWith(normalizedQuery))) score += 180;
+      if (allNames.some((n) => n.includes(normalizedQuery))) score += 120;
+      // TMDB returned this person for our query → they're relevant somehow.
+      // Reward earlier results so people whose primary name is in another
+      // script (matched only via also_known_as) still rise to the top.
+      score += Math.max(0, 80 - idx * 4);
       if (String(person?.known_for_department || '').trim().toLowerCase() === 'acting' && personRole === 'actor') score += 40;
       if (String(person?.known_for_department || '').trim().toLowerCase() === 'directing' && personRole === 'director') score += 40;
       score += Number(person?.popularity || 0);
@@ -4960,13 +4972,13 @@ async function searchTmdbPeopleCredits(query, typeFilter, personRole = 'any') {
     const matches = rankedPeople
       .sort((a, b) => b.score - a.score)
       .map((entry) => entry.person)
-      .slice(0, 3);
+      .slice(0, 5);
     if (!matches.length) return [];
 
     const creditsByPerson = await Promise.all(matches.map(async (person) => {
       try {
         const credits = await tmdbFetchJson(`/person/${encodeURIComponent(person.id)}/combined_credits`, { language: 'es-ES' });
-        return buildTitlesFromPersonCredits(person, credits, typeFilter, personRole);
+        return buildTitlesFromPersonCredits(person, credits, typeFilter, personRole, query);
       } catch {
         return [];
       }
@@ -4977,7 +4989,7 @@ async function searchTmdbPeopleCredits(query, typeFilter, personRole = 'any') {
   }
 }
 
-function buildTitlesFromPersonCredits(person, credits, typeFilter, personRole = 'any') {
+function buildTitlesFromPersonCredits(person, credits, typeFilter, personRole = 'any', queryName = '') {
   const personName = String(person?.name || '').trim();
   if (!personName) return [];
 
@@ -4986,9 +4998,44 @@ function buildTitlesFromPersonCredits(person, credits, typeFilter, personRole = 
     .filter((entry) => String(entry?.job || '').trim().toLowerCase() === 'director')
     .map((entry) => ({ entry, role: 'director' }));
 
+  // Build an alias list so matchesSearchFilters can match the user's query
+  // against the cast even when TMDB's primary name is in another script
+  // (e.g. 李连杰 vs "jet li").
+  const aliases = personCreditAliases(person, queryName);
+
   return [...castItems, ...directedItems]
-    .map(({ entry, role }) => normalizePersonCreditResult(entry, role, personName, personRole))
+    .map(({ entry, role }) => normalizePersonCreditResult(entry, role, aliases, personRole))
     .filter((item) => item && (typeFilter === 'all' || item.type === typeFilter));
+}
+
+function personCreditAliases(person, queryName) {
+  const primary = String(person?.name || '').trim();
+  const knownAs = Array.isArray(person?.also_known_as) ? person.also_known_as : [];
+  const aliases = [primary];
+  const seen = new Set([normalizeSearchText(primary)]);
+  const pushAlias = (raw) => {
+    const value = String(raw || '').trim();
+    if (!value) return;
+    const key = normalizeSearchText(value);
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    aliases.push(value);
+  };
+  for (const alias of knownAs) pushAlias(alias);
+  // Always include a properly-cased version of the user's query so that
+  // `a:jet li` still matches a title whose canonical cast entry is "李连杰".
+  if (queryName) {
+    const normQuery = normalizeSearchText(queryName);
+    if (normQuery && !seen.has(normQuery)) {
+      pushAlias(queryName
+        .toLowerCase()
+        .split(/\s+/)
+        .filter(Boolean)
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(' '));
+    }
+  }
+  return aliases;
 }
 
 function isSelfLikeCredit(entry) {
@@ -5017,7 +5064,9 @@ function isNoisyPersonCredit(entry, role, personName, personRole) {
   return false;
 }
 
-function normalizePersonCreditResult(entry, role, personName, personRole = 'any') {
+function normalizePersonCreditResult(entry, role, aliases, personRole = 'any') {
+  const aliasList = Array.isArray(aliases) ? aliases.filter(Boolean) : [String(aliases || '').trim()].filter(Boolean);
+  const personName = aliasList[0] || '';
   const mediaType = String(entry?.media_type || '').trim().toLowerCase();
   const type = mediaType === 'tv' ? 'series' : mediaType === 'movie' ? 'movie' : '';
   if (!type) return null;
@@ -5039,8 +5088,8 @@ function normalizePersonCreditResult(entry, role, personName, personRole = 'any'
       releaseDate: entry?.first_air_date || entry?.release_date || null,
       originalTitle: String(entry?.original_title || entry?.original_name || '').trim(),
       genres: [],
-      cast: role === 'cast' ? [personName] : [],
-      directors: role === 'director' ? [personName] : [],
+      cast: role === 'cast' ? aliasList : [],
+      directors: role === 'director' ? aliasList : [],
       backdropUrl: entry?.backdrop_path ? `https://image.tmdb.org/t/p/w780${entry.backdrop_path}` : null
     }
   };

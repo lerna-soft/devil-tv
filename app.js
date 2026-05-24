@@ -499,6 +499,14 @@ function bindAuth() {
     const password = String(elements.authPasswordLogin.value || '');
     const validated = await validateAuthUser(email, password);
     if (validated.ok) {
+      if (validated.user?.mustChangePassword) {
+        const changeResult = await forceChangePasswordFlow(email, password);
+        if (!changeResult.ok) {
+          if (elements.authErrorLogin) elements.authErrorLogin.textContent = changeResult.error || 'No se pudo cambiar la contraseña.';
+          return;
+        }
+        validated.user.mustChangePassword = false;
+      }
       localStorage.setItem(AUTH_STORAGE_KEY, '1');
       saveAuthSession(validated.user);
       hideAuthGate();
@@ -709,6 +717,95 @@ async function requestPasswordReset() {
       });
     }
     console.error('[password-reset] create issue failed:', err);
+  }
+}
+
+const RECOVERY_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev';
+
+async function forceChangePasswordFlow(email, currentPassword) {
+  const swal = window.Swal;
+  if (!swal?.fire) return { ok: false, error: 'UI no disponible.' };
+
+  // Necesitamos el salt actual para computar el currentHash
+  const localUsers = loadLocalAuthUsers();
+  let salt = localUsers[email]?.salt;
+  if (!salt) {
+    const remote = await loadUserRecord(email).catch(() => null);
+    salt = remote?.salt;
+  }
+  if (!salt) return { ok: false, error: 'No se pudo obtener el contexto del usuario.' };
+
+  const result = await swal.fire({
+    title: 'Cambia tu contraseña',
+    html: `
+      <p style="margin: 0 0 1rem; opacity: 0.85">Por seguridad debes establecer una nueva contraseña antes de continuar.</p>
+      <input id="forcePw1" type="password" placeholder="Nueva contraseña" class="swal2-input" autocomplete="new-password" />
+      <input id="forcePw2" type="password" placeholder="Confirmar contraseña" class="swal2-input" autocomplete="new-password" />
+    `,
+    showConfirmButton: true,
+    confirmButtonText: 'Cambiar y continuar',
+    showCancelButton: false,
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    preConfirm: () => {
+      const pw1 = document.getElementById('forcePw1').value;
+      const pw2 = document.getElementById('forcePw2').value;
+      if (!pw1 || pw1.length < 8) {
+        swal.showValidationMessage('Mínimo 8 caracteres');
+        return false;
+      }
+      if (pw1 !== pw2) {
+        swal.showValidationMessage('Las contraseñas no coinciden');
+        return false;
+      }
+      return pw1;
+    }
+  });
+  if (!result.isConfirmed) return { ok: false, error: 'Cancelado' };
+
+  const newPassword = result.value;
+
+  swal.fire({ title: 'Guardando…', allowOutsideClick: false, didOpen: () => swal.showLoading() });
+
+  try {
+    const currentHash = await hashPassword(currentPassword, salt);
+    const newSalt = makeSalt();
+    const newHash = await hashPassword(newPassword, newSalt);
+
+    const resp = await fetch(`${RECOVERY_WORKER_BASE}/change-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, currentHash, newSalt, newHash })
+    });
+    if (!resp.ok) {
+      const data = await resp.json().catch(() => ({}));
+      throw new Error(data.error || `HTTP ${resp.status}`);
+    }
+
+    // Optimistic local cache update — login va a usar este hash inmediatamente
+    try {
+      const cache = JSON.parse(localStorage.getItem(AUTH_LOCAL_USERS_KEY) || '{}');
+      cache[email] = {
+        ...(cache[email] || {}),
+        email,
+        salt: newSalt,
+        passwordHash: newHash,
+        mustChangePassword: false,
+        pendingSync: false,
+        syncedAt: new Date().toISOString()
+      };
+      localStorage.setItem(AUTH_LOCAL_USERS_KEY, JSON.stringify(cache));
+    } catch {}
+
+    swal.close();
+    return { ok: true };
+  } catch (err) {
+    await swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: err.message || 'No se pudo cambiar la contraseña. Intenta de nuevo.'
+    });
+    return { ok: false, error: err.message || 'Error guardando.' };
   }
 }
 

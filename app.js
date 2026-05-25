@@ -159,8 +159,6 @@ const USER_REPORT_TITLE_LABEL = 'user-report-title';
 const USER_REPORT_EPISODE_LABEL = 'user-report-episode';
 const TITLE_PREFS_STORAGE_PREFIX = 'mep_title_prefs_';
 const EVAL_STORAGE_KEY = 'mep_evaluations_v1';
-const GITHUB_ISSUE_TOKEN_SEED = 'mep_issue_token_key_v1';
-const GITHUB_ISSUE_TOKEN_CIPHER = 'CgwENxwRLAUEKyteWic8ESY2Nx5GaCIzKToYIyUSJzIRMAFXPiZaDhgqHWIZIENmPB8HMzJvOCEnMxwUIjcrGw8AXQ0gFwsJAQRVKxslOy4mDD8wTRwMUDgXSSY+';
 const TMDB_READ_TOKEN_SEED = 'mep_tmdb_token_key_v1';
 const TMDB_READ_TOKEN_CIPHER = 'CBw6NxYqBwsQHSUiMBQWWisQFU8fCBw6NxA6NQsQHSUCPzo0EiouFR1+OiMaEhkoVTsIJRgmMSw3MTE/MzsDIwg9bSVZKggWRCICLB0WBlAQBR94WygkPEciICcmOysiVSA2X1c2GydCJAs+bi0ELVQWHjZePwMSEystPERoOScbETMgHDsIPgcxDyg2JiI0JzhIJBY5MToHBlEdGAwSLFgIEi8RPDFdCwYdCRw3Jyg7OCwhVzQHIR8YCE9EJA8fJxI8SiU4GSUbXCI9XiEobwxEGVAZLBcHAFppBAAsMDkRBFxACB1mOBEkGTECICc=';
 const TMDB_META_CACHE_KEY = 'mep_tmdb_meta_cache_v1';
@@ -911,10 +909,8 @@ async function forceChangePasswordFlow(email, currentPassword) {
 }
 
 async function createPasswordResetIssue(email) {
-  // Delegamos al Worker en Cloudflare. Razón: el token ofuscado
-  // GITHUB_ISSUE_TOKEN_CIPHER fue creado para el repo viejo (antes del
-  // transfer a lerna-soft) y no tiene scope para el repo actual. El
-  // Worker tiene su propio PAT con permisos correctos.
+  // Delegamos al Worker en Cloudflare. Él tiene un PAT con scope correcto
+  // sobre lerna-soft/devil-tv; el cliente ya no maneja tokens de GitHub.
   const WORKER_URL = 'https://devil-tv-recovery.hglerna.workers.dev/request-reset';
   const response = await fetch(WORKER_URL, {
     method: 'POST',
@@ -2256,23 +2252,43 @@ async function openGitHubIssue(title, body, labels = []) {
   return response.json();
 }
 
-async function githubApiJson(pathname, init = {}) {
-  const token = await getGitHubIssueToken();
-  const response = await fetch(`https://api.github.com${pathname}`, {
-    ...init,
-    headers: {
-      accept: 'application/vnd.github+json',
-      authorization: `Bearer ${token}`,
-      'content-type': 'application/json',
-      'x-github-api-version': '2022-11-28',
-      ...(init.headers || {})
-    }
-  });
-  if (!response.ok) {
-    const text = await response.text().catch(() => '');
-    throw new Error(`GitHub API failed (${response.status} ${response.statusText})${text ? `: ${text}` : ''}`);
+// Delegan al Worker (mismo motivo que openGitHubIssue: el PAT viejo ofuscado en
+// el cliente fue creado para el repo viejo lerna-admin/media-evaluation-platform-static
+// y no tiene scope sobre lerna-soft/devil-tv. El Worker tiene su propio GITHUB_PAT
+// con permisos correctos.
+const WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev';
+
+async function workerListIssues(params = {}) {
+  const qs = new URLSearchParams(params).toString();
+  const resp = await fetch(`${WORKER_BASE}/list-issues?${qs}`);
+  if (!resp.ok) {
+    const data = await resp.json().catch(() => ({}));
+    throw new Error(data.error || `list-issues failed (HTTP ${resp.status})`);
   }
-  return response.status === 204 ? null : response.json();
+  return resp.json();
+}
+
+async function workerListWorkflowRuns(workflow, perPage = 10) {
+  const qs = new URLSearchParams({ workflow, per_page: String(perPage) }).toString();
+  const resp = await fetch(`${WORKER_BASE}/list-workflow-runs?${qs}`);
+  if (!resp.ok) {
+    const data = await resp.json().catch(() => ({}));
+    throw new Error(data.error || `list-runs failed (HTTP ${resp.status})`);
+  }
+  return resp.json();
+}
+
+async function workerDispatchWorkflow(workflow, ref = 'main') {
+  const resp = await fetch(`${WORKER_BASE}/dispatch-workflow`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ workflow, ref })
+  });
+  if (!resp.ok) {
+    const data = await resp.json().catch(() => ({}));
+    throw new Error(data.error || `dispatch failed (HTTP ${resp.status})`);
+  }
+  return resp.json();
 }
 
 async function triggerWatchProgressQueueDrainIfNeeded() {
@@ -2286,12 +2302,12 @@ async function triggerWatchProgressQueueDrainIfNeeded() {
   localStorage.setItem(WATCH_PROGRESS_HEARTBEAT_LOCK_KEY, String(now + 20 * 1000));
 
   try {
-    const openIssues = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/issues?state=open&labels=watch-progress-sync&per_page=1');
+    const openIssues = await workerListIssues({ state: 'open', labels: 'watch-progress-sync', per_page: '1' });
     const openCount = Array.isArray(openIssues) ? openIssues.length : 0;
     if (openCount <= 0) return;
 
-    const resolveRuns = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/resolve-watch-progress-issue.yml/runs?per_page=10');
-    const drainRuns = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/runs?per_page=10');
+    const resolveRuns = await workerListWorkflowRuns('resolve-watch-progress-issue.yml', 10);
+    const drainRuns = await workerListWorkflowRuns('drain-watch-progress-queue.yml', 10);
     const hasActiveRun = [...(resolveRuns?.workflow_runs || []), ...(drainRuns?.workflow_runs || [])]
       .some((run) => ['queued', 'in_progress', 'waiting', 'requested', 'pending'].includes(String(run?.status || '').toLowerCase()));
     if (hasActiveRun) return;
@@ -2299,10 +2315,7 @@ async function triggerWatchProgressQueueDrainIfNeeded() {
     const lastDispatchAt = Number(localStorage.getItem(WATCH_PROGRESS_HEARTBEAT_DISPATCH_KEY) || '0');
     if (lastDispatchAt && (now - lastDispatchAt) < WATCH_PROGRESS_HEARTBEAT_DISPATCH_WINDOW_MS) return;
 
-    await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/dispatches', {
-      method: 'POST',
-      body: JSON.stringify({ ref: 'main' })
-    });
+    await workerDispatchWorkflow('drain-watch-progress-queue.yml', 'main');
     localStorage.setItem(WATCH_PROGRESS_HEARTBEAT_DISPATCH_KEY, String(now));
   } catch {
     // Keep UI responsive; heartbeat is best effort.
@@ -2451,12 +2464,6 @@ async function notifyIssueCreationError(error) {
     title: 'No se pudo crear el issue',
     text: String(error?.message || error || 'Error desconocido')
   });
-}
-
-async function getGitHubIssueToken() {
-  const token = decodeIssueToken(GITHUB_ISSUE_TOKEN_CIPHER, GITHUB_ISSUE_TOKEN_SEED);
-  if (!token) throw new Error('Missing GitHub issue token.');
-  return token;
 }
 
 function decodeIssueToken(cipherText, seed) {
@@ -3013,7 +3020,7 @@ function renderAdminDashboard() {
       return fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
     }));
     const roleUsers = userRoleRecords.filter(Boolean);
-    const userReportIssues = await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/issues?state=all&labels=user-report&per_page=100&sort=created&direction=desc').catch(() => []);
+    const userReportIssues = await workerListIssues({ state: 'all', labels: 'user-report', per_page: '100', sort: 'created', direction: 'desc' }).catch(() => []);
     const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
     const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
@@ -3411,10 +3418,7 @@ function renderAdminDashboard() {
         const msg = document.querySelector('#adminRoleMsg');
         if (msg) msg.textContent = 'Disparando workflow de cola...';
         try {
-          await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/drain-watch-progress-queue.yml/dispatches', {
-            method: 'POST',
-            body: JSON.stringify({ ref: 'main' })
-          });
+          await workerDispatchWorkflow('drain-watch-progress-queue.yml', 'main');
           if (msg) msg.textContent = 'Workflow de cola enviado correctamente.';
         } catch (error) {
           if (msg) msg.textContent = `No se pudo disparar cola: ${String(error?.message || error)}`;
@@ -3425,10 +3429,7 @@ function renderAdminDashboard() {
         const msg = document.querySelector('#adminRoleMsg');
         if (msg) msg.textContent = 'Disparando workflow de deploy...';
         try {
-          await githubApiJson('/repos/lerna-admin/media-evaluation-platform-static/actions/workflows/deploy-pages.yml/dispatches', {
-            method: 'POST',
-            body: JSON.stringify({ ref: 'main' })
-          });
+          await workerDispatchWorkflow('deploy-pages.yml', 'main');
           if (msg) msg.textContent = 'Deploy solicitado correctamente.';
         } catch (error) {
           if (msg) msg.textContent = `No se pudo disparar deploy: ${String(error?.message || error)}`;

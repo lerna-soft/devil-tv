@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T00:25:25.782Z",
+  "generatedAt": "2026-05-25T00:35:42.775Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -2217,13 +2217,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-23T01:07:52Z",
-      "totalEvents": 15,
-      "totalStarts": 12,
+      "updatedAt": "2026-05-25T00:35:32Z",
+      "totalEvents": 16,
+      "totalStarts": 13,
       "totalCompletions": 0,
       "totalPlaybackProgress": 28166.645872999998,
-      "uniqueContentCount": 4,
-      "lastActivityAt": "2026-05-23T01:07:52Z",
+      "uniqueContentCount": 5,
+      "lastActivityAt": "2026-05-25T00:35:32Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt33046197",
@@ -2231,6 +2231,18 @@
         "tt32897959"
       ],
       "content": {
+        "tt34610311": {
+          "contentId": "tt34610311",
+          "imdbId": "tt34610311",
+          "tmdbId": "1419406",
+          "title": "Escuadrón letal",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T00:35:32Z"
+        },
         "tt33046197": {
           "contentId": "tt33046197",
           "imdbId": "tt33046197",
@@ -2280,7 +2292,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1877.7764
+      "avgPlaybackProgress": 1760.4154
     },
     {
       "userEmail": "juancarlosrios531970@gmail.com",

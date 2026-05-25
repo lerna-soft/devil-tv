@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T00:25:25.779Z",
+  "generatedAt": "2026-05-25T00:35:42.773Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2784,6 +2784,62 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
+    },
+    {
+      "contentId": "tt34610311",
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "title": "Escuadrón letal",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 2.972405,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-25T00:35:32Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-25T00:35:32Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 2.972405,
+          "lastSeenAt": "2026-05-14T06:31:09Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2.972405,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-25T00:35:32Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1.4862
     },
     {
       "contentId": "tt10366206",
@@ -9422,50 +9478,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt34610311",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 2.972405,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-14T06:31:09Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 2.972405,
-          "lastSeenAt": "2026-05-14T06:31:09Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2.972405,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T06:31:09Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 2.9724
     },
     {
       "contentId": "tt4158110",

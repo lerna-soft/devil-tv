@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-23T01:07:52Z",
+  "updatedAt": "2026-05-25T00:35:32Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -42,6 +42,16 @@
       "lastProgress": 1411.466637,
       "updatedAt": "2026-05-23T01:07:52Z",
       "watched": {}
+    },
+    "tt34610311": {
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-25T00:35:32Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -55,15 +65,34 @@
     "updatedAt": "2026-05-19T00:26:13Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "tt34610311",
+    "tmdbId": "1419406",
     "season": 1,
     "episode": 1,
-    "progress": 1411.466637,
-    "updatedAt": "2026-05-23T01:07:52Z"
+    "progress": 0,
+    "updatedAt": "2026-05-25T00:35:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt34610311:s1e1:started:2026-05-25T00:35:32Z",
+      "contentId": "tt34610311",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "title": "Escuadrón letal",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:35:31.080Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T00:35:32Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:started:2026-05-23T01:07:52Z",
       "contentId": "tt33046197",

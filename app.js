@@ -1971,7 +1971,9 @@ async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
     state.catalogHydration.loaded = merged.length;
     state.catalogHydration.total = expectedTotal || merged.length;
     setRuntimeCatalog(merged);
-    scheduleCatalogHydrationRender();
+    // No re-render per chunk: el user pidió que el proceso de hydration sea
+    // silencioso en background. UN solo render final cuando termine el loop
+    // (línea ~1983, scheduleCatalogHydrationRender(0)).
   }
 
   if (!allSeedItems.length) {
@@ -3521,11 +3523,12 @@ function renderHomeCatalog(baseFiltered) {
   // Skeleton SOLO si home no está ya pintado. Si re-render durante hydration
   // (catálogo cargando chunks), conserva el DOM existente y cada sección se
   // actualiza in-place vía su promise — sin flash.
-  const statusHtml = renderCatalogHydrationStatus() || '';
+  // Banner de hydration ("Cargando catálogo X%") deshabilitado por decisión
+  // del user: la carga de chunks es silenciosa en background.
   const alreadyPainted = elements.items.querySelector('[data-section-key]') !== null;
   if (!alreadyPainted) {
     const skeletonHtml = sectionDefs.map((def) => buildSectionShellHtml(def, '<div class="home-section-loading">Cargando...</div>')).join('');
-    elements.items.innerHTML = statusHtml + skeletonHtml;
+    elements.items.innerHTML = skeletonHtml;
   }
 
   // Token cancela promesas en vuelo si un render nuevo arranca mid-stream.
@@ -3554,7 +3557,7 @@ function renderHomeCatalog(baseFiltered) {
     if (!anySectionPresent) {
       const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
       if (latestItems.length) {
-        elements.items.innerHTML = statusHtml + `
+        elements.items.innerHTML = `
           <section class="home-section" data-section-key="latest">
             <div class="home-section-head">
               <h3>Catálogo destacado</h3>

@@ -54,27 +54,40 @@ const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
+const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
+const RELAXED_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation allow-forms allow-popups allow-popups-to-escape-sandbox';
 const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
     label: 'Servidor 1',
     note: 'principal',
+    sandbox: DEFAULT_PLAYER_SANDBOX,
     movie: (id) => `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
-    id: 'vidsrc',
+    id: 'vidsrc-cc',
     label: 'Servidor 2',
     note: 'audio original',
-    movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
+    sandbox: DEFAULT_PLAYER_SANDBOX,
+    movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
     id: '2embed',
     label: 'Servidor 3',
-    note: 'LATAM',
+    note: 'LATAM · puede abrir ads',
+    sandbox: RELAXED_PLAYER_SANDBOX,
     movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
+  },
+  {
+    id: 'vidsrc-to',
+    label: 'Servidor 4',
+    note: 'alternativo',
+    sandbox: DEFAULT_PLAYER_SANDBOX,
+    movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   }
 ];
 
@@ -4817,6 +4830,7 @@ function openPlayerModal(embedUrl) {
 
   renderPlayerControls();
   renderProviderTabs();
+  applyProviderSandbox(getActiveProvider());
   iframe.src = embedUrl;
   schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
   modal.hidden = false;
@@ -5927,6 +5941,14 @@ function renderProviderTabs() {
   });
 }
 
+function applyProviderSandbox(provider) {
+  if (!elements.playerIframe || !provider) return;
+  const desired = provider.sandbox || DEFAULT_PLAYER_SANDBOX;
+  if (elements.playerIframe.getAttribute('sandbox') !== desired) {
+    elements.playerIframe.setAttribute('sandbox', desired);
+  }
+}
+
 function setActiveProvider(providerId) {
   const provider = PLAYBACK_PROVIDERS.find((p) => p.id === providerId);
   if (!provider || provider.id === state.activeProviderId) return;
@@ -5935,6 +5957,7 @@ function setActiveProvider(providerId) {
   renderProviderTabs();
   if (state.selected && elements.playerModal && !elements.playerModal.hidden) {
     const newUrl = buildEmbedUrl(state.selected);
+    applyProviderSandbox(provider);
     elements.playerIframe.src = newUrl;
     schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
   }

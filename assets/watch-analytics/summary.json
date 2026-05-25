@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T17:57:18.071Z",
+  "generatedAt": "2026-05-25T18:46:55.420Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -52,9 +52,9 @@
       "contentId": "tt31596104",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 16,
+      "totalEvents": 15,
       "uniqueUsers": 1,
-      "completionRate": 0.6
+      "completionRate": 0.6667
     },
     {
       "contentId": "tt1190634",
@@ -73,19 +73,19 @@
       "completionRate": 0.1111
     },
     {
+      "contentId": "tt21209876",
+      "title": "Solo Leveling",
+      "type": "series",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt33046197",
       "title": "Los hermanos demolición",
       "type": "movie",
       "totalEvents": 8,
       "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
-      "contentId": "tt21209876",
-      "title": "Solo Leveling",
-      "type": "series",
-      "totalEvents": 7,
-      "uniqueUsers": 1,
       "completionRate": 0
     }
   ]

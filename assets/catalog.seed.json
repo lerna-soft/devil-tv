@@ -1,6 +1,6 @@
 {
-  "version": 297,
-  "generatedAt": "2026-05-25T18:00:25.559Z",
+  "version": 298,
+  "generatedAt": "2026-05-25T18:00:36.859Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51713,6 +51713,22 @@
       "releaseDate": null,
       "overview": "Bea Alonzo, John Lloyd Cruz",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODZjMjdlZTYtZTFiMC00OTA0LTk3NjctNzQxM2FhZDdhOGIxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt32321928",
+      "title": "Betty La Fea: The Story Continues",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Ana María Orozco, Jorge Enrique Abello",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTliZTQ3YTMtNGUzNS00ZWVjLTllZGEtZTc2NWQ1NTBmY2RkXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

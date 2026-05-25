@@ -1031,6 +1031,14 @@ h1 {
   font-size: 0.78rem;
 }
 
+/* Texto "Cargando..." plano por sección durante render async. Sin animación
+   por decisión del user: feedback claro pero sin distracciones visuales. */
+.home-section-loading {
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1rem 0.4rem;
+}
+
 .home-carousel {
   align-items: stretch;
   display: grid;

@@ -3449,77 +3449,162 @@ function getUniqueRenderableTitles(items) {
   return dedupe(Array.isArray(items) ? items : [], { consolidateEquivalent: true });
 }
 
+// Token mutable que invalida renders en vuelo cuando renderCatalog se vuelve
+// a llamar mid-stream (cambio de tab, click de un item, etc.). Sin esto, dos
+// renders simultáneos chocan en elements.items.innerHTML.
+let homeRenderToken = 0;
+
 function renderHomeCatalog(baseFiltered) {
+  // Setup sincrónico (rápido): contador + skeleton con "Cargando..." por
+  // sección. Lo pesado (sortTitles, recommendationScore por sección) corre
+  // async con yields entre cada para no bloquear el main thread.
   const watch = buildWatchInsights();
   cleanupWatchLaterFromCompleted(baseFiltered, watch);
   const prefs = loadTitlePrefs();
   const uniqueTitles = getUniqueRenderableTitles(baseFiltered);
   const discoveryLimit = isCompactViewport() ? 360 : 720;
   const discoveryTitles = uniqueTitles.slice(0, discoveryLimit);
-  const continueItems = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t))), watch).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
-  const rewatchItems = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t))), watch).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
-  const likedItems = sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1), watch);
-  const watchLaterItems = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))), watch);
-  const movieRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'movie'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const seriesRecommended = sortTitles(discoveryTitles.filter((t) => t.type === 'series'), watch).sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch));
-  const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
-
   const previewLimit = isCompactViewport() ? 6 : 10;
   const providerSectionLimit = isCompactViewport() ? 4 : HOME_STREAMING_GROUPS.length;
-  let eagerHomeSectionUsed = false;
-
-  const section = (key, title, subtitle, items) => {
-    if (!items.length) return '';
-    const preview = items.slice(0, previewLimit);
-    const showMore = items.length > preview.length;
-    const eagerCount = eagerHomeSectionUsed ? 0 : 2;
-    eagerHomeSectionUsed = true;
-    const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
-    return `
-    <section class="home-section">
-      <div class="home-section-head">
-        <h3>${escapeHtml(title)}</h3>
-        <span>${escapeHtml(subtitle)}</span>
-      </div>
-      <div class="home-carousel" data-home-carousel="${escapeAttribute(key)}">
-        <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
-        <div class="home-viewport">
-          <div class="home-track">
-            ${cards}
-          </div>
-        </div>
-        <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
-      </div>
-    </section>
-  `;
-  };
 
   setCatalogCount(isCompactViewport() ? 'Explora por secciones' : `${baseFiltered.length} títulos`);
-  const sections = [
-    section('continue', 'Continuar viendo', 'Retoma donde lo dejaste', continueItems),
-    section('liked', 'Me gusta', 'Tus favoritos guardados', likedItems),
-    section('watch_later', 'Ver más tarde', 'Tu lista guardada', watchLaterItems),
-    section('movies_recommended', 'Películas para ti', 'Sugerencias según lo que has visto', movieRecommended),
-    section('series_recommended', 'Series para ti', 'Sugerencias según lo que has visto', seriesRecommended)
-  ].filter(Boolean);
+
+  // Cada sección expone su compute() lazy + minItems mínimo para mostrarse.
+  const sectionDefs = [
+    {
+      key: 'continue', title: 'Continuar viendo', subtitle: 'Retoma donde lo dejaste',
+      minItems: 1,
+      compute: () => sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t))), watch)
+        .sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0))
+    },
+    {
+      key: 'liked', title: 'Me gusta', subtitle: 'Tus favoritos guardados',
+      minItems: 1,
+      compute: () => sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1), watch)
+    },
+    {
+      key: 'watch_later', title: 'Ver más tarde', subtitle: 'Tu lista guardada',
+      minItems: 1,
+      compute: () => sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))), watch)
+    },
+    {
+      key: 'movies_recommended', title: 'Películas para ti', subtitle: 'Sugerencias según lo que has visto',
+      minItems: 1,
+      compute: () => sortTitles(discoveryTitles.filter((t) => t.type === 'movie'), watch)
+        .sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch))
+    },
+    {
+      key: 'series_recommended', title: 'Series para ti', subtitle: 'Sugerencias según lo que has visto',
+      minItems: 1,
+      compute: () => sortTitles(discoveryTitles.filter((t) => t.type === 'series'), watch)
+        .sort((a, b) => recommendationScore(b, watch) - recommendationScore(a, watch))
+    }
+  ];
+
   for (const group of HOME_STREAMING_GROUPS.slice(0, providerSectionLimit)) {
-    const available = sortTitles(discoveryTitles.filter((t) => titleHasProvider(t, group.aliases || [group.key])), watch);
-    if (available.length < 4) continue;
-    sections.push(section(`platform_${group.key}`, group.label, `Disponible ahora en ${group.label}`, available));
+    sectionDefs.push({
+      key: `platform_${group.key}`,
+      title: group.label,
+      subtitle: `Disponible ahora en ${group.label}`,
+      minItems: 4,
+      compute: () => sortTitles(discoveryTitles.filter((t) => titleHasProvider(t, group.aliases || [group.key])), watch)
+    });
   }
-  sections.push(section('rewatch', 'Volver a ver', 'Títulos que ya completaste', rewatchItems));
-  if (!sections.length) {
-    sections.push(section('latest', 'Catálogo destacado', 'Una selección para comenzar', latestItems));
-  }
-  const statusHtml = renderCatalogHydrationStatus();
-  if (!sections.length && statusHtml) {
-    elements.items.innerHTML = statusHtml;
-  } else {
-    elements.items.innerHTML = [statusHtml, ...sections.filter(Boolean)].filter(Boolean).join('');
-  }
-  bindLocalCardEvents();
-  bindHomeSectionEvents();
-  bindHomeCarouselEvents();
+
+  sectionDefs.push({
+    key: 'rewatch', title: 'Volver a ver', subtitle: 'Títulos que ya completaste',
+    minItems: 1,
+    compute: () => sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t))), watch)
+      .sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0))
+  });
+
+  // Render skeleton inmediato — cada sección con "Cargando..." plano (sin
+  // animación). El user ve la estructura ya y los items van entrando.
+  const statusHtml = renderCatalogHydrationStatus() || '';
+  const skeletonHtml = sectionDefs.map((def) => `
+    <section class="home-section" data-section-key="${escapeAttribute(def.key)}">
+      <div class="home-section-head">
+        <h3>${escapeHtml(def.title)}</h3>
+        <span>${escapeHtml(def.subtitle)}</span>
+      </div>
+      <div class="home-section-loading">Cargando...</div>
+    </section>
+  `).join('');
+  elements.items.innerHTML = statusHtml + skeletonHtml;
+
+  // Render async: yield entre secciones para no congelar el browser. Token
+  // valida que renderHomeCatalog no haya sido re-invocado durante el ciclo.
+  const myToken = ++homeRenderToken;
+  let eagerHomeSectionUsed = false;
+  let renderedAny = false;
+
+  (async () => {
+    for (const def of sectionDefs) {
+      // Yield al event loop — permite que el browser pinte y atienda eventos.
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      if (myToken !== homeRenderToken) return; // se canceló por otro render
+
+      const items = def.compute();
+      const sectionEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
+      if (!sectionEl) continue;
+
+      if (items.length < def.minItems) {
+        sectionEl.remove();
+        continue;
+      }
+
+      renderedAny = true;
+      const preview = items.slice(0, previewLimit);
+      const showMore = items.length > preview.length;
+      const eagerCount = eagerHomeSectionUsed ? 0 : 2;
+      eagerHomeSectionUsed = true;
+      const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(def.key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
+      const carouselHtml = `
+        <div class="home-carousel" data-home-carousel="${escapeAttribute(def.key)}">
+          <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
+          <div class="home-viewport">
+            <div class="home-track">
+              ${cards}
+            </div>
+          </div>
+          <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
+        </div>
+      `;
+      const loading = sectionEl.querySelector('.home-section-loading');
+      if (loading) loading.outerHTML = carouselHtml;
+    }
+
+    if (myToken !== homeRenderToken) return;
+
+    // Fallback: si NINGUNA sección rindió items (catálogo vacío), mostrar
+    // sección destacada con lo que haya.
+    if (!renderedAny) {
+      const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
+      if (latestItems.length) {
+        const eagerCount = 2;
+        const cards = renderLocalCards(latestItems.slice(0, previewLimit), { eagerCount });
+        elements.items.innerHTML = statusHtml + `
+          <section class="home-section" data-section-key="latest">
+            <div class="home-section-head">
+              <h3>Catálogo destacado</h3>
+              <span>Una selección para comenzar</span>
+            </div>
+            <div class="home-carousel" data-home-carousel="latest">
+              <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
+              <div class="home-viewport">
+                <div class="home-track">${cards}</div>
+              </div>
+              <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
+            </div>
+          </section>
+        `;
+      }
+    }
+
+    bindLocalCardEvents();
+    bindHomeSectionEvents();
+    bindHomeCarouselEvents();
+  })();
 }
 
 function renderHomeSectionList(baseFiltered, sectionKey) {

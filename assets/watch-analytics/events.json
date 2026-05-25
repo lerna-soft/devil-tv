@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-25T04:58:58.789Z",
+  "generatedAt": "2026-05-25T05:48:52.918Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt8594324:s1e1:started:2026-05-25T05:48:44Z",
+      "contentId": "tt8594324",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8594324",
+      "tmdbId": "17174",
+      "title": "Ghosts",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T05:48:44.135Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T05:48:44Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-25T04:29:27Z",
       "contentId": "tt2560140",
@@ -11508,27 +11529,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T01:28:05Z"
-    },
-    {
-      "eventId": "unknown:tt31596104:s1e3:playing:2026-05-14T01:19:09Z",
-      "contentId": "tt31596104",
-      "episodeKey": "s1e3",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt31596104",
-      "tmdbId": "",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "season": 1,
-      "episode": 3,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T01:19:09Z"
     },
     {
       "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-25T00:25:16Z",
+  "updatedAt": "2026-05-25T01:13:32Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1748,9 +1748,9 @@
       "tmdbId": "127532",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-25T00:25:16Z",
+      "progress": 1204.317008,
+      "lastProgress": 1204.317008,
+      "updatedAt": "2026-05-25T01:13:32Z",
       "watched": {}
     }
   },
@@ -1888,11 +1888,30 @@
     "tmdbId": "127532",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-25T00:25:16Z"
+    "progress": 1204.317008,
+    "updatedAt": "2026-05-25T01:13:32Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209876:s1e1:started:2026-05-25T01:13:32Z",
+      "contentId": "tt21209876",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209876",
+      "tmdbId": "127532",
+      "title": "Solo Leveling",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 1204.317008,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:25:15.759Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T01:13:32Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209876:s1e1:started:2026-05-25T00:25:16Z",
       "contentId": "tt21209876",
@@ -11373,25 +11392,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-13T21:10:31Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e15:completed:2026-05-13T21:10:29Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e15",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 15,
-      "progress": 2575.000090249433,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-13T21:10:29Z"
     }
   ]
 }

@@ -67,10 +67,10 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vidsrc-cc',
     label: 'Servidor 2',
-    note: 'puede contener ads',
+    note: 'puede contener ads · ES default',
     sandbox: null,
-    movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
+    movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}?defaultAudio=es&defaultSubtitle=es`,
+    tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}?defaultAudio=es&defaultSubtitle=es`
   },
   {
     id: '2embed',
@@ -83,10 +83,12 @@ const PLAYBACK_PROVIDERS = [
   {
     id: '111movies',
     label: 'Servidor 4',
-    note: 'puede contener ads',
+    note: 'puede contener ads · ES default',
     sandbox: null,
-    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
+    // Convención de params no documentada; mandamos los 3 más comunes
+    // (lang/audio/sub) y dejamos que 111movies use el que reconozca.
+    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}?lang=es&audio=es&sub=es`,
+    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}?lang=es&audio=es&sub=es`
   }
 ];
 

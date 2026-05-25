@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-25T00:03:29Z",
+  "updatedAt": "2026-05-25T00:07:28Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1732,6 +1732,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-23T17:27:05Z",
       "watched": {}
+    },
+    "tt2560140": {
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-25T00:07:28Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1864,15 +1874,34 @@
     "updatedAt": "2026-05-23T17:26:51Z"
   },
   "lastWatch": {
-    "imdbId": "tt10366206",
-    "tmdbId": "603692",
+    "imdbId": "tt2560140",
+    "tmdbId": "1429",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-25T00:03:29Z"
+    "updatedAt": "2026-05-25T00:07:28Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-25T00:07:28Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:07:28.338Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T00:07:28Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt10366206:s1e1:started:2026-05-25T00:03:29Z",
       "contentId": "tt10366206",
@@ -11353,25 +11382,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-13T21:09:53Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e14:playing:2026-05-13T21:09:32Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e14",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 14,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-13T21:09:32Z"
     }
   ]
 }

@@ -4433,6 +4433,22 @@ function populateGenreFilter() {
   select.value = next;
 }
 
+// Placeholder visual cuando la entry no tiene poster (típico: Continuar viendo
+// con entries huérfanas del sync remoto). Lleva título + icono para que el
+// card no se vea vacío, y un data-poster-pending para que tryRepairPendingPosters
+// dispare el repair async sin esperar al error del <img>.
+function renderPosterPlaceholder(title) {
+  const titleText = String(title?.title || '').trim();
+  const initial = (titleText[0] || '?').toUpperCase();
+  const imdb = String(title?.imdbId || '').trim();
+  const tmdb = String(title?.tmdbId || '').trim();
+  const pendingAttr = (imdb || tmdb) ? `data-poster-pending="${escapeAttribute(imdb || tmdb)}"` : '';
+  return `<div class="item-poster placeholder" ${pendingAttr}>
+    <span class="placeholder-initial" aria-hidden="true">${escapeHtml(initial)}</span>
+    <span class="placeholder-title">${escapeHtml(titleText || 'Sin título')}</span>
+  </div>`;
+}
+
 function renderLocalCards(titles, options = {}) {
   const isAdmin = isAdminUser();
   const prefs = loadTitlePrefs();
@@ -4454,8 +4470,11 @@ function renderLocalCards(titles, options = {}) {
     const yearLabel = endYear && startYear ? `${startYear}-${endYear}` : (startYear || '');
     const canPlay = !isAdmin && isAuthenticated() && title.playable !== false && (title.type === 'movie' || title.type === 'series');
     const playOverlay = canPlay ? `<button class="item-play" type="button" aria-label="Reproducir ${escapeAttribute(title.title || 'título')}" data-play-key="${escapeHtml(title.catalogKey)}"><span class="item-play-icon" aria-hidden="true">▶</span></button>` : '';
+    const posterEl = poster
+      ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" ${eagerAttrs} referrerpolicy="no-referrer" />`
+      : renderPosterPlaceholder(title);
     return `<article class="item${active}" data-key="${escapeHtml(title.catalogKey)}">
-      ${poster ? `<img class="item-poster" src="${escapeAttribute(poster)}" alt="${escapeAttribute(`Póster de ${title.title || 'título'}`)}" ${eagerAttrs} referrerpolicy="no-referrer" />` : '<div class="item-poster placeholder"></div>'}
+      ${posterEl}
       ${playOverlay}
       <div><strong>${escapeHtml(title.title)}</strong>${getCardQuickActions(title, prefs)}${unavailable}<span class="meta">${escapeHtml([typeLabel, yearLabel].filter(Boolean).join(' | '))}</span></div>
     </article>`;
@@ -4639,6 +4658,49 @@ function bindPosterFallbacks(root = document) {
       }
       const placeholder = document.createElement('div');
       placeholder.className = 'item-poster placeholder';
+      placeholder.innerHTML = title ? renderPosterPlaceholderInner(title) : '';
+      img.replaceWith(placeholder);
+    });
+  });
+  tryRepairPendingPosters(root);
+}
+
+// Para placeholders que ya nacieron sin poster (Continuar viendo con entries
+// huérfanas o m.media-amazon URLs que ya marcamos como rotas): dispara repair
+// async sin esperar al `error` event de un <img> que ni siquiera existe.
+function renderPosterPlaceholderInner(title) {
+  const titleText = String(title?.title || '').trim();
+  const initial = (titleText[0] || '?').toUpperCase();
+  return `<span class="placeholder-initial" aria-hidden="true">${escapeHtml(initial)}</span>
+    <span class="placeholder-title">${escapeHtml(titleText || 'Sin título')}</span>`;
+}
+
+function tryRepairPendingPosters(root = document) {
+  const nodes = root.querySelectorAll?.('.item-poster.placeholder[data-poster-pending]') || [];
+  nodes.forEach(async (node) => {
+    if (node.dataset.posterRepairTried === '1') return;
+    node.dataset.posterRepairTried = '1';
+    const card = node.closest('.item');
+    const key = String(card?.dataset?.key || '').trim();
+    const title = key ? resolveTitleByCatalogKey(key) : null;
+    if (!title) return;
+    const repaired = await ensurePosterForTitle(title, { registerSeed: true }).catch(() => '');
+    if (!repaired) return;
+    // Reemplaza el placeholder por un <img> real ahora que tenemos poster.
+    const img = document.createElement('img');
+    img.className = 'item-poster';
+    img.src = repaired;
+    img.alt = `Póster de ${title.title || 'título'}`;
+    img.setAttribute('referrerpolicy', 'no-referrer');
+    img.loading = 'lazy';
+    node.replaceWith(img);
+    // Re-bind el error fallback sobre el nuevo <img>.
+    img.addEventListener('error', async () => {
+      if (img.dataset.posterFallbackApplied === '1') return;
+      img.dataset.posterFallbackApplied = '1';
+      const placeholder = document.createElement('div');
+      placeholder.className = 'item-poster placeholder';
+      placeholder.innerHTML = renderPosterPlaceholderInner(title);
       img.replaceWith(placeholder);
     });
   });

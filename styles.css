@@ -1359,15 +1359,37 @@ h1 {
   width: 100%;
 }
 
-.item-poster.placeholder::before {
+/* Placeholder cuando la entry no tiene poster (típico de Continuar viendo
+   con entries huérfanas del sync remoto, o posters m.media-amazon que falla
+   hotlinking). aspect-ratio + min-height aseguran que NO colapse en mobile
+   Safari (donde aspect-ratio en flex/grid children es flaky). */
+.item-poster.placeholder {
   align-items: center;
-  color: var(--muted);
-  content: "";
   display: flex;
-  font-size: 0.72rem;
-  height: 100%;
+  flex-direction: column;
   justify-content: center;
-  text-transform: uppercase;
+  min-height: 13rem;
+  padding: 0.75rem 0.6rem;
+  text-align: center;
+}
+
+.item-poster.placeholder .placeholder-initial {
+  color: var(--brand, #e44);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+.item-poster.placeholder .placeholder-title {
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  overflow: hidden;
 }
 
 .item strong {
@@ -2872,6 +2894,20 @@ code {
 
   .item-poster {
     border-radius: 0.62rem;
+  }
+
+  .item-poster.placeholder {
+    min-height: 11.5rem;
+    padding: 0.55rem 0.4rem;
+  }
+
+  .item-poster.placeholder .placeholder-initial {
+    font-size: 2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .item-poster.placeholder .placeholder-title {
+    font-size: 0.7rem;
   }
 
   .detail-inner.overlay-open {

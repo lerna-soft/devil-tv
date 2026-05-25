@@ -65,6 +65,20 @@ const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 // TDZ: "Cannot access 'homeRenderToken' before initialization".
 let homeRenderToken = 0;
 
+// Logger estructurado para debug. Imprime con prefijo `[devil-tv][<scope>]`
+// y data opcional. Pensado para debugging post-mortem: si el user reporta
+// "no apareció X", se puede pedir el console log y reconstruir el flujo.
+// scopes: boot | catalog | sync | player | render | queue.
+function dtvLog(scope, msg, data) {
+  try {
+    const t = new Date().toISOString().slice(11, 23);
+    if (data === undefined) console.log(`[devil-tv ${t}][${scope}] ${msg}`);
+    else console.log(`[devil-tv ${t}][${scope}] ${msg}`, data);
+  } catch {
+    // sin-op: si console no está disponible no rompemos el flujo.
+  }
+}
+
 // Devuelve la URL del worker /subs si el entry tiene imdbId válido,
 // o '' si no se puede pedir subs (sin imdb el upstream falla).
 function buildSubsUrl(entry, season, episode) {
@@ -1025,8 +1039,19 @@ async function hydrateWatchProgressForCurrentUser() {
   const user = getAuthUser();
   if (!user?.email) return;
   const remote = await loadRemoteWatchProgress(user.email);
-  if (!remote) return;
+  if (!remote) {
+    dtvLog('sync', 'no remote watch-progress data.json for current user', { email: user.email });
+    return;
+  }
+  dtvLog('sync', 'remote data.json fetched', {
+    email: user.email,
+    progressEntries: Object.keys(remote.progress || {}).length,
+    historyEvents: (remote.history || []).length,
+    hasPreferences: Boolean(remote.preferences),
+    updatedAt: remote.updatedAt || null
+  });
   mergeRemoteWatchProgress(remote);
+  dtvLog('sync', 'mergeRemoteWatchProgress done → renderCatalog');
   renderCatalog();
   renderDetail({ skipHydratePlayback: true });
 }
@@ -1396,13 +1421,19 @@ else showAuthGate();
 
 function scheduleSeedStartupWork() {
   if (!isAuthenticated()) return;
+  dtvLog('boot', 'scheduleSeedStartupWork queued (bootstrap + delayed chunks)');
   scheduleAfterFirstPaint(() => {
+    dtvLog('catalog', 'hydrateSeedCatalog(bootstrap) start');
     hydrateSeedCatalog({ bootstrap: true }).then((changed) => {
+      dtvLog('catalog', 'hydrateSeedCatalog(bootstrap) done', { changed, localCount: loadLocalCatalog().length });
       if (changed) renderCatalogIfCurrentView();
       scheduleDelayedIdleTask(() => {
-        hydrateSeedCatalog().catch(() => {});
+        dtvLog('catalog', 'hydrateSeedCatalog(chunks) start');
+        hydrateSeedCatalog().then((c) => {
+          dtvLog('catalog', 'hydrateSeedCatalog(chunks) done', { changed: c, localCount: loadLocalCatalog().length });
+        }).catch((err) => dtvLog('catalog', 'hydrateSeedCatalog(chunks) error', String(err)));
       }, 3500, 2200);
-    }).catch(() => {});
+    }).catch((err) => dtvLog('catalog', 'hydrateSeedCatalog(bootstrap) error', String(err)));
   });
 }
 
@@ -1910,9 +1941,14 @@ function renderCatalogHydrationStatus() {
 
 function scheduleAuthenticatedStartupWork() {
   if (!isAuthenticated()) return;
+  dtvLog('boot', 'scheduleAuthenticatedStartupWork queued (~3s idle)');
   scheduleDelayedIdleTask(() => {
+    dtvLog('sync', 'hydrateWatchProgressForCurrentUser start');
     hydrateWatchProgressForCurrentUser().finally(() => {
-      scheduleDelayedIdleTask(() => startWatchProgressQueueHeartbeat(), 6000, 4000);
+      scheduleDelayedIdleTask(() => {
+        dtvLog('queue', 'startWatchProgressQueueHeartbeat scheduled');
+        startWatchProgressQueueHeartbeat();
+      }, 6000, 4000);
     });
   }, 3000, 1800);
 }
@@ -1949,6 +1985,7 @@ function storeSeedCatalogKeys(items) {
 async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
   const index = await fetchJsonWithTimeout(`${SEED_CHUNKS_INDEX_PATH}?v=${window.__mep_build || ''}`, 1500).catch(() => null);
   const chunks = Array.isArray(index?.chunks) ? index.chunks : [];
+  dtvLog('catalog', 'chunks index loaded', { chunks: chunks.length, version: index?.version || 0, total: index?.total || 0 });
   if (!chunks.length) {
     state.catalogHydration.active = false;
     scheduleCatalogHydrationRender(0);
@@ -1974,7 +2011,11 @@ async function hydrateSeedCatalogChunks(current, hintedVersion = 0) {
     await new Promise((resolve) => window.setTimeout(resolve, 250));
     const seed = await fetchJsonWithTimeout(`./assets/catalog.chunks/${encodeURIComponent(file)}?v=${window.__mep_build || ''}`, 2500).catch(() => null);
     const items = normalizeSeedItems(seed);
-    if (!items.length) continue;
+    if (!items.length) {
+      dtvLog('catalog', 'chunk empty/failed', { file });
+      continue;
+    }
+    dtvLog('catalog', 'chunk loaded', { file, items: items.length, loadedSoFar: loadedCount + items.length, total: expectedTotal });
     loadedCount += items.length;
     allSeedItems.push(...items);
     merged = dedupe([...merged, ...items]);
@@ -2693,10 +2734,16 @@ async function queueWatchProgressSync(snapshot) {
   const lastAt = Number(localStorage.getItem(dedupe) || '0');
   const now = Date.now();
   const windowMs = eventType === 'started' ? (30 * 60 * 1000) : (5 * 60 * 1000);
-  if (lastAt && (now - lastAt) < windowMs) return;
+  if (lastAt && (now - lastAt) < windowMs) {
+    dtvLog('queue', 'queueWatchProgressSync deduped', {
+      titleId, eventType, key, ageMs: now - lastAt, windowMs
+    });
+    return;
+  }
   localStorage.setItem(dedupe, String(now));
 
   try {
+    dtvLog('queue', 'queueWatchProgressSync emitting issue', { titleId, eventType, key });
     await openGitHubIssue(
       `Watch progress: ${user.name || user.email} <${user.email}>`,
       buildWatchProgressIssueBody({
@@ -2706,8 +2753,9 @@ async function queueWatchProgressSync(snapshot) {
       }),
       [WATCH_PROGRESS_SYNC_LABEL]
     );
-  } catch {
-    // local fallback remains authoritative if sync is unavailable
+    dtvLog('queue', 'queueWatchProgressSync issue created', { titleId, eventType });
+  } catch (err) {
+    dtvLog('queue', 'queueWatchProgressSync issue failed (local kept)', { titleId, eventType, err: String(err) });
   }
 }
 
@@ -3678,9 +3726,11 @@ function renderHomeCatalog(baseFiltered) {
     // elements.items. Recién al final aplicamos cambios.
     const eagerState = { taken: false };
     const computed = []; // [{ def, carouselHtml | null }]
+    const computeLog = {};
     for (const def of sectionDefs) {
       let items;
       try { items = def.compute(); } catch { items = []; }
+      computeLog[def.key] = items.length;
       if (items.length < def.minItems) {
         computed.push({ def, carouselHtml: null });
         continue;
@@ -3690,6 +3740,13 @@ function renderHomeCatalog(baseFiltered) {
       computed.push({ def, carouselHtml: buildSectionCarouselHtml(def, items, previewLimit, eagerCount) });
     }
     if (myToken !== homeRenderToken) return;
+    dtvLog('render', 'renderHomeCatalog sections computed', {
+      baseFiltered: baseFiltered.length,
+      discoveryTitles: discoveryTitles.length,
+      continueIds: watch.continueIds.size,
+      completedIds: watch.completedIds.size,
+      sections: computeLog
+    });
 
     const freshSectionsHtml = {};
     let finalHtml = '';
@@ -5197,11 +5254,17 @@ function renderDetail(options = {}) {
 // sobreescribe con datos reales.
 function markCurrentSelectionAsStarted() {
   const title = state.selected;
-  if (!title) return;
+  if (!title) {
+    dtvLog('player', 'markCurrentSelectionAsStarted skip — no state.selected');
+    return;
+  }
   const imdbId = String(title.imdbId || '').trim();
   const tmdbId = String(title.tmdbId || '').trim();
   const id = imdbId || tmdbId;
-  if (!id) return;
+  if (!id) {
+    dtvLog('player', 'markCurrentSelectionAsStarted skip — no imdb/tmdb id', { title: title.title });
+    return;
+  }
   const season = Number(state.playback.season || 1);
   const episode = Number(state.playback.episode || 1);
   const now = Date.now();
@@ -5232,6 +5295,9 @@ function markCurrentSelectionAsStarted() {
     progress: 0,
     player_status: 'playing',
     updatedAt: new Date().toISOString()
+  });
+  dtvLog('player', 'markCurrentSelectionAsStarted', {
+    title: title.title, imdbId, tmdbId, season, episode, alreadyStarted
   });
   // Propagar a otros dispositivos vía GitHub issue (drain workflow lo recoge
   // y actualiza watch-analytics/users/<email>/data.json). El dedupe interno
@@ -6287,6 +6353,7 @@ window.addEventListener('message', (event) => {
 
 function persistProgressFromPlayerEvent(data) {
   if (!data) return;
+  dtvLog('player', 'PLAYER_EVENT received', { status: data?.player_status, progress: data?.player_progress, imdb: data?.player_info?.imdb, tmdb: data?.player_info?.tmdb });
   const rawStatus = String(data.player_status || '').trim().toLowerCase();
   const status = rawStatus === 'play' || rawStatus === 'start' || rawStatus === 'started' || rawStatus === 'resume'
     ? 'playing'

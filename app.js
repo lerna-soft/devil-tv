@@ -55,7 +55,6 @@ const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
-const RELAXED_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation allow-forms allow-popups allow-popups-to-escape-sandbox';
 const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
@@ -69,7 +68,7 @@ const PLAYBACK_PROVIDERS = [
     id: 'vidsrc-cc',
     label: 'Servidor 2',
     note: 'puede contener ads',
-    sandbox: RELAXED_PLAYER_SANDBOX,
+    sandbox: null,
     movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
@@ -77,9 +76,17 @@ const PLAYBACK_PROVIDERS = [
     id: '2embed',
     label: 'Servidor 3',
     note: 'puede contener ads',
-    sandbox: RELAXED_PLAYER_SANDBOX,
+    sandbox: null,
     movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
+  },
+  {
+    id: '111movies',
+    label: 'Servidor 4',
+    note: 'puede contener ads',
+    sandbox: null,
+    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
   }
 ];
 
@@ -5936,6 +5943,15 @@ function renderProviderTabs() {
 
 function applyProviderSandbox(provider) {
   if (!elements.playerIframe || !provider) return;
+  // sandbox: null en el provider → quitar el atributo por completo (el provider
+  // detecta el sandbox por JS y bloquea reproducción si lo encuentra; trade-off
+  // de seguridad aceptado para que reproduzca).
+  if (provider.sandbox === null || provider.sandbox === '') {
+    if (elements.playerIframe.hasAttribute('sandbox')) {
+      elements.playerIframe.removeAttribute('sandbox');
+    }
+    return;
+  }
   const desired = provider.sandbox || DEFAULT_PLAYER_SANDBOX;
   if (elements.playerIframe.getAttribute('sandbox') !== desired) {
     elements.playerIframe.setAttribute('sandbox', desired);

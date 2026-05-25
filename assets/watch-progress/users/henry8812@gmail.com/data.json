@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-23T17:27:05Z",
+  "updatedAt": "2026-05-25T00:03:29Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -740,7 +740,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-16T07:16:14Z",
+      "updatedAt": "2026-05-25T00:03:29Z",
       "watched": {}
     },
     "tt11247606": {
@@ -1864,15 +1864,34 @@
     "updatedAt": "2026-05-23T17:26:51Z"
   },
   "lastWatch": {
-    "imdbId": "tt1878870",
-    "tmdbId": "376660",
+    "imdbId": "tt10366206",
+    "tmdbId": "603692",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-23T17:27:05Z"
+    "updatedAt": "2026-05-25T00:03:29Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt10366206:s1e1:started:2026-05-25T00:03:29Z",
+      "contentId": "tt10366206",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt10366206",
+      "tmdbId": "603692",
+      "title": "John Wick 4",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:03:28.861Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T00:03:29Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1878870:s1e1:started:2026-05-23T17:27:05Z",
       "contentId": "tt1878870",
@@ -11353,25 +11372,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-13T21:09:32Z"
-    },
-    {
-      "eventId": "unknown:tt1632701:s3e13:playing:2026-05-13T21:09:16Z",
-      "contentId": "tt1632701",
-      "episodeKey": "s3e13",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1632701",
-      "tmdbId": "37680",
-      "title": "Suits: la clave del éxito",
-      "type": "series",
-      "season": 3,
-      "episode": 13,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-13T21:09:16Z"
     }
   ]
 }

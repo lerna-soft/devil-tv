@@ -3,9 +3,12 @@
 // lerna-soft/devil-tv via GitHub API. Vive en *.workers.dev.
 //
 // Endpoints:
-//   POST /reset-password   { email, token, newSalt, newHash }
-//   POST /change-password  { email, currentHash, newSalt, newHash }
-//   POST /create-issue     { title, body, labels[] }
+//   POST /reset-password    { email, token, newSalt, newHash }
+//   POST /change-password   { email, currentHash, newSalt, newHash }
+//   POST /create-issue      { title, body, labels[] }
+//   POST /dispatch-workflow { workflow, ref? } — workflow whitelisted
+//   GET  /list-issues?labels=&state=&per_page=&sort=&direction=
+//   GET  /list-workflow-runs?workflow=&per_page=
 //   GET  /subs?imdb=tt..&lang=es[&season=N&episode=N]
 //         Fetcha subs de OpenSubtitles, convierte .srt → .vtt, sirve con
 //         CORS abierto. Para inyectar subs ES en players que aceptan
@@ -31,11 +34,18 @@ function jsonResponse(status, body, env) {
 function corsHeaders(env) {
   return {
     'Access-Control-Allow-Origin': env?.ALLOWED_ORIGIN || 'https://lerna-soft.github.io',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400'
   };
 }
+
+// Whitelist de workflows que el frontend puede disparar via /dispatch-workflow.
+// Bloquea que un atacante (con acceso al endpoint) lance cualquier action del repo.
+const DISPATCHABLE_WORKFLOWS = new Set([
+  'drain-watch-progress-queue.yml',
+  'deploy-pages.yml'
+]);
 
 function isValidEmail(s) {
   return typeof s === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
@@ -337,6 +347,80 @@ async function handleCreateIssue(request, env) {
 
   const data = await resp.json();
   return jsonResponse(200, { ok: true, number: data.number, html_url: data.html_url }, env);
+}
+
+async function ghProxyGet(env, pathname) {
+  const resp = await fetch(`${GITHUB_API}${pathname}`, {
+    headers: {
+      'Authorization': `Bearer ${env.GITHUB_PAT}`,
+      'Accept': 'application/vnd.github+json',
+      'User-Agent': 'devil-tv-recovery-worker',
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  });
+  return resp;
+}
+
+async function handleListIssues(request, env) {
+  const url = new URL(request.url);
+  const params = new URLSearchParams();
+  for (const k of ['labels', 'state', 'per_page', 'sort', 'direction']) {
+    const v = url.searchParams.get(k);
+    if (v) params.set(k, v);
+  }
+  const resp = await ghProxyGet(env, `/repos/${env.GITHUB_REPO}/issues?${params}`);
+  if (!resp.ok) {
+    const text = await resp.text();
+    return jsonResponse(502, { error: `list-issues failed: ${resp.status}`, body: text.slice(0, 200) }, env);
+  }
+  const data = await resp.json();
+  return jsonResponse(200, data, env);
+}
+
+async function handleListWorkflowRuns(request, env) {
+  const url = new URL(request.url);
+  const workflow = String(url.searchParams.get('workflow') || '').trim();
+  const perPage = String(url.searchParams.get('per_page') || '10').trim();
+  if (!/^[a-z0-9_-]+\.ya?ml$/i.test(workflow)) {
+    return jsonResponse(400, { error: 'workflow inválido (esperado: nombre.yml)' }, env);
+  }
+  const resp = await ghProxyGet(env, `/repos/${env.GITHUB_REPO}/actions/workflows/${encodeURIComponent(workflow)}/runs?per_page=${encodeURIComponent(perPage)}`);
+  if (!resp.ok) {
+    const text = await resp.text();
+    return jsonResponse(502, { error: `list-runs failed: ${resp.status}`, body: text.slice(0, 200) }, env);
+  }
+  const data = await resp.json();
+  return jsonResponse(200, data, env);
+}
+
+async function handleDispatchWorkflow(request, env) {
+  let body;
+  try { body = await request.json(); } catch { return jsonResponse(400, { error: 'JSON inválido' }, env); }
+  const workflow = String(body?.workflow || '').trim();
+  const ref = String(body?.ref || 'main').trim();
+  if (!DISPATCHABLE_WORKFLOWS.has(workflow)) {
+    return jsonResponse(400, { error: 'workflow no autorizado', allowed: [...DISPATCHABLE_WORKFLOWS] }, env);
+  }
+  if (!/^[a-z0-9._/-]+$/i.test(ref)) {
+    return jsonResponse(400, { error: 'ref inválido' }, env);
+  }
+  const resp = await fetch(`${GITHUB_API}/repos/${env.GITHUB_REPO}/actions/workflows/${encodeURIComponent(workflow)}/dispatches`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${env.GITHUB_PAT}`,
+      'Accept': 'application/vnd.github+json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'devil-tv-recovery-worker',
+      'X-GitHub-Api-Version': '2022-11-28'
+    },
+    body: JSON.stringify({ ref })
+  });
+  if (!resp.ok) {
+    const text = await resp.text();
+    return jsonResponse(502, { error: `dispatch failed: ${resp.status}`, body: text.slice(0, 200) }, env);
+  }
+  // GH responde 204 sin body en éxito.
+  return jsonResponse(200, { ok: true, workflow, ref }, env);
 }
 
 const SUBS_LANG_MAP = { es: 'spa', en: 'eng', pt: 'por', fr: 'fre', it: 'ita', de: 'ger' };
@@ -676,6 +760,15 @@ export default {
     }
     if (request.method === 'GET' && url.pathname === '/subs') {
       return handleSubs(request, env);
+    }
+    if (request.method === 'GET' && url.pathname === '/list-issues') {
+      return handleListIssues(request, env);
+    }
+    if (request.method === 'GET' && url.pathname === '/list-workflow-runs') {
+      return handleListWorkflowRuns(request, env);
+    }
+    if (request.method === 'POST' && url.pathname === '/dispatch-workflow') {
+      return handleDispatchWorkflow(request, env);
     }
 
     return jsonResponse(404, { error: 'Not found' }, env);

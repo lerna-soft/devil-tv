@@ -3566,64 +3566,78 @@ function renderHomeCatalog(baseFiltered) {
       .sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0))
   });
 
-  // Estrategia stale-while-revalidate:
-  // 1. Si NO hay home pintado y hay cache → pintar cache al instante (paint
-  //    inmediato, sin esperar bootstrap/chunks).
-  // 2. Si no hay cache → skeleton "Cargando..." por sección.
-  // 3. Compute fresco corre en background como chain (sequential): sección 1
-  //    primero, al terminar arranca sección 2, etc. Top-down.
-  // 4. Cada sección compara HTML fresco vs cacheado; si igual, no toca DOM.
-  // 5. Cache se guarda al final con los HTML frescos para próxima visita.
-  const alreadyPainted = elements.items.querySelector('[data-section-key]') !== null;
+  // Render atómico:
+  // 1. Si hay cache → pintar cache (instantáneo). Si NO hay cache → un único
+  //    loader global centrado (no skeletons por sección — causaban flash
+  //    cuando alguna sección se removía por minItems insuficientes).
+  // 2. Si no hay datos en el catálogo todavía (discoveryTitles vacío),
+  //    salir — la hydration de chunks dispará un render nuevo cuando llegue
+  //    data real.
+  // 3. Compute fresco corre en UNA pasada async (un solo yield al inicio).
+  //    Todas las secciones se calculan off-DOM y se aplican al DOM en un
+  //    solo bloque sincrónico al final. Sin paints intermedios.
+  const alreadyPainted = elements.items.querySelector('[data-section-key], .home-bootstrap-loading') !== null;
   const cache = !alreadyPainted ? loadHomeSectionCache() : null;
   const cachedSections = cache?.sections || {};
+  const hasCache = Object.keys(cachedSections).length > 0;
 
   if (!alreadyPainted) {
-    const initialHtml = sectionDefs.map((def) => {
-      const cachedCarousel = cachedSections[def.key];
-      if (cachedCarousel) return buildSectionShellHtml(def, cachedCarousel);
-      return buildSectionShellHtml(def, '<div class="home-section-loading">Cargando...</div>');
-    }).join('');
-    elements.items.innerHTML = initialHtml;
-    // Bind eventos sobre el contenido cacheado para que sea interactivo YA.
-    // bindOnce previene double-bind cuando re-llamemos abajo tras frescos.
-    bindLocalCardEvents();
-    bindHomeSectionEvents();
-    bindHomeCarouselEvents();
+    if (hasCache) {
+      const initialHtml = sectionDefs
+        .filter((def) => cachedSections[def.key])
+        .map((def) => buildSectionShellHtml(def, cachedSections[def.key]))
+        .join('');
+      elements.items.innerHTML = initialHtml;
+      bindLocalCardEvents();
+      bindHomeSectionEvents();
+      bindHomeCarouselEvents();
+    } else {
+      elements.items.innerHTML = '<div class="home-bootstrap-loading"><span class="spinner"></span><strong>Cargando catálogo…</strong></div>';
+    }
   }
 
+  // Sin data todavía: dejar el loader/cache visible. El próximo render con
+  // datos reales (post-hydration) se encarga del compute.
+  if (discoveryTitles.length === 0) return;
+
   const myToken = ++homeRenderToken;
-  const eagerState = { taken: false };
-  const freshSectionsHtml = {};
-  let anyDomChanged = false;
 
-  // Chain sequential: cada sección espera a que termine la anterior. La
-  // primera aparece (o se valida vs cache) antes de empezar la segunda.
-  // Ventaja sobre paralelo: orden visual top-down predecible.
   (async () => {
-    for (const def of sectionDefs) {
-      await new Promise((resolve) => setTimeout(resolve, 0));
-      if (myToken !== homeRenderToken) return;
-
-      let items;
-      try { items = def.compute(); } catch { items = []; }
-      if (myToken !== homeRenderToken) return;
-
-      const result = paintHomeSectionWithCache(
-        def, items, sectionDefs, previewLimit, eagerState, cachedSections[def.key]
-      );
-      if (result.carouselHtml) freshSectionsHtml[def.key] = result.carouselHtml;
-      if (result.domChanged) anyDomChanged = true;
-    }
-
+    // Un único yield para liberar el main thread (evita bloquear el primer
+    // paint). Después de esto, todo el trabajo va en una sola pasada.
+    await new Promise((resolve) => setTimeout(resolve, 0));
     if (myToken !== homeRenderToken) return;
 
-    // Fallback si nada se pintó (catálogo vacío de verdad).
-    const anySectionPresent = elements.items.querySelector('[data-section-key] .home-carousel');
-    if (!anySectionPresent) {
+    // Compute OFF-DOM: calculamos el HTML de todas las secciones sin tocar
+    // elements.items. Recién al final aplicamos cambios.
+    const eagerState = { taken: false };
+    const computed = []; // [{ def, carouselHtml | null }]
+    for (const def of sectionDefs) {
+      let items;
+      try { items = def.compute(); } catch { items = []; }
+      if (items.length < def.minItems) {
+        computed.push({ def, carouselHtml: null });
+        continue;
+      }
+      const eagerCount = eagerState.taken ? 0 : 2;
+      eagerState.taken = true;
+      computed.push({ def, carouselHtml: buildSectionCarouselHtml(def, items, previewLimit, eagerCount) });
+    }
+    if (myToken !== homeRenderToken) return;
+
+    const freshSectionsHtml = {};
+    let finalHtml = '';
+    for (const { def, carouselHtml } of computed) {
+      if (!carouselHtml) continue;
+      freshSectionsHtml[def.key] = carouselHtml;
+      finalHtml += buildSectionShellHtml(def, carouselHtml);
+    }
+
+    // Fallback: nada cumplió minItems pero el catálogo tiene títulos.
+    if (!finalHtml) {
       const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
       if (latestItems.length) {
-        elements.items.innerHTML = `
+        finalHtml = `
           <section class="home-section" data-section-key="latest">
             <div class="home-section-head">
               <h3>Catálogo destacado</h3>
@@ -3638,20 +3652,64 @@ function renderHomeCatalog(baseFiltered) {
             </div>
           </section>
         `;
-        anyDomChanged = true;
+      } else {
+        // Catálogo realmente vacío — preservar lo que sea que esté pintado.
+        return;
       }
     }
 
-    // Re-bind solo si el DOM cambió. bindOnce skipea elementos ya bindeados;
-    // los nuevos (de las secciones reemplazadas vía outerHTML) sí reciben
-    // sus listeners.
-    if (anyDomChanged) {
+    // Aplicar al DOM. Si ya está pintada cache, hacemos per-section diff
+    // (solo reemplazamos secciones que cambiaron) para evitar reflow innecesario
+    // de imágenes que ya cargaron. Si no había nada pintado (loader o vacío),
+    // un solo innerHTML = finalHtml.
+    const bootstrapLoader = elements.items.querySelector('.home-bootstrap-loading');
+    if (bootstrapLoader || elements.items.children.length === 0) {
+      elements.items.innerHTML = finalHtml;
       bindLocalCardEvents();
       bindHomeSectionEvents();
       bindHomeCarouselEvents();
+    } else {
+      let anyDomChanged = false;
+      // 1. Remover secciones que ya no aplican.
+      const presentKeys = new Set(Object.keys(freshSectionsHtml));
+      elements.items.querySelectorAll('[data-section-key]').forEach((el) => {
+        const key = el.getAttribute('data-section-key');
+        if (key && !presentKeys.has(key) && key !== 'latest') {
+          el.remove();
+          anyDomChanged = true;
+        }
+      });
+      // 2. Para cada sección presente, comparar contra cache. Solo reemplazar
+      //    si difiere. Insertar en posición correcta si no existe.
+      for (const { def, carouselHtml } of computed) {
+        if (!carouselHtml) continue;
+        const existingEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
+        if (!existingEl) {
+          const fullSectionHtml = buildSectionShellHtml(def, carouselHtml);
+          const myIndex = sectionDefs.indexOf(def);
+          let inserted = false;
+          for (let i = myIndex + 1; i < sectionDefs.length; i++) {
+            const nextEl = elements.items.querySelector(`[data-section-key="${sectionDefs[i].key}"]`);
+            if (nextEl) { nextEl.insertAdjacentHTML('beforebegin', fullSectionHtml); inserted = true; break; }
+          }
+          if (!inserted) elements.items.insertAdjacentHTML('beforeend', fullSectionHtml);
+          anyDomChanged = true;
+          continue;
+        }
+        const cachedCarousel = String(cachedSections[def.key] || '').trim();
+        if (cachedCarousel && cachedCarousel === carouselHtml.trim()) continue; // Identical to cache — DOM ya está OK.
+        const target = existingEl.querySelector('.home-carousel');
+        if (target) target.outerHTML = carouselHtml;
+        else existingEl.insertAdjacentHTML('beforeend', carouselHtml);
+        anyDomChanged = true;
+      }
+      if (anyDomChanged) {
+        bindLocalCardEvents();
+        bindHomeSectionEvents();
+        bindHomeCarouselEvents();
+      }
     }
 
-    // Persistir cache para próxima visita.
     saveHomeSectionCache(freshSectionsHtml);
   })();
 }
@@ -3685,56 +3743,6 @@ function buildSectionCarouselHtml(def, items, previewLimit, eagerCount) {
   `;
 }
 
-// Pinta el contenido de UNA sección sin tocar las demás.
-// Compara con el HTML cacheado: si es idéntico, NO toca el DOM (evita flash).
-// Devuelve { carouselHtml, domChanged } para que el caller decida si re-bind.
-function paintHomeSectionWithCache(def, items, sectionDefs, previewLimit, eagerState, cachedCarouselHtml) {
-  let sectionEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
-
-  if (items.length < def.minItems) {
-    if (sectionEl) {
-      sectionEl.remove();
-      return { carouselHtml: null, domChanged: true };
-    }
-    return { carouselHtml: null, domChanged: false };
-  }
-
-  const eagerCount = eagerState.taken ? 0 : 2;
-  eagerState.taken = true;
-  const carouselHtml = buildSectionCarouselHtml(def, items, previewLimit, eagerCount);
-
-  // Si el cache de esta sección es idéntico al HTML fresco, no tocamos DOM.
-  // El user no ve flash, no re-bindeamos, ahorramos ciclos.
-  const normalizedFresh = carouselHtml.trim();
-  const normalizedCached = String(cachedCarouselHtml || '').trim();
-  if (sectionEl && normalizedFresh === normalizedCached
-    && sectionEl.querySelector('.home-carousel')
-    && !sectionEl.querySelector('.home-section-loading')) {
-    return { carouselHtml, domChanged: false };
-  }
-
-  if (sectionEl) {
-    const target = sectionEl.querySelector('.home-section-loading')
-      || sectionEl.querySelector('.home-carousel');
-    if (target) target.outerHTML = carouselHtml;
-    else sectionEl.insertAdjacentHTML('beforeend', carouselHtml);
-    return { carouselHtml, domChanged: true };
-  }
-
-  // Sección ausente: insertar en posición correcta antes de la próxima sección
-  // que ya esté en DOM, según el orden de sectionDefs.
-  const fullSectionHtml = buildSectionShellHtml(def, carouselHtml);
-  const myIndex = sectionDefs.indexOf(def);
-  for (let i = myIndex + 1; i < sectionDefs.length; i++) {
-    const nextEl = elements.items.querySelector(`[data-section-key="${sectionDefs[i].key}"]`);
-    if (nextEl) {
-      nextEl.insertAdjacentHTML('beforebegin', fullSectionHtml);
-      return { carouselHtml, domChanged: true };
-    }
-  }
-  elements.items.insertAdjacentHTML('beforeend', fullSectionHtml);
-  return { carouselHtml, domChanged: true };
-}
 
 function renderHomeSectionList(baseFiltered, sectionKey) {
   cleanupWatchLaterFromCompleted(baseFiltered);

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T03:39:23.665Z",
+  "generatedAt": "2026-05-25T03:51:21.799Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T03:39:14Z",
+      "updatedAt": "2026-05-25T03:51:12Z",
       "totalEvents": 500,
-      "totalStarts": 256,
-      "totalCompletions": 85,
-      "totalPlaybackProgress": 298754.8497568854,
+      "totalStarts": 257,
+      "totalCompletions": 84,
+      "totalPlaybackProgress": 297329.7947106269,
       "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-25T03:39:14Z",
+      "lastActivityAt": "2026-05-25T03:51:12Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "127532",
           "title": "Solo Leveling",
           "type": "series",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
           "maxProgressValue": 1207.950481,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T03:39:14Z"
+          "lastSeenAt": "2026-05-25T03:51:12Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1967,7 +1967,7 @@
           "tmdbId": "",
           "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
           "type": "series",
-          "playCount": 24,
+          "playCount": 23,
           "completed": true,
           "maxProgressValue": 1426.030271,
           "maxProgressPercent": 0,
@@ -2022,7 +2022,7 @@
           "lastSeenAt": "2026-05-14T03:41:41Z"
         }
       },
-      "avgPlaybackProgress": 597.5097
+      "avgPlaybackProgress": 594.6596
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

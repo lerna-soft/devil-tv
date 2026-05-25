@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T03:54:58.656Z",
+  "generatedAt": "2026-05-25T04:29:37.672Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T03:54:47Z",
+      "updatedAt": "2026-05-25T04:29:27Z",
       "totalEvents": 500,
-      "totalStarts": 257,
-      "totalCompletions": 84,
-      "totalPlaybackProgress": 297329.7947106269,
+      "totalStarts": 258,
+      "totalCompletions": 83,
+      "totalPlaybackProgress": 295904.70471062686,
       "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-25T03:54:47Z",
+      "lastActivityAt": "2026-05-25T04:29:27Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T04:29:27Z"
+        },
         "tt21209876": {
           "contentId": "tt21209876",
           "imdbId": "tt21209876",
@@ -136,18 +148,6 @@
           "maxProgressValue": 1207.950481,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-25T03:54:47Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T00:07:28Z"
         },
         "tt10366206": {
           "contentId": "tt10366206",
@@ -1967,7 +1967,7 @@
           "tmdbId": "",
           "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
           "type": "series",
-          "playCount": 22,
+          "playCount": 21,
           "completed": true,
           "maxProgressValue": 1426.030271,
           "maxProgressPercent": 0,
@@ -2022,7 +2022,7 @@
           "lastSeenAt": "2026-05-14T03:41:41Z"
         }
       },
-      "avgPlaybackProgress": 594.6596
+      "avgPlaybackProgress": 591.8094
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

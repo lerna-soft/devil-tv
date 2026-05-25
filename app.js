@@ -3800,8 +3800,7 @@ function renderHomeCatalog(baseFiltered) {
     {
       key: 'continue', title: 'Continuar viendo', subtitle: 'Retoma donde lo dejaste',
       minItems: 1,
-      compute: () => sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t))), watch)
-        .sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0))
+      compute: () => resolveContinueWatchingItems(uniqueTitles, watch)
     },
     {
       key: 'liked', title: 'Me gusta', subtitle: 'Tus favoritos guardados',
@@ -4022,7 +4021,8 @@ function buildSectionShellHtml(def, innerHtml) {
 function buildSectionCarouselHtml(def, items, previewLimit, eagerCount) {
   const preview = items.slice(0, previewLimit);
   const showMore = items.length > preview.length;
-  const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(def.key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
+  const allowMissingPoster = def.key === 'continue';
+  const cards = `${preview.length ? renderLocalCards(preview, { eagerCount, allowMissingPoster }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(def.key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
   return `
     <div class="home-carousel" data-home-carousel="${escapeAttribute(def.key)}">
       <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
@@ -4056,7 +4056,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
       .sort((a, b) => Number(readTitlePreferenceValue(prefs.likes, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.likes, a, 0) || 0));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
-    items = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
+    items = resolveContinueWatchingItems(uniqueTitles, watch);
   } else if (sectionKey === 'rewatch') {
     title = 'Volver a ver';
     items = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
@@ -4086,7 +4086,7 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
         <h3>${escapeHtml(title)}</h3>
         <button type="button" id="homeBack">Volver al inicio</button>
       </div>
-      ${renderPaginatedLocalList(items)}
+      ${renderPaginatedLocalList(items, { allowMissingPoster: sectionKey === 'continue' })}
     </section>`;
   bindLocalCardEvents();
   document.querySelector('#homeBack')?.addEventListener('click', () => {
@@ -4113,12 +4113,12 @@ function renderLoadMoreCard(remaining) {
   return `<article class="home-more" data-catalog-more="1"><div class="home-more-icon" aria-hidden="true">+</div><strong>Cargar más</strong><span>Quedan ${remaining} títulos por mostrar</span></article>`;
 }
 
-function renderPaginatedLocalList(items) {
+function renderPaginatedLocalList(items, options = {}) {
   const safeItems = Array.isArray(items) ? items : [];
   const visible = safeItems.slice(0, state.catalogVisibleCount);
   const remaining = Math.max(0, safeItems.length - visible.length);
   if (!visible.length) return '<div class="empty">Sin resultados por ahora.</div>';
-  return `<div class="items catalog-results-grid">${renderLocalCards(visible, { eagerCount: 8 })}${renderLoadMoreCard(remaining)}</div>`;
+  return `<div class="items catalog-results-grid">${renderLocalCards(visible, { eagerCount: 8, allowMissingPoster: Boolean(options.allowMissingPoster) })}${renderLoadMoreCard(remaining)}</div>`;
 }
 
 function bindHomeCarouselEvents() {
@@ -4430,7 +4430,13 @@ function renderLocalCards(titles, options = {}) {
   const isAdmin = isAdminUser();
   const prefs = loadTitlePrefs();
   const eagerCount = Math.max(0, Number(options.eagerCount || 0));
-  return titles.filter((title) => hasPosterAsset(title)).map((title, index) => {
+  // allowMissingPoster: en "Continuar viendo" mostramos entries cuyo poster
+  // aún no llegó (típicamente: title visto en otro device + sync recién
+  // mergeado + catalog seed sin enriquecer todavía). El HTML ya tiene
+  // placeholder; lo único que falta es no filtrarlas afuera acá.
+  const allowMissingPoster = Boolean(options.allowMissingPoster);
+  const filtered = allowMissingPoster ? titles : titles.filter((title) => hasPosterAsset(title));
+  return filtered.map((title, index) => {
     const active = state.selected?.catalogKey === title.catalogKey ? ' active' : '';
     const poster = getCardPosterUrl(title.posterUrl || title.metadata?.posterUrl || '');
     const eagerAttrs = index < eagerCount ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"';
@@ -4788,6 +4794,75 @@ function sortResultEntries(entries) {
   if (mode === 'most_watched') return items.sort((a, b) => (watch.scores[getTitleId(b.title)] || 0) - (watch.scores[getTitleId(a.title)] || 0));
   if (mode === 'recommended') return items.sort((a, b) => recommendationScore(b.title, watch) - recommendationScore(a.title, watch));
   return items;
+}
+
+// Resuelve los items de "Continuar viendo" con triple fallback:
+//   (1) entries presentes en uniqueTitles (catálogo filtrado, con poster).
+//   (2) entries en el catálogo local completo (incluye las sin poster).
+//   (3) entries que solo existen en el progress remoto/lastWatch (ej. visto
+//       en otro device antes de que el seed se enriquezca acá).
+// Sin esto, un título visto en sesión A nunca aparece en sesión B si el
+// catálogo seed de B no lo tiene aún. Los del fallback (2) y (3) llevan
+// poster placeholder (lo maneja renderLocalCards con allowMissingPoster).
+function resolveContinueWatchingItems(uniqueTitles, watch) {
+  const ids = watch?.continueIds ? [...watch.continueIds] : [];
+  if (ids.length === 0) return [];
+  const fullCatalog = loadLocalCatalog();
+  const byCatalogId = new Map();
+  for (const t of fullCatalog) {
+    const tid = getTitleId(t);
+    if (tid) byCatalogId.set(tid, t);
+    const imdb = String(t?.imdbId || '').trim();
+    const tmdb = String(t?.tmdbId || '').trim();
+    if (imdb) byCatalogId.set(imdb, t);
+    if (tmdb) byCatalogId.set(tmdb, t);
+  }
+  const seen = new Set();
+  const out = [];
+  // Resolución por id (cubre fallbacks 1 y 2).
+  for (const id of ids) {
+    if (seen.has(id)) continue;
+    const inUnique = uniqueTitles.find((t) => getTitleId(t) === id);
+    const entry = inUnique || byCatalogId.get(id);
+    if (entry) {
+      const key = entry.catalogKey || getTitleId(entry) || id;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(entry);
+    }
+  }
+  // Fallback 3: ids que ni siquiera están en el catálogo local. Lo armamos
+  // desde lastWatch + synced.progress. Mejor un placeholder que invisible.
+  const user = getAuthUser();
+  const synced = user?.email ? loadSyncedWatchProgress(user.email) : null;
+  const remoteProgress = synced?.progress && typeof synced.progress === 'object' ? synced.progress : {};
+  for (const id of ids) {
+    const existsInOut = out.some((t) => getTitleId(t) === id || t.imdbId === id || t.tmdbId === id);
+    if (existsInOut) continue;
+    const p = remoteProgress[id];
+    if (!p) continue;
+    const imdbId = String(p.imdbId || '').trim();
+    const tmdbId = String(p.tmdbId || '').trim();
+    const type = 'movie'; // sin info de type, fallback a movie. El render no depende del type para mostrar.
+    out.push({
+      catalogKey: getCanonicalCatalogKey(type, imdbId, tmdbId, id, ''),
+      type,
+      imdbId,
+      tmdbId,
+      title: id, // sin metadata: el id es lo mejor que tenemos. Mejor que vacío.
+      year: null,
+      description: '',
+      posterUrl: '',
+      playable: true,
+      metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
+    });
+  }
+  // Sort por recentAt (más reciente primero). Sin recentAt → al final.
+  return out.sort((a, b) => {
+    const aId = getTitleId(a);
+    const bId = getTitleId(b);
+    return (watch.recentAt[bId] || 0) - (watch.recentAt[aId] || 0);
+  });
 }
 
 function buildWatchInsights() {

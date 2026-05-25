@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T10:48:58.925Z",
+  "generatedAt": "2026-05-25T11:25:55.351Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -41,20 +41,20 @@
       "completionRate": 0.2941
     },
     {
-      "contentId": "tt31596104",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 18,
-      "uniqueUsers": 1,
-      "completionRate": 0.6364
-    },
-    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 17,
       "uniqueUsers": 3,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt31596104",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "totalEvents": 17,
+      "uniqueUsers": 1,
+      "completionRate": 0.7
     },
     {
       "contentId": "tt1190634",

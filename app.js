@@ -60,7 +60,7 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
     label: 'Servidor 1',
-    note: 'principal',
+    note: 'principal · sin ads',
     sandbox: DEFAULT_PLAYER_SANDBOX,
     movie: (id) => `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
@@ -68,15 +68,15 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vidsrc-cc',
     label: 'Servidor 2',
-    note: 'audio original',
-    sandbox: DEFAULT_PLAYER_SANDBOX,
+    note: 'videasy · ads',
+    sandbox: RELAXED_PLAYER_SANDBOX,
     movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
     id: '2embed',
     label: 'Servidor 3',
-    note: 'LATAM · puede abrir ads',
+    note: 'LATAM · ads',
     sandbox: RELAXED_PLAYER_SANDBOX,
     movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
@@ -84,10 +84,43 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vidsrc-to',
     label: 'Servidor 4',
-    note: 'alternativo',
+    note: 'vsembed (alternativo)',
     sandbox: DEFAULT_PLAYER_SANDBOX,
     movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
+  },
+  {
+    id: 'vidlink',
+    label: 'Servidor 5',
+    note: 'vidlink · limpio (a probar)',
+    sandbox: RELAXED_PLAYER_SANDBOX,
+    movie: (id) => `https://vidlink.pro/movie/${encodeURIComponent(id)}`,
+    // vidlink necesita tmdbId para TV (imdb devuelve HTTP 500).
+    tv: (id, s, e, entry) => `https://vidlink.pro/tv/${encodeURIComponent(String(entry?.tmdbId || id))}/${s}/${e}`
+  },
+  {
+    id: '111movies',
+    label: 'Servidor 6',
+    note: '111movies · multi-audio (a probar)',
+    sandbox: RELAXED_PLAYER_SANDBOX,
+    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
+  },
+  {
+    id: 'multiembed',
+    label: 'Servidor 7',
+    note: 'agregador (a probar)',
+    sandbox: RELAXED_PLAYER_SANDBOX,
+    movie: (id) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}&s=${s}&e=${e}`
+  },
+  {
+    id: 'autoembed',
+    label: 'Servidor 8',
+    note: 'autoembed (a probar)',
+    sandbox: RELAXED_PLAYER_SANDBOX,
+    movie: (id) => `https://autoembed.co/movie/imdb/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://autoembed.co/tv/imdb/${encodeURIComponent(id)}-${s}-${e}`
   }
 ];
 
@@ -5659,8 +5692,8 @@ function getActiveProvider() {
 function buildEmbedUrlWithProvider(entry, provider) {
   const id = getPlaybackId(entry);
   return entry.type === 'movie'
-    ? provider.movie(id)
-    : provider.tv(id, entry.season || 1, entry.episode || 1);
+    ? provider.movie(id, entry)
+    : provider.tv(id, entry.season || 1, entry.episode || 1, entry);
 }
 
 function buildEmbedUrl(entry) {
@@ -5674,9 +5707,10 @@ function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   const provider = getActiveProvider();
   const season = state.playback.season || 1;
   const episode = state.playback.episode || 1;
-  const urls = ids.map((id) => state.selected.type === 'movie'
-    ? provider.movie(id)
-    : provider.tv(id, season, episode));
+  const entry = state.selected;
+  const urls = ids.map((id) => entry.type === 'movie'
+    ? provider.movie(id, entry)
+    : provider.tv(id, season, episode, entry));
   if (primaryUrl && !urls.includes(primaryUrl)) urls.unshift(primaryUrl);
   return [...new Set(urls)];
 }
@@ -5707,7 +5741,7 @@ function getCurrentEmbedUrl(baseEmbed) {
   if (!isSeriesLike(state.selected)) return baseEmbed;
   const id = getPlaybackId(state.selected);
   const provider = getActiveProvider();
-  return provider.tv(id, state.playback.season, state.playback.episode);
+  return provider.tv(id, state.playback.season, state.playback.episode, state.selected);
 }
 function getEpisodesForSeason(seasonNumber) { const season = (state.seriesEpisodes?.seasons ?? []).find((entry) => entry.seasonNumber === seasonNumber); return season?.episodes ?? []; }
 function positiveInteger(value, fallback) { const n = Number(value); return Number.isInteger(n) && n > 0 ? n : fallback; }

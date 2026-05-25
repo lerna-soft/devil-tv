@@ -57,6 +57,14 @@ const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
 const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 
+// Token mutable que invalida renders en vuelo cuando renderCatalog se vuelve
+// a llamar mid-stream (cambio de tab, click de un item, etc.). Sin esto, dos
+// renders simultáneos chocan en elements.items.innerHTML. Declarado aquí (no
+// junto a renderHomeCatalog) porque handleRouteChange() corre top-level ~línea
+// 1383, antes de que la ejecución alcanzara la declaración original, causando
+// TDZ: "Cannot access 'homeRenderToken' before initialization".
+let homeRenderToken = 0;
+
 // Devuelve la URL del worker /subs si el entry tiene imdbId válido,
 // o '' si no se puede pedir subs (sin imdb el upstream falla).
 function buildSubsUrl(entry, season, episode) {
@@ -3452,11 +3460,6 @@ window.mepAdminCreateAgent = createAgentByAdmin;
 function getUniqueRenderableTitles(items) {
   return dedupe(Array.isArray(items) ? items : [], { consolidateEquivalent: true });
 }
-
-// Token mutable que invalida renders en vuelo cuando renderCatalog se vuelve
-// a llamar mid-stream (cambio de tab, click de un item, etc.). Sin esto, dos
-// renders simultáneos chocan en elements.items.innerHTML.
-let homeRenderToken = 0;
 
 // Cache HTML por sección en localStorage. Patrón stale-while-revalidate:
 // próxima visita pinta cached al instante, luego re-computa en background y

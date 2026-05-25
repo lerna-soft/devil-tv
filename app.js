@@ -88,39 +88,6 @@ const PLAYBACK_PROVIDERS = [
     sandbox: DEFAULT_PLAYER_SANDBOX,
     movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
-  },
-  {
-    id: 'vidlink',
-    label: 'Servidor 5',
-    note: 'vidlink · limpio (a probar)',
-    sandbox: RELAXED_PLAYER_SANDBOX,
-    movie: (id) => `https://vidlink.pro/movie/${encodeURIComponent(id)}`,
-    // vidlink necesita tmdbId para TV (imdb devuelve HTTP 500).
-    tv: (id, s, e, entry) => `https://vidlink.pro/tv/${encodeURIComponent(String(entry?.tmdbId || id))}/${s}/${e}`
-  },
-  {
-    id: '111movies',
-    label: 'Servidor 6',
-    note: '111movies · multi-audio (a probar)',
-    sandbox: RELAXED_PLAYER_SANDBOX,
-    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
-  },
-  {
-    id: 'multiembed',
-    label: 'Servidor 7',
-    note: 'agregador (a probar)',
-    sandbox: RELAXED_PLAYER_SANDBOX,
-    movie: (id) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}&s=${s}&e=${e}`
-  },
-  {
-    id: 'autoembed',
-    label: 'Servidor 8',
-    note: 'autoembed (a probar)',
-    sandbox: RELAXED_PLAYER_SANDBOX,
-    movie: (id) => `https://autoembed.co/movie/imdb/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://autoembed.co/tv/imdb/${encodeURIComponent(id)}-${s}-${e}`
   }
 ];
 

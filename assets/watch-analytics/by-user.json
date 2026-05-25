@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-24T23:40:26.920Z",
+  "generatedAt": "2026-05-25T00:03:43.103Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-23T17:27:05Z",
+      "updatedAt": "2026-05-25T00:03:29Z",
       "totalEvents": 500,
       "totalStarts": 255,
       "totalCompletions": 86,
       "totalPlaybackProgress": 298917.5823581348,
       "uniqueContentCount": 164,
-      "lastActivityAt": "2026-05-23T17:27:05Z",
+      "lastActivityAt": "2026-05-25T00:03:29Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt10366206": {
+          "contentId": "tt10366206",
+          "imdbId": "tt10366206",
+          "tmdbId": "603692",
+          "title": "John Wick 4",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T00:03:29Z"
         },
         "tt1878870": {
           "contentId": "tt1878870",
@@ -1469,18 +1481,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:50Z"
         },
-        "tt10366206": {
-          "contentId": "tt10366206",
-          "imdbId": "tt10366206",
-          "tmdbId": "603692",
-          "title": "John Wick 4",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:16:14Z"
-        },
         "tt6146586": {
           "contentId": "tt6146586",
           "imdbId": "tt6146586",
@@ -2003,7 +2003,7 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 5,
+          "playCount": 4,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 0,

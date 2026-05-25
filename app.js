@@ -5233,6 +5233,23 @@ function markCurrentSelectionAsStarted() {
     player_status: 'playing',
     updatedAt: new Date().toISOString()
   });
+  // Propagar a otros dispositivos vía GitHub issue (drain workflow lo recoge
+  // y actualiza watch-analytics/users/<email>/data.json). El dedupe interno
+  // de queueWatchProgressSync (30min para 'started') evita spam si el user
+  // abre/cierra el player varias veces.
+  if (!alreadyStarted) {
+    void queueWatchProgressSync({
+      imdbId,
+      tmdbId,
+      season,
+      episode,
+      progress: 0,
+      player_status: 'playing',
+      event_type: 'started',
+      started_at: new Date(now).toISOString(),
+      completed_at: ''
+    });
+  }
 }
 
 function openPlayerModal(embedUrl) {

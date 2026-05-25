@@ -1,6 +1,6 @@
 {
-  "version": 292,
-  "generatedAt": "2026-05-25T05:48:16.816Z",
+  "version": 293,
+  "generatedAt": "2026-05-25T05:48:28.380Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51665,6 +51665,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjAwMjZlMTMtNWMxZi00MTdkLTgyNWQtOTg4MmI0ZmI2YzZhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt8594324",
+      "title": "Ghosts",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "Lolly Adefope, Mathew Baynton",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjIzZWYxNGYtMzQwOC00NTI5LTkxZTktZWJkNjYyYjNiYTQwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

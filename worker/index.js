@@ -364,7 +364,14 @@ function srtToVtt(srt) {
     .trim() + '\n';
 }
 
-async function handleSubs(request) {
+function jsonDbg(dbg) {
+  return new Response(JSON.stringify(dbg, null, 2), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+  });
+}
+
+async function handleSubs(request, env) {
   const url = new URL(request.url);
   const imdb = String(url.searchParams.get('imdb') || '').trim();
   const lang = String(url.searchParams.get('lang') || 'es').toLowerCase();
@@ -376,7 +383,7 @@ async function handleSubs(request) {
 
   if (!/^tt\d+$/.test(imdb)) {
     dbg.error = 'imdb param invalid';
-    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+    if (debug) return jsonDbg(dbg);
     return new Response('WEBVTT\n\nNOTE imdb param requerido (formato ttNNN)\n', {
       status: 200, headers: vttHeaders()
     });
@@ -389,6 +396,181 @@ async function handleSubs(request) {
   }
 
   const numericId = imdb.replace(/^tt/, '');
+  dbg.lang = lang;
+
+  // Si tenemos API key oficial → usar api.opensubtitles.com.
+  // Si no, fall back al endpoint legacy rest.opensubtitles.org (sin auth
+  // pero bloqueado para download desde IPs de CF data center).
+  if (env?.OPENSUBTITLES_API_KEY) {
+    return handleSubsOfficial({ env, dbg, debug, cacheKey, numericId, lang, season, episode });
+  }
+  return handleSubsLegacy({ dbg, debug, cacheKey, numericId, lang, season, episode });
+}
+
+async function handleSubsOfficial({ env, dbg, debug, cacheKey, numericId, lang, season, episode }) {
+  dbg.mode = 'official';
+  const isTv = season && episode && /^\d+$/.test(season) && /^\d+$/.test(episode);
+  const searchParams = new URLSearchParams({
+    imdb_id: numericId,
+    languages: lang,
+    order_by: 'download_count',
+    order_direction: 'desc'
+  });
+  if (isTv) {
+    // En la API oficial, para episodios: type=episode + parent_imdb_id (del show)
+    // + season_number + episode_number. Algunos clientes mandan imdb_id del show
+    // directo; lo intentamos así primero (más permisivo) y dejamos el filter
+    // server-side hacer el resto.
+    searchParams.set('type', 'episode');
+    searchParams.set('season_number', season);
+    searchParams.set('episode_number', episode);
+  } else {
+    searchParams.set('type', 'movie');
+  }
+  const searchUrl = `https://api.opensubtitles.com/api/v1/subtitles?${searchParams}`;
+  dbg.searchUrl = searchUrl;
+
+  const headers = {
+    'Api-Key': env.OPENSUBTITLES_API_KEY,
+    'User-Agent': 'DevilTV v1.0',
+    'Accept': 'application/json'
+  };
+
+  let searchData;
+  try {
+    const searchResp = await fetch(searchUrl, { headers });
+    dbg.searchStatus = searchResp.status;
+    if (!searchResp.ok) {
+      const errText = await searchResp.text();
+      dbg.error = 'search not ok';
+      dbg.searchBodyPreview = errText.slice(0, 200);
+      if (debug) return jsonDbg(dbg);
+      return emptyVtt();
+    }
+    searchData = await searchResp.json();
+  } catch (e) {
+    dbg.error = 'search threw: ' + e.message;
+    if (debug) return jsonDbg(dbg);
+    return emptyVtt();
+  }
+
+  const results = Array.isArray(searchData?.data) ? searchData.data : [];
+  dbg.resultsCount = results.length;
+
+  // Tomar el primer subtítulo no hearing-impaired con archivo descargable.
+  let topFileId = null;
+  let topLabel = '';
+  for (const entry of results) {
+    const attrs = entry?.attributes || {};
+    if (attrs.hearing_impaired) continue;
+    const file = Array.isArray(attrs.files) && attrs.files[0];
+    if (file?.file_id) {
+      topFileId = file.file_id;
+      topLabel = file.file_name || attrs.release || `OpenSubtitles ${attrs.language || lang}`;
+      break;
+    }
+  }
+  dbg.topFileId = topFileId;
+  if (!topFileId) {
+    dbg.error = dbg.error || 'no downloadable file in results';
+    if (debug) return jsonDbg(dbg);
+    return emptyVtt();
+  }
+
+  // Si tenemos username+password, hacer login para obtener bearer token
+  // (downloads requieren autenticación a nivel de cuenta).
+  let bearer = '';
+  if (env.OPENSUBTITLES_USERNAME && env.OPENSUBTITLES_PASSWORD) {
+    try {
+      const loginResp = await fetch('https://api.opensubtitles.com/api/v1/login', {
+        method: 'POST',
+        headers: {
+          ...headers,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: env.OPENSUBTITLES_USERNAME,
+          password: env.OPENSUBTITLES_PASSWORD
+        })
+      });
+      dbg.loginStatus = loginResp.status;
+      if (loginResp.ok) {
+        const loginData = await loginResp.json();
+        bearer = loginData.token || '';
+      }
+    } catch (e) {
+      dbg.loginError = e.message;
+    }
+  } else {
+    dbg.loginSkipped = 'no OPENSUBTITLES_USERNAME / PASSWORD secrets — downloads may 401';
+  }
+
+  // Pedir el download link, formato webvtt directo (sin convertir SRT a mano).
+  const dlHeaders = { ...headers, 'Content-Type': 'application/json' };
+  if (bearer) dlHeaders['Authorization'] = `Bearer ${bearer}`;
+
+  let dlLink = '';
+  try {
+    const dlResp = await fetch('https://api.opensubtitles.com/api/v1/download', {
+      method: 'POST',
+      headers: dlHeaders,
+      body: JSON.stringify({ file_id: topFileId, sub_format: 'webvtt' })
+    });
+    dbg.downloadStatus = dlResp.status;
+    if (!dlResp.ok) {
+      const errText = await dlResp.text();
+      dbg.error = 'download request not ok';
+      dbg.downloadBodyPreview = errText.slice(0, 300);
+      if (debug) return jsonDbg(dbg);
+      return emptyVtt();
+    }
+    const dlData = await dlResp.json();
+    dlLink = dlData?.link || '';
+    dbg.downloadLink = dlLink;
+    dbg.remainingQuota = dlData?.remaining;
+  } catch (e) {
+    dbg.error = 'download threw: ' + e.message;
+    if (debug) return jsonDbg(dbg);
+    return emptyVtt();
+  }
+
+  if (!dlLink) {
+    dbg.error = 'empty download link';
+    if (debug) return jsonDbg(dbg);
+    return emptyVtt();
+  }
+
+  // Fetch el VTT (el link es temporal/firmado, abierto público).
+  let vttText;
+  try {
+    const vttResp = await fetch(dlLink);
+    dbg.vttStatus = vttResp.status;
+    if (!vttResp.ok) {
+      dbg.error = 'vtt fetch not ok';
+      if (debug) return jsonDbg(dbg);
+      return emptyVtt();
+    }
+    vttText = await vttResp.text();
+    dbg.vttLen = vttText.length;
+    dbg.vttPreview = vttText.slice(0, 200);
+  } catch (e) {
+    dbg.error = 'vtt fetch threw: ' + e.message;
+    if (debug) return jsonDbg(dbg);
+    return emptyVtt();
+  }
+
+  if (debug) return jsonDbg(dbg);
+
+  // Si por algún motivo no empieza con WEBVTT, normalizamos. La API ya devuelve
+  // formato webvtt por sub_format=webvtt, así que esto debería ser no-op.
+  const vtt = vttText.startsWith('WEBVTT') ? vttText : ('WEBVTT\n\n' + vttText);
+  const response = new Response(vtt, { status: 200, headers: vttHeaders() });
+  caches.default.put(cacheKey, response.clone()).catch(() => {});
+  return response;
+}
+
+async function handleSubsLegacy({ dbg, debug, cacheKey, numericId, lang, season, episode }) {
+  dbg.mode = 'legacy';
   const sublang = SUBS_LANG_MAP[lang] || 'spa';
   dbg.sublang = sublang;
 
@@ -406,65 +588,56 @@ async function handleSubs(request) {
     dbg.searchStatus = searchResp.status;
     if (!searchResp.ok) {
       dbg.error = 'search not ok';
-      if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+      if (debug) return jsonDbg(dbg);
       return emptyVtt();
     }
-    const text = await searchResp.text();
-    dbg.searchBodyLen = text.length;
-    dbg.searchBodyPreview = text.slice(0, 300);
-    try { subs = JSON.parse(text); } catch (e) { dbg.error = 'json parse: ' + e.message; }
+    subs = await searchResp.json();
   } catch (e) {
-    dbg.error = 'fetch threw: ' + e.message;
-    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+    dbg.error = 'search threw: ' + e.message;
+    if (debug) return jsonDbg(dbg);
     return emptyVtt();
   }
 
-  dbg.subsCount = Array.isArray(subs) ? subs.length : -1;
   const candidates = (Array.isArray(subs) ? subs : [])
     .filter((s) => s && s.SubLanguageID === sublang && s.SubFormat === 'srt' && s.SubHearingImpaired === '0')
     .sort((a, b) => Number(b.SubDownloadsCnt || 0) - Number(a.SubDownloadsCnt || 0));
   dbg.candidatesCount = candidates.length;
 
   if (!candidates.length) {
-    dbg.error = dbg.error || 'no candidates after filter';
-    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+    dbg.error = dbg.error || 'no candidates';
+    if (debug) return jsonDbg(dbg);
     return emptyVtt();
   }
 
   const top = candidates[0];
-  // El SubDownloadLink que devuelve la API tiene un token vrf- ligado a
-  // la IP de quien hizo el search. Desde CF data centers, ese token da
-  // 401. El endpoint /en/download/file/{IDSubtitleFile} sirve sin token.
   const downloadUrl = `https://dl.opensubtitles.org/en/download/file/${encodeURIComponent(top.IDSubtitleFile)}`;
   dbg.downloadUrl = downloadUrl;
   let srtText;
   try {
-    const downloadResp = await fetch(downloadUrl, {
-      headers: { 'X-User-Agent': 'DevilTV v1' }
-    });
+    const downloadResp = await fetch(downloadUrl, { headers: { 'X-User-Agent': 'DevilTV v1' } });
     dbg.downloadStatus = downloadResp.status;
     if (!downloadResp.ok) {
-      dbg.error = 'download not ok';
-      if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+      dbg.error = 'download not ok (legacy)';
+      if (debug) return jsonDbg(dbg);
       return emptyVtt();
     }
     try {
       const stream = downloadResp.body.pipeThrough(new DecompressionStream('gzip'));
       srtText = await new Response(stream).text();
-      dbg.decompressed = true;
-    } catch (e) {
-      dbg.decompressError = e.message;
+    } catch {
       srtText = await downloadResp.text();
     }
-    dbg.srtLen = srtText.length;
-    dbg.srtPreview = srtText.slice(0, 200);
   } catch (e) {
     dbg.error = 'download threw: ' + e.message;
-    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+    if (debug) return jsonDbg(dbg);
     return emptyVtt();
   }
 
-  if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+  if (debug) {
+    dbg.srtLen = srtText.length;
+    dbg.srtPreview = srtText.slice(0, 200);
+    return jsonDbg(dbg);
+  }
 
   const vtt = srtToVtt(srtText);
   const response = new Response(vtt, { status: 200, headers: vttHeaders() });
@@ -497,7 +670,7 @@ export default {
       return handleCreateIssue(request, env);
     }
     if (request.method === 'GET' && url.pathname === '/subs') {
-      return handleSubs(request);
+      return handleSubs(request, env);
     }
 
     return jsonResponse(404, { error: 'Not found' }, env);

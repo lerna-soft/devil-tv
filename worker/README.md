@@ -59,17 +59,32 @@ Crea labels que no existan (best-effort, color genérico). Devuelve
 `{ ok: true, number, html_url }`.
 
 ### `GET /subs?imdb=tt..&lang=es[&season=N&episode=N]`
-Fetcha subtítulos de OpenSubtitles (legacy REST sin auth), descomprime
-el `.srt.gz` y convierte a `.vtt` antes de servir. Cache 7 días en
-Cloudflare edge.
+Fetcha subtítulos de OpenSubtitles, convierte a `.vtt` y sirve con CORS
+abierto. Cache 7 días en Cloudflare edge.
 
 Diseñado para players de embed que aceptan `?sub_file={URL}` (vidlink,
 2embed, superembed). El response tiene `Access-Control-Allow-Origin: *`
 porque el iframe que lo lee está en otro origin.
 
-Si no hay subs disponibles para ese título/idioma, devuelve un VTT
-vacío válido (`WEBVTT\n\n`) — los players lo manejan como "subs no
-disponibles" sin romper la reproducción.
+**Dos modos según secrets configurados:**
+
+1. **Modo oficial** (recomendado, usado cuando `OPENSUBTITLES_API_KEY`
+   está presente): usa `api.opensubtitles.com`. Search con Api-Key,
+   download via `/api/v1/download` con `sub_format=webvtt` (no necesita
+   conversión SRT→VTT). Para que el download funcione, también necesita
+   los secrets `OPENSUBTITLES_USERNAME` y `OPENSUBTITLES_PASSWORD` —
+   sin estos, la API devuelve 401 en download aunque la search funcione.
+2. **Modo legacy** (fallback cuando NO hay API key): usa
+   `rest.opensubtitles.org` sin auth. Tiene un problema conocido: los
+   downloads dan 401 desde IPs de CF data center (bloqueo IP-based de
+   OpenSubtitles). Solo útil para search en modo debug.
+
+Modo debug: agregar `?debug=1` devuelve JSON con trazas de cada paso
+en lugar de VTT, útil para diagnosticar fallos.
+
+Si no hay subs disponibles, devuelve un VTT vacío válido (`WEBVTT\n\n`)
+— los players lo manejan como "subs no disponibles" sin romper la
+reproducción.
 
 ---
 
@@ -80,6 +95,9 @@ disponibles" sin romper la reproducción.
 | `GITHUB_REPO` | Variable (plain) | `lerna-soft/devil-tv` |
 | `ALLOWED_ORIGIN` | Variable (plain) | `https://lerna-soft.github.io` |
 | `GITHUB_PAT` | **Secret** | Fine-grained PAT con `contents:write` en `lerna-soft/devil-tv` |
+| `OPENSUBTITLES_API_KEY` | **Secret** | API key del Consumer registrado en opensubtitles.com (modo subs oficial) |
+| `OPENSUBTITLES_USERNAME` | **Secret** | Username del account de opensubtitles.com (requerido para downloads, no solo search) |
+| `OPENSUBTITLES_PASSWORD` | **Secret** | Password del account de opensubtitles.com |
 
 ---
 

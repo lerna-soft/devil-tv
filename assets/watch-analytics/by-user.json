@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T06:04:03.545Z",
+  "generatedAt": "2026-05-25T06:04:57.000Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T06:03:53Z",
+      "updatedAt": "2026-05-25T06:04:47Z",
       "totalEvents": 500,
       "totalStarts": 258,
       "totalCompletions": 82,
       "totalPlaybackProgress": 294479.5567845498,
-      "uniqueContentCount": 166,
-      "lastActivityAt": "2026-05-25T06:03:53Z",
+      "uniqueContentCount": 165,
+      "lastActivityAt": "2026-05-25T06:04:47Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T06:04:47Z"
+        },
         "tt21209876": {
           "contentId": "tt21209876",
           "imdbId": "tt21209876",
@@ -148,18 +160,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-25T05:53:01Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T04:29:27Z"
         },
         "tt10366206": {
           "contentId": "tt10366206",
@@ -2020,18 +2020,6 @@
           "maxProgressValue": 2.972405,
           "maxProgressPercent": 2.972405,
           "lastSeenAt": "2026-05-14T06:31:09Z"
-        },
-        "tt4158110": {
-          "contentId": "tt4158110",
-          "imdbId": "tt4158110",
-          "tmdbId": "62560",
-          "title": "Mr. Robot",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-14T03:41:41Z"
         }
       },
       "avgPlaybackProgress": 588.9591

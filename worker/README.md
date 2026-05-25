@@ -58,6 +58,19 @@ ofuscado en el cliente, pero después del transfer del repo de
 Crea labels que no existan (best-effort, color genérico). Devuelve
 `{ ok: true, number, html_url }`.
 
+### `GET /subs?imdb=tt..&lang=es[&season=N&episode=N]`
+Fetcha subtítulos de OpenSubtitles (legacy REST sin auth), descomprime
+el `.srt.gz` y convierte a `.vtt` antes de servir. Cache 7 días en
+Cloudflare edge.
+
+Diseñado para players de embed que aceptan `?sub_file={URL}` (vidlink,
+2embed, superembed). El response tiene `Access-Control-Allow-Origin: *`
+porque el iframe que lo lee está en otro origin.
+
+Si no hay subs disponibles para ese título/idioma, devuelve un VTT
+vacío válido (`WEBVTT\n\n`) — los players lo manejan como "subs no
+disponibles" sin romper la reproducción.
+
 ---
 
 ## Variables y secrets (configurar en Cloudflare)

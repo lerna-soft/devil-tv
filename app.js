@@ -71,11 +71,25 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vidlink',
     label: 'Servidor 2',
-    note: 'anime/orig · ads',
+    note: 'anime/orig · ads · subs ES',
     sandbox: null,
     // vidlink TV requiere tmdbId (con imdbId responde HTTP 500).
-    movie: (id) => `https://vidlink.pro/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e, entry) => `https://vidlink.pro/tv/${encodeURIComponent(String(entry?.tmdbId || id))}/${s}/${e}`
+    // sub_file apunta al Worker /subs que fetchea OpenSubtitles y devuelve VTT.
+    movie: (id, entry) => {
+      const imdb = String(entry?.imdbId || '').trim();
+      const base = `https://vidlink.pro/movie/${encodeURIComponent(id)}`;
+      if (!/^tt\d+$/.test(imdb)) return base;
+      const subUrl = `https://devil-tv-recovery.hglerna.workers.dev/subs?imdb=${encodeURIComponent(imdb)}&lang=es`;
+      return `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`;
+    },
+    tv: (id, s, e, entry) => {
+      const tvId = String(entry?.tmdbId || id);
+      const imdb = String(entry?.imdbId || '').trim();
+      const base = `https://vidlink.pro/tv/${encodeURIComponent(tvId)}/${s}/${e}`;
+      if (!/^tt\d+$/.test(imdb)) return base;
+      const subUrl = `https://devil-tv-recovery.hglerna.workers.dev/subs?imdb=${encodeURIComponent(imdb)}&lang=es&season=${s}&episode=${e}`;
+      return `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`;
+    }
   },
   {
     id: 'vidsrc-cc',

@@ -6,6 +6,10 @@
 //   POST /reset-password   { email, token, newSalt, newHash }
 //   POST /change-password  { email, currentHash, newSalt, newHash }
 //   POST /create-issue     { title, body, labels[] }
+//   GET  /subs?imdb=tt..&lang=es[&season=N&episode=N]
+//         Fetcha subs de OpenSubtitles, convierte .srt → .vtt, sirve con
+//         CORS abierto. Para inyectar subs ES en players que aceptan
+//         sub_file (vidlink, 2embed, superembed).
 //
 // Secrets/vars requeridos (configurar en Cloudflare dashboard):
 //   GITHUB_PAT  — fine-grained PAT con contents:write en lerna-soft/devil-tv
@@ -335,6 +339,98 @@ async function handleCreateIssue(request, env) {
   return jsonResponse(200, { ok: true, number: data.number, html_url: data.html_url }, env);
 }
 
+const SUBS_LANG_MAP = { es: 'spa', en: 'eng', pt: 'por', fr: 'fre', it: 'ita', de: 'ger' };
+
+function vttHeaders() {
+  return {
+    'Content-Type': 'text/vtt; charset=utf-8',
+    // Wildcard porque el .vtt lo carga el iframe del provider (vidlink, etc.)
+    // que está en otro origin. Sin esto, falla la lectura cross-origin.
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Cache-Control': 'public, max-age=604800'
+  };
+}
+
+function emptyVtt() {
+  return new Response('WEBVTT\n\n', { status: 200, headers: vttHeaders() });
+}
+
+function srtToVtt(srt) {
+  return 'WEBVTT\n\n' + String(srt || '')
+    .replace(/\r\n/g, '\n')
+    // SRT usa coma como separador de milisegundos; VTT usa punto.
+    .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2')
+    .trim() + '\n';
+}
+
+async function handleSubs(request) {
+  const url = new URL(request.url);
+  const imdb = String(url.searchParams.get('imdb') || '').trim();
+  const lang = String(url.searchParams.get('lang') || 'es').toLowerCase();
+  const season = String(url.searchParams.get('season') || '').trim();
+  const episode = String(url.searchParams.get('episode') || '').trim();
+
+  if (!/^tt\d+$/.test(imdb)) {
+    return new Response('WEBVTT\n\nNOTE imdb param requerido (formato ttNNN)\n', {
+      status: 200, headers: vttHeaders()
+    });
+  }
+
+  const cacheKey = new Request(url.toString(), { method: 'GET' });
+  const cached = await caches.default.match(cacheKey);
+  if (cached) return cached;
+
+  const numericId = imdb.replace(/^tt/, '');
+  const sublang = SUBS_LANG_MAP[lang] || 'spa';
+
+  const isTv = season && episode && /^\d+$/.test(season) && /^\d+$/.test(episode);
+  const searchPath = isTv
+    ? `/search/episode-${episode}/imdbid-${numericId}/season-${season}/sublanguageid-${sublang}`
+    : `/search/imdbid-${numericId}/sublanguageid-${sublang}`;
+
+  let subs;
+  try {
+    const searchResp = await fetch(`https://rest.opensubtitles.org${searchPath}`, {
+      headers: { 'X-User-Agent': 'DevilTV v1' }
+    });
+    if (!searchResp.ok) return emptyVtt();
+    subs = await searchResp.json();
+  } catch {
+    return emptyVtt();
+  }
+
+  const candidates = (Array.isArray(subs) ? subs : [])
+    .filter((s) => s && s.SubLanguageID === sublang && s.SubFormat === 'srt' && s.SubHearingImpaired === '0')
+    .sort((a, b) => Number(b.SubDownloadsCnt || 0) - Number(a.SubDownloadsCnt || 0));
+
+  if (!candidates.length) return emptyVtt();
+
+  const top = candidates[0];
+  let srtText;
+  try {
+    const downloadResp = await fetch(top.SubDownloadLink, {
+      headers: { 'X-User-Agent': 'DevilTV v1' }
+    });
+    if (!downloadResp.ok) return emptyVtt();
+    // El archivo viene .srt.gz; descomprimir con DecompressionStream nativo.
+    try {
+      const stream = downloadResp.body.pipeThrough(new DecompressionStream('gzip'));
+      srtText = await new Response(stream).text();
+    } catch {
+      srtText = await downloadResp.text();
+    }
+  } catch {
+    return emptyVtt();
+  }
+
+  const vtt = srtToVtt(srtText);
+  const response = new Response(vtt, { status: 200, headers: vttHeaders() });
+  // Fire-and-forget cache write (sin esperar para no bloquear el response).
+  caches.default.put(cacheKey, response.clone()).catch(() => {});
+  return response;
+}
+
 export default {
   async fetch(request, env) {
     // CORS preflight
@@ -358,6 +454,9 @@ export default {
     }
     if (request.method === 'POST' && url.pathname === '/create-issue') {
       return handleCreateIssue(request, env);
+    }
+    if (request.method === 'GET' && url.pathname === '/subs') {
+      return handleSubs(request);
     }
 
     return jsonResponse(404, { error: 'Not found' }, env);

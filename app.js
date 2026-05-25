@@ -65,6 +65,13 @@ const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 // TDZ: "Cannot access 'homeRenderToken' before initialization".
 let homeRenderToken = 0;
 
+// Mismo motivo TDZ: scheduleAuthenticatedStartupWork() corre top-level y
+// llama installVisibilityRehydrate(), que lee estas variables. Si se
+// declaran junto a la función (más abajo), no están inicializadas al
+// momento del call → ReferenceError.
+let watchProgressLastHydrate = Date.now();
+let visibilityRehydrateBound = false;
+
 // Logger estructurado para debug. Pensado para debugging post-mortem: si el
 // user reporta "no apareció X", se le puede pedir copy/paste del console y
 // reconstruir el flujo. Scopes y su nivel:
@@ -2101,8 +2108,8 @@ function scheduleAuthenticatedStartupWork() {
 // título en sesión A (otro device/perfil), bloquea pantalla en sesión B, y al
 // desbloquear espera ver "Continuar viendo" actualizado. Sin esto, sesión B
 // solo re-hidrata en boot. El throttle de 60s evita refetch en cada blur.
-let watchProgressLastHydrate = Date.now();
-let visibilityRehydrateBound = false;
+// (Declaraciones movidas arriba — ver top del módulo, mismo motivo TDZ que
+// homeRenderToken.)
 function installVisibilityRehydrate() {
   if (visibilityRehydrateBound) return;
   visibilityRehydrateBound = true;

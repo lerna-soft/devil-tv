@@ -60,7 +60,7 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
     label: 'Servidor 1',
-    note: 'principal · sin ads',
+    note: 'sin ads',
     sandbox: DEFAULT_PLAYER_SANDBOX,
     movie: (id) => `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
@@ -68,7 +68,7 @@ const PLAYBACK_PROVIDERS = [
   {
     id: 'vidsrc-cc',
     label: 'Servidor 2',
-    note: 'videasy · ads',
+    note: 'puede contener ads',
     sandbox: RELAXED_PLAYER_SANDBOX,
     movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
@@ -76,18 +76,10 @@ const PLAYBACK_PROVIDERS = [
   {
     id: '2embed',
     label: 'Servidor 3',
-    note: 'LATAM · ads',
+    note: 'puede contener ads',
     sandbox: RELAXED_PLAYER_SANDBOX,
     movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
-  },
-  {
-    id: 'vidsrc-to',
-    label: 'Servidor 4',
-    note: 'vsembed (alternativo)',
-    sandbox: DEFAULT_PLAYER_SANDBOX,
-    movie: (id) => `https://vidsrc.to/embed/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://vidsrc.to/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   }
 ];
 

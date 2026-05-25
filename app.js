@@ -152,6 +152,8 @@ const PLAYBACK_PROVIDERS = [
   }
 ];
 
+const SECTION_CACHE_STORAGE_KEY = 'mep_section_cache_v1';
+
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
 const USER_REPORT_LABEL = 'user-report';
 const USER_REPORT_PLATFORM_LABEL = 'user-report-platform';
@@ -3456,6 +3458,47 @@ function getUniqueRenderableTitles(items) {
 // renders simultáneos chocan en elements.items.innerHTML.
 let homeRenderToken = 0;
 
+// Cache HTML por sección en localStorage. Patrón stale-while-revalidate:
+// próxima visita pinta cached al instante, luego re-computa en background y
+// reemplaza si difiere. Cache es por usuario (cada user tiene sus propias
+// secciones "Continuar viendo", "Me gusta", etc.).
+function loadHomeSectionCache() {
+  try {
+    const raw = localStorage.getItem(SECTION_CACHE_STORAGE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (data?.version !== 1) return null;
+    const currentUser = String(getAuthUser()?.email || '').toLowerCase();
+    if (String(data.userId || '').toLowerCase() !== currentUser) return null;
+    return data;
+  } catch { return null; }
+}
+
+function saveHomeSectionCache(sectionsHtmlMap) {
+  try {
+    const userId = String(getAuthUser()?.email || '').toLowerCase();
+    if (!userId) return; // sin user no cacheamos
+    if (!sectionsHtmlMap || Object.keys(sectionsHtmlMap).length === 0) return;
+    localStorage.setItem(SECTION_CACHE_STORAGE_KEY, JSON.stringify({
+      version: 1,
+      userId,
+      cachedAt: Date.now(),
+      sections: sectionsHtmlMap
+    }));
+  } catch {
+    // Quota exceeded o storage no disponible — best effort, sin fallback.
+  }
+}
+
+// Helper para evitar double-bind cuando re-llamamos bindLocalCardEvents
+// después de re-pintar sólo algunas secciones. Marca el elemento con un
+// dataset bit; futuras llamadas skipean los ya marcados.
+function bindOnce(el, marker, callback) {
+  if (!el || el.dataset[marker]) return;
+  el.dataset[marker] = '1';
+  callback();
+}
+
 function renderHomeCatalog(baseFiltered) {
   // Setup sincrónico (rápido): contador + skeleton con "Cargando..." por
   // sección. Lo pesado (sortTitles, recommendationScore por sección) corre
@@ -3520,36 +3563,56 @@ function renderHomeCatalog(baseFiltered) {
       .sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0))
   });
 
-  // Skeleton SOLO si home no está ya pintado. Si re-render durante hydration
-  // (catálogo cargando chunks), conserva el DOM existente y cada sección se
-  // actualiza in-place vía su promise — sin flash.
-  // Banner de hydration ("Cargando catálogo X%") deshabilitado por decisión
-  // del user: la carga de chunks es silenciosa en background.
+  // Estrategia stale-while-revalidate:
+  // 1. Si NO hay home pintado y hay cache → pintar cache al instante (paint
+  //    inmediato, sin esperar bootstrap/chunks).
+  // 2. Si no hay cache → skeleton "Cargando..." por sección.
+  // 3. Compute fresco corre en background como chain (sequential): sección 1
+  //    primero, al terminar arranca sección 2, etc. Top-down.
+  // 4. Cada sección compara HTML fresco vs cacheado; si igual, no toca DOM.
+  // 5. Cache se guarda al final con los HTML frescos para próxima visita.
   const alreadyPainted = elements.items.querySelector('[data-section-key]') !== null;
+  const cache = !alreadyPainted ? loadHomeSectionCache() : null;
+  const cachedSections = cache?.sections || {};
+
   if (!alreadyPainted) {
-    const skeletonHtml = sectionDefs.map((def) => buildSectionShellHtml(def, '<div class="home-section-loading">Cargando...</div>')).join('');
-    elements.items.innerHTML = skeletonHtml;
+    const initialHtml = sectionDefs.map((def) => {
+      const cachedCarousel = cachedSections[def.key];
+      if (cachedCarousel) return buildSectionShellHtml(def, cachedCarousel);
+      return buildSectionShellHtml(def, '<div class="home-section-loading">Cargando...</div>');
+    }).join('');
+    elements.items.innerHTML = initialHtml;
+    // Bind eventos sobre el contenido cacheado para que sea interactivo YA.
+    // bindOnce previene double-bind cuando re-llamemos abajo tras frescos.
+    bindLocalCardEvents();
+    bindHomeSectionEvents();
+    bindHomeCarouselEvents();
   }
 
-  // Token cancela promesas en vuelo si un render nuevo arranca mid-stream.
   const myToken = ++homeRenderToken;
   const eagerState = { taken: false };
+  const freshSectionsHtml = {};
+  let anyDomChanged = false;
 
-  // Una promise por sección. Cada una corre INDEPENDIENTE (setTimeout 0 las
-  // arranca todas en el siguiente tick, en paralelo lógico). El .then de
-  // cada una pinta SOLO su sección — no toca las demás → cero conflictos
-  // entre secciones, y la primera que termine es la primera en aparecer.
-  const sectionPromises = sectionDefs.map((def) => new Promise((resolve) => {
-    setTimeout(() => {
-      try { resolve({ def, items: def.compute() }); }
-      catch (err) { resolve({ def, items: [], error: err }); }
-    }, 0);
-  }).then(({ def, items }) => {
-    if (myToken !== homeRenderToken) return; // cancelado por otro render
-    paintHomeSection(def, items, sectionDefs, previewLimit, eagerState);
-  }));
+  // Chain sequential: cada sección espera a que termine la anterior. La
+  // primera aparece (o se valida vs cache) antes de empezar la segunda.
+  // Ventaja sobre paralelo: orden visual top-down predecible.
+  (async () => {
+    for (const def of sectionDefs) {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      if (myToken !== homeRenderToken) return;
 
-  Promise.allSettled(sectionPromises).then(() => {
+      let items;
+      try { items = def.compute(); } catch { items = []; }
+      if (myToken !== homeRenderToken) return;
+
+      const result = paintHomeSectionWithCache(
+        def, items, sectionDefs, previewLimit, eagerState, cachedSections[def.key]
+      );
+      if (result.carouselHtml) freshSectionsHtml[def.key] = result.carouselHtml;
+      if (result.domChanged) anyDomChanged = true;
+    }
+
     if (myToken !== homeRenderToken) return;
 
     // Fallback si nada se pintó (catálogo vacío de verdad).
@@ -3572,13 +3635,22 @@ function renderHomeCatalog(baseFiltered) {
             </div>
           </section>
         `;
+        anyDomChanged = true;
       }
     }
 
-    bindLocalCardEvents();
-    bindHomeSectionEvents();
-    bindHomeCarouselEvents();
-  });
+    // Re-bind solo si el DOM cambió. bindOnce skipea elementos ya bindeados;
+    // los nuevos (de las secciones reemplazadas vía outerHTML) sí reciben
+    // sus listeners.
+    if (anyDomChanged) {
+      bindLocalCardEvents();
+      bindHomeSectionEvents();
+      bindHomeCarouselEvents();
+    }
+
+    // Persistir cache para próxima visita.
+    saveHomeSectionCache(freshSectionsHtml);
+  })();
 }
 
 function buildSectionShellHtml(def, innerHtml) {
@@ -3610,28 +3682,40 @@ function buildSectionCarouselHtml(def, items, previewLimit, eagerCount) {
   `;
 }
 
-// Pinta el contenido (carousel o vacío) de UNA sección sin tocar las demás.
-// Maneja 3 casos: sección existe (reemplaza loading/carousel viejo), sección
-// no existe pero debe (la inserta en posición correcta según sectionDefs),
-// sección existe pero no tiene items (la remueve).
-function paintHomeSection(def, items, sectionDefs, previewLimit, eagerState) {
+// Pinta el contenido de UNA sección sin tocar las demás.
+// Compara con el HTML cacheado: si es idéntico, NO toca el DOM (evita flash).
+// Devuelve { carouselHtml, domChanged } para que el caller decida si re-bind.
+function paintHomeSectionWithCache(def, items, sectionDefs, previewLimit, eagerState, cachedCarouselHtml) {
   let sectionEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
 
   if (items.length < def.minItems) {
-    if (sectionEl) sectionEl.remove();
-    return;
+    if (sectionEl) {
+      sectionEl.remove();
+      return { carouselHtml: null, domChanged: true };
+    }
+    return { carouselHtml: null, domChanged: false };
   }
 
   const eagerCount = eagerState.taken ? 0 : 2;
   eagerState.taken = true;
   const carouselHtml = buildSectionCarouselHtml(def, items, previewLimit, eagerCount);
 
+  // Si el cache de esta sección es idéntico al HTML fresco, no tocamos DOM.
+  // El user no ve flash, no re-bindeamos, ahorramos ciclos.
+  const normalizedFresh = carouselHtml.trim();
+  const normalizedCached = String(cachedCarouselHtml || '').trim();
+  if (sectionEl && normalizedFresh === normalizedCached
+    && sectionEl.querySelector('.home-carousel')
+    && !sectionEl.querySelector('.home-section-loading')) {
+    return { carouselHtml, domChanged: false };
+  }
+
   if (sectionEl) {
     const target = sectionEl.querySelector('.home-section-loading')
       || sectionEl.querySelector('.home-carousel');
     if (target) target.outerHTML = carouselHtml;
     else sectionEl.insertAdjacentHTML('beforeend', carouselHtml);
-    return;
+    return { carouselHtml, domChanged: true };
   }
 
   // Sección ausente: insertar en posición correcta antes de la próxima sección
@@ -3642,10 +3726,11 @@ function paintHomeSection(def, items, sectionDefs, previewLimit, eagerState) {
     const nextEl = elements.items.querySelector(`[data-section-key="${sectionDefs[i].key}"]`);
     if (nextEl) {
       nextEl.insertAdjacentHTML('beforebegin', fullSectionHtml);
-      return;
+      return { carouselHtml, domChanged: true };
     }
   }
   elements.items.insertAdjacentHTML('beforeend', fullSectionHtml);
+  return { carouselHtml, domChanged: true };
 }
 
 function renderHomeSectionList(baseFiltered, sectionKey) {
@@ -3705,10 +3790,12 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
 
 function bindHomeSectionEvents() {
   elements.items.querySelectorAll('[data-home-seeall]').forEach((entry) => {
-    entry.addEventListener('click', () => {
-      state.homeSectionView = entry.dataset.homeSeeall || null;
-      resetCatalogViewport();
-      renderCatalog();
+    bindOnce(entry, 'boundSeeall', () => {
+      entry.addEventListener('click', () => {
+        state.homeSectionView = entry.dataset.homeSeeall || null;
+        resetCatalogViewport();
+        renderCatalog();
+      });
     });
   });
 }
@@ -3729,6 +3816,8 @@ function renderPaginatedLocalList(items) {
 function bindHomeCarouselEvents() {
   const carousels = elements.items.querySelectorAll('[data-home-carousel]');
   carousels.forEach((carousel) => {
+    if (carousel.dataset.boundCarousel) return; // ya bindeado, skip
+    carousel.dataset.boundCarousel = '1';
     const viewport = carousel.querySelector('.home-viewport');
     const track = carousel.querySelector('.home-track');
     const prevBtn = carousel.querySelector('[data-home-prev]');

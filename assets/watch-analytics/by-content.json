@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T05:48:52.921Z",
+  "generatedAt": "2026-05-25T05:53:11.877Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1331,24 +1331,24 @@
       "tmdbId": "",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 20,
+      "totalEvents": 19,
       "totalStarts": 12,
-      "totalCompletions": 8,
-      "totalPlaybackProgress": 11403.20349056916,
+      "totalCompletions": 7,
+      "totalPlaybackProgress": 9978.055564492062,
       "uniqueUsers": 1,
-      "completionRate": 0.6667,
+      "completionRate": 0.5833,
       "lastActivityAt": "2026-05-14T19:21:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 20,
-          "completedCount": 8,
+          "playCount": 19,
+          "completedCount": 7,
           "startedCount": 12,
-          "totalPlaybackProgress": 11403.20349056916,
+          "totalPlaybackProgress": 9978.055564492062,
           "lastSeenAt": "2026-05-14T19:21:17Z",
           "lastSeason": 1,
-          "lastEpisode": 3
+          "lastEpisode": 4
         }
       },
       "episodes": {
@@ -1477,23 +1477,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.5
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1425.1479260770975,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T01:28:05Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 570.1602
+      "avgPlaybackProgress": 525.1608
     },
     {
       "contentId": "tt29552248",
@@ -2874,6 +2860,50 @@
       "avgPlaybackProgress": 1730.5124
     },
     {
+      "contentId": "tt8594324",
+      "imdbId": "tt8594324",
+      "tmdbId": "17174",
+      "title": "Ghosts",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-25T05:53:01Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-25T05:53:01Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-25T05:53:01Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt2560140",
       "imdbId": "tt2560140",
       "tmdbId": "1429",
@@ -3920,50 +3950,6 @@
         }
       },
       "avgPlaybackProgress": 1625.1439
-    },
-    {
-      "contentId": "tt8594324",
-      "imdbId": "tt8594324",
-      "tmdbId": "17174",
-      "title": "Ghosts",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-25T05:48:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-25T05:48:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-25T05:48:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt35707374",

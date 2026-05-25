@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T13:51:33.819Z",
+  "generatedAt": "2026-05-25T15:02:28.251Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T11:25:43Z",
+      "updatedAt": "2026-05-25T15:02:20Z",
       "totalEvents": 500,
-      "totalStarts": 258,
-      "totalCompletions": 82,
-      "totalPlaybackProgress": 294479.5567845498,
+      "totalStarts": 259,
+      "totalCompletions": 81,
+      "totalPlaybackProgress": 293053.6193736654,
       "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-25T11:25:43Z",
+      "lastActivityAt": "2026-05-25T15:02:20Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "17174",
           "title": "Ghosts",
           "type": "series",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T11:25:43Z"
+          "lastSeenAt": "2026-05-25T15:02:20Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1979,7 +1979,7 @@
           "tmdbId": "",
           "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
           "type": "series",
-          "playCount": 17,
+          "playCount": 16,
           "completed": true,
           "maxProgressValue": 1426.030271,
           "maxProgressPercent": 0,
@@ -2022,7 +2022,7 @@
           "lastSeenAt": "2026-05-14T06:31:09Z"
         }
       },
-      "avgPlaybackProgress": 588.9591
+      "avgPlaybackProgress": 586.1072
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

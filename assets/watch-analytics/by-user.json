@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T01:13:40.718Z",
+  "generatedAt": "2026-05-25T01:37:51.672Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T01:13:32Z",
+      "updatedAt": "2026-05-25T01:37:42Z",
       "totalEvents": 500,
       "totalStarts": 256,
       "totalCompletions": 85,
       "totalPlaybackProgress": 297546.8992758854,
-      "uniqueContentCount": 166,
-      "lastActivityAt": "2026-05-25T01:13:32Z",
+      "uniqueContentCount": 165,
+      "lastActivityAt": "2026-05-25T01:37:42Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "127532",
           "title": "Solo Leveling",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 1204.317008,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T01:13:32Z"
+          "lastSeenAt": "2026-05-25T01:37:42Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -2020,18 +2020,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-14T03:41:41Z"
-        },
-        "tt1632701": {
-          "contentId": "tt1632701",
-          "imdbId": "tt1632701",
-          "tmdbId": "37680",
-          "title": "Suits: la clave del éxito",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-13T21:10:31Z"
         }
       },
       "avgPlaybackProgress": 595.0938

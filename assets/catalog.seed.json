@@ -1,6 +1,6 @@
 {
-  "version": 291,
-  "generatedAt": "2026-05-25T05:48:05.804Z",
+  "version": 292,
+  "generatedAt": "2026-05-25T05:48:16.816Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27969,6 +27969,22 @@
       "releaseDate": null,
       "overview": "Matthew McConaughey, Jennifer Garner",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTA0Njk2NTIyMTVeQTJeQWpwZ15BbWU3MDU0MzUyMzI@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt38120758",
+      "title": "Anything But Ghosts",
+      "year": null,
+      "releaseDate": null,
+      "overview": "Curry Barker, Cooper Tomlinson",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTNlYmQ1YTItZWE4MS00ZWNjLWI5ODItNmU0ZjM2OTI1NzIxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -86,13 +86,12 @@ const PLAYBACK_PROVIDERS = [
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
-    id: 'superembed',
+    id: '111movies',
     label: 'Servidor 4',
     note: 'alternativo · ads',
     sandbox: null,
-    // multiembed.mov es el frontend del backend SuperEmbed (mismo operador).
-    movie: (id) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}&s=${s}&e=${e}`
+    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
   }
 ];
 

@@ -1,6 +1,6 @@
 {
-  "version": 289,
-  "generatedAt": "2026-05-25T00:42:48.365Z",
+  "version": 290,
+  "generatedAt": "2026-05-25T04:29:12.008Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27937,6 +27937,22 @@
       "releaseDate": null,
       "overview": "Salman Khan, Bhoomika Chawla",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWVjMjQ3ZjctNTkzNy00NDBlLTgwYWMtMzQzZTQ2MzRkOWZkXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt7941892",
+      "title": "Attack on Titan: The Roar of Awakening",
+      "year": 2018,
+      "releaseDate": null,
+      "overview": "Yûki Kaji, Yui Ishikawa",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzI1YzlkYWEtOGVhZS00YjNiLTk3YzYtNTFmMWJjYzFkOGM5XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

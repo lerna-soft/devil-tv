@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T01:37:51.672Z",
+  "generatedAt": "2026-05-25T01:43:02.905Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -2025,6 +2025,101 @@
       "avgPlaybackProgress": 595.0938
     },
     {
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "role": "viewer",
+      "createdAt": "2026-05-18T17:16:22.004Z",
+      "updatedAt": "2026-05-25T01:42:52Z",
+      "totalEvents": 19,
+      "totalStarts": 16,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 33129.361665000004,
+      "uniqueContentCount": 6,
+      "lastActivityAt": "2026-05-25T01:42:52Z",
+      "completedContentIds": [],
+      "inProgressContentIds": [
+        "tt5311514",
+        "tt33046197",
+        "tt29552248",
+        "tt32897959"
+      ],
+      "content": {
+        "tt5311514": {
+          "contentId": "tt5311514",
+          "imdbId": "tt5311514",
+          "tmdbId": "372058",
+          "title": "Your Name.",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 3299.283547,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T01:42:52Z"
+        },
+        "tt34610311": {
+          "contentId": "tt34610311",
+          "imdbId": "tt34610311",
+          "tmdbId": "1419406",
+          "title": "Escuadrón letal",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T00:35:32Z"
+        },
+        "tt33046197": {
+          "contentId": "tt33046197",
+          "imdbId": "tt33046197",
+          "tmdbId": "1168190",
+          "title": "Los hermanos demolición",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 1411.466637,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-23T01:07:52Z"
+        },
+        "tt29552248": {
+          "contentId": "tt29552248",
+          "imdbId": "tt29552248",
+          "tmdbId": "1007757",
+          "title": "Intercambiados",
+          "type": "movie",
+          "playCount": 6,
+          "completed": false,
+          "maxProgressValue": 4277.528008,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-19T02:20:43Z"
+        },
+        "tt33714084": {
+          "contentId": "tt33714084",
+          "imdbId": "tt33714084",
+          "tmdbId": "1367642",
+          "title": "No te olvidaré",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-18T19:41:21Z"
+        },
+        "tt32897959": {
+          "contentId": "tt32897959",
+          "imdbId": "tt32897959",
+          "tmdbId": "1316092",
+          "title": "“Cumbres Borrascosas”",
+          "type": "movie",
+          "playCount": 6,
+          "completed": false,
+          "maxProgressValue": 6552.508246,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-18T19:40:47Z"
+        }
+      },
+      "avgPlaybackProgress": 1743.6506
+    },
+    {
       "userEmail": "liz-munera@hotmail.com",
       "userName": "Lizeth Munera",
       "role": "viewer",
@@ -2199,101 +2294,6 @@
         }
       },
       "avgPlaybackProgress": 675.84
-    },
-    {
-      "userEmail": "luzenithc1994@gmail.com",
-      "userName": "Luz Enith Campo",
-      "role": "viewer",
-      "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-25T01:12:51Z",
-      "totalEvents": 18,
-      "totalStarts": 15,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 29830.078117999998,
-      "uniqueContentCount": 6,
-      "lastActivityAt": "2026-05-25T01:12:51Z",
-      "completedContentIds": [],
-      "inProgressContentIds": [
-        "tt5311514",
-        "tt33046197",
-        "tt29552248",
-        "tt32897959"
-      ],
-      "content": {
-        "tt5311514": {
-          "contentId": "tt5311514",
-          "imdbId": "tt5311514",
-          "tmdbId": "372058",
-          "title": "Your Name.",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 1663.432245,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T01:12:51Z"
-        },
-        "tt34610311": {
-          "contentId": "tt34610311",
-          "imdbId": "tt34610311",
-          "tmdbId": "1419406",
-          "title": "Escuadrón letal",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T00:35:32Z"
-        },
-        "tt33046197": {
-          "contentId": "tt33046197",
-          "imdbId": "tt33046197",
-          "tmdbId": "1168190",
-          "title": "Los hermanos demolición",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 1411.466637,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T01:07:52Z"
-        },
-        "tt29552248": {
-          "contentId": "tt29552248",
-          "imdbId": "tt29552248",
-          "tmdbId": "1007757",
-          "title": "Intercambiados",
-          "type": "movie",
-          "playCount": 6,
-          "completed": false,
-          "maxProgressValue": 4277.528008,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T02:20:43Z"
-        },
-        "tt33714084": {
-          "contentId": "tt33714084",
-          "imdbId": "tt33714084",
-          "tmdbId": "1367642",
-          "title": "No te olvidaré",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T19:41:21Z"
-        },
-        "tt32897959": {
-          "contentId": "tt32897959",
-          "imdbId": "tt32897959",
-          "tmdbId": "1316092",
-          "title": "“Cumbres Borrascosas”",
-          "type": "movie",
-          "playCount": 6,
-          "completed": false,
-          "maxProgressValue": 6552.508246,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T19:40:47Z"
-        }
-      },
-      "avgPlaybackProgress": 1657.2266
     },
     {
       "userEmail": "juancarlosrios531970@gmail.com",

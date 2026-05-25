@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-25T01:12:51Z",
+  "updatedAt": "2026-05-25T01:42:52Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -58,9 +58,9 @@
       "tmdbId": "372058",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 1663.432245,
-      "lastProgress": 1663.432245,
-      "updatedAt": "2026-05-25T01:12:51Z",
+      "progress": 3299.283547,
+      "lastProgress": 3299.283547,
+      "updatedAt": "2026-05-25T01:42:52Z",
       "watched": {}
     }
   },
@@ -79,11 +79,30 @@
     "tmdbId": "372058",
     "season": 1,
     "episode": 1,
-    "progress": 1663.432245,
-    "updatedAt": "2026-05-25T01:12:51Z"
+    "progress": 3299.283547,
+    "updatedAt": "2026-05-25T01:42:52Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T01:42:52Z",
+      "contentId": "tt5311514",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt5311514",
+      "tmdbId": "372058",
+      "title": "Your Name.",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 3299.283547,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:42:48.835Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T01:42:52Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T01:12:51Z",
       "contentId": "tt5311514",

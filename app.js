@@ -3502,6 +3502,67 @@ function bindOnce(el, marker, callback) {
   callback();
 }
 
+// Loader staged para primera visita (sin cache de secciones). Material-style:
+// card centrada con icono, etiqueta de fase y barra de progreso. Aprovecha
+// state.catalogHydration (que ya rastrea bootstrap/chunks/percent) y suma
+// fases sintéticas pre/post hydration para que el user vea actividad
+// continua incluso durante los ~50ms de compute final.
+function getHomeBootstrapStage() {
+  const hydration = state.catalogHydration;
+  const catalog = loadLocalCatalog();
+  if (!hydration?.active) {
+    if (catalog.length === 0) return { label: 'Inicializando…', percent: 4 };
+    return { label: 'Preparando tus secciones', percent: 96 };
+  }
+  if (hydration.phase === 'bootstrap') return { label: 'Cargando catálogo inicial', percent: 14 };
+  if (hydration.phase === 'chunks-pending') return { label: 'Preparando carga progresiva', percent: 22 };
+  if (hydration.phase === 'chunks') {
+    const loaded = Number(hydration.loaded || 0);
+    const total = Number(hydration.total || 0);
+    if (total > 0) {
+      const pct = Math.max(28, Math.min(93, Math.round(28 + (loaded / Math.max(total, 1)) * 65)));
+      return { label: `Cargando catálogo · ${loaded.toLocaleString('es')}/${total.toLocaleString('es')} títulos`, percent: pct };
+    }
+    return { label: 'Cargando catálogo completo', percent: 45 };
+  }
+  return { label: 'Cargando catálogo', percent: 10 };
+}
+
+function buildHomeBootstrapLoaderHtml() {
+  const stage = getHomeBootstrapStage();
+  return `<section class="home-bootstrap-loading" role="status" aria-live="polite" aria-label="${escapeAttribute(`${stage.label}. ${stage.percent}%`)}">
+    <div class="home-bootstrap-card">
+      <div class="home-bootstrap-icon" aria-hidden="true">🎬</div>
+      <h2>Preparando tu Devil TV</h2>
+      <p class="home-bootstrap-stage" data-stage-label>${escapeHtml(stage.label)}</p>
+      <div class="home-bootstrap-bar" aria-hidden="true"><span data-stage-progress style="width: ${stage.percent}%"></span></div>
+      <span class="home-bootstrap-percent" data-stage-percent>${stage.percent}%</span>
+    </div>
+  </section>`;
+}
+
+function startHomeBootstrapLoaderTicker() {
+  if (state.homeBootstrapLoaderTicker) return;
+  state.homeBootstrapLoaderTicker = window.setInterval(() => {
+    const card = elements.items.querySelector('.home-bootstrap-loading');
+    if (!card) { stopHomeBootstrapLoaderTicker(); return; }
+    const stage = getHomeBootstrapStage();
+    const labelEl = card.querySelector('[data-stage-label]');
+    const barEl = card.querySelector('[data-stage-progress]');
+    const pctEl = card.querySelector('[data-stage-percent]');
+    if (labelEl && labelEl.textContent !== stage.label) labelEl.textContent = stage.label;
+    if (barEl) barEl.style.width = `${stage.percent}%`;
+    if (pctEl) pctEl.textContent = `${stage.percent}%`;
+  }, 300);
+}
+
+function stopHomeBootstrapLoaderTicker() {
+  if (state.homeBootstrapLoaderTicker) {
+    window.clearInterval(state.homeBootstrapLoaderTicker);
+    state.homeBootstrapLoaderTicker = null;
+  }
+}
+
 function renderHomeCatalog(baseFiltered) {
   // Setup sincrónico (rápido): contador + skeleton con "Cargando..." por
   // sección. Lo pesado (sortTitles, recommendationScore por sección) corre
@@ -3596,7 +3657,8 @@ function renderHomeCatalog(baseFiltered) {
       bindHomeSectionEvents();
       bindHomeCarouselEvents();
     } else {
-      elements.items.innerHTML = '<div class="home-bootstrap-loading"><span class="spinner"></span><strong>Cargando catálogo…</strong></div>';
+      elements.items.innerHTML = buildHomeBootstrapLoaderHtml();
+      startHomeBootstrapLoaderTicker();
     }
   }
 
@@ -3668,6 +3730,7 @@ function renderHomeCatalog(baseFiltered) {
     // un solo innerHTML = finalHtml.
     const bootstrapLoader = elements.items.querySelector('.home-bootstrap-loading');
     if (bootstrapLoader || elements.items.children.length === 0) {
+      stopHomeBootstrapLoaderTicker();
       elements.items.innerHTML = finalHtml;
       bindLocalCardEvents();
       bindHomeSectionEvents();

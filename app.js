@@ -55,38 +55,24 @@ const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
+// Único provider activo: videasy (vía vidsrc.cc → player.videasy.net).
+// Razón: el user prioriza el caso de uso anime (audio original + subs ES).
+// Videasy es el único de los probados que (a) tiene endpoints específicos
+// /anime/, (b) tiene selector de audio/subs robusto en su UI, (c) suele
+// defaultear a sub-mode para anime. Trade-off conocido: tiene ads (popups)
+// y requiere quitar el atributo sandbox para que cargue.
+//
+// Si más adelante el user quiere reactivar Servidor "sin ads" (vaplayer)
+// o agregar otros, basta con sumar entries a este array — la UI de tabs
+// reaparece sola cuando hay >1 entries (renderProviderTabs).
 const PLAYBACK_PROVIDERS = [
   {
-    id: 'vaplayer',
-    label: 'Servidor 1',
-    note: 'sin ads',
-    sandbox: DEFAULT_PLAYER_SANDBOX,
-    movie: (id) => `https://vaplayer.ru/embed/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
-  },
-  {
     id: 'vidsrc-cc',
-    label: 'Servidor 2',
+    label: 'Servidor',
     note: 'puede contener ads',
     sandbox: null,
     movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
-  },
-  {
-    id: '2embed',
-    label: 'Servidor 3',
-    note: 'puede contener ads',
-    sandbox: null,
-    movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
-  },
-  {
-    id: '111movies',
-    label: 'Servidor 4',
-    note: 'puede contener ads',
-    sandbox: null,
-    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
   }
 ];
 
@@ -5922,6 +5908,13 @@ function bindPlayerModalEvents() {
 function renderProviderTabs() {
   const container = elements.playerServerTabs;
   if (!container) return;
+  // Con un solo provider no hay nada que escoger: ocultar tabs.
+  if (PLAYBACK_PROVIDERS.length <= 1) {
+    container.innerHTML = '';
+    container.hidden = true;
+    return;
+  }
+  container.hidden = false;
   const active = getActiveProvider();
   container.innerHTML = PLAYBACK_PROVIDERS.map((provider) => {
     const isActive = provider.id === active.id;

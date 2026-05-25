@@ -55,9 +55,10 @@ const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
-// Orden: Servidor 1 (vaplayer, sin ads) es el DEFAULT — los demás son
-// alternativas bajo demanda cuando el user quiere audio/subs distintos
-// (típicamente anime/extranjero), aceptando el costo de ads.
+// Servidor 1 (vaplayer) es el DEFAULT y no negociable (sin ads).
+// Los demás son alternativas bajo demanda, escogidos del top de la
+// investigación 2026-05-25 priorizando: docs verificables, anime support,
+// API de subs configurables.
 const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
@@ -68,28 +69,30 @@ const PLAYBACK_PROVIDERS = [
     tv: (id, s, e) => `https://vaplayer.ru/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
-    id: 'vidsrc-cc',
+    id: 'vidlink',
     label: 'Servidor 2',
-    note: 'puede contener ads',
+    note: 'anime/orig · ads',
+    sandbox: null,
+    // vidlink TV requiere tmdbId (con imdbId responde HTTP 500).
+    movie: (id) => `https://vidlink.pro/movie/${encodeURIComponent(id)}`,
+    tv: (id, s, e, entry) => `https://vidlink.pro/tv/${encodeURIComponent(String(entry?.tmdbId || id))}/${s}/${e}`
+  },
+  {
+    id: 'vidsrc-cc',
+    label: 'Servidor 3',
+    note: 'multi-audio · ads',
     sandbox: null,
     movie: (id) => `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(id)}/${s}/${e}`
   },
   {
-    id: '2embed',
-    label: 'Servidor 3',
-    note: 'puede contener ads',
-    sandbox: null,
-    movie: (id) => `https://www.2embed.cc/embed/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://www.2embed.cc/embedtv/${encodeURIComponent(id)}&s=${s}&e=${e}`
-  },
-  {
-    id: '111movies',
+    id: 'superembed',
     label: 'Servidor 4',
-    note: 'puede contener ads',
+    note: 'alternativo · ads',
     sandbox: null,
-    movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
-    tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
+    // multiembed.mov es el frontend del backend SuperEmbed (mismo operador).
+    movie: (id) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}`,
+    tv: (id, s, e) => `https://multiembed.mov/?video_id=${encodeURIComponent(id)}&s=${s}&e=${e}`
   }
 ];
 

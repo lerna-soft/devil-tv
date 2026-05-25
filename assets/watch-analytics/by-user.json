@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T01:12:59.376Z",
+  "generatedAt": "2026-05-25T01:13:40.718Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T00:25:16Z",
+      "updatedAt": "2026-05-25T01:13:32Z",
       "totalEvents": 500,
-      "totalStarts": 255,
-      "totalCompletions": 86,
-      "totalPlaybackProgress": 298917.5823581348,
+      "totalStarts": 256,
+      "totalCompletions": 85,
+      "totalPlaybackProgress": 297546.8992758854,
       "uniqueContentCount": 166,
-      "lastActivityAt": "2026-05-25T00:25:16Z",
+      "lastActivityAt": "2026-05-25T01:13:32Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -22,11 +22,11 @@
         "tt14452776",
         "tt7587890",
         "tt0259141",
-        "tt31596104",
-        "tt1632701"
+        "tt31596104"
       ],
       "inProgressContentIds": [
         "274870",
+        "tt21209876",
         "tt2294629",
         "tt33046197",
         "tt29552248",
@@ -131,11 +131,11 @@
           "tmdbId": "127532",
           "title": "Solo Leveling",
           "type": "series",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 1204.317008,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T00:25:16Z"
+          "lastSeenAt": "2026-05-25T01:13:32Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -2027,14 +2027,14 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 2,
-          "completed": true,
-          "maxProgressValue": 2575.000090249433,
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-13T21:10:31Z"
         }
       },
-      "avgPlaybackProgress": 597.8352
+      "avgPlaybackProgress": 595.0938
     },
     {
       "userEmail": "liz-munera@hotmail.com",

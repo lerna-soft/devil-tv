@@ -432,10 +432,14 @@ async function handleSubs(request) {
   }
 
   const top = candidates[0];
-  dbg.topDownloadLink = top.SubDownloadLink;
+  // El SubDownloadLink que devuelve la API tiene un token vrf- ligado a
+  // la IP de quien hizo el search. Desde CF data centers, ese token da
+  // 401. El endpoint /en/download/file/{IDSubtitleFile} sirve sin token.
+  const downloadUrl = `https://dl.opensubtitles.org/en/download/file/${encodeURIComponent(top.IDSubtitleFile)}`;
+  dbg.downloadUrl = downloadUrl;
   let srtText;
   try {
-    const downloadResp = await fetch(top.SubDownloadLink, {
+    const downloadResp = await fetch(downloadUrl, {
       headers: { 'X-User-Agent': 'DevilTV v1' }
     });
     dbg.downloadStatus = downloadResp.status;

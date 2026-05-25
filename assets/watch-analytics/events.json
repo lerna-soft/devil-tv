@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-25T00:42:59.505Z",
+  "generatedAt": "2026-05-25T01:12:59.370Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T01:12:51Z",
+      "contentId": "tt5311514",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt5311514",
+      "tmdbId": "372058",
+      "title": "Your Name.",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1663.432245,
+      "progressValue": 1663.432245,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:42:48.835Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T01:12:51Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T00:42:50Z",
       "contentId": "tt5311514",

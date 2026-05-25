@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T00:42:59.511Z",
+  "generatedAt": "2026-05-25T01:12:59.376Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -2217,15 +2217,16 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-25T00:42:50Z",
-      "totalEvents": 17,
-      "totalStarts": 14,
+      "updatedAt": "2026-05-25T01:12:51Z",
+      "totalEvents": 18,
+      "totalStarts": 15,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 28166.645872999998,
+      "totalPlaybackProgress": 29830.078117999998,
       "uniqueContentCount": 6,
-      "lastActivityAt": "2026-05-25T00:42:50Z",
+      "lastActivityAt": "2026-05-25T01:12:51Z",
       "completedContentIds": [],
       "inProgressContentIds": [
+        "tt5311514",
         "tt33046197",
         "tt29552248",
         "tt32897959"
@@ -2237,11 +2238,11 @@
           "tmdbId": "372058",
           "title": "Your Name.",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 1663.432245,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T00:42:50Z"
+          "lastSeenAt": "2026-05-25T01:12:51Z"
         },
         "tt34610311": {
           "contentId": "tt34610311",
@@ -2304,7 +2305,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1656.8615
+      "avgPlaybackProgress": 1657.2266
     },
     {
       "userEmail": "juancarlosrios531970@gmail.com",

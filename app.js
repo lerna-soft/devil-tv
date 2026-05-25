@@ -4589,6 +4589,18 @@ function buildWatchInsights() {
     const completedLocal = totalEntries > 0 && completedEntries === totalEntries;
     if (completedLocal) completedIds.add(id);
     else continueIds.add(id);
+    // Linkear aliases imdb↔tmdb: el key del localStorage es imdbId o tmdbId,
+    // pero getTitleId(t) puede retornar el otro. Sin esto, el filter de
+    // Continuar Viendo no matchea aunque la entrada exista.
+    const linked = aliasesById[id];
+    if (linked) {
+      for (const alt of linked) {
+        scores[alt] = (scores[alt] || 0) + score;
+        if (localUpdatedAt > (recentAt[alt] || 0)) recentAt[alt] = localUpdatedAt;
+        if (completedLocal) completedIds.add(alt);
+        else continueIds.add(alt);
+      }
+    }
     const title = byId[id];
     const genres = title?.metadata?.genres || [];
     const cast = title?.metadata?.cast || [];
@@ -5137,12 +5149,27 @@ function markCurrentSelectionAsStarted() {
   const watched = existing.watched || {};
   const epKey = `s${season}e${episode}`;
   const prev = watched[epKey];
-  if (prev && prev !== true && prev.startedAt) return; // Ya tenía un start previo: no pisar.
-  watched[epKey] = (prev && prev !== true)
-    ? { ...prev, startedAt: prev.startedAt || now }
-    : { startedAt: now, completedAt: null, lastProgress: 0 };
-  const nextProgress = { ...existing, lastSeason: season, lastEpisode: episode, watched };
-  localStorage.setItem(key, JSON.stringify(nextProgress));
+  const alreadyStarted = prev && prev !== true && prev.startedAt;
+  if (!alreadyStarted) {
+    watched[epKey] = (prev && prev !== true)
+      ? { ...prev, startedAt: prev.startedAt || now }
+      : { startedAt: now, completedAt: null, lastProgress: 0 };
+    const nextProgress = { ...existing, lastSeason: season, lastEpisode: episode, watched };
+    localStorage.setItem(key, JSON.stringify(nextProgress));
+  }
+  // Persistir en synced storage también: buildWatchInsights solo linkea
+  // aliases imdb↔tmdb desde remoteProgress (no desde el loop local de
+  // mep_series_progress_*). Sin esto, si el id local es imdbId pero
+  // getTitleId(t) retorna tmdbId, el filter de Continuar Viendo no matchea.
+  persistSyncedWatchSnapshot('progress', {
+    imdbId,
+    tmdbId,
+    season,
+    episode,
+    progress: 0,
+    player_status: 'playing',
+    updatedAt: new Date().toISOString()
+  });
 }
 
 function openPlayerModal(embedUrl) {

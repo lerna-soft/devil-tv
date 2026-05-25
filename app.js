@@ -55,10 +55,29 @@ const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
+const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
+
+// Devuelve la URL del worker /subs si el entry tiene imdbId válido,
+// o '' si no se puede pedir subs (sin imdb el upstream falla).
+function buildSubsUrl(entry, season, episode) {
+  const imdb = String(entry?.imdbId || '').trim();
+  if (!/^tt\d+$/.test(imdb)) return '';
+  const params = new URLSearchParams({ imdb, lang: 'es' });
+  if (season && episode && /^\d+$/.test(String(season)) && /^\d+$/.test(String(episode))) {
+    params.set('season', String(season));
+    params.set('episode', String(episode));
+  }
+  return `${SUBS_WORKER_BASE}?${params.toString()}`;
+}
+
 // Servidor 1 (vaplayer) es el DEFAULT y no negociable (sin ads).
-// Los demás son alternativas bajo demanda, escogidos del top de la
-// investigación 2026-05-25 priorizando: docs verificables, anime support,
-// API de subs configurables.
+// Los demás son alternativas bajo demanda, escogidos priorizando: docs
+// verificables, anime support, API de subs configurables.
+//
+// `subsUrl(entry, s, e)` opcional: devuelve la URL del worker /subs si
+// este provider acepta sub_file/sub_url. Se usa para pre-warm de la cache
+// del CF edge antes de abrir el iframe (evita que el player espere por
+// OpenSubtitles upstream).
 const PLAYBACK_PROVIDERS = [
   {
     id: 'vaplayer',
@@ -73,22 +92,22 @@ const PLAYBACK_PROVIDERS = [
     label: 'Servidor 2',
     note: 'anime/orig · ads · subs ES',
     sandbox: null,
+    subsUrl: (entry, s, e) => buildSubsUrl(entry, s, e),
     // vidlink TV requiere tmdbId (con imdbId responde HTTP 500).
-    // sub_file apunta al Worker /subs que fetchea OpenSubtitles y devuelve VTT.
     movie: (id, entry) => {
-      const imdb = String(entry?.imdbId || '').trim();
       const base = `https://vidlink.pro/movie/${encodeURIComponent(id)}`;
-      if (!/^tt\d+$/.test(imdb)) return base;
-      const subUrl = `https://devil-tv-recovery.hglerna.workers.dev/subs?imdb=${encodeURIComponent(imdb)}&lang=es`;
-      return `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`;
+      const subUrl = buildSubsUrl(entry);
+      return subUrl
+        ? `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`
+        : base;
     },
     tv: (id, s, e, entry) => {
       const tvId = String(entry?.tmdbId || id);
-      const imdb = String(entry?.imdbId || '').trim();
       const base = `https://vidlink.pro/tv/${encodeURIComponent(tvId)}/${s}/${e}`;
-      if (!/^tt\d+$/.test(imdb)) return base;
-      const subUrl = `https://devil-tv-recovery.hglerna.workers.dev/subs?imdb=${encodeURIComponent(imdb)}&lang=es&season=${s}&episode=${e}`;
-      return `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`;
+      const subUrl = buildSubsUrl(entry, s, e);
+      return subUrl
+        ? `${base}?sub_file=${encodeURIComponent(subUrl)}&sub_label=${encodeURIComponent('Español')}`
+        : base;
     }
   },
   {
@@ -106,6 +125,30 @@ const PLAYBACK_PROVIDERS = [
     sandbox: null,
     movie: (id) => `https://111movies.com/movie/${encodeURIComponent(id)}`,
     tv: (id, s, e) => `https://111movies.com/tv/${encodeURIComponent(id)}/${s}/${e}`
+  },
+  {
+    id: 'embedmaster',
+    label: 'Servidor 5',
+    note: 'subs ES garantizados · ads',
+    sandbox: null,
+    subsUrl: (entry, s, e) => buildSubsUrl(entry, s, e),
+    // EmbedMaster acepta arrays sub_url[]/sub_label[] (sintaxis PHP).
+    // Redirige a embdmstrplayer.com con token por request — el browser
+    // sigue el 302 transparente dentro del iframe.
+    movie: (id, entry) => {
+      const base = `https://embedmaster.link/movie/${encodeURIComponent(id)}`;
+      const subUrl = buildSubsUrl(entry);
+      return subUrl
+        ? `${base}?sub_url%5B%5D=${encodeURIComponent(subUrl)}&sub_label%5B%5D=${encodeURIComponent('Español')}`
+        : base;
+    },
+    tv: (id, s, e, entry) => {
+      const base = `https://embedmaster.link/tv/${encodeURIComponent(id)}/${s}/${e}`;
+      const subUrl = buildSubsUrl(entry, s, e);
+      return subUrl
+        ? `${base}?sub_url%5B%5D=${encodeURIComponent(subUrl)}&sub_label%5B%5D=${encodeURIComponent('Español')}`
+        : base;
+    }
   }
 ];
 
@@ -4848,7 +4891,9 @@ function openPlayerModal(embedUrl) {
 
   renderPlayerControls();
   renderProviderTabs();
-  applyProviderSandbox(getActiveProvider());
+  const activeProvider = getActiveProvider();
+  applyProviderSandbox(activeProvider);
+  preloadSubsAsync(activeProvider, state.selected, state.playback.season, state.playback.episode);
   iframe.src = embedUrl;
   schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
   modal.hidden = false;
@@ -5967,6 +6012,30 @@ function renderProviderTabs() {
   });
 }
 
+// Toast no-bloqueante "Cargando subtítulos…" mostrado solo cuando el
+// provider tiene subsUrl configurado (vidlink, embedmaster). El fetch
+// es fire-and-forget para calentar la cache de Cloudflare edge — el
+// iframe del provider luego hace SU fetch que pega en cache caliente.
+function preloadSubsAsync(provider, entry, season, episode) {
+  if (!provider || typeof provider.subsUrl !== 'function' || !entry) return;
+  const subUrl = provider.subsUrl(entry, season, episode);
+  if (!subUrl) return;
+  if (typeof Swal !== 'undefined') {
+    Swal.fire({
+      toast: true,
+      position: 'top-end',
+      icon: 'info',
+      title: 'Cargando subtítulos en español…',
+      showConfirmButton: false,
+      timer: 3500,
+      timerProgressBar: true
+    });
+  }
+  // Fire-and-forget. Cualquier error es transparente — el iframe
+  // siempre puede fetchar por su cuenta.
+  fetch(subUrl, { mode: 'cors', credentials: 'omit' }).catch(() => {});
+}
+
 function applyProviderSandbox(provider) {
   if (!elements.playerIframe || !provider) return;
   // sandbox: null en el provider → quitar el atributo por completo (el provider
@@ -5993,6 +6062,7 @@ function setActiveProvider(providerId) {
   if (state.selected && elements.playerModal && !elements.playerModal.hidden) {
     const newUrl = buildEmbedUrl(state.selected);
     applyProviderSandbox(provider);
+    preloadSubsAsync(provider, state.selected, state.playback.season, state.playback.episode);
     elements.playerIframe.src = newUrl;
     schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
   }

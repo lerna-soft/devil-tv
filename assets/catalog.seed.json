@@ -1,6 +1,6 @@
 {
-  "version": 282,
-  "generatedAt": "2026-05-23T17:55:21.776Z",
+  "version": 283,
+  "generatedAt": "2026-05-25T00:04:19.096Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -27841,6 +27841,22 @@
       "releaseDate": null,
       "overview": "Baki Davrak, Gürsoy Gemec",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjgxMDQ5ZGUtZDk0MS00MDkzLWIxNDMtZmE0M2VhMjU3NTg2XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "117794",
+      "imdbId": null,
+      "title": "ハレンチ学園　タックル・キッスの巻",
+      "year": 1970,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1970-09-12",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/29Vfxv1dAFwbhneboGjXgbbx4MN.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

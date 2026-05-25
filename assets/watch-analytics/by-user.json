@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T22:58:02.748Z",
+  "generatedAt": "2026-05-25T23:12:19.844Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T18:46:45Z",
+      "updatedAt": "2026-05-25T23:12:11Z",
       "totalEvents": 500,
-      "totalStarts": 259,
-      "totalCompletions": 81,
-      "totalPlaybackProgress": 293053.6193736654,
+      "totalStarts": 260,
+      "totalCompletions": 80,
+      "totalPlaybackProgress": 291628.5643210577,
       "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-25T18:46:45Z",
+      "lastActivityAt": "2026-05-25T23:12:11Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -125,6 +125,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt32820897": {
+          "contentId": "tt32820897",
+          "imdbId": "tt32820897",
+          "tmdbId": "1311031",
+          "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T23:12:11Z"
+        },
         "tt21209876": {
           "contentId": "tt21209876",
           "imdbId": "tt21209876",
@@ -220,18 +232,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:41:50Z"
-        },
-        "tt32820897": {
-          "contentId": "tt32820897",
-          "imdbId": "tt32820897",
-          "tmdbId": "1311031",
-          "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:41:22Z"
         },
         "tt1631867": {
           "contentId": "tt1631867",
@@ -1979,7 +1979,7 @@
           "tmdbId": "",
           "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
           "type": "series",
-          "playCount": 15,
+          "playCount": 14,
           "completed": true,
           "maxProgressValue": 1426.030271,
           "maxProgressPercent": 0,
@@ -2022,7 +2022,7 @@
           "lastSeenAt": "2026-05-14T06:31:09Z"
         }
       },
-      "avgPlaybackProgress": 586.1072
+      "avgPlaybackProgress": 583.2571
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

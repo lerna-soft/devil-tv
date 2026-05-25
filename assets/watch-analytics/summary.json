@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-25T22:58:02.742Z",
+  "generatedAt": "2026-05-25T23:12:19.838Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 558,
-  "totalStarts": 299,
-  "totalCompletions": 82,
-  "overallCompletionRate": 0.2742,
+  "totalStarts": 300,
+  "totalCompletions": 81,
+  "overallCompletionRate": 0.27,
   "trackedTitles": 181,
   "mostWatchedContent": [
     {
@@ -49,20 +49,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt31596104",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 15,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667
-    },
-    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 14,
       "uniqueUsers": 1,
       "completionRate": 0.0769
+    },
+    {
+      "contentId": "tt31596104",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "totalEvents": 14,
+      "uniqueUsers": 1,
+      "completionRate": 0.5556
     },
     {
       "contentId": "tt32897959",

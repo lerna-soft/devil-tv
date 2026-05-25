@@ -477,8 +477,9 @@ async function handleSubsOfficial({ env, dbg, debug, cacheKey, numericId, lang, 
     return emptyVtt();
   }
 
-  // Si tenemos username+password, hacer login para obtener bearer token
-  // (downloads requieren autenticación a nivel de cuenta).
+  // Si tenemos username+password, hacer login para obtener bearer token.
+  // Sin login, el download cuenta contra la quota del Consumer (~5/día);
+  // con login bumpea a ~100/día.
   let bearer = '';
   if (env.OPENSUBTITLES_USERNAME && env.OPENSUBTITLES_PASSWORD) {
     try {
@@ -497,12 +498,16 @@ async function handleSubsOfficial({ env, dbg, debug, cacheKey, numericId, lang, 
       if (loginResp.ok) {
         const loginData = await loginResp.json();
         bearer = loginData.token || '';
+        dbg.loginOk = true;
+      } else {
+        const errText = await loginResp.text();
+        dbg.loginBodyPreview = errText.slice(0, 300);
       }
     } catch (e) {
       dbg.loginError = e.message;
     }
   } else {
-    dbg.loginSkipped = 'no OPENSUBTITLES_USERNAME / PASSWORD secrets — downloads may 401';
+    dbg.loginSkipped = 'no OPENSUBTITLES_USERNAME / PASSWORD secrets';
   }
 
   // Pedir el download link, formato webvtt directo (sin convertir SRT a mano).

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T03:51:21.796Z",
+  "generatedAt": "2026-05-25T03:54:58.652Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1331,20 +1331,20 @@
       "tmdbId": "",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 23,
-      "totalStarts": 14,
+      "totalEvents": 22,
+      "totalStarts": 13,
       "totalCompletions": 9,
       "totalPlaybackProgress": 12828.29349056916,
       "uniqueUsers": 1,
-      "completionRate": 0.6429,
+      "completionRate": 0.6923,
       "lastActivityAt": "2026-05-14T19:21:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 23,
+          "playCount": 22,
           "completedCount": 9,
-          "startedCount": 14,
+          "startedCount": 13,
           "totalPlaybackProgress": 12828.29349056916,
           "lastSeenAt": "2026-05-14T19:21:17Z",
           "lastSeason": 1,
@@ -1495,8 +1495,8 @@
         "s1e2": {
           "season": 1,
           "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1425.09,
           "uniqueUsers": 1,
@@ -1504,10 +1504,10 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 557.7519
+      "avgPlaybackProgress": 583.1042
     },
     {
       "contentId": "tt29552248",
@@ -1846,6 +1846,78 @@
       "avgPlaybackProgress": 440.7661
     },
     {
+      "contentId": "tt21209876",
+      "imdbId": "tt21209876",
+      "tmdbId": "127532",
+      "title": "Solo Leveling",
+      "type": "series",
+      "totalEvents": 6,
+      "totalStarts": 6,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 2412.267489,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-25T03:54:47Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 6,
+          "totalPlaybackProgress": 2412.267489,
+          "lastSeenAt": "2026-05-25T03:54:47Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e4": {
+          "season": 1,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-25T03:54:47Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-25T03:51:12Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 4,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2412.267489,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-25T03:39:14Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 402.0446
+    },
+    {
       "contentId": "tt28650488",
       "imdbId": "tt28650488",
       "tmdbId": "1226863",
@@ -1944,64 +2016,6 @@
         }
       },
       "avgPlaybackProgress": 2140.1599
-    },
-    {
-      "contentId": "tt21209876",
-      "imdbId": "tt21209876",
-      "tmdbId": "127532",
-      "title": "Solo Leveling",
-      "type": "series",
-      "totalEvents": 5,
-      "totalStarts": 5,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 2412.267489,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-25T03:51:12Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 5,
-          "totalPlaybackProgress": 2412.267489,
-          "lastSeenAt": "2026-05-25T03:51:12Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-25T03:51:12Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 4,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2412.267489,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-25T03:39:14Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 482.4535
     },
     {
       "contentId": "tt5311514",

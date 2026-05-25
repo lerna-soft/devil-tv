@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-25T00:35:32Z",
+  "updatedAt": "2026-05-25T00:42:50Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -52,6 +52,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-25T00:35:32Z",
       "watched": {}
+    },
+    "tt5311514": {
+      "imdbId": "tt5311514",
+      "tmdbId": "372058",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-25T00:42:50Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -65,15 +75,34 @@
     "updatedAt": "2026-05-19T00:26:13Z"
   },
   "lastWatch": {
-    "imdbId": "tt34610311",
-    "tmdbId": "1419406",
+    "imdbId": "tt5311514",
+    "tmdbId": "372058",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-25T00:35:32Z"
+    "updatedAt": "2026-05-25T00:42:50Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T00:42:50Z",
+      "contentId": "tt5311514",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt5311514",
+      "tmdbId": "372058",
+      "title": "Your Name.",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T00:42:48.835Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-25T00:42:50Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt34610311:s1e1:started:2026-05-25T00:35:32Z",
       "contentId": "tt34610311",

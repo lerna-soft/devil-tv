@@ -65,18 +65,150 @@ const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 // TDZ: "Cannot access 'homeRenderToken' before initialization".
 let homeRenderToken = 0;
 
-// Logger estructurado para debug. Imprime con prefijo `[devil-tv][<scope>]`
-// y data opcional. Pensado para debugging post-mortem: si el user reporta
-// "no apareció X", se puede pedir el console log y reconstruir el flujo.
-// scopes: boot | catalog | sync | player | render | queue.
+// Logger estructurado para debug. Pensado para debugging post-mortem: si el
+// user reporta "no apareció X", se le puede pedir copy/paste del console y
+// reconstruir el flujo. Scopes y su nivel:
+//   boot/catalog/render → debug (collapsable, no spammean en prod)
+//   sync/queue          → info  (importantes para Continuar Viendo)
+//   player              → info
+//   error               → error
+//   warn                → warn
+// `data` se imprime con console.table cuando es un array de objetos homogéneos
+// o un objeto con valores primitivos; sino con el log normal.
+const DTV_SCOPE_LEVEL = {
+  boot: 'debug', catalog: 'debug', render: 'debug',
+  sync: 'info', queue: 'info', player: 'info',
+  warn: 'warn', error: 'error'
+};
+
+function dtvIsTabular(data) {
+  if (Array.isArray(data) && data.length > 0 && typeof data[0] === 'object') return true;
+  if (data && typeof data === 'object' && !Array.isArray(data)) {
+    const values = Object.values(data);
+    if (values.length === 0) return false;
+    return values.every((v) => v === null || ['string', 'number', 'boolean'].includes(typeof v));
+  }
+  return false;
+}
+
 function dtvLog(scope, msg, data) {
   try {
     const t = new Date().toISOString().slice(11, 23);
-    if (data === undefined) console.log(`[devil-tv ${t}][${scope}] ${msg}`);
-    else console.log(`[devil-tv ${t}][${scope}] ${msg}`, data);
+    const prefix = `[devil-tv ${t}][${scope}]`;
+    const level = DTV_SCOPE_LEVEL[scope] || 'log';
+    const fn = console[level] || console.log;
+    if (data === undefined) {
+      fn.call(console, `${prefix} ${msg}`);
+    } else if (dtvIsTabular(data)) {
+      fn.call(console, `${prefix} ${msg}`);
+      console.table(data);
+    } else {
+      fn.call(console, `${prefix} ${msg}`, data);
+    }
   } catch {
     // sin-op: si console no está disponible no rompemos el flujo.
   }
+}
+
+// Snapshot completo del estado de Continuar Viendo / sync. El user lo invoca
+// desde la DevTools console (`devilTvDiag()` o `window.devilTvDiag()`) y nos
+// permite ver de un vistazo si el problema está en (a) auth, (b) catálogo
+// local, (c) sync remoto, (d) merge de continueIds. Pensado para diagnosticar
+// el bug "abrí Ghost en sesión A pero no aparece en sesión B".
+function devilTvDiag() {
+  try {
+    const user = (typeof getAuthUser === 'function' ? getAuthUser() : null) || {};
+    const catalog = (typeof loadLocalCatalog === 'function' ? loadLocalCatalog() : []) || [];
+    const synced = user.email && typeof loadSyncedWatchProgress === 'function'
+      ? (loadSyncedWatchProgress(user.email) || null)
+      : null;
+    const insights = typeof buildWatchInsights === 'function' ? buildWatchInsights() : null;
+    const lastWatch = (() => {
+      try { return JSON.parse(localStorage.getItem('mep_last_watch') || 'null'); } catch { return null; }
+    })();
+    const seriesProgressKeys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i) || '';
+      if (k.startsWith('mep_series_progress_')) seriesProgressKeys.push(k.replace('mep_series_progress_', ''));
+    }
+    const continueIds = insights?.continueIds ? [...insights.continueIds] : [];
+    const completedIds = insights?.completedIds ? [...insights.completedIds] : [];
+    const byId = {};
+    for (const t of catalog) {
+      const id = String(t?.tmdbId || t?.imdbId || '').trim();
+      if (id) byId[id] = t;
+    }
+    const continueResolved = continueIds.map((id) => {
+      const t = byId[id];
+      return {
+        id,
+        inCatalog: Boolean(t),
+        title: t?.title || '',
+        type: t?.type || '',
+        hasPoster: Boolean(t?.posterUrl || t?.metadata?.posterUrl),
+        recentAt: insights?.recentAt?.[id] ? new Date(insights.recentAt[id]).toISOString() : ''
+      };
+    });
+    console.group('%c[devil-tv] diag snapshot', 'color:#e44; font-weight:bold');
+    console.info('Auth', { email: user.email || '(none)', name: user.name || '' });
+    console.info('Catalog local', { items: catalog.length });
+    console.info('Last watch (local)', lastWatch);
+    console.info('Local mep_series_progress_* keys', seriesProgressKeys.length);
+    console.group('Synced (remote merged)');
+    if (synced) {
+      console.info('updatedAt', synced.updatedAt);
+      console.info('progress entries', Object.keys(synced.progress || {}).length);
+      console.info('history events', (synced.history || []).length);
+      console.info('lastWatch (remote)', synced.lastWatch || null);
+      const progressTable = Object.entries(synced.progress || {}).map(([id, p]) => ({
+        id,
+        imdbId: p?.imdbId || '',
+        tmdbId: p?.tmdbId || '',
+        s: p?.lastSeason ?? '',
+        e: p?.lastEpisode ?? '',
+        progress: Number(p?.lastProgress ?? p?.progress ?? 0).toFixed(1),
+        updatedAt: p?.updatedAt || ''
+      }));
+      if (progressTable.length) console.table(progressTable);
+    } else {
+      console.warn('No synced data — user not authed or remote fetch never ran. ' +
+        'Llama window.devilTvForceSync() para forzar el hydrate.');
+    }
+    console.groupEnd();
+    console.group(`Continuar Viendo · ${continueResolved.length} ids resueltos`);
+    if (continueResolved.length === 0) {
+      console.warn('continueIds vacío. Si esperabas verlo: verifica auth, espera hydrate (~3s) o llama devilTvForceSync().');
+    } else {
+      console.table(continueResolved);
+      const orphans = continueResolved.filter((r) => !r.inCatalog);
+      if (orphans.length) console.warn(`${orphans.length} ids con progress pero NO están en el catálogo local`);
+      const noPoster = continueResolved.filter((r) => r.inCatalog && !r.hasPoster);
+      if (noPoster.length) console.warn(`${noPoster.length} ids en catálogo sin poster (se filtran fuera del home)`);
+    }
+    console.groupEnd();
+    console.info('completed', completedIds.length);
+    console.groupEnd();
+    return { user, synced, continueIds, completedIds, byIdCount: Object.keys(byId).length };
+  } catch (err) {
+    console.error('[devil-tv] diag failed', err);
+    return null;
+  }
+}
+
+async function devilTvForceSync() {
+  if (typeof hydrateWatchProgressForCurrentUser !== 'function') {
+    console.warn('[devil-tv] hydrateWatchProgressForCurrentUser no disponible');
+    return;
+  }
+  console.info('[devil-tv] forcing hydrateWatchProgressForCurrentUser…');
+  await hydrateWatchProgressForCurrentUser();
+  console.info('[devil-tv] force sync done. Re-render solicitado.');
+  return devilTvDiag();
+}
+
+if (typeof window !== 'undefined') {
+  window.devilTvDiag = devilTvDiag;
+  window.devilTvForceSync = devilTvForceSync;
 }
 
 // Devuelve la URL del worker /subs si el entry tiene imdbId válido,
@@ -1030,15 +1162,25 @@ function saveLocalWatchProgress(email, progress) {
 async function loadRemoteWatchProgress(email) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!normalizedEmail) return null;
-  const cacheTag = window.__mep_build || Date.now();
+  // Cache bust con timestamp real (no __mep_build): el sync workflow puede
+  // escribir el data.json varias veces dentro de un mismo deploy, así que
+  // necesitamos un cacheTag que cambie en cada llamada. Esto evita el caso
+  // "sesión A inicia un título → sync push → sesión B carga 30s después
+  // y obtiene un data.json stale del CDN porque el __mep_build no cambió".
+  const cacheTag = Date.now();
   const primary = await fetchJsonWithTimeout(`./assets/watch-progress/users/${encodeURIComponent(normalizedEmail)}/data.json?v=${cacheTag}`).catch(() => null);
   return primary?.email ? primary : null;
 }
 
 async function hydrateWatchProgressForCurrentUser() {
   const user = getAuthUser();
-  if (!user?.email) return;
+  if (!user?.email) {
+    dtvLog('warn', 'hydrateWatchProgressForCurrentUser skip — sin auth user. ' +
+      'Continuar Viendo no se sincronizará hasta loguearse.');
+    return;
+  }
   const remote = await loadRemoteWatchProgress(user.email);
+  watchProgressLastHydrate = Date.now();
   if (!remote) {
     dtvLog('sync', 'no remote watch-progress data.json for current user', { email: user.email });
     return;
@@ -1951,6 +2093,33 @@ function scheduleAuthenticatedStartupWork() {
       }, 6000, 4000);
     });
   }, 3000, 1800);
+  installVisibilityRehydrate();
+}
+
+// Re-hidrata el progreso remoto cuando la pestaña vuelve a foreground después
+// de >= 60s en background. Resuelve el caso clásico mobile: usuario inicia un
+// título en sesión A (otro device/perfil), bloquea pantalla en sesión B, y al
+// desbloquear espera ver "Continuar viendo" actualizado. Sin esto, sesión B
+// solo re-hidrata en boot. El throttle de 60s evita refetch en cada blur.
+let watchProgressLastHydrate = Date.now();
+let visibilityRehydrateBound = false;
+function installVisibilityRehydrate() {
+  if (visibilityRehydrateBound) return;
+  visibilityRehydrateBound = true;
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible') return;
+    if (!isAuthenticated()) return;
+    const since = Date.now() - watchProgressLastHydrate;
+    if (since < 60_000) {
+      dtvLog('sync', 'visibilitychange skip rehydrate (throttle)', { sinceMs: since });
+      return;
+    }
+    dtvLog('sync', 'visibilitychange → rehydrate', { sinceMs: since });
+    watchProgressLastHydrate = Date.now();
+    hydrateWatchProgressForCurrentUser().catch((err) => {
+      dtvLog('error', 'visibilitychange rehydrate failed', String(err));
+    });
+  });
 }
 
 async function loadSeedVersionHint() {

@@ -3528,12 +3528,16 @@ function renderHomeCatalog(baseFiltered) {
     {
       key: 'liked', title: 'Me gusta', subtitle: 'Tus favoritos guardados',
       minItems: 1,
-      compute: () => sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1), watch)
+      compute: () => uniqueTitles
+        .filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) >= 1)
+        .sort((a, b) => Number(readTitlePreferenceValue(prefs.likes, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.likes, a, 0) || 0))
     },
     {
       key: 'watch_later', title: 'Ver más tarde', subtitle: 'Tu lista guardada',
       minItems: 1,
-      compute: () => sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))), watch)
+      compute: () => uniqueTitles
+        .filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false)))
+        .sort((a, b) => Number(readTitlePreferenceValue(prefs.watchLater, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.watchLater, a, 0) || 0))
     },
     {
       key: 'movies_recommended', title: 'Películas para ti', subtitle: 'Sugerencias según lo que has visto',
@@ -3753,10 +3757,14 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   let items = [];
   if (sectionKey === 'watch_later') {
     title = 'Ver más tarde';
-    items = sortTitles(uniqueTitles.filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false))));
+    items = uniqueTitles
+      .filter((t) => Boolean(readTitlePreferenceValue(prefs.watchLater, t, false)))
+      .sort((a, b) => Number(readTitlePreferenceValue(prefs.watchLater, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.watchLater, a, 0) || 0));
   } else if (sectionKey === 'liked') {
     title = 'Me gusta';
-    items = sortTitles(uniqueTitles.filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) === 1));
+    items = uniqueTitles
+      .filter((t) => Number(readTitlePreferenceValue(prefs.likes, t, 0) || 0) >= 1)
+      .sort((a, b) => Number(readTitlePreferenceValue(prefs.likes, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.likes, a, 0) || 0));
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = sortTitles(uniqueTitles.filter((t) => watch.continueIds.has(getTitleId(t)))).sort((a, b) => (watch.recentAt[getTitleId(b)] || 0) - (watch.recentAt[getTitleId(a)] || 0));
@@ -4304,7 +4312,7 @@ function bindQuickActionButtons(root = document) {
       if (action === 'later' && state.homeSectionView === 'watch_later' && card && !Boolean(readTitlePreferenceValue(prefs.watchLater, title, false))) {
         card.remove();
       }
-      if (action === 'like' && state.homeSectionView === 'liked' && card && Number(readTitlePreferenceValue(prefs.likes, title, 0) || 0) !== 1) {
+      if (action === 'like' && state.homeSectionView === 'liked' && card && Number(readTitlePreferenceValue(prefs.likes, title, 0) || 0) < 1) {
         card.remove();
       }
     });
@@ -4721,15 +4729,15 @@ function getCardQuickActions(title, prefs = loadTitlePrefs(), options = {}) {
   if (!isAuthenticated()) return '';
   const prefId = escapeAttribute(String(getTitleId(title) || ''));
   const flags = getTitleFlags(title, prefs);
-  const likedClass = flags.like === 1 ? ' active-like' : '';
+  const likedClass = flags.like >= 1 ? ' active-like' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
   const withLabels = options.labels === true;
-  const likeLabel = flags.like === 1 ? 'Quitar me gusta' : 'Me gusta';
+  const likeLabel = flags.like >= 1 ? 'Quitar me gusta' : 'Me gusta';
   const laterLabel = flags.watchLater ? 'Quitar de ver más tarde' : 'Ver más tarde';
   const likeContent = `❤${withLabels ? `<span class="quick-label">${escapeHtml(likeLabel)}</span>` : ''}`;
   const laterContent = `${flags.watchLater ? '✓' : '+'}${withLabels ? `<span class="quick-label">${escapeHtml(laterLabel)}</span>` : ''}`;
   return `<div class="item-quick-actions">
-    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="${escapeAttribute(likeLabel)}" aria-pressed="${flags.like === 1 ? 'true' : 'false'}">${likeContent}</button>
+    <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="${escapeAttribute(likeLabel)}" aria-pressed="${flags.like >= 1 ? 'true' : 'false'}">${likeContent}</button>
     <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="${escapeAttribute(laterLabel)}" aria-pressed="${flags.watchLater ? 'true' : 'false'}">${laterContent}</button>
   </div>`;
 }
@@ -4742,7 +4750,7 @@ function updateQuickActionButtons(prefId) {
   getUnifiedTitlePool()
     .filter((title) => getTitlePreferenceKeys(title).includes(id))
     .forEach((title) => getTitlePreferenceKeys(title).forEach((key) => relatedKeys.add(key)));
-  const likeActive = [...relatedKeys].some((key) => Number(prefs?.likes?.[key] || 0) === 1);
+  const likeActive = [...relatedKeys].some((key) => Number(prefs?.likes?.[key] || 0) >= 1);
   const laterActive = [...relatedKeys].some((key) => Boolean(prefs?.watchLater?.[key]));
   for (const key of relatedKeys) {
     document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="like"]`)
@@ -4811,17 +4819,21 @@ function setTitlePreference(title, action) {
     likes: { ...(prefs.likes || {}) },
     watchLater: { ...(prefs.watchLater || {}) }
   };
+  // Valores guardados como timestamp (Date.now()) en vez de 1/true para poder
+  // ordenar "Me gusta" y "Ver más tarde" por orden de adición (más reciente
+  // primero). Backward compatible: entradas viejas con valor 1/true cumplen
+  // los filtros (>= 1 / Boolean) y sortean al final por ser el número más bajo.
   if (action === 'like') {
-    const nextLike = Number(readTitlePreferenceValue(next.likes, title, 0) || 0) === 1 ? 0 : 1;
-    writeTitlePreferenceValue(next.likes, title, nextLike);
+    const isLiked = Number(readTitlePreferenceValue(next.likes, title, 0) || 0) >= 1;
+    writeTitlePreferenceValue(next.likes, title, isLiked ? 0 : Date.now());
   }
   else if (action === 'later') {
-    const nextLater = !Boolean(readTitlePreferenceValue(next.watchLater, title, false));
-    writeTitlePreferenceValue(next.watchLater, title, nextLater);
+    const isLater = Boolean(readTitlePreferenceValue(next.watchLater, title, false));
+    writeTitlePreferenceValue(next.watchLater, title, isLater ? false : Date.now());
   }
   saveTitlePrefs(next);
   void queueTitlePreferenceSync(title, action, {
-    liked: Number(readTitlePreferenceValue(next.likes, title, 0) || 0) === 1,
+    liked: Number(readTitlePreferenceValue(next.likes, title, 0) || 0) >= 1,
     watchLater: Boolean(readTitlePreferenceValue(next.watchLater, title, false))
   });
 }
@@ -5103,11 +5115,46 @@ function renderDetail(options = {}) {
   });
 }
 
+// Escribe localStorage marcando la selección actual como "started" para
+// que el título aparezca en Continuar Viendo aunque el provider del iframe
+// no emita PLAYER_EVENT (solo vaplayer/Servidor 1 los emite). Si después
+// el provider real emite progreso, persistProgressFromPlayerEvent
+// sobreescribe con datos reales.
+function markCurrentSelectionAsStarted() {
+  const title = state.selected;
+  if (!title) return;
+  const imdbId = String(title.imdbId || '').trim();
+  const tmdbId = String(title.tmdbId || '').trim();
+  const id = imdbId || tmdbId;
+  if (!id) return;
+  const season = Number(state.playback.season || 1);
+  const episode = Number(state.playback.episode || 1);
+  const now = Date.now();
+  const snapshot = { imdbId, tmdbId, season, episode, progress: 0 };
+  localStorage.setItem('mep_last_watch', JSON.stringify(snapshot));
+  const key = `mep_series_progress_${id}`;
+  const existing = safeJson(localStorage.getItem(key)) || { watched: {} };
+  const watched = existing.watched || {};
+  const epKey = `s${season}e${episode}`;
+  const prev = watched[epKey];
+  if (prev && prev !== true && prev.startedAt) return; // Ya tenía un start previo: no pisar.
+  watched[epKey] = (prev && prev !== true)
+    ? { ...prev, startedAt: prev.startedAt || now }
+    : { startedAt: now, completedAt: null, lastProgress: 0 };
+  const nextProgress = { ...existing, lastSeason: season, lastEpisode: episode, watched };
+  localStorage.setItem(key, JSON.stringify(nextProgress));
+}
+
 function openPlayerModal(embedUrl) {
   if (state.playerOpening) return;
   state.playerOpening = true;
   clearPlayerFallback();
   persistLastSelection();
+  // Marca optimista: deja constancia local del "start" para que el título
+  // aparezca en Continuar Viendo aunque el provider del iframe no emita
+  // PLAYER_EVENT messages (vidsrc/2embed/vidlink/embedmaster no los emiten).
+  // Si el Servidor 1 (vaplayer) sí emite progreso real, lo sobreescribe.
+  markCurrentSelectionAsStarted();
   const modal = elements.playerModal;
   const card = modal?.querySelector('.player-modal-card');
   const iframe = elements.playerIframe;

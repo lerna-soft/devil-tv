@@ -3518,71 +3518,42 @@ function renderHomeCatalog(baseFiltered) {
       .sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0))
   });
 
-  // Render skeleton inmediato — cada sección con "Cargando..." plano (sin
-  // animación). El user ve la estructura ya y los items van entrando.
+  // Skeleton SOLO si home no está ya pintado. Si re-render durante hydration
+  // (catálogo cargando chunks), conserva el DOM existente y cada sección se
+  // actualiza in-place vía su promise — sin flash.
   const statusHtml = renderCatalogHydrationStatus() || '';
-  const skeletonHtml = sectionDefs.map((def) => `
-    <section class="home-section" data-section-key="${escapeAttribute(def.key)}">
-      <div class="home-section-head">
-        <h3>${escapeHtml(def.title)}</h3>
-        <span>${escapeHtml(def.subtitle)}</span>
-      </div>
-      <div class="home-section-loading">Cargando...</div>
-    </section>
-  `).join('');
-  elements.items.innerHTML = statusHtml + skeletonHtml;
+  const alreadyPainted = elements.items.querySelector('[data-section-key]') !== null;
+  if (!alreadyPainted) {
+    const skeletonHtml = sectionDefs.map((def) => buildSectionShellHtml(def, '<div class="home-section-loading">Cargando...</div>')).join('');
+    elements.items.innerHTML = statusHtml + skeletonHtml;
+  }
 
-  // Render async: yield entre secciones para no congelar el browser. Token
-  // valida que renderHomeCatalog no haya sido re-invocado durante el ciclo.
+  // Token cancela promesas en vuelo si un render nuevo arranca mid-stream.
   const myToken = ++homeRenderToken;
-  let eagerHomeSectionUsed = false;
-  let renderedAny = false;
+  const eagerState = { taken: false };
 
-  (async () => {
-    for (const def of sectionDefs) {
-      // Yield al event loop — permite que el browser pinte y atienda eventos.
-      await new Promise((resolve) => setTimeout(resolve, 0));
-      if (myToken !== homeRenderToken) return; // se canceló por otro render
+  // Una promise por sección. Cada una corre INDEPENDIENTE (setTimeout 0 las
+  // arranca todas en el siguiente tick, en paralelo lógico). El .then de
+  // cada una pinta SOLO su sección — no toca las demás → cero conflictos
+  // entre secciones, y la primera que termine es la primera en aparecer.
+  const sectionPromises = sectionDefs.map((def) => new Promise((resolve) => {
+    setTimeout(() => {
+      try { resolve({ def, items: def.compute() }); }
+      catch (err) { resolve({ def, items: [], error: err }); }
+    }, 0);
+  }).then(({ def, items }) => {
+    if (myToken !== homeRenderToken) return; // cancelado por otro render
+    paintHomeSection(def, items, sectionDefs, previewLimit, eagerState);
+  }));
 
-      const items = def.compute();
-      const sectionEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
-      if (!sectionEl) continue;
-
-      if (items.length < def.minItems) {
-        sectionEl.remove();
-        continue;
-      }
-
-      renderedAny = true;
-      const preview = items.slice(0, previewLimit);
-      const showMore = items.length > preview.length;
-      const eagerCount = eagerHomeSectionUsed ? 0 : 2;
-      eagerHomeSectionUsed = true;
-      const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(def.key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
-      const carouselHtml = `
-        <div class="home-carousel" data-home-carousel="${escapeAttribute(def.key)}">
-          <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
-          <div class="home-viewport">
-            <div class="home-track">
-              ${cards}
-            </div>
-          </div>
-          <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
-        </div>
-      `;
-      const loading = sectionEl.querySelector('.home-section-loading');
-      if (loading) loading.outerHTML = carouselHtml;
-    }
-
+  Promise.allSettled(sectionPromises).then(() => {
     if (myToken !== homeRenderToken) return;
 
-    // Fallback: si NINGUNA sección rindió items (catálogo vacío), mostrar
-    // sección destacada con lo que haya.
-    if (!renderedAny) {
+    // Fallback si nada se pintó (catálogo vacío de verdad).
+    const anySectionPresent = elements.items.querySelector('[data-section-key] .home-carousel');
+    if (!anySectionPresent) {
       const latestItems = sortTitles(discoveryTitles, watch).slice(0, 24);
       if (latestItems.length) {
-        const eagerCount = 2;
-        const cards = renderLocalCards(latestItems.slice(0, previewLimit), { eagerCount });
         elements.items.innerHTML = statusHtml + `
           <section class="home-section" data-section-key="latest">
             <div class="home-section-head">
@@ -3592,7 +3563,7 @@ function renderHomeCatalog(baseFiltered) {
             <div class="home-carousel" data-home-carousel="latest">
               <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
               <div class="home-viewport">
-                <div class="home-track">${cards}</div>
+                <div class="home-track">${renderLocalCards(latestItems.slice(0, previewLimit), { eagerCount: 2 })}</div>
               </div>
               <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
             </div>
@@ -3604,7 +3575,74 @@ function renderHomeCatalog(baseFiltered) {
     bindLocalCardEvents();
     bindHomeSectionEvents();
     bindHomeCarouselEvents();
-  })();
+  });
+}
+
+function buildSectionShellHtml(def, innerHtml) {
+  return `
+    <section class="home-section" data-section-key="${escapeAttribute(def.key)}">
+      <div class="home-section-head">
+        <h3>${escapeHtml(def.title)}</h3>
+        <span>${escapeHtml(def.subtitle)}</span>
+      </div>
+      ${innerHtml}
+    </section>
+  `;
+}
+
+function buildSectionCarouselHtml(def, items, previewLimit, eagerCount) {
+  const preview = items.slice(0, previewLimit);
+  const showMore = items.length > preview.length;
+  const cards = `${preview.length ? renderLocalCards(preview, { eagerCount }) : '<div class="empty">Sin resultados por ahora.</div>'}${showMore ? `<article class="home-more" data-home-seeall="${escapeAttribute(def.key)}"><div class="home-more-icon" aria-hidden="true">→</div><strong>Explorar todo</strong><span>Ver el listado completo</span></article>` : ''}`;
+  return `
+    <div class="home-carousel" data-home-carousel="${escapeAttribute(def.key)}">
+      <button class="home-nav home-nav-prev" type="button" data-home-prev aria-label="Anterior">‹</button>
+      <div class="home-viewport">
+        <div class="home-track">
+          ${cards}
+        </div>
+      </div>
+      <button class="home-nav home-nav-next" type="button" data-home-next aria-label="Siguiente">›</button>
+    </div>
+  `;
+}
+
+// Pinta el contenido (carousel o vacío) de UNA sección sin tocar las demás.
+// Maneja 3 casos: sección existe (reemplaza loading/carousel viejo), sección
+// no existe pero debe (la inserta en posición correcta según sectionDefs),
+// sección existe pero no tiene items (la remueve).
+function paintHomeSection(def, items, sectionDefs, previewLimit, eagerState) {
+  let sectionEl = elements.items.querySelector(`[data-section-key="${def.key}"]`);
+
+  if (items.length < def.minItems) {
+    if (sectionEl) sectionEl.remove();
+    return;
+  }
+
+  const eagerCount = eagerState.taken ? 0 : 2;
+  eagerState.taken = true;
+  const carouselHtml = buildSectionCarouselHtml(def, items, previewLimit, eagerCount);
+
+  if (sectionEl) {
+    const target = sectionEl.querySelector('.home-section-loading')
+      || sectionEl.querySelector('.home-carousel');
+    if (target) target.outerHTML = carouselHtml;
+    else sectionEl.insertAdjacentHTML('beforeend', carouselHtml);
+    return;
+  }
+
+  // Sección ausente: insertar en posición correcta antes de la próxima sección
+  // que ya esté en DOM, según el orden de sectionDefs.
+  const fullSectionHtml = buildSectionShellHtml(def, carouselHtml);
+  const myIndex = sectionDefs.indexOf(def);
+  for (let i = myIndex + 1; i < sectionDefs.length; i++) {
+    const nextEl = elements.items.querySelector(`[data-section-key="${sectionDefs[i].key}"]`);
+    if (nextEl) {
+      nextEl.insertAdjacentHTML('beforebegin', fullSectionHtml);
+      return;
+    }
+  }
+  elements.items.insertAdjacentHTML('beforeend', fullSectionHtml);
 }
 
 function renderHomeSectionList(baseFiltered, sectionKey) {

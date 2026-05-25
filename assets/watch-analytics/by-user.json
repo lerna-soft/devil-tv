@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-25T00:03:43.103Z",
+  "generatedAt": "2026-05-25T00:07:36.291Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-25T00:03:29Z",
+      "updatedAt": "2026-05-25T00:07:28Z",
       "totalEvents": 500,
       "totalStarts": 255,
       "totalCompletions": 86,
       "totalPlaybackProgress": 298917.5823581348,
-      "uniqueContentCount": 164,
-      "lastActivityAt": "2026-05-25T00:03:29Z",
+      "uniqueContentCount": 165,
+      "lastActivityAt": "2026-05-25T00:07:28Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -124,6 +124,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-25T00:07:28Z"
         },
         "tt10366206": {
           "contentId": "tt10366206",
@@ -2003,7 +2015,7 @@
           "tmdbId": "37680",
           "title": "Suits: la clave del éxito",
           "type": "series",
-          "playCount": 4,
+          "playCount": 3,
           "completed": true,
           "maxProgressValue": 2575.000090249433,
           "maxProgressPercent": 0,

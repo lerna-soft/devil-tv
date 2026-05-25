@@ -370,63 +370,100 @@ async function handleSubs(request) {
   const lang = String(url.searchParams.get('lang') || 'es').toLowerCase();
   const season = String(url.searchParams.get('season') || '').trim();
   const episode = String(url.searchParams.get('episode') || '').trim();
+  const debug = url.searchParams.get('debug') === '1';
+
+  const dbg = { imdb, lang, season, episode };
 
   if (!/^tt\d+$/.test(imdb)) {
+    dbg.error = 'imdb param invalid';
+    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
     return new Response('WEBVTT\n\nNOTE imdb param requerido (formato ttNNN)\n', {
       status: 200, headers: vttHeaders()
     });
   }
 
   const cacheKey = new Request(url.toString(), { method: 'GET' });
-  const cached = await caches.default.match(cacheKey);
-  if (cached) return cached;
+  if (!debug) {
+    const cached = await caches.default.match(cacheKey);
+    if (cached) return cached;
+  }
 
   const numericId = imdb.replace(/^tt/, '');
   const sublang = SUBS_LANG_MAP[lang] || 'spa';
+  dbg.sublang = sublang;
 
   const isTv = season && episode && /^\d+$/.test(season) && /^\d+$/.test(episode);
   const searchPath = isTv
     ? `/search/episode-${episode}/imdbid-${numericId}/season-${season}/sublanguageid-${sublang}`
     : `/search/imdbid-${numericId}/sublanguageid-${sublang}`;
+  dbg.searchUrl = `https://rest.opensubtitles.org${searchPath}`;
 
   let subs;
   try {
     const searchResp = await fetch(`https://rest.opensubtitles.org${searchPath}`, {
       headers: { 'X-User-Agent': 'DevilTV v1' }
     });
-    if (!searchResp.ok) return emptyVtt();
-    subs = await searchResp.json();
-  } catch {
+    dbg.searchStatus = searchResp.status;
+    if (!searchResp.ok) {
+      dbg.error = 'search not ok';
+      if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+      return emptyVtt();
+    }
+    const text = await searchResp.text();
+    dbg.searchBodyLen = text.length;
+    dbg.searchBodyPreview = text.slice(0, 300);
+    try { subs = JSON.parse(text); } catch (e) { dbg.error = 'json parse: ' + e.message; }
+  } catch (e) {
+    dbg.error = 'fetch threw: ' + e.message;
+    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
     return emptyVtt();
   }
 
+  dbg.subsCount = Array.isArray(subs) ? subs.length : -1;
   const candidates = (Array.isArray(subs) ? subs : [])
     .filter((s) => s && s.SubLanguageID === sublang && s.SubFormat === 'srt' && s.SubHearingImpaired === '0')
     .sort((a, b) => Number(b.SubDownloadsCnt || 0) - Number(a.SubDownloadsCnt || 0));
+  dbg.candidatesCount = candidates.length;
 
-  if (!candidates.length) return emptyVtt();
+  if (!candidates.length) {
+    dbg.error = dbg.error || 'no candidates after filter';
+    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+    return emptyVtt();
+  }
 
   const top = candidates[0];
+  dbg.topDownloadLink = top.SubDownloadLink;
   let srtText;
   try {
     const downloadResp = await fetch(top.SubDownloadLink, {
       headers: { 'X-User-Agent': 'DevilTV v1' }
     });
-    if (!downloadResp.ok) return emptyVtt();
-    // El archivo viene .srt.gz; descomprimir con DecompressionStream nativo.
+    dbg.downloadStatus = downloadResp.status;
+    if (!downloadResp.ok) {
+      dbg.error = 'download not ok';
+      if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+      return emptyVtt();
+    }
     try {
       const stream = downloadResp.body.pipeThrough(new DecompressionStream('gzip'));
       srtText = await new Response(stream).text();
-    } catch {
+      dbg.decompressed = true;
+    } catch (e) {
+      dbg.decompressError = e.message;
       srtText = await downloadResp.text();
     }
-  } catch {
+    dbg.srtLen = srtText.length;
+    dbg.srtPreview = srtText.slice(0, 200);
+  } catch (e) {
+    dbg.error = 'download threw: ' + e.message;
+    if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
     return emptyVtt();
   }
 
+  if (debug) return new Response(JSON.stringify(dbg, null, 2), { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } });
+
   const vtt = srtToVtt(srtText);
   const response = new Response(vtt, { status: 200, headers: vttHeaders() });
-  // Fire-and-forget cache write (sin esperar para no bloquear el response).
   caches.default.put(cacheKey, response.clone()).catch(() => {});
   return response;
 }

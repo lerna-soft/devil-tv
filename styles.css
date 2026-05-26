@@ -1031,6 +1031,32 @@ h1 {
   width: min(100%, 34rem);
 }
 
+/* Escape hatch que aparece si la hidratación se queda estancada >45s
+   bajo el 18%. Hasta antes el user veía un "8%" eterno sin acción. */
+.catalog-loading-stalled {
+  align-items: center;
+  background: rgba(255, 196, 0, 0.06);
+  border: 1px solid rgba(255, 196, 0, 0.32);
+  border-radius: 0.75rem;
+  color: rgba(255, 220, 140, 0.95);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+}
+
+.catalog-loading-stalled button {
+  background: rgba(255, 196, 0, 0.95);
+  border: 0;
+  border-radius: 0.5rem;
+  color: #1a1004;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+}
+
 .catalog-loading-progress span {
   background: linear-gradient(90deg, var(--brand), #ffb199);
   border-radius: inherit;

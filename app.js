@@ -5443,7 +5443,8 @@ function renderDetail(options = {}) {
     const inProgress = isEpisodeInProgress(progress, state.playback.season, entry.episode);
     const statusLabel = inProgress ? 'En progreso' : watched ? 'Visto' : 'Listo para ver';
     const stillUrl = sanitizePosterUrl(entry.stillUrl || '');
-    return `<article class="episode-card${watched ? ' watched' : ''}${state.playback.episode === entry.episode ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0">
+    const isCurrent = state.playback.episode === entry.episode;
+    return `<article class="episode-card${watched ? ' watched' : ''}${isCurrent ? ' current' : ''}" data-episode="${entry.episode}" role="button" tabindex="0"${isCurrent ? ' aria-current="true"' : ''}>
       <div class="episode-thumb" aria-hidden="true" style="${stillUrl || poster ? `--poster: url('${escapeAttribute(stillUrl || poster)}')` : ''}">
         <span>${String(entry.episode).padStart(2, '0')}</span>
       </div>

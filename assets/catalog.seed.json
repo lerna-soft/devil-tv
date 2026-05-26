@@ -1,6 +1,6 @@
 {
-  "version": 298,
-  "generatedAt": "2026-05-25T18:00:36.859Z",
+  "version": 299,
+  "generatedAt": "2026-05-26T03:17:47.448Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28001,6 +28001,22 @@
       "releaseDate": null,
       "overview": "Natasha Henstridge, Ice Cube",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTY5MWQ2YzUtNGM4YS00ZTYxLWJkMGUtMTg2ODlkNDUwMzY1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "12207",
+      "imdbId": null,
+      "title": "La leyenda del luchador borracho",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jBcsGcLuDXYQCZGEjyRd8QM0Xmm.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

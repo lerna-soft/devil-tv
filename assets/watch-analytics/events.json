@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T08:22:44.592Z",
+  "generatedAt": "2026-05-26T08:23:45.456Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209804:s1e11:started:2026-05-26T08:23:33Z",
+      "contentId": "tt21209804",
+      "episodeKey": "s1e11",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "season": 1,
+      "episode": 11,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T08:23:33.201Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T08:23:33Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209804:s1e12:started:2026-05-26T08:22:32Z",
       "contentId": "tt21209804",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T19:38:48Z"
-    },
-    {
-      "eventId": "unknown:tt31596104:s1e12:playing:2026-05-14T19:21:17Z",
-      "contentId": "tt31596104",
-      "episodeKey": "s1e12",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt31596104",
-      "tmdbId": "",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "season": 1,
-      "episode": 12,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T19:21:17Z"
     },
     {
       "eventId": "unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",

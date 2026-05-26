@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T07:03:46.098Z",
+  "generatedAt": "2026-05-26T07:05:07.219Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1331,27 +1331,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 21,
-      "totalStarts": 21,
+      "totalEvents": 22,
+      "totalStarts": 22,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-26T07:03:36Z",
+      "lastActivityAt": "2026-05-26T07:04:57Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 21,
+          "playCount": 22,
           "completedCount": 0,
-          "startedCount": 21,
+          "startedCount": 22,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T07:03:36Z",
+          "lastSeenAt": "2026-05-26T07:04:57Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e19": {
+          "season": 1,
+          "episode": 19,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T07:04:57Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e18": {
           "season": 1,
           "episode": 18,
@@ -1605,7 +1619,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.9938
+      "avgPlaybackProgress": 1.9032
     },
     {
       "contentId": "tt29552248",
@@ -9520,50 +9534,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt16431870",
-      "imdbId": "tt16431870",
-      "tmdbId": "1029575",
-      "title": "Plan en familia",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3250.287715134329,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-14T17:21:06Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3250.287715134329,
-          "lastSeenAt": "2026-05-14T17:21:06Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3250.287715134329,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T17:21:06Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 3250.2877
     },
     {
       "contentId": "tt0480489",

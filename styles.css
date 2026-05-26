@@ -4262,3 +4262,81 @@ code {
   content: '↓';
   opacity: 1;
 }
+
+/* ============================================================
+   ADM CONTENT DRILL-DOWN — números clickables y lista de contenido
+   ============================================================ */
+
+/* Número en la tabla que actúa como link al drill-down */
+.adm-num-link {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dashed rgba(229, 130, 130, 0.45);
+  color: rgba(229, 150, 150, 0.95);
+  cursor: pointer;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  padding: 0 0.1rem;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.adm-num-link:hover {
+  border-bottom-color: rgba(229, 90, 90, 1);
+  color: rgba(255, 200, 200, 1);
+}
+
+/* KPI clickable en el drawer */
+button.adm-kpi.adm-kpi-clickable {
+  border: 1px solid var(--adm-border);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+}
+button.adm-kpi.adm-kpi-clickable:hover {
+  background: var(--adm-card-strong);
+  border-color: rgba(229, 90, 90, 0.4);
+  transform: translateY(-1px);
+}
+button.adm-kpi.adm-kpi-clickable .adm-kpi-delta {
+  color: rgba(229, 150, 150, 0.85);
+}
+
+/* Lista de contenido (drill-down series/películas por usuario) */
+.adm-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.adm-content-list li {
+  background: var(--adm-card);
+  border: 1px solid var(--adm-border);
+  border-radius: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.6rem 0.8rem;
+}
+.adm-content-row {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.adm-content-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.adm-content-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.adm-content-meta small {
+  font-size: 0.78rem;
+}

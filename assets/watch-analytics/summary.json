@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T06:56:48.727Z",
+  "generatedAt": "2026-05-26T06:58:46.631Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -44,7 +44,7 @@
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 18,
+      "totalEvents": 19,
       "uniqueUsers": 1,
       "completionRate": 0
     },
@@ -57,20 +57,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt1190634",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0.0833
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
+    },
+    {
+      "contentId": "tt1190634",
+      "title": "The Boys",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.0909
     },
     {
       "contentId": "tt21209876",

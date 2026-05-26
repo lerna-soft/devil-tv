@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T14:31:58.838Z",
+  "generatedAt": "2026-05-26T14:32:59.908Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T14:31:22Z",
+      "updatedAt": "2026-05-26T14:32:46Z",
       "totalEvents": 500,
       "totalStarts": 265,
       "totalCompletions": 73,
       "totalPlaybackProgress": 274698.8179515242,
       "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-26T14:31:22Z",
+      "lastActivityAt": "2026-05-26T14:32:46Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 25,
+          "playCount": 26,
           "completed": false,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-26T14:31:22Z"
+          "lastSeenAt": "2026-05-26T14:32:46Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1160,7 +1160,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 33,
+          "playCount": 32,
           "completed": true,
           "maxProgressValue": 1880.723439229025,
           "maxProgressPercent": 0,

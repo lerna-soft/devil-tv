@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-26T08:35:30Z",
+  "updatedAt": "2026-05-26T14:01:37Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1762,6 +1762,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-26T03:17:40Z",
       "watched": {}
+    },
+    "tt0899043": {
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-26T14:01:37Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -1892,18 +1902,45 @@
       "tt1878870": true,
       "tt8594324": true
     },
-    "updatedAt": "2026-05-25T05:53:01Z"
+    "updatedAt": "2026-05-26T14:01:37Z"
   },
   "lastWatch": {
-    "imdbId": "tt21209804",
-    "tmdbId": "204832",
+    "imdbId": "tt0899043",
+    "tmdbId": "1087891",
     "season": 1,
-    "episode": 13,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-26T08:35:30Z"
+    "updatedAt": "2026-05-26T14:01:37Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0899043:s1e1:preference:2026-05-26T14:01:37Z",
+      "contentId": "tt0899043",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T14:01:37Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209804:s1e13:started:2026-05-26T08:35:30Z",
       "contentId": "tt21209804",
@@ -15368,33 +15405,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-15T04:23:29Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt0259141:s1e1:completed:2026-05-15T04:23:27Z",
-      "contentId": "tt0259141",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0259141",
-      "tmdbId": "",
-      "title": "Jackie Chan Adventures",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 1269.9225303854876,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T04:23:27Z",
       "country": "",
       "countryName": "",
       "city": "",

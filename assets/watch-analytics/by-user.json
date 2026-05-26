@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T08:35:40.338Z",
+  "generatedAt": "2026-05-26T14:01:53.730Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T08:35:30Z",
+      "updatedAt": "2026-05-26T14:01:37Z",
       "totalEvents": 500,
       "totalStarts": 265,
-      "totalCompletions": 75,
-      "totalPlaybackProgress": 277636.8234819097,
-      "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-26T08:35:30Z",
+      "totalCompletions": 74,
+      "totalPlaybackProgress": 276366.9009515242,
+      "uniqueContentCount": 162,
+      "lastActivityAt": "2026-05-26T14:01:37Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -20,8 +20,7 @@
         "tt2911666",
         "tt16030542",
         "tt14452776",
-        "tt7587890",
-        "tt0259141"
+        "tt7587890"
       ],
       "inProgressContentIds": [
         "274870",
@@ -122,6 +121,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0899043": {
+          "contentId": "tt0899043",
+          "imdbId": "tt0899043",
+          "tmdbId": "1087891",
+          "title": "Amateur",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-26T14:01:37Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1965,14 +1976,14 @@
           "tmdbId": "",
           "title": "Jackie Chan Adventures",
           "type": "series",
-          "playCount": 2,
-          "completed": true,
-          "maxProgressValue": 1269.9225303854876,
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-15T04:23:29Z"
         }
       },
-      "avgPlaybackProgress": 555.2736
+      "avgPlaybackProgress": 552.7338
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

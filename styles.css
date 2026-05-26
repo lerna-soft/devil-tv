@@ -2343,7 +2343,20 @@ body.detail-active .catalog {
 
 .episode-card.current {
   border-color: var(--brand);
-  background: rgba(229, 9, 20, 0.14);
+  background: rgba(229, 9, 20, 0.22);
+  box-shadow: 0 0 0 2px var(--brand), 0 6px 18px -8px rgba(229, 9, 20, 0.65);
+}
+.episode-card.current::before {
+  background: var(--brand);
+  border-radius: 999px;
+  content: '';
+  height: 0.55rem;
+  left: 0.55rem;
+  position: absolute;
+  top: 0.55rem;
+  width: 0.55rem;
+  z-index: 1;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.28);
 }
 
 .episode-card.watched {

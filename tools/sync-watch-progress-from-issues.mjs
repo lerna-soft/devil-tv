@@ -257,18 +257,27 @@ async function writeUserFiles(users) {
     const existingProgress = existing?.progress && typeof existing.progress === 'object' ? existing.progress : {};
     const key = user.imdbId || user.tmdbId;
     const previous = existingProgress[key] && typeof existingProgress[key] === 'object' ? existingProgress[key] : {};
+    const previousUpdatedMs = Date.parse(previous?.updatedAt || 0) || 0;
+    const incomingUpdatedMs = Date.parse(user?.updatedAt || 0) || 0;
+    // Si el issue entrante es más viejo que lo persistido, no pisamos los
+    // campos "última posición" (lastSeason/lastEpisode/lastProgress). Esto
+    // evita que un drain fuera de orden (issues procesados out-of-order)
+    // retroceda el avance del user. Los demás campos (history, watched) sí
+    // se mergean sin importar el orden.
+    const acceptIncomingForLast = incomingUpdatedMs >= previousUpdatedMs;
+    const updatedWatched = applyEventToWatched(previous?.watched || {}, user);
     const mergedProgress = {
       ...existingProgress,
       [key]: {
         ...previous,
         imdbId: user.imdbId,
         tmdbId: user.tmdbId,
-        lastSeason: user.season,
-        lastEpisode: user.episode,
-        progress: user.progress,
-        lastProgress: user.progress,
-        updatedAt: user.updatedAt,
-        watched: { ...(previous.watched || {}) }
+        lastSeason: acceptIncomingForLast ? user.season : previous?.lastSeason || user.season,
+        lastEpisode: acceptIncomingForLast ? user.episode : previous?.lastEpisode || user.episode,
+        progress: acceptIncomingForLast ? user.progress : (previous?.progress ?? user.progress),
+        lastProgress: acceptIncomingForLast ? user.progress : (previous?.lastProgress ?? user.progress),
+        updatedAt: acceptIncomingForLast ? user.updatedAt : (previous?.updatedAt || user.updatedAt),
+        watched: updatedWatched
       }
     };
     const historyEntry = {
@@ -320,7 +329,91 @@ async function writeUserFiles(users) {
     };
     await fs.writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
     console.log(`[watch-progress] wrote ${filePath}`);
+
+    // Particionado por título: escribir índice del usuario + un archivo por
+    // título. Ayuda al admin (carga ligera de overview) y reduce contención
+    // del data.json monolítico cuando llegan muchos issues seguidos.
+    // El data.json sigue siendo la fuente principal — esto es escritura
+    // extra para que el front/admin puedan migrar gradualmente.
+    await writePartitionedUserFiles(user, payload);
   }
+}
+
+// Aplica el evento entrante al map de watched{} del título. Antes esto solo
+// vivía en localStorage del frontend, así que el getResumeTarget remoto no
+// podía avanzar al siguiente episodio cuando se completaba uno desde otro
+// dispositivo.
+function applyEventToWatched(existingWatched, user) {
+  const watched = { ...(existingWatched && typeof existingWatched === 'object' ? existingWatched : {}) };
+  const season = positiveInteger(user?.season, 1);
+  const episode = positiveInteger(user?.episode, 1);
+  const epKey = `s${season}e${episode}`;
+  const prev = watched[epKey] && watched[epKey] !== true && typeof watched[epKey] === 'object' ? watched[epKey] : null;
+  const eventType = String(user?.eventType || inferEventType(user?.playerStatus, user?.progress) || '').toLowerCase();
+  const startedIso = String(user?.startedAt || '').trim();
+  const completedIso = String(user?.completedAt || '').trim();
+  const progressNum = Number(user?.progress || 0);
+  const next = {
+    startedAt: startedIso || prev?.startedAt || user?.updatedAt || '',
+    completedAt: completedIso || prev?.completedAt || (eventType === 'completed' ? (user?.updatedAt || '') : ''),
+    lastProgress: progressNum || prev?.lastProgress || 0
+  };
+  // Una vez completedAt está set, no lo desactivamos — un 'started' posterior
+  // no debe revertir un 'completed' anterior.
+  if (prev?.completedAt && !next.completedAt) next.completedAt = prev.completedAt;
+  watched[epKey] = next;
+  return watched;
+}
+
+async function writePartitionedUserFiles(user, payload) {
+  try {
+    const userDir = path.join(USERS_DIR, normalizeEmail(user.email));
+    const titlesDir = path.join(userDir, 'titles');
+    await fs.mkdir(titlesDir, { recursive: true });
+
+    const progress = payload?.progress && typeof payload.progress === 'object' ? payload.progress : {};
+    const titleIds = Object.keys(progress).filter(Boolean).sort();
+
+    // Index: visión general ligera (sin watched ni history detallada).
+    const index = {
+      email: payload.email,
+      name: payload.name || '',
+      updatedAt: payload.updatedAt || '',
+      lastWatch: payload.lastWatch || null,
+      lastSelection: payload.lastSelection || null,
+      preferences: payload.preferences || {},
+      titles: titleIds
+    };
+    const indexPath = path.join(userDir, 'index.json');
+    await fs.writeFile(indexPath, `${JSON.stringify(index, null, 2)}\n`, 'utf8');
+
+    // Por título: detalle profundo (watched + history filtrada por contentId).
+    const allHistory = Array.isArray(payload.history) ? payload.history : [];
+    for (const titleId of titleIds) {
+      const entry = progress[titleId] || {};
+      const titleHistory = allHistory.filter((h) => String(h?.contentId || '') === titleId);
+      const titlePayload = {
+        imdbId: entry.imdbId || titleId,
+        tmdbId: entry.tmdbId || '',
+        lastSeason: entry.lastSeason || 1,
+        lastEpisode: entry.lastEpisode || 1,
+        progress: entry.progress || 0,
+        lastProgress: entry.lastProgress || 0,
+        updatedAt: entry.updatedAt || '',
+        watched: entry.watched || {},
+        history: titleHistory
+      };
+      const titlePath = path.join(titlesDir, `${sanitizeTitleId(titleId)}.json`);
+      await fs.writeFile(titlePath, `${JSON.stringify(titlePayload, null, 2)}\n`, 'utf8');
+    }
+    console.log(`[watch-progress] partitioned ${user.email}: ${titleIds.length} titles + index.json`);
+  } catch (err) {
+    console.warn(`[watch-progress] partitioned write failed for ${user.email}: ${err?.message || err}`);
+  }
+}
+
+function sanitizeTitleId(id) {
+  return String(id || '').trim().replace(/[^a-zA-Z0-9_-]/g, '_');
 }
 
 function mergePreferences(existing, user) {

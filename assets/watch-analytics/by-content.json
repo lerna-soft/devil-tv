@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T08:35:40.336Z",
+  "generatedAt": "2026-05-26T14:01:53.728Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3918,64 +3918,6 @@
       "avgPlaybackProgress": 1237.3937
     },
     {
-      "contentId": "tt0259141",
-      "imdbId": "tt0259141",
-      "tmdbId": "",
-      "title": "Jackie Chan Adventures",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1269.9225303854876,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-05-15T04:23:29Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1269.9225303854876,
-          "lastSeenAt": "2026-05-15T04:23:29Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T04:23:29Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1269.9225303854876,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T04:23:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 634.9613
-    },
-    {
       "contentId": "tt1630029",
       "imdbId": "tt1630029",
       "tmdbId": "76600",
@@ -4018,6 +3960,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-26T14:01:37Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-26T14:01:37Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T14:01:37Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt34610311",
@@ -9467,6 +9453,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-15T23:14:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt0259141",
+      "imdbId": "tt0259141",
+      "tmdbId": "",
+      "title": "Jackie Chan Adventures",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-15T04:23:29Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-15T04:23:29Z",
+          "lastSeason": 1,
+          "lastEpisode": 2
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-15T04:23:29Z",
           "users": {
             "henry8812@gmail.com": true
           },

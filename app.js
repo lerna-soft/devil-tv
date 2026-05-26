@@ -108,6 +108,25 @@ function dtvIsTabular(data) {
   return false;
 }
 
+// Toast helper centralizado. Wrappea SweetAlert si está cargado; en su
+// ausencia es no-op para no romper el flujo (la app ya tiene fallbacks
+// donde el mensaje es crítico). Sustituye al patrón Swal.fire(...) duplicado
+// en varios sitios y permite cambiar el theme/posición desde un solo lugar.
+function showToast({ icon = 'info', title, timer = 3500, position = 'top-end' } = {}) {
+  if (!title || typeof Swal === 'undefined') return;
+  try {
+    Swal.fire({
+      toast: true,
+      position,
+      icon,
+      title,
+      showConfirmButton: false,
+      timer,
+      timerProgressBar: true
+    });
+  } catch {}
+}
+
 function dtvLog(scope, msg, data) {
   try {
     const t = new Date().toISOString().slice(11, 23);
@@ -4790,7 +4809,18 @@ async function searchRemoteCatalog(searchInput, intentId = state.searchIntentId)
     renderRemoteResults(getSearchInputValue());
   } catch (error) {
     if (intentId !== state.searchIntentId) return;
-    elements.items.innerHTML = `<div class="empty error">La búsqueda falló: ${escapeHtml(error.message)}</div>`;
+    // La búsqueda remota falló. Notificamos con toast diferenciado (NO con
+    // un "sin resultados" que el user pueda confundir con catálogo vacío)
+    // y re-renderizamos el catálogo local — si hay coincidencias locales,
+    // el user las sigue viendo aunque la API remota esté caída.
+    dtvLog('error', 'remote search failed', { query, message: error?.message });
+    showToast({
+      icon: 'error',
+      title: 'La búsqueda en línea falló. Mostramos solo el catálogo local.',
+      timer: 4500
+    });
+    state.remoteResults = [];
+    renderCatalog();
   } finally {
     if (intentId === state.searchIntentId) {
       state.isSearching = false;

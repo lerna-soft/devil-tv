@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-26T16:03:45Z",
+  "updatedAt": "2026-05-26T16:04:40Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -62,6 +62,16 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-26T16:03:45Z",
       "watched": {}
+    },
+    "tt39333617": {
+      "imdbId": "tt39333617",
+      "tmdbId": "278573",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-26T16:04:40Z",
+      "watched": {}
     }
   },
   "preferences": {
@@ -71,20 +81,48 @@
       "tt5311514": 1
     },
     "watchLater": {
-      "tt33714084": true
+      "tt33714084": true,
+      "tt39333617": true
     },
-    "updatedAt": "2026-05-26T16:03:45Z"
+    "updatedAt": "2026-05-26T16:04:40Z"
   },
   "lastWatch": {
-    "imdbId": "tt5311514",
-    "tmdbId": "372058",
+    "imdbId": "tt39333617",
+    "tmdbId": "278573",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-26T16:03:45Z"
+    "updatedAt": "2026-05-26T16:04:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt39333617:s1e1:preference:2026-05-26T16:04:40Z",
+      "contentId": "tt39333617",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt39333617",
+      "tmdbId": "278573",
+      "title": "Perfect Crown",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T16:04:40Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:preference:2026-05-26T16:03:45Z",
       "contentId": "tt5311514",

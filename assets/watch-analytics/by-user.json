@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T08:34:55.235Z",
+  "generatedAt": "2026-05-26T08:35:40.338Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T08:34:27Z",
+      "updatedAt": "2026-05-26T08:35:30Z",
       "totalEvents": 500,
       "totalStarts": 265,
       "totalCompletions": 75,
       "totalPlaybackProgress": 277636.8234819097,
       "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-26T08:34:27Z",
+      "lastActivityAt": "2026-05-26T08:35:30Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -129,11 +129,11 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 33,
+          "playCount": 34,
           "completed": true,
           "maxProgressValue": 1420.1324260770975,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-26T08:34:27Z"
+          "lastSeenAt": "2026-05-26T08:35:30Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1965,7 +1965,7 @@
           "tmdbId": "",
           "title": "Jackie Chan Adventures",
           "type": "series",
-          "playCount": 3,
+          "playCount": 2,
           "completed": true,
           "maxProgressValue": 1269.9225303854876,
           "maxProgressPercent": 0,

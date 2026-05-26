@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T06:56:48.732Z",
+  "generatedAt": "2026-05-26T06:58:46.636Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T06:56:40Z",
+      "updatedAt": "2026-05-26T06:58:34Z",
       "totalEvents": 500,
       "totalStarts": 265,
       "totalCompletions": 75,
       "totalPlaybackProgress": 284540.3994360577,
       "uniqueContentCount": 163,
-      "lastActivityAt": "2026-05-26T06:56:40Z",
+      "lastActivityAt": "2026-05-26T06:58:34Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -130,11 +130,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 18,
+          "playCount": 19,
           "completed": false,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-26T06:56:40Z"
+          "lastSeenAt": "2026-05-26T06:58:34Z"
         },
         "tt8594324": {
           "contentId": "tt8594324",
@@ -526,7 +526,7 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 13,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,

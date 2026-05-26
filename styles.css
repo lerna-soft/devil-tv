@@ -420,6 +420,45 @@ label {
   letter-spacing: 0.08em;
 }
 
+/* Indicador de sync remoto. Aparece durante hydrateWatchProgressForCurrentUser
+   y permite al user saber que sus datos se están actualizando entre
+   dispositivos — antes era invisible y daba la sensación de que Continuar
+   Viendo estaba "viejo" cuando en realidad estaba refrescando. */
+.sync-indicator {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  display: inline-flex;
+  font-size: 0.72rem;
+  gap: 0.4rem;
+  margin-left: 0.4rem;
+  padding: 0.2rem 0.55rem 0.2rem 0.4rem;
+}
+
+.sync-indicator[hidden] { display: none; }
+
+.sync-indicator-dot {
+  animation: sync-indicator-pulse 1.4s ease-in-out infinite;
+  background: rgba(120, 220, 140, 0.95);
+  border-radius: 999px;
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+@keyframes sync-indicator-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* En mobile colapsamos a solo el dot para no robar espacio del topbar. */
+@media (max-width: 640px) {
+  .sync-indicator-label { display: none; }
+  .sync-indicator { padding: 0.25rem; }
+}
+
 .content-tabs {
   display: flex;
   gap: 0.35rem;

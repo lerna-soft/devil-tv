@@ -1248,6 +1248,12 @@ async function loadRemoteWatchProgress(email) {
   return primary?.email ? primary : null;
 }
 
+function setSyncIndicator(visible) {
+  const el = document.getElementById('syncIndicator');
+  if (!el) return;
+  el.hidden = !visible;
+}
+
 async function hydrateWatchProgressForCurrentUser() {
   const user = getAuthUser();
   if (!user?.email) {
@@ -1255,23 +1261,28 @@ async function hydrateWatchProgressForCurrentUser() {
       'Continuar Viendo no se sincronizará hasta loguearse.');
     return;
   }
-  const remote = await loadRemoteWatchProgress(user.email);
-  watchProgressLastHydrate = Date.now();
-  if (!remote) {
-    dtvLog('sync', 'no remote watch-progress data.json for current user', { email: user.email });
-    return;
+  setSyncIndicator(true);
+  try {
+    const remote = await loadRemoteWatchProgress(user.email);
+    watchProgressLastHydrate = Date.now();
+    if (!remote) {
+      dtvLog('sync', 'no remote watch-progress data.json for current user', { email: user.email });
+      return;
+    }
+    dtvLog('sync', 'remote data.json fetched', {
+      email: user.email,
+      progressEntries: Object.keys(remote.progress || {}).length,
+      historyEvents: (remote.history || []).length,
+      hasPreferences: Boolean(remote.preferences),
+      updatedAt: remote.updatedAt || null
+    });
+    mergeRemoteWatchProgress(remote);
+    dtvLog('sync', 'mergeRemoteWatchProgress done → renderCatalog');
+    renderCatalog();
+    renderDetail({ skipHydratePlayback: true });
+  } finally {
+    setSyncIndicator(false);
   }
-  dtvLog('sync', 'remote data.json fetched', {
-    email: user.email,
-    progressEntries: Object.keys(remote.progress || {}).length,
-    historyEvents: (remote.history || []).length,
-    hasPreferences: Boolean(remote.preferences),
-    updatedAt: remote.updatedAt || null
-  });
-  mergeRemoteWatchProgress(remote);
-  dtvLog('sync', 'mergeRemoteWatchProgress done → renderCatalog');
-  renderCatalog();
-  renderDetail({ skipHydratePlayback: true });
 }
 
 function mergeRemoteWatchProgress(remote) {

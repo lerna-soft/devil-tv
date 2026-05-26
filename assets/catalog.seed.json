@@ -1,6 +1,6 @@
 {
-  "version": 299,
-  "generatedAt": "2026-05-26T03:17:47.448Z",
+  "version": 300,
+  "generatedAt": "2026-05-26T08:22:20.597Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51745,6 +51745,22 @@
       "releaseDate": null,
       "overview": "Ana María Orozco, Jorge Enrique Abello",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTliZTQ3YTMtNGUzNS00ZWVjLTllZGEtZTc2NWQ1NTBmY2RkXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "37854",
+      "imdbId": "tt0388629",
+      "title": "One Piece",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T08:23:45.459Z",
+  "generatedAt": "2026-05-26T08:34:37.261Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -907,27 +907,41 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 32,
-      "totalStarts": 19,
+      "totalEvents": 33,
+      "totalStarts": 20,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7652.20068749126,
       "uniqueUsers": 1,
-      "completionRate": 0.2632,
-      "lastActivityAt": "2026-05-26T08:23:33Z",
+      "completionRate": 0.25,
+      "lastActivityAt": "2026-05-26T08:34:27Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 32,
+          "playCount": 33,
           "completedCount": 5,
-          "startedCount": 19,
+          "startedCount": 20,
           "totalPlaybackProgress": 7652.20068749126,
-          "lastSeenAt": "2026-05-26T08:23:33Z",
+          "lastSeenAt": "2026-05-26T08:34:27Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 13,
+          "totalStarts": 4,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.1324260770975,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:34:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.25
+        },
         "s1e11": {
           "season": 1,
           "episode": 11,
@@ -955,20 +969,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.5
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 12,
-          "totalStarts": 3,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.1324260770975,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T14:19:13Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.3333
         },
         "s1e10": {
           "season": 1,
@@ -1097,7 +1097,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 239.1313
+      "avgPlaybackProgress": 231.8849
     },
     {
       "contentId": "tt16030542",
@@ -2724,64 +2724,6 @@
       "avgPlaybackProgress": 645.7644
     },
     {
-      "contentId": "tt0259141",
-      "imdbId": "tt0259141",
-      "tmdbId": "",
-      "title": "Jackie Chan Adventures",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 3,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1269.9225303854876,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333,
-      "lastActivityAt": "2026-05-15T04:23:29Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 1,
-          "startedCount": 3,
-          "totalPlaybackProgress": 1269.9225303854876,
-          "lastSeenAt": "2026-05-15T04:23:29Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T04:23:29Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 2,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1269.9225303854876,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T04:23:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.5
-        }
-      },
-      "avgPlaybackProgress": 317.4806
-    },
-    {
       "contentId": "tt11378946",
       "imdbId": "tt11378946",
       "tmdbId": "936075",
@@ -3056,6 +2998,64 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
+    },
+    {
+      "contentId": "tt0259141",
+      "imdbId": "tt0259141",
+      "tmdbId": "",
+      "title": "Jackie Chan Adventures",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1269.9225303854876,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-15T04:23:29Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 1269.9225303854876,
+          "lastSeenAt": "2026-05-15T04:23:29Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-15T04:23:29Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1269.9225303854876,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-15T04:23:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 423.3075
     },
     {
       "contentId": "tt32820897",

@@ -3311,47 +3311,218 @@ function renderCatalog() {
   }
 }
 
-function renderAdminDashboard() {
-  updateFloatingReportButtonVisibility();
-  setCatalogCount('Panel administrador');
-  elements.items.innerHTML = `<section class="admin-dashboard"><div class="loader-card"><span class="spinner"></span><strong>Cargando dashboard</strong><p>Recolectando métricas del sistema...</p></div></section>`;
-  const user = getAuthUser();
-  const userEmail = String(user?.email || '').trim().toLowerCase();
+// Cache stale-while-revalidate del payload del admin dashboard. Antes el
+// admin disparaba ~511 fetches en cada visita (11 assets + hasta 100 watch
+// progress + hasta 400 user roles). Ahora pintamos al instante con cache
+// y refrescamos en background cuando es viejo.
+const ADMIN_DATA_CACHE_KEY = 'mep_admin_dashboard_cache_v1';
+const ADMIN_DATA_CACHE_TTL = 5 * 60 * 1000;
+const ADMIN_DATA_CACHE_HARD_EXPIRE = 30 * 60 * 1000;
 
-  Promise.all([
-    fetchJsonWithTimeout('./assets/watch-progress/index.json', 3500).catch(() => ({ users: [] })),
-    fetchJsonWithTimeout('./assets/users/index.json', 3500).catch(() => ({ users: [] })),
-    fetchJsonWithTimeout('./assets/catalog.seed.json', 3500).catch(() => ({})),
-    fetchJsonWithTimeout('./assets/roles/permissions.json', 3500).catch(() => ({ permissions: {} })),
-    fetchJsonWithTimeout('./assets/roles/requests.json', 3500).catch(() => ({ requests: [] })),
-    fetchJsonWithTimeout('./assets/roles/audit.json', 3500).catch(() => ({ events: [] })),
-    fetchJsonWithTimeout('./assets/watch-analytics/events.json', 3500).catch(() => ({ events: [] })),
-    fetchJsonWithTimeout('./assets/watch-analytics/by-content.json', 3500).catch(() => ({ items: [] })),
-    fetchJsonWithTimeout('./assets/watch-analytics/by-user.json', 3500).catch(() => ({ users: [] })),
-    fetchJsonWithTimeout('./assets/watch-analytics/summary.json', 3500).catch(() => ({})),
-    fetchJsonWithTimeout('./assets/watch-analytics/xapi/index.json', 3500).catch(() => ({ users: [] }))
-  ]).then(async ([watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit, analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi]) => {
-    const toTs = (value) => {
-      const text = String(value || '').trim();
-      if (!text) return 0;
-      return Date.parse(text) || 0;
-    };
-    const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
+function loadAdminDataCache(userKey) {
+  try {
+    const raw = localStorage.getItem(ADMIN_DATA_CACHE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (!data?.ts || !data?.payload) return null;
+    if (String(data.userKey || '') !== String(userKey || '')) return null;
+    const age = Date.now() - Number(data.ts || 0);
+    if (age > ADMIN_DATA_CACHE_HARD_EXPIRE) return null;
+    return { ...data, stale: age > ADMIN_DATA_CACHE_TTL };
+  } catch { return null; }
+}
+
+function saveAdminDataCache(userKey, payload) {
+  try {
+    localStorage.setItem(ADMIN_DATA_CACHE_KEY, JSON.stringify({
+      ts: Date.now(), userKey: String(userKey || ''), payload
+    }));
+  } catch {}
+}
+
+function clearAdminDataCache() {
+  try { localStorage.removeItem(ADMIN_DATA_CACHE_KEY); } catch {}
+}
+
+// Fetches todos los datos que necesita el dashboard, con error handling por
+// sección. Retorna { payload, warnings: [] } — `warnings` lista las secciones
+// que fallaron para mostrarlas en el UI (vs antes que rompía todo el render).
+async function fetchAdminPayload(progressFn) {
+  const warnings = [];
+  const safeFetch = async (label, url, fallback, timeout = 3500) => {
+    progressFn?.(label);
+    try {
+      return await fetchJsonWithTimeout(url, timeout);
+    } catch (err) {
+      warnings.push({ label, error: String(err?.message || err) });
+      dtvLog('error', `admin payload section failed: ${label}`, String(err));
+      return fallback;
+    }
+  };
+
+  const [watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit,
+    analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi] = await Promise.all([
+    safeFetch('Índice watch-progress', './assets/watch-progress/index.json', { users: [] }),
+    safeFetch('Índice de usuarios', './assets/users/index.json', { users: [] }),
+    safeFetch('Catálogo seed', './assets/catalog.seed.json', {}),
+    safeFetch('Permisos por rol', './assets/roles/permissions.json', { permissions: {} }),
+    safeFetch('Solicitudes de rol', './assets/roles/requests.json', { requests: [] }),
+    safeFetch('Auditoría de roles', './assets/roles/audit.json', { events: [] }),
+    safeFetch('Eventos de analytics', './assets/watch-analytics/events.json', { events: [] }),
+    safeFetch('Analytics por contenido', './assets/watch-analytics/by-content.json', { items: [] }),
+    safeFetch('Analytics por usuario', './assets/watch-analytics/by-user.json', { users: [] }),
+    safeFetch('Resumen de analytics', './assets/watch-analytics/summary.json', {}),
+    safeFetch('xAPI', './assets/watch-analytics/xapi/index.json', { users: [] })
+  ]);
+
+  const analyticsEnabled = (Array.isArray(analyticsEvents?.events) && analyticsEvents.events.length > 0)
+    || (Array.isArray(analyticsByContent?.items) && analyticsByContent.items.length > 0)
+    || (Array.isArray(analyticsByUser?.users) && analyticsByUser.users.length > 0);
+
+  // Skip de los 100 user details fetches cuando analytics está enabled. Antes
+  // se hacían siempre aunque solo se usaran si !analyticsEnabled. Esto solo
+  // ahorra ~100 fetches en el caso común donde analytics SÍ existe.
+  const users = Array.isArray(watchIndex?.users) ? watchIndex.users : [];
+  let cleanDetails = [];
+  if (!analyticsEnabled && users.length > 0) {
+    progressFn?.(`Detalle de ${Math.min(users.length, 100)} usuarios`);
     const details = await Promise.all(users.slice(0, 100).map(async (entry) => {
       const rel = String(entry?.file || '').trim();
       if (!rel) return null;
       const file = rel.startsWith('users/') ? rel : `users/${rel}`;
       return fetchJsonWithTimeout(`./assets/watch-progress/${file}?v=${window.__mep_build || Date.now()}`, 3000).catch(() => null);
     }));
-    const cleanDetails = details.filter(Boolean);
-    const allUsersIndex = Array.isArray(usersIndex?.users) ? usersIndex.users : [];
-    const userRoleRecords = await Promise.all(allUsersIndex.slice(0, 400).map(async (entry) => {
+    cleanDetails = details.filter(Boolean);
+  }
+
+  // Role records: necesarios para contar viewers/agents/admins y usuarios sin
+  // actividad. El index no trae el role; hacemos fetch en chunks de 50 para no
+  // saturar la red con 400 conexiones simultáneas.
+  const allUsersIndex = Array.isArray(usersIndex?.users) ? usersIndex.users : [];
+  const roleSlice = allUsersIndex.slice(0, 200);
+  progressFn?.(`Roles de ${roleSlice.length} usuarios`);
+  const roleUsers = [];
+  const ROLE_CHUNK = 50;
+  for (let i = 0; i < roleSlice.length; i += ROLE_CHUNK) {
+    const chunk = roleSlice.slice(i, i + ROLE_CHUNK);
+    const records = await Promise.all(chunk.map(async (entry) => {
       const file = String(entry?.file || '').trim();
       if (!file) return null;
       return fetchJsonWithTimeout(`./assets/users/${encodeURIComponent(file)}?v=${window.__mep_build || Date.now()}`, 2500).catch(() => null);
     }));
-    const roleUsers = userRoleRecords.filter(Boolean);
-    const userReportIssues = await workerListIssues({ state: 'all', labels: 'user-report', per_page: '100', sort: 'created', direction: 'desc' }).catch(() => []);
+    for (const r of records) if (r) roleUsers.push(r);
+  }
+
+  progressFn?.('Reportes desde el Worker');
+  let userReportIssues = [];
+  let workerOnline = true;
+  try {
+    userReportIssues = await workerListIssues({
+      state: 'all', labels: 'user-report', per_page: '100',
+      sort: 'created', direction: 'desc'
+    });
+  } catch (err) {
+    workerOnline = false;
+    warnings.push({
+      label: 'Worker /list-issues',
+      error: String(err?.message || err),
+      kind: 'worker'
+    });
+    dtvLog('error', 'worker offline — reportes no disponibles', String(err));
+  }
+
+  return {
+    payload: {
+      watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit,
+      analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi,
+      cleanDetails, roleUsers, userReportIssues, analyticsEnabled, workerOnline
+    },
+    warnings
+  };
+}
+
+function renderAdminDashboard() {
+  updateFloatingReportButtonVisibility();
+  setCatalogCount('Panel administrador');
+  const user = getAuthUser();
+  const userEmail = String(user?.email || '').trim().toLowerCase();
+  const userKey = userEmail || 'anonymous';
+
+  // Loading granular: estado mutable que se actualiza con cada fetch.
+  let loadingLabel = 'Inicializando…';
+  const updateLoadingUi = (stale = false) => {
+    const el = document.querySelector('#adminLoadingLabel');
+    if (el) {
+      el.textContent = stale ? 'Refrescando datos…' : loadingLabel;
+    }
+  };
+
+  // Si hay cache, pintamos al instante (incluso si está stale) y refrescamos
+  // en background. Si no, mostramos solo el skeleton de carga.
+  const cached = loadAdminDataCache(userKey);
+  if (cached?.payload) {
+    renderAdminDashboardData({
+      payload: cached.payload,
+      warnings: [],
+      days: 7,
+      userEmail,
+      stale: cached.stale
+    });
+  } else {
+    elements.items.innerHTML = `<section class="admin-dashboard">
+      <div class="loader-card">
+        <span class="spinner"></span>
+        <strong>Cargando dashboard</strong>
+        <p id="adminLoadingLabel">${escapeHtml(loadingLabel)}</p>
+      </div>
+    </section>`;
+  }
+
+  const progressFn = (label) => {
+    loadingLabel = label;
+    updateLoadingUi(Boolean(cached));
+  };
+
+  fetchAdminPayload(progressFn).then(({ payload, warnings }) => {
+    saveAdminDataCache(userKey, payload);
+    renderAdminDashboardData({ payload, warnings, days: 7, userEmail, stale: false });
+  }).catch((err) => {
+    dtvLog('error', 'admin dashboard fetch failed', String(err));
+    if (!cached?.payload) {
+      elements.items.innerHTML = `<section class="admin-dashboard">
+        <div class="empty">
+          <strong>No se pudieron cargar las métricas.</strong>
+          <p>${escapeHtml(String(err?.message || err))}</p>
+          <button type="button" id="adminRetry">Reintentar</button>
+        </div>
+      </section>`;
+      document.querySelector('#adminRetry')?.addEventListener('click', () => {
+        clearAdminDataCache();
+        renderAdminDashboard();
+      });
+    }
+  });
+}
+
+function renderAdminDashboardData({ payload, warnings, days: initialDays, userEmail, stale }) {
+  const {
+    watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit,
+    analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi,
+    cleanDetails, roleUsers, userReportIssues, analyticsEnabled, workerOnline
+  } = payload;
+  // Adaptamos los nombres locales al closure original.
+  // (El cuerpo del .then() original sigue casi idéntico abajo.)
+  return (async () => {
+    const toTs = (value) => {
+      const text = String(value || '').trim();
+      if (!text) return 0;
+      return Date.parse(text) || 0;
+    };
+    // `cleanDetails`, `roleUsers`, `userReportIssues`, `analyticsEnabled` y
+    // `workerOnline` ya vienen resueltos en el payload (fetchAdminPayload los
+    // cargó con error handling por sección). Solo derivamos lo que el render
+    // necesita en cada cambio de ventana 7/30/90d.
+    const allUsersIndex = Array.isArray(usersIndex?.users) ? usersIndex.users : [];
     const requests = Array.isArray(roleRequests?.requests) ? roleRequests.requests : [];
     const auditEvents = Array.isArray(roleAudit?.events) ? roleAudit.events : [];
     const permissionsCount = Object.keys(permissions?.permissions || {}).length;
@@ -3359,7 +3530,6 @@ function renderAdminDashboard() {
     const analyticsContentRows = Array.isArray(analyticsByContent?.items) ? analyticsByContent.items : [];
     const analyticsUserRows = Array.isArray(analyticsByUser?.users) ? analyticsByUser.users : [];
     const analyticsXapiRows = Array.isArray(analyticsXapi?.users) ? analyticsXapi.users : [];
-    const analyticsEnabled = analyticsEventRows.length > 0 || analyticsContentRows.length > 0 || analyticsUserRows.length > 0;
     const historyRows = analyticsEnabled
       ? analyticsEventRows
       : cleanDetails.flatMap((row) => Array.isArray(row?.history) ? row.history.map((entry) => ({
@@ -3606,8 +3776,29 @@ function renderAdminDashboard() {
       const seriesCount = Array.isArray(seed?.series) ? seed.series.length : 0;
       const adminNote = userEmail === ADMIN_EMAIL ? 'Usuario administrador activo' : 'Rol administrador activo';
 
+      // Banners: avisos cuando el Worker está caído o cuando hay secciones
+      // del payload que fallaron. Antes el dashboard mostraba ceros sin
+      // contexto; ahora el admin sabe qué está roto.
+      const workerOfflineWarn = workerOnline ? '' : `
+        <div class="admin-warn-banner admin-warn-banner-worker">
+          <strong>Worker offline.</strong>
+          <span>Los reportes de usuarios, "Procesar cola" y "Publicar sitio" no funcionarán hasta que se deploye el Worker (<code>devil-tv-recovery</code>).</span>
+        </div>`;
+      const sectionWarnings = (warnings || []).filter((w) => w.kind !== 'worker');
+      const sectionWarnBanner = sectionWarnings.length ? `
+        <div class="admin-warn-banner">
+          <strong>Algunas secciones no cargaron:</strong>
+          <span>${escapeHtml(sectionWarnings.map((w) => w.label).join(', '))}</span>
+        </div>` : '';
+      const staleBanner = stale ? `
+        <div class="admin-warn-banner admin-warn-banner-stale">
+          <strong>Datos en cache.</strong>
+          <span>Refrescando en segundo plano…</span>
+        </div>` : '';
+
       elements.items.innerHTML = `
         <section class="admin-dashboard">
+          ${workerOfflineWarn}${sectionWarnBanner}${staleBanner}
           <header class="admin-hero">
             <div>
               <h3>Centro de Control</h3>
@@ -3618,6 +3809,7 @@ function renderAdminDashboard() {
               <button class="admin-pill-btn ${days === 30 ? 'active' : ''}" data-admin-window="30">30d</button>
               <button class="admin-pill-btn ${days === 90 ? 'active' : ''}" data-admin-window="90">90d</button>
               <button class="admin-pill-btn" id="adminExportCsv">Export CSV</button>
+              <button class="admin-pill-btn" id="adminRefresh" title="Limpiar cache y recargar datos">Refrescar</button>
             </div>
           </header>
 
@@ -3730,6 +3922,24 @@ function renderAdminDashboard() {
 
       document.querySelector('#adminExportCsv')?.addEventListener('click', () => exportCsv(scopedHistory, days));
 
+      document.querySelector('#adminRefresh')?.addEventListener('click', () => {
+        clearAdminDataCache();
+        renderAdminDashboard();
+      });
+
+      // Si el Worker está offline, deshabilitar los botones que dependen de él
+      // y mostrar tooltip claro en lugar de dejar al user apretar y ver el
+      // error genérico de fetch.
+      if (!workerOnline) {
+        ['#adminRunQueue', '#adminRunDeploy'].forEach((selector) => {
+          const btn = document.querySelector(selector);
+          if (!btn) return;
+          btn.disabled = true;
+          btn.title = 'Worker offline — desplegar primero el Worker';
+          btn.classList.add('admin-ghost-disabled');
+        });
+      }
+
       const createBtn = document.querySelector('#adminCreateAgent');
       createBtn?.addEventListener('click', async () => {
         const msg = document.querySelector('#adminRoleMsg');
@@ -3768,10 +3978,8 @@ function renderAdminDashboard() {
       });
     };
 
-    renderForWindow(7);
-  }).catch(() => {
-    elements.items.innerHTML = `<section class="admin-dashboard"><div class="empty">No se pudieron cargar métricas del sistema.</div></section>`;
-  });
+    renderForWindow(initialDays || 7);
+  })();
 }
 
 window.mepAdminCreateAgent = createAgentByAdmin;

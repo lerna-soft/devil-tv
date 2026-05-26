@@ -1487,8 +1487,13 @@ body.detail-active .catalog {
   content: "";
   position: absolute;
   inset: 0;
+  /* Triple gradient: vertical bottom-up + horizontal left-shade + poster.
+     Asegura contraste del texto en posters muy oscuros (donde antes el
+     título podía mezclarse con el fondo) y también en muy claros (donde
+     el texto blanco era ilegible). */
   background:
-    linear-gradient(90deg, rgba(5, 5, 9, 0.96) 0%, rgba(5, 5, 9, 0.72) 42%, rgba(5, 5, 9, 0.16) 100%),
+    linear-gradient(180deg, rgba(5, 5, 9, 0) 35%, rgba(5, 5, 9, 0.55) 100%),
+    linear-gradient(90deg, rgba(5, 5, 9, 0.96) 0%, rgba(5, 5, 9, 0.78) 42%, rgba(5, 5, 9, 0.32) 100%),
     var(--poster),
     var(--surface);
   background-position: center;
@@ -1511,6 +1516,15 @@ body.detail-active .catalog {
   font-size: clamp(2.8rem, 7vw, 6.4rem);
   line-height: 0.86;
   margin: 0.65rem 0 0.85rem;
+  /* Sombra de seguridad: cubre el caso edge donde el poster es tan oscuro
+     que el texto se mezcla, o tan brillante que el blanco no destaca. */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
+}
+
+.title-copy .title-description,
+.title-copy .title-meta,
+.title-copy .title-kicker {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .title-kicker {

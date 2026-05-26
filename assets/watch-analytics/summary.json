@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-26T21:16:41.185Z",
+  "generatedAt": "2026-05-26T22:14:56.987Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 305,
-  "totalCompletions": 74,
-  "overallCompletionRate": 0.2426,
+  "totalStarts": 306,
+  "totalCompletions": 73,
+  "overallCompletionRate": 0.2386,
   "trackedTitles": 179,
   "mostWatchedContent": [
     {
@@ -25,20 +25,20 @@
       "completionRate": 0.2381
     },
     {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 32,
-      "uniqueUsers": 1,
-      "completionRate": 0.24
-    },
-    {
       "contentId": "tt16030542",
       "title": "The Recruit",
       "type": "series",
       "totalEvents": 31,
       "uniqueUsers": 1,
       "completionRate": 0.55
+    },
+    {
+      "contentId": "tt14452776",
+      "title": "The Bear",
+      "type": "series",
+      "totalEvents": 31,
+      "uniqueUsers": 1,
+      "completionRate": 0.2
     },
     {
       "contentId": "tt2560140",

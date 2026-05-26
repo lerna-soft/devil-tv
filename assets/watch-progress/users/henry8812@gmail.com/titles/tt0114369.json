@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt0114369",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T08:23:00Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt0114369:s1e1:preference:2026-05-16T08:23:00Z",
+      "contentId": "tt0114369",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt0114369",
+      "tmdbId": "",
+      "title": "Seven",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T08:23:00Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

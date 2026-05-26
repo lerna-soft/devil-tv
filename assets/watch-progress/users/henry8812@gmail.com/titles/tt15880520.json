@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt15880520",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T07:00:49Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt15880520:s1e1:preference:2026-05-16T07:00:49Z",
+      "contentId": "tt15880520",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt15880520",
+      "tmdbId": "",
+      "title": "James Bond 007 at the Movies",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T07:00:49Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

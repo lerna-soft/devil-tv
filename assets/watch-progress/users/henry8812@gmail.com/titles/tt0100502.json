@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt0100502",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T07:03:25Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt0100502:s1e1:preference:2026-05-16T07:03:25Z",
+      "contentId": "tt0100502",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt0100502",
+      "tmdbId": "",
+      "title": "RoboCop 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T07:03:25Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

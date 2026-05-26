@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T21:16:41.191Z",
+  "generatedAt": "2026-05-26T22:14:56.992Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T14:32:46Z",
+      "updatedAt": "2026-05-26T22:14:46Z",
       "totalEvents": 500,
-      "totalStarts": 265,
-      "totalCompletions": 73,
-      "totalPlaybackProgress": 274698.8179515242,
+      "totalStarts": 266,
+      "totalCompletions": 72,
+      "totalPlaybackProgress": 272818.0945122952,
       "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-26T14:32:46Z",
+      "lastActivityAt": "2026-05-26T22:14:46Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -122,6 +122,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt32820897": {
+          "contentId": "tt32820897",
+          "imdbId": "tt32820897",
+          "tmdbId": "1311031",
+          "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-26T22:14:46Z"
+        },
         "tt2560140": {
           "contentId": "tt2560140",
           "imdbId": "tt2560140",
@@ -169,18 +181,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T03:17:40Z"
-        },
-        "tt32820897": {
-          "contentId": "tt32820897",
-          "imdbId": "tt32820897",
-          "tmdbId": "1311031",
-          "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T23:12:11Z"
         },
         "tt21209876": {
           "contentId": "tt21209876",
@@ -1160,9 +1160,9 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 32,
+          "playCount": 31,
           "completed": true,
-          "maxProgressValue": 1880.723439229025,
+          "maxProgressValue": 1847.2402707482993,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T04:44:02Z"
         },
@@ -1971,7 +1971,7 @@
           "lastSeenAt": "2026-05-15T23:14:38Z"
         }
       },
-      "avgPlaybackProgress": 549.3976
+      "avgPlaybackProgress": 545.6362
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T06:55:04.864Z",
+  "generatedAt": "2026-05-26T06:56:48.730Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1331,27 +1331,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 17,
-      "totalStarts": 17,
+      "totalEvents": 18,
+      "totalStarts": 18,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-26T06:54:56Z",
+      "lastActivityAt": "2026-05-26T06:56:40Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
+          "playCount": 18,
           "completedCount": 0,
-          "startedCount": 17,
+          "startedCount": 18,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T06:54:56Z",
+          "lastSeenAt": "2026-05-26T06:56:40Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e15": {
+          "season": 1,
+          "episode": 15,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T06:56:40Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e14": {
           "season": 1,
           "episode": 14,
@@ -1549,7 +1563,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 2.463
+      "avgPlaybackProgress": 2.3261
     },
     {
       "contentId": "tt29552248",
@@ -9503,50 +9517,6 @@
           "lastActivityAt": "2026-05-14T19:20:28Z",
           "users": {
             "juancarlosrios531970@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt33332385",
-      "imdbId": "tt33332385",
-      "tmdbId": "",
-      "title": "Widow's Bay",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-14T11:43:48Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-14T11:43:48Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T11:43:48Z",
-          "users": {
-            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }

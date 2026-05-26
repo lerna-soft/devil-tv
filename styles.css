@@ -4231,3 +4231,34 @@ code {
   .adm-dow-row { gap: 0.2rem; }
   .adm-dow-cell { padding: 0.3rem 0.1rem; }
 }
+
+/* ============================================================
+   ADM TABLE SORT — flechas en headers ordenables
+   ============================================================ */
+.adm-sortable {
+  cursor: pointer;
+  position: relative;
+  transition: color 120ms ease;
+  user-select: none;
+}
+.adm-sortable:hover { color: var(--adm-text) !important; }
+.adm-sortable::after {
+  content: '↕';
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-left: 0.35rem;
+  opacity: 0.32;
+  transition: opacity 120ms ease, color 120ms ease;
+  vertical-align: middle;
+}
+.adm-sortable:hover::after { opacity: 0.65; }
+.adm-sort-asc::after {
+  color: rgba(229, 130, 130, 1);
+  content: '↑';
+  opacity: 1;
+}
+.adm-sort-desc::after {
+  color: rgba(229, 130, 130, 1);
+  content: '↓';
+  opacity: 1;
+}

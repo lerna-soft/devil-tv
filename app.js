@@ -108,6 +108,73 @@ function dtvIsTabular(data) {
   return false;
 }
 
+// Sort genérico para tablas .adm-table.
+// Cada <th data-sort="key" data-sort-type="num|text|date"> es clickable y
+// alterna entre tres estados (asc / desc / sin-orden = vuelve al orden de
+// render original). El estado actual se refleja con flechas via clases CSS.
+// Los <td> que tengan `data-sort-value` priorizan ese valor sobre parsear
+// el textContent — útil para columnas con pills o formato "hace 2h".
+function bindAdmTableSort(table) {
+  if (!table || table.dataset.sortBound === '1') return;
+  table.dataset.sortBound = '1';
+  const tbody = table.tBodies[0];
+  if (tbody) {
+    [...tbody.rows].forEach((row, idx) => { row.dataset.sortOriginal = String(idx); });
+  }
+  table.querySelectorAll('th[data-sort]').forEach((th, colIdx) => {
+    th.classList.add('adm-sortable');
+    th.addEventListener('click', () => {
+      const currentState = th.dataset.sortState || 'none';
+      // Limpiar estado de los demás th.
+      table.querySelectorAll('th[data-sort]').forEach((h) => {
+        h.dataset.sortState = 'none';
+        h.classList.remove('adm-sort-asc', 'adm-sort-desc');
+      });
+      const nextState = currentState === 'none' ? 'asc' : currentState === 'asc' ? 'desc' : 'none';
+      th.dataset.sortState = nextState;
+      if (nextState === 'asc') th.classList.add('adm-sort-asc');
+      if (nextState === 'desc') th.classList.add('adm-sort-desc');
+      admSortTableBody(table, colIdx, nextState, th.dataset.sortType || 'text');
+    });
+  });
+}
+
+function admSortTableBody(table, colIdx, state, type) {
+  const tbody = table.tBodies[0];
+  if (!tbody) return;
+  const rows = [...tbody.rows];
+  if (state === 'none') {
+    rows.sort((a, b) => Number(a.dataset.sortOriginal || 0) - Number(b.dataset.sortOriginal || 0));
+  } else {
+    const dir = state === 'asc' ? 1 : -1;
+    const getVal = (row) => {
+      const cell = row.children[colIdx];
+      if (!cell) return type === 'num' || type === 'date' ? 0 : '';
+      const dv = cell.dataset.sortValue;
+      if (dv !== undefined && dv !== '') {
+        if (type === 'num') return Number(dv) || 0;
+        if (type === 'date') return Number(dv) || Date.parse(dv) || 0;
+        return String(dv).toLowerCase();
+      }
+      const text = String(cell.textContent || '').trim();
+      if (type === 'num') {
+        const m = text.match(/-?[\d.,]+/);
+        return m ? Number(m[0].replace(/,/g, '')) || 0 : 0;
+      }
+      if (type === 'date') return Date.parse(text) || 0;
+      return text.toLowerCase();
+    };
+    rows.sort((a, b) => {
+      const av = getVal(a);
+      const bv = getVal(b);
+      if (av < bv) return -1 * dir;
+      if (av > bv) return 1 * dir;
+      return 0;
+    });
+  }
+  for (const row of rows) tbody.appendChild(row);
+}
+
 // Toast helper centralizado. Wrappea SweetAlert si está cargado; en su
 // ausencia es no-op para no romper el flujo (la app ya tiene fallbacks
 // donde el mensaje es crítico). Sustituye al patrón Swal.fire(...) duplicado
@@ -4245,13 +4312,13 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
             <table class="adm-table" id="admUsersTable">
               <thead>
                 <tr>
-                  <th>Usuario</th>
-                  <th>Rol</th>
-                  <th class="adm-num" title="Series únicas vistas">Series</th>
-                  <th class="adm-num" title="Películas únicas vistas">Pelis</th>
-                  <th class="adm-num">Eventos</th>
-                  <th class="adm-num">Reportes</th>
-                  <th>Última actividad</th>
+                  <th data-sort="name" data-sort-type="text">Usuario</th>
+                  <th data-sort="role" data-sort-type="text">Rol</th>
+                  <th class="adm-num" data-sort="series" data-sort-type="num" title="Series únicas vistas">Series</th>
+                  <th class="adm-num" data-sort="movies" data-sort-type="num" title="Películas únicas vistas">Pelis</th>
+                  <th class="adm-num" data-sort="events" data-sort-type="num">Eventos</th>
+                  <th class="adm-num" data-sort="reports" data-sort-type="num">Reportes</th>
+                  <th data-sort="last" data-sort-type="date">Última actividad</th>
                   <th></th>
                 </tr>
               </thead>
@@ -4259,9 +4326,11 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                 ${sortedUsers.map((u) => {
                   const seriesCount = u.seriesIds?.size || 0;
                   const moviesCount = u.movieIds?.size || 0;
+                  // Rank de rol para sort: admin > agent > viewer.
+                  const roleRank = u.role === 'admin' ? 3 : u.role === 'agent' ? 2 : 1;
                   return `
                   <tr data-user-email="${escapeAttribute(u.email)}" data-user-role="${escapeAttribute(u.role)}" data-user-active="${u.events > 0 ? '1' : '0'}">
-                    <td>
+                    <td data-sort-value="${escapeAttribute(u.name.toLowerCase())}">
                       <div class="adm-user-cell">
                         ${avatar(u.name, u.email)}
                         <div>
@@ -4270,12 +4339,12 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                         </div>
                       </div>
                     </td>
-                    <td>${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}</td>
-                    <td class="adm-num">${seriesCount > 0 ? fmtNum(seriesCount) : '<span class="adm-muted">0</span>'}</td>
-                    <td class="adm-num">${moviesCount > 0 ? fmtNum(moviesCount) : '<span class="adm-muted">0</span>'}</td>
-                    <td class="adm-num">${fmtNum(u.events)}</td>
-                    <td class="adm-num">${u.openReports > 0 ? pill(`${u.reports} (${u.openReports} ab)`, 'warn') : (u.reports > 0 ? pill(String(u.reports), 'neutral') : '<span class="adm-muted">0</span>')}</td>
-                    <td><span class="adm-muted">${u.lastEventAt ? `hace ${ago(new Date(u.lastEventAt).toISOString())}` : '—'}</span></td>
+                    <td data-sort-value="${roleRank}">${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}</td>
+                    <td class="adm-num" data-sort-value="${seriesCount}">${seriesCount > 0 ? fmtNum(seriesCount) : '<span class="adm-muted">0</span>'}</td>
+                    <td class="adm-num" data-sort-value="${moviesCount}">${moviesCount > 0 ? fmtNum(moviesCount) : '<span class="adm-muted">0</span>'}</td>
+                    <td class="adm-num" data-sort-value="${u.events}">${fmtNum(u.events)}</td>
+                    <td class="adm-num" data-sort-value="${u.reports}">${u.openReports > 0 ? pill(`${u.reports} (${u.openReports} ab)`, 'warn') : (u.reports > 0 ? pill(String(u.reports), 'neutral') : '<span class="adm-muted">0</span>')}</td>
+                    <td data-sort-value="${u.lastEventAt || 0}"><span class="adm-muted">${u.lastEventAt ? `hace ${ago(new Date(u.lastEventAt).toISOString())}` : '—'}</span></td>
                     <td><button class="adm-btn-ghost" data-open-user="${escapeAttribute(u.email)}">Ver</button></td>
                   </tr>
                 `;}).join('')}
@@ -4318,35 +4387,40 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
             <table class="adm-table" id="admReportsTable">
               <thead>
                 <tr>
-                  <th class="adm-num">#</th>
-                  <th>Título</th>
-                  <th>Categoría</th>
-                  <th>Reportador</th>
-                  <th>Estado</th>
-                  <th>Fecha</th>
+                  <th class="adm-num" data-sort="num" data-sort-type="num">#</th>
+                  <th data-sort="title" data-sort-type="text">Título</th>
+                  <th data-sort="category" data-sort-type="text">Categoría</th>
+                  <th data-sort="reporter" data-sort-type="text">Reportador</th>
+                  <th data-sort="state" data-sort-type="text">Estado</th>
+                  <th data-sort="date" data-sort-type="date">Fecha</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                ${sortedReports.map((r) => `
+                ${sortedReports.map((r) => {
+                  const reporterLabel = (r.userName || r.userEmail || 'Usuario').toLowerCase();
+                  const createdTs = toTs(r.createdAt);
+                  // Estado para sort: open > closed.
+                  const stateRank = r.state === 'open' ? 2 : r.state === 'closed' ? 1 : 0;
+                  return `
                   <tr data-report-state="${escapeAttribute(r.state)}" data-report-category="${escapeAttribute(r.category)}" data-report-search="${escapeAttribute(`${r.number} ${r.title} ${r.userEmail} ${r.userName}`.toLowerCase())}">
-                    <td class="adm-num"><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener" class="adm-link-mono">#${r.number}</a></td>
-                    <td>
+                    <td class="adm-num" data-sort-value="${r.number}"><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener" class="adm-link-mono">#${r.number}</a></td>
+                    <td data-sort-value="${escapeAttribute(String(r.title || r.scope || '').toLowerCase())}">
                       <strong>${escapeHtml(r.title || r.scope || '—')}</strong>
                       ${r.scope === 'episode' && r.season && r.episode ? `<small class="adm-muted">T${r.season}E${r.episode}</small>` : ''}
                     </td>
-                    <td>${pill(r.category, r.category === 'playback' ? 'warn' : r.category === 'subs' ? 'info' : 'neutral')}</td>
-                    <td>
+                    <td data-sort-value="${escapeAttribute(r.category || '')}">${pill(r.category, r.category === 'playback' ? 'warn' : r.category === 'subs' ? 'info' : 'neutral')}</td>
+                    <td data-sort-value="${escapeAttribute(reporterLabel)}">
                       <div class="adm-user-cell adm-user-cell-sm">
                         ${avatar(r.userName || r.userEmail || 'Usuario', r.userEmail)}
                         <span>${escapeHtml(r.userName || r.userEmail || 'Usuario')}</span>
                       </div>
                     </td>
-                    <td>${pill(r.state, r.state === 'open' ? 'warn' : 'success')}</td>
-                    <td><span class="adm-muted">hace ${ago(r.createdAt)}</span></td>
+                    <td data-sort-value="${stateRank}">${pill(r.state, r.state === 'open' ? 'warn' : 'success')}</td>
+                    <td data-sort-value="${createdTs}"><span class="adm-muted">hace ${ago(r.createdAt)}</span></td>
                     <td><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener" class="adm-btn-ghost">Abrir</a></td>
                   </tr>
-                `).join('') || '<tr><td colspan="7" class="adm-empty">Sin reportes en esta ventana.</td></tr>'}
+                `;}).join('') || '<tr><td colspan="7" class="adm-empty">Sin reportes en esta ventana.</td></tr>'}
               </tbody>
             </table>
           </div>
@@ -4469,16 +4543,26 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
               <h4>Provisionamiento reciente</h4>
               <span class="adm-panel-sub">${pendingRequests.length} pendientes · ${approvedRequests.length} aprobadas</span>
             </header>
-            ${requests.length ? `<table class="adm-table">
-              <thead><tr><th>Email</th><th>Rol</th><th>Estado</th><th>Solicitado</th><th>Resuelto</th></tr></thead>
+            ${requests.length ? `<table class="adm-table" id="admRequestsTable">
+              <thead><tr>
+                <th data-sort="email" data-sort-type="text">Email</th>
+                <th data-sort="role" data-sort-type="text">Rol</th>
+                <th data-sort="status" data-sort-type="text">Estado</th>
+                <th data-sort="requested" data-sort-type="date">Solicitado</th>
+                <th data-sort="resolved" data-sort-type="date">Resuelto</th>
+              </tr></thead>
               <tbody>
-                ${requests.slice(0, 12).map((r) => `<tr>
-                  <td>${escapeHtml(r.email || '—')}</td>
-                  <td>${pill(r.role || 'role', 'neutral')}</td>
-                  <td>${pill(r.status || 'unknown', r.status === 'approved' ? 'success' : r.status === 'pending' ? 'warn' : 'neutral')}</td>
-                  <td><span class="adm-muted">hace ${ago(r.requestedAt)}</span></td>
-                  <td><span class="adm-muted">${r.resolvedAt ? `hace ${ago(r.resolvedAt)}` : '—'}</span></td>
-                </tr>`).join('')}
+                ${requests.slice(0, 12).map((r) => {
+                  const reqTs = toTs(r.requestedAt);
+                  const resTs = toTs(r.resolvedAt);
+                  const statusRank = r.status === 'pending' ? 3 : r.status === 'approved' ? 2 : r.status === 'rejected' ? 1 : 0;
+                  return `<tr>
+                  <td data-sort-value="${escapeAttribute(String(r.email || '').toLowerCase())}">${escapeHtml(r.email || '—')}</td>
+                  <td data-sort-value="${escapeAttribute(r.role || '')}">${pill(r.role || 'role', 'neutral')}</td>
+                  <td data-sort-value="${statusRank}">${pill(r.status || 'unknown', r.status === 'approved' ? 'success' : r.status === 'pending' ? 'warn' : 'neutral')}</td>
+                  <td data-sort-value="${reqTs}"><span class="adm-muted">hace ${ago(r.requestedAt)}</span></td>
+                  <td data-sort-value="${resTs}"><span class="adm-muted">${r.resolvedAt ? `hace ${ago(r.resolvedAt)}` : '—'}</span></td>
+                </tr>`;}).join('')}
               </tbody>
             </table>` : '<p class="adm-empty">Sin solicitudes.</p>'}
           </section>
@@ -4686,6 +4770,10 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
       document.querySelector('#admReportsSearch')?.addEventListener('input', applyReportsFilter);
       document.querySelector('#admReportsStateFilter')?.addEventListener('change', applyReportsFilter);
       document.querySelector('#admReportsCategoryFilter')?.addEventListener('change', applyReportsFilter);
+
+      // Bind sort en todas las tablas .adm-table de la sección activa.
+      // Solo afecta th con data-sort declarado (otros th quedan estáticos).
+      document.querySelectorAll('.adm-table').forEach((table) => bindAdmTableSort(table));
 
       document.querySelectorAll('[data-admin-window]').forEach((btn) => {
         btn.addEventListener('click', () => renderForWindow(Number(btn.dataset.adminWindow || '7')));

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-26T04:30:46.458Z",
+  "generatedAt": "2026-05-26T05:05:26.619Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 558,
-  "totalStarts": 301,
-  "totalCompletions": 80,
-  "overallCompletionRate": 0.2658,
+  "totalStarts": 302,
+  "totalCompletions": 79,
+  "overallCompletionRate": 0.2616,
   "trackedTitles": 181,
   "mostWatchedContent": [
     {
@@ -65,18 +65,10 @@
       "completionRate": 0.1111
     },
     {
-      "contentId": "tt31596104",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.8
-    },
-    {
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 8,
+      "totalEvents": 9,
       "uniqueUsers": 1,
       "completionRate": 0
     },
@@ -86,6 +78,14 @@
       "type": "series",
       "totalEvents": 8,
       "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
+      "contentId": "tt33046197",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 8,
+      "uniqueUsers": 3,
       "completionRate": 0
     }
   ]

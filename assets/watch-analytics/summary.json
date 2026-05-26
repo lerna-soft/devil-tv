@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-26T05:46:57.761Z",
+  "generatedAt": "2026-05-26T05:57:41.844Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 558,
-  "totalStarts": 303,
-  "totalCompletions": 78,
-  "overallCompletionRate": 0.2574,
+  "totalStarts": 304,
+  "totalCompletions": 77,
+  "overallCompletionRate": 0.2533,
   "trackedTitles": 181,
   "mostWatchedContent": [
     {
@@ -57,20 +57,20 @@
       "completionRate": 0.0769
     },
     {
+      "contentId": "tt2560140",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
-    },
-    {
-      "contentId": "tt2560140",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 12,
-      "uniqueUsers": 1,
-      "completionRate": 0
     },
     {
       "contentId": "tt21209876",

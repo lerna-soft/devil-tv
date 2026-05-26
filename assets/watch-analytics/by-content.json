@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T05:46:57.764Z",
+  "generatedAt": "2026-05-26T05:57:41.847Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1494,88 +1494,46 @@
       "avgPlaybackProgress": 748.7335
     },
     {
-      "contentId": "tt32897959",
-      "imdbId": "tt32897959",
-      "tmdbId": "1316092",
-      "title": "“Cumbres Borrascosas”",
-      "type": "movie",
-      "totalEvents": 13,
-      "totalStarts": 9,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 19691.405951855024,
-      "uniqueUsers": 2,
-      "completionRate": 0.1111,
-      "lastActivityAt": "2026-05-18T19:40:47Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 5,
-          "totalPlaybackProgress": 16690.969082000003,
-          "lastSeenAt": "2026-05-18T19:40:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "ornebe@hotmail.com": {
-          "userEmail": "ornebe@hotmail.com",
-          "userName": "Orfinelly",
-          "playCount": 7,
-          "completedCount": 1,
-          "startedCount": 4,
-          "totalPlaybackProgress": 3000.4368698550247,
-          "lastSeenAt": "2026-05-11T21:06:22Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 13,
-          "totalStarts": 9,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 19691.405951855024,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-18T19:40:47Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "ornebe@hotmail.com": true
-          },
-          "completionRate": 0.1111
-        }
-      },
-      "avgPlaybackProgress": 1514.7235
-    },
-    {
       "contentId": "tt2560140",
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 12,
-      "totalStarts": 12,
+      "totalEvents": 13,
+      "totalStarts": 13,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-26T05:46:49Z",
+      "lastActivityAt": "2026-05-26T05:57:32Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 12,
+          "playCount": 13,
           "completedCount": 0,
-          "startedCount": 12,
+          "startedCount": 13,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T05:46:49Z",
+          "lastSeenAt": "2026-05-26T05:57:32Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e10": {
+          "season": 1,
+          "episode": 10,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T05:57:32Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e9": {
           "season": 1,
           "episode": 9,
@@ -1703,7 +1661,63 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 3.4892
+      "avgPlaybackProgress": 3.2208
+    },
+    {
+      "contentId": "tt32897959",
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "totalEvents": 13,
+      "totalStarts": 9,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 19691.405951855024,
+      "uniqueUsers": 2,
+      "completionRate": 0.1111,
+      "lastActivityAt": "2026-05-18T19:40:47Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 5,
+          "totalPlaybackProgress": 16690.969082000003,
+          "lastSeenAt": "2026-05-18T19:40:47Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "ornebe@hotmail.com": {
+          "userEmail": "ornebe@hotmail.com",
+          "userName": "Orfinelly",
+          "playCount": 7,
+          "completedCount": 1,
+          "startedCount": 4,
+          "totalPlaybackProgress": 3000.4368698550247,
+          "lastSeenAt": "2026-05-11T21:06:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 13,
+          "totalStarts": 9,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 19691.405951855024,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-18T19:40:47Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "ornebe@hotmail.com": true
+          },
+          "completionRate": 0.1111
+        }
+      },
+      "avgPlaybackProgress": 1514.7235
     },
     {
       "contentId": "tt21209876",
@@ -2178,78 +2192,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt31596104",
-      "imdbId": "tt31596104",
-      "tmdbId": "",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 5,
-      "totalStarts": 3,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 2850.040406,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667,
-      "lastActivityAt": "2026-05-14T19:21:17Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 2,
-          "startedCount": 3,
-          "totalPlaybackProgress": 2850.040406,
-          "lastSeenAt": "2026-05-14T19:21:17Z",
-          "lastSeason": 1,
-          "lastEpisode": 10
-        }
-      },
-      "episodes": {
-        "s1e12": {
-          "season": 1,
-          "episode": 12,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T19:21:17Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e11": {
-          "season": 1,
-          "episode": 11,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1424.985373,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T07:06:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e10": {
-          "season": 1,
-          "episode": 10,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1425.055033,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T07:00:49Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 570.0081
-    },
-    {
       "contentId": "296232",
       "imdbId": "",
       "tmdbId": "296232",
@@ -2698,6 +2640,64 @@
         }
       },
       "avgPlaybackProgress": 317.4806
+    },
+    {
+      "contentId": "tt31596104",
+      "imdbId": "tt31596104",
+      "tmdbId": "",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "totalEvents": 4,
+      "totalStarts": 3,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1424.985373,
+      "uniqueUsers": 1,
+      "completionRate": 0.3333,
+      "lastActivityAt": "2026-05-14T19:21:17Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 1,
+          "startedCount": 3,
+          "totalPlaybackProgress": 1424.985373,
+          "lastSeenAt": "2026-05-14T19:21:17Z",
+          "lastSeason": 1,
+          "lastEpisode": 11
+        }
+      },
+      "episodes": {
+        "s1e12": {
+          "season": 1,
+          "episode": 12,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-14T19:21:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1424.985373,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-14T07:06:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 356.2463
     },
     {
       "contentId": "tt11378946",

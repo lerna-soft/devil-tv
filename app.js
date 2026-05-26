@@ -4107,12 +4107,25 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
             completed: 0,
             firstAt: 0,
             lastAt: 0,
-            lastStatus: ''
+            lastStatus: '',
+            // Para series: tracking por episodio único. Ver UN episodio
+            // completo NO significa terminar la serie. Sin datos del total
+            // de capítulos en el seed, lo más honesto es mostrar "X/Y eps".
+            episodeKeys: new Set(),
+            completedEpisodeKeys: new Set()
           };
           prev.plays += 1;
           if (status === 'completed') prev.completed += 1;
           if (!prev.title || prev.title === prev.id) prev.title = String(ev?.title || prev.title);
           if (!prev.type && evType) prev.type = evType;
+          // Episode-level tracking para series.
+          const seasonNum = Number(ev?.season || 0);
+          const episodeNum = Number(ev?.episode || 0);
+          if (seasonNum > 0 && episodeNum > 0) {
+            const epKey = `s${seasonNum}e${episodeNum}`;
+            prev.episodeKeys.add(epKey);
+            if (status === 'completed') prev.completedEpisodeKeys.add(epKey);
+          }
           if (ts > 0) {
             if (ts > prev.lastAt) { prev.lastAt = ts; prev.lastStatus = status; }
             if (prev.firstAt === 0 || ts < prev.firstAt) prev.firstAt = ts;
@@ -4805,19 +4818,43 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
             ${list.map((t) => {
               const lastLabel = t.lastAt ? `Última vez: hace ${ago(new Date(t.lastAt).toISOString())} (${fmtDate(t.lastAt)})` : 'Sin fecha registrada';
               const firstLabel = t.firstAt && t.firstAt !== t.lastAt ? ` · Primera vez: ${fmtDate(t.firstAt)}` : '';
-              // Status final del último event de reproducción:
-              // - completed → "Terminada" verde.
-              // - playing/started → "En progreso" amarillo (la inició pero no
-              //   sabemos si la terminó porque no llegó a 'completed').
-              // - cualquier otra cosa → "Iniciada" info (raro, pero defensivo).
-              const statusBadge = t.lastStatus === 'completed'
-                ? pill('Terminada', 'success')
-                : (t.lastStatus === 'playing' || t.lastStatus === 'started')
-                  ? pill('En progreso', 'warn')
-                  : pill('Iniciada', 'info');
-              const completedNote = t.completed > 0
-                ? ` · ${t.completed} vez${t.completed > 1 ? 'es' : ''} terminada`
-                : ` · sin terminar`;
+              const isSeriesItem = t.type === 'series' || t.type === 'tv' || t.type === 'episode' || (t.episodeKeys?.size || 0) > 0;
+              let statusBadge;
+              let detailNote;
+              if (isSeriesItem) {
+                // Series: "Terminada" sería decir que vio TODOS los capítulos,
+                // y sin info del total de la serie no podemos saberlo. Mostramos
+                // X/Y eps vistos vs completos para que el admin juzgue.
+                const epsSeen = t.episodeKeys?.size || 0;
+                const epsCompleted = t.completedEpisodeKeys?.size || 0;
+                if (epsSeen === 0) {
+                  // Caso defensivo: serie sin episodios trackeados (eventos viejos).
+                  statusBadge = t.lastStatus === 'completed' ? pill('Algún cap. terminado', 'info') : pill('Iniciada', 'warn');
+                  detailNote = `${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'}`;
+                } else if (epsCompleted === 0) {
+                  statusBadge = pill('Solo iniciada', 'warn');
+                  detailNote = `${epsSeen} episodio${epsSeen > 1 ? 's' : ''} iniciado${epsSeen > 1 ? 's' : ''} · 0 terminados`;
+                } else if (epsCompleted < epsSeen) {
+                  statusBadge = pill(`${epsCompleted}/${epsSeen} eps`, 'warn');
+                  detailNote = `${epsSeen} episodio${epsSeen > 1 ? 's' : ''} visto${epsSeen > 1 ? 's' : ''} · ${epsCompleted} terminado${epsCompleted > 1 ? 's' : ''}`;
+                } else {
+                  // Todos los iniciados están completos. Aún puede haber más
+                  // capítulos en la serie que no vio — por eso "todos vistos"
+                  // y no "Serie terminada".
+                  statusBadge = pill(`${epsCompleted} eps · todos vistos`, 'success');
+                  detailNote = `Terminó los ${epsCompleted} episodio${epsCompleted > 1 ? 's' : ''} que abrió`;
+                }
+              } else {
+                // Películas: un play completed = terminada, es 1:1.
+                statusBadge = t.lastStatus === 'completed'
+                  ? pill('Terminada', 'success')
+                  : (t.lastStatus === 'playing' || t.lastStatus === 'started')
+                    ? pill('En progreso', 'warn')
+                    : pill('Iniciada', 'info');
+                detailNote = t.completed > 0
+                  ? `${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'} · ${t.completed} vez${t.completed > 1 ? 'es' : ''} terminada`
+                  : `${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'} · sin terminar`;
+              }
               return `<li>
                 <div class="adm-content-row">
                   <strong class="adm-content-title">${escapeHtml(t.title || t.id)}</strong>
@@ -4825,7 +4862,7 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                 </div>
                 <div class="adm-content-meta">
                   <small class="adm-muted">${escapeHtml(lastLabel + firstLabel)}</small>
-                  <small class="adm-muted">${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'}${completedNote}</small>
+                  <small class="adm-muted">${escapeHtml(detailNote)}</small>
                 </div>
               </li>`;
             }).join('')}

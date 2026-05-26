@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T14:01:53.730Z",
+  "generatedAt": "2026-05-26T14:02:05.609Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T14:01:37Z",
+      "updatedAt": "2026-05-26T14:01:55Z",
       "totalEvents": 500,
-      "totalStarts": 265,
+      "totalStarts": 264,
       "totalCompletions": 74,
       "totalPlaybackProgress": 276366.9009515242,
-      "uniqueContentCount": 162,
-      "lastActivityAt": "2026-05-26T14:01:37Z",
+      "uniqueContentCount": 161,
+      "lastActivityAt": "2026-05-26T14:01:55Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -128,11 +128,11 @@
           "tmdbId": "1087891",
           "title": "Amateur",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-26T14:01:37Z"
+          "lastSeenAt": "2026-05-26T14:01:55Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1969,18 +1969,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-15T23:14:38Z"
-        },
-        "tt0259141": {
-          "contentId": "tt0259141",
-          "imdbId": "tt0259141",
-          "tmdbId": "",
-          "title": "Jackie Chan Adventures",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-15T04:23:29Z"
         }
       },
       "avgPlaybackProgress": 552.7338

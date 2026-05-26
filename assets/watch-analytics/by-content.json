@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T05:57:41.847Z",
+  "generatedAt": "2026-05-26T06:12:28.348Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1394,132 +1394,46 @@
       "avgPlaybackProgress": 967.9896
     },
     {
-      "contentId": "tt1190634",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 14,
-      "totalStarts": 13,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 10482.269520847183,
-      "uniqueUsers": 1,
-      "completionRate": 0.0769,
-      "lastActivityAt": "2026-05-22T23:10:41Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 14,
-          "completedCount": 1,
-          "startedCount": 13,
-          "totalPlaybackProgress": 10482.269520847183,
-          "lastSeenAt": "2026-05-22T23:10:41Z",
-          "lastSeason": 1,
-          "lastEpisode": 8
-        }
-      },
-      "episodes": {
-        "s5e8": {
-          "season": 5,
-          "episode": 8,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2618.228266414001,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T23:10:41Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s5e7": {
-          "season": 5,
-          "episode": 7,
-          "totalEvents": 7,
-          "totalStarts": 6,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 7864.041254433182,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T13:57:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0.1667
-        },
-        "s1e8": {
-          "season": 1,
-          "episode": 8,
-          "totalEvents": 3,
-          "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T11:21:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s5e1": {
-          "season": 5,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T11:21:10Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e7": {
-          "season": 1,
-          "episode": 7,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T18:49:05Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 748.7335
-    },
-    {
       "contentId": "tt2560140",
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 13,
+      "totalEvents": 14,
+      "totalStarts": 14,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-26T05:57:32Z",
+      "lastActivityAt": "2026-05-26T06:12:20Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 14,
           "completedCount": 0,
-          "startedCount": 13,
+          "startedCount": 14,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T05:57:32Z",
+          "lastSeenAt": "2026-05-26T06:12:20Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T06:12:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e10": {
           "season": 1,
           "episode": 10,
@@ -1661,7 +1575,107 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 3.2208
+      "avgPlaybackProgress": 2.9908
+    },
+    {
+      "contentId": "tt1190634",
+      "imdbId": "tt1190634",
+      "tmdbId": "76479",
+      "title": "The Boys",
+      "type": "series",
+      "totalEvents": 14,
+      "totalStarts": 13,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 10482.269520847183,
+      "uniqueUsers": 1,
+      "completionRate": 0.0769,
+      "lastActivityAt": "2026-05-22T23:10:41Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 14,
+          "completedCount": 1,
+          "startedCount": 13,
+          "totalPlaybackProgress": 10482.269520847183,
+          "lastSeenAt": "2026-05-22T23:10:41Z",
+          "lastSeason": 1,
+          "lastEpisode": 8
+        }
+      },
+      "episodes": {
+        "s5e8": {
+          "season": 5,
+          "episode": 8,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2618.228266414001,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T23:10:41Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s5e7": {
+          "season": 5,
+          "episode": 7,
+          "totalEvents": 7,
+          "totalStarts": 6,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 7864.041254433182,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T13:57:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0.1667
+        },
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 3,
+          "totalStarts": 3,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T11:21:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s5e1": {
+          "season": 5,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T11:21:10Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-14T18:49:05Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 748.7335
     },
     {
       "contentId": "tt32897959",
@@ -2642,64 +2656,6 @@
       "avgPlaybackProgress": 317.4806
     },
     {
-      "contentId": "tt31596104",
-      "imdbId": "tt31596104",
-      "tmdbId": "",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 3,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1424.985373,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333,
-      "lastActivityAt": "2026-05-14T19:21:17Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 1,
-          "startedCount": 3,
-          "totalPlaybackProgress": 1424.985373,
-          "lastSeenAt": "2026-05-14T19:21:17Z",
-          "lastSeason": 1,
-          "lastEpisode": 11
-        }
-      },
-      "episodes": {
-        "s1e12": {
-          "season": 1,
-          "episode": 12,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T19:21:17Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e11": {
-          "season": 1,
-          "episode": 11,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1424.985373,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T07:06:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 356.2463
-    },
-    {
       "contentId": "tt11378946",
       "imdbId": "tt11378946",
       "tmdbId": "936075",
@@ -2974,6 +2930,64 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
+    },
+    {
+      "contentId": "tt31596104",
+      "imdbId": "tt31596104",
+      "tmdbId": "",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1424.985373,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-14T19:21:17Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 1424.985373,
+          "lastSeenAt": "2026-05-14T19:21:17Z",
+          "lastSeason": 1,
+          "lastEpisode": 11
+        }
+      },
+      "episodes": {
+        "s1e12": {
+          "season": 1,
+          "episode": 12,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-14T19:21:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1424.985373,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-14T07:06:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 474.9951
     },
     {
       "contentId": "tt32820897",

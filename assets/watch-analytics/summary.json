@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T05:57:41.844Z",
+  "generatedAt": "2026-05-26T06:12:28.343Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -49,20 +49,20 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt2560140",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 14,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 14,
       "uniqueUsers": 1,
       "completionRate": 0.0769
-    },
-    {
-      "contentId": "tt2560140",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0
     },
     {
       "contentId": "tt32897959",

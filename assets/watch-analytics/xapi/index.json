@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-26T04:22:20.823Z",
+  "generatedAt": "2026-05-26T04:30:46.415Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "statementCount": 500,
-      "lastStatementAt": "2026-05-26T04:17:36Z",
+      "lastStatementAt": "2026-05-26T04:30:35Z",
       "file": "users/henry8812@gmail.com.json"
     },
     {
@@ -56,6 +56,14 @@
       "statementCount": 0,
       "lastStatementAt": "",
       "file": "users/admin@deviltv.local.json"
+    },
+    {
+      "userEmail": "admin@lerna.com",
+      "userName": "Lerna Admin",
+      "role": "admin",
+      "statementCount": 0,
+      "lastStatementAt": "",
+      "file": "users/admin@lerna.com.json"
     },
     {
       "userEmail": "carlosferry98@gmail.com",

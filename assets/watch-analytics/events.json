@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T03:17:53.051Z",
+  "generatedAt": "2026-05-26T03:18:23.443Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-26T03:18:11Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 41.870621,
+      "progressValue": 41.870621,
+      "progressPercent": 41.870621,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-24T14:46:08.492Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T03:18:11Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8594324:s1e1:started:2026-05-26T03:17:40Z",
       "contentId": "tt8594324",
@@ -11508,27 +11529,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T06:31:28Z"
-    },
-    {
-      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-14T06:31:09Z",
-      "contentId": "tt34610311",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 2.972405,
-      "progressValue": 2.972405,
-      "progressPercent": 2.972405,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T06:31:09Z"
     },
     {
       "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",

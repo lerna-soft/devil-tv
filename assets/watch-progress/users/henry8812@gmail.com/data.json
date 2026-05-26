@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-26T03:17:40Z",
+  "updatedAt": "2026-05-26T03:18:11Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1738,9 +1738,9 @@
       "tmdbId": "1429",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-25T06:04:47Z",
+      "progress": 41.870621,
+      "lastProgress": 41.870621,
+      "updatedAt": "2026-05-26T03:18:11Z",
       "watched": {}
     },
     "tt21209876": {
@@ -1895,15 +1895,34 @@
     "updatedAt": "2026-05-25T05:53:01Z"
   },
   "lastWatch": {
-    "imdbId": "tt8594324",
-    "tmdbId": "17174",
+    "imdbId": "tt2560140",
+    "tmdbId": "1429",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-26T03:17:40Z"
+    "progress": 41.870621,
+    "updatedAt": "2026-05-26T03:18:11Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-26T03:18:11Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 41.870621,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-24T14:46:08.492Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T03:18:11Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8594324:s1e1:started:2026-05-26T03:17:40Z",
       "contentId": "tt8594324",
@@ -11384,25 +11403,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T06:31:28Z"
-    },
-    {
-      "eventId": "unknown:tt34610311:s1e1:playing:2026-05-14T06:31:09Z",
-      "contentId": "tt34610311",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 2.972405,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T06:31:09Z"
     }
   ]
 }

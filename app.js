@@ -3962,35 +3962,60 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
       // "Usuarios" y los drill-downs necesitan. Es O(n) en eventos y se
       // computa una sola vez por render.
       const userActivityMap = new Map();
+      const makeUserRecord = (email, name, role) => ({
+        email,
+        name: String(name || '').trim() || email,
+        role: String(role || 'viewer').trim().toLowerCase() || 'viewer',
+        createdAt: '',
+        events: 0,
+        lastEventAt: 0,
+        reports: 0,
+        openReports: 0,
+        completions: 0,
+        // Tracking de contenido visto: Sets de ids únicos por tipo + un Map
+        // titleId → {title, type, plays, completed} para el "top contenido".
+        seriesIds: new Set(),
+        movieIds: new Set(),
+        titlePlays: new Map()
+      });
       for (const row of roleUsers) {
         const email = String(row?.email || '').trim().toLowerCase();
         if (!email) continue;
-        userActivityMap.set(email, {
-          email,
-          name: String(row?.name || '').trim() || email,
-          role: String(row?.role || 'viewer').trim().toLowerCase() || 'viewer',
-          createdAt: String(row?.createdAt || '').trim(),
-          events: 0,
-          lastEventAt: 0,
-          reports: 0,
-          openReports: 0,
-          completions: 0
-        });
+        const rec = makeUserRecord(email, row?.name, row?.role);
+        rec.createdAt = String(row?.createdAt || '').trim();
+        userActivityMap.set(email, rec);
       }
       for (const ev of scopedHistory) {
         const email = String(ev?.userEmail || '').trim().toLowerCase();
         if (!email) continue;
-        const u = userActivityMap.get(email) || { email, name: ev?.userName || email, role: 'viewer', events: 0, lastEventAt: 0, reports: 0, openReports: 0, completions: 0 };
+        const u = userActivityMap.get(email) || makeUserRecord(email, ev?.userName, 'viewer');
         u.events += 1;
         const ts = toTs(ev?.updatedAt);
         if (ts > u.lastEventAt) u.lastEventAt = ts;
-        if (String(ev?.playerStatus || '').toLowerCase() === 'completed') u.completions += 1;
+        const status = String(ev?.playerStatus || '').toLowerCase();
+        if (status === 'completed') u.completions += 1;
+        const titleId = String(ev?.imdbId || ev?.tmdbId || '').trim();
+        const evType = String(ev?.type || '').toLowerCase();
+        if (titleId) {
+          if (evType === 'series' || evType === 'tv' || evType === 'episode') u.seriesIds.add(titleId);
+          else if (evType === 'movie') u.movieIds.add(titleId);
+          // Cuando type viene vacío (events viejos), inferimos por la presencia
+          // de season/episode > 0 → es serie. Eventos sin nada de eso quedan
+          // sin clasificar (no rompen el conteo pero no suman al split).
+          else if (Number(ev?.season) > 0 || Number(ev?.episode) > 0) u.seriesIds.add(titleId);
+          const key = titleId;
+          const prev = u.titlePlays.get(key) || { id: titleId, title: String(ev?.title || titleId), type: evType, plays: 0, completed: 0 };
+          prev.plays += 1;
+          if (status === 'completed') prev.completed += 1;
+          if (!prev.title || prev.title === prev.id) prev.title = String(ev?.title || prev.title);
+          u.titlePlays.set(key, prev);
+        }
         userActivityMap.set(email, u);
       }
       for (const rep of scopedReports) {
         const email = String(rep.userEmail || '').trim().toLowerCase();
         if (!email) continue;
-        const u = userActivityMap.get(email) || { email, name: rep.userName || email, role: 'viewer', events: 0, lastEventAt: 0, reports: 0, openReports: 0, completions: 0 };
+        const u = userActivityMap.get(email) || makeUserRecord(email, rep.userName, 'viewer');
         u.reports += 1;
         if (rep.state === 'open') u.openReports += 1;
         userActivityMap.set(email, u);
@@ -4222,6 +4247,8 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                 <tr>
                   <th>Usuario</th>
                   <th>Rol</th>
+                  <th class="adm-num" title="Series únicas vistas">Series</th>
+                  <th class="adm-num" title="Películas únicas vistas">Pelis</th>
                   <th class="adm-num">Eventos</th>
                   <th class="adm-num">Reportes</th>
                   <th>Última actividad</th>
@@ -4229,7 +4256,10 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                 </tr>
               </thead>
               <tbody>
-                ${sortedUsers.map((u) => `
+                ${sortedUsers.map((u) => {
+                  const seriesCount = u.seriesIds?.size || 0;
+                  const moviesCount = u.movieIds?.size || 0;
+                  return `
                   <tr data-user-email="${escapeAttribute(u.email)}" data-user-role="${escapeAttribute(u.role)}" data-user-active="${u.events > 0 ? '1' : '0'}">
                     <td>
                       <div class="adm-user-cell">
@@ -4241,12 +4271,14 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                       </div>
                     </td>
                     <td>${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}</td>
+                    <td class="adm-num">${seriesCount > 0 ? fmtNum(seriesCount) : '<span class="adm-muted">0</span>'}</td>
+                    <td class="adm-num">${moviesCount > 0 ? fmtNum(moviesCount) : '<span class="adm-muted">0</span>'}</td>
                     <td class="adm-num">${fmtNum(u.events)}</td>
                     <td class="adm-num">${u.openReports > 0 ? pill(`${u.reports} (${u.openReports} ab)`, 'warn') : (u.reports > 0 ? pill(String(u.reports), 'neutral') : '<span class="adm-muted">0</span>')}</td>
                     <td><span class="adm-muted">${u.lastEventAt ? `hace ${ago(new Date(u.lastEventAt).toISOString())}` : '—'}</span></td>
                     <td><button class="adm-btn-ghost" data-open-user="${escapeAttribute(u.email)}">Ver</button></td>
                   </tr>
-                `).join('')}
+                `;}).join('')}
               </tbody>
             </table>
           </div>
@@ -4530,6 +4562,12 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           const drawerTitle = document.querySelector('#admDrawerTitle');
           const drawerBody = document.querySelector('#admDrawerBody');
           if (drawerTitle) drawerTitle.textContent = u.name;
+          // Top contenido visto por el user (descendente por plays).
+          const userTopTitles = [...(u.titlePlays?.values?.() || [])]
+            .sort((a, b) => b.plays - a.plays)
+            .slice(0, 6);
+          const seriesCount = u.seriesIds?.size || 0;
+          const moviesCount = u.movieIds?.size || 0;
           if (drawerBody) drawerBody.innerHTML = `
             <div class="adm-drawer-summary">
               ${avatar(u.name, u.email)}
@@ -4543,10 +4581,32 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
               </div>
             </div>
             <div class="adm-kpi-grid adm-kpi-grid-compact">
+              ${renderKpi('Series únicas', fmtNum(seriesCount))}
+              ${renderKpi('Películas únicas', fmtNum(moviesCount))}
+              ${renderKpi('Episodios completados', fmtNum(u.completions))}
               ${renderKpi(`Eventos · ${days}d`, fmtNum(u.events))}
               ${renderKpi('Reportes', fmtNum(u.reports), null, `${u.openReports} abiertos`)}
-              ${renderKpi('Completados', fmtNum(u.completions))}
             </div>
+            ${userTopTitles.length ? `<section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Contenido más visto</h4>
+                <span class="adm-panel-sub">Top ${userTopTitles.length}</span>
+              </header>
+              <ul class="adm-rank">
+                ${userTopTitles.map((t, i) => {
+                  const typeLabel = t.type === 'movie' ? 'Película' : (t.type === 'series' || t.type === 'tv' || t.type === 'episode' ? 'Serie' : '—');
+                  const typeKind = t.type === 'movie' ? 'info' : 'warn';
+                  return `<li>
+                    <span class="adm-rank-pos">${i + 1}</span>
+                    <span class="adm-rank-name">
+                      <strong>${escapeHtml(t.title || t.id)}</strong>
+                      <small>${pill(typeLabel, typeKind)} ${t.completed > 0 ? `· ${t.completed} completado${t.completed > 1 ? 's' : ''}` : ''}</small>
+                    </span>
+                    <span class="adm-rank-val">${fmtNum(t.plays)} ev</span>
+                  </li>`;
+                }).join('')}
+              </ul>
+            </section>` : ''}
             <section class="adm-panel">
               <header class="adm-panel-head"><h4>Última actividad</h4></header>
               ${userHistory.length ? `<ul class="adm-timeline">

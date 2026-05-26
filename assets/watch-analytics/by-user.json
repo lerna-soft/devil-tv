@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T03:17:53.057Z",
+  "generatedAt": "2026-05-26T03:18:23.449Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T03:17:40Z",
+      "updatedAt": "2026-05-26T03:18:11Z",
       "totalEvents": 500,
       "totalStarts": 260,
       "totalCompletions": 80,
-      "totalPlaybackProgress": 291628.5643210577,
-      "uniqueContentCount": 165,
-      "lastActivityAt": "2026-05-26T03:17:40Z",
+      "totalPlaybackProgress": 291667.4625370577,
+      "uniqueContentCount": 164,
+      "lastActivityAt": "2026-05-26T03:18:11Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -26,6 +26,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt2560140",
         "tt21209876",
         "tt2294629",
         "tt33046197",
@@ -37,8 +38,7 @@
         "tt7068946",
         "tt0032186",
         "tt31938062",
-        "tt16431870",
-        "tt34610311"
+        "tt16431870"
       ],
       "content": {
         "15070": {
@@ -125,6 +125,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 41.870621,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-26T03:18:11Z"
+        },
         "tt8594324": {
           "contentId": "tt8594324",
           "imdbId": "tt8594324",
@@ -160,18 +172,6 @@
           "maxProgressValue": 1207.950481,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-25T18:46:45Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-25T06:04:47Z"
         },
         "tt10366206": {
           "contentId": "tt10366206",
@@ -2008,21 +2008,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-14T11:43:48Z"
-        },
-        "tt34610311": {
-          "contentId": "tt34610311",
-          "imdbId": "tt34610311",
-          "tmdbId": "1419406",
-          "title": "Escuadrón letal",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 2.972405,
-          "maxProgressPercent": 2.972405,
-          "lastSeenAt": "2026-05-14T06:31:09Z"
         }
       },
-      "avgPlaybackProgress": 583.2571
+      "avgPlaybackProgress": 583.3349
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

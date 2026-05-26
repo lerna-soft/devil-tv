@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T03:17:53.054Z",
+  "generatedAt": "2026-05-26T03:18:23.446Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2150,6 +2150,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt2560140",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 4,
+      "totalStarts": 4,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 41.870621,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-26T03:18:11Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 4,
+          "totalPlaybackProgress": 41.870621,
+          "lastSeenAt": "2026-05-26T03:18:11Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 4,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 41.870621,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T03:18:11Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 10.4677
+    },
+    {
       "contentId": "296232",
       "imdbId": "",
       "tmdbId": "296232",
@@ -2600,50 +2644,6 @@
       "avgPlaybackProgress": 317.4806
     },
     {
-      "contentId": "tt2560140",
-      "imdbId": "tt2560140",
-      "tmdbId": "1429",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 3,
-      "totalStarts": 3,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-25T06:04:47Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 3,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-25T06:04:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 3,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-25T06:04:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt11378946",
       "imdbId": "tt11378946",
       "tmdbId": "936075",
@@ -2962,62 +2962,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt34610311",
-      "imdbId": "tt34610311",
-      "tmdbId": "1419406",
-      "title": "Escuadrón letal",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 2.972405,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-25T00:35:32Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-25T00:35:32Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 2.972405,
-          "lastSeenAt": "2026-05-14T06:31:09Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2.972405,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-25T00:35:32Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1.4862
     },
     {
       "contentId": "tt10366206",
@@ -3966,6 +3910,50 @@
         }
       },
       "avgPlaybackProgress": 1625.1439
+    },
+    {
+      "contentId": "tt34610311",
+      "imdbId": "tt34610311",
+      "tmdbId": "1419406",
+      "title": "Escuadrón letal",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-25T00:35:32Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-25T00:35:32Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-25T00:35:32Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt35707374",

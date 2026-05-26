@@ -4052,6 +4052,27 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
         rec.createdAt = String(row?.createdAt || '').trim();
         userActivityMap.set(email, rec);
       }
+      // FILTRO IMPORTANTE: marcar un título como "ver más tarde" emite un
+      // event con PlayerStatus="preference". Esos no son visualizaciones
+      // reales — solo intentos del user. Si los contábamos como "vistos",
+      // un título solo añadido a la cola aparecía en el conteo del user.
+      // Solo eventos con player status de reproducción real cuentan.
+      const isRealPlay = (ev) => {
+        const ps = String(ev?.playerStatus || '').toLowerCase();
+        const et = String(ev?.eventType || '').toLowerCase();
+        // Excluir preferences explícitas (like/watchLater).
+        if (ps === 'preference') return false;
+        if (et === 'preference') return false;
+        // Considerar real play: playing/started/completed.
+        if (['playing', 'started', 'completed'].includes(ps)) return true;
+        if (['started', 'progress', 'completed'].includes(et)) {
+          // 'progress' con progress=0 y sin player status real probablemente
+          // es ruido — pero si tiene algo de progreso, lo dejamos pasar.
+          return Number(ev?.progress || 0) > 0 || et !== 'progress';
+        }
+        return false;
+      };
+
       for (const ev of scopedHistory) {
         const email = String(ev?.userEmail || '').trim().toLowerCase();
         if (!email) continue;
@@ -4060,15 +4081,22 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
         const ts = toTs(ev?.updatedAt);
         if (ts > u.lastEventAt) u.lastEventAt = ts;
         const status = String(ev?.playerStatus || '').toLowerCase();
+        // Solo contar completions cuando el playerStatus es realmente 'completed'.
         if (status === 'completed') u.completions += 1;
+
+        // Tracking de títulos únicos vistos: SOLO eventos de reproducción real.
+        if (!isRealPlay(ev)) {
+          userActivityMap.set(email, u);
+          continue;
+        }
+
         const titleId = String(ev?.imdbId || ev?.tmdbId || '').trim();
         const evType = String(ev?.type || '').toLowerCase();
         if (titleId) {
           if (evType === 'series' || evType === 'tv' || evType === 'episode') u.seriesIds.add(titleId);
           else if (evType === 'movie') u.movieIds.add(titleId);
           // Cuando type viene vacío (events viejos), inferimos por la presencia
-          // de season/episode > 0 → es serie. Eventos sin nada de eso quedan
-          // sin clasificar (no rompen el conteo pero no suman al split).
+          // de season/episode > 0 → es serie.
           else if (Number(ev?.season) > 0 || Number(ev?.episode) > 0) u.seriesIds.add(titleId);
           const key = titleId;
           const prev = u.titlePlays.get(key) || {
@@ -4085,7 +4113,6 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           if (status === 'completed') prev.completed += 1;
           if (!prev.title || prev.title === prev.id) prev.title = String(ev?.title || prev.title);
           if (!prev.type && evType) prev.type = evType;
-          const ts = toTs(ev?.updatedAt);
           if (ts > 0) {
             if (ts > prev.lastAt) { prev.lastAt = ts; prev.lastStatus = status; }
             if (prev.firstAt === 0 || ts < prev.firstAt) prev.firstAt = ts;
@@ -4778,7 +4805,19 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
             ${list.map((t) => {
               const lastLabel = t.lastAt ? `Última vez: hace ${ago(new Date(t.lastAt).toISOString())} (${fmtDate(t.lastAt)})` : 'Sin fecha registrada';
               const firstLabel = t.firstAt && t.firstAt !== t.lastAt ? ` · Primera vez: ${fmtDate(t.firstAt)}` : '';
-              const statusBadge = t.lastStatus === 'completed' ? pill('completado', 'success') : t.lastStatus === 'playing' ? pill('en progreso', 'warn') : '';
+              // Status final del último event de reproducción:
+              // - completed → "Terminada" verde.
+              // - playing/started → "En progreso" amarillo (la inició pero no
+              //   sabemos si la terminó porque no llegó a 'completed').
+              // - cualquier otra cosa → "Iniciada" info (raro, pero defensivo).
+              const statusBadge = t.lastStatus === 'completed'
+                ? pill('Terminada', 'success')
+                : (t.lastStatus === 'playing' || t.lastStatus === 'started')
+                  ? pill('En progreso', 'warn')
+                  : pill('Iniciada', 'info');
+              const completedNote = t.completed > 0
+                ? ` · ${t.completed} vez${t.completed > 1 ? 'es' : ''} terminada`
+                : ` · sin terminar`;
               return `<li>
                 <div class="adm-content-row">
                   <strong class="adm-content-title">${escapeHtml(t.title || t.id)}</strong>
@@ -4786,11 +4825,11 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                 </div>
                 <div class="adm-content-meta">
                   <small class="adm-muted">${escapeHtml(lastLabel + firstLabel)}</small>
-                  <small class="adm-muted">${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'}${t.completed > 0 ? ` · ${t.completed} completado${t.completed > 1 ? 's' : ''}` : ''}</small>
+                  <small class="adm-muted">${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'}${completedNote}</small>
                 </div>
               </li>`;
             }).join('')}
-          </ul>` : `<p class="adm-empty">Este usuario aún no ha visto ${label}.</p>`}
+          </ul>` : `<p class="adm-empty">Este usuario aún no ha reproducido ${label}.</p>`}
         `;
         if (drawer) drawer.hidden = false;
         // El botón "Volver al perfil" reabre el drawer del usuario completo.

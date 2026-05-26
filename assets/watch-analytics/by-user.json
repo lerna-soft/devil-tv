@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T14:16:20.476Z",
+  "generatedAt": "2026-05-26T14:31:39.044Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T14:01:55Z",
+      "updatedAt": "2026-05-26T14:31:22Z",
       "totalEvents": 500,
-      "totalStarts": 264,
-      "totalCompletions": 74,
-      "totalPlaybackProgress": 276366.9009515242,
+      "totalStarts": 265,
+      "totalCompletions": 73,
+      "totalPlaybackProgress": 274698.8179515242,
       "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-26T14:01:55Z",
+      "lastActivityAt": "2026-05-26T14:31:22Z",
       "completedContentIds": [
         "tt21209804",
         "tt0903747",
@@ -122,6 +122,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 25,
+          "completed": false,
+          "maxProgressValue": 41.870621,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-26T14:31:22Z"
+        },
         "tt0899043": {
           "contentId": "tt0899043",
           "imdbId": "tt0899043",
@@ -145,18 +157,6 @@
           "maxProgressValue": 1420.1324260770975,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T08:35:30Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 24,
-          "completed": false,
-          "maxProgressValue": 41.870621,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-26T07:17:15Z"
         },
         "tt8594324": {
           "contentId": "tt8594324",
@@ -1160,7 +1160,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 34,
+          "playCount": 33,
           "completed": true,
           "maxProgressValue": 1880.723439229025,
           "maxProgressPercent": 0,
@@ -1971,7 +1971,7 @@
           "lastSeenAt": "2026-05-15T23:14:38Z"
         }
       },
-      "avgPlaybackProgress": 552.7338
+      "avgPlaybackProgress": 549.3976
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

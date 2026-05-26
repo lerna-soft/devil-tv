@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T16:04:28.984Z",
+  "generatedAt": "2026-05-26T16:04:53.055Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1978,13 +1978,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-26T16:03:45Z",
-      "totalEvents": 22,
+      "updatedAt": "2026-05-26T16:04:40Z",
+      "totalEvents": 23,
       "totalStarts": 18,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
-      "uniqueContentCount": 6,
-      "lastActivityAt": "2026-05-26T16:03:45Z",
+      "uniqueContentCount": 7,
+      "lastActivityAt": "2026-05-26T16:04:40Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt5311514",
@@ -1993,6 +1993,18 @@
         "tt32897959"
       ],
       "content": {
+        "tt39333617": {
+          "contentId": "tt39333617",
+          "imdbId": "tt39333617",
+          "tmdbId": "278573",
+          "title": "Perfect Crown",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-26T16:04:40Z"
+        },
         "tt5311514": {
           "contentId": "tt5311514",
           "imdbId": "tt5311514",
@@ -2066,7 +2078,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1980.1058
+      "avgPlaybackProgress": 1894.0142
     },
     {
       "userEmail": "liz-munera@hotmail.com",

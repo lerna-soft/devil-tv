@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T16:04:28.978Z",
+  "generatedAt": "2026-05-26T16:04:53.050Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt39333617:s1e1:preference:2026-05-26T16:04:40Z",
+      "contentId": "tt39333617",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt39333617",
+      "tmdbId": "278573",
+      "title": "Perfect Crown",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T16:04:40Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:preference:2026-05-26T16:03:45Z",
       "contentId": "tt5311514",

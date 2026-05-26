@@ -1676,7 +1676,8 @@ function primeCatalogHydrationStatus() {
     active: true,
     loaded: currentCount,
     total: 0,
-    phase: currentCount > 0 ? 'chunks-pending' : 'bootstrap'
+    phase: currentCount > 0 ? 'chunks-pending' : 'bootstrap',
+    startedAt: Date.now()
   };
 }
 
@@ -2160,12 +2161,24 @@ function renderCatalogHydrationStatus() {
   const message = getCatalogHydrationMessage();
   if (!message) return '';
   const percent = getCatalogHydrationPercent();
+  // Escape hatch: si >45s sin progreso real (percent sigue ≤18%, fase
+  // inicial), probablemente los chunks fallaron silenciosamente. Antes
+  // se quedaba "8%" indefinido y el user esperaba sin saber qué pasaba.
+  const startedAt = Number(state.catalogHydration?.startedAt || 0);
+  const stalled = startedAt > 0 && percent <= 18 && (Date.now() - startedAt) > 45000;
+  const stalledNotice = stalled ? `
+    <div class="catalog-loading-stalled">
+      <span>La descarga está tardando más de lo normal.</span>
+      <button type="button" onclick="location.reload()">Recargar página</button>
+    </div>
+  ` : '';
   return `<section class="catalog-loading-status" role="status" aria-live="polite" aria-label="${escapeAttribute(`${message}. ${percent}%`)}">
     <div class="catalog-loading-orb" aria-hidden="true"><span>${escapeHtml(String(percent))}%</span></div>
     <div class="catalog-loading-copy">
       <strong>${escapeHtml(message)}</strong>
       <p>Estamos armando las secciones en segundo plano. Puedes empezar a explorar mientras el catálogo se completa.</p>
       <div class="catalog-loading-progress" aria-hidden="true"><span style="width: ${escapeAttribute(`${percent}%`)}"></span></div>
+      ${stalledNotice}
     </div>
   </section>`;
 }

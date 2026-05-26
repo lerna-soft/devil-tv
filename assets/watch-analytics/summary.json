@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T00:06:56.784Z",
+  "generatedAt": "2026-05-26T03:17:53.051Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -57,20 +57,20 @@
       "completionRate": 0.0769
     },
     {
-      "contentId": "tt31596104",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 14,
-      "uniqueUsers": 1,
-      "completionRate": 0.5556
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.1111
+    },
+    {
+      "contentId": "tt31596104",
+      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0.625
     },
     {
       "contentId": "tt21209876",

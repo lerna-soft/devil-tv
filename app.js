@@ -59,7 +59,12 @@ const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
 // del 1 sin ads. Ahora el provider activo vive solo en memoria; cada apertura
 // fresca del modal vuelve a Servidor 1, y el cambio sólo dura mientras el modal
 // esté abierto (incluye jumpEpisode, que reabre con el modal aún visible).
-const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
+// `allow-fullscreen` es REQUERIDO en el sandbox para que la Fullscreen API
+// funcione tanto desde el parent (nuestro botón "Pantalla completa") como
+// desde el código del propio iframe. Sin ese token, requestFullscreen sobre
+// el iframe rechaza con "Permissions policy violation: fullscreen is not
+// allowed in this document".
+const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation allow-fullscreen';
 const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 
 // Token mutable que invalida renders en vuelo cuando renderCatalog se vuelve

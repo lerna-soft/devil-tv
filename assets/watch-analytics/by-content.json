@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T06:31:13.476Z",
+  "generatedAt": "2026-05-26T06:55:04.864Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1326,100 +1326,46 @@
       "avgPlaybackProgress": 255.0734
     },
     {
-      "contentId": "tt29552248",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "totalEvents": 17,
-      "totalStarts": 9,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 16455.823481,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T11:32:15Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 10,
-          "completedCount": 0,
-          "startedCount": 4,
-          "totalPlaybackProgress": 6391.613326999999,
-          "lastSeenAt": "2026-05-21T11:32:15Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 5,
-          "totalPlaybackProgress": 10064.210153999999,
-          "lastSeenAt": "2026-05-19T02:20:43Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:33Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 17,
-          "totalStarts": 9,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 16455.823481,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-21T11:32:15Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "luzenithc1994@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 967.9896
-    },
-    {
       "contentId": "tt2560140",
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 16,
-      "totalStarts": 16,
+      "totalEvents": 17,
+      "totalStarts": 17,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-26T06:31:03Z",
+      "lastActivityAt": "2026-05-26T06:54:56Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 16,
+          "playCount": 17,
           "completedCount": 0,
-          "startedCount": 16,
+          "startedCount": 17,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T06:31:03Z",
+          "lastSeenAt": "2026-05-26T06:54:56Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e14": {
+          "season": 1,
+          "episode": 14,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T06:54:56Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e13": {
           "season": 1,
           "episode": 13,
@@ -1603,7 +1549,75 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 2.6169
+      "avgPlaybackProgress": 2.463
+    },
+    {
+      "contentId": "tt29552248",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "totalEvents": 17,
+      "totalStarts": 9,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 16455.823481,
+      "uniqueUsers": 3,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-21T11:32:15Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 10,
+          "completedCount": 0,
+          "startedCount": 4,
+          "totalPlaybackProgress": 6391.613326999999,
+          "lastSeenAt": "2026-05-21T11:32:15Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 5,
+          "totalPlaybackProgress": 10064.210153999999,
+          "lastSeenAt": "2026-05-19T02:20:43Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 17,
+          "totalStarts": 9,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 16455.823481,
+          "uniqueUsers": 3,
+          "lastActivityAt": "2026-05-21T11:32:15Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "luzenithc1994@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 967.9896
     },
     {
       "contentId": "tt1190634",
@@ -1611,20 +1625,20 @@
       "tmdbId": "76479",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 14,
-      "totalStarts": 13,
+      "totalEvents": 13,
+      "totalStarts": 12,
       "totalCompletions": 1,
       "totalPlaybackProgress": 10482.269520847183,
       "uniqueUsers": 1,
-      "completionRate": 0.0769,
+      "completionRate": 0.0833,
       "lastActivityAt": "2026-05-22T23:10:41Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
+          "playCount": 13,
           "completedCount": 1,
-          "startedCount": 13,
+          "startedCount": 12,
           "totalPlaybackProgress": 10482.269520847183,
           "lastSeenAt": "2026-05-22T23:10:41Z",
           "lastSeason": 1,
@@ -1663,8 +1677,8 @@
         "s1e8": {
           "season": 1,
           "episode": 8,
-          "totalEvents": 3,
-          "totalStarts": 3,
+          "totalEvents": 2,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -1703,7 +1717,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 748.7335
+      "avgPlaybackProgress": 806.3284
     },
     {
       "contentId": "tt32897959",

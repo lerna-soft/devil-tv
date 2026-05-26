@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T06:31:13.473Z",
+  "generatedAt": "2026-05-26T06:55:04.860Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -41,6 +41,14 @@
       "completionRate": 0.2941
     },
     {
+      "contentId": "tt2560140",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 17,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
@@ -49,20 +57,12 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt2560140",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 16,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
-      "totalEvents": 14,
+      "totalEvents": 13,
       "uniqueUsers": 1,
-      "completionRate": 0.0769
+      "completionRate": 0.0833
     },
     {
       "contentId": "tt32897959",

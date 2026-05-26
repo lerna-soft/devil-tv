@@ -3590,7 +3590,8 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           .map((u) => String(u?.email || '').trim().toLowerCase())
         );
 
-      const totalUsers = allUsersIndex.length || Number(analyticsSummary?.totalUsers || 0) || users.length;
+      const watchUsersCount = Array.isArray(watchIndex?.users) ? watchIndex.users.length : 0;
+      const totalUsers = allUsersIndex.length || Number(analyticsSummary?.totalUsers || 0) || watchUsersCount;
       const activeUsers = activeUserEmails.size;
       const totalHistory = scopedHistory.length;
       const avgHistoryPerActive = activeUsers ? Math.round(totalHistory / activeUsers) : 0;
@@ -3796,125 +3797,604 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           <span>Refrescando en segundo plano…</span>
         </div>` : '';
 
-      elements.items.innerHTML = `
-        <section class="admin-dashboard">
-          ${workerOfflineWarn}${sectionWarnBanner}${staleBanner}
-          <header class="admin-hero">
-            <div>
-              <h3>Centro de Control</h3>
-              <p class="admin-note">${escapeHtml(adminNote)} · Ventana activa: ${days} días.</p>
-            </div>
-            <div class="admin-pill-row">
-              <button class="admin-pill-btn ${days === 7 ? 'active' : ''}" data-admin-window="7">7d</button>
-              <button class="admin-pill-btn ${days === 30 ? 'active' : ''}" data-admin-window="30">30d</button>
-              <button class="admin-pill-btn ${days === 90 ? 'active' : ''}" data-admin-window="90">90d</button>
-              <button class="admin-pill-btn" id="adminExportCsv">Export CSV</button>
-              <button class="admin-pill-btn" id="adminRefresh" title="Limpiar cache y recargar datos">Refrescar</button>
-            </div>
-          </header>
+      // Construimos un map por-usuario con datos derivados que la sección
+      // "Usuarios" y los drill-downs necesitan. Es O(n) en eventos y se
+      // computa una sola vez por render.
+      const userActivityMap = new Map();
+      for (const row of roleUsers) {
+        const email = String(row?.email || '').trim().toLowerCase();
+        if (!email) continue;
+        userActivityMap.set(email, {
+          email,
+          name: String(row?.name || '').trim() || email,
+          role: String(row?.role || 'viewer').trim().toLowerCase() || 'viewer',
+          createdAt: String(row?.createdAt || '').trim(),
+          events: 0,
+          lastEventAt: 0,
+          reports: 0,
+          openReports: 0,
+          completions: 0
+        });
+      }
+      for (const ev of scopedHistory) {
+        const email = String(ev?.userEmail || '').trim().toLowerCase();
+        if (!email) continue;
+        const u = userActivityMap.get(email) || { email, name: ev?.userName || email, role: 'viewer', events: 0, lastEventAt: 0, reports: 0, openReports: 0, completions: 0 };
+        u.events += 1;
+        const ts = toTs(ev?.updatedAt);
+        if (ts > u.lastEventAt) u.lastEventAt = ts;
+        if (String(ev?.playerStatus || '').toLowerCase() === 'completed') u.completions += 1;
+        userActivityMap.set(email, u);
+      }
+      for (const rep of scopedReports) {
+        const email = String(rep.userEmail || '').trim().toLowerCase();
+        if (!email) continue;
+        const u = userActivityMap.get(email) || { email, name: rep.userName || email, role: 'viewer', events: 0, lastEventAt: 0, reports: 0, openReports: 0, completions: 0 };
+        u.reports += 1;
+        if (rep.state === 'open') u.openReports += 1;
+        userActivityMap.set(email, u);
+      }
+      const allUsers = [...userActivityMap.values()];
 
-          <section class="admin-role-provision">
-            <h4>Crear Agente</h4>
-            <div class="admin-role-grid">
-              <input id="adminAgentName" type="text" placeholder="Nombre del agente" />
-              <input id="adminAgentEmail" type="email" placeholder="Correo del agente" />
-              <input id="adminAgentPassword" type="password" placeholder="Password temporal" />
-              <button id="adminCreateAgent" type="button">Crear agente</button>
-              <button id="adminRunQueue" type="button" class="admin-ghost">Procesar cola</button>
-              <button id="adminRunDeploy" type="button" class="admin-ghost">Publicar sitio</button>
-            </div>
-            <p id="adminRoleMsg" class="admin-role-msg" aria-live="polite"></p>
-          </section>
+      // ============== HELPERS DE UI ==============
+      const fmtNum = (n) => Number(n || 0).toLocaleString('es-CO');
+      const fmtPct = (n) => `${Math.round(Number(n || 0))}%`;
+      const fmtDate = (ts) => {
+        if (!ts) return '—';
+        const d = new Date(ts);
+        return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
+      };
+      const avatar = (name, email) => {
+        const seed = String(name || email || '?').trim();
+        const initials = seed.split(/\s+/).filter(Boolean).slice(0, 2).map((p) => p[0]?.toUpperCase() || '').join('') || '?';
+        // Color determinístico desde el email — mismo user = mismo color.
+        const hash = [...String(email || seed)].reduce((acc, ch) => (acc * 31 + ch.charCodeAt(0)) >>> 0, 7);
+        const hue = hash % 360;
+        return `<span class="adm-avatar" style="background: hsl(${hue} 55% 32%); color: hsl(${hue} 80% 88%);">${escapeHtml(initials)}</span>`;
+      };
+      const pill = (text, kind) => `<span class="adm-pill adm-pill-${escapeAttribute(kind || 'neutral')}">${escapeHtml(text)}</span>`;
+      const sparkline = (values) => {
+        if (!values || !values.length) return '';
+        const max = Math.max(1, ...values);
+        return `<svg class="adm-spark-svg" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+          <polyline points="${values.map((v, i) => `${(i / (values.length - 1 || 1)) * 100},${24 - (v / max) * 22 - 1}`).join(' ')}" />
+        </svg>`;
+      };
 
-          <div class="admin-kpis">
-            <article class="admin-kpi"><strong>${totalUsers}</strong><span>Usuarios registrados</span></article>
-            <article class="admin-kpi"><strong>${activeUsers}</strong><span>Usuarios activos (${days}d)</span></article>
-            <article class="admin-kpi"><strong>${totalHistory}</strong><span>Eventos (${days}d)</span></article>
-            <article class="admin-kpi"><strong>${avgHistoryPerActive}</strong><span>Prom. eventos/activo</span></article>
-            <article class="admin-kpi"><strong>${inactiveUsers.length}</strong><span>Usuarios sin actividad</span></article>
-            <article class="admin-kpi"><strong>${analyticsXapiRows.filter((row) => Number(row?.statementCount || 0) > 0).length}</strong><span>Usuarios con xAPI</span></article>
-            <article class="admin-kpi"><strong>${scopedReports.length}</strong><span>Reportes usuario (${days}d)</span></article>
-            <article class="admin-kpi"><strong>${openReports.length}</strong><span>Reportes abiertos</span></article>
-            <article class="admin-kpi"><strong>${completionRate}%</strong><span>Finalización global</span></article>
-            <article class="admin-kpi"><strong>${movieCount}</strong><span>Películas seed</span></article>
-            <article class="admin-kpi"><strong>${seriesCount}</strong><span>Series en seed</span></article>
-            <article class="admin-kpi"><strong>${permissionsCount}</strong><span>Roles con permisos</span></article>
-            <article class="admin-kpi"><strong>${pendingRequests.length}</strong><span>Pendientes</span></article>
-            <article class="admin-kpi"><strong>${approvedRequests.length}</strong><span>Aprobadas</span></article>
-            <article class="admin-kpi ${slaClass}"><strong>${slaLabel}</strong><span>SLA pendiente más viejo</span></article>
+      // Sparkline values: events por día en bucketDays
+      const sparkValues = daily.map((row) => row.count);
+      const usersSparkValues = (() => {
+        const buckets = new Map();
+        for (let i = bucketDays - 1; i >= 0; i -= 1) {
+          const d = new Date(now - (i * 24 * 60 * 60 * 1000));
+          const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+          buckets.set(key, new Set());
+        }
+        for (const row of scopedHistory) {
+          const ts = toTs(row?.updatedAt);
+          if (!ts) continue;
+          const d = new Date(ts);
+          const key = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+          if (buckets.has(key)) buckets.get(key).add(String(row?.userEmail || '').toLowerCase());
+        }
+        return [...buckets.values()].map((s) => s.size);
+      })();
+
+      // ============== SECCIONES ==============
+
+      const renderKpi = (label, value, sparkVals, deltaLabel) => `
+        <article class="adm-kpi">
+          <span class="adm-kpi-label">${escapeHtml(label)}</span>
+          <strong class="adm-kpi-value">${escapeHtml(String(value))}</strong>
+          ${sparkVals?.length ? `<div class="adm-kpi-spark">${sparkline(sparkVals)}</div>` : ''}
+          ${deltaLabel ? `<span class="adm-kpi-delta">${escapeHtml(deltaLabel)}</span>` : ''}
+        </article>`;
+
+      const overviewSection = `
+        <div class="adm-section">
+          <div class="adm-kpi-grid">
+            ${renderKpi('Usuarios totales', fmtNum(totalUsers), null, `${admins} admin · ${agents} agent · ${viewers} viewer`)}
+            ${renderKpi(`Activos · ${days}d`, fmtNum(activeUsers), usersSparkValues, `de ${totalUsers} registrados`)}
+            ${renderKpi(`Eventos · ${days}d`, fmtNum(totalHistory), sparkValues, `prom ${avgHistoryPerActive}/activo`)}
+            ${renderKpi('Reportes abiertos', fmtNum(openReports.length), null, `${scopedReports.length} en ${days}d`)}
+            ${renderKpi('Finalización global', fmtPct(completionRate), null, `${analyticsEnabled ? 'analytics agregado' : 'derivado de history'}`)}
+            ${renderKpi(`SLA pendientes`, slaLabel, null, `${pendingRequests.length} solicitudes en cola`)}
           </div>
 
-          <div class="admin-grid-panels">
-            <section class="admin-panel">
-              <h4>Actividad últimos ${bucketDays} días</h4>
-              <div class="admin-spark">${daily.map((row) => `<div class="admin-spark-col"><i style="height:${Math.max(6, Math.round((row.count / maxDaily) * 100))}%"></i><span>${escapeHtml(row.date.slice(5))}</span></div>`).join('')}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Distribución por roles</h4>
-              <div class="admin-donut" style="--viewer:${viewerPct};--agent:${agentPct};--admin:${adminPct};"></div>
-              <div class="admin-legend">
-                <span><i class="sw-viewer"></i>Viewer ${viewerPct}%</span>
-                <span><i class="sw-agent"></i>Agent ${agentPct}%</span>
-                <span><i class="sw-admin"></i>Admin ${adminPct}%</span>
+          <div class="adm-panels adm-panels-2">
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Actividad — ${bucketDays}d</h4>
+                <span class="adm-panel-sub">${fmtNum(totalHistory)} eventos totales</span>
+              </header>
+              <div class="adm-bars-row">
+                ${daily.map((row, i) => `
+                  <div class="adm-bar-col" title="${escapeAttribute(`${row.date}: ${row.count} eventos`)}">
+                    <i style="height:${Math.max(4, Math.round((row.count / maxDaily) * 100))}%"></i>
+                    <span>${escapeHtml(row.date.slice(8))}</span>
+                  </div>
+                `).join('')}
               </div>
             </section>
 
-            <section class="admin-panel">
-              <h4>Top títulos por consumo</h4>
-              <div class="admin-chart">${topTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><div class="admin-bar-track"><i style="width:${Math.max(8, Math.round((row.plays / maxTopPlays) * 100))}%"></i></div><small>${row.plays} reproducciones · ${row.completed} completados</small></div>`).join('') || '<p>Sin datos.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Salud de reproducción</h4>
-              <div class="admin-chart">${contentHealth.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.title)}</span><small>${escapeHtml(`${row.status} · ${row.starts} intentos · ${Math.round(row.rate * 100)}% finalización · ${row.reports} reportes`)}</small></div>`).join('') || '<p>Sin datos.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Provisionamiento reciente</h4>
-              <div class="admin-chart">${requests.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.role || 'role'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(`${row.status || 'unknown'} · hace ${ago(row.requestedAt)}`)}</small></div>`).join('') || '<p>Sin solicitudes.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Títulos más reportados</h4>
-              <div class="admin-chart">${topReportedTitles.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes · ${row.open} abiertos`)}</small></div>`).join('') || '<p>Sin reportes.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Capítulos más reportados</h4>
-              <div class="admin-chart">${topReportedEpisodes.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes · ${row.open} abiertos`)}</small></div>`).join('') || '<p>Sin reportes de capítulos.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Usuarios que más reportan</h4>
-              <div class="admin-chart">${topReportingUsers.map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(row.name)}</span><small>${escapeHtml(`${row.count} reportes`)}</small></div>`).join('') || '<p>Sin reportes.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Usuarios sin actividad</h4>
-              <div class="admin-chart">${inactiveUsers.slice(0, 10).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.name || row?.email || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.email || 'n/a')} · ${String(row?.role || 'viewer').toLowerCase()} · sin reproducciones`)}</small></div>`).join('') || '<p>Todos los usuarios tienen actividad.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>xAPI por usuario</h4>
-              <div class="admin-chart">${analyticsXapiRows.slice(0, 10).map((row) => {
-                const count = Number(row?.statementCount || 0);
-                const activityLabel = count > 0 ? `última ${ago(row?.lastStatementAt)}` : 'sin actividad';
-                return `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(String(row?.userName || row?.userEmail || 'Usuario'))}</span><small>${escapeHtml(`${String(row?.userEmail || 'n/a')} · ${count} statements · ${activityLabel}`)}</small></div>`;
-              }).join('') || '<p>Sin statements xAPI.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Reportes recientes</h4>
-              <div class="admin-chart">${scopedReports.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`#${row.number} · ${row.title || row.scope}`)}</span><small>${escapeHtml(`${row.userEmail || row.userName || 'usuario'} · ${row.category} · ${row.state} · hace ${ago(row.createdAt)}`)}</small></div>`).join('') || '<p>Sin reportes recientes.</p>'}</div>
-            </section>
-
-            <section class="admin-panel">
-              <h4>Auditoría de roles</h4>
-              <div class="admin-chart">${auditEvents.slice(0, 8).map((row) => `<div class="admin-bar"><span class="admin-bar-label">${escapeHtml(`${row.type || 'event'} · ${row.email || 'n/a'}`)}</span><small>${escapeHtml(String(row.processedAt || row.requestedAt || '').replace('T', ' ').slice(0, 16))}</small></div>`).join('') || '<p>Sin eventos.</p>'}</div>
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Distribución por roles</h4>
+                <span class="adm-panel-sub">${totalUsers} usuarios</span>
+              </header>
+              <div class="adm-donut-wrap">
+                <div class="adm-donut" style="--viewer:${viewerPct};--agent:${agentPct};--admin:${adminPct};"></div>
+                <div class="adm-legend">
+                  <div><i class="sw-viewer"></i><strong>${viewers}</strong> Viewer <small>${viewerPct}%</small></div>
+                  <div><i class="sw-agent"></i><strong>${agents}</strong> Agent <small>${agentPct}%</small></div>
+                  <div><i class="sw-admin"></i><strong>${admins}</strong> Admin <small>${adminPct}%</small></div>
+                </div>
+              </div>
             </section>
           </div>
+
+          <div class="adm-panels adm-panels-2">
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Top títulos por consumo</h4>
+                <button class="adm-link" data-jump-section="content">Ver catálogo →</button>
+              </header>
+              ${topTitles.length ? `<ul class="adm-rank">
+                ${topTitles.map((row, i) => `<li>
+                  <span class="adm-rank-pos">${i + 1}</span>
+                  <span class="adm-rank-name">${escapeHtml(row.name)}</span>
+                  <span class="adm-rank-bar"><i style="width:${Math.max(8, Math.round((row.plays / maxTopPlays) * 100))}%"></i></span>
+                  <span class="adm-rank-val">${fmtNum(row.plays)}</span>
+                </li>`).join('')}
+              </ul>` : '<p class="adm-empty">Sin datos de consumo aún.</p>'}
+            </section>
+
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Top usuarios activos</h4>
+                <button class="adm-link" data-jump-section="users">Ver usuarios →</button>
+              </header>
+              ${allUsers.filter((u) => u.events > 0).length ? `<ul class="adm-rank">
+                ${[...allUsers].sort((a, b) => b.events - a.events).slice(0, 6).map((u, i) => `<li>
+                  <span class="adm-rank-pos">${i + 1}</span>
+                  ${avatar(u.name, u.email)}
+                  <span class="adm-rank-name"><strong>${escapeHtml(u.name)}</strong><small>${escapeHtml(u.email)}</small></span>
+                  <span class="adm-rank-val">${fmtNum(u.events)} ev</span>
+                </li>`).join('')}
+              </ul>` : '<p class="adm-empty">Sin actividad reciente.</p>'}
+            </section>
+          </div>
+        </div>`;
+
+      const usersSection = (() => {
+        const sortedUsers = [...allUsers].sort((a, b) => (b.events - a.events) || String(a.name || '').localeCompare(String(b.name || ''), 'es'));
+        return `
+        <div class="adm-section">
+          <header class="adm-toolbar">
+            <input type="search" id="admUsersSearch" placeholder="Buscar nombre o email…" class="adm-input" />
+            <select id="admUsersRoleFilter" class="adm-select">
+              <option value="">Todos los roles</option>
+              <option value="admin">Admin</option>
+              <option value="agent">Agent</option>
+              <option value="viewer">Viewer</option>
+            </select>
+            <select id="admUsersActFilter" class="adm-select">
+              <option value="">Toda actividad</option>
+              <option value="active">Solo activos (${days}d)</option>
+              <option value="inactive">Solo inactivos</option>
+            </select>
+            <span class="adm-toolbar-meta">${fmtNum(sortedUsers.length)} usuarios</span>
+          </header>
+          <div class="adm-table-wrap">
+            <table class="adm-table" id="admUsersTable">
+              <thead>
+                <tr>
+                  <th>Usuario</th>
+                  <th>Rol</th>
+                  <th class="adm-num">Eventos</th>
+                  <th class="adm-num">Reportes</th>
+                  <th>Última actividad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                ${sortedUsers.map((u) => `
+                  <tr data-user-email="${escapeAttribute(u.email)}" data-user-role="${escapeAttribute(u.role)}" data-user-active="${u.events > 0 ? '1' : '0'}">
+                    <td>
+                      <div class="adm-user-cell">
+                        ${avatar(u.name, u.email)}
+                        <div>
+                          <strong>${escapeHtml(u.name)}</strong>
+                          <small>${escapeHtml(u.email)}</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}</td>
+                    <td class="adm-num">${fmtNum(u.events)}</td>
+                    <td class="adm-num">${u.openReports > 0 ? pill(`${u.reports} (${u.openReports} ab)`, 'warn') : (u.reports > 0 ? pill(String(u.reports), 'neutral') : '<span class="adm-muted">0</span>')}</td>
+                    <td><span class="adm-muted">${u.lastEventAt ? `hace ${ago(new Date(u.lastEventAt).toISOString())}` : '—'}</span></td>
+                    <td><button class="adm-btn-ghost" data-open-user="${escapeAttribute(u.email)}">Ver</button></td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+          ${sortedUsers.length === 0 ? '<p class="adm-empty">No hay usuarios registrados todavía.</p>' : ''}
+        </div>`;
+      })();
+
+      const reportsSection = (() => {
+        const sortedReports = [...scopedReports].sort((a, b) => toTs(b.createdAt) - toTs(a.createdAt));
+        const categories = [...new Set(sortedReports.map((r) => r.category).filter(Boolean))].sort();
+        return `
+        <div class="adm-section">
+          ${!workerOnline ? '<div class="adm-callout adm-callout-danger">El Worker está offline — la lista de reportes puede estar incompleta o vacía.</div>' : ''}
+
+          <div class="adm-kpi-grid adm-kpi-grid-compact">
+            ${renderKpi(`Total · ${days}d`, fmtNum(scopedReports.length))}
+            ${renderKpi('Abiertos', fmtNum(openReports.length), null, openReports.length > 0 ? 'requieren atención' : 'todo limpio')}
+            ${renderKpi('Reportadores únicos', fmtNum(reportUsers.size))}
+            ${renderKpi('Títulos afectados', fmtNum(reportTitles.size))}
+          </div>
+
+          <header class="adm-toolbar">
+            <input type="search" id="admReportsSearch" placeholder="Buscar por título, email o #issue…" class="adm-input" />
+            <select id="admReportsStateFilter" class="adm-select">
+              <option value="">Cualquier estado</option>
+              <option value="open">Abierto</option>
+              <option value="closed">Cerrado</option>
+            </select>
+            <select id="admReportsCategoryFilter" class="adm-select">
+              <option value="">Todas las categorías</option>
+              ${categories.map((c) => `<option value="${escapeAttribute(c)}">${escapeHtml(c)}</option>`).join('')}
+            </select>
+            <span class="adm-toolbar-meta" id="admReportsCount">${fmtNum(sortedReports.length)} reportes</span>
+          </header>
+
+          <div class="adm-table-wrap">
+            <table class="adm-table" id="admReportsTable">
+              <thead>
+                <tr>
+                  <th class="adm-num">#</th>
+                  <th>Título</th>
+                  <th>Categoría</th>
+                  <th>Reportador</th>
+                  <th>Estado</th>
+                  <th>Fecha</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                ${sortedReports.map((r) => `
+                  <tr data-report-state="${escapeAttribute(r.state)}" data-report-category="${escapeAttribute(r.category)}" data-report-search="${escapeAttribute(`${r.number} ${r.title} ${r.userEmail} ${r.userName}`.toLowerCase())}">
+                    <td class="adm-num"><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener" class="adm-link-mono">#${r.number}</a></td>
+                    <td>
+                      <strong>${escapeHtml(r.title || r.scope || '—')}</strong>
+                      ${r.scope === 'episode' && r.season && r.episode ? `<small class="adm-muted">T${r.season}E${r.episode}</small>` : ''}
+                    </td>
+                    <td>${pill(r.category, r.category === 'playback' ? 'warn' : r.category === 'subs' ? 'info' : 'neutral')}</td>
+                    <td>
+                      <div class="adm-user-cell adm-user-cell-sm">
+                        ${avatar(r.userName || r.userEmail || 'Usuario', r.userEmail)}
+                        <span>${escapeHtml(r.userName || r.userEmail || 'Usuario')}</span>
+                      </div>
+                    </td>
+                    <td>${pill(r.state, r.state === 'open' ? 'warn' : 'success')}</td>
+                    <td><span class="adm-muted">hace ${ago(r.createdAt)}</span></td>
+                    <td><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener" class="adm-btn-ghost">Abrir</a></td>
+                  </tr>
+                `).join('') || '<tr><td colspan="7" class="adm-empty">Sin reportes en esta ventana.</td></tr>'}
+              </tbody>
+            </table>
+          </div>
+
+          ${topReportingUsers.length ? `<section class="adm-panel" style="margin-top:1rem;">
+            <header class="adm-panel-head"><h4>Usuarios que más reportan</h4></header>
+            <ul class="adm-rank">
+              ${topReportingUsers.map((u, i) => `<li>
+                <span class="adm-rank-pos">${i + 1}</span>
+                ${avatar(u.name, u.key)}
+                <span class="adm-rank-name">${escapeHtml(u.name)}</span>
+                <span class="adm-rank-val">${fmtNum(u.count)} reportes</span>
+              </li>`).join('')}
+            </ul>
+          </section>` : ''}
+        </div>`;
+      })();
+
+      const contentSection = `
+        <div class="adm-section">
+          <div class="adm-kpi-grid adm-kpi-grid-compact">
+            ${renderKpi('Películas en seed', fmtNum(movieCount))}
+            ${renderKpi('Series en seed', fmtNum(seriesCount))}
+            ${renderKpi('Títulos con consumo', fmtNum(titleHits.size))}
+            ${renderKpi('Finalización media', fmtPct(completionRate))}
+          </div>
+
+          <div class="adm-panels adm-panels-2">
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Salud de reproducción</h4>
+                <span class="adm-panel-sub">Top 8 por severidad</span>
+              </header>
+              ${contentHealth.length ? `<ul class="adm-rank">
+                ${contentHealth.map((row) => {
+                  const kind = row.status === 'inestable' ? 'danger' : row.status === 'con reportes' ? 'warn' : row.status === 'estable' ? 'success' : 'neutral';
+                  return `<li>
+                    ${pill(row.status, kind)}
+                    <span class="adm-rank-name"><strong>${escapeHtml(row.title)}</strong><small>${row.starts} intentos · ${fmtPct(row.rate * 100)} finalización · ${row.reports} reportes</small></span>
+                  </li>`;
+                }).join('')}
+              </ul>` : '<p class="adm-empty">Aún sin métricas de salud.</p>'}
+            </section>
+
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Títulos más reportados</h4>
+                <button class="adm-link" data-jump-section="reports">Ver reportes →</button>
+              </header>
+              ${topReportedTitles.length ? `<ul class="adm-rank">
+                ${topReportedTitles.map((row, i) => `<li>
+                  <span class="adm-rank-pos">${i + 1}</span>
+                  <span class="adm-rank-name"><strong>${escapeHtml(row.name)}</strong><small>${row.open} abiertos</small></span>
+                  <span class="adm-rank-val">${fmtNum(row.count)}</span>
+                </li>`).join('')}
+              </ul>` : '<p class="adm-empty">Sin reportes en esta ventana.</p>'}
+            </section>
+          </div>
+
+          <section class="adm-panel">
+            <header class="adm-panel-head">
+              <h4>Capítulos más reportados</h4>
+            </header>
+            ${topReportedEpisodes.length ? `<ul class="adm-rank">
+              ${topReportedEpisodes.map((row, i) => `<li>
+                <span class="adm-rank-pos">${i + 1}</span>
+                <span class="adm-rank-name"><strong>${escapeHtml(row.name)}</strong><small>${row.open} abiertos</small></span>
+                <span class="adm-rank-val">${fmtNum(row.count)}</span>
+              </li>`).join('')}
+            </ul>` : '<p class="adm-empty">Sin reportes a nivel de capítulo.</p>'}
+          </section>
+        </div>`;
+
+      const systemSection = `
+        <div class="adm-section">
+          <section class="adm-panel">
+            <header class="adm-panel-head">
+              <h4>Crear agente</h4>
+              <span class="adm-panel-sub">Provisionamiento vía workflow</span>
+            </header>
+            <div class="adm-form-grid">
+              <input id="adminAgentName" type="text" placeholder="Nombre del agente" class="adm-input" />
+              <input id="adminAgentEmail" type="email" placeholder="Correo del agente" class="adm-input" />
+              <input id="adminAgentPassword" type="password" placeholder="Password temporal" class="adm-input" />
+              <button id="adminCreateAgent" type="button" class="adm-btn">Crear agente</button>
+            </div>
+            <p id="adminRoleMsg" class="adm-role-msg" aria-live="polite"></p>
+          </section>
+
+          <div class="adm-panels adm-panels-2">
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Acciones del Worker</h4>
+                <span class="adm-panel-sub">${workerOnline ? pill('online', 'success') : pill('offline', 'danger')}</span>
+              </header>
+              <div class="adm-actions-row">
+                <button id="adminRunQueue" type="button" class="adm-btn-ghost">Procesar cola</button>
+                <button id="adminRunDeploy" type="button" class="adm-btn-ghost">Publicar sitio</button>
+              </div>
+            </section>
+
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Auditoría de roles</h4>
+              </header>
+              ${auditEvents.length ? `<ul class="adm-timeline">
+                ${auditEvents.slice(0, 8).map((row) => `<li>
+                  <span class="adm-timeline-dot"></span>
+                  <div>
+                    <strong>${escapeHtml(`${row.type || 'event'} · ${row.email || 'n/a'}`)}</strong>
+                    <small class="adm-muted">${escapeHtml(String(row.processedAt || row.requestedAt || '').replace('T', ' ').slice(0, 16))}</small>
+                  </div>
+                </li>`).join('')}
+              </ul>` : '<p class="adm-empty">Sin eventos.</p>'}
+            </section>
+          </div>
+
+          <section class="adm-panel">
+            <header class="adm-panel-head">
+              <h4>Provisionamiento reciente</h4>
+              <span class="adm-panel-sub">${pendingRequests.length} pendientes · ${approvedRequests.length} aprobadas</span>
+            </header>
+            ${requests.length ? `<table class="adm-table">
+              <thead><tr><th>Email</th><th>Rol</th><th>Estado</th><th>Solicitado</th><th>Resuelto</th></tr></thead>
+              <tbody>
+                ${requests.slice(0, 12).map((r) => `<tr>
+                  <td>${escapeHtml(r.email || '—')}</td>
+                  <td>${pill(r.role || 'role', 'neutral')}</td>
+                  <td>${pill(r.status || 'unknown', r.status === 'approved' ? 'success' : r.status === 'pending' ? 'warn' : 'neutral')}</td>
+                  <td><span class="adm-muted">hace ${ago(r.requestedAt)}</span></td>
+                  <td><span class="adm-muted">${r.resolvedAt ? `hace ${ago(r.resolvedAt)}` : '—'}</span></td>
+                </tr>`).join('')}
+              </tbody>
+            </table>` : '<p class="adm-empty">Sin solicitudes.</p>'}
+          </section>
+        </div>`;
+
+      const sectionMap = {
+        overview: overviewSection,
+        users: usersSection,
+        reports: reportsSection,
+        content: contentSection,
+        system: systemSection
+      };
+      const currentSection = state.adminSection || 'overview';
+      const activeSectionHtml = sectionMap[currentSection] || sectionMap.overview;
+
+      elements.items.innerHTML = `
+        <section class="adm-dashboard">
+          ${workerOfflineWarn}${sectionWarnBanner}${staleBanner}
+
+          <header class="adm-header">
+            <div class="adm-header-title">
+              <h3>Centro de Control</h3>
+              <p>${escapeHtml(adminNote)} · Ventana: <strong>${days}d</strong></p>
+            </div>
+            <div class="adm-header-actions">
+              <div class="adm-pill-group">
+                <button class="adm-pill ${days === 7 ? 'active' : ''}" data-admin-window="7">7d</button>
+                <button class="adm-pill ${days === 30 ? 'active' : ''}" data-admin-window="30">30d</button>
+                <button class="adm-pill ${days === 90 ? 'active' : ''}" data-admin-window="90">90d</button>
+              </div>
+              <button class="adm-btn-ghost" id="adminExportCsv">↓ Export CSV</button>
+              <button class="adm-btn-ghost" id="adminRefresh" title="Limpiar cache y recargar">⟳ Refrescar</button>
+            </div>
+          </header>
+
+          <nav class="adm-tabs" role="tablist">
+            <button class="adm-tab ${currentSection === 'overview' ? 'active' : ''}" data-admin-section="overview" role="tab" aria-selected="${currentSection === 'overview'}">Resumen</button>
+            <button class="adm-tab ${currentSection === 'users' ? 'active' : ''}" data-admin-section="users" role="tab" aria-selected="${currentSection === 'users'}">Usuarios <span class="adm-tab-badge">${fmtNum(allUsers.length)}</span></button>
+            <button class="adm-tab ${currentSection === 'reports' ? 'active' : ''}" data-admin-section="reports" role="tab" aria-selected="${currentSection === 'reports'}">Reportes ${openReports.length > 0 ? `<span class="adm-tab-badge adm-tab-badge-warn">${openReports.length}</span>` : ''}</button>
+            <button class="adm-tab ${currentSection === 'content' ? 'active' : ''}" data-admin-section="content" role="tab" aria-selected="${currentSection === 'content'}">Catálogo</button>
+            <button class="adm-tab ${currentSection === 'system' ? 'active' : ''}" data-admin-section="system" role="tab" aria-selected="${currentSection === 'system'}">Sistema</button>
+          </nav>
+
+          <div class="adm-content">${activeSectionHtml}</div>
+
+          <div id="admDrawer" class="adm-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="admDrawerTitle">
+            <div class="adm-drawer-backdrop" data-close-drawer></div>
+            <div class="adm-drawer-card">
+              <header class="adm-drawer-head">
+                <h4 id="admDrawerTitle">Detalle</h4>
+                <button class="adm-btn-ghost" data-close-drawer>Cerrar ✕</button>
+              </header>
+              <div class="adm-drawer-body" id="admDrawerBody"></div>
+            </div>
+          </div>
         </section>`;
+
+      // Listeners de tabs — cambio de sección NO refetchea data, solo re-renderea.
+      document.querySelectorAll('[data-admin-section]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.adminSection = btn.dataset.adminSection;
+          renderForWindow(days);
+        });
+      });
+      document.querySelectorAll('[data-jump-section]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.adminSection = btn.dataset.jumpSection;
+          renderForWindow(days);
+        });
+      });
+
+      // Listeners de tablas: drill-down de usuarios.
+      document.querySelectorAll('[data-open-user]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const email = btn.dataset.openUser;
+          const u = userActivityMap.get(email);
+          if (!u) return;
+          const userReports = scopedReports.filter((r) => String(r.userEmail || '').toLowerCase() === email).slice(0, 10);
+          const userHistory = scopedHistory.filter((h) => String(h.userEmail || '').toLowerCase() === email).slice(0, 15);
+          const drawer = document.querySelector('#admDrawer');
+          const drawerTitle = document.querySelector('#admDrawerTitle');
+          const drawerBody = document.querySelector('#admDrawerBody');
+          if (drawerTitle) drawerTitle.textContent = u.name;
+          if (drawerBody) drawerBody.innerHTML = `
+            <div class="adm-drawer-summary">
+              ${avatar(u.name, u.email)}
+              <div>
+                <strong>${escapeHtml(u.name)}</strong>
+                <small>${escapeHtml(u.email)}</small>
+                <div class="adm-drawer-pills">
+                  ${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}
+                  ${u.events > 0 ? pill('activo', 'success') : pill('inactivo', 'neutral')}
+                </div>
+              </div>
+            </div>
+            <div class="adm-kpi-grid adm-kpi-grid-compact">
+              ${renderKpi(`Eventos · ${days}d`, fmtNum(u.events))}
+              ${renderKpi('Reportes', fmtNum(u.reports), null, `${u.openReports} abiertos`)}
+              ${renderKpi('Completados', fmtNum(u.completions))}
+            </div>
+            <section class="adm-panel">
+              <header class="adm-panel-head"><h4>Última actividad</h4></header>
+              ${userHistory.length ? `<ul class="adm-timeline">
+                ${userHistory.map((h) => `<li>
+                  <span class="adm-timeline-dot"></span>
+                  <div>
+                    <strong>${escapeHtml(h.title || h.imdbId || h.tmdbId || 'Evento')}</strong>
+                    <small class="adm-muted">${escapeHtml(h.playerStatus || '—')} · ${escapeHtml(h.season && h.episode ? `T${h.season}E${h.episode}` : '')} · hace ${ago(h.updatedAt)}</small>
+                  </div>
+                </li>`).join('')}
+              </ul>` : '<p class="adm-empty">Sin eventos en esta ventana.</p>'}
+            </section>
+            ${userReports.length ? `<section class="adm-panel">
+              <header class="adm-panel-head"><h4>Reportes</h4></header>
+              <ul class="adm-timeline">
+                ${userReports.map((r) => `<li>
+                  <span class="adm-timeline-dot adm-timeline-dot-warn"></span>
+                  <div>
+                    <strong><a href="${escapeAttribute(r.htmlUrl)}" target="_blank" rel="noopener">#${r.number} · ${escapeHtml(r.title || r.scope || '—')}</a></strong>
+                    <small class="adm-muted">${escapeHtml(r.category)} · ${escapeHtml(r.state)} · hace ${ago(r.createdAt)}</small>
+                  </div>
+                </li>`).join('')}
+              </ul>
+            </section>` : ''}
+            <div class="adm-drawer-meta">
+              <small class="adm-muted">Última actividad: ${u.lastEventAt ? fmtDate(u.lastEventAt) : '—'} · Registrado: ${u.createdAt ? fmtDate(toTs(u.createdAt)) : '—'}</small>
+            </div>
+          `;
+          if (drawer) drawer.hidden = false;
+        });
+      });
+
+      // Cerrar drawer.
+      document.querySelectorAll('[data-close-drawer]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const drawer = document.querySelector('#admDrawer');
+          if (drawer) drawer.hidden = true;
+        });
+      });
+
+      // Búsqueda y filtros en la tabla de Usuarios.
+      const applyUsersFilter = () => {
+        const q = String(document.querySelector('#admUsersSearch')?.value || '').trim().toLowerCase();
+        const role = String(document.querySelector('#admUsersRoleFilter')?.value || '');
+        const act = String(document.querySelector('#admUsersActFilter')?.value || '');
+        document.querySelectorAll('#admUsersTable tbody tr').forEach((row) => {
+          const email = (row.dataset.userEmail || '').toLowerCase();
+          const text = (row.textContent || '').toLowerCase();
+          const matchQ = !q || email.includes(q) || text.includes(q);
+          const matchRole = !role || row.dataset.userRole === role;
+          const matchAct = !act || (act === 'active' && row.dataset.userActive === '1') || (act === 'inactive' && row.dataset.userActive === '0');
+          row.style.display = (matchQ && matchRole && matchAct) ? '' : 'none';
+        });
+      };
+      document.querySelector('#admUsersSearch')?.addEventListener('input', applyUsersFilter);
+      document.querySelector('#admUsersRoleFilter')?.addEventListener('change', applyUsersFilter);
+      document.querySelector('#admUsersActFilter')?.addEventListener('change', applyUsersFilter);
+
+      // Búsqueda y filtros en la tabla de Reportes.
+      const applyReportsFilter = () => {
+        const q = String(document.querySelector('#admReportsSearch')?.value || '').trim().toLowerCase();
+        const state2 = String(document.querySelector('#admReportsStateFilter')?.value || '');
+        const cat = String(document.querySelector('#admReportsCategoryFilter')?.value || '');
+        let visible = 0;
+        document.querySelectorAll('#admReportsTable tbody tr').forEach((row) => {
+          if (!row.dataset.reportState) return;
+          const matchQ = !q || (row.dataset.reportSearch || '').includes(q);
+          const matchState = !state2 || row.dataset.reportState === state2;
+          const matchCat = !cat || row.dataset.reportCategory === cat;
+          const show = matchQ && matchState && matchCat;
+          row.style.display = show ? '' : 'none';
+          if (show) visible += 1;
+        });
+        const meta = document.querySelector('#admReportsCount');
+        if (meta) meta.textContent = `${fmtNum(visible)} reportes`;
+      };
+      document.querySelector('#admReportsSearch')?.addEventListener('input', applyReportsFilter);
+      document.querySelector('#admReportsStateFilter')?.addEventListener('change', applyReportsFilter);
+      document.querySelector('#admReportsCategoryFilter')?.addEventListener('change', applyReportsFilter);
 
       document.querySelectorAll('[data-admin-window]').forEach((btn) => {
         btn.addEventListener('click', () => renderForWindow(Number(btn.dataset.adminWindow || '7')));

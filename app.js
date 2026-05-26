@@ -6753,18 +6753,40 @@ function requestNativeFullscreen(element) {
 // (notablemente embedmaster/Servidor 5) implementan su botón de "fullscreen"
 // como un CSS interno (expandir a 100vw/100vh dentro del iframe) en lugar
 // de llamar a la Fullscreen API real del navegador — queda fullscreen
-// "dentro del browser" pero no del SO. Este botón usa la API real sobre el
-// card del modal, que es nuestro y funciona para cualquier provider.
+// "dentro del browser" pero no del SO.
+//
+// Pedimos fullscreen sobre el IFRAME directamente (no sobre el card):
+// 1) Los browsers son más permisivos con iframes/media que con divs random
+//    (Safari iOS solo entra fullscreen sobre <video>/<iframe>).
+// 2) UX mejor: el video llena la pantalla sin la barra de controles arriba.
+// Fallback al card si el iframe rechaza, y loggeo del error a consola para
+// diagnóstico.
 function togglePlayerFullscreen() {
-  const card = elements.playerModal?.querySelector('.player-modal-card');
-  if (!card) return;
   if (document.fullscreenElement) {
     const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
-    if (typeof exit === 'function') exit.call(document).catch?.(() => {});
+    if (typeof exit === 'function') {
+      const p = exit.call(document);
+      if (p && typeof p.catch === 'function') p.catch((err) => dtvLog('error', 'exitFullscreen failed', String(err)));
+    }
     return;
   }
-  const fn = card.requestFullscreen || card.webkitRequestFullscreen || card.msRequestFullscreen;
-  if (typeof fn === 'function') fn.call(card).catch?.(() => {});
+  const iframe = elements.playerIframe;
+  const card = elements.playerModal?.querySelector('.player-modal-card');
+  const tryFullscreen = (el) => {
+    if (!el) return false;
+    const fn = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+    if (typeof fn !== 'function') return false;
+    const p = fn.call(el);
+    if (p && typeof p.catch === 'function') {
+      p.catch((err) => {
+        dtvLog('error', 'requestFullscreen failed', String(err));
+        // Si el iframe falló (algunos browsers exigen <video>), reintentar con card.
+        if (el === iframe && card) tryFullscreen(card);
+      });
+    }
+    return true;
+  };
+  if (!tryFullscreen(iframe)) tryFullscreen(card);
 }
 
 function updateFullscreenButtonLabel() {

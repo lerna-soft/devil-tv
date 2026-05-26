@@ -2525,22 +2525,5 @@
       "content": {},
       "avgPlaybackProgress": 0
     },
-    {
-      "userEmail": "usuario@mail.com",
-      "userName": "Lerna Admin",
-      "role": "admin",
-      "createdAt": "2026-05-08T00:00:00.000Z",
-      "updatedAt": "2026-05-08T00:00:00.000Z",
-      "totalEvents": 0,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueContentCount": 0,
-      "lastActivityAt": "",
-      "completedContentIds": [],
-      "inProgressContentIds": [],
-      "content": {},
-      "avgPlaybackProgress": 0
-    }
   ]
 }

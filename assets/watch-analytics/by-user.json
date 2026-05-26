@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-26T04:22:20.832Z",
+  "generatedAt": "2026-05-26T04:30:46.465Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T04:17:36Z",
+      "updatedAt": "2026-05-26T04:30:35Z",
       "totalEvents": 500,
       "totalStarts": 261,
       "totalCompletions": 79,
       "totalPlaybackProgress": 290241.5251460577,
       "uniqueContentCount": 164,
-      "lastActivityAt": "2026-05-26T04:17:36Z",
+      "lastActivityAt": "2026-05-26T04:30:35Z",
       "completedContentIds": [
         "tt0903747",
         "tt1190634",
@@ -131,11 +131,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 7,
+          "playCount": 8,
           "completed": false,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-26T04:17:36Z"
+          "lastSeenAt": "2026-05-26T04:30:35Z"
         },
         "tt8594324": {
           "contentId": "tt8594324",
@@ -1979,7 +1979,7 @@
           "tmdbId": "",
           "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
           "type": "series",
-          "playCount": 10,
+          "playCount": 9,
           "completed": true,
           "maxProgressValue": 1426.030271,
           "maxProgressPercent": 0,
@@ -2446,6 +2446,23 @@
       "role": "admin",
       "createdAt": "2026-05-16T00:00:00.000Z",
       "updatedAt": "2026-05-16T00:00:00.000Z",
+      "totalEvents": 0,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 0,
+      "lastActivityAt": "",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {},
+      "avgPlaybackProgress": 0
+    },
+    {
+      "userEmail": "admin@lerna.com",
+      "userName": "Lerna Admin",
+      "role": "admin",
+      "createdAt": "2026-05-26T04:30:00.000Z",
+      "updatedAt": "2026-05-26T04:30:00.000Z",
       "totalEvents": 0,
       "totalStarts": 0,
       "totalCompletions": 0,

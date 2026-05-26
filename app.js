@@ -43,7 +43,7 @@ const homeCarouselLastDragAt = new WeakMap();
 let detailEpisodePointerHandledAt = 0;
 
 const AUTH_EMAIL = 'usuario@mail.com';
-const ADMIN_EMAIL = 'admin@deviltv.local';
+const ADMIN_EMAIL = 'admin@lerna.com';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const AUTH_SESSION_KEY = 'mep_auth_user_v1';
 const AUTH_SESSION_LEGACY_KEY = 'mep_auth_user_session_v1';

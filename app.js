@@ -1564,6 +1564,8 @@ elements.tabs.forEach((tab) => {
 });
 
 window.addEventListener('hashchange', handleRouteChange);
+document.addEventListener('fullscreenchange', updateFullscreenButtonLabel);
+document.addEventListener('webkitfullscreenchange', updateFullscreenButtonLabel);
 bindPlayerModalEvents();
 bindDetailEpisodeEvents();
 primeCatalogHydrationStatus();
@@ -6747,6 +6749,30 @@ function requestNativeFullscreen(element) {
   if (typeof fn === 'function') fn.call(element).catch?.(() => {});
 }
 
+// Botón propio de pantalla completa. Necesario porque algunos providers
+// (notablemente embedmaster/Servidor 5) implementan su botón de "fullscreen"
+// como un CSS interno (expandir a 100vw/100vh dentro del iframe) en lugar
+// de llamar a la Fullscreen API real del navegador — queda fullscreen
+// "dentro del browser" pero no del SO. Este botón usa la API real sobre el
+// card del modal, que es nuestro y funciona para cualquier provider.
+function togglePlayerFullscreen() {
+  const card = elements.playerModal?.querySelector('.player-modal-card');
+  if (!card) return;
+  if (document.fullscreenElement) {
+    const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+    if (typeof exit === 'function') exit.call(document).catch?.(() => {});
+    return;
+  }
+  const fn = card.requestFullscreen || card.webkitRequestFullscreen || card.msRequestFullscreen;
+  if (typeof fn === 'function') fn.call(card).catch?.(() => {});
+}
+
+function updateFullscreenButtonLabel() {
+  const btn = elements.playerControls?.querySelector('[data-player-action="fullscreen"]');
+  if (!btn) return;
+  btn.textContent = document.fullscreenElement ? 'Salir de pantalla completa' : 'Pantalla completa';
+}
+
 function bindPlayerModalEvents() {
   const modal = elements.playerModal;
   if (!modal) return;
@@ -6839,22 +6865,34 @@ function setActiveProvider(providerId) {
 
 function renderPlayerControls() {
   if (!elements.playerControls) return;
+  const fullscreenLabel = document.fullscreenElement ? 'Salir de pantalla completa' : 'Pantalla completa';
+  const fullscreenButton = `<button class="player-nav" data-player-action="fullscreen">${fullscreenLabel}</button>`;
   if (isSeriesLike(state.selected)) {
     elements.playerControls.innerHTML = `
       <div class="player-nav-row">
         <button class="player-nav" data-player-action="back">Volver a la serie</button>
         <button class="player-nav" data-player-action="prev">Capítulo anterior</button>
         <button class="player-nav" data-player-action="next">Siguiente capítulo</button>
+        ${fullscreenButton}
       </div>
     `;
   } else {
-    elements.playerControls.innerHTML = `<button class="player-nav" data-player-action="close">Cerrar</button>`;
+    elements.playerControls.innerHTML = `
+      <div class="player-nav-row">
+        <button class="player-nav" data-player-action="close">Cerrar</button>
+        ${fullscreenButton}
+      </div>
+    `;
   }
   elements.playerControls.querySelectorAll('[data-player-action]').forEach((button) => {
     button.addEventListener('click', () => {
       const action = button.dataset.playerAction;
       if (action === 'close' || action === 'back') {
         closePlayerModal();
+        return;
+      }
+      if (action === 'fullscreen') {
+        togglePlayerFullscreen();
         return;
       }
       if (action === 'prev') {

@@ -140,6 +140,16 @@ function parseIssue(issue) {
   const completedAt = String(extractIssueField(body, 'CompletedAt') || '').trim();
   const preferenceAction = String(extractIssueField(body, 'PreferenceAction') || '').trim().toLowerCase();
   const preferenceValue = String(extractIssueField(body, 'PreferenceValue') || '').trim().toLowerCase();
+  // Campos nuevos (geo + device) — opcionales y best-effort. Issues viejos no
+  // los tienen y eso es OK (los campos quedan vacíos en el history event).
+  const country = String(extractIssueField(body, 'Country') || '').trim().toUpperCase().slice(0, 3);
+  const countryName = String(extractIssueField(body, 'CountryName') || '').trim().slice(0, 60);
+  const city = String(extractIssueField(body, 'City') || '').trim().slice(0, 60);
+  const region = String(extractIssueField(body, 'Region') || '').trim().slice(0, 60);
+  const device = String(extractIssueField(body, 'Device') || '').trim().toLowerCase().slice(0, 12);
+  const browser = String(extractIssueField(body, 'Browser') || '').trim().slice(0, 20);
+  const locale = String(extractIssueField(body, 'Locale') || '').trim().slice(0, 12);
+  const timezone = String(extractIssueField(body, 'Timezone') || '').trim().slice(0, 40);
   if (!email || (!imdbId && !tmdbId)) return null;
   return {
     email,
@@ -157,6 +167,14 @@ function parseIssue(issue) {
     completedAt,
     preferenceAction,
     preferenceValue,
+    country,
+    countryName,
+    city,
+    region,
+    device,
+    browser,
+    locale,
+    timezone,
     updatedAt: parseIssueDate(issue),
     progressKey: `${imdbId || tmdbId}:${season}x${episode}`
   };
@@ -270,7 +288,17 @@ async function writeUserFiles(users) {
       playerStatus: user.playerStatus || 'playing',
       startedAt: user.startedAt || '',
       completedAt: user.completedAt || '',
-      updatedAt: user.updatedAt
+      updatedAt: user.updatedAt,
+      // Geo + device. Solo se persisten si vienen en el issue body (issues
+      // viejos no los tienen). El dashboard maneja ausencia con "—".
+      country: user.country || '',
+      countryName: user.countryName || '',
+      city: user.city || '',
+      region: user.region || '',
+      device: user.device || '',
+      browser: user.browser || '',
+      locale: user.locale || '',
+      timezone: user.timezone || ''
     };
     const history = mergeHistory(existing?.history || [], [historyEntry]);
     const payload = {
@@ -368,7 +396,16 @@ function mergeHistory(existing, incoming) {
       playerStatus: status,
       startedAt: String(row.startedAt || '').trim(),
       completedAt: String(row.completedAt || '').trim(),
-      updatedAt: at
+      updatedAt: at,
+      // Geo + device (best-effort, vacíos en events viejos).
+      country: String(row.country || '').toUpperCase().slice(0, 3),
+      countryName: String(row.countryName || ''),
+      city: String(row.city || ''),
+      region: String(row.region || ''),
+      device: String(row.device || '').toLowerCase(),
+      browser: String(row.browser || ''),
+      locale: String(row.locale || ''),
+      timezone: String(row.timezone || '')
     });
   }
   return [...map.values()]

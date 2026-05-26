@@ -4049,3 +4049,185 @@ code {
   .adm-table thead th { padding: 0.55rem 0.6rem; }
   .adm-donut-wrap { flex-direction: column; }
 }
+
+/* ============================================================
+   ADM EXTRA — Geo, heatmap por hora, día de semana, dispositivos
+   ============================================================ */
+
+/* Geo */
+.adm-geo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.adm-geo-row {
+  align-items: center;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: 1.6rem minmax(110px, 1fr) minmax(70px, 1.6fr) auto;
+}
+.adm-geo-flag {
+  font-size: 1.15rem;
+  line-height: 1;
+  text-align: center;
+}
+.adm-geo-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.adm-geo-bar {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  height: 0.6rem;
+  overflow: hidden;
+}
+.adm-geo-bar i {
+  background: linear-gradient(90deg, rgba(120, 180, 255, 0.95), rgba(80, 220, 200, 0.85));
+  display: block;
+  height: 100%;
+}
+.adm-geo-val {
+  color: var(--adm-text-soft);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+.adm-geo-val small { color: var(--adm-text-muted); font-weight: 500; }
+.adm-geo-cities {
+  align-items: center;
+  border-top: 1px solid var(--adm-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+}
+.adm-geo-cities strong {
+  color: var(--adm-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-right: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Hour heatmap (24 columnas) */
+.adm-hour-grid {
+  display: grid;
+  gap: 0.2rem;
+  grid-template-columns: repeat(24, 1fr);
+  margin-top: 0.2rem;
+}
+.adm-hour-cell {
+  aspect-ratio: 1 / 1.6;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  justify-content: flex-end;
+  padding: 0.18rem 0.05rem;
+  position: relative;
+  transition: filter 120ms ease;
+}
+.adm-hour-cell::before {
+  background: linear-gradient(180deg, rgba(229, 90, 90, calc(0.15 + var(--i, 0) * 0.7)), rgba(229, 9, 20, calc(0.25 + var(--i, 0) * 0.65)));
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  opacity: calc(0.1 + var(--i, 0));
+  position: absolute;
+}
+.adm-hour-cell span {
+  color: rgba(255, 255, 255, 0.65);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.adm-hour-cell:hover { filter: brightness(1.25); }
+
+/* Day of week row */
+.adm-dow-row {
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 0.75rem;
+}
+.adm-dow-cell {
+  align-items: center;
+  background: var(--adm-card);
+  border: 1px solid var(--adm-border);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.4rem 0.2rem 0.45rem;
+}
+.adm-dow-cell.peak {
+  border-color: rgba(229, 9, 20, 0.55);
+  background: rgba(229, 9, 20, 0.06);
+}
+.adm-dow-cell i {
+  background: linear-gradient(180deg, rgba(229, 9, 20, 0.9), rgba(229, 9, 20, 0.35));
+  border-radius: 0.2rem;
+  display: block;
+  height: calc(0.25rem + var(--i, 0) * 1.5rem);
+  min-height: 4px;
+  transition: height 200ms cubic-bezier(.22,.61,.36,1);
+  width: 60%;
+}
+.adm-dow-cell span {
+  color: var(--adm-text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.adm-dow-cell.peak span { color: rgba(255, 220, 200, 0.95); }
+
+/* Device donut */
+.adm-donut-device {
+  background:
+    conic-gradient(
+      rgba(229, 9, 20, 0.95) 0deg calc(var(--mobile, 0) * 3.6deg),
+      rgba(255, 196, 0, 0.95) calc(var(--mobile, 0) * 3.6deg) calc((var(--mobile, 0) + var(--tablet, 0)) * 3.6deg),
+      rgba(120, 180, 255, 0.95) calc((var(--mobile, 0) + var(--tablet, 0)) * 3.6deg) 360deg
+    );
+}
+.adm-legend .sw-mobile { background: rgba(229, 9, 20, 0.95); }
+.adm-legend .sw-tablet { background: rgba(255, 196, 0, 0.95); }
+.adm-legend .sw-desktop { background: rgba(120, 180, 255, 0.95); }
+
+.adm-browsers {
+  align-items: center;
+  border-top: 1px solid var(--adm-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+}
+.adm-browsers small {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-right: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Mobile tweaks */
+@media (max-width: 720px) {
+  .adm-geo-row {
+    grid-template-columns: 1.5rem 1fr auto;
+  }
+  .adm-geo-row .adm-geo-bar { display: none; }
+  .adm-hour-cell span { font-size: 0.55rem; }
+  .adm-dow-row { gap: 0.2rem; }
+  .adm-dow-cell { padding: 0.3rem 0.1rem; }
+}

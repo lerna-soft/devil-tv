@@ -807,6 +807,7 @@ function bindAuth() {
       renderCatalog();
       scheduleSeedStartupWork();
       scheduleAuthenticatedStartupWork();
+      void captureUserGeo();
       return;
     }
     if (elements.authErrorLogin) elements.authErrorLogin.textContent = validated.error || 'Credenciales incorrectas.';
@@ -879,6 +880,7 @@ function bindAuth() {
     scheduleSeedStartupWork();
     scheduleAuthenticatedStartupWork();
     renderDetail({ skipHydratePlayback: true });
+    void captureUserGeo();
   });
 
   elements.logoutBtn?.addEventListener('click', () => {
@@ -2196,6 +2198,11 @@ function scheduleAuthenticatedStartupWork() {
     });
   }, 3000, 1800);
   installVisibilityRehydrate();
+  // Si la sesión arrancó con auth válida pero sin geo en cache, capturamos
+  // ahora para que el próximo watch-progress sync incluya country/city.
+  if (!getCachedUserGeo()) {
+    scheduleDelayedIdleTask(() => { void captureUserGeo(); }, 5000, 2000);
+  }
 }
 
 // Re-hidrata el progreso remoto cuando la pestaña vuelve a foreground después
@@ -2967,7 +2974,74 @@ async function openUserProblemReportForm(context = {}) {
   }
 }
 
+// Detecta el tipo de dispositivo desde el UA. Es burdo pero suficiente para
+// distinguir mobile/tablet/desktop en el dashboard de admin. Sin libs.
+function detectDeviceType() {
+  const ua = navigator.userAgent || '';
+  if (/iPad|Tablet|PlayBook/.test(ua) || (/Android/.test(ua) && !/Mobile/.test(ua))) return 'tablet';
+  if (/Mobile|iPhone|Android|webOS|BlackBerry|Opera Mini/.test(ua)) return 'mobile';
+  return 'desktop';
+}
+
+// Browser principal (Chrome/Firefox/Safari/Edge/Other). Para el admin no
+// necesitamos versión exacta — solo el bucket.
+function detectBrowser() {
+  const ua = navigator.userAgent || '';
+  if (/Edg\//i.test(ua)) return 'Edge';
+  if (/OPR\/|Opera/i.test(ua)) return 'Opera';
+  if (/Chrome\//i.test(ua) && !/Edg\//i.test(ua)) return 'Chrome';
+  if (/Firefox\//i.test(ua)) return 'Firefox';
+  if (/Safari\//i.test(ua) && !/Chrome\//i.test(ua)) return 'Safari';
+  return 'Other';
+}
+
+// Captura geo del user via ipapi.co (free tier, ~1k/día). Cachea por 12h
+// en localStorage para no spamear la API ni gastar el rate limit.
+// Si falla (offline, rate limited, bloqueo), devuelve null silenciosamente
+// — el watch-progress sync sigue funcionando sin geo.
+const USER_GEO_STORAGE_KEY = 'mep_user_geo_v1';
+const USER_GEO_TTL = 12 * 60 * 60 * 1000;
+
+async function captureUserGeo() {
+  try {
+    const raw = localStorage.getItem(USER_GEO_STORAGE_KEY);
+    if (raw) {
+      const data = JSON.parse(raw);
+      if (data?.ts && (Date.now() - data.ts) < USER_GEO_TTL) return data;
+    }
+  } catch {}
+  try {
+    const resp = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`ipapi http ${resp.status}`);
+    const data = await resp.json();
+    const geo = {
+      ts: Date.now(),
+      country: String(data?.country_code || '').trim().toUpperCase().slice(0, 3),
+      countryName: String(data?.country_name || '').trim().slice(0, 60),
+      city: String(data?.city || '').trim().slice(0, 60),
+      region: String(data?.region || '').trim().slice(0, 60)
+    };
+    try { localStorage.setItem(USER_GEO_STORAGE_KEY, JSON.stringify(geo)); } catch {}
+    dtvLog('boot', 'user geo captured', { country: geo.country, city: geo.city });
+    return geo;
+  } catch (err) {
+    dtvLog('warn', 'captureUserGeo failed (sin geo en eventos)', String(err));
+    return null;
+  }
+}
+
+function getCachedUserGeo() {
+  try {
+    const raw = localStorage.getItem(USER_GEO_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
 function buildWatchProgressIssueBody(snapshot) {
+  const geo = getCachedUserGeo() || {};
+  const tz = (() => {
+    try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch { return ''; }
+  })();
   return [
     'WATCH_PROGRESS_SYNC_REQUEST',
     `Email: ${String(snapshot?.email || '').trim().toLowerCase()}`,
@@ -2983,7 +3057,15 @@ function buildWatchProgressIssueBody(snapshot) {
     `StartedAt: ${String(snapshot?.started_at || '').trim()}`,
     `CompletedAt: ${String(snapshot?.completed_at || '').trim()}`,
     `PlayerStatus: ${String(snapshot?.player_status || '').trim()}`,
-    `UpdatedAt: ${new Date().toISOString()}`
+    `UpdatedAt: ${new Date().toISOString()}`,
+    `Country: ${String(geo.country || '').toUpperCase()}`,
+    `CountryName: ${String(geo.countryName || '')}`,
+    `City: ${String(geo.city || '')}`,
+    `Region: ${String(geo.region || '')}`,
+    `Device: ${detectDeviceType()}`,
+    `Browser: ${detectBrowser()}`,
+    `Locale: ${String(navigator.language || '')}`,
+    `Timezone: ${tz}`
   ].join('\n');
 }
 
@@ -3466,7 +3548,8 @@ function renderAdminDashboard() {
       warnings: [],
       days: 7,
       userEmail,
-      stale: cached.stale
+      stale: cached.stale,
+      dataTs: cached.ts
     });
   } else {
     elements.items.innerHTML = `<section class="admin-dashboard">
@@ -3484,8 +3567,9 @@ function renderAdminDashboard() {
   };
 
   fetchAdminPayload(progressFn).then(({ payload, warnings }) => {
+    const ts = Date.now();
     saveAdminDataCache(userKey, payload);
-    renderAdminDashboardData({ payload, warnings, days: 7, userEmail, stale: false });
+    renderAdminDashboardData({ payload, warnings, days: 7, userEmail, stale: false, dataTs: ts });
   }).catch((err) => {
     dtvLog('error', 'admin dashboard fetch failed', String(err));
     if (!cached?.payload) {
@@ -3504,7 +3588,7 @@ function renderAdminDashboard() {
   });
 }
 
-function renderAdminDashboardData({ payload, warnings, days: initialDays, userEmail, stale }) {
+function renderAdminDashboardData({ payload, warnings, days: initialDays, userEmail, stale, dataTs }) {
   const {
     watchIndex, usersIndex, seed, permissions, roleRequests, roleAudit,
     analyticsEvents, analyticsByContent, analyticsByUser, analyticsSummary, analyticsXapi,
@@ -3797,6 +3881,83 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           <span>Refrescando en segundo plano…</span>
         </div>` : '';
 
+      // ============== AGGREGATIONS WOW (geo + device + hora + dow + DAU/WAU/MAU) ==============
+      // Todos calculados en O(n) sobre scopedHistory/historyRows (una pasada cada uno).
+      const countryCounts = new Map();
+      const countryNames = new Map();
+      const cityCounts = new Map();
+      const deviceCounts = { mobile: 0, tablet: 0, desktop: 0, unknown: 0 };
+      const browserCounts = new Map();
+      const hourCounts = new Array(24).fill(0);
+      const dowCounts = new Array(7).fill(0);
+      let completedCount = 0;
+      let startedCount = 0;
+      for (const ev of scopedHistory) {
+        const c = String(ev.country || '').toUpperCase().slice(0, 3);
+        if (c) {
+          countryCounts.set(c, (countryCounts.get(c) || 0) + 1);
+          const nm = String(ev.countryName || '').trim();
+          if (nm && !countryNames.has(c)) countryNames.set(c, nm);
+        }
+        const city = String(ev.city || '').trim();
+        if (city) cityCounts.set(city, (cityCounts.get(city) || 0) + 1);
+        const dev = String(ev.device || '').toLowerCase();
+        if (dev === 'mobile') deviceCounts.mobile += 1;
+        else if (dev === 'tablet') deviceCounts.tablet += 1;
+        else if (dev === 'desktop') deviceCounts.desktop += 1;
+        else deviceCounts.unknown += 1;
+        const br = String(ev.browser || '').trim() || 'Unknown';
+        browserCounts.set(br, (browserCounts.get(br) || 0) + 1);
+        const ts = toTs(ev.updatedAt);
+        if (ts) {
+          const d = new Date(ts);
+          hourCounts[d.getHours()] += 1;
+          dowCounts[d.getDay()] += 1;
+        }
+        const status = String(ev.playerStatus || ev.eventType || '').toLowerCase();
+        if (status === 'completed') completedCount += 1;
+        if (status === 'playing' || status === 'started') startedCount += 1;
+      }
+      const topCountries = [...countryCounts.entries()].sort((a, b) => b[1] - a[1]);
+      const topCities = [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
+      const topBrowsers = [...browserCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
+      const totalDeviceTagged = deviceCounts.mobile + deviceCounts.tablet + deviceCounts.desktop;
+      const devicePct = (k) => totalDeviceTagged > 0 ? Math.round((deviceCounts[k] / totalDeviceTagged) * 100) : 0;
+      const peakHour = hourCounts.indexOf(Math.max(...hourCounts));
+      const maxHourCount = Math.max(1, ...hourCounts);
+      const dowNames = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+      const peakDow = dowCounts.indexOf(Math.max(...dowCounts));
+
+      // DAU/WAU/MAU sobre el universo completo (historyRows, no scopedHistory)
+      // para que sean robustos al cambio de ventana 7/30/90d del admin.
+      const dauStart = now - 24 * 60 * 60 * 1000;
+      const wauStart = now - 7 * 24 * 60 * 60 * 1000;
+      const mauStart = now - 30 * 24 * 60 * 60 * 1000;
+      const dauSet = new Set();
+      const wauSet = new Set();
+      const mauSet = new Set();
+      for (const ev of historyRows) {
+        const ts = toTs(ev.updatedAt);
+        if (!ts) continue;
+        const email = String(ev.userEmail || '').toLowerCase();
+        if (!email) continue;
+        if (ts >= dauStart) dauSet.add(email);
+        if (ts >= wauStart) wauSet.add(email);
+        if (ts >= mauStart) mauSet.add(email);
+      }
+      const dau = dauSet.size;
+      const wau = wauSet.size;
+      const mau = mauSet.size;
+      const stickiness = mau > 0 ? Math.round((dau / mau) * 100) : 0;
+
+      // ISO 3166-1 alpha-2 → flag emoji. Cada char en el rango 0x1F1E6-0x1F1FF.
+      const countryFlag = (code) => {
+        const c = String(code || '').toUpperCase();
+        if (c.length !== 2 || !/^[A-Z]{2}$/.test(c)) return '🏳️';
+        return String.fromCodePoint(0x1F1E6 + (c.charCodeAt(0) - 65), 0x1F1E6 + (c.charCodeAt(1) - 65));
+      };
+      const countryDisplayName = (code) => countryNames.get(code) || code;
+
       // Construimos un map por-usuario con datos derivados que la sección
       // "Usuarios" y los drill-downs necesitan. Es O(n) en eventos y se
       // computa una sola vez por render.
@@ -3894,11 +4055,14 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
         <div class="adm-section">
           <div class="adm-kpi-grid">
             ${renderKpi('Usuarios totales', fmtNum(totalUsers), null, `${admins} admin · ${agents} agent · ${viewers} viewer`)}
-            ${renderKpi(`Activos · ${days}d`, fmtNum(activeUsers), usersSparkValues, `de ${totalUsers} registrados`)}
+            ${renderKpi('DAU · 24h', fmtNum(dau), null, mau > 0 ? `Stickiness ${stickiness}%` : '')}
+            ${renderKpi('WAU · 7d', fmtNum(wau), null, `${activeUsers} en ventana actual`)}
+            ${renderKpi('MAU · 30d', fmtNum(mau), null, `${totalUsers ? Math.round((mau / totalUsers) * 100) : 0}% del total`)}
             ${renderKpi(`Eventos · ${days}d`, fmtNum(totalHistory), sparkValues, `prom ${avgHistoryPerActive}/activo`)}
+            ${renderKpi('Episodios completados', fmtNum(completedCount), null, `${startedCount} iniciados`)}
+            ${renderKpi('Países alcanzados', fmtNum(countryCounts.size), null, `${cityCounts.size} ciudades`)}
             ${renderKpi('Reportes abiertos', fmtNum(openReports.length), null, `${scopedReports.length} en ${days}d`)}
             ${renderKpi('Finalización global', fmtPct(completionRate), null, `${analyticsEnabled ? 'analytics agregado' : 'derivado de history'}`)}
-            ${renderKpi(`SLA pendientes`, slaLabel, null, `${pendingRequests.length} solicitudes en cola`)}
           </div>
 
           <div class="adm-panels adm-panels-2">
@@ -3962,6 +4126,73 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                   <span class="adm-rank-val">${fmtNum(u.events)} ev</span>
                 </li>`).join('')}
               </ul>` : '<p class="adm-empty">Sin actividad reciente.</p>'}
+            </section>
+          </div>
+
+          <section class="adm-panel">
+            <header class="adm-panel-head">
+              <h4>Distribución geográfica</h4>
+              <span class="adm-panel-sub">${countryCounts.size > 0 ? `${countryCounts.size} país${countryCounts.size === 1 ? '' : 'es'} · ${cityCounts.size} ciudad${cityCounts.size === 1 ? '' : 'es'}` : 'Datos llegando…'}</span>
+            </header>
+            ${topCountries.length ? `<div class="adm-geo-grid">
+              ${topCountries.slice(0, 10).map(([code, count]) => {
+                const pct = scopedHistory.length > 0 ? Math.round((count / scopedHistory.length) * 100) : 0;
+                return `<div class="adm-geo-row">
+                  <span class="adm-geo-flag" aria-hidden="true">${countryFlag(code)}</span>
+                  <strong class="adm-geo-name">${escapeHtml(countryDisplayName(code))}</strong>
+                  <div class="adm-geo-bar"><i style="width:${Math.max(2, pct)}%"></i></div>
+                  <span class="adm-geo-val">${fmtNum(count)} <small>(${pct}%)</small></span>
+                </div>`;
+              }).join('')}
+            </div>
+            ${topCities.length ? `<div class="adm-geo-cities">
+              <strong>Top ciudades:</strong>
+              ${topCities.slice(0, 6).map(([city, count]) => `<span class="adm-pill-info">${escapeHtml(city)} · ${count}</span>`).join('')}
+            </div>` : ''}` : `<p class="adm-empty">Aún no hay datos de país. Captura empieza cuando los usuarios reproducen contenido — los datos se llenarán en los próximos días.</p>`}
+          </section>
+
+          <div class="adm-panels adm-panels-2">
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Patrón de uso · ${bucketDays}d</h4>
+                <span class="adm-panel-sub">Hora pico: <strong>${peakHour}:00</strong> · ${dowNames[peakDow]} más activo</span>
+              </header>
+              <div class="adm-hour-grid" role="img" aria-label="Heatmap por hora del día">
+                ${hourCounts.map((c, h) => {
+                  const intensity = c / maxHourCount;
+                  return `<div class="adm-hour-cell" style="--i:${intensity.toFixed(3)};" title="${h}:00 — ${fmtNum(c)} eventos">
+                    <span>${h}</span>
+                  </div>`;
+                }).join('')}
+              </div>
+              <div class="adm-dow-row">
+                ${dowCounts.map((c, i) => {
+                  const intensity = c / Math.max(1, ...dowCounts);
+                  return `<div class="adm-dow-cell ${i === peakDow ? 'peak' : ''}" style="--i:${intensity.toFixed(3)};" title="${dowNames[i]}: ${fmtNum(c)} eventos">
+                    <i></i>
+                    <span>${dowNames[i]}</span>
+                  </div>`;
+                }).join('')}
+              </div>
+            </section>
+
+            <section class="adm-panel">
+              <header class="adm-panel-head">
+                <h4>Dispositivos</h4>
+                <span class="adm-panel-sub">${totalDeviceTagged > 0 ? `${fmtNum(totalDeviceTagged)} eventos etiquetados` : 'Datos llegando…'}</span>
+              </header>
+              ${totalDeviceTagged > 0 ? `<div class="adm-donut-wrap">
+                <div class="adm-donut adm-donut-device" style="--mobile:${devicePct('mobile')};--tablet:${devicePct('tablet')};--desktop:${devicePct('desktop')};"></div>
+                <div class="adm-legend">
+                  <div><i class="sw-mobile"></i><strong>${fmtNum(deviceCounts.mobile)}</strong> Mobile <small>${devicePct('mobile')}%</small></div>
+                  <div><i class="sw-tablet"></i><strong>${fmtNum(deviceCounts.tablet)}</strong> Tablet <small>${devicePct('tablet')}%</small></div>
+                  <div><i class="sw-desktop"></i><strong>${fmtNum(deviceCounts.desktop)}</strong> Desktop <small>${devicePct('desktop')}%</small></div>
+                </div>
+              </div>
+              ${topBrowsers.length ? `<div class="adm-browsers">
+                <small class="adm-muted">Browsers:</small>
+                ${topBrowsers.map(([name, count]) => `<span class="adm-pill-neutral">${escapeHtml(name)} · ${fmtNum(count)}</span>`).join('')}
+              </div>` : ''}` : '<p class="adm-empty">Los eventos empezarán a etiquetarse con dispositivo a partir de los nuevos plays.</p>'}
             </section>
           </div>
         </div>`;
@@ -4238,7 +4469,7 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           <header class="adm-header">
             <div class="adm-header-title">
               <h3>Centro de Control</h3>
-              <p>${escapeHtml(adminNote)} · Ventana: <strong>${days}d</strong></p>
+              <p>${escapeHtml(adminNote)} · Ventana: <strong>${days}d</strong>${dataTs ? ` · <span class="adm-muted">Datos: hace ${escapeHtml(ago(new Date(dataTs).toISOString()))}</span>` : ''}</p>
             </div>
             <div class="adm-header-actions">
               <div class="adm-pill-group">

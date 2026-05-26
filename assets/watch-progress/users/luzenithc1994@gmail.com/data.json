@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-25T02:43:00Z",
+  "updatedAt": "2026-05-26T16:03:45Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -58,32 +58,60 @@
       "tmdbId": "372058",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 5937.94467,
-      "lastProgress": 5937.94467,
-      "updatedAt": "2026-05-25T02:43:00Z",
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-26T16:03:45Z",
       "watched": {}
     }
   },
   "preferences": {
     "likes": {
       "tt32897959": 1,
-      "tt29552248": 1
+      "tt29552248": 1,
+      "tt5311514": 1
     },
     "watchLater": {
       "tt33714084": true
     },
-    "updatedAt": "2026-05-19T00:26:13Z"
+    "updatedAt": "2026-05-26T16:03:45Z"
   },
   "lastWatch": {
     "imdbId": "tt5311514",
     "tmdbId": "372058",
     "season": 1,
     "episode": 1,
-    "progress": 5937.94467,
-    "updatedAt": "2026-05-25T02:43:00Z"
+    "progress": 0,
+    "updatedAt": "2026-05-26T16:03:45Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:preference:2026-05-26T16:03:45Z",
+      "contentId": "tt5311514",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt5311514",
+      "tmdbId": "372058",
+      "title": "Your Name.",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T16:03:45Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T02:43:00Z",
       "contentId": "tt5311514",
@@ -101,7 +129,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:42:48.835Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T02:43:00Z"
+      "updatedAt": "2026-05-25T02:43:00Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T02:12:55Z",
@@ -120,7 +156,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:42:48.835Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T02:12:55Z"
+      "updatedAt": "2026-05-25T02:12:55Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T01:42:52Z",
@@ -139,7 +183,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:42:48.835Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T01:42:52Z"
+      "updatedAt": "2026-05-25T01:42:52Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T01:12:51Z",
@@ -158,7 +210,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:42:48.835Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T01:12:51Z"
+      "updatedAt": "2026-05-25T01:12:51Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt5311514:s1e1:started:2026-05-25T00:42:50Z",
@@ -177,7 +237,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:42:48.835Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T00:42:50Z"
+      "updatedAt": "2026-05-25T00:42:50Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt34610311:s1e1:started:2026-05-25T00:35:32Z",
@@ -196,7 +264,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-25T00:35:31.080Z",
       "completedAt": "",
-      "updatedAt": "2026-05-25T00:35:32Z"
+      "updatedAt": "2026-05-25T00:35:32Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:started:2026-05-23T01:07:52Z",
@@ -215,7 +291,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-23T00:37:47.772Z",
       "completedAt": "",
-      "updatedAt": "2026-05-23T01:07:52Z"
+      "updatedAt": "2026-05-23T01:07:52Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:started:2026-05-23T00:37:50Z",
@@ -234,7 +318,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-23T00:37:47.772Z",
       "completedAt": "",
-      "updatedAt": "2026-05-23T00:37:50Z"
+      "updatedAt": "2026-05-23T00:37:50Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T02:20:43Z",
@@ -253,7 +345,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T02:20:43Z"
+      "updatedAt": "2026-05-19T02:20:43Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T01:50:38Z",
@@ -272,7 +372,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T01:50:38Z"
+      "updatedAt": "2026-05-19T01:50:38Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T01:13:49Z",
@@ -291,7 +399,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T01:13:49Z"
+      "updatedAt": "2026-05-19T01:13:49Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T00:43:44Z",
@@ -310,7 +426,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T00:43:44Z"
+      "updatedAt": "2026-05-19T00:43:44Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:preference:2026-05-19T00:26:13Z",
@@ -329,7 +453,15 @@
       "playerStatus": "preference",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T00:26:13Z"
+      "updatedAt": "2026-05-19T00:26:13Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T00:12:00Z",
@@ -348,7 +480,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-19T00:12:00Z"
+      "updatedAt": "2026-05-19T00:12:00Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt33714084:s1e1:preference:2026-05-18T19:41:21Z",
@@ -367,7 +507,15 @@
       "playerStatus": "preference",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T19:41:21Z"
+      "updatedAt": "2026-05-18T19:41:21Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:preference:2026-05-18T19:40:47Z",
@@ -386,7 +534,15 @@
       "playerStatus": "preference",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T19:40:47Z"
+      "updatedAt": "2026-05-18T19:40:47Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:playing:2026-05-18T19:18:05Z",
@@ -405,7 +561,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T19:18:05Z"
+      "updatedAt": "2026-05-18T19:18:05Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:playing:2026-05-18T18:48:00Z",
@@ -424,7 +588,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T18:48:00Z"
+      "updatedAt": "2026-05-18T18:48:00Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:playing:2026-05-18T18:18:00Z",
@@ -443,7 +615,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T18:18:00Z"
+      "updatedAt": "2026-05-18T18:18:00Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:playing:2026-05-18T17:47:56Z",
@@ -462,7 +642,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T17:47:56Z"
+      "updatedAt": "2026-05-18T17:47:56Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt32897959:s1e1:playing:2026-05-18T17:17:56Z",
@@ -481,7 +669,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-18T17:17:56Z"
+      "updatedAt": "2026-05-18T17:17:56Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     }
   ]
 }

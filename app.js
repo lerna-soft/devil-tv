@@ -5461,7 +5461,7 @@ function renderDetail(options = {}) {
   const availabilityBlock = isPlayable ? '' : `<div class="availability">
     <div class="availability-copy">
       <strong>No disponible en el momento</strong>
-      <span>Este título existe, pero no está disponible para reproducir con la fuente actual.</span>
+      <span>Las fuentes actuales no tienen este título listo para reproducir. Toca "Solicitar" para enviarlo a la cola — vuelve a intentar en unos días.</span>
     </div>
     <button id="requestTitle" type="button">Solicitar</button>
   </div>`;
@@ -5495,8 +5495,8 @@ function renderDetail(options = {}) {
         ${availabilityBlock}
         <div class="actions hero-actions">
           ${!isSeriesLike(title) ? `<button id="loadPlayer"${isPlayable ? '' : ' disabled'}>${isPlayable ? 'Reproducir' : 'No disponible'}</button>` : ''}
-          ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries">Ver T${startTarget.season}E${startTarget.episode}</button>` : ''}
-          ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries">${escapeHtml(resumeTarget.label)}</button>` : ''}
+          ${isSeriesLike(title) && !hasWatchHistory && startTarget ? `<button id="startSeries"${isPlayable ? '' : ' disabled'}>${isPlayable ? `Ver T${startTarget.season}E${startTarget.episode}` : 'No disponible'}</button>` : ''}
+          ${isSeriesLike(title) && hasWatchHistory && resumeTarget ? `<button id="resumeSeries"${isPlayable ? '' : ' disabled'}>${isPlayable ? escapeHtml(resumeTarget.label) : 'No disponible'}</button>` : ''}
         </div>
         <div class="detail-support-actions">
           <button id="reportIssue" type="button" class="ghost">${escapeHtml(issueActionLabel)}</button>
@@ -5515,11 +5515,13 @@ function renderDetail(options = {}) {
     openPlayerForCurrentSelection();
   });
   bindTap(document.querySelector('#startSeries'), () => {
+    if (!isPlayable) return;
     state.playback.season = startTarget.season;
     state.playback.episode = startTarget.episode;
     openPlayerForCurrentSelection();
   });
   bindTap(document.querySelector('#resumeSeries'), () => {
+    if (!isPlayable) return;
     state.playback.season = resumeTarget.season;
     state.playback.episode = resumeTarget.episode;
     openPlayerForCurrentSelection();

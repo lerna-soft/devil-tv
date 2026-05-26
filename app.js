@@ -420,6 +420,8 @@ const elements = {
   authEmailRegister: document.querySelector('#authEmailRegister'),
   authPasswordRegister: document.querySelector('#authPasswordRegister'),
   authPasswordConfirmRegister: document.querySelector('#authPasswordConfirmRegister'),
+  authPasswordHintRegister: document.querySelector('#authPasswordHintRegister'),
+  authPasswordConfirmHintRegister: document.querySelector('#authPasswordConfirmHintRegister'),
   authErrorRegister: document.querySelector('#authErrorRegister'),
   authSubmitRegister: document.querySelector('#authSubmitRegister'),
   authToggleRegister: document.querySelector('#authToggleRegister'),
@@ -810,6 +812,40 @@ function bindAuth() {
     if (elements.authErrorLogin) elements.authErrorLogin.textContent = validated.error || 'Credenciales incorrectas.';
   });
 
+  const MIN_PASSWORD_LENGTH = 8;
+  const updateRegisterPasswordHints = () => {
+    const password = String(elements.authPasswordRegister?.value || '');
+    const confirm = String(elements.authPasswordConfirmRegister?.value || '');
+    const hintPwd = elements.authPasswordHintRegister;
+    const hintCfm = elements.authPasswordConfirmHintRegister;
+    if (hintPwd) {
+      hintPwd.classList.remove('ok', 'bad');
+      if (!password) {
+        hintPwd.textContent = `Mínimo ${MIN_PASSWORD_LENGTH} caracteres.`;
+      } else if (password.length < MIN_PASSWORD_LENGTH) {
+        hintPwd.textContent = `Faltan ${MIN_PASSWORD_LENGTH - password.length} caracteres.`;
+        hintPwd.classList.add('bad');
+      } else {
+        hintPwd.textContent = '✓ Longitud OK';
+        hintPwd.classList.add('ok');
+      }
+    }
+    if (hintCfm) {
+      hintCfm.classList.remove('ok', 'bad');
+      if (!confirm) {
+        hintCfm.textContent = '';
+      } else if (confirm !== password) {
+        hintCfm.textContent = 'No coinciden.';
+        hintCfm.classList.add('bad');
+      } else {
+        hintCfm.textContent = '✓ Coinciden';
+        hintCfm.classList.add('ok');
+      }
+    }
+  };
+  elements.authPasswordRegister?.addEventListener('input', updateRegisterPasswordHints);
+  elements.authPasswordConfirmRegister?.addEventListener('input', updateRegisterPasswordHints);
+
   elements.authFormRegister.addEventListener('submit', async (event) => {
     event.preventDefault();
     const name = String(elements.authNameRegister.value || '').trim();
@@ -819,6 +855,10 @@ function bindAuth() {
 
     if (!name || !email || !password || !confirmPassword) {
       if (elements.authErrorRegister) elements.authErrorRegister.textContent = 'Completa todos los campos.';
+      return;
+    }
+    if (password.length < MIN_PASSWORD_LENGTH) {
+      if (elements.authErrorRegister) elements.authErrorRegister.textContent = `La contraseña debe tener al menos ${MIN_PASSWORD_LENGTH} caracteres.`;
       return;
     }
     if (password !== confirmPassword) {

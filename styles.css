@@ -763,6 +763,21 @@ h1 {
   font-size: 0.86rem;
 }
 
+.auth-field-hint {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.78rem;
+  min-height: 1rem;
+  transition: color 140ms ease;
+}
+
+.auth-field-hint.ok {
+  color: rgba(120, 220, 140, 0.95);
+}
+
+.auth-field-hint.bad {
+  color: rgba(255, 130, 130, 0.95);
+}
+
 .auth-form input {
   width: 100%;
   padding: 0.92rem 0.95rem;

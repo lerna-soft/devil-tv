@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T07:03:46.095Z",
+  "generatedAt": "2026-05-26T07:05:07.215Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e19:started:2026-05-26T07:04:57Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e19",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 19,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T07:04:56.212Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T07:04:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e18:started:2026-05-26T07:03:36Z",
       "contentId": "tt2560140",
@@ -11508,27 +11529,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T17:42:32Z"
-    },
-    {
-      "eventId": "unknown:tt16431870:s1e1:playing:2026-05-14T17:21:06Z",
-      "contentId": "tt16431870",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16431870",
-      "tmdbId": "1029575",
-      "title": "Plan en familia",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 3250.287715134329,
-      "progressValue": 3250.287715134329,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T17:21:06Z"
     },
     {
       "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",

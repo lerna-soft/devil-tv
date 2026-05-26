@@ -53,7 +53,12 @@ const AUTH_USERS_INDEX_PATH = './assets/users/index.json';
 const ROLES_INDEX_PATH = './assets/roles/index.json';
 const WATCH_PROGRESS_STORAGE_PREFIX = 'mep_watch_progress_';
 const WATCH_PROGRESS_LAST_SYNC_PREFIX = 'mep_watch_progress_last_sync_';
-const PLAYBACK_PROVIDER_STORAGE_KEY = 'mep_provider_v1';
+// Antes persistíamos el provider seleccionado en `mep_provider_v1`. Eso provocaba
+// que tocar otro servidor una vez dejara ese servidor pegado para siempre — la
+// próxima apertura del player arrancaba con Servidor 4 (o el que fuera) en vez
+// del 1 sin ads. Ahora el provider activo vive solo en memoria; cada apertura
+// fresca del modal vuelve a Servidor 1, y el cambio sólo dura mientras el modal
+// esté abierto (incluye jumpEpisode, que reabre con el modal aún visible).
 const DEFAULT_PLAYER_SANDBOX = 'allow-scripts allow-same-origin allow-presentation';
 const SUBS_WORKER_BASE = 'https://devil-tv-recovery.hglerna.workers.dev/subs';
 
@@ -5649,6 +5654,13 @@ function openPlayerModal(embedUrl) {
     return;
   }
 
+  // Apertura fresca (modal estaba cerrado) → forzar Servidor 1 por defecto.
+  // Si entramos con el modal ya visible (jumpEpisode), conservamos el provider
+  // que el usuario haya elegido durante la sesión actual.
+  if (modal.hidden) {
+    state.activeProviderId = PLAYBACK_PROVIDERS[0].id;
+  }
+
   renderPlayerControls();
   renderProviderTabs();
   const activeProvider = getActiveProvider();
@@ -6471,10 +6483,7 @@ function getPlaybackCandidateIds(entry) {
 }
 function getActiveProvider() {
   if (!state.activeProviderId) {
-    const stored = (() => {
-      try { return localStorage.getItem(PLAYBACK_PROVIDER_STORAGE_KEY) || ''; } catch { return ''; }
-    })();
-    state.activeProviderId = PLAYBACK_PROVIDERS.find((p) => p.id === stored)?.id || PLAYBACK_PROVIDERS[0].id;
+    state.activeProviderId = PLAYBACK_PROVIDERS[0].id;
   }
   return PLAYBACK_PROVIDERS.find((p) => p.id === state.activeProviderId) || PLAYBACK_PROVIDERS[0];
 }
@@ -6818,7 +6827,6 @@ function setActiveProvider(providerId) {
   const provider = PLAYBACK_PROVIDERS.find((p) => p.id === providerId);
   if (!provider || provider.id === state.activeProviderId) return;
   state.activeProviderId = provider.id;
-  try { localStorage.setItem(PLAYBACK_PROVIDER_STORAGE_KEY, provider.id); } catch {}
   renderProviderTabs();
   if (state.selected && elements.playerModal && !elements.playerModal.hidden) {
     const newUrl = buildEmbedUrl(state.selected);

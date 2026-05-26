@@ -6569,7 +6569,16 @@ function schedulePlayerFallback(urls) {
     if (state.playerEventAt > 0 && (Date.now() - state.playerEventAt) <= PLAYER_FALLBACK_DELAY_MS) return;
     const current = String(iframe.src || '');
     const next = candidates.find((url) => String(url) !== current);
-    if (next) iframe.src = next;
+    if (!next) return;
+    // Aviso visible antes de cambiar el iframe.src: sin esto el user veía
+    // el player "saltar" a otro URL sin explicación tras ~6.5s de espera.
+    dtvLog('player', 'fallback to alternate URL', { from: current, to: next });
+    showToast({
+      icon: 'warning',
+      title: 'El servidor no respondió. Probando una fuente alternativa…',
+      timer: 4000
+    });
+    iframe.src = next;
   }, PLAYER_FALLBACK_DELAY_MS);
 }
 function isSeriesLike(title) { return title.type === 'series' || title.type === 'episode'; }

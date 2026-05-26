@@ -6973,12 +6973,24 @@ function openPlayerModal(embedUrl) {
   if (state.playerOpening) return;
   state.playerOpening = true;
   clearPlayerFallback();
+  // Si veníamos viendo otro episodio (jumpEpisode) sin que el provider emita
+  // eventos reales, ejecutar la heurística de tiempo antes de pisar la sesión.
+  flushPlayerSessionHeuristic();
   persistLastSelection();
   // Marca optimista: deja constancia local del "start" para que el título
   // aparezca en Continuar Viendo aunque el provider del iframe no emita
   // PLAYER_EVENT messages (vidsrc/2embed/vidlink/embedmaster no los emiten).
   // Si el Servidor 1 (vaplayer) sí emite progreso real, lo sobreescribe.
   markCurrentSelectionAsStarted();
+  state.playerSession = {
+    openedAt: Date.now(),
+    imdbId: String(state.selected?.imdbId || '').trim(),
+    tmdbId: String(state.selected?.tmdbId || '').trim(),
+    type: String(state.selected?.type || '').trim().toLowerCase() || 'movie',
+    season: Number(state.playback.season || 1),
+    episode: Number(state.playback.episode || 1),
+    sawEvent: false
+  };
   const modal = elements.playerModal;
   const card = modal?.querySelector('.player-modal-card');
   const iframe = elements.playerIframe;
@@ -7013,6 +7025,9 @@ function closePlayerModal() {
   const modal = elements.playerModal;
   const iframe = elements.playerIframe;
   if (!modal || !iframe) return;
+  // Antes de cerrar, ejecutar heurística de tiempo para inferir si el
+  // episodio/película se terminó (providers que no emiten PLAYER_EVENT).
+  flushPlayerSessionHeuristic();
   clearPlayerFallback();
   modal.hidden = true;
   iframe.src = 'about:blank';
@@ -7020,6 +7035,84 @@ function closePlayerModal() {
   updateFloatingReportButtonVisibility();
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
   syncRoute();
+}
+
+// Heurística para inferir "completed" cuando el provider del iframe no emite
+// PLAYER_EVENT (Servidor 2/3/4/5). El "started" ya lo cubre
+// markCurrentSelectionAsStarted al abrir el modal; aquí solo cerramos el
+// ciclo cuando el user estuvo viendo el episodio/película el tiempo
+// suficiente como para asumir que lo terminó.
+//
+// Umbrales conservadores (a propósito, para no marcar como visto algo que el
+// user solo dejó cargando en segundo plano):
+//   - Series: 22min (runtime típico de capítulo).
+//   - Movie: 80min.
+const PLAYER_SESSION_COMPLETED_SERIES_MS = 22 * 60 * 1000;
+const PLAYER_SESSION_COMPLETED_MOVIE_MS = 80 * 60 * 1000;
+
+function flushPlayerSessionHeuristic() {
+  const session = state.playerSession;
+  state.playerSession = null;
+  if (!session || session.sawEvent) return;
+  const elapsed = Date.now() - Number(session.openedAt || 0);
+  if (!Number.isFinite(elapsed)) return;
+  const id = session.imdbId || session.tmdbId;
+  if (!id) return;
+  const isMovie = session.type === 'movie';
+  const completionThreshold = isMovie ? PLAYER_SESSION_COMPLETED_MOVIE_MS : PLAYER_SESSION_COMPLETED_SERIES_MS;
+  if (elapsed < completionThreshold) {
+    dtvLog('player', 'flushPlayerSessionHeuristic skip — elapsed below threshold', {
+      id, season: session.season, episode: session.episode, elapsedSec: Math.round(elapsed / 1000)
+    });
+    return;
+  }
+  dtvLog('player', 'flushPlayerSessionHeuristic completed (inferred)', {
+    id, season: session.season, episode: session.episode, elapsedSec: Math.round(elapsed / 1000)
+  });
+
+  // Actualizar local: escribir completedAt en el episodio correspondiente
+  // (solo aplica a series; movies no usan watched{}).
+  if (!isMovie) {
+    try {
+      const key = `mep_series_progress_${id}`;
+      const existing = safeJson(localStorage.getItem(key)) || { watched: {} };
+      const watched = existing.watched || {};
+      const epKey = `s${session.season}e${session.episode}`;
+      const prev = watched[epKey];
+      const now = Date.now();
+      watched[epKey] = (prev && prev !== true)
+        ? { ...prev, completedAt: prev.completedAt || now, lastProgress: prev.lastProgress || 1 }
+        : { startedAt: session.openedAt || now, completedAt: now, lastProgress: 1 };
+      localStorage.setItem(key, JSON.stringify({ ...existing, lastSeason: session.season, lastEpisode: session.episode, watched }));
+    } catch (err) {
+      dtvLog('warn', 'flushPlayerSessionHeuristic local write failed', { err: String(err) });
+    }
+  }
+
+  // Propagar al remoto. El dedupe interno (5min para completed) evita spam.
+  void queueWatchProgressSync({
+    imdbId: session.imdbId,
+    tmdbId: session.tmdbId,
+    season: session.season,
+    episode: session.episode,
+    progress: 1,
+    player_status: 'completed',
+    event_type: 'completed',
+    started_at: new Date(session.openedAt || Date.now()).toISOString(),
+    completed_at: new Date().toISOString()
+  });
+
+  // Persistir en synced storage también para que renderCatalog vea el cambio
+  // sin esperar al refresh del remote.
+  persistSyncedWatchSnapshot('progress', {
+    imdbId: session.imdbId,
+    tmdbId: session.tmdbId,
+    season: session.season,
+    episode: session.episode,
+    progress: 1,
+    player_status: 'completed',
+    updatedAt: new Date().toISOString()
+  });
 }
 
 function openPlayerForCurrentSelection() {
@@ -7995,6 +8088,9 @@ function applySavedWatchState(title) {
 window.addEventListener('message', (event) => {
   if (event.data?.type !== 'PLAYER_EVENT') return;
   state.playerEventAt = Date.now();
+  // El provider del iframe emite eventos reales — desactivar la heurística
+  // de tiempo para esta sesión (los eventos reales son la fuente de verdad).
+  if (state.playerSession) state.playerSession.sawEvent = true;
   const data = event.data.data || {};
   persistProgressFromPlayerEvent(data);
   if (data.player_status !== 'completed' || !isSeriesLike(state.selected)) return;

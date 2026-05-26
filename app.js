@@ -6926,13 +6926,16 @@ function markCurrentSelectionAsStarted() {
   const epKey = `s${season}e${episode}`;
   const prev = watched[epKey];
   const alreadyStarted = prev && prev !== true && prev.startedAt;
-  if (!alreadyStarted) {
-    watched[epKey] = (prev && prev !== true)
-      ? { ...prev, startedAt: prev.startedAt || now }
-      : { startedAt: now, completedAt: null, lastProgress: 0 };
-    const nextProgress = { ...existing, lastSeason: season, lastEpisode: episode, watched };
-    localStorage.setItem(key, JSON.stringify(nextProgress));
-  }
+  // Siempre actualizar lastSeason/lastEpisode aunque el episodio ya tuviera
+  // startedAt — si el user reabre un capítulo viejo después de avanzar varios
+  // en otro dispositivo, el remoto pisaría el lastEpisode con el viejo. Pero
+  // peor: si NO actualizamos cuando alreadyStarted, "Reanudar TxEy" se queda
+  // pegado en el último ep que sí fue first-time (bug reportado 2026-05-26).
+  watched[epKey] = (prev && prev !== true)
+    ? { ...prev, startedAt: prev.startedAt || now }
+    : { startedAt: now, completedAt: null, lastProgress: 0 };
+  const nextProgress = { ...existing, lastSeason: season, lastEpisode: episode, watched };
+  localStorage.setItem(key, JSON.stringify(nextProgress));
   // Persistir en synced storage también: buildWatchInsights solo linkea
   // aliases imdb↔tmdb desde remoteProgress (no desde el loop local de
   // mep_series_progress_*). Sin esto, si el id local es imdbId pero
@@ -6951,21 +6954,19 @@ function markCurrentSelectionAsStarted() {
   });
   // Propagar a otros dispositivos vía GitHub issue (drain workflow lo recoge
   // y actualiza watch-analytics/users/<email>/data.json). El dedupe interno
-  // de queueWatchProgressSync (30min para 'started') evita spam si el user
-  // abre/cierra el player varias veces.
-  if (!alreadyStarted) {
-    void queueWatchProgressSync({
-      imdbId,
-      tmdbId,
-      season,
-      episode,
-      progress: 0,
-      player_status: 'playing',
-      event_type: 'started',
-      started_at: new Date(now).toISOString(),
-      completed_at: ''
-    });
-  }
+  // de queueWatchProgressSync (30min para 'started') por episodio evita spam,
+  // así que es seguro emitir siempre — no solo cuando es first-time.
+  void queueWatchProgressSync({
+    imdbId,
+    tmdbId,
+    season,
+    episode,
+    progress: 0,
+    player_status: 'playing',
+    event_type: 'started',
+    started_at: new Date(prev && prev !== true && prev.startedAt ? prev.startedAt : now).toISOString(),
+    completed_at: prev && prev !== true && prev.completedAt ? new Date(prev.completedAt).toISOString() : ''
+  });
 }
 
 function openPlayerModal(embedUrl) {

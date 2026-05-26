@@ -42,7 +42,7 @@ const episodeTextPromises = new Map();
 const homeCarouselLastDragAt = new WeakMap();
 let detailEpisodePointerHandledAt = 0;
 
-const AUTH_EMAIL = 'usuario@mail.com';
+const AUTH_EMAIL = 'admin@lerna.com';
 const ADMIN_EMAIL = 'admin@lerna.com';
 const AUTH_STORAGE_KEY = 'mep_auth_ok';
 const AUTH_SESSION_KEY = 'mep_auth_user_v1';

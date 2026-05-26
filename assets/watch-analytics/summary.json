@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T08:04:48.603Z",
+  "generatedAt": "2026-05-26T08:22:44.592Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 558,
@@ -25,20 +25,20 @@
       "completionRate": 0.2593
     },
     {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 31,
+      "uniqueUsers": 1,
+      "completionRate": 0.2778
+    },
+    {
       "contentId": "tt16030542",
       "title": "The Recruit",
       "type": "series",
       "totalEvents": 31,
       "uniqueUsers": 1,
       "completionRate": 0.55
-    },
-    {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 30,
-      "uniqueUsers": 1,
-      "completionRate": 0.2941
     },
     {
       "contentId": "tt2560140",
@@ -65,14 +65,6 @@
       "completionRate": 0.1111
     },
     {
-      "contentId": "tt1190634",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.125
-    },
-    {
       "contentId": "tt21209876",
       "title": "Solo Leveling",
       "type": "series",
@@ -87,6 +79,14 @@
       "totalEvents": 8,
       "uniqueUsers": 3,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt1190634",
+      "title": "The Boys",
+      "type": "series",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0.1429
     }
   ]
 }

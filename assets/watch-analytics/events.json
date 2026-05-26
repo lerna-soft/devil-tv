@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T08:04:48.603Z",
+  "generatedAt": "2026-05-26T08:22:44.592Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209804:s1e12:started:2026-05-26T08:22:32Z",
+      "contentId": "tt21209804",
+      "episodeKey": "s1e12",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "season": 1,
+      "episode": 12,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T08:22:31.820Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T08:22:32Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e21:started:2026-05-26T07:17:15Z",
       "contentId": "tt2560140",
@@ -11487,27 +11508,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T19:20:28Z"
-    },
-    {
-      "eventId": "unknown:tt1190634:s5e7:playing:2026-05-14T19:20:10Z",
-      "contentId": "tt1190634",
-      "episodeKey": "s5e7",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "season": 5,
-      "episode": 7,
-      "progress": 3653.288239013681,
-      "progressValue": 3653.288239013681,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T19:20:10Z"
     },
     {
       "eventId": "majandra955@gmail.com:tt33612209:s1e1:playing:2026-05-14T17:42:32Z",

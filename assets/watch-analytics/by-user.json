@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-26T08:04:48.609Z",
+  "generatedAt": "2026-05-26T08:22:44.597Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-26T07:17:15Z",
+      "updatedAt": "2026-05-26T08:22:32Z",
       "totalEvents": 500,
       "totalStarts": 265,
       "totalCompletions": 75,
-      "totalPlaybackProgress": 281290.1117209234,
+      "totalPlaybackProgress": 277636.8234819097,
       "uniqueContentCount": 162,
-      "lastActivityAt": "2026-05-26T07:17:15Z",
+      "lastActivityAt": "2026-05-26T08:22:32Z",
       "completedContentIds": [
+        "tt21209804",
         "tt0903747",
         "tt1190634",
-        "tt21209804",
         "tt2911666",
         "tt16030542",
         "tt14452776",
@@ -122,6 +122,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt21209804": {
+          "contentId": "tt21209804",
+          "imdbId": "tt21209804",
+          "tmdbId": "204832",
+          "title": "MASHLE: MAGIC AND MUSCLES",
+          "type": "series",
+          "playCount": 31,
+          "completed": true,
+          "maxProgressValue": 1420.1324260770975,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-26T08:22:32Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -525,7 +537,7 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 9,
+          "playCount": 8,
           "completed": true,
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,
@@ -770,18 +782,6 @@
           "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T19:39:26Z"
-        },
-        "tt21209804": {
-          "contentId": "tt21209804",
-          "imdbId": "tt21209804",
-          "tmdbId": "204832",
-          "title": "MASHLE: MAGIC AND MUSCLES",
-          "type": "series",
-          "playCount": 30,
-          "completed": true,
-          "maxProgressValue": 1420.1324260770975,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T14:34:09Z"
         },
         "tt28650488": {
           "contentId": "tt28650488",
@@ -1984,7 +1984,7 @@
           "lastSeenAt": "2026-05-14T19:21:17Z"
         }
       },
-      "avgPlaybackProgress": 562.5802
+      "avgPlaybackProgress": 555.2736
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

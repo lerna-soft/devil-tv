@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T14:02:29.302Z",
+  "generatedAt": "2026-05-26T14:04:29.787Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -128,7 +128,7 @@
           "tmdbId": "1087891",
           "title": "Amateur",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -1160,7 +1160,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 35,
+          "playCount": 34,
           "completed": true,
           "maxProgressValue": 1880.723439229025,
           "maxProgressPercent": 0,

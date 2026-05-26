@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T14:02:29.297Z",
+  "generatedAt": "2026-05-26T14:04:29.782Z",
   "events": [
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:preference:2026-05-26T14:01:55Z",
@@ -21,6 +21,27 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-26T14:01:55Z"
+    },
+    {
+      "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-26T14:01:39Z",
+      "contentId": "tt0899043",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T14:01:38.477Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T14:01:39Z"
     },
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:preference:2026-05-26T14:01:37Z",
@@ -11424,27 +11445,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-15T11:27:24Z"
-    },
-    {
-      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-15T11:23:03Z",
-      "contentId": "tt14452776",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt14452776",
-      "tmdbId": "136315",
-      "title": "The Bear",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T11:23:03Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

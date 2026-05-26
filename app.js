@@ -4071,10 +4071,25 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           // sin clasificar (no rompen el conteo pero no suman al split).
           else if (Number(ev?.season) > 0 || Number(ev?.episode) > 0) u.seriesIds.add(titleId);
           const key = titleId;
-          const prev = u.titlePlays.get(key) || { id: titleId, title: String(ev?.title || titleId), type: evType, plays: 0, completed: 0 };
+          const prev = u.titlePlays.get(key) || {
+            id: titleId,
+            title: String(ev?.title || titleId),
+            type: evType,
+            plays: 0,
+            completed: 0,
+            firstAt: 0,
+            lastAt: 0,
+            lastStatus: ''
+          };
           prev.plays += 1;
           if (status === 'completed') prev.completed += 1;
           if (!prev.title || prev.title === prev.id) prev.title = String(ev?.title || prev.title);
+          if (!prev.type && evType) prev.type = evType;
+          const ts = toTs(ev?.updatedAt);
+          if (ts > 0) {
+            if (ts > prev.lastAt) { prev.lastAt = ts; prev.lastStatus = status; }
+            if (prev.firstAt === 0 || ts < prev.firstAt) prev.firstAt = ts;
+          }
           u.titlePlays.set(key, prev);
         }
         userActivityMap.set(email, u);
@@ -4340,8 +4355,8 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
                       </div>
                     </td>
                     <td data-sort-value="${roleRank}">${pill(u.role, u.role === 'admin' ? 'danger' : u.role === 'agent' ? 'warn' : 'neutral')}</td>
-                    <td class="adm-num" data-sort-value="${seriesCount}">${seriesCount > 0 ? fmtNum(seriesCount) : '<span class="adm-muted">0</span>'}</td>
-                    <td class="adm-num" data-sort-value="${moviesCount}">${moviesCount > 0 ? fmtNum(moviesCount) : '<span class="adm-muted">0</span>'}</td>
+                    <td class="adm-num" data-sort-value="${seriesCount}">${seriesCount > 0 ? `<button class="adm-num-link" data-show-content="series" data-email="${escapeAttribute(u.email)}" title="Ver detalle">${fmtNum(seriesCount)}</button>` : '<span class="adm-muted">0</span>'}</td>
+                    <td class="adm-num" data-sort-value="${moviesCount}">${moviesCount > 0 ? `<button class="adm-num-link" data-show-content="movies" data-email="${escapeAttribute(u.email)}" title="Ver detalle">${fmtNum(moviesCount)}</button>` : '<span class="adm-muted">0</span>'}</td>
                     <td class="adm-num" data-sort-value="${u.events}">${fmtNum(u.events)}</td>
                     <td class="adm-num" data-sort-value="${u.reports}">${u.openReports > 0 ? pill(`${u.reports} (${u.openReports} ab)`, 'warn') : (u.reports > 0 ? pill(String(u.reports), 'neutral') : '<span class="adm-muted">0</span>')}</td>
                     <td data-sort-value="${u.lastEventAt || 0}"><span class="adm-muted">${u.lastEventAt ? `hace ${ago(new Date(u.lastEventAt).toISOString())}` : '—'}</span></td>
@@ -4665,8 +4680,16 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
               </div>
             </div>
             <div class="adm-kpi-grid adm-kpi-grid-compact">
-              ${renderKpi('Series únicas', fmtNum(seriesCount))}
-              ${renderKpi('Películas únicas', fmtNum(moviesCount))}
+              ${seriesCount > 0 ? `<button class="adm-kpi adm-kpi-clickable" data-show-content="series" data-email="${escapeAttribute(u.email)}" type="button">
+                <span class="adm-kpi-label">Series únicas</span>
+                <strong class="adm-kpi-value">${fmtNum(seriesCount)}</strong>
+                <span class="adm-kpi-delta">Ver detalle →</span>
+              </button>` : renderKpi('Series únicas', '0')}
+              ${moviesCount > 0 ? `<button class="adm-kpi adm-kpi-clickable" data-show-content="movies" data-email="${escapeAttribute(u.email)}" type="button">
+                <span class="adm-kpi-label">Películas únicas</span>
+                <strong class="adm-kpi-value">${fmtNum(moviesCount)}</strong>
+                <span class="adm-kpi-delta">Ver detalle →</span>
+              </button>` : renderKpi('Películas únicas', '0')}
               ${renderKpi('Episodios completados', fmtNum(u.completions))}
               ${renderKpi(`Eventos · ${days}d`, fmtNum(u.events))}
               ${renderKpi('Reportes', fmtNum(u.reports), null, `${u.openReports} abiertos`)}
@@ -4730,6 +4753,68 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
           if (drawer) drawer.hidden = true;
         });
       });
+
+      // Click en el número de Series/Pelis (o en el KPI del drawer) abre un
+      // drawer secundario con la lista detallada de contenido por tipo,
+      // ordenado por fecha de última visualización descendente.
+      const openContentDrawer = (email, kind) => {
+        const u = userActivityMap.get(email);
+        if (!u) return;
+        const list = [...(u.titlePlays?.values?.() || [])]
+          .filter((t) => {
+            if (kind === 'movies') return t.type === 'movie';
+            // 'series': cualquier cosa que NO sea movie y esté tagged como series/tv/episode
+            return t.type === 'series' || t.type === 'tv' || t.type === 'episode';
+          })
+          .sort((a, b) => (b.lastAt || 0) - (a.lastAt || 0));
+        const drawer = document.querySelector('#admDrawer');
+        const drawerTitle = document.querySelector('#admDrawerTitle');
+        const drawerBody = document.querySelector('#admDrawerBody');
+        const label = kind === 'series' ? 'series' : 'películas';
+        if (drawerTitle) drawerTitle.textContent = `${list.length} ${label} — ${u.name}`;
+        if (drawerBody) drawerBody.innerHTML = `
+          <button class="adm-btn-ghost" data-back-to-user="${escapeAttribute(email)}" style="margin-bottom:0.5rem;">← Volver al perfil</button>
+          ${list.length ? `<ul class="adm-content-list">
+            ${list.map((t) => {
+              const lastLabel = t.lastAt ? `Última vez: hace ${ago(new Date(t.lastAt).toISOString())} (${fmtDate(t.lastAt)})` : 'Sin fecha registrada';
+              const firstLabel = t.firstAt && t.firstAt !== t.lastAt ? ` · Primera vez: ${fmtDate(t.firstAt)}` : '';
+              const statusBadge = t.lastStatus === 'completed' ? pill('completado', 'success') : t.lastStatus === 'playing' ? pill('en progreso', 'warn') : '';
+              return `<li>
+                <div class="adm-content-row">
+                  <strong class="adm-content-title">${escapeHtml(t.title || t.id)}</strong>
+                  ${statusBadge}
+                </div>
+                <div class="adm-content-meta">
+                  <small class="adm-muted">${escapeHtml(lastLabel + firstLabel)}</small>
+                  <small class="adm-muted">${t.plays} reproducci${t.plays === 1 ? 'ón' : 'ones'}${t.completed > 0 ? ` · ${t.completed} completado${t.completed > 1 ? 's' : ''}` : ''}</small>
+                </div>
+              </li>`;
+            }).join('')}
+          </ul>` : `<p class="adm-empty">Este usuario aún no ha visto ${label}.</p>`}
+        `;
+        if (drawer) drawer.hidden = false;
+        // El botón "Volver al perfil" reabre el drawer del usuario completo.
+        drawerBody?.querySelector('[data-back-to-user]')?.addEventListener('click', () => {
+          const userBtn = document.querySelector(`[data-open-user="${email}"]`);
+          userBtn?.click();
+        });
+      };
+
+      // Event delegation: los botones [data-show-content] pueden existir tanto
+      // en la tabla de Usuarios como inyectados dinámicamente en el drawer al
+      // hacer click "Ver". Bind individual no alcanzaba a los del drawer.
+      const onShowContentClick = (event) => {
+        const btn = event.target.closest('[data-show-content]');
+        if (!btn) return;
+        event.stopPropagation();
+        openContentDrawer(btn.dataset.email, btn.dataset.showContent);
+      };
+      // Removemos cualquier listener previo (idempotente al re-renderear).
+      if (state._admShowContentHandler) {
+        document.removeEventListener('click', state._admShowContentHandler);
+      }
+      state._admShowContentHandler = onShowContentClick;
+      document.addEventListener('click', onShowContentClick);
 
       // Búsqueda y filtros en la tabla de Usuarios.
       const applyUsersFilter = () => {

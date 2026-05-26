@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T08:23:45.456Z",
+  "generatedAt": "2026-05-26T08:34:37.258Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt21209804:s1e1:started:2026-05-26T08:34:27Z",
+      "contentId": "tt21209804",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T08:34:26.373Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T08:34:27Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21209804:s1e11:started:2026-05-26T08:23:33Z",
       "contentId": "tt21209804",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T20:27:42Z"
-    },
-    {
-      "eventId": "unknown:tt0259141:s1e1:playing:2026-05-14T19:38:48Z",
-      "contentId": "tt0259141",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0259141",
-      "tmdbId": "",
-      "title": "Jackie Chan Adventures",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T19:38:48Z"
     },
     {
       "eventId": "unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",

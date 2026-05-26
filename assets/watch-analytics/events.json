@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T06:55:04.860Z",
+  "generatedAt": "2026-05-26T06:56:48.727Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e15:started:2026-05-26T06:56:40Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e15",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 15,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T06:56:39.137Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T06:56:40Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e14:started:2026-05-26T06:54:56Z",
       "contentId": "tt2560140",
@@ -11508,27 +11529,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-14T12:16:18Z"
-    },
-    {
-      "eventId": "unknown:tt33332385:s1e1:playing:2026-05-14T11:43:48Z",
-      "contentId": "tt33332385",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt33332385",
-      "tmdbId": "",
-      "title": "Widow's Bay",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-14T11:43:48Z"
     },
     {
       "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",

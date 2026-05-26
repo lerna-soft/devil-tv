@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt8398600",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T08:29:48Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt8398600:s1e1:preference:2026-05-16T08:29:48Z",
+      "contentId": "tt8398600",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt8398600",
+      "tmdbId": "",
+      "title": "After Life",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T08:29:48Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

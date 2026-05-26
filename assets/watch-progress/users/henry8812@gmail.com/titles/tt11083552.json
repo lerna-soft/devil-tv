@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt11083552",
+  "tmdbId": "637649",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T18:40:24Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt11083552:s1e1:preference:2026-05-16T18:40:24Z",
+      "contentId": "tt11083552",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt11083552",
+      "tmdbId": "637649",
+      "title": "Despierta la furia",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T18:40:24Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

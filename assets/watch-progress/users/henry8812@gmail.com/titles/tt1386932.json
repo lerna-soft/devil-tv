@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt1386932",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T06:59:19Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt1386932:s1e1:preference:2026-05-16T06:59:19Z",
+      "contentId": "tt1386932",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt1386932",
+      "tmdbId": "",
+      "title": "Ip Man 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T06:59:19Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

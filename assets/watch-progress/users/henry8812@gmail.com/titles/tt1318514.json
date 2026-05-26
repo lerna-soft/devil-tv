@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt1318514",
+  "tmdbId": "61791",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T05:21:37Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt1318514:s1e1:preference:2026-05-16T05:21:37Z",
+      "contentId": "tt1318514",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt1318514",
+      "tmdbId": "61791",
+      "title": "El origen del planeta de los simios",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T05:21:37Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

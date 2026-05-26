@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-26T21:16:41.185Z",
+  "generatedAt": "2026-05-26T22:14:56.987Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt32820897:s1e1:started:2026-05-26T22:14:46Z",
+      "contentId": "tt32820897",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt32820897",
+      "tmdbId": "1311031",
+      "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T22:14:46.299Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-26T22:14:46Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt39333617:s1e1:preference:2026-05-26T16:04:40Z",
       "contentId": "tt39333617",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-15T11:38:44Z"
-    },
-    {
-      "eventId": "unknown:tt14452776:s1e2:completed:2026-05-15T11:38:41Z",
-      "contentId": "tt14452776",
-      "episodeKey": "s1e2",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt14452776",
-      "tmdbId": "136315",
-      "title": "The Bear",
-      "type": "series",
-      "season": 1,
-      "episode": 2,
-      "progress": 1880.723439229025,
-      "progressValue": 1880.723439229025,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T11:38:41Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt1038686",
+  "tmdbId": "22894",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-23T06:25:39Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1038686:s1e1:preference:2026-05-23T06:25:39Z",
+      "contentId": "tt1038686",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1038686",
+      "tmdbId": "22894",
+      "title": "Legión",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:25:39Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

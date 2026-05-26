@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt1586680",
+  "tmdbId": "34307",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T18:38:54Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt1586680:s1e1:preference:2026-05-16T18:38:54Z",
+      "contentId": "tt1586680",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt1586680",
+      "tmdbId": "34307",
+      "title": "Shameless",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T18:38:54Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

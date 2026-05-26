@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt1570728",
+  "tmdbId": "50646",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-23T06:25:52Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1570728:s1e1:preference:2026-05-23T06:25:52Z",
+      "contentId": "tt1570728",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1570728",
+      "tmdbId": "50646",
+      "title": "Crazy, Stupid, Love.",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:25:52Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

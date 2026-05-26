@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt2076298",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T06:59:19Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt2076298:s1e1:preference:2026-05-16T06:59:19Z",
+      "contentId": "tt2076298",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt2076298",
+      "tmdbId": "",
+      "title": "Ip Man 4: The Finale",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T06:59:19Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt38682795",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T06:59:27Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt38682795:s1e1:preference:2026-05-16T06:59:27Z",
+      "contentId": "tt38682795",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt38682795",
+      "tmdbId": "",
+      "title": "Ip Man: Kung Fu Legend",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T06:59:27Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

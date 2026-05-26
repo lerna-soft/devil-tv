@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt22022784",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-16T18:22:24Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt22022784:s1e1:playing:2026-05-16T18:22:24Z",
+      "contentId": "tt22022784",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt22022784",
+      "tmdbId": "",
+      "title": "My Dead Friend Zoe",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-16T18:22:24Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt0093773",
+  "tmdbId": "106",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-23T06:17:58Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0093773:s1e1:started:2026-05-23T06:17:58Z",
+      "contentId": "tt0093773",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0093773",
+      "tmdbId": "106",
+      "title": "Predator",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T06:17:55.721Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T06:17:58Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

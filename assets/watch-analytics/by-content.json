@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T03:18:23.446Z",
+  "generatedAt": "2026-05-26T03:48:53.790Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1555,24 +1555,24 @@
       "tmdbId": "",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 8,
+      "totalEvents": 12,
+      "totalStarts": 7,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7127.063101,
       "uniqueUsers": 1,
-      "completionRate": 0.625,
+      "completionRate": 0.7143,
       "lastActivityAt": "2026-05-14T19:21:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 12,
           "completedCount": 5,
-          "startedCount": 8,
+          "startedCount": 7,
           "totalPlaybackProgress": 7127.063101,
           "lastSeenAt": "2026-05-14T19:21:17Z",
           "lastSeason": 1,
-          "lastEpisode": 6
+          "lastEpisode": 7
         }
       },
       "episodes": {
@@ -1659,23 +1659,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e6": {
-          "season": 1,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T06:31:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 548.2356
+      "avgPlaybackProgress": 593.9219
     },
     {
       "contentId": "tt21209876",
@@ -1962,6 +1948,64 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt2560140",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 5,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 41.870621,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-26T03:48:43Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 5,
+          "totalPlaybackProgress": 41.870621,
+          "lastSeenAt": "2026-05-26T03:48:43Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T03:48:43Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 4,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 41.870621,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T03:18:11Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 8.3741
+    },
+    {
       "contentId": "tt8594324",
       "imdbId": "tt8594324",
       "tmdbId": "17174",
@@ -2148,50 +2192,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2560140",
-      "imdbId": "tt2560140",
-      "tmdbId": "1429",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 4,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 41.870621,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-26T03:18:11Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 4,
-          "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T03:18:11Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 4,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 41.870621,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T03:18:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 10.4677
     },
     {
       "contentId": "296232",

@@ -57,11 +57,13 @@
             </label>
             <label class="auth-field">
               <span>Contraseña</span>
-              <input id="authPasswordRegister" type="password" autocomplete="new-password" required />
+              <input id="authPasswordRegister" type="password" autocomplete="new-password" minlength="8" required />
+              <span id="authPasswordHintRegister" class="auth-field-hint" aria-live="polite">Mínimo 8 caracteres.</span>
             </label>
             <label class="auth-field">
               <span>Confirmar contraseña</span>
-              <input id="authPasswordConfirmRegister" type="password" autocomplete="new-password" required />
+              <input id="authPasswordConfirmRegister" type="password" autocomplete="new-password" minlength="8" required />
+              <span id="authPasswordConfirmHintRegister" class="auth-field-hint" aria-live="polite"></span>
             </label>
             <button id="authSubmitRegister" type="submit">Crear cuenta</button>
             <p id="authErrorRegister" class="auth-error" aria-live="polite"></p>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T04:02:58.285Z",
+  "generatedAt": "2026-05-26T04:17:47.687Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1555,24 +1555,24 @@
       "tmdbId": "",
       "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
       "type": "series",
-      "totalEvents": 11,
+      "totalEvents": 10,
       "totalStarts": 6,
-      "totalCompletions": 5,
-      "totalPlaybackProgress": 7127.063101,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 5701.12571,
       "uniqueUsers": 1,
-      "completionRate": 0.8333,
+      "completionRate": 0.6667,
       "lastActivityAt": "2026-05-14T19:21:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
-          "completedCount": 5,
+          "playCount": 10,
+          "completedCount": 4,
           "startedCount": 6,
-          "totalPlaybackProgress": 7127.063101,
+          "totalPlaybackProgress": 5701.12571,
           "lastSeenAt": "2026-05-14T19:21:17Z",
           "lastSeason": 1,
-          "lastEpisode": 7
+          "lastEpisode": 8
         }
       },
       "episodes": {
@@ -1645,23 +1645,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e7": {
-          "season": 1,
-          "episode": 7,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1425.937391,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T06:42:46Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 647.9148
+      "avgPlaybackProgress": 570.1126
     },
     {
       "contentId": "tt21209876",
@@ -1804,76 +1790,46 @@
       "avgPlaybackProgress": 861.3589
     },
     {
-      "contentId": "tt1234721",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
+      "contentId": "tt2560140",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
       "totalEvents": 7,
-      "totalStarts": 6,
+      "totalStarts": 7,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 3085.362560914,
+      "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "lastActivityAt": "2026-05-26T04:17:36Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
           "playCount": 7,
           "completedCount": 0,
-          "startedCount": 6,
-          "totalPlaybackProgress": 3085.362560914,
-          "lastSeenAt": "2026-05-20T14:19:20Z",
+          "startedCount": 7,
+          "totalPlaybackProgress": 41.870621,
+          "lastSeenAt": "2026-05-26T04:17:36Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
-        "s1e1": {
+        "s1e4": {
           "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 6,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 3085.362560914,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T14:19:20Z",
+          "lastActivityAt": "2026-05-26T04:17:36Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 440.7661
-    },
-    {
-      "contentId": "tt2560140",
-      "imdbId": "tt2560140",
-      "tmdbId": "1429",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 6,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 41.870621,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-26T04:02:49Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 6,
-          "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-26T04:02:49Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
+        },
         "s1e3": {
           "season": 1,
           "episode": 3,
@@ -1917,7 +1873,51 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 6.9784
+      "avgPlaybackProgress": 5.9815
+    },
+    {
+      "contentId": "tt1234721",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 6,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3085.362560914,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 7,
+          "completedCount": 0,
+          "startedCount": 6,
+          "totalPlaybackProgress": 3085.362560914,
+          "lastSeenAt": "2026-05-20T14:19:20Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 6,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3085.362560914,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T14:19:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 440.7661
     },
     {
       "contentId": "tt28650488",

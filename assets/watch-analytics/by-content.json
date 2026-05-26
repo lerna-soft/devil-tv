@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T08:22:44.595Z",
+  "generatedAt": "2026-05-26T08:23:45.459Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -907,27 +907,41 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 31,
-      "totalStarts": 18,
+      "totalEvents": 32,
+      "totalStarts": 19,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7652.20068749126,
       "uniqueUsers": 1,
-      "completionRate": 0.2778,
-      "lastActivityAt": "2026-05-26T08:22:32Z",
+      "completionRate": 0.2632,
+      "lastActivityAt": "2026-05-26T08:23:33Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 31,
+          "playCount": 32,
           "completedCount": 5,
-          "startedCount": 18,
+          "startedCount": 19,
           "totalPlaybackProgress": 7652.20068749126,
-          "lastSeenAt": "2026-05-26T08:22:32Z",
+          "lastSeenAt": "2026-05-26T08:23:33Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 2,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:23:33Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e12": {
           "season": 1,
           "episode": 12,
@@ -955,20 +969,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0.3333
-        },
-        "s1e11": {
-          "season": 1,
-          "episode": 11,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T10:55:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         },
         "s1e10": {
           "season": 1,
@@ -1097,7 +1097,7 @@
           "completionRate": 0.3333
         }
       },
-      "avgPlaybackProgress": 246.8452
+      "avgPlaybackProgress": 239.1313
     },
     {
       "contentId": "tt16030542",
@@ -9453,50 +9453,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-15T23:14:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt31596104",
-      "imdbId": "tt31596104",
-      "tmdbId": "",
-      "title": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-14T19:21:17Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-14T19:21:17Z",
-          "lastSeason": 1,
-          "lastEpisode": 12
-        }
-      },
-      "episodes": {
-        "s1e12": {
-          "season": 1,
-          "episode": 12,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T19:21:17Z",
           "users": {
             "henry8812@gmail.com": true
           },

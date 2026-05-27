@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T21:23:16.582Z",
+  "generatedAt": "2026-05-27T21:32:57.759Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 72,
-      "totalStarts": 49,
+      "totalEvents": 73,
+      "totalStarts": 50,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.102,
-      "lastActivityAt": "2026-05-27T21:23:06Z",
+      "completionRate": 0.1,
+      "lastActivityAt": "2026-05-27T21:32:43Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 72,
+          "playCount": 73,
           "completedCount": 5,
-          "startedCount": 49,
+          "startedCount": 50,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T21:23:06Z",
+          "lastSeenAt": "2026-05-27T21:32:43Z",
           "lastSeason": 3,
-          "lastEpisode": 13
+          "lastEpisode": 14
         }
       },
       "episodes": {
+        "s3e14": {
+          "season": 3,
+          "episode": 14,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T21:32:43Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e13": {
           "season": 3,
           "episode": 13,
@@ -1431,7 +1445,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 99.2688
+      "avgPlaybackProgress": 97.909
     },
     {
       "contentId": "tt21209804",
@@ -8589,50 +8603,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:02:06Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt15880520",
-      "imdbId": "tt15880520",
-      "tmdbId": "",
-      "title": "James Bond 007 at the Movies",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:00:49Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:00:49Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:00:49Z",
           "users": {
             "henry8812@gmail.com": true
           },

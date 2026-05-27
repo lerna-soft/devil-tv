@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T21:23:16.584Z",
+  "generatedAt": "2026-05-27T21:32:57.760Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T21:23:06Z",
+      "updatedAt": "2026-05-27T21:32:43Z",
       "totalEvents": 500,
-      "totalStarts": 183,
+      "totalStarts": 184,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 133,
-      "lastActivityAt": "2026-05-27T21:23:06Z",
+      "uniqueContentCount": 132,
+      "lastActivityAt": "2026-05-27T21:32:43Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 72,
+          "playCount": 73,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T21:23:06Z"
+          "lastSeenAt": "2026-05-27T21:32:43Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1621,18 +1621,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:02:06Z"
-        },
-        "tt15880520": {
-          "contentId": "tt15880520",
-          "imdbId": "tt15880520",
-          "tmdbId": "",
-          "title": "James Bond 007 at the Movies",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:00:49Z"
         }
       },
       "avgPlaybackProgress": 555.8604

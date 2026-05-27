@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T20:28:59Z",
+  "updatedAt": "2026-05-27T20:35:49Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1755,9 +1755,9 @@
       "tmdbId": "1429",
       "lastSeason": 3,
       "lastEpisode": 7,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-27T20:28:59Z",
+      "progress": 1435.1092795918366,
+      "lastProgress": 1435.1092795918366,
+      "updatedAt": "2026-05-27T20:35:49Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1876,8 +1876,8 @@
         },
         "s3e7": {
           "startedAt": "2026-05-27T18:41:10.004Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-05-27T20:35:49.349Z",
+          "lastProgress": 1435.1092795918366
         }
       }
     },
@@ -2055,11 +2055,38 @@
     "tmdbId": "1429",
     "season": 3,
     "episode": 7,
-    "progress": 0,
-    "updatedAt": "2026-05-27T20:28:59Z"
+    "progress": 1435.1092795918366,
+    "updatedAt": "2026-05-27T20:35:49Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e7:completed:2026-05-27T20:35:49Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 7,
+      "progress": 1435.1092795918366,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-27T18:41:10.004Z",
+      "completedAt": "2026-05-27T20:35:49.349Z",
+      "updatedAt": "2026-05-27T20:35:49Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e7:started:2026-05-27T20:28:59Z",
       "contentId": "tt2560140",
@@ -15524,33 +15551,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T06:59:19Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt1220719:s1e1:preference:2026-05-16T06:59:18Z",
-      "contentId": "tt1220719",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1220719",
-      "tmdbId": "",
-      "title": "Ip Man",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:59:18Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T18:41:34.276Z",
+  "generatedAt": "2026-05-27T18:41:44.221Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T18:41:07Z",
+      "updatedAt": "2026-05-27T18:41:10Z",
       "totalEvents": 500,
-      "totalStarts": 174,
+      "totalStarts": 175,
       "totalCompletions": 70,
       "totalPlaybackProgress": 271788.4574143001,
       "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-27T18:41:07Z",
+      "lastActivityAt": "2026-05-27T18:41:10Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 62,
+          "playCount": 63,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T18:41:07Z"
+          "lastSeenAt": "2026-05-27T18:41:10Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1783,7 +1783,7 @@
           "tmdbId": "",
           "title": "Police Story",
           "type": "series",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

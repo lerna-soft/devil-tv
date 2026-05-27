@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T04:23:23.179Z",
+  "generatedAt": "2026-05-27T04:30:14.688Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T04:23:12Z",
+      "updatedAt": "2026-05-27T04:30:03Z",
       "totalEvents": 500,
-      "totalStarts": 168,
+      "totalStarts": 167,
       "totalCompletions": 68,
-      "totalPlaybackProgress": 267401.6018098781,
-      "uniqueContentCount": 160,
-      "lastActivityAt": "2026-05-27T04:23:12Z",
+      "totalPlaybackProgress": 264926.8143321003,
+      "uniqueContentCount": 159,
+      "lastActivityAt": "2026-05-27T04:30:03Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -34,8 +34,7 @@
         "tt1234721",
         "tt0865556",
         "tt7068946",
-        "tt0032186",
-        "tt31938062"
+        "tt0032186"
       ],
       "content": {
         "15070": {
@@ -122,6 +121,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt0899043": {
+          "contentId": "tt0899043",
+          "imdbId": "tt0899043",
+          "tmdbId": "1087891",
+          "title": "Amateur",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-27T04:30:03Z"
+        },
         "tt2560140": {
           "contentId": "tt2560140",
           "imdbId": "tt2560140",
@@ -145,18 +156,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T22:14:46Z"
-        },
-        "tt0899043": {
-          "contentId": "tt0899043",
-          "imdbId": "tt0899043",
-          "tmdbId": "1087891",
-          "title": "Amateur",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-26T14:01:55Z"
         },
         "tt21209804": {
           "contentId": "tt21209804",
@@ -1945,21 +1944,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T01:57:30Z"
-        },
-        "tt31938062": {
-          "contentId": "tt31938062",
-          "imdbId": "tt31938062",
-          "tmdbId": "250307",
-          "title": "The Pitt",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 2474.787477777778,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T01:46:08Z"
         }
       },
-      "avgPlaybackProgress": 534.8032
+      "avgPlaybackProgress": 529.8536
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

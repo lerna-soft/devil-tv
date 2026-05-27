@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T21:32:57.759Z",
+  "generatedAt": "2026-05-27T22:23:52.747Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 73,
+      "totalEvents": 74,
       "totalStarts": 50,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
       "completionRate": 0.1,
-      "lastActivityAt": "2026-05-27T21:32:43Z",
+      "lastActivityAt": "2026-05-27T22:23:40Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 73,
+          "playCount": 74,
           "completedCount": 5,
           "startedCount": 50,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T21:32:43Z",
+          "lastSeenAt": "2026-05-27T22:23:40Z",
           "lastSeason": 3,
           "lastEpisode": 14
         }
@@ -747,12 +747,12 @@
         "s3e14": {
           "season": 3,
           "episode": 14,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T21:32:43Z",
+          "lastActivityAt": "2026-05-27T22:23:40Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1445,7 +1445,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 97.909
+      "avgPlaybackProgress": 96.5859
     },
     {
       "contentId": "tt21209804",
@@ -8559,50 +8559,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:02:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2249007",
-      "imdbId": "tt2249007",
-      "tmdbId": "1423",
-      "title": "Ray Donovan",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:02:06Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:02:06Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:02:06Z",
           "users": {
             "henry8812@gmail.com": true
           },

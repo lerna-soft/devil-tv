@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T20:46:53.065Z",
+  "generatedAt": "2026-05-27T20:51:36.350Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T20:46:42Z",
+      "updatedAt": "2026-05-27T20:51:24Z",
       "totalEvents": 500,
-      "totalStarts": 179,
+      "totalStarts": 180,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 138,
-      "lastActivityAt": "2026-05-27T20:46:42Z",
+      "uniqueContentCount": 137,
+      "lastActivityAt": "2026-05-27T20:51:24Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 67,
+          "playCount": 68,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T20:46:42Z"
+          "lastSeenAt": "2026-05-27T20:51:24Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1681,18 +1681,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:24Z"
-        },
-        "tt2888046": {
-          "contentId": "tt2888046",
-          "imdbId": "tt2888046",
-          "tmdbId": "",
-          "title": "Ip Man 3",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:59:22Z"
         }
       },
       "avgPlaybackProgress": 555.8604

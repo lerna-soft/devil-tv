@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T19:51:12.625Z",
+  "generatedAt": "2026-05-27T20:28:49.244Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt30460310:s1e2:started:2026-05-27T20:28:35Z",
+      "contentId": "tt30460310",
+      "episodeKey": "s1e2",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "season": 1,
+      "episode": 2,
+      "progress": 35.358218735,
+      "progressValue": 35.358218735,
+      "progressPercent": 35.358218735,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T19:50:53.601Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T20:28:35Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt30460310:s1e2:started:2026-05-27T19:50:54Z",
       "contentId": "tt30460310",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T06:59:03Z"
-    },
-    {
-      "eventId": "unknown:tt2599716:s1e1:preference:2026-05-16T06:59:01Z",
-      "contentId": "tt2599716",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2599716",
-      "tmdbId": "",
-      "title": "Police Story: Lockdown",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:59:01Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T08:21:13.662Z",
+  "generatedAt": "2026-05-27T08:24:31.895Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T08:21:02Z",
+      "updatedAt": "2026-05-27T08:24:20Z",
       "totalEvents": 500,
       "totalStarts": 166,
       "totalCompletions": 67,
       "totalPlaybackProgress": 266119.08293048793,
       "uniqueContentCount": 159,
-      "lastActivityAt": "2026-05-27T08:21:02Z",
+      "lastActivityAt": "2026-05-27T08:24:20Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 41,
+          "playCount": 42,
           "completed": true,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T08:21:02Z"
+          "lastSeenAt": "2026-05-27T08:24:20Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1855,7 +1855,7 @@
           "tmdbId": "79744",
           "title": "The Rookie",
           "type": "series",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

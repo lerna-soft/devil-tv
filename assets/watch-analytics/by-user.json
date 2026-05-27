@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T16:03:25.248Z",
+  "generatedAt": "2026-05-27T16:03:38.126Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T16:03:12Z",
+      "updatedAt": "2026-05-27T16:03:14Z",
       "totalEvents": 500,
-      "totalStarts": 174,
+      "totalStarts": 175,
       "totalCompletions": 69,
       "totalPlaybackProgress": 268989.28293048794,
       "uniqueContentCount": 149,
-      "lastActivityAt": "2026-05-27T16:03:12Z",
+      "lastActivityAt": "2026-05-27T16:03:14Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 57,
+          "playCount": 58,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T16:03:12Z"
+          "lastSeenAt": "2026-05-27T16:03:14Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -787,7 +787,7 @@
           "tmdbId": "1168190",
           "title": "Los hermanos demolición",
           "type": "movie",
-          "playCount": 5,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,

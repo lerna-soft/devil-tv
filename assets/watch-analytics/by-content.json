@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T16:03:25.246Z",
+  "generatedAt": "2026-05-27T16:03:38.124Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 57,
-      "totalStarts": 41,
+      "totalEvents": 58,
+      "totalStarts": 42,
       "totalCompletions": 3,
       "totalPlaybackProgress": 2913.070621,
       "uniqueUsers": 1,
-      "completionRate": 0.0732,
-      "lastActivityAt": "2026-05-27T16:03:12Z",
+      "completionRate": 0.0714,
+      "lastActivityAt": "2026-05-27T16:03:14Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 57,
+          "playCount": 58,
           "completedCount": 3,
-          "startedCount": 41,
+          "startedCount": 42,
           "totalPlaybackProgress": 2913.070621,
-          "lastSeenAt": "2026-05-27T16:03:12Z",
+          "lastSeenAt": "2026-05-27T16:03:14Z",
           "lastSeason": 3,
-          "lastEpisode": 5
+          "lastEpisode": 6
         }
       },
       "episodes": {
+        "s3e6": {
+          "season": 3,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T16:03:14Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e5": {
           "season": 3,
           "episode": 5,
@@ -1319,7 +1333,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 51.1065
+      "avgPlaybackProgress": 50.2254
     },
     {
       "contentId": "tt21209804",
@@ -2098,74 +2112,6 @@
       "avgPlaybackProgress": 301.5334
     },
     {
-      "contentId": "tt33046197",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "totalEvents": 8,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 6890.871176,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T01:07:52Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1411.466637,
-          "lastSeenAt": "2026-05-23T01:07:52Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5479.404539,
-          "lastSeenAt": "2026-05-22T19:39:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 8,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 6890.871176,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-23T01:07:52Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 861.3589
-    },
-    {
       "contentId": "tt1190634",
       "imdbId": "tt1190634",
       "tmdbId": "76479",
@@ -2250,6 +2196,74 @@
         }
       },
       "avgPlaybackProgress": 853.6227
+    },
+    {
+      "contentId": "tt33046197",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 6890.871176,
+      "uniqueUsers": 3,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T01:07:52Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1411.466637,
+          "lastSeenAt": "2026-05-23T01:07:52Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 5479.404539,
+          "lastSeenAt": "2026-05-22T19:39:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:14Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 6890.871176,
+          "uniqueUsers": 3,
+          "lastActivityAt": "2026-05-23T01:07:52Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "henry8812@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 984.4102
     },
     {
       "contentId": "tt1234721",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T20:29:08.242Z",
+  "generatedAt": "2026-05-27T20:36:04.127Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 64,
+      "totalEvents": 65,
       "totalStarts": 43,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 5712.245104812138,
+      "totalCompletions": 5,
+      "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.093,
-      "lastActivityAt": "2026-05-27T20:28:59Z",
+      "completionRate": 0.1163,
+      "lastActivityAt": "2026-05-27T20:35:49Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 64,
-          "completedCount": 4,
+          "playCount": 65,
+          "completedCount": 5,
           "startedCount": 43,
-          "totalPlaybackProgress": 5712.245104812138,
-          "lastSeenAt": "2026-05-27T20:28:59Z",
+          "totalPlaybackProgress": 7147.354384403976,
+          "lastSeenAt": "2026-05-27T20:35:49Z",
           "lastSeason": 3,
           "lastEpisode": 7
         }
@@ -747,16 +747,16 @@
         "s3e7": {
           "season": 3,
           "episode": 7,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1435.1092795918366,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T20:28:59Z",
+          "lastActivityAt": "2026-05-27T20:35:49Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s3e6": {
           "season": 3,
@@ -1347,7 +1347,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 89.2538
+      "avgPlaybackProgress": 109.9593
     },
     {
       "contentId": "tt21209804",
@@ -8857,50 +8857,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:59:19Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1220719",
-      "imdbId": "tt1220719",
-      "tmdbId": "",
-      "title": "Ip Man",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:59:18Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:59:18Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:59:18Z",
           "users": {
             "henry8812@gmail.com": true
           },

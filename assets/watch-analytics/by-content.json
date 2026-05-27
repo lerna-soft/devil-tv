@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T18:36:31.124Z",
+  "generatedAt": "2026-05-27T18:41:34.274Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 61,
+      "totalEvents": 62,
       "totalStarts": 42,
-      "totalCompletions": 3,
-      "totalPlaybackProgress": 4277.182189237999,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 5712.245104812138,
       "uniqueUsers": 1,
-      "completionRate": 0.0714,
-      "lastActivityAt": "2026-05-27T18:35:48Z",
+      "completionRate": 0.0952,
+      "lastActivityAt": "2026-05-27T18:41:07Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 61,
-          "completedCount": 3,
+          "playCount": 62,
+          "completedCount": 4,
           "startedCount": 42,
-          "totalPlaybackProgress": 4277.182189237999,
-          "lastSeenAt": "2026-05-27T18:35:48Z",
+          "totalPlaybackProgress": 5712.245104812138,
+          "lastSeenAt": "2026-05-27T18:41:07Z",
           "lastSeason": 3,
           "lastEpisode": 6
         }
@@ -747,16 +747,16 @@
         "s3e6": {
           "season": 3,
           "episode": 6,
-          "totalEvents": 4,
+          "totalEvents": 5,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1364.111568238,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2799.1744838121385,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T18:35:48Z",
+          "lastActivityAt": "2026-05-27T18:41:07Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s3e5": {
           "season": 3,
@@ -1333,7 +1333,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 70.1177
+      "avgPlaybackProgress": 92.133
     },
     {
       "contentId": "tt21209804",
@@ -9093,50 +9093,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:58:59Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0103950",
-      "imdbId": "tt0103950",
-      "tmdbId": "",
-      "title": "City Hunter",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:57:15Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:57:15Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:57:15Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-05-27T19:30:55.983Z",
+  "generatedAt": "2026-05-27T19:51:01.182Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T19:30:46Z",
+      "updatedAt": "2026-05-27T19:50:51Z",
       "totalEvents": 500,
       "totalStarts": 176,
-      "totalCompletions": 70,
-      "totalPlaybackProgress": 273643.9959879387,
-      "uniqueContentCount": 145,
-      "lastActivityAt": "2026-05-27T19:30:46Z",
+      "totalCompletions": 71,
+      "totalPlaybackProgress": 276459.72598793876,
+      "uniqueContentCount": 144,
+      "lastActivityAt": "2026-05-27T19:50:51Z",
       "completedContentIds": [
+        "tt30460310",
         "tt2560140",
         "tt21209804",
         "tt0903747",
@@ -24,7 +25,6 @@
       ],
       "inProgressContentIds": [
         "274870",
-        "tt30460310",
         "tt0899043",
         "tt21209876",
         "tt2294629",
@@ -128,11 +128,11 @@
           "tmdbId": "220102",
           "title": "Spider-Noir",
           "type": "series",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 1855.5385736386486,
+          "playCount": 4,
+          "completed": true,
+          "maxProgressValue": 2815.73,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-27T19:30:46Z"
+          "lastSeenAt": "2026-05-27T19:50:51Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1765,21 +1765,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:00Z"
-        },
-        "tt0095403": {
-          "contentId": "tt0095403",
-          "imdbId": "tt0095403",
-          "tmdbId": "",
-          "title": "Police Story 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:58:59Z"
         }
       },
-      "avgPlaybackProgress": 547.288
+      "avgPlaybackProgress": 552.9195
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

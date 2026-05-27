@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T14:54:03.617Z",
+  "generatedAt": "2026-05-27T15:07:07.184Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e3:started:2026-05-27T15:06:53Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 3,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T15:06:52.156Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T15:06:53Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e2:started:2026-05-27T14:53:50Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:26:06Z"
-    },
-    {
-      "eventId": "unknown:tt36104233:s1e1:preference:2026-05-16T05:21:40Z",
-      "contentId": "tt36104233",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt36104233",
-      "tmdbId": "285838",
-      "title": "Si los deseos mataran...",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:21:40Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

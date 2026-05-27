@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T02:12:44.037Z",
+  "generatedAt": "2026-05-27T02:13:00.842Z",
   "events": [
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e25:started:2026-05-27T02:12:33Z",
@@ -19,6 +19,27 @@
       "eventType": "started",
       "playerStatus": "playing",
       "startedAt": "2026-05-27T02:12:32.608Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T02:12:33Z"
+    },
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e24:started:2026-05-27T02:12:33Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e24",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 24,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T02:12:32.560Z",
       "completedAt": "",
       "updatedAt": "2026-05-27T02:12:33Z"
     },
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-15T18:38:58Z"
-    },
-    {
-      "eventId": "unknown:tt14452776:s1e4:completed:2026-05-15T18:38:55Z",
-      "contentId": "tt14452776",
-      "episodeKey": "s1e4",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt14452776",
-      "tmdbId": "136315",
-      "title": "The Bear",
-      "type": "series",
-      "season": 1,
-      "episode": 4,
-      "progress": 1806.115431668813,
-      "progressValue": 1806.115431668813,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T18:38:55Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

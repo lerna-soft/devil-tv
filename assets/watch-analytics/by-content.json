@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T08:39:51.331Z",
+  "generatedAt": "2026-05-27T08:43:26.442Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 45,
-      "totalStarts": 34,
+      "totalEvents": 46,
+      "totalStarts": 35,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0294,
-      "lastActivityAt": "2026-05-27T08:39:25Z",
+      "completionRate": 0.0286,
+      "lastActivityAt": "2026-05-27T08:43:13Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 45,
+          "playCount": 46,
           "completedCount": 1,
-          "startedCount": 34,
+          "startedCount": 35,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T08:39:25Z",
+          "lastSeenAt": "2026-05-27T08:43:13Z",
           "lastSeason": 2,
-          "lastEpisode": 9
+          "lastEpisode": 10
         }
       },
       "episodes": {
+        "s2e10": {
+          "season": 2,
+          "episode": 10,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T08:43:13Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e9": {
           "season": 2,
           "episode": 9,
@@ -1221,7 +1235,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.9527
+      "avgPlaybackProgress": 0.932
     },
     {
       "contentId": "tt21209804",
@@ -9433,50 +9447,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T05:20:52Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt27486290",
-      "imdbId": "tt27486290",
-      "tmdbId": "224263",
-      "title": "Stranger Things: Relatos del 85",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T05:17:40Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:17:40Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:17:40Z",
           "users": {
             "henry8812@gmail.com": true
           },

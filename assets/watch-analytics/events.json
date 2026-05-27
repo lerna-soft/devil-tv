@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T08:39:51.328Z",
+  "generatedAt": "2026-05-27T08:43:26.439Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e10:started:2026-05-27T08:43:13Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e10",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 10,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T08:43:13.122Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T08:43:13Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e9:started:2026-05-27T08:39:25Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:17:42Z"
-    },
-    {
-      "eventId": "unknown:tt27486290:s1e1:preference:2026-05-16T05:17:40Z",
-      "contentId": "tt27486290",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt27486290",
-      "tmdbId": "224263",
-      "title": "Stranger Things: Relatos del 85",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:17:40Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

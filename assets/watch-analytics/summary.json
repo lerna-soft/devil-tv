@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T01:40:02.348Z",
+  "generatedAt": "2026-05-27T01:43:58.133Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
@@ -33,20 +33,20 @@
       "completionRate": 0.55
     },
     {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 29,
-      "uniqueUsers": 1,
-      "completionRate": 0.2174
-    },
-    {
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 28,
+      "totalEvents": 29,
       "uniqueUsers": 1,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt14452776",
+      "title": "The Bear",
+      "type": "series",
+      "totalEvents": 28,
+      "uniqueUsers": 1,
+      "completionRate": 0.2273
     },
     {
       "contentId": "tt29552248",

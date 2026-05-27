@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T22:24:09.833Z",
+  "generatedAt": "2026-05-27T22:24:23.324Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T22:23:40Z",
+      "updatedAt": "2026-05-27T22:24:13Z",
       "totalEvents": 500,
       "totalStarts": 184,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 131,
-      "lastActivityAt": "2026-05-27T22:23:40Z",
+      "uniqueContentCount": 130,
+      "lastActivityAt": "2026-05-27T22:24:13Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 74,
+          "playCount": 75,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T22:23:40Z"
+          "lastSeenAt": "2026-05-27T22:24:13Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1597,18 +1597,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:02:28Z"
-        },
-        "tt29268110": {
-          "contentId": "tt29268110",
-          "imdbId": "tt29268110",
-          "tmdbId": "1100782",
-          "title": "Smile 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:02:11Z"
         }
       },
       "avgPlaybackProgress": 555.8604

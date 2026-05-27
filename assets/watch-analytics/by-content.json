@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T13:52:36.977Z",
+  "generatedAt": "2026-05-27T14:39:13.744Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 48,
-      "totalStarts": 36,
+      "totalEvents": 49,
+      "totalStarts": 37,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0278,
-      "lastActivityAt": "2026-05-27T12:42:44Z",
+      "completionRate": 0.027,
+      "lastActivityAt": "2026-05-27T14:39:00Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 48,
+          "playCount": 49,
           "completedCount": 1,
-          "startedCount": 36,
+          "startedCount": 37,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T12:42:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
+          "lastSeenAt": "2026-05-27T14:39:00Z",
+          "lastSeason": 2,
+          "lastEpisode": 12
         }
       },
       "episodes": {
+        "s2e12": {
+          "season": 2,
+          "episode": 12,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T14:39:00Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -1249,7 +1263,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.8931
+      "avgPlaybackProgress": 0.8749
     },
     {
       "contentId": "tt21209804",
@@ -1837,7 +1851,7 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 16,
+      "totalEvents": 15,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
@@ -1848,7 +1862,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 9,
+          "playCount": 8,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
@@ -1883,7 +1897,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 16,
+          "totalEvents": 15,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
@@ -1897,7 +1911,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1028.489
+      "avgPlaybackProgress": 1097.0549
     },
     {
       "contentId": "tt32897959",

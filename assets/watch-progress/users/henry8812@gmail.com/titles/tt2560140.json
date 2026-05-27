@@ -1,11 +1,11 @@
 {
   "imdbId": "tt2560140",
   "tmdbId": "1429",
-  "lastSeason": 1,
-  "lastEpisode": 1,
+  "lastSeason": 2,
+  "lastEpisode": 3,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-05-27T04:17:54Z",
+  "updatedAt": "2026-05-27T04:17:57Z",
   "watched": {
     "s1e21": {
       "startedAt": "2026-05-27T01:39:53.746Z",
@@ -43,7 +43,7 @@
       "lastProgress": 0
     },
     "s2e3": {
-      "startedAt": "2026-05-27T04:07:56.303Z",
+      "startedAt": "2026-05-27T04:17:56.523Z",
       "completedAt": "",
       "lastProgress": 0
     },
@@ -54,6 +54,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e3:started:2026-05-27T04:17:57Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 3,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T04:17:56.523Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T04:17:57Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e1:preference:2026-05-27T04:17:54Z",
       "contentId": "tt2560140",

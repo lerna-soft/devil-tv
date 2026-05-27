@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T15:45:10.986Z",
+  "generatedAt": "2026-05-27T15:45:21.613Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T15:44:59Z",
+      "updatedAt": "2026-05-27T15:45:02Z",
       "totalEvents": 500,
-      "totalStarts": 173,
+      "totalStarts": 174,
       "totalCompletions": 68,
       "totalPlaybackProgress": 267554.1829304879,
-      "uniqueContentCount": 150,
-      "lastActivityAt": "2026-05-27T15:44:59Z",
+      "uniqueContentCount": 149,
+      "lastActivityAt": "2026-05-27T15:45:02Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 55,
+          "playCount": 56,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T15:44:59Z"
+          "lastSeenAt": "2026-05-27T15:45:02Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1824,18 +1824,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:50:54Z"
-        },
-        "tt37989803": {
-          "contentId": "tt37989803",
-          "imdbId": "tt37989803",
-          "tmdbId": "1613798",
-          "title": "Venganza",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:50:43Z"
         }
       },
       "avgPlaybackProgress": 535.1084

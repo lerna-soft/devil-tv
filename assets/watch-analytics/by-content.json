@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T15:45:10.984Z",
+  "generatedAt": "2026-05-27T15:45:21.611Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 55,
-      "totalStarts": 40,
+      "totalEvents": 56,
+      "totalStarts": 41,
       "totalCompletions": 2,
       "totalPlaybackProgress": 1477.970621,
       "uniqueUsers": 1,
-      "completionRate": 0.05,
-      "lastActivityAt": "2026-05-27T15:44:59Z",
+      "completionRate": 0.0488,
+      "lastActivityAt": "2026-05-27T15:45:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 55,
+          "playCount": 56,
           "completedCount": 2,
-          "startedCount": 40,
+          "startedCount": 41,
           "totalPlaybackProgress": 1477.970621,
-          "lastSeenAt": "2026-05-27T15:44:59Z",
+          "lastSeenAt": "2026-05-27T15:45:02Z",
           "lastSeason": 3,
-          "lastEpisode": 3
+          "lastEpisode": 5
         }
       },
       "episodes": {
+        "s3e5": {
+          "season": 3,
+          "episode": 5,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T15:45:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e3": {
           "season": 3,
           "episode": 3,
@@ -1305,7 +1319,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 26.8722
+      "avgPlaybackProgress": 26.3923
     },
     {
       "contentId": "tt21209804",
@@ -9197,50 +9211,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T05:50:54Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt37989803",
-      "imdbId": "tt37989803",
-      "tmdbId": "1613798",
-      "title": "Venganza",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T05:50:43Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:50:43Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:50:43Z",
           "users": {
             "henry8812@gmail.com": true
           },

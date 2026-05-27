@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-26T22:14:46Z",
+  "updatedAt": "2026-05-27T01:27:47Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1743,11 +1743,17 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 1,
-      "lastEpisode": 1,
+      "lastEpisode": 21,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-26T14:32:46Z",
-      "watched": {}
+      "updatedAt": "2026-05-27T01:27:47Z",
+      "watched": {
+        "s1e21": {
+          "startedAt": "2026-05-26T14:31:21.856Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "tt21209876": {
       "imdbId": "tt21209876",
@@ -1912,15 +1918,42 @@
     "updatedAt": "2026-05-26T14:01:37Z"
   },
   "lastWatch": {
-    "imdbId": "tt32820897",
-    "tmdbId": "1311031",
+    "imdbId": "tt2560140",
+    "tmdbId": "1429",
     "season": 1,
-    "episode": 1,
+    "episode": 21,
     "progress": 0,
-    "updatedAt": "2026-05-26T22:14:46Z"
+    "updatedAt": "2026-05-27T01:27:47Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e21:started:2026-05-27T01:27:47Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e21",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 21,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T14:31:21.856Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T01:27:47Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt32820897:s1e1:started:2026-05-26T22:14:46Z",
       "contentId": "tt32820897",
@@ -15385,33 +15418,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-15T15:23:42Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt14452776:s1e3:playing:2026-05-15T11:38:44Z",
-      "contentId": "tt14452776",
-      "episodeKey": "s1e3",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt14452776",
-      "tmdbId": "136315",
-      "title": "The Bear",
-      "type": "series",
-      "season": 1,
-      "episode": 3,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T11:38:44Z",
       "country": "",
       "countryName": "",
       "city": "",

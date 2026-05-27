@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T08:32:43.733Z",
+  "generatedAt": "2026-05-27T08:36:56.586Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 43,
-      "totalStarts": 32,
+      "totalEvents": 44,
+      "totalStarts": 33,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0313,
-      "lastActivityAt": "2026-05-27T08:32:34Z",
+      "completionRate": 0.0303,
+      "lastActivityAt": "2026-05-27T08:36:45Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 43,
+          "playCount": 44,
           "completedCount": 1,
-          "startedCount": 32,
+          "startedCount": 33,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T08:32:34Z",
+          "lastSeenAt": "2026-05-27T08:36:45Z",
           "lastSeason": 2,
-          "lastEpisode": 7
+          "lastEpisode": 8
         }
       },
       "episodes": {
+        "s2e8": {
+          "season": 2,
+          "episode": 8,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T08:36:45Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e7": {
           "season": 2,
           "episode": 7,
@@ -1193,7 +1207,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.997
+      "avgPlaybackProgress": 0.9743
     },
     {
       "contentId": "tt21209804",
@@ -3905,50 +3919,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:57:15Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt35521922",
-      "imdbId": "tt35521922",
-      "tmdbId": "",
-      "title": "Good Boy",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T05:20:52Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:20:52Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:20:52Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -9405,6 +9375,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T05:21:37Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt35521922",
+      "imdbId": "tt35521922",
+      "tmdbId": "",
+      "title": "Good Boy",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-16T05:20:52Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-16T05:20:52Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-16T05:20:52Z",
           "users": {
             "henry8812@gmail.com": true
           },

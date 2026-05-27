@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T18:41:44.221Z",
+  "generatedAt": "2026-05-27T19:00:52.549Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T18:41:10Z",
+      "updatedAt": "2026-05-27T19:00:42Z",
       "totalEvents": 500,
-      "totalStarts": 175,
+      "totalStarts": 176,
       "totalCompletions": 70,
       "totalPlaybackProgress": 271788.4574143001,
-      "uniqueContentCount": 146,
-      "lastActivityAt": "2026-05-27T18:41:10Z",
+      "uniqueContentCount": 145,
+      "lastActivityAt": "2026-05-27T19:00:42Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -120,6 +120,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt30460310": {
+          "contentId": "tt30460310",
+          "imdbId": "tt30460310",
+          "tmdbId": "220102",
+          "title": "Spider-Noir",
+          "type": "series",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-27T19:00:42Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -961,18 +973,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:40:28Z"
         },
-        "tt30460310": {
-          "contentId": "tt30460310",
-          "imdbId": "tt30460310",
-          "tmdbId": "",
-          "title": "Spider-Noir",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T06:40:24Z"
-        },
         "tt0899258": {
           "contentId": "tt0899258",
           "imdbId": "tt0899258",
@@ -1776,18 +1776,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:58:59Z"
-        },
-        "tt0069620": {
-          "contentId": "tt0069620",
-          "imdbId": "tt0069620",
-          "tmdbId": "",
-          "title": "Police Story",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:58:56Z"
         }
       },
       "avgPlaybackProgress": 543.5769

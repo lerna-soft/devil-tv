@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T20:28:49.244Z",
+  "generatedAt": "2026-05-27T20:29:08.239Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e7:started:2026-05-27T20:28:59Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 7,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T18:41:10.004Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T20:28:59Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt30460310:s1e2:started:2026-05-27T20:28:35Z",
       "contentId": "tt30460310",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T06:59:18Z"
-    },
-    {
-      "eventId": "unknown:tt0386005:s1e1:preference:2026-05-16T06:59:03Z",
-      "contentId": "tt0386005",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0386005",
-      "tmdbId": "",
-      "title": "New Police Story",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:59:03Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

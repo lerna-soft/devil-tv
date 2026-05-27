@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T20:57:33.273Z",
+  "generatedAt": "2026-05-27T21:03:47.225Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 69,
-      "totalStarts": 46,
+      "totalEvents": 70,
+      "totalStarts": 47,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.1087,
-      "lastActivityAt": "2026-05-27T20:57:24Z",
+      "completionRate": 0.1064,
+      "lastActivityAt": "2026-05-27T21:03:35Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 69,
+          "playCount": 70,
           "completedCount": 5,
-          "startedCount": 46,
+          "startedCount": 47,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T20:57:24Z",
+          "lastSeenAt": "2026-05-27T21:03:35Z",
           "lastSeason": 3,
-          "lastEpisode": 10
+          "lastEpisode": 11
         }
       },
       "episodes": {
+        "s3e11": {
+          "season": 3,
+          "episode": 11,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T21:03:35Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e10": {
           "season": 3,
           "episode": 10,
@@ -1389,7 +1403,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 103.5848
+      "avgPlaybackProgress": 102.1051
     },
     {
       "contentId": "tt21209804",
@@ -8679,50 +8693,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:59:29Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt38682795",
-      "imdbId": "tt38682795",
-      "tmdbId": "",
-      "title": "Ip Man: Kung Fu Legend",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:59:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:59:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:59:27Z",
           "users": {
             "henry8812@gmail.com": true
           },

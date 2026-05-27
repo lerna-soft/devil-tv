@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T22:24:23.324Z",
+  "generatedAt": "2026-05-27T22:29:33.834Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T22:24:13Z",
+      "updatedAt": "2026-05-27T22:29:22Z",
       "totalEvents": 500,
-      "totalStarts": 184,
+      "totalStarts": 185,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 130,
-      "lastActivityAt": "2026-05-27T22:24:13Z",
+      "uniqueContentCount": 129,
+      "lastActivityAt": "2026-05-27T22:29:22Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 75,
+          "playCount": 76,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T22:24:13Z"
+          "lastSeenAt": "2026-05-27T22:29:22Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1585,18 +1585,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:02:38Z"
-        },
-        "tt0790724": {
-          "contentId": "tt0790724",
-          "imdbId": "tt0790724",
-          "tmdbId": "75780",
-          "title": "Jack Reacher",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:02:28Z"
         }
       },
       "avgPlaybackProgress": 555.8604

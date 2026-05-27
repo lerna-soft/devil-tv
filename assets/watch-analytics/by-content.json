@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T22:24:23.322Z",
+  "generatedAt": "2026-05-27T22:29:33.833Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 75,
-      "totalStarts": 50,
+      "totalEvents": 76,
+      "totalStarts": 51,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.1,
-      "lastActivityAt": "2026-05-27T22:24:13Z",
+      "completionRate": 0.098,
+      "lastActivityAt": "2026-05-27T22:29:22Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 75,
+          "playCount": 76,
           "completedCount": 5,
-          "startedCount": 50,
+          "startedCount": 51,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T22:24:13Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
+          "lastSeenAt": "2026-05-27T22:29:22Z",
+          "lastSeason": 3,
+          "lastEpisode": 15
         }
       },
       "episodes": {
+        "s3e15": {
+          "season": 3,
+          "episode": 15,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T22:29:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -1445,7 +1459,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 95.2981
+      "avgPlaybackProgress": 94.0441
     },
     {
       "contentId": "tt21209804",
@@ -8471,50 +8485,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:02:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0790724",
-      "imdbId": "tt0790724",
-      "tmdbId": "75780",
-      "title": "Jack Reacher",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:02:28Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:02:28Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:02:28Z",
           "users": {
             "henry8812@gmail.com": true
           },

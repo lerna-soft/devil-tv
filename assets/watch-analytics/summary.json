@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-27T01:56:36.177Z",
+  "generatedAt": "2026-05-27T02:12:44.037Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
   "totalStarts": 179,
   "totalCompletions": 70,
-  "overallCompletionRate": 0.3911,
+  "overallCompletionRate": 0.3855,
   "trackedTitles": 179,
   "mostWatchedContent": [
     {
@@ -25,6 +25,14 @@
       "completionRate": 0.3846
     },
     {
+      "contentId": "tt2560140",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 31,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt16030542",
       "title": "The Recruit",
       "type": "series",
@@ -33,20 +41,12 @@
       "completionRate": 0.7857
     },
     {
-      "contentId": "tt2560140",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 30,
-      "uniqueUsers": 1,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt14452776",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 27,
+      "totalEvents": 26,
       "uniqueUsers": 1,
-      "completionRate": 0.4444
+      "completionRate": 0.5
     },
     {
       "contentId": "tt29552248",

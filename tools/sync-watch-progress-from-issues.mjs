@@ -668,6 +668,16 @@ function normalizeAnalyticsEvent(rawEvent, user) {
 
 function buildAnalyticsByContent(events) {
   const map = new Map();
+  // Sets para dedupe: (user, episodeKey) únicos por título. Evita que un
+  // user que abre el mismo ep 5 veces se cuente como 5 starts; ahora cuenta
+  // como 1 (espectador único). Lo mismo para completed.
+  const startedSeen = new Map();   // contentId -> Set<user:epKey>
+  const completedSeen = new Map(); // contentId -> Set<user:epKey>
+  const startedSeenPerEp = new Map();   // contentId|epKey -> Set<user>
+  const completedSeenPerEp = new Map(); // contentId|epKey -> Set<user>
+  const startedSeenPerUser = new Map();   // contentId|user -> Set<epKey>
+  const completedSeenPerUser = new Map(); // contentId|user -> Set<epKey>
+
   for (const event of events || []) {
     const contentId = String(event?.contentId || '').trim();
     if (!contentId) continue;
@@ -688,12 +698,33 @@ function buildAnalyticsByContent(events) {
       episodes: {}
     };
     bucket.totalEvents += 1;
-    if (event.eventType === 'started') bucket.totalStarts += 1;
-    if (event.eventType === 'completed' || event.playerStatus === 'completed') bucket.totalCompletions += 1;
     bucket.totalPlaybackProgress += Number(event.progress || 0);
     bucket.lastActivityAt = maxIsoString(bucket.lastActivityAt, event.updatedAt);
 
     const userEmail = normalizeEmail(event.userEmail);
+    const episodeKey = String(event.episodeKey || `s${event.season}e${event.episode}`).trim();
+    const isStarted = event.eventType === 'started';
+    const isCompleted = event.eventType === 'completed' || event.playerStatus === 'completed';
+    const uniqueKey = `${userEmail}:${episodeKey}`;
+
+    // Dedupe a nivel título.
+    if (userEmail && isStarted) {
+      const set = startedSeen.get(contentId) || new Set();
+      if (!set.has(uniqueKey)) {
+        set.add(uniqueKey);
+        bucket.totalStarts += 1;
+      }
+      startedSeen.set(contentId, set);
+    }
+    if (userEmail && isCompleted) {
+      const set = completedSeen.get(contentId) || new Set();
+      if (!set.has(uniqueKey)) {
+        set.add(uniqueKey);
+        bucket.totalCompletions += 1;
+      }
+      completedSeen.set(contentId, set);
+    }
+
     if (userEmail) {
       const userBucket = bucket.users[userEmail] || {
         userEmail,
@@ -707,8 +738,24 @@ function buildAnalyticsByContent(events) {
         lastEpisode: 0
       };
       userBucket.playCount += 1;
-      if (event.eventType === 'started') userBucket.startedCount += 1;
-      if (event.eventType === 'completed' || event.playerStatus === 'completed') userBucket.completedCount += 1;
+      // Dedupe a nivel user dentro del título: contar eps únicos.
+      const userStartedKey = `${contentId}|${userEmail}`;
+      if (isStarted) {
+        const set = startedSeenPerUser.get(userStartedKey) || new Set();
+        if (!set.has(episodeKey)) {
+          set.add(episodeKey);
+          userBucket.startedCount += 1;
+        }
+        startedSeenPerUser.set(userStartedKey, set);
+      }
+      if (isCompleted) {
+        const set = completedSeenPerUser.get(userStartedKey) || new Set();
+        if (!set.has(episodeKey)) {
+          set.add(episodeKey);
+          userBucket.completedCount += 1;
+        }
+        completedSeenPerUser.set(userStartedKey, set);
+      }
       userBucket.totalPlaybackProgress += Number(event.progress || 0);
       userBucket.lastSeenAt = maxIsoString(userBucket.lastSeenAt, event.updatedAt);
       userBucket.lastSeason = positiveInteger(event.season, userBucket.lastSeason || 1);
@@ -716,7 +763,6 @@ function buildAnalyticsByContent(events) {
       bucket.users[userEmail] = userBucket;
     }
 
-    const episodeKey = String(event.episodeKey || `s${event.season}e${event.episode}`).trim();
     const episodeBucket = bucket.episodes[episodeKey] || {
       season: positiveInteger(event.season, 1),
       episode: positiveInteger(event.episode, 1),
@@ -729,8 +775,24 @@ function buildAnalyticsByContent(events) {
       users: {}
     };
     episodeBucket.totalEvents += 1;
-    if (event.eventType === 'started') episodeBucket.totalStarts += 1;
-    if (event.eventType === 'completed' || event.playerStatus === 'completed') episodeBucket.totalCompletions += 1;
+    // Dedupe a nivel episodio: contar users únicos que started/completed.
+    const episodeUniqueKey = `${contentId}|${episodeKey}`;
+    if (userEmail && isStarted) {
+      const set = startedSeenPerEp.get(episodeUniqueKey) || new Set();
+      if (!set.has(userEmail)) {
+        set.add(userEmail);
+        episodeBucket.totalStarts += 1;
+      }
+      startedSeenPerEp.set(episodeUniqueKey, set);
+    }
+    if (userEmail && isCompleted) {
+      const set = completedSeenPerEp.get(episodeUniqueKey) || new Set();
+      if (!set.has(userEmail)) {
+        set.add(userEmail);
+        episodeBucket.totalCompletions += 1;
+      }
+      completedSeenPerEp.set(episodeUniqueKey, set);
+    }
     episodeBucket.totalPlaybackProgress += Number(event.progress || 0);
     episodeBucket.lastActivityAt = maxIsoString(episodeBucket.lastActivityAt, event.updatedAt);
     if (userEmail) episodeBucket.users[userEmail] = true;
@@ -845,17 +907,41 @@ function buildAnalyticsByUser(users, events) {
 }
 
 function buildAnalyticsSummary(users, events, byContent) {
-  const startedEvents = (events || []).filter((event) => event.eventType === 'started');
-  const completedEvents = (events || []).filter((event) => event.eventType === 'completed' || event.playerStatus === 'completed');
-  const activeUserEmails = new Set((events || []).map((event) => normalizeEmail(event.userEmail)).filter(Boolean));
+  // Dedupe global: (user, contentId, episodeKey) únicos para starts y
+  // completed. Antes contábamos eventos raw, lo que inflaba métricas si
+  // un user reabría el mismo episodio varias veces. Ahora cada
+  // espectador-episodio cuenta una sola vez en cada bucket.
+  const startedSet = new Set();
+  const completedSet = new Set();
+  const activeUserEmails = new Set();
+  let totalEvents = 0;
+  for (const event of events || []) {
+    totalEvents += 1;
+    const userEmail = normalizeEmail(event?.userEmail);
+    if (!userEmail) continue;
+    activeUserEmails.add(userEmail);
+    const contentId = String(event?.contentId || '').trim();
+    if (!contentId) continue;
+    const episodeKey = String(event?.episodeKey || `s${event?.season}e${event?.episode}`).trim();
+    const uniqueKey = `${userEmail}|${contentId}|${episodeKey}`;
+    if (event.eventType === 'started') startedSet.add(uniqueKey);
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') completedSet.add(uniqueKey);
+  }
+  // El completion rate ahora es "qué % de espectador-episodios que se
+  // empezaron también se terminaron". Solo cuentan completed que tienen
+  // un started correspondiente (intersección) — esto evita que un
+  // completed sin started previo (heurística disparada en sesión nueva
+  // sin started en analytics) infle el rate.
+  let completedWithStart = 0;
+  for (const key of completedSet) if (startedSet.has(key)) completedWithStart += 1;
   return {
     generatedAt: new Date().toISOString(),
     totalUsers: (users || []).length,
     activeUsers: activeUserEmails.size,
-    totalEvents: (events || []).length,
-    totalStarts: startedEvents.length,
-    totalCompletions: completedEvents.length,
-    overallCompletionRate: startedEvents.length > 0 ? roundRatio(completedEvents.length / startedEvents.length) : 0,
+    totalEvents,
+    totalStarts: startedSet.size,
+    totalCompletions: completedSet.size,
+    overallCompletionRate: startedSet.size > 0 ? roundRatio(completedWithStart / startedSet.size) : 0,
     trackedTitles: (byContent || []).length,
     mostWatchedContent: (byContent || []).slice(0, 10).map((row) => ({
       contentId: row.contentId,

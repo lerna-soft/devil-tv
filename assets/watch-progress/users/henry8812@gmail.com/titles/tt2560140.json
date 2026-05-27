@@ -5,7 +5,7 @@
   "lastEpisode": 7,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-05-27T18:41:10Z",
+  "updatedAt": "2026-05-27T20:28:59Z",
   "watched": {
     "s1e21": {
       "startedAt": "2026-05-27T01:39:53.746Z",
@@ -129,6 +129,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e7:started:2026-05-27T20:28:59Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 7,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T18:41:10.004Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T20:28:59Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e7:started:2026-05-27T18:41:10Z",
       "contentId": "tt2560140",

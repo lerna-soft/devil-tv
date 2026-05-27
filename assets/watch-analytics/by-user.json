@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-27T20:28:49.249Z",
+  "generatedAt": "2026-05-27T20:29:08.244Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T20:28:35Z",
+      "updatedAt": "2026-05-27T20:28:59Z",
       "totalEvents": 500,
       "totalStarts": 177,
       "totalCompletions": 71,
       "totalPlaybackProgress": 276495.0842066737,
-      "uniqueContentCount": 142,
-      "lastActivityAt": "2026-05-27T20:28:35Z",
+      "uniqueContentCount": 141,
+      "lastActivityAt": "2026-05-27T20:28:59Z",
       "completedContentIds": [
-        "tt30460310",
         "tt2560140",
+        "tt30460310",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -122,6 +122,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 64,
+          "completed": true,
+          "maxProgressValue": 1435.1,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-27T20:28:59Z"
+        },
         "tt30460310": {
           "contentId": "tt30460310",
           "imdbId": "tt30460310",
@@ -133,18 +145,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-27T20:28:35Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 63,
-          "completed": true,
-          "maxProgressValue": 1435.1,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T18:41:10Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1729,18 +1729,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:18Z"
-        },
-        "tt0386005": {
-          "contentId": "tt0386005",
-          "imdbId": "tt0386005",
-          "tmdbId": "",
-          "title": "New Police Story",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:59:03Z"
         }
       },
       "avgPlaybackProgress": 552.9902

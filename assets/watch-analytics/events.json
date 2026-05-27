@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T08:24:31.893Z",
+  "generatedAt": "2026-05-27T08:32:43.730Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e7:started:2026-05-27T08:32:34Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 7,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T08:32:33.928Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T08:32:34Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e6:started:2026-05-27T08:24:20Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T02:33:00Z"
-    },
-    {
-      "eventId": "unknown:tt12042730:s1e1:playing:2026-05-16T01:57:30Z",
-      "contentId": "tt12042730",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt12042730",
-      "tmdbId": "687163",
-      "title": "Proyecto Salvación",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T01:57:30Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

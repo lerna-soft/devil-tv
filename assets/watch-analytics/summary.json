@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-27T01:54:07.553Z",
+  "generatedAt": "2026-05-27T01:56:36.177Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 306,
-  "totalCompletions": 73,
-  "overallCompletionRate": 0.2386,
+  "totalStarts": 179,
+  "totalCompletions": 70,
+  "overallCompletionRate": 0.3911,
   "trackedTitles": 179,
   "mostWatchedContent": [
     {
@@ -14,7 +14,7 @@
       "type": "series",
       "totalEvents": 125,
       "uniqueUsers": 1,
-      "completionRate": 0.6316
+      "completionRate": 0.9388
     },
     {
       "contentId": "tt21209804",
@@ -22,7 +22,7 @@
       "type": "series",
       "totalEvents": 34,
       "uniqueUsers": 1,
-      "completionRate": 0.2381
+      "completionRate": 0.3846
     },
     {
       "contentId": "tt16030542",
@@ -30,13 +30,13 @@
       "type": "series",
       "totalEvents": 31,
       "uniqueUsers": 1,
-      "completionRate": 0.55
+      "completionRate": 0.7857
     },
     {
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 29,
+      "totalEvents": 30,
       "uniqueUsers": 1,
       "completionRate": 0
     },
@@ -44,9 +44,9 @@
       "contentId": "tt14452776",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 28,
+      "totalEvents": 27,
       "uniqueUsers": 1,
-      "completionRate": 0.2273
+      "completionRate": 0.4444
     },
     {
       "contentId": "tt29552248",
@@ -62,7 +62,7 @@
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
-      "completionRate": 0.1111
+      "completionRate": 0.5
     },
     {
       "contentId": "tt21209876",
@@ -86,7 +86,7 @@
       "type": "series",
       "totalEvents": 8,
       "uniqueUsers": 1,
-      "completionRate": 0.1429
+      "completionRate": 0.25
     }
   ]
 }

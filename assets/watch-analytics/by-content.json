@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T01:54:07.557Z",
+  "generatedAt": "2026-05-27T01:56:36.180Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -8,19 +8,19 @@
       "title": "Breaking Bad",
       "type": "series",
       "totalEvents": 125,
-      "totalStarts": 76,
-      "totalCompletions": 48,
+      "totalStarts": 49,
+      "totalCompletions": 46,
       "totalPlaybackProgress": 151881.12720567174,
       "uniqueUsers": 1,
-      "completionRate": 0.6316,
+      "completionRate": 0.9388,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
           "playCount": 125,
-          "completedCount": 48,
-          "startedCount": 76,
+          "completedCount": 46,
+          "startedCount": 49,
           "totalPlaybackProgress": 151881.12720567174,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 1,
@@ -32,7 +32,7 @@
           "season": 5,
           "episode": 3,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 795.626826729,
           "uniqueUsers": 1,
@@ -46,7 +46,7 @@
           "season": 5,
           "episode": 2,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2847.5471294095782,
           "uniqueUsers": 1,
@@ -54,27 +54,27 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s5e1": {
           "season": 5,
           "episode": 1,
           "totalEvents": 6,
-          "totalStarts": 4,
-          "totalCompletions": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
           "totalPlaybackProgress": 5222.485822263038,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T16:11:36Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e1": {
           "season": 1,
           "episode": 1,
           "totalEvents": 6,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3526.876511,
           "uniqueUsers": 1,
@@ -82,7 +82,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.25
+          "completionRate": 1
         },
         "s4e13": {
           "season": 4,
@@ -242,7 +242,7 @@
           "season": 4,
           "episode": 2,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 5471.703076,
           "uniqueUsers": 1,
@@ -250,7 +250,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s4e1": {
           "season": 4,
@@ -340,7 +340,7 @@
           "season": 3,
           "episode": 8,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 6372.504164999999,
           "uniqueUsers": 1,
@@ -348,7 +348,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s3e7": {
           "season": 3,
@@ -410,7 +410,7 @@
           "season": 3,
           "episode": 3,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3559.866578,
           "uniqueUsers": 1,
@@ -418,7 +418,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s3e2": {
           "season": 3,
@@ -452,7 +452,7 @@
           "season": 2,
           "episode": 13,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4940.605833,
           "uniqueUsers": 1,
@@ -460,13 +460,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s2e12": {
           "season": 2,
           "episode": 12,
           "totalEvents": 3,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2803.64793,
           "uniqueUsers": 1,
@@ -536,7 +536,7 @@
           "season": 2,
           "episode": 7,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2834.8777999999998,
           "uniqueUsers": 1,
@@ -544,7 +544,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s2e6": {
           "season": 2,
@@ -592,7 +592,7 @@
           "season": 2,
           "episode": 3,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4897.928563472,
           "uniqueUsers": 1,
@@ -600,13 +600,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s2e2": {
           "season": 2,
           "episode": 2,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2874.583939909297,
           "uniqueUsers": 1,
@@ -614,13 +614,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e7": {
           "season": 1,
           "episode": 7,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3537.6452740000004,
           "uniqueUsers": 1,
@@ -628,13 +628,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s1e3": {
           "season": 1,
           "episode": 3,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2884.940021,
           "uniqueUsers": 1,
@@ -642,27 +642,27 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e2": {
           "season": 1,
           "episode": 2,
           "totalEvents": 5,
-          "totalStarts": 3,
-          "totalCompletions": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
           "totalPlaybackProgress": 5771.533939999999,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T22:02:03Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.6667
+          "completionRate": 1
         },
         "s1e4": {
           "season": 1,
           "episode": 4,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2888.655214,
           "uniqueUsers": 1,
@@ -670,13 +670,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s2e1": {
           "season": 2,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2832.7648120181407,
           "uniqueUsers": 1,
@@ -684,7 +684,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e6": {
           "season": 1,
@@ -724,11 +724,11 @@
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
       "totalEvents": 34,
-      "totalStarts": 21,
+      "totalStarts": 13,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7652.20068749126,
       "uniqueUsers": 1,
-      "completionRate": 0.2381,
+      "completionRate": 0.3846,
       "lastActivityAt": "2026-05-26T08:35:30Z",
       "users": {
         "henry8812@gmail.com": {
@@ -736,7 +736,7 @@
           "userName": "Henry Gomez",
           "playCount": 34,
           "completedCount": 5,
-          "startedCount": 21,
+          "startedCount": 13,
           "totalPlaybackProgress": 7652.20068749126,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
@@ -762,7 +762,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 13,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1420.1324260770975,
           "uniqueUsers": 1,
@@ -770,13 +770,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.25
+          "completionRate": 1
         },
         "s1e11": {
           "season": 1,
           "episode": 11,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -790,7 +790,7 @@
           "season": 1,
           "episode": 12,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1420.132402,
           "uniqueUsers": 1,
@@ -798,13 +798,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e10": {
           "season": 1,
           "episode": 10,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -916,7 +916,7 @@
           "season": 1,
           "episode": 2,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1971.7594446749345,
           "uniqueUsers": 1,
@@ -924,7 +924,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         }
       },
       "avgPlaybackProgress": 225.0647
@@ -936,11 +936,11 @@
       "title": "The Recruit",
       "type": "series",
       "totalEvents": 31,
-      "totalStarts": 20,
+      "totalStarts": 14,
       "totalCompletions": 11,
       "totalPlaybackProgress": 40578.126499000005,
       "uniqueUsers": 1,
-      "completionRate": 0.55,
+      "completionRate": 0.7857,
       "lastActivityAt": "2026-05-19T17:04:21Z",
       "users": {
         "henry8812@gmail.com": {
@@ -948,7 +948,7 @@
           "userName": "Henry Gomez",
           "playCount": 31,
           "completedCount": 11,
-          "startedCount": 20,
+          "startedCount": 14,
           "totalPlaybackProgress": 40578.126499000005,
           "lastSeenAt": "2026-05-19T17:04:21Z",
           "lastSeason": 1,
@@ -974,7 +974,7 @@
           "season": 2,
           "episode": 5,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4911.489479,
           "uniqueUsers": 1,
@@ -982,7 +982,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s2e4": {
           "season": 2,
@@ -1030,7 +1030,7 @@
           "season": 2,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3260.708547,
           "uniqueUsers": 1,
@@ -1038,13 +1038,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e8": {
           "season": 1,
           "episode": 8,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3340.724511,
           "uniqueUsers": 1,
@@ -1052,13 +1052,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e1": {
           "season": 1,
           "episode": 1,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3052.724858,
           "uniqueUsers": 1,
@@ -1100,7 +1100,7 @@
           "season": 1,
           "episode": 5,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3050.730497,
           "uniqueUsers": 1,
@@ -1108,7 +1108,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e4": {
           "season": 1,
@@ -1161,27 +1161,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 29,
-      "totalStarts": 29,
+      "totalEvents": 30,
+      "totalStarts": 23,
       "totalCompletions": 0,
       "totalPlaybackProgress": 41.870621,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-27T01:43:47Z",
+      "lastActivityAt": "2026-05-27T01:56:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 29,
+          "playCount": 30,
           "completedCount": 0,
-          "startedCount": 29,
+          "startedCount": 23,
           "totalPlaybackProgress": 41.870621,
-          "lastSeenAt": "2026-05-27T01:43:47Z",
+          "lastSeenAt": "2026-05-27T01:56:28Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e23": {
+          "season": 1,
+          "episode": 23,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T01:56:28Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e22": {
           "season": 1,
           "episode": 22,
@@ -1200,7 +1214,7 @@
           "season": 1,
           "episode": 21,
           "totalEvents": 4,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -1214,7 +1228,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 5,
-          "totalStarts": 5,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 41.870621,
           "uniqueUsers": 1,
@@ -1491,7 +1505,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.4438
+      "avgPlaybackProgress": 1.3957
     },
     {
       "contentId": "tt14452776",
@@ -1499,24 +1513,24 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 28,
-      "totalStarts": 22,
-      "totalCompletions": 5,
-      "totalPlaybackProgress": 11030.26989488811,
+      "totalEvents": 27,
+      "totalStarts": 9,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 9266.13289488811,
       "uniqueUsers": 1,
-      "completionRate": 0.2273,
+      "completionRate": 0.4444,
       "lastActivityAt": "2026-05-19T04:44:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 28,
-          "completedCount": 5,
-          "startedCount": 22,
-          "totalPlaybackProgress": 11030.26989488811,
+          "playCount": 27,
+          "completedCount": 4,
+          "startedCount": 9,
+          "totalPlaybackProgress": 9266.13289488811,
           "lastSeenAt": "2026-05-19T04:44:02Z",
           "lastSeason": 1,
-          "lastEpisode": 3
+          "lastEpisode": 4
         }
       },
       "episodes": {
@@ -1524,7 +1538,7 @@
           "season": 2,
           "episode": 3,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 275.00610559600005,
           "uniqueUsers": 1,
@@ -1538,7 +1552,7 @@
           "season": 2,
           "episode": 2,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3591.6520868749967,
           "uniqueUsers": 1,
@@ -1546,13 +1560,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s2e1": {
           "season": 2,
           "episode": 1,
           "totalEvents": 6,
-          "totalStarts": 5,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1746.119,
           "uniqueUsers": 1,
@@ -1560,13 +1574,13 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.2
+          "completionRate": 1
         },
         "s1e5": {
           "season": 1,
           "episode": 5,
           "totalEvents": 3,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -1608,7 +1622,7 @@
           "season": 1,
           "episode": 7,
           "totalEvents": 4,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -1622,7 +1636,7 @@
           "season": 1,
           "episode": 6,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1847.2402707482993,
           "uniqueUsers": 1,
@@ -1630,7 +1644,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         },
         "s1e4": {
           "season": 1,
@@ -1645,23 +1659,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1764.137,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T18:24:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 393.9382
+      "avgPlaybackProgress": 343.1901
     },
     {
       "contentId": "tt29552248",
@@ -1670,7 +1670,7 @@
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 17,
-      "totalStarts": 9,
+      "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
       "uniqueUsers": 3,
@@ -1682,7 +1682,7 @@
           "userName": "Henry Gomez",
           "playCount": 10,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
           "lastSeenAt": "2026-05-21T11:32:15Z",
           "lastSeason": 1,
@@ -1693,7 +1693,7 @@
           "userName": "Luz Enith Campo",
           "playCount": 6,
           "completedCount": 0,
-          "startedCount": 5,
+          "startedCount": 1,
           "totalPlaybackProgress": 10064.210153999999,
           "lastSeenAt": "2026-05-19T02:20:43Z",
           "lastSeason": 1,
@@ -1716,7 +1716,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 17,
-          "totalStarts": 9,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
           "uniqueUsers": 3,
@@ -1738,11 +1738,11 @@
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
-      "totalStarts": 9,
+      "totalStarts": 2,
       "totalCompletions": 1,
       "totalPlaybackProgress": 19691.405951855024,
       "uniqueUsers": 2,
-      "completionRate": 0.1111,
+      "completionRate": 0.5,
       "lastActivityAt": "2026-05-18T19:40:47Z",
       "users": {
         "luzenithc1994@gmail.com": {
@@ -1750,7 +1750,7 @@
           "userName": "Luz Enith Campo",
           "playCount": 6,
           "completedCount": 0,
-          "startedCount": 5,
+          "startedCount": 1,
           "totalPlaybackProgress": 16690.969082000003,
           "lastSeenAt": "2026-05-18T19:40:47Z",
           "lastSeason": 1,
@@ -1761,7 +1761,7 @@
           "userName": "Orfinelly",
           "playCount": 7,
           "completedCount": 1,
-          "startedCount": 4,
+          "startedCount": 1,
           "totalPlaybackProgress": 3000.4368698550247,
           "lastSeenAt": "2026-05-11T21:06:22Z",
           "lastSeason": 1,
@@ -1773,7 +1773,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 13,
-          "totalStarts": 9,
+          "totalStarts": 2,
           "totalCompletions": 1,
           "totalPlaybackProgress": 19691.405951855024,
           "uniqueUsers": 2,
@@ -1782,7 +1782,7 @@
             "luzenithc1994@gmail.com": true,
             "ornebe@hotmail.com": true
           },
-          "completionRate": 0.1111
+          "completionRate": 0.5
         }
       },
       "avgPlaybackProgress": 1514.7235
@@ -1794,7 +1794,7 @@
       "title": "Solo Leveling",
       "type": "series",
       "totalEvents": 8,
-      "totalStarts": 8,
+      "totalStarts": 3,
       "totalCompletions": 0,
       "totalPlaybackProgress": 2412.267489,
       "uniqueUsers": 1,
@@ -1806,7 +1806,7 @@
           "userName": "Henry Gomez",
           "playCount": 8,
           "completedCount": 0,
-          "startedCount": 8,
+          "startedCount": 3,
           "totalPlaybackProgress": 2412.267489,
           "lastSeenAt": "2026-05-25T18:46:45Z",
           "lastSeason": 1,
@@ -1818,7 +1818,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 5,
-          "totalStarts": 5,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2412.267489,
           "uniqueUsers": 1,
@@ -1832,7 +1832,7 @@
           "season": 1,
           "episode": 4,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -1866,7 +1866,7 @@
       "title": "Los hermanos demolición",
       "type": "movie",
       "totalEvents": 8,
-      "totalStarts": 5,
+      "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 6890.871176,
       "uniqueUsers": 3,
@@ -1878,7 +1878,7 @@
           "userName": "Luz Enith Campo",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 1411.466637,
           "lastSeenAt": "2026-05-23T01:07:52Z",
           "lastSeason": 1,
@@ -1889,7 +1889,7 @@
           "userName": "Henry Gomez",
           "playCount": 5,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 5479.404539,
           "lastSeenAt": "2026-05-22T19:39:26Z",
           "lastSeason": 1,
@@ -1912,7 +1912,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 8,
-          "totalStarts": 5,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 6890.871176,
           "uniqueUsers": 3,
@@ -1934,11 +1934,11 @@
       "title": "The Boys",
       "type": "series",
       "totalEvents": 8,
-      "totalStarts": 7,
+      "totalStarts": 4,
       "totalCompletions": 1,
       "totalPlaybackProgress": 6828.981281833502,
       "uniqueUsers": 1,
-      "completionRate": 0.1429,
+      "completionRate": 0.25,
       "lastActivityAt": "2026-05-22T23:10:41Z",
       "users": {
         "henry8812@gmail.com": {
@@ -1946,7 +1946,7 @@
           "userName": "Henry Gomez",
           "playCount": 8,
           "completedCount": 1,
-          "startedCount": 7,
+          "startedCount": 4,
           "totalPlaybackProgress": 6828.981281833502,
           "lastSeenAt": "2026-05-22T23:10:41Z",
           "lastSeason": 5,
@@ -1958,7 +1958,7 @@
           "season": 5,
           "episode": 8,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2618.228266414001,
           "uniqueUsers": 1,
@@ -1972,7 +1972,7 @@
           "season": 5,
           "episode": 7,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4210.753015419501,
           "uniqueUsers": 1,
@@ -1980,7 +1980,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.3333
+          "completionRate": 1
         },
         "s1e8": {
           "season": 1,
@@ -2020,7 +2020,7 @@
       "title": "RoboCop",
       "type": "movie",
       "totalEvents": 7,
-      "totalStarts": 6,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 3085.362560914,
       "uniqueUsers": 1,
@@ -2032,7 +2032,7 @@
           "userName": "Henry Gomez",
           "playCount": 7,
           "completedCount": 0,
-          "startedCount": 6,
+          "startedCount": 1,
           "totalPlaybackProgress": 3085.362560914,
           "lastSeenAt": "2026-05-20T14:19:20Z",
           "lastSeason": 1,
@@ -2044,7 +2044,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 7,
-          "totalStarts": 6,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3085.362560914,
           "uniqueUsers": 1,
@@ -2064,7 +2064,7 @@
       "title": "Your Name.",
       "type": "movie",
       "totalEvents": 6,
-      "totalStarts": 5,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 15395.681718,
       "uniqueUsers": 1,
@@ -2076,7 +2076,7 @@
           "userName": "Luz Enith Campo",
           "playCount": 6,
           "completedCount": 0,
-          "startedCount": 5,
+          "startedCount": 1,
           "totalPlaybackProgress": 15395.681718,
           "lastSeenAt": "2026-05-26T16:03:45Z",
           "lastSeason": 1,
@@ -2088,7 +2088,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 6,
-          "totalStarts": 5,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 15395.681718,
           "uniqueUsers": 1,
@@ -2164,7 +2164,7 @@
       "title": "Hoppers",
       "type": "movie",
       "totalEvents": 6,
-      "totalStarts": 5,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 12840.95939,
       "uniqueUsers": 1,
@@ -2176,7 +2176,7 @@
           "userName": "Lizeth Munera",
           "playCount": 6,
           "completedCount": 0,
-          "startedCount": 5,
+          "startedCount": 1,
           "totalPlaybackProgress": 12840.95939,
           "lastSeenAt": "2026-05-18T01:26:53Z",
           "lastSeason": 1,
@@ -2188,7 +2188,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 6,
-          "totalStarts": 5,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 12840.95939,
           "uniqueUsers": 1,
@@ -2208,7 +2208,7 @@
       "title": "Ghosts",
       "type": "series",
       "totalEvents": 5,
-      "totalStarts": 4,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2220,7 +2220,7 @@
           "userName": "Henry Gomez",
           "playCount": 5,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 1,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-26T03:17:40Z",
           "lastSeason": 1,
@@ -2232,7 +2232,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 5,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2252,7 +2252,7 @@
       "title": "You're Missing the Point",
       "type": "movie",
       "totalEvents": 5,
-      "totalStarts": 5,
+      "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 5172.198298546031,
       "uniqueUsers": 2,
@@ -2275,7 +2275,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 1,
           "totalPlaybackProgress": 5172.198298546031,
           "lastSeenAt": "2026-05-16T14:01:26Z",
           "lastSeason": 1,
@@ -2287,7 +2287,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 5,
-          "totalStarts": 5,
+          "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 5172.198298546031,
           "uniqueUsers": 2,
@@ -2308,7 +2308,7 @@
       "title": "El contable",
       "type": "movie",
       "totalEvents": 5,
-      "totalStarts": 3,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2320,7 +2320,7 @@
           "userName": "Henry Gomez",
           "playCount": 5,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-19T05:57:57Z",
           "lastSeason": 1,
@@ -2332,7 +2332,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 5,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2352,7 +2352,7 @@
       "title": "Snowball Earth",
       "type": "series",
       "totalEvents": 4,
-      "totalStarts": 3,
+      "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2364,7 +2364,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 2,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-22T03:53:13Z",
           "lastSeason": 1,
@@ -2376,7 +2376,7 @@
           "season": 1,
           "episode": 7,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2424,11 +2424,11 @@
       "title": "John Wick (Otro día para matar)",
       "type": "movie",
       "totalEvents": 4,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 1,
       "totalPlaybackProgress": 6072.9,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
+      "completionRate": 1,
       "lastActivityAt": "2026-05-21T11:11:54Z",
       "users": {
         "henry8812@gmail.com": {
@@ -2436,7 +2436,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 1,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 6072.9,
           "lastSeenAt": "2026-05-21T11:11:54Z",
           "lastSeason": 1,
@@ -2448,7 +2448,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 4,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 6072.9,
           "uniqueUsers": 1,
@@ -2456,7 +2456,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
+          "completionRate": 1
         }
       },
       "avgPlaybackProgress": 1518.225
@@ -2468,7 +2468,7 @@
       "title": "Transporter",
       "type": "movie",
       "totalEvents": 4,
-      "totalStarts": 4,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 8796.558491219334,
       "uniqueUsers": 1,
@@ -2480,7 +2480,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 1,
           "totalPlaybackProgress": 8796.558491219334,
           "lastSeenAt": "2026-05-21T10:49:04Z",
           "lastSeason": 1,
@@ -2492,7 +2492,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 4,
-          "totalStarts": 4,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 8796.558491219334,
           "uniqueUsers": 1,
@@ -2512,7 +2512,7 @@
       "title": "Balls Up: Con un par",
       "type": "movie",
       "totalEvents": 4,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2524,7 +2524,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-20T06:54:36Z",
           "lastSeason": 1,
@@ -2536,7 +2536,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 4,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2556,7 +2556,7 @@
       "title": "The Accountant 2",
       "type": "movie",
       "totalEvents": 4,
-      "totalStarts": 3,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 3489.7588178220017,
       "uniqueUsers": 1,
@@ -2568,7 +2568,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 3489.7588178220017,
           "lastSeenAt": "2026-05-19T05:42:03Z",
           "lastSeason": 1,
@@ -2580,7 +2580,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 4,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3489.7588178220017,
           "uniqueUsers": 1,
@@ -2600,7 +2600,7 @@
       "title": "One Piece",
       "type": "series",
       "totalEvents": 4,
-      "totalStarts": 4,
+      "totalStarts": 3,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2612,7 +2612,7 @@
           "userName": "Henry Gomez",
           "playCount": 4,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 3,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-19T05:16:51Z",
           "lastSeason": 1,
@@ -2652,7 +2652,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2744,7 +2744,7 @@
       "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
       "type": "movie",
       "totalEvents": 3,
-      "totalStarts": 3,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
@@ -2756,7 +2756,7 @@
           "userName": "Henry Gomez",
           "playCount": 3,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 0,
           "lastSeenAt": "2026-05-26T22:14:46Z",
           "lastSeason": 1,
@@ -2768,7 +2768,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
@@ -2832,7 +2832,7 @@
       "title": "Michael",
       "type": "movie",
       "totalEvents": 3,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 2554.435513,
       "uniqueUsers": 2,
@@ -2844,7 +2844,7 @@
           "userName": "Juan carlos Rios",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 2554.435513,
           "lastSeenAt": "2026-05-23T18:25:39Z",
           "lastSeason": 1,
@@ -2867,7 +2867,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2554.435513,
           "uniqueUsers": 2,
@@ -2888,7 +2888,7 @@
       "title": "Passengers",
       "type": "movie",
       "totalEvents": 3,
-      "totalStarts": 3,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 5916.63411,
       "uniqueUsers": 1,
@@ -2900,7 +2900,7 @@
           "userName": "Henry Gomez",
           "playCount": 3,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 5916.63411,
           "lastSeenAt": "2026-05-22T21:10:08Z",
           "lastSeason": 1,
@@ -2912,7 +2912,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 5916.63411,
           "uniqueUsers": 1,
@@ -3020,7 +3020,7 @@
       "title": "El reino prohibido",
       "type": "movie",
       "totalEvents": 3,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 2568.527129,
       "uniqueUsers": 1,
@@ -3032,7 +3032,7 @@
           "userName": "Henry Gomez",
           "playCount": 3,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 2568.527129,
           "lastSeenAt": "2026-05-20T04:11:38Z",
           "lastSeason": 1,
@@ -3044,7 +3044,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2568.527129,
           "uniqueUsers": 1,
@@ -3064,7 +3064,7 @@
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
       "totalEvents": 3,
-      "totalStarts": 3,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 5191.537065,
       "uniqueUsers": 1,
@@ -3076,7 +3076,7 @@
           "userName": "Juan carlos Rios",
           "playCount": 3,
           "completedCount": 0,
-          "startedCount": 3,
+          "startedCount": 1,
           "totalPlaybackProgress": 5191.537065,
           "lastSeenAt": "2026-05-19T05:28:17Z",
           "lastSeason": 1,
@@ -3088,7 +3088,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 3,
-          "totalStarts": 3,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 5191.537065,
           "uniqueUsers": 1,
@@ -3196,7 +3196,7 @@
       "title": "Frozen: El reino del hielo",
       "type": "movie",
       "totalEvents": 2,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 351.309775247,
       "uniqueUsers": 1,
@@ -3208,7 +3208,7 @@
           "userName": "Henry Gomez",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 351.309775247,
           "lastSeenAt": "2026-05-23T11:46:05Z",
           "lastSeason": 1,
@@ -3220,7 +3220,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 351.309775247,
           "uniqueUsers": 1,
@@ -3416,7 +3416,7 @@
       "title": "The Foreigner",
       "type": "movie",
       "totalEvents": 2,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 11.138896,
       "uniqueUsers": 1,
@@ -3428,7 +3428,7 @@
           "userName": "Henry Gomez",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 11.138896,
           "lastSeenAt": "2026-05-20T18:24:47Z",
           "lastSeason": 1,
@@ -3440,7 +3440,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 11.138896,
           "uniqueUsers": 1,
@@ -3924,7 +3924,7 @@
       "title": "The Pitt",
       "type": "series",
       "totalEvents": 2,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 2474.787477777778,
       "uniqueUsers": 1,
@@ -3936,7 +3936,7 @@
           "userName": "Henry Gomez",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 2474.787477777778,
           "lastSeenAt": "2026-05-16T01:46:08Z",
           "lastSeason": 2,
@@ -3948,7 +3948,7 @@
           "season": 2,
           "episode": 15,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 2474.787477777778,
           "uniqueUsers": 1,
@@ -3968,7 +3968,7 @@
       "title": "Avatar: El sentido del agua",
       "type": "movie",
       "totalEvents": 2,
-      "totalStarts": 2,
+      "totalStarts": 1,
       "totalCompletions": 0,
       "totalPlaybackProgress": 160.904507,
       "uniqueUsers": 1,
@@ -3980,7 +3980,7 @@
           "userName": "Juan carlos Rios",
           "playCount": 2,
           "completedCount": 0,
-          "startedCount": 2,
+          "startedCount": 1,
           "totalPlaybackProgress": 160.904507,
           "lastSeenAt": "2026-05-14T21:01:51Z",
           "lastSeason": 1,
@@ -3992,7 +3992,7 @@
           "season": 1,
           "episode": 1,
           "totalEvents": 2,
-          "totalStarts": 2,
+          "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 160.904507,
           "uniqueUsers": 1,

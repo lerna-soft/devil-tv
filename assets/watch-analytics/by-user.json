@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T16:55:43.869Z",
+  "generatedAt": "2026-05-27T17:38:16.487Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T16:48:58Z",
+      "updatedAt": "2026-05-27T17:38:02Z",
       "totalEvents": 500,
       "totalStarts": 175,
       "totalCompletions": 69,
-      "totalPlaybackProgress": 269335.40072769095,
-      "uniqueContentCount": 148,
-      "lastActivityAt": "2026-05-27T16:48:58Z",
+      "totalPlaybackProgress": 269839.02854863094,
+      "uniqueContentCount": 147,
+      "lastActivityAt": "2026-05-27T17:38:02Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 59,
+          "playCount": 60,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T16:48:58Z"
+          "lastSeenAt": "2026-05-27T17:38:02Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1800,21 +1800,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:57:15Z"
-        },
-        "tt1422020": {
-          "contentId": "tt1422020",
-          "imdbId": "tt1422020",
-          "tmdbId": "",
-          "title": "Dog Pound",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:12:17Z"
         }
       },
-      "avgPlaybackProgress": 538.6708
+      "avgPlaybackProgress": 539.6781
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

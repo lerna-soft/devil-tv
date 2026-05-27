@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt33612209",
+  "tmdbId": "1314481",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-18T15:27:55Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt33612209:s1e1:playing:2026-05-18T15:27:55Z",
+      "contentId": "tt33612209",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "title": "El diablo viste de Prada 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-18T15:27:55Z"
+    }
+  ]
+}

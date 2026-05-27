@@ -1,0 +1,50 @@
+{
+  "imdbId": "tt1630029",
+  "tmdbId": "76600",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 160.904507,
+  "lastProgress": 160.904507,
+  "updatedAt": "2026-05-14T21:01:51Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
+      "contentId": "tt1630029",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt1630029",
+      "tmdbId": "76600",
+      "title": "Avatar: El sentido del agua",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 160.904507,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-14T21:01:51Z"
+    },
+    {
+      "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
+      "contentId": "tt1630029",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt1630029",
+      "tmdbId": "76600",
+      "title": "Avatar: El sentido del agua",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-14T20:27:42Z"
+    }
+  ]
+}

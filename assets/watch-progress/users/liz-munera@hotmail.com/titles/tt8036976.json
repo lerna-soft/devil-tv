@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt8036976",
+  "tmdbId": "1198994",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-17T17:56:22Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt8036976:s1e1:preference:2026-05-17T17:56:22Z",
+      "contentId": "tt8036976",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt8036976",
+      "tmdbId": "1198994",
+      "title": "SEND HELP (Enviad ayuda)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:56:22Z"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt32430579",
+  "tmdbId": "1171145",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-23T02:47:39Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",
+      "contentId": "tt32430579",
+      "episodeKey": "s1e1",
+      "userEmail": "liz-munera@hotmail.com",
+      "userName": "Lizeth Munera",
+      "imdbId": "tt32430579",
+      "tmdbId": "1171145",
+      "title": "Ruta de escape",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T02:47:39Z"
+    }
+  ]
+}

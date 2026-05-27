@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt10676052",
+  "tmdbId": "617126",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-14T19:20:28Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
+      "contentId": "tt10676052",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "title": "Los Cuatro Fantásticos: Primeros pasos",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-14T19:20:28Z"
+    }
+  ]
+}

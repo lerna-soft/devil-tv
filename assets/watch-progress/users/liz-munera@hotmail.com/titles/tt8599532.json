@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt8599532",
+  "tmdbId": "255661",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-17T17:58:30Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt8599532:s1e1:preference:2026-05-17T17:58:30Z",
+      "contentId": "tt8599532",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt8599532",
+      "tmdbId": "255661",
+      "title": "El joven Sherlock",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:58:30Z"
+    }
+  ]
+}

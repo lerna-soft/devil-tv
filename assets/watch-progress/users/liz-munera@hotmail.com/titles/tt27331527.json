@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt27331527",
+  "tmdbId": "223386",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-17T17:57:30Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt27331527:s1e1:preference:2026-05-17T17:57:30Z",
+      "contentId": "tt27331527",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "title": "El fuego de la venganza",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:57:30Z"
+    }
+  ]
+}

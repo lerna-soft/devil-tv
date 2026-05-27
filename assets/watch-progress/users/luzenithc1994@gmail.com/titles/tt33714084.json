@@ -1,0 +1,39 @@
+{
+  "imdbId": "tt33714084",
+  "tmdbId": "1367642",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-18T19:41:21Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt33714084:s1e1:preference:2026-05-18T19:41:21Z",
+      "contentId": "tt33714084",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt33714084",
+      "tmdbId": "1367642",
+      "title": "No te olvidaré",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-18T19:41:21Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

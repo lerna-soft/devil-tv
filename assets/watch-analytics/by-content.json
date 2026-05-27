@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T21:15:54.598Z",
+  "generatedAt": "2026-05-27T21:19:08.015Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 70,
-      "totalStarts": 47,
+      "totalEvents": 71,
+      "totalStarts": 48,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.1064,
-      "lastActivityAt": "2026-05-27T21:03:35Z",
+      "completionRate": 0.1042,
+      "lastActivityAt": "2026-05-27T21:18:57Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 70,
+          "playCount": 71,
           "completedCount": 5,
-          "startedCount": 47,
+          "startedCount": 48,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T21:03:35Z",
+          "lastSeenAt": "2026-05-27T21:18:57Z",
           "lastSeason": 3,
-          "lastEpisode": 11
+          "lastEpisode": 12
         }
       },
       "episodes": {
+        "s3e12": {
+          "season": 3,
+          "episode": 12,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T21:18:57Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e11": {
           "season": 3,
           "episode": 11,
@@ -1403,7 +1417,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 102.1051
+      "avgPlaybackProgress": 100.667
     },
     {
       "contentId": "tt21209804",
@@ -8649,50 +8663,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:59:32Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt21028848",
-      "imdbId": "tt21028848",
-      "tmdbId": "",
-      "title": "Ip Man: The Awakening",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:59:29Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:59:29Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:59:29Z",
           "users": {
             "henry8812@gmail.com": true
           },

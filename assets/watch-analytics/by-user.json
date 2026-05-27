@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T08:21:00.015Z",
+  "generatedAt": "2026-05-27T08:21:13.662Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T08:20:44Z",
+      "updatedAt": "2026-05-27T08:21:02Z",
       "totalEvents": 500,
       "totalStarts": 166,
-      "totalCompletions": 68,
-      "totalPlaybackProgress": 268702.1403413723,
+      "totalCompletions": 67,
+      "totalPlaybackProgress": 266119.08293048793,
       "uniqueContentCount": 159,
-      "lastActivityAt": "2026-05-27T08:20:44Z",
+      "lastActivityAt": "2026-05-27T08:21:02Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -20,8 +20,7 @@
         "tt1190634",
         "tt2911666",
         "tt16030542",
-        "tt14452776",
-        "tt7587890"
+        "tt14452776"
       ],
       "inProgressContentIds": [
         "274870",
@@ -122,6 +121,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 41,
+          "completed": true,
+          "maxProgressValue": 41.870621,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-27T08:21:02Z"
+        },
         "tt0899043": {
           "contentId": "tt0899043",
           "imdbId": "tt0899043",
@@ -133,18 +144,6 @@
           "maxProgressValue": 3775.326009272,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-27T08:20:44Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 40,
-          "completed": true,
-          "maxProgressValue": 41.870621,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T04:23:12Z"
         },
         "tt32820897": {
           "contentId": "tt32820897",
@@ -1856,9 +1855,9 @@
           "tmdbId": "79744",
           "title": "The Rookie",
           "type": "series",
-          "playCount": 3,
-          "completed": true,
-          "maxProgressValue": 2583.057410884354,
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:26:06Z"
         },
@@ -1947,7 +1946,7 @@
           "lastSeenAt": "2026-05-16T01:57:30Z"
         }
       },
-      "avgPlaybackProgress": 537.4043
+      "avgPlaybackProgress": 532.2382
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T08:21:00.013Z",
+  "generatedAt": "2026-05-27T08:21:13.660Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 40,
+      "totalEvents": 41,
       "totalStarts": 30,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
       "completionRate": 0.0333,
-      "lastActivityAt": "2026-05-27T04:23:12Z",
+      "lastActivityAt": "2026-05-27T08:21:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 40,
+          "playCount": 41,
           "completedCount": 1,
           "startedCount": 30,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T04:23:12Z",
+          "lastSeenAt": "2026-05-27T08:21:02Z",
           "lastSeason": 2,
           "lastEpisode": 5
         }
@@ -747,12 +747,12 @@
         "s2e5": {
           "season": 2,
           "episode": 5,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T04:23:12Z",
+          "lastActivityAt": "2026-05-27T08:21:02Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1165,7 +1165,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.0718
+      "avgPlaybackProgress": 1.0456
     },
     {
       "contentId": "tt21209804",
@@ -3114,78 +3114,6 @@
       "avgPlaybackProgress": 1730.5124
     },
     {
-      "contentId": "tt7587890",
-      "imdbId": "tt7587890",
-      "tmdbId": "79744",
-      "title": "The Rookie",
-      "type": "series",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 2583.057410884354,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-05-16T05:26:06Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 2583.057410884354,
-          "lastSeenAt": "2026-05-16T05:26:06Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:26:06Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s8e2": {
-          "season": 8,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T01:54:24Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s8e1": {
-          "season": 8,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2583.057410884354,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T01:54:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 861.0191
-    },
-    {
       "contentId": "tt10366206",
       "imdbId": "tt10366206",
       "tmdbId": "603692",
@@ -3949,6 +3877,64 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:57:15Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt7587890",
+      "imdbId": "tt7587890",
+      "tmdbId": "79744",
+      "title": "The Rookie",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-16T05:26:06Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-16T05:26:06Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-16T05:26:06Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s8e2": {
+          "season": 8,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-16T01:54:24Z",
           "users": {
             "henry8812@gmail.com": true
           },

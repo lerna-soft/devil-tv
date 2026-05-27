@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T08:21:00.010Z",
+  "generatedAt": "2026-05-27T08:21:13.656Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e5:started:2026-05-27T08:21:02Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 5,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T04:23:11.544Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T08:21:02Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-27T08:20:44Z",
       "contentId": "tt0899043",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T01:54:24Z"
-    },
-    {
-      "eventId": "unknown:tt7587890:s8e1:completed:2026-05-16T01:54:22Z",
-      "contentId": "tt7587890",
-      "episodeKey": "s8e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt7587890",
-      "tmdbId": "79744",
-      "title": "The Rookie",
-      "type": "series",
-      "season": 8,
-      "episode": 1,
-      "progress": 2583.057410884354,
-      "progressValue": 2583.057410884354,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T01:54:22Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

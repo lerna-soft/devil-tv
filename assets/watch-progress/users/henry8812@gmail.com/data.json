@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T08:46:59Z",
+  "updatedAt": "2026-05-27T12:42:44Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1742,11 +1742,11 @@
     "tt2560140": {
       "imdbId": "tt2560140",
       "tmdbId": "1429",
-      "lastSeason": 2,
-      "lastEpisode": 11,
+      "lastSeason": 1,
+      "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-27T08:46:59Z",
+      "updatedAt": "2026-05-27T12:42:44Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1789,7 +1789,7 @@
           "lastProgress": 0
         },
         "s1e1": {
-          "startedAt": "2026-05-27T04:17:54Z",
+          "startedAt": "2026-05-25T06:04:44.519Z",
           "completedAt": "",
           "lastProgress": 0
         },
@@ -2007,13 +2007,40 @@
   "lastWatch": {
     "imdbId": "tt2560140",
     "tmdbId": "1429",
-    "season": 2,
-    "episode": 11,
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-27T08:46:59Z"
+    "updatedAt": "2026-05-27T12:42:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-27T12:42:44Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-25T06:04:44.519Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T12:42:44Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e11:started:2026-05-27T08:46:59Z",
       "contentId": "tt2560140",
@@ -15478,33 +15505,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:21:35Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt35521922:s1e1:preference:2026-05-16T05:20:52Z",
-      "contentId": "tt35521922",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt35521922",
-      "tmdbId": "",
-      "title": "Good Boy",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:20:52Z",
       "country": "",
       "countryName": "",
       "city": "",

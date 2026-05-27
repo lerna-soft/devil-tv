@@ -18,5 +18,52 @@
     "tt11378946",
     "tt1630029",
     "tt9114286"
-  ]
+  ],
+  "progress": {
+    "tt0480489": {
+      "imdbId": "tt0480489",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 2,
+      "progress": 974.321778,
+      "lastProgress": 974.321778,
+      "updatedAt": "2026-05-13T17:00:31Z"
+    },
+    "tt10676052": {
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T19:20:28Z"
+    },
+    "tt11378946": {
+      "imdbId": "tt11378946",
+      "tmdbId": "936075",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 2554.435513,
+      "lastProgress": 2554.435513,
+      "updatedAt": "2026-05-23T18:25:39Z"
+    },
+    "tt1630029": {
+      "imdbId": "tt1630029",
+      "tmdbId": "76600",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 160.904507,
+      "lastProgress": 160.904507,
+      "updatedAt": "2026-05-14T21:01:51Z"
+    },
+    "tt9114286": {
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 3497.460446,
+      "lastProgress": 3497.460446,
+      "updatedAt": "2026-05-19T05:28:17Z"
+    }
+  }
 }

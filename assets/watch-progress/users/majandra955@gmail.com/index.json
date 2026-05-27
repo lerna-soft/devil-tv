@@ -15,5 +15,25 @@
   "titles": [
     "tt28650488",
     "tt33612209"
-  ]
+  ],
+  "progress": {
+    "tt28650488": {
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-12T23:59:08Z"
+    },
+    "tt33612209": {
+      "imdbId": "tt33612209",
+      "tmdbId": "1314481",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-14T17:42:32Z"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T15:33:10Z",
+  "updatedAt": "2026-05-27T15:44:59Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1744,9 +1744,9 @@
       "tmdbId": "1429",
       "lastSeason": 3,
       "lastEpisode": 3,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-27T15:33:10Z",
+      "progress": 1435.1,
+      "lastProgress": 1435.1,
+      "updatedAt": "2026-05-27T15:44:59Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1850,8 +1850,8 @@
         },
         "s3e3": {
           "startedAt": "2026-05-27T15:33:09.605Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-05-27T15:44:59.031Z",
+          "lastProgress": 1435.1
         }
       }
     },
@@ -2029,11 +2029,38 @@
     "tmdbId": "1429",
     "season": 3,
     "episode": 3,
-    "progress": 0,
-    "updatedAt": "2026-05-27T15:33:10Z"
+    "progress": 1435.1,
+    "updatedAt": "2026-05-27T15:44:59Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e3:completed:2026-05-27T15:44:59Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 3,
+      "progress": 1435.1,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-27T15:33:09.605Z",
+      "completedAt": "2026-05-27T15:44:59.031Z",
+      "updatedAt": "2026-05-27T15:44:59Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e3:started:2026-05-27T15:33:10Z",
       "contentId": "tt2560140",
@@ -15498,33 +15525,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:50:43Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt27331527:s1e1:preference:2026-05-16T05:50:40Z",
-      "contentId": "tt27331527",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt27331527",
-      "tmdbId": "223386",
-      "title": "El fuego de la venganza",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:50:40Z",
       "country": "",
       "countryName": "",
       "city": "",

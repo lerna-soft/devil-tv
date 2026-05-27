@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T18:36:31.119Z",
+  "generatedAt": "2026-05-27T18:41:34.270Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e6:completed:2026-05-27T18:41:07Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e6",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 6,
+      "progress": 1435.0629155741387,
+      "progressValue": 1435.0629155741387,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-27T16:03:13.444Z",
+      "completedAt": "2026-05-27T18:41:07.022Z",
+      "updatedAt": "2026-05-27T18:41:07Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e6:started:2026-05-27T18:35:48Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T06:58:54Z"
-    },
-    {
-      "eventId": "unknown:tt0103950:s1e1:playing:2026-05-16T06:57:15Z",
-      "contentId": "tt0103950",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0103950",
-      "tmdbId": "",
-      "title": "City Hunter",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:57:15Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

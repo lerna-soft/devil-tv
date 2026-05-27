@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T18:36:31.127Z",
+  "generatedAt": "2026-05-27T18:41:34.276Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T18:35:48Z",
+      "updatedAt": "2026-05-27T18:41:07Z",
       "totalEvents": 500,
-      "totalStarts": 175,
-      "totalCompletions": 69,
-      "totalPlaybackProgress": 270353.39449872595,
-      "uniqueContentCount": 147,
-      "lastActivityAt": "2026-05-27T18:35:48Z",
+      "totalStarts": 174,
+      "totalCompletions": 70,
+      "totalPlaybackProgress": 271788.4574143001,
+      "uniqueContentCount": 146,
+      "lastActivityAt": "2026-05-27T18:41:07Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 61,
+          "playCount": 62,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T18:35:48Z"
+          "lastSeenAt": "2026-05-27T18:41:07Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1788,21 +1788,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:58:56Z"
-        },
-        "tt0103950": {
-          "contentId": "tt0103950",
-          "imdbId": "tt0103950",
-          "tmdbId": "",
-          "title": "City Hunter",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:57:15Z"
         }
       },
-      "avgPlaybackProgress": 540.7068
+      "avgPlaybackProgress": 543.5769
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

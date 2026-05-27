@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-27T02:32:06.907Z",
+  "generatedAt": "2026-05-27T03:44:37.609Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
   "totalStarts": 181,
-  "totalCompletions": 69,
-  "overallCompletionRate": 0.3812,
+  "totalCompletions": 70,
+  "overallCompletionRate": 0.3867,
   "trackedTitles": 179,
   "mostWatchedContent": [
     {
@@ -17,20 +17,20 @@
       "completionRate": 0.9388
     },
     {
+      "contentId": "tt2560140",
+      "title": "Attack on Titan",
+      "type": "series",
+      "totalEvents": 34,
+      "uniqueUsers": 1,
+      "completionRate": 0.0385
+    },
+    {
       "contentId": "tt21209804",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
       "totalEvents": 34,
       "uniqueUsers": 1,
       "completionRate": 0.3846
-    },
-    {
-      "contentId": "tt2560140",
-      "title": "Attack on Titan",
-      "type": "series",
-      "totalEvents": 33,
-      "uniqueUsers": 1,
-      "completionRate": 0
     },
     {
       "contentId": "tt16030542",
@@ -44,7 +44,7 @@
       "contentId": "tt14452776",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 24,
+      "totalEvents": 23,
       "uniqueUsers": 1,
       "completionRate": 0.375
     },

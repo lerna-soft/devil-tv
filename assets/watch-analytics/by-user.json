@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T20:57:33.275Z",
+  "generatedAt": "2026-05-27T21:03:47.227Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T20:57:24Z",
+      "updatedAt": "2026-05-27T21:03:35Z",
       "totalEvents": 500,
-      "totalStarts": 180,
+      "totalStarts": 181,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 136,
-      "lastActivityAt": "2026-05-27T20:57:24Z",
+      "uniqueContentCount": 135,
+      "lastActivityAt": "2026-05-27T21:03:35Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 69,
+          "playCount": 70,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T20:57:24Z"
+          "lastSeenAt": "2026-05-27T21:03:35Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1657,18 +1657,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:29Z"
-        },
-        "tt38682795": {
-          "contentId": "tt38682795",
-          "imdbId": "tt38682795",
-          "tmdbId": "",
-          "title": "Ip Man: Kung Fu Legend",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:59:27Z"
         }
       },
       "avgPlaybackProgress": 555.8604

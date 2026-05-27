@@ -71,6 +71,20 @@ async function writePartitionedUserFiles(userDirName, payload) {
   const progress = payload?.progress && typeof payload.progress === 'object' ? payload.progress : {};
   const titleIds = Object.keys(progress).filter(Boolean).sort();
 
+  const slimProgress = {};
+  for (const id of titleIds) {
+    const entry = progress[id] || {};
+    slimProgress[id] = {
+      imdbId: entry.imdbId || '',
+      tmdbId: entry.tmdbId || '',
+      lastSeason: entry.lastSeason || 1,
+      lastEpisode: entry.lastEpisode || 1,
+      progress: entry.progress || 0,
+      lastProgress: entry.lastProgress || 0,
+      updatedAt: entry.updatedAt || ''
+    };
+  }
+
   const index = {
     email: payload.email,
     name: payload.name || '',
@@ -78,7 +92,8 @@ async function writePartitionedUserFiles(userDirName, payload) {
     lastWatch: payload.lastWatch || null,
     lastSelection: payload.lastSelection || null,
     preferences: payload.preferences || {},
-    titles: titleIds
+    titles: titleIds,
+    progress: slimProgress
   };
   const indexPath = path.join(userDir, 'index.json');
   await fs.writeFile(indexPath, `${JSON.stringify(index, null, 2)}\n`, 'utf8');

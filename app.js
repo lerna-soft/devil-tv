@@ -1308,13 +1308,34 @@ async function loadRemoteWatchProgress(email) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!normalizedEmail) return null;
   // Cache bust con timestamp real (no __mep_build): el sync workflow puede
-  // escribir el data.json varias veces dentro de un mismo deploy, así que
+  // escribir el archivo varias veces dentro de un mismo deploy, así que
   // necesitamos un cacheTag que cambie en cada llamada. Esto evita el caso
   // "sesión A inicia un título → sync push → sesión B carga 30s después
-  // y obtiene un data.json stale del CDN porque el __mep_build no cambió".
+  // y obtiene un archivo stale del CDN porque el __mep_build no cambió".
   const cacheTag = Date.now();
-  const primary = await fetchJsonWithTimeout(`./assets/watch-progress/users/${encodeURIComponent(normalizedEmail)}/data.json?v=${cacheTag}`).catch(() => null);
-  return primary?.email ? primary : null;
+  const base = `./assets/watch-progress/users/${encodeURIComponent(normalizedEmail)}`;
+  // Preferimos el nuevo formato particionado (index.json) sobre el data.json
+  // monolítico. El index trae un mini-progress map con lastSeason/lastEpisode
+  // por título suficiente para Continuar Viendo + getResumeTarget. El detalle
+  // por título (watched + history) se baja lazy cuando se necesita.
+  const indexJson = await fetchJsonWithTimeout(`${base}/index.json?v=${cacheTag}`).catch(() => null);
+  if (indexJson?.email) {
+    return {
+      email: indexJson.email,
+      name: indexJson.name || '',
+      updatedAt: indexJson.updatedAt || '',
+      progress: indexJson.progress || {},
+      lastWatch: indexJson.lastWatch || null,
+      lastSelection: indexJson.lastSelection || null,
+      preferences: indexJson.preferences || {},
+      // history vive en titles/<id>.json; se carga lazy si se necesita.
+      history: [],
+      __source: 'index'
+    };
+  }
+  // Fallback al data.json monolítico (compatibilidad durante transición).
+  const primary = await fetchJsonWithTimeout(`${base}/data.json?v=${cacheTag}`).catch(() => null);
+  return primary?.email ? { ...primary, __source: 'data' } : null;
 }
 
 function setSyncIndicator(visible) {

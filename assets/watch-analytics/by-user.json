@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T16:03:38.126Z",
+  "generatedAt": "2026-05-27T16:49:07.751Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T16:03:14Z",
+      "updatedAt": "2026-05-27T16:48:58Z",
       "totalEvents": 500,
       "totalStarts": 175,
       "totalCompletions": 69,
-      "totalPlaybackProgress": 268989.28293048794,
-      "uniqueContentCount": 149,
-      "lastActivityAt": "2026-05-27T16:03:14Z",
+      "totalPlaybackProgress": 269335.40072769095,
+      "uniqueContentCount": 148,
+      "lastActivityAt": "2026-05-27T16:48:58Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 58,
+          "playCount": 59,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T16:03:14Z"
+          "lastSeenAt": "2026-05-27T16:48:58Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1812,21 +1812,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:12:17Z"
-        },
-        "tt32916440": {
-          "contentId": "tt32916440",
-          "imdbId": "tt32916440",
-          "tmdbId": "1317288",
-          "title": "Marty Supreme",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:50:54Z"
         }
       },
-      "avgPlaybackProgress": 537.9786
+      "avgPlaybackProgress": 538.6708
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

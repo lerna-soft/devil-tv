@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T16:03:38.124Z",
+  "generatedAt": "2026-05-27T16:49:07.749Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 58,
+      "totalEvents": 59,
       "totalStarts": 42,
       "totalCompletions": 3,
-      "totalPlaybackProgress": 2913.070621,
+      "totalPlaybackProgress": 3259.188418203,
       "uniqueUsers": 1,
       "completionRate": 0.0714,
-      "lastActivityAt": "2026-05-27T16:03:14Z",
+      "lastActivityAt": "2026-05-27T16:48:58Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 58,
+          "playCount": 59,
           "completedCount": 3,
           "startedCount": 42,
-          "totalPlaybackProgress": 2913.070621,
-          "lastSeenAt": "2026-05-27T16:03:14Z",
+          "totalPlaybackProgress": 3259.188418203,
+          "lastSeenAt": "2026-05-27T16:48:58Z",
           "lastSeason": 3,
           "lastEpisode": 6
         }
@@ -747,12 +747,12 @@
         "s3e6": {
           "season": 3,
           "episode": 6,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalPlaybackProgress": 346.117797203,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T16:03:14Z",
+          "lastActivityAt": "2026-05-27T16:48:58Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1333,7 +1333,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 50.2254
+      "avgPlaybackProgress": 55.2405
     },
     {
       "contentId": "tt21209804",
@@ -9181,50 +9181,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:12:17Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt32916440",
-      "imdbId": "tt32916440",
-      "tmdbId": "1317288",
-      "title": "Marty Supreme",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T05:50:54Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:50:54Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:50:54Z",
           "users": {
             "henry8812@gmail.com": true
           },

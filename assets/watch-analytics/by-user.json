@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T06:09:41.575Z",
+  "generatedAt": "2026-05-27T08:21:00.015Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T04:30:03Z",
+      "updatedAt": "2026-05-27T08:20:44Z",
       "totalEvents": 500,
-      "totalStarts": 167,
+      "totalStarts": 166,
       "totalCompletions": 68,
-      "totalPlaybackProgress": 264926.8143321003,
+      "totalPlaybackProgress": 268702.1403413723,
       "uniqueContentCount": 159,
-      "lastActivityAt": "2026-05-27T04:30:03Z",
+      "lastActivityAt": "2026-05-27T08:20:44Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -25,6 +25,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt0899043",
         "tt21209876",
         "tt2294629",
         "tt33046197",
@@ -127,11 +128,11 @@
           "tmdbId": "1087891",
           "title": "Amateur",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 3775.326009272,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-27T04:30:03Z"
+          "lastSeenAt": "2026-05-27T08:20:44Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1855,7 +1856,7 @@
           "tmdbId": "79744",
           "title": "The Rookie",
           "type": "series",
-          "playCount": 4,
+          "playCount": 3,
           "completed": true,
           "maxProgressValue": 2583.057410884354,
           "maxProgressPercent": 0,
@@ -1946,7 +1947,7 @@
           "lastSeenAt": "2026-05-16T01:57:30Z"
         }
       },
-      "avgPlaybackProgress": 529.8536
+      "avgPlaybackProgress": 537.4043
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

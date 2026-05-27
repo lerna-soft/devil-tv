@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T14:42:21.367Z",
+  "generatedAt": "2026-05-27T14:50:52.276Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T14:42:03Z",
+      "updatedAt": "2026-05-27T14:50:38Z",
       "totalEvents": 500,
-      "totalStarts": 170,
+      "totalStarts": 171,
       "totalCompletions": 67,
       "totalPlaybackProgress": 266119.08293048793,
-      "uniqueContentCount": 155,
-      "lastActivityAt": "2026-05-27T14:42:03Z",
+      "uniqueContentCount": 154,
+      "lastActivityAt": "2026-05-27T14:50:38Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 50,
+          "playCount": 51,
           "completed": true,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T14:42:03Z"
+          "lastSeenAt": "2026-05-27T14:50:38Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1884,18 +1884,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:21:39Z"
-        },
-        "tt0356910": {
-          "contentId": "tt0356910",
-          "imdbId": "tt0356910",
-          "tmdbId": "787",
-          "title": "Sr. y Sra. Smith",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:21:38Z"
         }
       },
       "avgPlaybackProgress": 532.2382

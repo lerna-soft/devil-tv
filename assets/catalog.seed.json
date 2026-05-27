@@ -1,6 +1,6 @@
 {
-  "version": 302,
-  "generatedAt": "2026-05-26T16:04:39.648Z",
+  "version": 303,
+  "generatedAt": "2026-05-27T19:00:41.584Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51793,6 +51793,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/8f33Q5AuM2G5ZqFeusbIqDjr3cI.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt37960158",
+      "title": "Lisbon Noir",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Pêpê Rapazote, Beatriz Godinho",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzRkZjJmMzEtMjBkOC00YmIzLWI1ZWQtYmE2MjUzYzdhNjI2XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

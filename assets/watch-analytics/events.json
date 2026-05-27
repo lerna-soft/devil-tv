@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T20:46:53.059Z",
+  "generatedAt": "2026-05-27T20:51:36.346Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e10:started:2026-05-27T20:51:24Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e10",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 10,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T20:51:24.066Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T20:51:24Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e9:started:2026-05-27T20:46:42Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T06:59:24Z"
-    },
-    {
-      "eventId": "unknown:tt2888046:s1e1:preference:2026-05-16T06:59:22Z",
-      "contentId": "tt2888046",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2888046",
-      "tmdbId": "",
-      "title": "Ip Man 3",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:59:22Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

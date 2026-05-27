@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T21:18:57Z",
+  "updatedAt": "2026-05-27T21:23:06Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1754,10 +1754,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 3,
-      "lastEpisode": 12,
+      "lastEpisode": 13,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-27T21:18:57Z",
+      "updatedAt": "2026-05-27T21:23:06Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1901,6 +1901,11 @@
         },
         "s3e12": {
           "startedAt": "2026-05-27T21:18:56.317Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s3e13": {
+          "startedAt": "2026-05-27T21:23:05.979Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2079,12 +2084,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 3,
-    "episode": 12,
+    "episode": 13,
     "progress": 0,
-    "updatedAt": "2026-05-27T21:18:57Z"
+    "updatedAt": "2026-05-27T21:23:06Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e13:started:2026-05-27T21:23:06Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e13",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 13,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T21:23:05.979Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T21:23:06Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e12:started:2026-05-27T21:18:57Z",
       "contentId": "tt2560140",
@@ -15549,33 +15581,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:00:49Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt7262882:s1e1:preference:2026-05-16T06:59:32Z",
-      "contentId": "tt7262882",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt7262882",
-      "tmdbId": "",
-      "title": "Master Z: The Ip Man Legacy",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T06:59:32Z",
       "country": "",
       "countryName": "",
       "city": "",

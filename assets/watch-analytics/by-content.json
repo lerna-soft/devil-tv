@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T21:19:08.015Z",
+  "generatedAt": "2026-05-27T21:23:16.582Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 71,
-      "totalStarts": 48,
+      "totalEvents": 72,
+      "totalStarts": 49,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
-      "completionRate": 0.1042,
-      "lastActivityAt": "2026-05-27T21:18:57Z",
+      "completionRate": 0.102,
+      "lastActivityAt": "2026-05-27T21:23:06Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 71,
+          "playCount": 72,
           "completedCount": 5,
-          "startedCount": 48,
+          "startedCount": 49,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T21:18:57Z",
+          "lastSeenAt": "2026-05-27T21:23:06Z",
           "lastSeason": 3,
-          "lastEpisode": 12
+          "lastEpisode": 13
         }
       },
       "episodes": {
+        "s3e13": {
+          "season": 3,
+          "episode": 13,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T21:23:06Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e12": {
           "season": 3,
           "episode": 12,
@@ -1417,7 +1431,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 100.667
+      "avgPlaybackProgress": 99.2688
     },
     {
       "contentId": "tt21209804",
@@ -8619,50 +8633,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:00:49Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt7262882",
-      "imdbId": "tt7262882",
-      "tmdbId": "",
-      "title": "Master Z: The Ip Man Legacy",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:59:32Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:59:32Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:59:32Z",
           "users": {
             "henry8812@gmail.com": true
           },

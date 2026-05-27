@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T15:45:46.378Z",
+  "generatedAt": "2026-05-27T16:03:25.248Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T15:45:02Z",
+      "updatedAt": "2026-05-27T16:03:12Z",
       "totalEvents": 500,
       "totalStarts": 174,
-      "totalCompletions": 68,
-      "totalPlaybackProgress": 267554.1829304879,
+      "totalCompletions": 69,
+      "totalPlaybackProgress": 268989.28293048794,
       "uniqueContentCount": 149,
-      "lastActivityAt": "2026-05-27T15:45:02Z",
+      "lastActivityAt": "2026-05-27T16:03:12Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 56,
+          "playCount": 57,
           "completed": true,
           "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T15:45:02Z"
+          "lastSeenAt": "2026-05-27T16:03:12Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -943,7 +943,7 @@
           "tmdbId": "1084577",
           "title": "Balls Up: Con un par",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -1826,7 +1826,7 @@
           "lastSeenAt": "2026-05-16T05:50:54Z"
         }
       },
-      "avgPlaybackProgress": 535.1084
+      "avgPlaybackProgress": 537.9786
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

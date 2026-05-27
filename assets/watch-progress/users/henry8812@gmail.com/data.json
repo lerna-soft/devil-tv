@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T04:23:12Z",
+  "updatedAt": "2026-05-27T04:30:03Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1832,8 +1832,14 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-26T14:01:39Z",
-      "watched": {}
+      "updatedAt": "2026-05-27T04:30:03Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-26T14:01:38.477Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -1969,15 +1975,42 @@
     "updatedAt": "2026-05-27T04:17:54Z"
   },
   "lastWatch": {
-    "imdbId": "tt2560140",
-    "tmdbId": "1429",
-    "season": 2,
-    "episode": 5,
+    "imdbId": "tt0899043",
+    "tmdbId": "1087891",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-27T04:23:12Z"
+    "updatedAt": "2026-05-27T04:30:03Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-27T04:30:03Z",
+      "contentId": "tt0899043",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T14:01:38.477Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T04:30:03Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e5:started:2026-05-27T04:23:12Z",
       "contentId": "tt2560140",
@@ -15442,33 +15475,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T01:50:51Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt31938062:s2e15:playing:2026-05-16T01:46:08Z",
-      "contentId": "tt31938062",
-      "episodeKey": "s2e15",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt31938062",
-      "tmdbId": "250307",
-      "title": "The Pitt",
-      "type": "series",
-      "season": 2,
-      "episode": 15,
-      "progress": 2474.787477777778,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T01:46:08Z",
       "country": "",
       "countryName": "",
       "city": "",

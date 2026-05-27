@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T19:20:21.104Z",
+  "generatedAt": "2026-05-27T19:30:55.983Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T19:00:42Z",
+      "updatedAt": "2026-05-27T19:30:46Z",
       "totalEvents": 500,
       "totalStarts": 176,
       "totalCompletions": 70,
-      "totalPlaybackProgress": 271788.4574143001,
+      "totalPlaybackProgress": 273643.9959879387,
       "uniqueContentCount": 145,
-      "lastActivityAt": "2026-05-27T19:00:42Z",
+      "lastActivityAt": "2026-05-27T19:30:46Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -24,6 +24,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt30460310",
         "tt0899043",
         "tt21209876",
         "tt2294629",
@@ -127,11 +128,11 @@
           "tmdbId": "220102",
           "title": "Spider-Noir",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 1855.5385736386486,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-27T19:00:42Z"
+          "lastSeenAt": "2026-05-27T19:30:46Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -895,7 +896,7 @@
           "tmdbId": "9056",
           "title": "Police Story",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -1778,7 +1779,7 @@
           "lastSeenAt": "2026-05-16T06:58:59Z"
         }
       },
-      "avgPlaybackProgress": 543.5769
+      "avgPlaybackProgress": 547.288
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

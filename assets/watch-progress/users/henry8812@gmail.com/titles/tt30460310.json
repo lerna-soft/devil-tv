@@ -3,17 +3,44 @@
   "tmdbId": "220102",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 0,
-  "lastProgress": 0,
-  "updatedAt": "2026-05-27T19:00:42Z",
+  "progress": 1855.5385736386486,
+  "lastProgress": 1855.5385736386486,
+  "updatedAt": "2026-05-27T19:30:46Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-05-27T19:00:41.419Z",
       "completedAt": "",
-      "lastProgress": 0
+      "lastProgress": 1855.5385736386486
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt30460310:s1e1:started:2026-05-27T19:30:46Z",
+      "contentId": "tt30460310",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 1855.5385736386486,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T19:00:41.419Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T19:30:46Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt30460310:s1e1:started:2026-05-27T19:00:42Z",
       "contentId": "tt30460310",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T15:45:46.372Z",
+  "generatedAt": "2026-05-27T16:03:25.243Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e5:completed:2026-05-27T16:03:12Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 5,
+      "progress": 1435.1,
+      "progressValue": 1435.1,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-05-27T15:45:01.528Z",
+      "completedAt": "2026-05-27T16:03:11.182Z",
+      "updatedAt": "2026-05-27T16:03:12Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e5:started:2026-05-27T15:45:02Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:50:49Z"
-    },
-    {
-      "eventId": "unknown:tt26735622:s1e1:preference:2026-05-16T05:50:44Z",
-      "contentId": "tt26735622",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt26735622",
-      "tmdbId": "1084577",
-      "title": "Balls Up: Con un par",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:50:44Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

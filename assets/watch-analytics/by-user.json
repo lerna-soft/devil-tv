@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T15:33:25.330Z",
+  "generatedAt": "2026-05-27T15:45:10.986Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T15:33:10Z",
+      "updatedAt": "2026-05-27T15:44:59Z",
       "totalEvents": 500,
       "totalStarts": 173,
-      "totalCompletions": 67,
-      "totalPlaybackProgress": 266119.08293048793,
-      "uniqueContentCount": 151,
-      "lastActivityAt": "2026-05-27T15:33:10Z",
+      "totalCompletions": 68,
+      "totalPlaybackProgress": 267554.1829304879,
+      "uniqueContentCount": 150,
+      "lastActivityAt": "2026-05-27T15:44:59Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 54,
+          "playCount": 55,
           "completed": true,
-          "maxProgressValue": 41.870621,
+          "maxProgressValue": 1435.1,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T15:33:10Z"
+          "lastSeenAt": "2026-05-27T15:44:59Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1836,21 +1836,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:50:43Z"
-        },
-        "tt27331527": {
-          "contentId": "tt27331527",
-          "imdbId": "tt27331527",
-          "tmdbId": "223386",
-          "title": "El fuego de la venganza",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:50:40Z"
         }
       },
-      "avgPlaybackProgress": 532.2382
+      "avgPlaybackProgress": 535.1084
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

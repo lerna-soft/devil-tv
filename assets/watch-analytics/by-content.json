@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T15:33:25.328Z",
+  "generatedAt": "2026-05-27T15:45:10.984Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 54,
+      "totalEvents": 55,
       "totalStarts": 40,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 42.870621,
+      "totalCompletions": 2,
+      "totalPlaybackProgress": 1477.970621,
       "uniqueUsers": 1,
-      "completionRate": 0.025,
-      "lastActivityAt": "2026-05-27T15:33:10Z",
+      "completionRate": 0.05,
+      "lastActivityAt": "2026-05-27T15:44:59Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 54,
-          "completedCount": 1,
+          "playCount": 55,
+          "completedCount": 2,
           "startedCount": 40,
-          "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T15:33:10Z",
+          "totalPlaybackProgress": 1477.970621,
+          "lastSeenAt": "2026-05-27T15:44:59Z",
           "lastSeason": 3,
           "lastEpisode": 3
         }
@@ -747,16 +747,16 @@
         "s3e3": {
           "season": 3,
           "episode": 3,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1435.1,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T15:33:10Z",
+          "lastActivityAt": "2026-05-27T15:44:59Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s3e2": {
           "season": 3,
@@ -1305,7 +1305,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.7939
+      "avgPlaybackProgress": 26.8722
     },
     {
       "contentId": "tt21209804",
@@ -3655,62 +3655,6 @@
           "users": {
             "liz-munera@hotmail.com": true,
             "majandra955@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt27331527",
-      "imdbId": "tt27331527",
-      "tmdbId": "223386",
-      "title": "El fuego de la venganza",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-17T17:57:30Z",
-      "users": {
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:30Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:50:40Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-17T17:57:30Z",
-          "users": {
-            "liz-munera@hotmail.com": true,
-            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
@@ -7449,6 +7393,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-17T17:58:30Z",
+          "users": {
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt27331527",
+      "imdbId": "tt27331527",
+      "tmdbId": "223386",
+      "title": "El fuego de la venganza",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-17T17:57:30Z",
+      "users": {
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:30Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-17T17:57:30Z",
           "users": {
             "liz-munera@hotmail.com": true
           },

@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T07:02:28Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt0790724:s1e1:preference:2026-05-16T07:02:28Z",
-      "contentId": "tt0790724",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0790724",
-      "tmdbId": "75780",
-      "title": "Jack Reacher",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:02:28Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

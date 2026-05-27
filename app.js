@@ -2304,6 +2304,19 @@ function installVisibilityRehydrate() {
   if (visibilityRehydrateBound) return;
   visibilityRehydrateBound = true;
   document.addEventListener('visibilitychange', () => {
+    // Tracking de tiempo "visible" para la heurística del player. Acumula
+    // los ms que la tab estuvo visible durante la sesión del player
+    // (evita contar como "vió el ep" si dejó la pestaña en background).
+    const session = state.playerSession;
+    if (session) {
+      if (document.visibilityState === 'visible') {
+        session.visibleSince = Date.now();
+      } else if (session.visibleSince) {
+        session.visibleMs += Date.now() - session.visibleSince;
+        session.visibleSince = null;
+      }
+    }
+
     if (document.visibilityState !== 'visible') return;
     if (!isAuthenticated()) return;
     const since = Date.now() - watchProgressLastHydrate;
@@ -7017,7 +7030,12 @@ function openPlayerModal(embedUrl) {
     type: String(state.selected?.type || '').trim().toLowerCase() || 'movie',
     season: Number(state.playback.season || 1),
     episode: Number(state.playback.episode || 1),
-    sawEvent: false
+    sawEvent: false,
+    // Tracking de visibilidad: solo sumamos elapsed cuando la tab está
+    // visible. Evita que un user que minimiza la pestaña y la deja toda la
+    // tarde abierta se cuente como "vio el ep".
+    visibleSince: document.visibilityState === 'visible' ? Date.now() : null,
+    visibleMs: 0
   };
   const modal = elements.playerModal;
   const card = modal?.querySelector('.player-modal-card');
@@ -7082,20 +7100,28 @@ function flushPlayerSessionHeuristic() {
   const session = state.playerSession;
   state.playerSession = null;
   if (!session || session.sawEvent) return;
-  const elapsed = Date.now() - Number(session.openedAt || 0);
-  if (!Number.isFinite(elapsed)) return;
+  // Tiempo "visible" total: lo acumulado + (si la tab sigue visible) lo
+  // que va desde el último visibilitychange. Si la tab nunca estuvo
+  // visible durante la sesión, visibleElapsed=0 y la heurística no
+  // dispara. Esto evita contar pestañas en background como "vistas".
+  const visibleElapsed = Number(session.visibleMs || 0)
+    + (session.visibleSince ? Date.now() - Number(session.visibleSince) : 0);
+  if (!Number.isFinite(visibleElapsed)) return;
   const id = session.imdbId || session.tmdbId;
   if (!id) return;
   const isMovie = session.type === 'movie';
   const completionThreshold = isMovie ? PLAYER_SESSION_COMPLETED_MOVIE_MS : PLAYER_SESSION_COMPLETED_SERIES_MS;
-  if (elapsed < completionThreshold) {
-    dtvLog('player', 'flushPlayerSessionHeuristic skip — elapsed below threshold', {
-      id, season: session.season, episode: session.episode, elapsedSec: Math.round(elapsed / 1000)
+  if (visibleElapsed < completionThreshold) {
+    dtvLog('player', 'flushPlayerSessionHeuristic skip — visible time below threshold', {
+      id, season: session.season, episode: session.episode,
+      visibleSec: Math.round(visibleElapsed / 1000),
+      thresholdSec: Math.round(completionThreshold / 1000)
     });
     return;
   }
   dtvLog('player', 'flushPlayerSessionHeuristic completed (inferred)', {
-    id, season: session.season, episode: session.episode, elapsedSec: Math.round(elapsed / 1000)
+    id, season: session.season, episode: session.episode,
+    visibleSec: Math.round(visibleElapsed / 1000)
   });
 
   // Actualizar local: escribir completedAt en el episodio correspondiente

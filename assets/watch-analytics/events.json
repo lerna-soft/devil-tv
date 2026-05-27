@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-27T13:52:36.973Z",
+  "generatedAt": "2026-05-27T14:39:13.741Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e12:started:2026-05-27T14:39:00Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e12",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 12,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T14:38:59.016Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T14:39:00Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-27T12:42:44Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:21:37Z"
-    },
-    {
-      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-16T05:21:35Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:21:35Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

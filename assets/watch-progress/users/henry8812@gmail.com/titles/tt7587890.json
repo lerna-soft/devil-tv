@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T05:26:06Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt7587890:s1e1:preference:2026-05-16T05:26:06Z",
-      "contentId": "tt7587890",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt7587890",
-      "tmdbId": "79744",
-      "title": "The Rookie",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:26:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

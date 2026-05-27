@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T20:36:13.636Z",
+  "generatedAt": "2026-05-27T20:46:53.065Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T20:35:52Z",
+      "updatedAt": "2026-05-27T20:46:42Z",
       "totalEvents": 500,
-      "totalStarts": 178,
+      "totalStarts": 179,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 139,
-      "lastActivityAt": "2026-05-27T20:35:52Z",
+      "uniqueContentCount": 138,
+      "lastActivityAt": "2026-05-27T20:46:42Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 66,
+          "playCount": 67,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T20:35:52Z"
+          "lastSeenAt": "2026-05-27T20:46:42Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1693,18 +1693,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:22Z"
-        },
-        "tt1386932": {
-          "contentId": "tt1386932",
-          "imdbId": "tt1386932",
-          "tmdbId": "",
-          "title": "Ip Man 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:59:19Z"
         }
       },
       "avgPlaybackProgress": 555.8604

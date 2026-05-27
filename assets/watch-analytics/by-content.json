@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T04:08:08.488Z",
+  "generatedAt": "2026-05-27T04:18:03.633Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 36,
+      "totalEvents": 37,
       "totalStarts": 28,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
       "completionRate": 0.0357,
-      "lastActivityAt": "2026-05-27T04:07:56Z",
+      "lastActivityAt": "2026-05-27T04:17:54Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 36,
+          "playCount": 37,
           "completedCount": 1,
           "startedCount": 28,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T04:07:56Z",
-          "lastSeason": 2,
-          "lastEpisode": 3
+          "lastSeenAt": "2026-05-27T04:17:54Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 41.870621,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T04:17:54Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e3": {
           "season": 2,
           "episode": 3,
@@ -851,20 +865,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-27T01:39:54Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 41.870621,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T14:32:46Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1137,7 +1137,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.1909
+      "avgPlaybackProgress": 1.1587
     },
     {
       "contentId": "tt21209804",
@@ -1583,7 +1583,7 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 21,
+      "totalEvents": 20,
       "totalStarts": 8,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
@@ -1594,7 +1594,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 21,
+          "playCount": 20,
           "completedCount": 2,
           "startedCount": 8,
           "totalPlaybackProgress": 5612.777192470997,
@@ -1691,7 +1691,7 @@
         "s1e7": {
           "season": 1,
           "episode": 7,
-          "totalEvents": 4,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
@@ -1717,7 +1717,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 267.2751
+      "avgPlaybackProgress": 280.6389
     },
     {
       "contentId": "tt29552248",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T08:24:31.894Z",
+  "generatedAt": "2026-05-27T08:32:43.733Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 42,
-      "totalStarts": 31,
+      "totalEvents": 43,
+      "totalStarts": 32,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0323,
-      "lastActivityAt": "2026-05-27T08:24:20Z",
+      "completionRate": 0.0313,
+      "lastActivityAt": "2026-05-27T08:32:34Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 42,
+          "playCount": 43,
           "completedCount": 1,
-          "startedCount": 31,
+          "startedCount": 32,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T08:24:20Z",
+          "lastSeenAt": "2026-05-27T08:32:34Z",
           "lastSeason": 2,
-          "lastEpisode": 6
+          "lastEpisode": 7
         }
       },
       "episodes": {
+        "s2e7": {
+          "season": 2,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T08:32:34Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e6": {
           "season": 2,
           "episode": 6,
@@ -1179,7 +1193,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.0207
+      "avgPlaybackProgress": 0.997
     },
     {
       "contentId": "tt21209804",
@@ -9435,50 +9449,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T05:17:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt12042730",
-      "imdbId": "tt12042730",
-      "tmdbId": "687163",
-      "title": "Proyecto Salvación",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T01:57:30Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T01:57:30Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T01:57:30Z",
           "users": {
             "henry8812@gmail.com": true
           },

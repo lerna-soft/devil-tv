@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T08:24:20Z",
+  "updatedAt": "2026-05-27T08:32:34Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1743,10 +1743,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 2,
-      "lastEpisode": 6,
+      "lastEpisode": 7,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-27T08:24:20Z",
+      "updatedAt": "2026-05-27T08:32:34Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1805,6 +1805,11 @@
         },
         "s2e6": {
           "startedAt": "2026-05-27T08:24:20.209Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s2e7": {
+          "startedAt": "2026-05-27T08:32:33.928Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -1983,12 +1988,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 2,
-    "episode": 6,
+    "episode": 7,
     "progress": 0,
-    "updatedAt": "2026-05-27T08:24:20Z"
+    "updatedAt": "2026-05-27T08:32:34Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e7:started:2026-05-27T08:32:34Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 7,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T08:32:33.928Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T08:32:34Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e6:started:2026-05-27T08:24:20Z",
       "contentId": "tt2560140",
@@ -15453,33 +15485,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T02:33:00Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt12042730:s1e1:playing:2026-05-16T01:57:30Z",
-      "contentId": "tt12042730",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt12042730",
-      "tmdbId": "687163",
-      "title": "Proyecto Salvación",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T01:57:30Z",
       "country": "",
       "countryName": "",
       "city": "",

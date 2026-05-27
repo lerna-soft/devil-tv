@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T22:24:09.831Z",
+  "generatedAt": "2026-05-27T22:24:23.322Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 74,
+      "totalEvents": 75,
       "totalStarts": 50,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7147.354384403976,
       "uniqueUsers": 1,
       "completionRate": 0.1,
-      "lastActivityAt": "2026-05-27T22:23:40Z",
+      "lastActivityAt": "2026-05-27T22:24:13Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 74,
+          "playCount": 75,
           "completedCount": 5,
           "startedCount": 50,
           "totalPlaybackProgress": 7147.354384403976,
-          "lastSeenAt": "2026-05-27T22:23:40Z",
-          "lastSeason": 3,
-          "lastEpisode": 14
+          "lastSeenAt": "2026-05-27T22:24:13Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 8,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 41.870621,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T22:24:13Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e14": {
           "season": 3,
           "episode": 14,
@@ -949,20 +963,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-27T14:39:00Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 41.870621,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T12:42:44Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1445,7 +1445,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 96.5859
+      "avgPlaybackProgress": 95.2981
     },
     {
       "contentId": "tt21209804",
@@ -8515,50 +8515,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:02:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt29268110",
-      "imdbId": "tt29268110",
-      "tmdbId": "1100782",
-      "title": "Smile 2",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:02:11Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:02:11Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:02:11Z",
           "users": {
             "henry8812@gmail.com": true
           },

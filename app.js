@@ -3560,7 +3560,14 @@ async function fetchAdminPayload(progressFn) {
       const rel = String(entry?.file || '').trim();
       if (!rel) return null;
       const file = rel.startsWith('users/') ? rel : `users/${rel}`;
-      return fetchJsonWithTimeout(`./assets/watch-progress/${file}?v=${window.__mep_build || Date.now()}`, 3000).catch(() => null);
+      // Preferimos el index.json del nuevo formato particionado (payload
+      // mucho más ligero: progress slim + lastWatch sin history detallada).
+      // Fallback al data.json viejo si no existe.
+      const userDir = file.replace(/\/data\.json$/, '');
+      const cacheTag = window.__mep_build || Date.now();
+      const indexJson = await fetchJsonWithTimeout(`./assets/watch-progress/${userDir}/index.json?v=${cacheTag}`, 3000).catch(() => null);
+      if (indexJson?.email) return indexJson;
+      return fetchJsonWithTimeout(`./assets/watch-progress/${file}?v=${cacheTag}`, 3000).catch(() => null);
     }));
     cleanDetails = details.filter(Boolean);
   }

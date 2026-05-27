@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T14:54:03.622Z",
+  "generatedAt": "2026-05-27T15:07:07.190Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T14:53:50Z",
+      "updatedAt": "2026-05-27T15:06:53Z",
       "totalEvents": 500,
-      "totalStarts": 172,
+      "totalStarts": 173,
       "totalCompletions": 67,
       "totalPlaybackProgress": 266119.08293048793,
-      "uniqueContentCount": 153,
-      "lastActivityAt": "2026-05-27T14:53:50Z",
+      "uniqueContentCount": 152,
+      "lastActivityAt": "2026-05-27T15:06:53Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 52,
+          "playCount": 53,
           "completed": true,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T14:53:50Z"
+          "lastSeenAt": "2026-05-27T15:06:53Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1860,18 +1860,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T05:26:06Z"
-        },
-        "tt36104233": {
-          "contentId": "tt36104233",
-          "imdbId": "tt36104233",
-          "tmdbId": "285838",
-          "title": "Si los deseos mataran...",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T05:21:40Z"
         }
       },
       "avgPlaybackProgress": 532.2382

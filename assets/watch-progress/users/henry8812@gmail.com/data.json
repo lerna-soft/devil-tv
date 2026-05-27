@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T14:53:50Z",
+  "updatedAt": "2026-05-27T15:06:53Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1743,10 +1743,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 3,
-      "lastEpisode": 2,
+      "lastEpisode": 3,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-27T14:53:50Z",
+      "updatedAt": "2026-05-27T15:06:53Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1845,6 +1845,11 @@
         },
         "s3e2": {
           "startedAt": "2026-05-27T14:53:48.894Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s3e3": {
+          "startedAt": "2026-05-27T15:06:52.156Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2023,12 +2028,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 3,
-    "episode": 2,
+    "episode": 3,
     "progress": 0,
-    "updatedAt": "2026-05-27T14:53:50Z"
+    "updatedAt": "2026-05-27T15:06:53Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e3:started:2026-05-27T15:06:53Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 3,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T15:06:52.156Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T15:06:53Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e2:started:2026-05-27T14:53:50Z",
       "contentId": "tt2560140",
@@ -15493,33 +15525,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T05:26:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt36104233:s1e1:preference:2026-05-16T05:21:40Z",
-      "contentId": "tt36104233",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt36104233",
-      "tmdbId": "285838",
-      "title": "Si los deseos mataran...",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T05:21:40Z",
       "country": "",
       "countryName": "",
       "city": "",

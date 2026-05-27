@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T08:43:26.444Z",
+  "generatedAt": "2026-05-27T08:47:09.821Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T08:43:13Z",
+      "updatedAt": "2026-05-27T08:46:59Z",
       "totalEvents": 500,
-      "totalStarts": 168,
+      "totalStarts": 169,
       "totalCompletions": 67,
       "totalPlaybackProgress": 266119.08293048793,
       "uniqueContentCount": 157,
-      "lastActivityAt": "2026-05-27T08:43:13Z",
+      "lastActivityAt": "2026-05-27T08:46:59Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -127,11 +127,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 46,
+          "playCount": 47,
           "completed": true,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T08:43:13Z"
+          "lastSeenAt": "2026-05-27T08:46:59Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -835,7 +835,7 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 10,
+          "playCount": 9,
           "completed": false,
           "maxProgressValue": 4299.974232,
           "maxProgressPercent": 0,

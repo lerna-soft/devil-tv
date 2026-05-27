@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T14:50:52.274Z",
+  "generatedAt": "2026-05-27T14:54:03.620Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 51,
-      "totalStarts": 38,
+      "totalEvents": 52,
+      "totalStarts": 39,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0263,
-      "lastActivityAt": "2026-05-27T14:50:38Z",
+      "completionRate": 0.0256,
+      "lastActivityAt": "2026-05-27T14:53:50Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 51,
+          "playCount": 52,
           "completedCount": 1,
-          "startedCount": 38,
+          "startedCount": 39,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T14:50:38Z",
+          "lastSeenAt": "2026-05-27T14:53:50Z",
           "lastSeason": 3,
-          "lastEpisode": 1
+          "lastEpisode": 2
         }
       },
       "episodes": {
+        "s3e2": {
+          "season": 3,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T14:53:50Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e1": {
           "season": 3,
           "episode": 1,
@@ -1277,7 +1291,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.8406
+      "avgPlaybackProgress": 0.8244
     },
     {
       "contentId": "tt21209804",
@@ -9313,50 +9327,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T05:21:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0365847",
-      "imdbId": "tt0365847",
-      "tmdbId": "11653",
-      "title": "El mito",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T05:21:39Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T05:21:39Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T05:21:39Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-27T16:03:25.243Z",
+  "generatedAt": "2026-05-27T16:03:38.121Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 190,
+  "totalStarts": 191,
   "totalCompletions": 70,
-  "overallCompletionRate": 0.3684,
+  "overallCompletionRate": 0.3665,
   "trackedTitles": 168,
   "mostWatchedContent": [
     {
@@ -20,9 +20,9 @@
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 57,
+      "totalEvents": 58,
       "uniqueUsers": 1,
-      "completionRate": 0.0732
+      "completionRate": 0.0714
     },
     {
       "contentId": "tt21209804",
@@ -73,20 +73,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt33046197",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "totalEvents": 8,
-      "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt1190634",
       "title": "The Boys",
       "type": "series",
       "totalEvents": 8,
       "uniqueUsers": 1,
       "completionRate": 0.25
+    },
+    {
+      "contentId": "tt33046197",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 7,
+      "uniqueUsers": 3,
+      "completionRate": 0
     }
   ]
 }

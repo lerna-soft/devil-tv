@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt29552248",
+  "tmdbId": "1007757",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-17T17:57:33Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-17T17:57:33Z",
+      "contentId": "tt29552248",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:57:33Z"
+    }
+  ]
+}

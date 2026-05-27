@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt0032186",
+  "tmdbId": "69060",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-23T02:47:14Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "liz-munera@hotmail.com:tt0032186:s1e1:started:2026-05-23T02:47:14Z",
+      "contentId": "tt0032186",
+      "episodeKey": "s1e1",
+      "userEmail": "liz-munera@hotmail.com",
+      "userName": "Lizeth Munera",
+      "imdbId": "tt0032186",
+      "tmdbId": "69060",
+      "title": "You're Missing the Point",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-23T02:47:12.108Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-23T02:47:14Z"
+    }
+  ]
+}

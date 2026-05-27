@@ -1,0 +1,31 @@
+{
+  "imdbId": "tt0480489",
+  "tmdbId": "",
+  "lastSeason": 1,
+  "lastEpisode": 2,
+  "progress": 974.321778,
+  "lastProgress": 974.321778,
+  "updatedAt": "2026-05-13T17:00:31Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
+      "contentId": "tt0480489",
+      "episodeKey": "s1e2",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt0480489",
+      "tmdbId": "",
+      "title": "Elfen Lied",
+      "type": "series",
+      "season": 1,
+      "episode": 2,
+      "progress": 974.321778,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-13T17:00:31Z"
+    }
+  ]
+}

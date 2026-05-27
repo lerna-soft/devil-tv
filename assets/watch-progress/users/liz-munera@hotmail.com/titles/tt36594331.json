@@ -1,0 +1,50 @@
+{
+  "imdbId": "tt36594331",
+  "tmdbId": "289219",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-17T17:56:00Z",
+  "watched": {},
+  "history": [
+    {
+      "eventId": "unknown:tt36594331:s1e1:preference:2026-05-17T17:56:00Z",
+      "contentId": "tt36594331",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt36594331",
+      "tmdbId": "289219",
+      "title": "Star Wars: Maul - Señor de las sombras",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:56:00Z"
+    },
+    {
+      "eventId": "unknown:tt36594331:s1e1:preference:2026-05-17T17:55:49Z",
+      "contentId": "tt36594331",
+      "episodeKey": "s1e1",
+      "userEmail": "",
+      "userName": "",
+      "imdbId": "tt36594331",
+      "tmdbId": "289219",
+      "title": "Star Wars: Maul - Señor de las sombras",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-17T17:55:49Z"
+    }
+  ]
+}

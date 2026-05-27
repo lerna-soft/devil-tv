@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T19:51:01.182Z",
+  "generatedAt": "2026-05-27T19:51:12.630Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T19:50:51Z",
+      "updatedAt": "2026-05-27T19:50:54Z",
       "totalEvents": 500,
-      "totalStarts": 176,
+      "totalStarts": 177,
       "totalCompletions": 71,
       "totalPlaybackProgress": 276459.72598793876,
-      "uniqueContentCount": 144,
-      "lastActivityAt": "2026-05-27T19:50:51Z",
+      "uniqueContentCount": 143,
+      "lastActivityAt": "2026-05-27T19:50:54Z",
       "completedContentIds": [
         "tt30460310",
         "tt2560140",
@@ -128,11 +128,11 @@
           "tmdbId": "220102",
           "title": "Spider-Noir",
           "type": "series",
-          "playCount": 4,
+          "playCount": 5,
           "completed": true,
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-27T19:50:51Z"
+          "lastSeenAt": "2026-05-27T19:50:54Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1753,18 +1753,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T06:59:01Z"
-        },
-        "tt0104558": {
-          "contentId": "tt0104558",
-          "imdbId": "tt0104558",
-          "tmdbId": "",
-          "title": "Police Story 3: Supercop",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T06:59:00Z"
         }
       },
       "avgPlaybackProgress": 552.9195

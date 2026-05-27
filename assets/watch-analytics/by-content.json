@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T19:51:01.180Z",
+  "generatedAt": "2026-05-27T19:51:12.628Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2468,6 +2468,64 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt30460310",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 4671.268573638648,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-27T19:50:54Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 4671.268573638648,
+          "lastSeenAt": "2026-05-27T19:50:54Z",
+          "lastSeason": 1,
+          "lastEpisode": 2
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T19:50:54Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4671.268573638648,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T19:50:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 934.2537
+    },
+    {
       "contentId": "tt0899043",
       "imdbId": "tt0899043",
       "tmdbId": "1087891",
@@ -2654,50 +2712,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt30460310",
-      "imdbId": "tt30460310",
-      "tmdbId": "220102",
-      "title": "Spider-Noir",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 4671.268573638648,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-05-27T19:50:51Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 4671.268573638648,
-          "lastSeenAt": "2026-05-27T19:50:51Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 4671.268573638648,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T19:50:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 1167.8171
     },
     {
       "contentId": "296232",
@@ -8975,50 +8989,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T06:59:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0104558",
-      "imdbId": "tt0104558",
-      "tmdbId": "",
-      "title": "Police Story 3: Supercop",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T06:59:00Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T06:59:00Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T06:59:00Z",
           "users": {
             "henry8812@gmail.com": true
           },

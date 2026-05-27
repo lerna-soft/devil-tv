@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T04:18:15.038Z",
+  "generatedAt": "2026-05-27T04:21:55.458Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T04:17:57Z",
+      "updatedAt": "2026-05-27T04:21:45Z",
       "totalEvents": 500,
       "totalStarts": 167,
       "totalCompletions": 68,
       "totalPlaybackProgress": 267401.6018098781,
-      "uniqueContentCount": 161,
-      "lastActivityAt": "2026-05-27T04:17:57Z",
+      "uniqueContentCount": 160,
+      "lastActivityAt": "2026-05-27T04:21:45Z",
       "completedContentIds": [
         "tt2560140",
         "tt21209804",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 38,
+          "playCount": 39,
           "completed": true,
           "maxProgressValue": 41.870621,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T04:17:57Z"
+          "lastSeenAt": "2026-05-27T04:21:45Z"
         },
         "tt32820897": {
           "contentId": "tt32820897",
@@ -1957,18 +1957,6 @@
           "maxProgressValue": 2474.787477777778,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T01:46:08Z"
-        },
-        "tt26753003": {
-          "contentId": "tt26753003",
-          "imdbId": "tt26753003",
-          "tmdbId": "",
-          "title": "Trap",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-15T23:14:38Z"
         }
       },
       "avgPlaybackProgress": 534.8032

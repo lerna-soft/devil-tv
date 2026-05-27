@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T04:18:15.036Z",
+  "generatedAt": "2026-05-27T04:21:55.456Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 38,
-      "totalStarts": 28,
+      "totalEvents": 39,
+      "totalStarts": 29,
       "totalCompletions": 1,
       "totalPlaybackProgress": 42.870621,
       "uniqueUsers": 1,
-      "completionRate": 0.0357,
-      "lastActivityAt": "2026-05-27T04:17:57Z",
+      "completionRate": 0.0345,
+      "lastActivityAt": "2026-05-27T04:21:45Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 38,
+          "playCount": 39,
           "completedCount": 1,
-          "startedCount": 28,
+          "startedCount": 29,
           "totalPlaybackProgress": 42.870621,
-          "lastSeenAt": "2026-05-27T04:17:57Z",
+          "lastSeenAt": "2026-05-27T04:21:45Z",
           "lastSeason": 2,
-          "lastEpisode": 3
+          "lastEpisode": 4
         }
       },
       "episodes": {
+        "s2e4": {
+          "season": 2,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T04:21:45Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e3": {
           "season": 2,
           "episode": 3,
@@ -1137,7 +1151,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1.1282
+      "avgPlaybackProgress": 1.0992
     },
     {
       "contentId": "tt21209804",
@@ -9509,50 +9523,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T01:57:30Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt26753003",
-      "imdbId": "tt26753003",
-      "tmdbId": "",
-      "title": "Trap",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-15T23:14:38Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-15T23:14:38Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-15T23:14:38Z",
           "users": {
             "henry8812@gmail.com": true
           },

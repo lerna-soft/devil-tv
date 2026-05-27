@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-15T23:14:38Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt26753003:s1e1:playing:2026-05-15T23:14:38Z",
-      "contentId": "tt26753003",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt26753003",
-      "tmdbId": "",
-      "title": "Trap",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-15T23:14:38Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

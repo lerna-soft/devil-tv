@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-27T04:21:45Z",
+  "updatedAt": "2026-05-27T04:23:12Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1743,10 +1743,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 2,
-      "lastEpisode": 4,
+      "lastEpisode": 5,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-27T04:21:45Z",
+      "updatedAt": "2026-05-27T04:23:12Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1795,6 +1795,11 @@
         },
         "s2e4": {
           "startedAt": "2026-05-27T04:21:45.005Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s2e5": {
+          "startedAt": "2026-05-27T04:23:11.544Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -1967,12 +1972,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 2,
-    "episode": 4,
+    "episode": 5,
     "progress": 0,
-    "updatedAt": "2026-05-27T04:21:45Z"
+    "updatedAt": "2026-05-27T04:23:12Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s2e5:started:2026-05-27T04:23:12Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s2e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 2,
+      "episode": 5,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-27T04:23:11.544Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-27T04:23:12Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s2e4:started:2026-05-27T04:21:45Z",
       "contentId": "tt2560140",
@@ -15437,33 +15469,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T01:46:08Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt31938062:s2e15:playing:2026-05-16T00:54:51Z",
-      "contentId": "tt31938062",
-      "episodeKey": "s2e15",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt31938062",
-      "tmdbId": "250307",
-      "title": "The Pitt",
-      "type": "series",
-      "season": 2,
-      "episode": 15,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T00:54:51Z",
       "country": "",
       "countryName": "",
       "city": "",

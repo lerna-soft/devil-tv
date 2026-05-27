@@ -757,9 +757,17 @@ function buildAnalyticsByContent(events) {
         completedSeenPerUser.set(userStartedKey, set);
       }
       userBucket.totalPlaybackProgress += Number(event.progress || 0);
+      // lastSeason/lastEpisode solo se actualizan si este evento es más
+      // reciente que el último visto. Antes se pisaban con cada evento,
+      // así que un evento out-of-order podía retroceder el "último ep
+      // visto" del user en el dashboard.
+      const incomingUpdated = Date.parse(event.updatedAt || 0) || 0;
+      const lastSeenUpdated = Date.parse(userBucket.lastSeenAt || 0) || 0;
+      if (incomingUpdated >= lastSeenUpdated) {
+        userBucket.lastSeason = positiveInteger(event.season, userBucket.lastSeason || 1);
+        userBucket.lastEpisode = positiveInteger(event.episode, userBucket.lastEpisode || 1);
+      }
       userBucket.lastSeenAt = maxIsoString(userBucket.lastSeenAt, event.updatedAt);
-      userBucket.lastSeason = positiveInteger(event.season, userBucket.lastSeason || 1);
-      userBucket.lastEpisode = positiveInteger(event.episode, userBucket.lastEpisode || 1);
       bucket.users[userEmail] = userBucket;
     }
 
@@ -845,6 +853,12 @@ function buildAnalyticsByUser(users, events) {
     });
   }
 
+  // Sets para dedupe a nivel user: cuenta (contentId, episodeKey) únicos
+  // para starts/completions. Antes un user que reabría el mismo ep 5
+  // veces se contaba como 5 starts en su bucket.
+  const userStartedSet = new Map();   // email -> Set<contentId|epKey>
+  const userCompletedSet = new Map(); // email -> Set<contentId|epKey>
+
   for (const event of events || []) {
     const email = normalizeEmail(event.userEmail);
     if (!email) continue;
@@ -865,8 +879,25 @@ function buildAnalyticsByUser(users, events) {
       content: {}
     };
     bucket.totalEvents += 1;
-    if (event.eventType === 'started') bucket.totalStarts += 1;
-    if (event.eventType === 'completed' || event.playerStatus === 'completed') bucket.totalCompletions += 1;
+    const contentIdForEvent = String(event.contentId || '').trim();
+    const episodeKeyForEvent = String(event.episodeKey || `s${event.season}e${event.episode}`).trim();
+    const uniqueKey = `${contentIdForEvent}|${episodeKeyForEvent}`;
+    if (event.eventType === 'started') {
+      const set = userStartedSet.get(email) || new Set();
+      if (!set.has(uniqueKey)) {
+        set.add(uniqueKey);
+        bucket.totalStarts += 1;
+      }
+      userStartedSet.set(email, set);
+    }
+    if (event.eventType === 'completed' || event.playerStatus === 'completed') {
+      const set = userCompletedSet.get(email) || new Set();
+      if (!set.has(uniqueKey)) {
+        set.add(uniqueKey);
+        bucket.totalCompletions += 1;
+      }
+      userCompletedSet.set(email, set);
+    }
     bucket.totalPlaybackProgress += Number(event.progress || 0);
     bucket.lastActivityAt = maxIsoString(bucket.lastActivityAt, event.updatedAt);
     const contentId = String(event.contentId || '').trim();

@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T07:43:06Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt4513678:s1e1:preference:2026-05-16T07:43:06Z",
-      "contentId": "tt4513678",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt4513678",
-      "tmdbId": "",
-      "title": "Ghostbusters: Afterlife",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:43:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

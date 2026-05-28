@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-28T16:45:20.147Z",
+  "generatedAt": "2026-05-28T16:55:59.029Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T15:21:41Z",
+      "updatedAt": "2026-05-28T16:55:46Z",
       "totalEvents": 500,
       "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
-      "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T15:21:41Z",
+      "uniqueContentCount": 123,
+      "lastActivityAt": "2026-05-28T16:55:46Z",
       "completedContentIds": [
-        "tt0965547",
         "tt2560140",
+        "tt0965547",
         "tt30460310",
         "tt21209804",
         "tt0903747",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T13:34:00Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 86,
+          "completed": true,
+          "maxProgressValue": 1435.1092795918366,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-28T16:55:46Z"
+        },
         "tt8790086": {
           "contentId": "tt8790086",
           "imdbId": "tt8790086",
@@ -205,18 +217,6 @@
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T13:33:19Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 85,
-          "completed": true,
-          "maxProgressValue": 1435.1092795918366,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T03:56:49Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1513,18 +1513,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T08:23:00Z"
-        },
-        "tt11247606": {
-          "contentId": "tt11247606",
-          "imdbId": "tt11247606",
-          "tmdbId": "",
-          "title": "The Account",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:52:01Z"
         }
       },
       "avgPlaybackProgress": 550.1833

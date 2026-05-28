@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-28T15:22:48.560Z",
+  "generatedAt": "2026-05-28T15:27:37.451Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:405775:s1e1:preference:2026-05-28T15:21:41Z",
+      "contentId": "405775",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "405775",
+      "title": "En la mira del francotirador (The Wall)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T15:21:41Z"
+    },
     {
       "eventId": "henry8812@gmail.com:1242265:s1e1:preference:2026-05-28T15:21:35Z",
       "contentId": "1242265",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:52:01Z"
-    },
-    {
-      "eventId": "unknown:tt0093870:s1e1:playing:2026-05-16T07:45:23Z",
-      "contentId": "tt0093870",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0093870",
-      "tmdbId": "",
-      "title": "RoboCop",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:45:23Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

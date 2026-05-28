@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T15:21:47.353Z",
+  "generatedAt": "2026-05-28T15:22:02.651Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T15:21:25Z",
+      "updatedAt": "2026-05-28T15:21:27Z",
       "totalEvents": 500,
       "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T15:21:25Z",
+      "lastActivityAt": "2026-05-28T15:21:27Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -133,6 +133,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T13:34:00Z"
+        },
+        "tt8790086": {
+          "contentId": "tt8790086",
+          "imdbId": "tt8790086",
+          "tmdbId": "539972",
+          "title": "Kraven the Hunter",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T15:21:27Z"
         },
         "tt12593682": {
           "contentId": "tt12593682",
@@ -1513,18 +1525,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:43:07Z"
-        },
-        "tt4513678": {
-          "contentId": "tt4513678",
-          "imdbId": "tt4513678",
-          "tmdbId": "",
-          "title": "Ghostbusters: Afterlife",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:43:06Z"
         }
       },
       "avgPlaybackProgress": 550.1833

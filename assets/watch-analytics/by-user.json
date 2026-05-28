@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T03:10:19.401Z",
+  "generatedAt": "2026-05-28T03:13:08.593Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T03:10:11Z",
+      "updatedAt": "2026-05-28T03:12:56Z",
       "totalEvents": 500,
       "totalStarts": 186,
       "totalCompletions": 72,
       "totalPlaybackProgress": 278649.58924926555,
-      "uniqueContentCount": 126,
-      "lastActivityAt": "2026-05-28T03:10:11Z",
+      "uniqueContentCount": 125,
+      "lastActivityAt": "2026-05-28T03:12:56Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 79,
+          "playCount": 80,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T03:10:11Z"
+          "lastSeenAt": "2026-05-28T03:12:56Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1537,18 +1537,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:16:13Z"
-        },
-        "tt0107978": {
-          "contentId": "tt0107978",
-          "imdbId": "tt0107978",
-          "tmdbId": "",
-          "title": "RoboCop 3",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:03:27Z"
         }
       },
       "avgPlaybackProgress": 557.2992

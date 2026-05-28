@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T03:10:19.399Z",
+  "generatedAt": "2026-05-28T03:13:08.592Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 79,
+      "totalEvents": 80,
       "totalStarts": 52,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
       "completionRate": 0.0962,
-      "lastActivityAt": "2026-05-28T03:10:11Z",
+      "lastActivityAt": "2026-05-28T03:12:56Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 79,
+          "playCount": 80,
           "completedCount": 5,
           "startedCount": 52,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-05-28T03:10:11Z",
+          "lastSeenAt": "2026-05-28T03:12:56Z",
           "lastSeason": 1,
-          "lastEpisode": 1
+          "lastEpisode": 15
         }
       },
       "episodes": {
+        "s1e15": {
+          "season": 1,
+          "episode": 15,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T03:12:56Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -1276,20 +1290,6 @@
           },
           "completionRate": 0
         },
-        "s1e15": {
-          "season": 1,
-          "episode": 15,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T06:56:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
         "s1e14": {
           "season": 1,
           "episode": 14,
@@ -1473,7 +1473,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 99.5791
+      "avgPlaybackProgress": 98.3344
     },
     {
       "contentId": "tt21209804",
@@ -8323,50 +8323,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:16:13Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0107978",
-      "imdbId": "tt0107978",
-      "tmdbId": "",
-      "title": "RoboCop 3",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:03:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:03:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:03:27Z",
           "users": {
             "henry8812@gmail.com": true
           },

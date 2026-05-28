@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-28T03:29:53.108Z",
+  "generatedAt": "2026-05-28T03:44:11.394Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 204,
+  "totalStarts": 205,
   "totalCompletions": 73,
-  "overallCompletionRate": 0.3578,
+  "overallCompletionRate": 0.3561,
   "trackedTitles": 144,
   "mostWatchedContent": [
     {
@@ -20,9 +20,9 @@
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 82,
+      "totalEvents": 83,
       "uniqueUsers": 1,
-      "completionRate": 0.0926
+      "completionRate": 0.0909
     },
     {
       "contentId": "tt21209804",

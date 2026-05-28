@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T03:29:44Z",
+  "updatedAt": "2026-05-28T03:44:00Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1754,10 +1754,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 3,
-      "lastEpisode": 18,
+      "lastEpisode": 19,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-28T03:29:44Z",
+      "updatedAt": "2026-05-28T03:44:00Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1938,6 +1938,11 @@
           "startedAt": "2026-05-28T03:29:43.745Z",
           "completedAt": "",
           "lastProgress": 0
+        },
+        "s3e19": {
+          "startedAt": "2026-05-28T03:43:59.799Z",
+          "completedAt": "",
+          "lastProgress": 0
         }
       }
     },
@@ -2114,12 +2119,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 3,
-    "episode": 18,
+    "episode": 19,
     "progress": 0,
-    "updatedAt": "2026-05-28T03:29:44Z"
+    "updatedAt": "2026-05-28T03:44:00Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e19:started:2026-05-28T03:44:00Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e19",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 19,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T03:43:59.799Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T03:44:00Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e18:started:2026-05-28T03:29:44Z",
       "contentId": "tt2560140",
@@ -15584,33 +15616,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:16:13Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt4425200:s1e1:preference:2026-05-16T07:16:10Z",
-      "contentId": "tt4425200",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt4425200",
-      "tmdbId": "324552",
-      "title": "John Wick: Pacto de sangre",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:10Z",
       "country": "",
       "countryName": "",
       "city": "",

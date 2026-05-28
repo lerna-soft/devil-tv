@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T17:26:13.870Z",
+  "generatedAt": "2026-05-28T17:27:40.161Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 87,
-      "totalStarts": 57,
+      "totalEvents": 88,
+      "totalStarts": 58,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
-      "completionRate": 0.0877,
-      "lastActivityAt": "2026-05-28T17:26:01Z",
+      "completionRate": 0.0862,
+      "lastActivityAt": "2026-05-28T17:27:29Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 87,
+          "playCount": 88,
           "completedCount": 5,
-          "startedCount": 57,
+          "startedCount": 58,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-05-28T17:26:01Z",
+          "lastSeenAt": "2026-05-28T17:27:29Z",
           "lastSeason": 3,
-          "lastEpisode": 21
+          "lastEpisode": 22
         }
       },
       "episodes": {
+        "s3e22": {
+          "season": 3,
+          "episode": 22,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T17:27:29Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s3e21": {
           "season": 3,
           "episode": 21,
@@ -1543,7 +1557,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 90.4224
+      "avgPlaybackProgress": 89.3949
     },
     {
       "contentId": "tt21209804",
@@ -2838,62 +2852,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt0032186",
-      "imdbId": "tt0032186",
-      "tmdbId": "69060",
-      "title": "You're Missing the Point",
-      "type": "movie",
-      "totalEvents": 5,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 5172.198298546031,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T02:47:14Z",
-      "users": {
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T02:47:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5172.198298546031,
-          "lastSeenAt": "2026-05-16T14:01:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 5172.198298546031,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-23T02:47:14Z",
-          "users": {
-            "liz-munera@hotmail.com": true,
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1034.4397
-    },
-    {
       "contentId": "tt1234721",
       "imdbId": "tt1234721",
       "tmdbId": "97020",
@@ -2936,6 +2894,62 @@
         }
       },
       "avgPlaybackProgress": 617.0725
+    },
+    {
+      "contentId": "tt0032186",
+      "imdbId": "tt0032186",
+      "tmdbId": "69060",
+      "title": "You're Missing the Point",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 5172.198298546031,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-23T02:47:14Z",
+      "users": {
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T02:47:14Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 5172.198298546031,
+          "lastSeenAt": "2026-05-16T14:01:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 5172.198298546031,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-23T02:47:14Z",
+          "users": {
+            "liz-munera@hotmail.com": true,
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1293.0496
     },
     {
       "contentId": "296232",

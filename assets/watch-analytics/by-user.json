@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T17:26:13.872Z",
+  "generatedAt": "2026-05-28T17:27:40.163Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T17:26:01Z",
+      "updatedAt": "2026-05-28T17:27:29Z",
       "totalEvents": 500,
-      "totalStarts": 194,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-28T17:26:01Z",
+      "lastActivityAt": "2026-05-28T17:27:29Z",
       "completedContentIds": [
         "tt2560140",
         "tt0965547",
@@ -164,11 +164,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 87,
+          "playCount": 88,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T17:26:01Z"
+          "lastSeenAt": "2026-05-28T17:27:29Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1484,7 +1484,7 @@
           "tmdbId": "",
           "title": "You're Missing the Point",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 5172.198298546031,
           "maxProgressPercent": 0,

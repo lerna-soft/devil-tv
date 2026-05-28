@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T12:52:25.983Z",
+  "generatedAt": "2026-05-28T13:33:32.997Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T08:23:02Z",
+      "updatedAt": "2026-05-28T13:33:19Z",
       "totalEvents": 500,
       "totalStarts": 194,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 273966.28743361926,
+      "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T08:23:02Z",
+      "lastActivityAt": "2026-05-28T13:33:19Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -128,11 +128,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 4,
+          "playCount": 5,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T08:23:02Z"
+          "lastSeenAt": "2026-05-28T13:33:19Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1148,7 +1148,7 @@
           "tmdbId": "",
           "title": "The Accountant 2",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 3489.7588178220017,
           "maxProgressPercent": 0,
@@ -1539,7 +1539,7 @@
           "lastSeenAt": "2026-05-16T07:42:50Z"
         }
       },
-      "avgPlaybackProgress": 547.9326
+      "avgPlaybackProgress": 550.1833
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

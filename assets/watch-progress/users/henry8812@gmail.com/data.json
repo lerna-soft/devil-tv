@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T15:21:21Z",
+  "updatedAt": "2026-05-28T15:21:25Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2049,6 +2049,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt12593682": {
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-28T15:21:25Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-28T15:21:25Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2181,20 +2197,48 @@
       "tt1631867": true,
       "tt1878870": true,
       "tt8594324": true,
-      "tt0831387": true
+      "tt0831387": true,
+      "tt12593682": true
     },
-    "updatedAt": "2026-05-28T15:21:21Z"
+    "updatedAt": "2026-05-28T15:21:25Z"
   },
   "lastWatch": {
-    "imdbId": "tt0831387",
-    "tmdbId": "124905",
+    "imdbId": "tt12593682",
+    "tmdbId": "718930",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-28T15:21:21Z"
+    "updatedAt": "2026-05-28T15:21:25Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt12593682:s1e1:preference:2026-05-28T15:21:25Z",
+      "contentId": "tt12593682",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "title": "Bullet Train",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T15:21:25Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:tt0831387:s1e1:preference:2026-05-28T15:21:21Z",
       "contentId": "tt0831387",
@@ -15659,33 +15703,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:43:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt1289401:s1e1:preference:2026-05-16T07:43:05Z",
-      "contentId": "tt1289401",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt1289401",
-      "tmdbId": "",
-      "title": "Ghostbusters",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:43:05Z",
       "country": "",
       "countryName": "",
       "city": "",

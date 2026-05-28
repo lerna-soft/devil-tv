@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-28T15:21:35.554Z",
+  "generatedAt": "2026-05-28T15:21:47.349Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt12593682:s1e1:preference:2026-05-28T15:21:25Z",
+      "contentId": "tt12593682",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "title": "Bullet Train",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T15:21:25Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0831387:s1e1:preference:2026-05-28T15:21:21Z",
       "contentId": "tt0831387",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:43:06Z"
-    },
-    {
-      "eventId": "unknown:tt1289401:s1e1:preference:2026-05-16T07:43:05Z",
-      "contentId": "tt1289401",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1289401",
-      "tmdbId": "",
-      "title": "Ghostbusters",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:43:05Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

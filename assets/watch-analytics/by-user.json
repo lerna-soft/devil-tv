@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-28T17:28:48.069Z",
+  "generatedAt": "2026-05-28T17:47:48.779Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T17:28:36Z",
+      "updatedAt": "2026-05-28T17:47:36Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
-      "uniqueContentCount": 122,
-      "lastActivityAt": "2026-05-28T17:28:36Z",
+      "uniqueContentCount": 121,
+      "lastActivityAt": "2026-05-28T17:47:36Z",
       "completedContentIds": [
-        "tt2560140",
         "tt0965547",
+        "tt2560140",
         "tt30460310",
         "tt21209804",
         "tt0903747",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T13:34:00Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "tt0965547",
+          "type": "movie",
+          "playCount": 6,
+          "completed": true,
+          "maxProgressValue": 1389.5981843537415,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T17:47:36Z"
+        },
         "tt2560140": {
           "contentId": "tt2560140",
           "imdbId": "tt2560140",
@@ -205,18 +217,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T15:21:21Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 5,
-          "completed": true,
-          "maxProgressValue": 1389.5981843537415,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T13:33:19Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1489,18 +1489,6 @@
           "maxProgressValue": 5172.198298546031,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T14:01:26Z"
-        },
-        "tt8398600": {
-          "contentId": "tt8398600",
-          "imdbId": "tt8398600",
-          "tmdbId": "",
-          "title": "After Life",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T08:29:48Z"
         }
       },
       "avgPlaybackProgress": 550.1833

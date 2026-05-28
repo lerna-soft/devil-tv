@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T08:22:03.735Z",
+  "generatedAt": "2026-05-28T08:23:12.357Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T08:21:46Z",
+      "updatedAt": "2026-05-28T08:23:02Z",
       "totalEvents": 500,
-      "totalStarts": 193,
+      "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 273966.28743361926,
       "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T08:21:46Z",
+      "lastActivityAt": "2026-05-28T08:23:02Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -128,11 +128,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 3,
+          "playCount": 4,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T08:21:46Z"
+          "lastSeenAt": "2026-05-28T08:23:02Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1448,7 +1448,7 @@
           "tmdbId": "",
           "title": "The Account",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T03:16:13Z",
+  "updatedAt": "2026-05-28T03:29:44Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1754,10 +1754,10 @@
       "imdbId": "tt2560140",
       "tmdbId": "1429",
       "lastSeason": 3,
-      "lastEpisode": 17,
+      "lastEpisode": 18,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-28T03:16:13Z",
+      "updatedAt": "2026-05-28T03:29:44Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1931,6 +1931,11 @@
         },
         "s3e17": {
           "startedAt": "2026-05-28T03:16:12.961Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s3e18": {
+          "startedAt": "2026-05-28T03:29:43.745Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2109,12 +2114,39 @@
     "imdbId": "tt2560140",
     "tmdbId": "1429",
     "season": 3,
-    "episode": 17,
+    "episode": 18,
     "progress": 0,
-    "updatedAt": "2026-05-28T03:16:13Z"
+    "updatedAt": "2026-05-28T03:29:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e18:started:2026-05-28T03:29:44Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e18",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 18,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T03:29:43.745Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T03:29:44Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e17:started:2026-05-28T03:16:13Z",
       "contentId": "tt2560140",
@@ -15579,33 +15611,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:16:10Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt2911666:s1e1:preference:2026-05-16T07:16:08Z",
-      "contentId": "tt2911666",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt2911666",
-      "tmdbId": "245891",
-      "title": "John Wick (Otro día para matar)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:08Z",
       "country": "",
       "countryName": "",
       "city": "",

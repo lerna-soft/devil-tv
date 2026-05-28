@@ -2103,13 +2103,24 @@ async function hydrateSelectedFromTmdb() {
     let tmdbType = title.type === 'series' ? 'tv' : 'movie';
     let tmdbId = title.tmdbId ? String(title.tmdbId) : '';
 
-    if (!tmdbId && title.imdbId) {
+    // Placeholders de Continuar Viendo nacen con type='movie' por defecto pero
+    // pueden ser series. Aún teniendo tmdbId, el namespace puede no coincidir:
+    // TMDB usa el mismo id en /movie/{id} y /tv/{id} para shows distintos
+    // (ej: 42573 = Slam Dunk en /tv/ pero Doctor Jekyll en /movie/). Por eso,
+    // si tenemos imdbId, siempre resolvemos vía /find/ primero para confirmar
+    // el type correcto antes de bajar al detalle.
+    const needsTypeResolve = (
+      !tmdbId
+      || title.isContinuePlaceholder === true
+      || (typeof title.title === 'string' && /^(tt\d+|\d{1,9})$/.test(title.title.trim()))
+    );
+
+    if (needsTypeResolve && title.imdbId) {
       const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' });
       let pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
-      // Si el type fue una corazonada (caso típico: placeholders de Continuar
-      // Viendo que nacen con type='movie' por defecto), probar el otro lado
-      // antes de rendirnos. Necesario para series como Slam Dunk hidratadas
-      // desde el placeholder.
+      // Si el type esperado vino vacío, probar el otro lado antes de rendirnos.
+      // Necesario para placeholders de Continuar Viendo cuyo type real es serie
+      // pero el placeholder asumió movie por defecto.
       if (!pick) {
         const fallbackList = tmdbType === 'tv' ? found.movie_results : found.tv_results;
         if (fallbackList && fallbackList.length > 0) {
@@ -2118,7 +2129,15 @@ async function hydrateSelectedFromTmdb() {
           title.type = tmdbType === 'tv' ? 'series' : 'movie';
         }
       }
-      if (pick?.id) tmdbId = String(pick.id);
+      if (pick?.id) {
+        const resolvedTmdbId = String(pick.id);
+        // Si el placeholder traía tmdbId pero el namespace TMDB del type
+        // confirmado es distinto, el id puede ser correcto u otro. En la
+        // práctica TMDB devuelve el mismo numérico para tv vs movie con
+        // mismo imdbId, así que aceptamos el resuelto del find (que ya
+        // viene en el namespace correcto).
+        tmdbId = resolvedTmdbId;
+      }
       if (pick?.poster_path && !sanitizePosterUrl(title.posterUrl)) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
       if (pick?.overview && isPlaceholderDescription(title.description)) title.description = pick.overview;
     }
@@ -2135,9 +2154,21 @@ async function hydrateSelectedFromTmdb() {
     const backdropUrl = details.backdrop_path ? `https://image.tmdb.org/t/p/w780${details.backdrop_path}` : '';
     const posterUrl = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '';
 
+    // Si el title actual parece un id raw (placeholder de Continuar Viendo
+    // que arrancó con title=imdbId), preferir el nombre real de TMDB. Sin
+    // esto, el header del detail se queda con "tt0965547" para siempre y
+    // dispara el badge "Metadata no disponible" (isBareRoute lo detecta
+    // comparando title.title === title.imdbId/tmdbId).
+    const currentTitleLooksLikeRawId = (
+      typeof title.title === 'string'
+      && /^(tt\d+|\d{1,9})$/.test(title.title.trim())
+    );
+    const resolvedTitleName = details.name || details.title || '';
     const payload = {
       tmdbId,
-      title: title.title || details.name || details.title || title.title,
+      title: currentTitleLooksLikeRawId && resolvedTitleName
+        ? resolvedTitleName
+        : (title.title || resolvedTitleName || title.title),
       year: Number(String((details.first_air_date || details.release_date || '')).slice(0, 4)) || title.year,
       description: details.overview || (isPlaceholderDescription(title.description) ? '' : title.description),
       posterUrl: sanitizePosterUrl(title.posterUrl) || posterUrl,

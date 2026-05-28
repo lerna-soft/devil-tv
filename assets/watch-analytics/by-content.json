@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T08:21:53.945Z",
+  "generatedAt": "2026-05-28T08:22:03.733Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2634,50 +2634,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt1234721",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
-      "totalEvents": 6,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3085.362560914,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T14:19:20Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3085.362560914,
-          "lastSeenAt": "2026-05-20T14:19:20Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 6,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3085.362560914,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T14:19:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 514.2271
-    },
-    {
       "contentId": "tt26443616",
       "imdbId": "tt26443616",
       "tmdbId": "1327819",
@@ -2864,6 +2820,50 @@
         }
       },
       "avgPlaybackProgress": 1034.4397
+    },
+    {
+      "contentId": "tt1234721",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "totalEvents": 5,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3085.362560914,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3085.362560914,
+          "lastSeenAt": "2026-05-20T14:19:20Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 5,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3085.362560914,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T14:19:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 617.0725
     },
     {
       "contentId": "tt2140479",
@@ -3140,6 +3140,64 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt0965547",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1389.5981843537415,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-28T08:21:46Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 1389.5981843537415,
+          "lastSeenAt": "2026-05-28T08:21:46Z",
+          "lastSeason": 1,
+          "lastEpisode": 2
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T08:21:46Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1389.5981843537415,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T08:21:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 463.1994
     },
     {
       "contentId": "tt32820897",
@@ -3460,50 +3518,6 @@
         }
       },
       "avgPlaybackProgress": 1730.5124
-    },
-    {
-      "contentId": "tt0965547",
-      "imdbId": "tt0965547",
-      "tmdbId": "42573",
-      "title": "Slam Dunk",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1389.5981843537415,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-05-28T08:21:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1389.5981843537415,
-          "lastSeenAt": "2026-05-28T08:21:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1389.5981843537415,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T08:21:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 694.7991
     },
     {
       "contentId": "tt1878870",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T05:48:29.626Z",
+  "generatedAt": "2026-05-28T08:16:14.648Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T03:56:49Z",
+      "updatedAt": "2026-05-28T08:15:57Z",
       "totalEvents": 500,
-      "totalStarts": 191,
+      "totalStarts": 192,
       "totalCompletions": 72,
       "totalPlaybackProgress": 278649.58924926555,
-      "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T03:56:49Z",
+      "uniqueContentCount": 125,
+      "lastActivityAt": "2026-05-28T08:15:57Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -121,6 +121,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T08:15:57Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -860,7 +872,7 @@
           "tmdbId": "245891",
           "title": "John Wick (Otro día para matar)",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": true,
           "maxProgressValue": 6072.9,
           "maxProgressPercent": 0,

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T17:27:40.163Z",
+  "generatedAt": "2026-05-28T17:28:48.069Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T17:27:29Z",
+      "updatedAt": "2026-05-28T17:28:36Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
-      "uniqueContentCount": 123,
-      "lastActivityAt": "2026-05-28T17:27:29Z",
+      "uniqueContentCount": 122,
+      "lastActivityAt": "2026-05-28T17:28:36Z",
       "completedContentIds": [
         "tt2560140",
         "tt0965547",
@@ -164,11 +164,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 88,
+          "playCount": 89,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T17:27:29Z"
+          "lastSeenAt": "2026-05-28T17:28:36Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1501,18 +1501,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T08:29:48Z"
-        },
-        "tt0114369": {
-          "contentId": "tt0114369",
-          "imdbId": "tt0114369",
-          "tmdbId": "",
-          "title": "Seven",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T08:23:00Z"
         }
       },
       "avgPlaybackProgress": 550.1833

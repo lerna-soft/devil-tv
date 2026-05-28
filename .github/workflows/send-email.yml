@@ -1,0 +1,109 @@
+name: Send transactional email (Brevo)
+
+# Workflow genérico que envía un correo HTML usando la cuenta de Brevo
+# compartida de Lerna Soft. Lo dispara cualquier producto del grupo
+# (BudgetApp, devil-tv, etc.) vía `gh workflow run send-email.yml`
+# o vía la API REST workflow_dispatch.
+#
+# Caso típico: BudgetApp manda planes / reportes / notificaciones HTML
+# al correo de admin sin tener que montar su propio proveedor.
+#
+# Secret usado: BREVO_API_KEY (ya configurado en este repo).
+
+on:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: 'Email destino (uno solo, separar varios con coma)'
+        required: true
+      subject:
+        description: 'Asunto'
+        required: true
+      html_content:
+        description: 'Cuerpo HTML (puedes pegarlo escapado o cargarlo desde un gist/raw URL — ver html_url)'
+        required: false
+        default: ''
+      html_url:
+        description: 'URL pública de un HTML para enviar como cuerpo (alternativa a html_content; gana sobre html_content si ambos están)'
+        required: false
+        default: ''
+      sender_name:
+        description: 'Nombre del remitente'
+        required: false
+        default: 'Lerna Soft'
+      sender_email:
+        description: 'Email del remitente (debe estar verificado en Brevo)'
+        required: false
+        default: 'hglerna@gmail.com'
+      tag:
+        description: 'Tag opcional para tracking (ej. budgetapp-plan, devil-tv-onboarding)'
+        required: false
+        default: 'generic'
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send via Brevo
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          TO_RAW: ${{ inputs.to }}
+          SUBJECT: ${{ inputs.subject }}
+          HTML_CONTENT: ${{ inputs.html_content }}
+          HTML_URL: ${{ inputs.html_url }}
+          SENDER_NAME: ${{ inputs.sender_name }}
+          SENDER_EMAIL: ${{ inputs.sender_email }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+
+          # Si html_url está set, fetch del HTML; sino usar html_content.
+          if [[ -n "$HTML_URL" ]]; then
+            echo "::notice::Loading HTML from URL"
+            HTML="$(curl -fsSL "$HTML_URL")"
+          else
+            HTML="$HTML_CONTENT"
+          fi
+          if [[ -z "$HTML" ]]; then
+            echo "::error::Either html_content or html_url is required and non-empty"
+            exit 1
+          fi
+
+          # Parsear lista de destinatarios separados por coma.
+          TO_JSON=$(printf '%s' "$TO_RAW" | tr ',' '\n' | while read -r email; do
+            email="$(echo "$email" | xargs)"
+            [[ -z "$email" ]] && continue
+            printf '{"email":"%s"}\n' "$email"
+          done | jq -s '.')
+
+          PAYLOAD=$(jq -n \
+            --argjson to "$TO_JSON" \
+            --arg subj "$SUBJECT" \
+            --arg html "$HTML" \
+            --arg sname "$SENDER_NAME" \
+            --arg semail "$SENDER_EMAIL" \
+            --arg tag "$TAG" \
+            '{
+              sender: { name: $sname, email: $semail },
+              to: $to,
+              subject: $subj,
+              htmlContent: $html,
+              tags: [ $tag ]
+            }')
+
+          HTTP_CODE=$(curl -s -o /tmp/brevo-resp.json -w "%{http_code}" \
+            -X POST 'https://api.brevo.com/v3/smtp/email' \
+            -H "api-key: ${BREVO_API_KEY}" \
+            -H 'Content-Type: application/json' \
+            -d "$PAYLOAD")
+
+          echo "::notice::Brevo HTTP $HTTP_CODE"
+          cat /tmp/brevo-resp.json
+
+          if [[ "$HTTP_CODE" != "201" ]]; then
+            echo "::error::Brevo returned HTTP $HTTP_CODE"
+            exit 1
+          fi

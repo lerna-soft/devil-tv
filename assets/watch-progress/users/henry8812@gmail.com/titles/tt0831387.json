@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt0831387",
+  "tmdbId": "124905",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-28T15:21:21Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-05-28T15:21:21Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0831387:s1e1:preference:2026-05-28T15:21:21Z",
+      "contentId": "tt0831387",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0831387",
+      "tmdbId": "124905",
+      "title": "Godzilla",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T15:21:21Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

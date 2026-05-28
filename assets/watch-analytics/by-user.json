@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T13:34:22.536Z",
+  "generatedAt": "2026-05-28T15:21:35.559Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T13:34:00Z",
+      "updatedAt": "2026-05-28T15:21:21Z",
       "totalEvents": 500,
       "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T13:34:00Z",
+      "lastActivityAt": "2026-05-28T15:21:21Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -133,6 +133,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T13:34:00Z"
+        },
+        "tt0831387": {
+          "contentId": "tt0831387",
+          "imdbId": "tt0831387",
+          "tmdbId": "124905",
+          "title": "Godzilla",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T15:21:21Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1513,18 +1525,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:43:05Z"
-        },
-        "tt0097428": {
-          "contentId": "tt0097428",
-          "imdbId": "tt0097428",
-          "tmdbId": "",
-          "title": "Ghostbusters II",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:42:54Z"
         }
       },
       "avgPlaybackProgress": 550.1833

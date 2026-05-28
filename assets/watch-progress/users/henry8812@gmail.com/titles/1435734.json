@@ -5,15 +5,42 @@
   "lastEpisode": 1,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-05-28T13:33:58Z",
+  "updatedAt": "2026-05-28T13:34:00Z",
   "watched": {
     "s1e1": {
-      "startedAt": "2026-05-28T13:33:58Z",
+      "startedAt": "2026-05-28T13:33:59.837Z",
       "completedAt": "",
       "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:1435734:s1e1:started:2026-05-28T13:34:00Z",
+      "contentId": "1435734",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "1435734",
+      "title": "Altas capacidades",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T13:33:59.837Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T13:34:00Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:1435734:s1e1:preference:2026-05-28T13:33:58Z",
       "contentId": "1435734",

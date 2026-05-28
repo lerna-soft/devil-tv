@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T13:34:10.575Z",
+  "generatedAt": "2026-05-28T13:34:22.536Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T13:33:58Z",
+      "updatedAt": "2026-05-28T13:34:00Z",
       "totalEvents": 500,
-      "totalStarts": 194,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
-      "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T13:33:58Z",
+      "uniqueContentCount": 124,
+      "lastActivityAt": "2026-05-28T13:34:00Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -128,11 +128,11 @@
           "tmdbId": "1435734",
           "title": "Altas capacidades",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T13:33:58Z"
+          "lastSeenAt": "2026-05-28T13:34:00Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1525,18 +1525,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:54Z"
-        },
-        "tt0090506": {
-          "contentId": "tt0090506",
-          "imdbId": "tt0090506",
-          "tmdbId": "",
-          "title": "The Real Ghostbusters",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:42:53Z"
         }
       },
       "avgPlaybackProgress": 550.1833

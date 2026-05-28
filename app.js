@@ -19,6 +19,12 @@ const state = {
   lastCountLabel: '0 títulos',
   searchingTerm: '',
   localCatalogCache: null,
+  // Placeholders de "Continuar viendo" cuyo id solo existe en el progress
+  // (no en el seed local ni en remoteResults). Se mantienen acá para que
+  // el click handler los pueda resolver con resolveTitleForInteraction y
+  // luego dispare hidratación TMDB. Sin esto, click → state.selected=null
+  // → el handler hace return temprano y no pasa nada visible.
+  continuePlaceholders: [],
   catalogVisibleCount: 72,
   lastCatalogRenderKey: '',
   genreFilterCacheKey: '',
@@ -2099,7 +2105,19 @@ async function hydrateSelectedFromTmdb() {
 
     if (!tmdbId && title.imdbId) {
       const found = await tmdbFetchJson(`/find/${encodeURIComponent(title.imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' });
-      const pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
+      let pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
+      // Si el type fue una corazonada (caso típico: placeholders de Continuar
+      // Viendo que nacen con type='movie' por defecto), probar el otro lado
+      // antes de rendirnos. Necesario para series como Slam Dunk hidratadas
+      // desde el placeholder.
+      if (!pick) {
+        const fallbackList = tmdbType === 'tv' ? found.movie_results : found.tv_results;
+        if (fallbackList && fallbackList.length > 0) {
+          pick = fallbackList[0];
+          tmdbType = tmdbType === 'tv' ? 'movie' : 'tv';
+          title.type = tmdbType === 'tv' ? 'series' : 'movie';
+        }
+      }
       if (pick?.id) tmdbId = String(pick.id);
       if (pick?.poster_path && !sanitizePosterUrl(title.posterUrl)) title.posterUrl = `https://image.tmdb.org/t/p/w500${pick.poster_path}`;
       if (pick?.overview && isPlaceholderDescription(title.description)) title.description = pick.overview;
@@ -5867,6 +5885,12 @@ function findTitleInLoadedCollections(predicate) {
   for (const entry of remote) {
     if (predicate(entry)) return entry;
   }
+  // Placeholders de "Continuar viendo" sin entrada en catálogo. Sin esta
+  // rama el click sobre uno de ellos resuelve a null y el handler abandona.
+  const placeholders = Array.isArray(state.continuePlaceholders) ? state.continuePlaceholders : [];
+  for (const entry of placeholders) {
+    if (predicate(entry)) return entry;
+  }
   if (state.selected && predicate(state.selected)) return state.selected;
   return null;
 }
@@ -6280,6 +6304,7 @@ function resolveContinueWatchingItems(uniqueTitles, watch) {
   const user = getAuthUser();
   const synced = user?.email ? loadSyncedWatchProgress(user.email) : null;
   const remoteProgress = synced?.progress && typeof synced.progress === 'object' ? synced.progress : {};
+  const newPlaceholders = [];
   for (const id of ids) {
     const existsInOut = out.some((t) => getTitleId(t) === id || t.imdbId === id || t.tmdbId === id);
     if (existsInOut) continue;
@@ -6288,7 +6313,7 @@ function resolveContinueWatchingItems(uniqueTitles, watch) {
     const imdbId = String(p.imdbId || '').trim();
     const tmdbId = String(p.tmdbId || '').trim();
     const type = 'movie'; // sin info de type, fallback a movie. El render no depende del type para mostrar.
-    out.push({
+    const placeholder = {
       catalogKey: getCanonicalCatalogKey(type, imdbId, tmdbId, id, ''),
       type,
       imdbId,
@@ -6298,9 +6323,16 @@ function resolveContinueWatchingItems(uniqueTitles, watch) {
       description: '',
       posterUrl: '',
       playable: true,
+      isContinuePlaceholder: true, // marca para hydrate al click
       metadata: { releaseDate: null, genres: [], backdropUrl: null, watchProviders: { region: '', flatrate: [] } }
-    });
+    };
+    out.push(placeholder);
+    newPlaceholders.push(placeholder);
   }
+  // Publicar a state para que resolveTitleForInteraction encuentre el
+  // placeholder cuando el user le hace click. Sin esto, el click resuelve
+  // a null y el handler hace return temprano (UX percibida: "no pasa nada").
+  state.continuePlaceholders = newPlaceholders;
   // Sort por recentAt (más reciente primero). Sin recentAt → al final.
   return out.sort((a, b) => {
     const aId = getTitleId(a);

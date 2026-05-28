@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T16:45:20.145Z",
+  "generatedAt": "2026-05-28T16:55:59.027Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 85,
+      "totalEvents": 86,
       "totalStarts": 57,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
       "completionRate": 0.0877,
-      "lastActivityAt": "2026-05-28T03:56:49Z",
+      "lastActivityAt": "2026-05-28T16:55:46Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 85,
+          "playCount": 86,
           "completedCount": 5,
           "startedCount": 57,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-05-28T03:56:49Z",
+          "lastSeenAt": "2026-05-28T16:55:46Z",
           "lastSeason": 3,
           "lastEpisode": 21
         }
@@ -747,12 +747,12 @@
         "s3e21": {
           "season": 3,
           "episode": 21,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T03:56:49Z",
+          "lastActivityAt": "2026-05-28T16:55:46Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1543,7 +1543,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 92.55
+      "avgPlaybackProgress": 91.4738
     },
     {
       "contentId": "tt21209804",
@@ -8333,50 +8333,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T08:23:00Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt11247606",
-      "imdbId": "tt11247606",
-      "tmdbId": "",
-      "title": "The Account",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:52:01Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:52:01Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:52:01Z",
           "users": {
             "henry8812@gmail.com": true
           },

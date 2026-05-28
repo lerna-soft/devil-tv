@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-28T01:27:55.747Z",
+  "generatedAt": "2026-05-28T02:53:14.270Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T00:57:35Z",
+      "updatedAt": "2026-05-28T02:53:04Z",
       "totalEvents": 500,
       "totalStarts": 186,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
       "uniqueContentCount": 127,
-      "lastActivityAt": "2026-05-28T00:57:35Z",
+      "lastActivityAt": "2026-05-28T02:53:04Z",
       "completedContentIds": [
-        "tt30460310",
         "tt2560140",
+        "tt30460310",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -122,6 +122,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 78,
+          "completed": true,
+          "maxProgressValue": 1435.1092795918366,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-28T02:53:04Z"
+        },
         "tt30460310": {
           "contentId": "tt30460310",
           "imdbId": "tt30460310",
@@ -133,18 +145,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-28T00:57:35Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 77,
-          "completed": true,
-          "maxProgressValue": 1435.1092795918366,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-27T22:34:35Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1448,7 +1448,7 @@
           "tmdbId": "",
           "title": "RoboCop",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

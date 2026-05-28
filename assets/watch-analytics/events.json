@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-28T03:44:11.394Z",
+  "generatedAt": "2026-05-28T03:54:27.275Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s3e20:started:2026-05-28T03:54:16Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s3e20",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 3,
+      "episode": 20,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T03:54:15.756Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T03:54:16Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e19:started:2026-05-28T03:44:00Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:16:14Z"
-    },
-    {
-      "eventId": "unknown:tt6146586:s1e1:preference:2026-05-16T07:16:13Z",
-      "contentId": "tt6146586",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt6146586",
-      "tmdbId": "458156",
-      "title": "John Wick: Capítulo 3 - Parabellum",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:13Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

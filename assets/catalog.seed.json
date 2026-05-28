@@ -1,6 +1,6 @@
 {
-  "version": 308,
-  "generatedAt": "2026-05-28T15:20:21.557Z",
+  "version": 309,
+  "generatedAt": "2026-05-28T16:54:23.427Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28113,6 +28113,22 @@
       "releaseDate": null,
       "overview": "Historia gótica de obsesión entre una joven hechizada y el aterrador vampiro encaprichado de ella que causa un indescriptible terror a su paso.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/jivUhECegXI3OYtPVflWoIDtENt.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "42573",
+      "imdbId": "tt0965547",
+      "title": "tt0965547",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6Lk4DyUCETDX4K7jR0SBNlB8zMK.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

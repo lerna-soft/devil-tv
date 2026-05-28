@@ -1,6 +1,6 @@
 {
-  "version": 305,
-  "generatedAt": "2026-05-28T08:10:17.699Z",
+  "version": 306,
+  "generatedAt": "2026-05-28T13:33:55.157Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51841,6 +51841,22 @@
       "releaseDate": null,
       "overview": "Pêpê Rapazote, Beatriz Godinho",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzRkZjJmMzEtMjBkOC00YmIzLWI1ZWQtYmE2MjUzYzdhNjI2XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "92396",
+      "imdbId": null,
+      "title": "Lady, La Vendedora De Rosas",
+      "year": 2015,
+      "releaseDate": null,
+      "overview": "La historia de vida de la estrella de cine colombiana Lady Tabares, quien fue arrancada de las calles mezquinas para protagonizar una película y rápidamente saltó a la fama.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hkiNJTUqgltJvqEpFP1QpzuujO2.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-27T23:52:29.008Z",
+  "generatedAt": "2026-05-28T00:57:46.098Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-27T22:34:35Z",
+      "updatedAt": "2026-05-28T00:57:35Z",
       "totalEvents": 500,
       "totalStarts": 186,
       "totalCompletions": 72,
       "totalPlaybackProgress": 277930.19348626555,
-      "uniqueContentCount": 128,
-      "lastActivityAt": "2026-05-27T22:34:35Z",
+      "uniqueContentCount": 127,
+      "lastActivityAt": "2026-05-28T00:57:35Z",
       "completedContentIds": [
-        "tt2560140",
         "tt30460310",
+        "tt2560140",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -122,6 +122,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
         },
+        "tt30460310": {
+          "contentId": "tt30460310",
+          "imdbId": "tt30460310",
+          "tmdbId": "220102",
+          "title": "Spider-Noir",
+          "type": "series",
+          "playCount": 7,
+          "completed": true,
+          "maxProgressValue": 2815.73,
+          "maxProgressPercent": 35.358218735,
+          "lastSeenAt": "2026-05-28T00:57:35Z"
+        },
         "tt2560140": {
           "contentId": "tt2560140",
           "imdbId": "tt2560140",
@@ -133,18 +145,6 @@
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
           "lastSeenAt": "2026-05-27T22:34:35Z"
-        },
-        "tt30460310": {
-          "contentId": "tt30460310",
-          "imdbId": "tt30460310",
-          "tmdbId": "220102",
-          "title": "Spider-Noir",
-          "type": "series",
-          "playCount": 6,
-          "completed": true,
-          "maxProgressValue": 2815.73,
-          "maxProgressPercent": 35.358218735,
-          "lastSeenAt": "2026-05-27T20:28:35Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1561,18 +1561,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:03:25Z"
-        },
-        "tt9288030": {
-          "contentId": "tt9288030",
-          "imdbId": "tt9288030",
-          "tmdbId": "108978",
-          "title": "Reacher",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:02:41Z"
         }
       },
       "avgPlaybackProgress": 555.8604

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T03:54:27.280Z",
+  "generatedAt": "2026-05-28T03:56:57.632Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T03:54:16Z",
+      "updatedAt": "2026-05-28T03:56:49Z",
       "totalEvents": 500,
-      "totalStarts": 190,
+      "totalStarts": 191,
       "totalCompletions": 72,
       "totalPlaybackProgress": 278649.58924926555,
       "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T03:54:16Z",
+      "lastActivityAt": "2026-05-28T03:56:49Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 84,
+          "playCount": 85,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T03:54:16Z"
+          "lastSeenAt": "2026-05-28T03:56:49Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -212,7 +212,7 @@
           "tmdbId": "603692",
           "title": "John Wick 4",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

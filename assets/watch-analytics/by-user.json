@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T03:44:11.399Z",
+  "generatedAt": "2026-05-28T03:54:27.280Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T03:44:00Z",
+      "updatedAt": "2026-05-28T03:54:16Z",
       "totalEvents": 500,
-      "totalStarts": 189,
+      "totalStarts": 190,
       "totalCompletions": 72,
       "totalPlaybackProgress": 278649.58924926555,
-      "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T03:44:00Z",
+      "uniqueContentCount": 124,
+      "lastActivityAt": "2026-05-28T03:54:16Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -128,11 +128,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 83,
+          "playCount": 84,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T03:44:00Z"
+          "lastSeenAt": "2026-05-28T03:54:16Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1525,18 +1525,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:50Z"
-        },
-        "tt6146586": {
-          "contentId": "tt6146586",
-          "imdbId": "tt6146586",
-          "tmdbId": "458156",
-          "title": "John Wick: Capítulo 3 - Parabellum",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:16:13Z"
         }
       },
       "avgPlaybackProgress": 557.2992

@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T07:16:13Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt6146586:s1e1:preference:2026-05-16T07:16:13Z",
-      "contentId": "tt6146586",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt6146586",
-      "tmdbId": "458156",
-      "title": "John Wick: Capítulo 3 - Parabellum",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:13Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

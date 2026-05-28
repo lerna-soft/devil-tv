@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T13:34:00Z",
+  "updatedAt": "2026-05-28T15:21:21Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2033,6 +2033,22 @@
           "lastProgress": 1125.377336299
         }
       }
+    },
+    "tt0831387": {
+      "imdbId": "tt0831387",
+      "tmdbId": "124905",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-28T15:21:21Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-28T15:21:21Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2164,20 +2180,48 @@
       "tt1646971": true,
       "tt1631867": true,
       "tt1878870": true,
-      "tt8594324": true
+      "tt8594324": true,
+      "tt0831387": true
     },
-    "updatedAt": "2026-05-28T13:33:58Z"
+    "updatedAt": "2026-05-28T15:21:21Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "1435734",
+    "imdbId": "tt0831387",
+    "tmdbId": "124905",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-28T13:34:00Z"
+    "updatedAt": "2026-05-28T15:21:21Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0831387:s1e1:preference:2026-05-28T15:21:21Z",
+      "contentId": "tt0831387",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0831387",
+      "tmdbId": "124905",
+      "title": "Godzilla",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T15:21:21Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:1435734:s1e1:started:2026-05-28T13:34:00Z",
       "contentId": "1435734",
@@ -15642,33 +15686,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:43:05Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt0097428:s1e1:preference:2026-05-16T07:42:54Z",
-      "contentId": "tt0097428",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0097428",
-      "tmdbId": "",
-      "title": "Ghostbusters II",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:42:54Z",
       "country": "",
       "countryName": "",
       "city": "",

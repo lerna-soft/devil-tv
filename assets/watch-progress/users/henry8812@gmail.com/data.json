@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T03:56:49Z",
+  "updatedAt": "2026-05-28T08:15:57Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1991,6 +1991,22 @@
           "lastProgress": 3775.326009272
         }
       }
+    },
+    "tt0965547": {
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-28T08:15:57Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-28T08:15:56.973Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2126,15 +2142,42 @@
     "updatedAt": "2026-05-27T04:17:54Z"
   },
   "lastWatch": {
-    "imdbId": "tt2560140",
-    "tmdbId": "1429",
-    "season": 3,
-    "episode": 21,
+    "imdbId": "tt0965547",
+    "tmdbId": "42573",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-28T03:56:49Z"
+    "updatedAt": "2026-05-28T08:15:57Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e1:started:2026-05-28T08:15:57Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T08:15:56.973Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T08:15:57Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e21:started:2026-05-28T03:56:49Z",
       "contentId": "tt2560140",
@@ -15599,33 +15642,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:38:27Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt2911666:s1e1:playing:2026-05-16T07:16:39Z",
-      "contentId": "tt2911666",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt2911666",
-      "tmdbId": "245891",
-      "title": "John Wick (Otro día para matar)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:39Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-28T05:48:29.621Z",
+  "generatedAt": "2026-05-28T08:16:14.644Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e1:started:2026-05-28T08:15:57Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T08:15:56.973Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T08:15:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e21:started:2026-05-28T03:56:49Z",
       "contentId": "tt2560140",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:38:27Z"
-    },
-    {
-      "eventId": "unknown:tt2911666:s1e1:playing:2026-05-16T07:16:39Z",
-      "contentId": "tt2911666",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2911666",
-      "tmdbId": "245891",
-      "title": "John Wick (Otro día para matar)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:16:39Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

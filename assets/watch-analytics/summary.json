@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-27T23:52:29.003Z",
+  "generatedAt": "2026-05-28T00:57:46.092Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
   "totalStarts": 202,
   "totalCompletions": 73,
   "overallCompletionRate": 0.3614,
-  "trackedTitles": 147,
+  "trackedTitles": 146,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -81,12 +81,12 @@
       "completionRate": 0.25
     },
     {
-      "contentId": "tt33046197",
-      "title": "Los hermanos demolición",
-      "type": "movie",
+      "contentId": "tt30460310",
+      "title": "Spider-Noir",
+      "type": "series",
       "totalEvents": 7,
-      "uniqueUsers": 3,
-      "completionRate": 0
+      "uniqueUsers": 1,
+      "completionRate": 0.5
     }
   ]
 }

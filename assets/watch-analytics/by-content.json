@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T23:52:29.006Z",
+  "generatedAt": "2026-05-28T00:57:46.096Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2338,6 +2338,64 @@
       "avgPlaybackProgress": 853.6227
     },
     {
+      "contentId": "tt30460310",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "totalEvents": 7,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 4706.626792373649,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-28T00:57:35Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 7,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 4706.626792373649,
+          "lastSeenAt": "2026-05-28T00:57:35Z",
+          "lastSeason": 1,
+          "lastEpisode": 2
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 35.358218735,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T00:57:35Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4671.268573638648,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-27T19:50:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 672.3753
+    },
+    {
       "contentId": "tt33046197",
       "imdbId": "tt33046197",
       "tmdbId": "1168190",
@@ -2448,64 +2506,6 @@
         }
       },
       "avgPlaybackProgress": 440.7661
-    },
-    {
-      "contentId": "tt30460310",
-      "imdbId": "tt30460310",
-      "tmdbId": "220102",
-      "title": "Spider-Noir",
-      "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 4706.626792373649,
-      "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-27T20:28:35Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 1,
-          "startedCount": 2,
-          "totalPlaybackProgress": 4706.626792373649,
-          "lastSeenAt": "2026-05-27T20:28:35Z",
-          "lastSeason": 1,
-          "lastEpisode": 2
-        }
-      },
-      "episodes": {
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 35.358218735,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T20:28:35Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 4671.268573638648,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T19:50:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 784.4378
     },
     {
       "contentId": "tt5311514",
@@ -8411,50 +8411,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T07:03:25Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt9288030",
-      "imdbId": "tt9288030",
-      "tmdbId": "108978",
-      "title": "Reacher",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T07:02:41Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T07:02:41Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T07:02:41Z",
           "users": {
             "henry8812@gmail.com": true
           },

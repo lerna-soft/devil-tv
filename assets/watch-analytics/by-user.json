@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T13:33:32.997Z",
+  "generatedAt": "2026-05-28T13:34:10.575Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T13:33:19Z",
+      "updatedAt": "2026-05-28T13:33:58Z",
       "totalEvents": 500,
       "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T13:33:19Z",
+      "lastActivityAt": "2026-05-28T13:33:58Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -121,6 +121,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:07Z"
+        },
+        "1435734": {
+          "contentId": "1435734",
+          "imdbId": "",
+          "tmdbId": "1435734",
+          "title": "Altas capacidades",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T13:33:58Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1525,18 +1537,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:42:53Z"
-        },
-        "tt0087332": {
-          "contentId": "tt0087332",
-          "imdbId": "tt0087332",
-          "tmdbId": "",
-          "title": "Ghostbusters",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:42:50Z"
         }
       },
       "avgPlaybackProgress": 550.1833

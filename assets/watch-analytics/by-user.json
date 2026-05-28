@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-05-28T08:16:14.648Z",
+  "generatedAt": "2026-05-28T08:21:53.947Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T08:15:57Z",
+      "updatedAt": "2026-05-28T08:21:44Z",
       "totalEvents": 500,
       "totalStarts": 192,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 278649.58924926555,
+      "totalPlaybackProgress": 273966.28743361926,
       "uniqueContentCount": 125,
-      "lastActivityAt": "2026-05-28T08:15:57Z",
+      "lastActivityAt": "2026-05-28T08:21:44Z",
       "completedContentIds": [
+        "tt0965547",
         "tt2560140",
         "tt30460310",
         "tt21209804",
         "tt0903747",
         "tt1190634",
-        "tt2911666",
         "tt16030542",
         "tt14452776"
       ],
@@ -128,11 +128,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
+          "playCount": 2,
+          "completed": true,
+          "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T08:15:57Z"
+          "lastSeenAt": "2026-05-28T08:21:44Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -872,9 +872,9 @@
           "tmdbId": "245891",
           "title": "John Wick (Otro día para matar)",
           "type": "movie",
-          "playCount": 2,
-          "completed": true,
-          "maxProgressValue": 6072.9,
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T11:11:54Z"
         },
@@ -1539,7 +1539,7 @@
           "lastSeenAt": "2026-05-16T07:42:50Z"
         }
       },
-      "avgPlaybackProgress": 557.2992
+      "avgPlaybackProgress": 547.9326
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,6 +1,6 @@
 {
-  "version": 307,
-  "generatedAt": "2026-05-28T15:20:02.510Z",
+  "version": 308,
+  "generatedAt": "2026-05-28T15:20:21.557Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28097,6 +28097,22 @@
       "releaseDate": null,
       "overview": "Una verdadera historia de David contra Goliat, de cómo Robert The Bruce, el gran rey escocés del siglo XIV, utilizó su astucia y valentía para intentar derrotar al ejército inglés de ocupación, mucho más numeroso y mejor equipado. Es la historia jamás contada de Roberto I Bruce, que en un año extraordinario pasó de ser un noble derrotado a un rey reticente, hasta convertirse en un héroe fugitivo. Obligado a entrar en batalla para salvar a su familia, su gente y su país de la tiránica ocupación inglesa, Roberto se apodera de la corona de la Escocia medieval y lidera a un grupo de hombres insurgentes para enfrentar la ira del ejército más fuerte del mundo conducido por el despiadado rey Eduardo I y su débil hijo, el príncipe de Gales",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wbuKZsSvoqaOhCeghh5MGcPhzDc.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "426063",
+      "imdbId": null,
+      "title": "Nosferatu",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Historia gótica de obsesión entre una joven hechizada y el aterrador vampiro encaprichado de ella que causa un indescriptible terror a su paso.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jivUhECegXI3OYtPVflWoIDtENt.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-28T15:22:48.565Z",
+  "generatedAt": "2026-05-28T15:27:37.456Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T15:21:35Z",
+      "updatedAt": "2026-05-28T15:21:41Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 124,
-      "lastActivityAt": "2026-05-28T15:21:35Z",
+      "lastActivityAt": "2026-05-28T15:21:41Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -109,6 +109,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:55:29Z"
+        },
+        "405775": {
+          "contentId": "405775",
+          "imdbId": "",
+          "tmdbId": "405775",
+          "title": "En la mira del francotirador (The Wall)",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-28T15:21:41Z"
         },
         "800158": {
           "contentId": "800158",
@@ -1513,18 +1525,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T07:52:01Z"
-        },
-        "tt0093870": {
-          "contentId": "tt0093870",
-          "imdbId": "tt0093870",
-          "tmdbId": "",
-          "title": "RoboCop",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T07:45:23Z"
         }
       },
       "avgPlaybackProgress": 550.1833

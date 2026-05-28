@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-28T02:53:04Z",
+  "updatedAt": "2026-05-28T03:10:11Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1753,11 +1753,11 @@
     "tt2560140": {
       "imdbId": "tt2560140",
       "tmdbId": "1429",
-      "lastSeason": 3,
-      "lastEpisode": 16,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-28T02:53:04Z",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 719.395763,
+      "lastProgress": 719.395763,
+      "updatedAt": "2026-05-28T03:10:11Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -1800,9 +1800,9 @@
           "lastProgress": 0
         },
         "s1e1": {
-          "startedAt": "2026-05-25T06:04:44.519Z",
+          "startedAt": "2026-05-24T14:46:08.492Z",
           "completedAt": "",
-          "lastProgress": 0
+          "lastProgress": 719.395763
         },
         "s2e4": {
           "startedAt": "2026-05-27T04:21:45.005Z",
@@ -2098,13 +2098,40 @@
   "lastWatch": {
     "imdbId": "tt2560140",
     "tmdbId": "1429",
-    "season": 3,
-    "episode": 16,
-    "progress": 0,
-    "updatedAt": "2026-05-28T02:53:04Z"
+    "season": 1,
+    "episode": 1,
+    "progress": 719.395763,
+    "updatedAt": "2026-05-28T03:10:11Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s1e1:started:2026-05-28T03:10:11Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 719.395763,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-24T14:46:08.492Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-28T03:10:11Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2560140:s3e16:started:2026-05-28T02:53:04Z",
       "contentId": "tt2560140",
@@ -15569,33 +15596,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T07:03:27Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt0100502:s1e1:preference:2026-05-16T07:03:25Z",
-      "contentId": "tt0100502",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0100502",
-      "tmdbId": "",
-      "title": "RoboCop 2",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T07:03:25Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -72,12 +72,10 @@ jobs:
             exit 1
           fi
 
-          # Parsear lista de destinatarios separados por coma.
-          TO_JSON=$(printf '%s' "$TO_RAW" | tr ',' '\n' | while read -r email; do
-            email="$(echo "$email" | xargs)"
-            [[ -z "$email" ]] && continue
-            printf '{"email":"%s"}\n' "$email"
-          done | jq -s '.')
+          # Parsear lista de destinatarios separados por coma → array JSON.
+          # Usamos jq directamente (más confiable que el while-read en subshell).
+          TO_JSON=$(printf '%s' "$TO_RAW" | jq -R 'split(",") | map({email: (gsub("^\\s+|\\s+$"; ""))}) | map(select(.email != ""))')
+          echo "::notice::Recipients JSON: $TO_JSON"
 
           PAYLOAD=$(jq -n \
             --argjson to "$TO_JSON" \

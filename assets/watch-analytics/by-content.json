@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T16:55:59.027Z",
+  "generatedAt": "2026-05-28T17:26:13.870Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 86,
+      "totalEvents": 87,
       "totalStarts": 57,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
       "completionRate": 0.0877,
-      "lastActivityAt": "2026-05-28T16:55:46Z",
+      "lastActivityAt": "2026-05-28T17:26:01Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 86,
+          "playCount": 87,
           "completedCount": 5,
           "startedCount": 57,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-05-28T16:55:46Z",
+          "lastSeenAt": "2026-05-28T17:26:01Z",
           "lastSeason": 3,
           "lastEpisode": 21
         }
@@ -747,12 +747,12 @@
         "s3e21": {
           "season": 3,
           "episode": 21,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T16:55:46Z",
+          "lastActivityAt": "2026-05-28T17:26:01Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1543,7 +1543,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 91.4738
+      "avgPlaybackProgress": 90.4224
     },
     {
       "contentId": "tt21209804",
@@ -2938,50 +2938,6 @@
       "avgPlaybackProgress": 617.0725
     },
     {
-      "contentId": "tt2140479",
-      "imdbId": "tt2140479",
-      "tmdbId": "302946",
-      "title": "El contable",
-      "type": "movie",
-      "totalEvents": 5,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T05:57:57Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T05:57:57Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T05:57:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "296232",
       "imdbId": "",
       "tmdbId": "296232",
@@ -3096,6 +3052,50 @@
         }
       },
       "avgPlaybackProgress": 2199.1396
+    },
+    {
+      "contentId": "tt2140479",
+      "imdbId": "tt2140479",
+      "tmdbId": "302946",
+      "title": "El contable",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-19T05:57:57Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-19T05:57:57Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T05:57:57Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0388629",

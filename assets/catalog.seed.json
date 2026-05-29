@@ -1,6 +1,6 @@
 {
-  "version": 310,
-  "generatedAt": "2026-05-29T00:34:39.703Z",
+  "version": 311,
+  "generatedAt": "2026-05-29T16:44:24.517Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51901,7 +51901,7 @@
       "tmdbId": "42573",
       "imdbId": "tt0965547",
       "title": "Slam Dunk",
-      "year": null,
+      "year": 1993,
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/tl44cjAK0UiQSH6aRLs1ActnGEp.jpg",

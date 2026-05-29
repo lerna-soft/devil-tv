@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T16:53:27.506Z",
+  "generatedAt": "2026-05-29T16:56:32.879Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T16:53:13Z",
+      "updatedAt": "2026-05-29T16:56:21Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-29T16:53:13Z",
+      "lastActivityAt": "2026-05-29T16:56:21Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -91,7 +91,7 @@
           "tmdbId": "296232",
           "title": "Snowball Earth",
           "type": "series",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 14,
+          "playCount": 15,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T16:53:13Z"
+          "lastSeenAt": "2026-05-29T16:56:21Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",

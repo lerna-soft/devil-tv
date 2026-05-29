@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T16:53:27.505Z",
+  "generatedAt": "2026-05-29T16:56:32.877Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2140,100 +2140,46 @@
       "avgPlaybackProgress": 350.7986
     },
     {
-      "contentId": "tt29552248",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "totalEvents": 15,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 16455.823481,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T11:32:15Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 8,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 6391.613326999999,
-          "lastSeenAt": "2026-05-21T11:32:15Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10064.210153999999,
-          "lastSeenAt": "2026-05-19T02:20:43Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:33Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 15,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 16455.823481,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-21T11:32:15Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "luzenithc1994@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1097.0549
-    },
-    {
       "contentId": "tt0965547",
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 14,
-      "totalStarts": 7,
+      "totalEvents": 15,
+      "totalStarts": 8,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2514.9755206527416,
       "uniqueUsers": 1,
-      "completionRate": 0.1429,
-      "lastActivityAt": "2026-05-29T16:53:13Z",
+      "completionRate": 0.125,
+      "lastActivityAt": "2026-05-29T16:56:21Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
+          "playCount": 15,
           "completedCount": 1,
-          "startedCount": 7,
+          "startedCount": 8,
           "totalPlaybackProgress": 2514.9755206527416,
-          "lastSeenAt": "2026-05-29T16:53:13Z",
+          "lastSeenAt": "2026-05-29T16:56:21Z",
           "lastSeason": 1,
-          "lastEpisode": 8
+          "lastEpisode": 9
         }
       },
       "episodes": {
+        "s1e9": {
+          "season": 1,
+          "episode": 9,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T16:56:21Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e8": {
           "season": 1,
           "episode": 8,
@@ -2333,7 +2279,75 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 179.6411
+      "avgPlaybackProgress": 167.665
+    },
+    {
+      "contentId": "tt29552248",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "totalEvents": 15,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 16455.823481,
+      "uniqueUsers": 3,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-21T11:32:15Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 8,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 6391.613326999999,
+          "lastSeenAt": "2026-05-21T11:32:15Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10064.210153999999,
+          "lastSeenAt": "2026-05-19T02:20:43Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 15,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 16455.823481,
+          "uniqueUsers": 3,
+          "lastActivityAt": "2026-05-21T11:32:15Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "luzenithc1994@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1097.0549
     },
     {
       "contentId": "tt32897959",
@@ -2952,78 +2966,6 @@
       "avgPlaybackProgress": 617.0725
     },
     {
-      "contentId": "296232",
-      "imdbId": "",
-      "tmdbId": "296232",
-      "title": "Snowball Earth",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T03:53:13Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 2,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T03:53:13Z",
-          "lastSeason": 1,
-          "lastEpisode": 7
-        }
-      },
-      "episodes": {
-        "s1e7": {
-          "season": 1,
-          "episode": 7,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T03:53:13Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:54:07Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T20:44:09Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt0293662",
       "imdbId": "tt0293662",
       "tmdbId": "4108",
@@ -3363,6 +3305,64 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:00Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "296232",
+      "imdbId": "",
+      "tmdbId": "296232",
+      "title": "Snowball Earth",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T03:53:13Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-22T03:53:13Z",
+          "lastSeason": 1,
+          "lastEpisode": 7
+        }
+      },
+      "episodes": {
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T03:53:13Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T06:54:07Z",
           "users": {
             "henry8812@gmail.com": true
           },

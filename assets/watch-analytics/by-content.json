@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T03:08:23.066Z",
+  "generatedAt": "2026-05-29T03:08:35.636Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2017,20 +2017,20 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 18,
-      "totalStarts": 8,
+      "totalEvents": 17,
+      "totalStarts": 7,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
       "uniqueUsers": 1,
-      "completionRate": 0.25,
+      "completionRate": 0.2857,
       "lastActivityAt": "2026-05-19T04:44:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 18,
+          "playCount": 17,
           "completedCount": 2,
-          "startedCount": 8,
+          "startedCount": 7,
           "totalPlaybackProgress": 5612.777192470997,
           "lastSeenAt": "2026-05-19T04:44:02Z",
           "lastSeason": 2,
@@ -2135,23 +2135,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e6": {
-          "season": 1,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T14:10:54Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 311.821
+      "avgPlaybackProgress": 330.1634
     },
     {
       "contentId": "tt29552248",
@@ -2634,6 +2620,50 @@
       "avgPlaybackProgress": 984.4102
     },
     {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 6,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3775.326009272,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-29T03:08:09Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3775.326009272,
+          "lastSeenAt": "2026-05-29T03:08:09Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3775.326009272,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T03:08:09Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 629.221
+    },
+    {
       "contentId": "tt5311514",
       "imdbId": "tt5311514",
       "tmdbId": "372058",
@@ -2776,50 +2806,6 @@
         }
       },
       "avgPlaybackProgress": 2140.1599
-    },
-    {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 5,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3775.326009272,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-27T08:20:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3775.326009272,
-          "lastSeenAt": "2026-05-27T08:20:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3775.326009272,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-27T08:20:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 755.0652
     },
     {
       "contentId": "tt8594324",

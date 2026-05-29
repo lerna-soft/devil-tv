@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T03:08:23.068Z",
+  "generatedAt": "2026-05-29T03:08:35.638Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T03:08:06Z",
+      "updatedAt": "2026-05-29T03:08:09Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 120,
-      "lastActivityAt": "2026-05-29T03:08:06Z",
+      "lastActivityAt": "2026-05-29T03:08:09Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0899043": {
+          "contentId": "tt0899043",
+          "imdbId": "tt0899043",
+          "tmdbId": "1087891",
+          "title": "Amateur",
+          "type": "movie",
+          "playCount": 6,
+          "completed": false,
+          "maxProgressValue": 3775.326009272,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T03:08:09Z"
+        },
         "tt0965547": {
           "contentId": "tt0965547",
           "imdbId": "tt0965547",
@@ -228,18 +240,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-28T00:57:35Z"
-        },
-        "tt0899043": {
-          "contentId": "tt0899043",
-          "imdbId": "tt0899043",
-          "tmdbId": "1087891",
-          "title": "Amateur",
-          "type": "movie",
-          "playCount": 5,
-          "completed": false,
-          "maxProgressValue": 3775.326009272,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-27T08:20:44Z"
         },
         "tt32820897": {
           "contentId": "tt32820897",
@@ -1243,7 +1243,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 18,
+          "playCount": 17,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T16:56:32.879Z",
+  "generatedAt": "2026-05-29T16:56:46.006Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T16:56:21Z",
+      "updatedAt": "2026-05-29T16:56:34Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-29T16:56:21Z",
+      "lastActivityAt": "2026-05-29T16:56:34Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 15,
+          "playCount": 16,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T16:56:21Z"
+          "lastSeenAt": "2026-05-29T16:56:34Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1207,7 +1207,7 @@
           "tmdbId": "302946",
           "title": "El contable",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

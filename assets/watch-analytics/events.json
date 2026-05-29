@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-29T23:07:41.406Z",
+  "generatedAt": "2026-05-29T23:40:23.905Z",
   "events": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T23:40:15Z",
+      "contentId": "tt32362890",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt32362890",
+      "tmdbId": "1290417",
+      "title": "Embestida",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:36:37.470Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T23:40:15Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9114286:s1e1:started:2026-05-29T22:45:11Z",
       "contentId": "tt9114286",

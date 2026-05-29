@@ -1,6 +1,6 @@
 {
-  "version": 309,
-  "generatedAt": "2026-05-28T16:54:23.427Z",
+  "version": 310,
+  "generatedAt": "2026-05-29T00:34:39.703Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51905,6 +51905,22 @@
       "releaseDate": null,
       "overview": "La historia de vida de la estrella de cine colombiana Lady Tabares, quien fue arrancada de las calles mezquinas para protagonizar una película y rápidamente saltó a la fama.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/hkiNJTUqgltJvqEpFP1QpzuujO2.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "42573",
+      "imdbId": "tt0965547",
+      "title": "Slam Dunk",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tl44cjAK0UiQSH6aRLs1ActnGEp.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

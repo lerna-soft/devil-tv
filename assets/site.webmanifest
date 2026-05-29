@@ -1,6 +1,13 @@
 {
   "name": "Devil TV",
   "short_name": "Devil TV",
+  "id": "/devil-tv/",
+  "start_url": "/devil-tv/",
+  "scope": "/devil-tv/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "es",
+  "dir": "ltr",
   "icons": [
     {
       "src": "icon-192.png",
@@ -14,6 +21,5 @@
     }
   ],
   "theme_color": "#0a0b12",
-  "background_color": "#0a0b12",
-  "display": "standalone"
+  "background_color": "#0a0b12"
 }

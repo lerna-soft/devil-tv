@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T16:49:14.695Z",
+  "generatedAt": "2026-05-29T16:53:27.506Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T16:48:42Z",
+      "updatedAt": "2026-05-29T16:53:13Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-29T16:48:42Z",
+      "uniqueContentCount": 114,
+      "lastActivityAt": "2026-05-29T16:53:13Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 13,
+          "playCount": 14,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T16:48:42Z"
+          "lastSeenAt": "2026-05-29T16:53:13Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1404,18 +1404,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T21:01:53Z"
-        },
-        "tt11083552": {
-          "contentId": "tt11083552",
-          "imdbId": "tt11083552",
-          "tmdbId": "637649",
-          "title": "Despierta la furia",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T18:40:24Z"
         }
       },
       "avgPlaybackProgress": 539.8389

@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T18:40:12Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt14257582:s1e1:preference:2026-05-16T18:40:12Z",
-      "contentId": "tt14257582",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt14257582",
-      "tmdbId": "877817",
-      "title": "Wolfs",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T18:40:12Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

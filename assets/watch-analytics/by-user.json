@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T16:44:31.438Z",
+  "generatedAt": "2026-05-29T16:48:53.929Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T16:44:17Z",
+      "updatedAt": "2026-05-29T16:48:42Z",
       "totalEvents": 500,
-      "totalStarts": 194,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 116,
-      "lastActivityAt": "2026-05-29T16:44:17Z",
+      "uniqueContentCount": 115,
+      "lastActivityAt": "2026-05-29T16:48:42Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 12,
+          "playCount": 13,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T16:44:17Z"
+          "lastSeenAt": "2026-05-29T16:48:42Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1416,18 +1416,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T18:40:24Z"
-        },
-        "tt14257582": {
-          "contentId": "tt14257582",
-          "imdbId": "tt14257582",
-          "tmdbId": "877817",
-          "title": "Wolfs",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T18:40:12Z"
         }
       },
       "avgPlaybackProgress": 539.8389

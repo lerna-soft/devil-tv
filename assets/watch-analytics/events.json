@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-29T22:36:46.613Z",
+  "generatedAt": "2026-05-29T22:40:00.862Z",
   "events": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-29T22:39:53Z",
+      "contentId": "tt9114286",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:39:52.165Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T22:39:53Z"
+    },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T22:36:38Z",
       "contentId": "tt32362890",

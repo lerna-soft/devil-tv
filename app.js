@@ -1305,6 +1305,7 @@ function saveLocalWatchProgress(email, progress) {
   if (!normalizedEmail) return;
   try {
     localStorage.setItem(`${WATCH_PROGRESS_STORAGE_PREFIX}${normalizedEmail}`, JSON.stringify(progress || {}));
+    invalidateWatchInsights();
   } catch {
     // ignore storage write issues
   }
@@ -1892,6 +1893,14 @@ async function reportTmdbAlertOnce(code, detail) {
   }
 }
 
+// Caché de sesión + dedup de peticiones en vuelo para TMDB. Los endpoints que
+// usamos (/find, /movie, /tv, /credits) son estables dentro de una sesión, así
+// que cachear por URL evita repetir cascadas (hasta 3 calls por título) y
+// deduplica llamadas concurrentes al mismo recurso. Se limpia al recargar.
+const __tmdbFetchCache = new Map();   // url -> json resuelto
+const __tmdbInflight = new Map();     // url -> Promise en vuelo
+const TMDB_FETCH_CACHE_MAX = 600;
+
 async function tmdbFetchJson(path, params) {
   const token = getTmdbReadToken();
   if (!token) {
@@ -1903,19 +1912,35 @@ async function tmdbFetchJson(path, params) {
     if (v === undefined || v === null || v === '') continue;
     url.searchParams.set(k, String(v));
   }
-  const res = await fetch(url.toString(), {
-    headers: {
-      accept: 'application/json',
-      authorization: `Bearer ${token}`
+  const cacheKey = url.toString();
+  if (__tmdbFetchCache.has(cacheKey)) return __tmdbFetchCache.get(cacheKey);
+  if (__tmdbInflight.has(cacheKey)) return __tmdbInflight.get(cacheKey);
+
+  const promise = (async () => {
+    const res = await fetch(cacheKey, {
+      headers: {
+        accept: 'application/json',
+        authorization: `Bearer ${token}`
+      }
+    });
+    if (!res.ok) {
+      if (res.status === 401 || res.status === 403) {
+        await reportTmdbAlertOnce('tmdb_auth_error', `${res.status} on ${url.pathname}`);
+      }
+      throw new Error(`tmdb ${res.status}`);
     }
-  });
-  if (!res.ok) {
-    if (res.status === 401 || res.status === 403) {
-      await reportTmdbAlertOnce('tmdb_auth_error', `${res.status} on ${url.pathname}`);
-    }
-    throw new Error(`tmdb ${res.status}`);
+    const json = await res.json();
+    if (__tmdbFetchCache.size >= TMDB_FETCH_CACHE_MAX) __tmdbFetchCache.clear();
+    __tmdbFetchCache.set(cacheKey, json);
+    return json;
+  })();
+
+  __tmdbInflight.set(cacheKey, promise);
+  try {
+    return await promise;
+  } finally {
+    __tmdbInflight.delete(cacheKey);
   }
-  return res.json();
 }
 
 function loadTmdbMetaCache() {
@@ -2205,6 +2230,93 @@ async function hydrateSelectedFromTmdb() {
     }
     // Ignore TMDB failures; keep existing metadata.
   }
+}
+
+// Una entrada de catálogo es "huérfana" cuando vive solo porque está en
+// likes/watchlist/progreso (ensureCatalogEntryByHistory la creó con title=id
+// crudo y sin póster) pero el seed nunca la enriqueció. Sin hidratar, se ve
+// como "tt0965547 · Película" en TODOS los rails, no solo al hacer click.
+const ORPHAN_RAW_ID_RE = /^(tt\d+|\d{1,9})$/;
+function isOrphanCatalogEntry(t) {
+  if (!t) return false;
+  if (!t.imdbId && !t.tmdbId) return false; // sin id no hay forma de resolver
+  const titleStr = String(t.title || '').trim();
+  return !titleStr || ORPHAN_RAW_ID_RE.test(titleStr);
+}
+
+// Resuelve una entrada huérfana contra TMDB: confirma type vía /find (maneja el
+// namespace tv/movie compartido) y baja título/póster/año/géneros reales.
+// Muta la entrada in-place. Devuelve true si pudo enriquecerla.
+async function hydrateOrphanCatalogEntry(entry) {
+  let tmdbType = entry.type === 'series' ? 'tv' : 'movie';
+  let tmdbId = entry.tmdbId ? String(entry.tmdbId).trim() : '';
+  const imdbId = String(entry.imdbId || '').trim();
+
+  if (imdbId) {
+    const found = await tmdbFetchJson(`/find/${encodeURIComponent(imdbId)}`, { external_source: 'imdb_id', language: 'es-ES' });
+    let pick = tmdbType === 'tv' ? (found.tv_results?.[0] || null) : (found.movie_results?.[0] || null);
+    if (!pick) {
+      const alt = tmdbType === 'tv' ? found.movie_results : found.tv_results;
+      if (alt && alt.length > 0) { pick = alt[0]; tmdbType = tmdbType === 'tv' ? 'movie' : 'tv'; }
+    }
+    if (pick?.id) tmdbId = String(pick.id);
+  }
+  if (!tmdbId) return false;
+
+  const details = await tmdbFetchJson(`/${tmdbType}/${encodeURIComponent(tmdbId)}`, { language: 'es-ES' });
+  const resolvedName = details.name || details.title || '';
+  if (!resolvedName) return false;
+
+  const posterUrl = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : '';
+  const backdropUrl = details.backdrop_path ? `https://image.tmdb.org/t/p/w780${details.backdrop_path}` : '';
+  entry.type = tmdbType === 'tv' ? 'series' : 'movie';
+  entry.tmdbId = tmdbId;
+  entry.title = resolvedName;
+  entry.year = Number(String(details.first_air_date || details.release_date || '').slice(0, 4)) || entry.year || null;
+  entry.description = details.overview || entry.description || '';
+  if (posterUrl) entry.posterUrl = posterUrl;
+  entry.metadata = {
+    ...(entry.metadata || {}),
+    posterUrl: posterUrl || entry.metadata?.posterUrl || '',
+    releaseDate: details.first_air_date || details.release_date || (entry.metadata?.releaseDate ?? null),
+    genres: (details.genres || []).map((g) => g.name).filter(Boolean),
+    backdropUrl: backdropUrl || (entry.metadata?.backdropUrl ?? null)
+  };
+  // Recalcular catalogKey con el type/título reales para que dedupe pueda
+  // consolidar esta entrada con la del seed canónico si llega más adelante.
+  entry.catalogKey = getCanonicalCatalogKey(entry.type, entry.imdbId || '', entry.tmdbId || '', entry.title, '');
+  return true;
+}
+
+// Procesa hasta TMDB_ORPHAN_BATCH huérfanos por sesión. Re-renderiza el home
+// (si seguimos en él) cuando alguno se enriquece. Corre una sola vez por sesión.
+const TMDB_ORPHAN_BATCH = 12;
+async function hydrateOrphanCatalogEntries() {
+  if (!getTmdbReadToken()) return;
+  const catalog = loadLocalCatalog();
+  const orphans = catalog.filter(isOrphanCatalogEntry).slice(0, TMDB_ORPHAN_BATCH);
+  if (orphans.length === 0) return;
+  let changed = false;
+  for (const entry of orphans) {
+    try {
+      if (await hydrateOrphanCatalogEntry(entry)) changed = true;
+    } catch {
+      // best-effort: si TMDB falla para uno, seguimos con los demás
+    }
+  }
+  if (changed) {
+    saveLocalCatalog(catalog); // persiste las entradas mutadas in-place
+    scheduleCatalogHydrationRender(0);
+  }
+}
+
+function scheduleOrphanHydrationOnce() {
+  if (state.orphanHydrationStarted) return;
+  // Solo agendar (y marcar) si de verdad hay huérfanos: así no quemamos el
+  // flag en un render temprano previo a que el progreso sincronizado cargue.
+  if (!loadLocalCatalog().some(isOrphanCatalogEntry)) return;
+  state.orphanHydrationStarted = true;
+  scheduleIdleTask(() => { hydrateOrphanCatalogEntries(); });
 }
 
 function updateAuthUi() {
@@ -5423,6 +5535,9 @@ function renderHomeCatalog(baseFiltered) {
     }
 
     saveHomeSectionCache(freshSectionsHtml);
+    // Enriquecer entradas huérfanas (id crudo sin póster) desde TMDB para que
+    // se vean bien en todos los rails, no solo al abrir el detalle.
+    scheduleOrphanHydrationOnce();
   })();
 }
 
@@ -6373,6 +6488,11 @@ function resolveContinueWatchingItems(uniqueTitles, watch) {
 }
 
 function buildWatchInsights() {
+  // Memo de sesión: se recomputaba 1 vez por render-path (home, búsqueda,
+  // cleanup, recomendaciones). El cálculo recorre todo localStorage + catálogo.
+  // El cache se invalida vía invalidateWatchInsights() en cada mutación de
+  // progreso (saveLocalWatchProgress) y de catálogo (invalidateCatalogCaches).
+  if (state.watchInsightsCache) return state.watchInsightsCache;
   const scores = {};
   const genreWeights = {};
   const actorWeights = {};
@@ -6553,7 +6673,13 @@ function buildWatchInsights() {
       recentAt[key] = Math.max(recentAt[key] || 0, Date.now());
     }
   }
-  return { scores, genreWeights, actorWeights, continueIds, completedIds, recentAt };
+  const insights = { scores, genreWeights, actorWeights, continueIds, completedIds, recentAt };
+  state.watchInsightsCache = insights;
+  return insights;
+}
+
+function invalidateWatchInsights() {
+  state.watchInsightsCache = null;
 }
 
 function recommendationScore(title, watch) {
@@ -7893,6 +8019,7 @@ function invalidateCatalogCaches() {
   state.genreFilterOptionsHtml = '';
   state.filteredCatalogCacheKey = '';
   state.filteredCatalogCache = null;
+  invalidateWatchInsights();
 }
 function hasPosterAsset(title) { return Boolean(sanitizePosterUrl(title?.posterUrl || title?.metadata?.posterUrl || '')); }
 function filterTitlesWithPoster(items) { return (Array.isArray(items) ? items : []).filter((item) => hasPosterAsset(item)); }

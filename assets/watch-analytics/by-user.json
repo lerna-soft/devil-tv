@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-29T03:08:49.783Z",
+  "generatedAt": "2026-05-29T03:09:07.424Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T03:08:17Z",
+      "updatedAt": "2026-05-29T03:08:28Z",
       "totalEvents": 500,
-      "totalStarts": 194,
+      "totalStarts": 193,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 120,
-      "lastActivityAt": "2026-05-29T03:08:17Z",
+      "uniqueContentCount": 119,
+      "lastActivityAt": "2026-05-29T03:08:28Z",
       "completedContentIds": [
+        "tt30460310",
         "tt0965547",
         "tt2560140",
-        "tt30460310",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt30460310": {
+          "contentId": "tt30460310",
+          "imdbId": "tt30460310",
+          "tmdbId": "220102",
+          "title": "Spider-Noir",
+          "type": "series",
+          "playCount": 8,
+          "completed": true,
+          "maxProgressValue": 2815.73,
+          "maxProgressPercent": 35.358218735,
+          "lastSeenAt": "2026-05-29T03:08:28Z"
+        },
         "tt12593682": {
           "contentId": "tt12593682",
           "imdbId": "tt12593682",
@@ -228,18 +240,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T15:21:21Z"
-        },
-        "tt30460310": {
-          "contentId": "tt30460310",
-          "imdbId": "tt30460310",
-          "tmdbId": "220102",
-          "title": "Spider-Noir",
-          "type": "series",
-          "playCount": 7,
-          "completed": true,
-          "maxProgressValue": 2815.73,
-          "maxProgressPercent": 35.358218735,
-          "lastSeenAt": "2026-05-28T00:57:35Z"
         },
         "tt32820897": {
           "contentId": "tt32820897",
@@ -1464,18 +1464,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T18:22:24Z"
-        },
-        "tt26743760": {
-          "contentId": "tt26743760",
-          "imdbId": "tt26743760",
-          "tmdbId": "220542",
-          "title": "Los diarios de la boticaria",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T14:34:58Z"
         }
       },
       "avgPlaybackProgress": 539.8389

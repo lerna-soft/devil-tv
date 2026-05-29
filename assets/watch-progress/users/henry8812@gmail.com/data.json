@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-29T16:56:34Z",
+  "updatedAt": "2026-05-29T22:45:11Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2148,6 +2148,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt9114286": {
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-29T22:45:11Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-29T22:45:10.640Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2292,15 +2308,42 @@
     "updatedAt": "2026-05-29T03:08:28Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt9114286",
+    "tmdbId": "505642",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-29T16:56:34Z"
+    "updatedAt": "2026-05-29T22:45:11Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt9114286:s1e1:started:2026-05-29T22:45:11Z",
+      "contentId": "tt9114286",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:45:10.640Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T22:45:11Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e1:started:2026-05-29T16:56:34Z",
       "contentId": "tt0965547",
@@ -15765,33 +15808,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T21:01:53Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt14966898:s1e1:preference:2026-05-16T21:01:27Z",
-      "contentId": "tt14966898",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt14966898",
-      "tmdbId": "",
-      "title": "Late Night with the Devil",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T21:01:27Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt9114286",
+  "tmdbId": "505642",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-29T22:45:11Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-05-29T22:45:10.640Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt9114286:s1e1:started:2026-05-29T22:45:11Z",
+      "contentId": "tt9114286",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:45:10.640Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T22:45:11Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

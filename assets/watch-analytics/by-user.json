@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T22:40:00.867Z",
+  "generatedAt": "2026-05-29T22:45:19.266Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T16:56:34Z",
+      "updatedAt": "2026-05-29T22:45:11Z",
       "totalEvents": 500,
-      "totalStarts": 196,
+      "totalStarts": 197,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-29T16:56:34Z",
+      "uniqueContentCount": 115,
+      "lastActivityAt": "2026-05-29T22:45:11Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -156,6 +156,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt9114286": {
+          "contentId": "tt9114286",
+          "imdbId": "tt9114286",
+          "tmdbId": "505642",
+          "title": "Black Panther: Wakanda Forever",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T22:45:11Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1399,7 +1411,7 @@
           "tmdbId": "",
           "title": "Late Night with the Devil",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

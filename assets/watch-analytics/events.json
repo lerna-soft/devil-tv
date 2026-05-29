@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-29T04:38:38.413Z",
+  "generatedAt": "2026-05-29T06:21:35.648Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s4e1:started:2026-05-29T06:21:21Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s4e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 4,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T17:28:34.406Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T06:21:21Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt30460310:s1e1:preference:2026-05-29T03:08:28Z",
       "contentId": "tt30460310",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T18:22:24Z"
-    },
-    {
-      "eventId": "unknown:tt2140479:s1e1:playing:2026-05-16T17:05:56Z",
-      "contentId": "tt2140479",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2140479",
-      "tmdbId": "302946",
-      "title": "El contable",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T17:05:56Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

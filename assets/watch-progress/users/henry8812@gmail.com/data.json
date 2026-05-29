@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-29T03:08:28Z",
+  "updatedAt": "2026-05-29T06:21:21Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1805,7 +1805,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-28T17:28:36Z",
+      "updatedAt": "2026-05-29T06:21:21Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -2267,15 +2267,42 @@
     "updatedAt": "2026-05-29T03:08:28Z"
   },
   "lastWatch": {
-    "imdbId": "tt30460310",
-    "tmdbId": "220102",
-    "season": 1,
+    "imdbId": "tt2560140",
+    "tmdbId": "1429",
+    "season": 4,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-29T03:08:28Z"
+    "updatedAt": "2026-05-29T06:21:21Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s4e1:started:2026-05-29T06:21:21Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s4e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 4,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T17:28:34.406Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T06:21:21Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt30460310:s1e1:preference:2026-05-29T03:08:28Z",
       "contentId": "tt30460310",
@@ -15740,33 +15767,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T18:22:24Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt2140479:s1e1:playing:2026-05-16T17:05:56Z",
-      "contentId": "tt2140479",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt2140479",
-      "tmdbId": "302946",
-      "title": "El contable",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T17:05:56Z",
       "country": "",
       "countryName": "",
       "city": "",

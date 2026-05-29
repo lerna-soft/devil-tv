@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T03:08:13.211Z",
+  "generatedAt": "2026-05-29T03:08:23.068Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T03:08:03Z",
+      "updatedAt": "2026-05-29T03:08:06Z",
       "totalEvents": 500,
-      "totalStarts": 196,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 121,
-      "lastActivityAt": "2026-05-29T03:08:03Z",
+      "uniqueContentCount": 120,
+      "lastActivityAt": "2026-05-29T03:08:06Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 8,
+          "playCount": 9,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T02:23:22Z"
+          "lastSeenAt": "2026-05-29T03:08:06Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1476,18 +1476,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T14:34:58Z"
-        },
-        "tt0032186": {
-          "contentId": "tt0032186",
-          "imdbId": "tt0032186",
-          "tmdbId": "",
-          "title": "You're Missing the Point",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T14:01:26Z"
         }
       },
       "avgPlaybackProgress": 539.8389

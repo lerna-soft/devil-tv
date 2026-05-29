@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-29T03:08:03Z",
+  "updatedAt": "2026-05-29T03:08:06Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2057,7 +2057,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-29T02:23:22Z",
+      "updatedAt": "2026-05-29T03:08:06Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2131,7 +2131,8 @@
       "tt0460681": 1,
       "tt1196946": 1,
       "tt0899043": 1,
-      "tt2560140": 1
+      "tt2560140": 1,
+      "tt0965547": 1
     },
     "watchLater": {
       "15070": true,
@@ -2260,18 +2261,45 @@
       "tt12593682": true,
       "tt8790086": true
     },
-    "updatedAt": "2026-05-29T03:08:03Z"
+    "updatedAt": "2026-05-29T03:08:06Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "1435734",
+    "imdbId": "tt0965547",
+    "tmdbId": "42573",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-29T03:08:03Z"
+    "updatedAt": "2026-05-29T03:08:06Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e1:preference:2026-05-29T03:08:06Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T03:08:06Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:1435734:s1e1:preference:2026-05-29T03:08:03Z",
       "contentId": "1435734",
@@ -15736,33 +15764,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T14:10:54Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt0032186:s1e1:playing:2026-05-16T14:01:26Z",
-      "contentId": "tt0032186",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0032186",
-      "tmdbId": "",
-      "title": "You're Missing the Point",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T14:01:26Z",
       "country": "",
       "countryName": "",
       "city": "",

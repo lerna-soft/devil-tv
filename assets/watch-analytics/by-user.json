@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T14:26:39.320Z",
+  "generatedAt": "2026-05-29T16:44:31.438Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T12:47:45Z",
+      "updatedAt": "2026-05-29T16:44:17Z",
       "totalEvents": 500,
-      "totalStarts": 193,
+      "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 117,
-      "lastActivityAt": "2026-05-29T12:47:45Z",
+      "uniqueContentCount": 116,
+      "lastActivityAt": "2026-05-29T16:44:17Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -163,11 +163,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 11,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T12:47:45Z"
+          "lastSeenAt": "2026-05-29T16:44:17Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1428,18 +1428,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T18:40:12Z"
-        },
-        "tt1586680": {
-          "contentId": "tt1586680",
-          "imdbId": "tt1586680",
-          "tmdbId": "34307",
-          "title": "Shameless",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T18:38:54Z"
         }
       },
       "avgPlaybackProgress": 539.8389

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T14:26:39.318Z",
+  "generatedAt": "2026-05-29T16:44:31.436Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2269,27 +2269,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 4,
+      "totalEvents": 12,
+      "totalStarts": 5,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2514.9755206527416,
       "uniqueUsers": 1,
-      "completionRate": 0.25,
-      "lastActivityAt": "2026-05-29T12:47:45Z",
+      "completionRate": 0.2,
+      "lastActivityAt": "2026-05-29T16:44:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
+          "playCount": 12,
           "completedCount": 1,
-          "startedCount": 4,
+          "startedCount": 5,
           "totalPlaybackProgress": 2514.9755206527416,
-          "lastSeenAt": "2026-05-29T12:47:45Z",
+          "lastSeenAt": "2026-05-29T16:44:17Z",
           "lastSeason": 1,
-          "lastEpisode": 4
+          "lastEpisode": 6
         }
       },
       "episodes": {
+        "s1e6": {
+          "season": 1,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T16:44:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e4": {
           "season": 1,
           "episode": 4,
@@ -2347,7 +2361,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 228.6341
+      "avgPlaybackProgress": 209.5813
     },
     {
       "contentId": "tt30460310",
@@ -8085,50 +8099,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T18:40:12Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1586680",
-      "imdbId": "tt1586680",
-      "tmdbId": "34307",
-      "title": "Shameless",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T18:38:54Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T18:38:54Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T18:38:54Z",
           "users": {
             "henry8812@gmail.com": true
           },

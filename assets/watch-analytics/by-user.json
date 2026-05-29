@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-29T04:38:38.418Z",
+  "generatedAt": "2026-05-29T06:21:35.653Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T03:08:28Z",
+      "updatedAt": "2026-05-29T06:21:21Z",
       "totalEvents": 500,
       "totalStarts": 193,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 119,
-      "lastActivityAt": "2026-05-29T03:08:28Z",
+      "lastActivityAt": "2026-05-29T06:21:21Z",
       "completedContentIds": [
+        "tt2560140",
         "tt30460310",
         "tt0965547",
-        "tt2560140",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt2560140": {
+          "contentId": "tt2560140",
+          "imdbId": "tt2560140",
+          "tmdbId": "1429",
+          "title": "Attack on Titan",
+          "type": "series",
+          "playCount": 90,
+          "completed": true,
+          "maxProgressValue": 1435.1092795918366,
+          "maxProgressPercent": 41.870621,
+          "lastSeenAt": "2026-05-29T06:21:21Z"
+        },
         "tt30460310": {
           "contentId": "tt30460310",
           "imdbId": "tt30460310",
@@ -204,18 +216,6 @@
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:06Z"
-        },
-        "tt2560140": {
-          "contentId": "tt2560140",
-          "imdbId": "tt2560140",
-          "tmdbId": "1429",
-          "title": "Attack on Titan",
-          "type": "series",
-          "playCount": 89,
-          "completed": true,
-          "maxProgressValue": 1435.1092795918366,
-          "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-05-28T17:28:36Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1207,7 +1207,7 @@
           "tmdbId": "302946",
           "title": "El contable",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-29T03:08:49.778Z",
+  "generatedAt": "2026-05-29T03:09:07.417Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 210,
+  "totalStarts": 209,
   "totalCompletions": 73,
-  "overallCompletionRate": 0.3476,
-  "trackedTitles": 140,
+  "overallCompletionRate": 0.3493,
+  "trackedTitles": 139,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -73,20 +73,20 @@
       "completionRate": 0.3333
     },
     {
+      "contentId": "tt30460310",
+      "title": "Spider-Noir",
+      "type": "series",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0.5
+    },
+    {
       "contentId": "tt21209876",
       "title": "Solo Leveling",
       "type": "series",
       "totalEvents": 8,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt1190634",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 8,
-      "uniqueUsers": 1,
-      "completionRate": 0.25
     }
   ]
 }

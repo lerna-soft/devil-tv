@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-29T03:08:49.778Z",
+  "generatedAt": "2026-05-29T03:09:07.417Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt30460310:s1e1:preference:2026-05-29T03:08:28Z",
+      "contentId": "tt30460310",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T03:08:28Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt12593682:s1e1:preference:2026-05-29T03:08:17Z",
       "contentId": "tt12593682",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T17:05:56Z"
-    },
-    {
-      "eventId": "unknown:tt26743760:s1e1:playing:2026-05-16T14:34:58Z",
-      "contentId": "tt26743760",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt26743760",
-      "tmdbId": "220542",
-      "title": "Los diarios de la boticaria",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T14:34:58Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

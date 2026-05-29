@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T16:49:14.693Z",
+  "generatedAt": "2026-05-29T16:53:27.505Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2213,27 +2213,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 6,
+      "totalEvents": 14,
+      "totalStarts": 7,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2514.9755206527416,
       "uniqueUsers": 1,
-      "completionRate": 0.1667,
-      "lastActivityAt": "2026-05-29T16:48:42Z",
+      "completionRate": 0.1429,
+      "lastActivityAt": "2026-05-29T16:53:13Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 14,
           "completedCount": 1,
-          "startedCount": 6,
+          "startedCount": 7,
           "totalPlaybackProgress": 2514.9755206527416,
-          "lastSeenAt": "2026-05-29T16:48:42Z",
+          "lastSeenAt": "2026-05-29T16:53:13Z",
           "lastSeason": 1,
-          "lastEpisode": 7
+          "lastEpisode": 8
         }
       },
       "episodes": {
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T16:53:13Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e7": {
           "season": 1,
           "episode": 7,
@@ -2319,7 +2333,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 193.4597
+      "avgPlaybackProgress": 179.6411
     },
     {
       "contentId": "tt32897959",
@@ -8025,50 +8039,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-17T03:38:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt11083552",
-      "imdbId": "tt11083552",
-      "tmdbId": "637649",
-      "title": "Despierta la furia",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T18:40:24Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T18:40:24Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T18:40:24Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T00:05:50.778Z",
+  "generatedAt": "2026-05-29T02:23:06.774Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-28T17:47:36Z",
+      "updatedAt": "2026-05-29T02:22:57Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 275091.66476991825,
       "uniqueContentCount": 121,
-      "lastActivityAt": "2026-05-28T17:47:36Z",
+      "lastActivityAt": "2026-05-29T02:22:57Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -162,13 +162,13 @@
           "contentId": "tt0965547",
           "imdbId": "tt0965547",
           "tmdbId": "42573",
-          "title": "tt0965547",
-          "type": "movie",
-          "playCount": 6,
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 7,
           "completed": true,
           "maxProgressValue": 1389.5981843537415,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T17:47:36Z"
+          "lastSeenAt": "2026-05-29T02:22:57Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1040,7 +1040,7 @@
           "tmdbId": "1084577",
           "title": "Balls Up: Con un par",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

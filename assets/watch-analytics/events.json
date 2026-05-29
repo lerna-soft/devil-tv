@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-29T00:05:50.771Z",
+  "generatedAt": "2026-05-29T02:23:06.769Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e3:started:2026-05-29T02:22:57Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e3",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 3,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-28T08:23:02.322Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T02:22:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e1:started:2026-05-28T17:47:36Z",
       "contentId": "tt0965547",
@@ -11466,27 +11487,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-16T08:36:37Z"
-    },
-    {
-      "eventId": "unknown:tt26735622:s1e1:playing:2026-05-16T08:32:15Z",
-      "contentId": "tt26735622",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt26735622",
-      "tmdbId": "1084577",
-      "title": "Balls Up: Con un par",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T08:32:15Z"
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",

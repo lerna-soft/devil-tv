@@ -1,6 +1,6 @@
 {
-  "version": 313,
-  "generatedAt": "2026-05-29T22:45:03.456Z",
+  "version": 314,
+  "generatedAt": "2026-05-29T22:45:13.400Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51937,6 +51937,22 @@
       "releaseDate": null,
       "overview": "LeJon Stewart, Aaron Barth Martinson",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BODNiYmFiMDctNjExNi00MzBmLWI0NTEtN2JlMGU2ZTUzNGNjXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt26345409",
+      "title": "Voices Rising: The Music of Wakanda Forever",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Ludwig Göransson, Ryan Coogler",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTE5ODc4MDQtZTY0Mi00YWUwLWI5NmMtMDllMmI1NTQzN2ZhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

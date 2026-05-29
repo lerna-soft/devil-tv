@@ -1,6 +1,6 @@
 {
-  "version": 312,
-  "generatedAt": "2026-05-29T20:08:58.349Z",
+  "version": 313,
+  "generatedAt": "2026-05-29T22:45:03.456Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51921,6 +51921,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/tl44cjAK0UiQSH6aRLs1ActnGEp.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt8417808",
+      "title": "Finding Wakanda",
+      "year": 2018,
+      "releaseDate": null,
+      "overview": "LeJon Stewart, Aaron Barth Martinson",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODNiYmFiMDctNjExNi00MzBmLWI0NTEtN2JlMGU2ZTUzNGNjXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

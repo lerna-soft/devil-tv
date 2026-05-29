@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T23:07:41.414Z",
+  "generatedAt": "2026-05-29T23:40:23.910Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1708,13 +1708,13 @@
       "userName": "Juan carlos Rios",
       "role": "viewer",
       "createdAt": "2026-05-10T02:42:47.785Z",
-      "updatedAt": "2026-05-29T22:39:53Z",
-      "totalEvents": 11,
+      "updatedAt": "2026-05-29T23:40:15Z",
+      "totalEvents": 12,
       "totalStarts": 6,
       "totalCompletions": 0,
       "totalPlaybackProgress": 8881.198863,
       "uniqueContentCount": 6,
-      "lastActivityAt": "2026-05-29T22:39:53Z",
+      "lastActivityAt": "2026-05-29T23:40:15Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9114286",
@@ -1723,6 +1723,18 @@
         "tt0480489"
       ],
       "content": {
+        "tt32362890": {
+          "contentId": "tt32362890",
+          "imdbId": "tt32362890",
+          "tmdbId": "1290417",
+          "title": "Embestida",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T23:40:15Z"
+        },
         "tt9114286": {
           "contentId": "tt9114286",
           "imdbId": "tt9114286",
@@ -1734,18 +1746,6 @@
           "maxProgressValue": 3497.460446,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T22:39:53Z"
-        },
-        "tt32362890": {
-          "contentId": "tt32362890",
-          "imdbId": "tt32362890",
-          "tmdbId": "1290417",
-          "title": "Embestida",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T22:36:38Z"
         },
         "tt11378946": {
           "contentId": "tt11378946",
@@ -1796,7 +1796,7 @@
           "lastSeenAt": "2026-05-13T17:00:31Z"
         }
       },
-      "avgPlaybackProgress": 807.3817
+      "avgPlaybackProgress": 740.0999
     },
     {
       "userEmail": "ornebe@hotmail.com",

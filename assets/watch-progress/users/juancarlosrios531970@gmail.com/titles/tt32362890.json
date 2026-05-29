@@ -5,7 +5,7 @@
   "lastEpisode": 1,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-05-29T22:36:38Z",
+  "updatedAt": "2026-05-29T23:40:15Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-05-29T22:36:37.470Z",
@@ -14,6 +14,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T23:40:15Z",
+      "contentId": "tt32362890",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt32362890",
+      "tmdbId": "1290417",
+      "title": "Embestida",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:36:37.470Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T23:40:15Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T22:36:38Z",
       "contentId": "tt32362890",

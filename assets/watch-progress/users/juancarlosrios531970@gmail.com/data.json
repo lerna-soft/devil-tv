@@ -1,7 +1,7 @@
 {
   "email": "juancarlosrios531970@gmail.com",
   "name": "Juan carlos Rios",
-  "updatedAt": "2026-05-29T22:36:38Z",
+  "updatedAt": "2026-05-29T22:39:53Z",
   "progress": {
     "tt0480489": {
       "imdbId": "tt0480489",
@@ -38,10 +38,16 @@
       "tmdbId": "505642",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 3497.460446,
-      "lastProgress": 3497.460446,
-      "updatedAt": "2026-05-19T05:28:17Z",
-      "watched": {}
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-29T22:39:53Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-29T22:39:52.165Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "tt11378946": {
       "imdbId": "tt11378946",
@@ -72,15 +78,42 @@
   },
   "preferences": {},
   "lastWatch": {
-    "imdbId": "tt32362890",
-    "tmdbId": "1290417",
+    "imdbId": "tt9114286",
+    "tmdbId": "505642",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-29T22:36:38Z"
+    "updatedAt": "2026-05-29T22:39:53Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-29T22:39:53Z",
+      "contentId": "tt9114286",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:39:52.165Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T22:39:53Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T22:36:38Z",
       "contentId": "tt32362890",

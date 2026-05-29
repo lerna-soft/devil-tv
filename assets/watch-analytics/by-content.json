@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T11:46:15.933Z",
+  "generatedAt": "2026-05-29T12:43:23.737Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2269,27 +2269,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 9,
+      "totalEvents": 10,
       "totalStarts": 3,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2514.9755206527416,
       "uniqueUsers": 1,
       "completionRate": 0.3333,
-      "lastActivityAt": "2026-05-29T03:08:06Z",
+      "lastActivityAt": "2026-05-29T12:43:14Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 9,
+          "playCount": 10,
           "completedCount": 1,
           "startedCount": 3,
           "totalPlaybackProgress": 2514.9755206527416,
-          "lastSeenAt": "2026-05-29T03:08:06Z",
+          "lastSeenAt": "2026-05-29T12:43:14Z",
           "lastSeason": 1,
-          "lastEpisode": 1
+          "lastEpisode": 3
         }
       },
       "episodes": {
+        "s1e3": {
+          "season": 1,
+          "episode": 3,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1125.377336299,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T12:43:14Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -2303,20 +2317,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1125.377336299,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-29T02:22:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         },
         "s1e2": {
           "season": 1,
@@ -2333,7 +2333,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 279.4417
+      "avgPlaybackProgress": 251.4976
     },
     {
       "contentId": "tt30460310",
@@ -8159,50 +8159,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T18:36:34Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt22022784",
-      "imdbId": "tt22022784",
-      "tmdbId": "",
-      "title": "My Dead Friend Zoe",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T18:22:24Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T18:22:24Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T18:22:24Z",
           "users": {
             "henry8812@gmail.com": true
           },

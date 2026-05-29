@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-29T11:46:15.936Z",
+  "generatedAt": "2026-05-29T12:43:23.740Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T06:21:21Z",
+      "updatedAt": "2026-05-29T12:43:14Z",
       "totalEvents": 500,
-      "totalStarts": 193,
+      "totalStarts": 192,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 119,
-      "lastActivityAt": "2026-05-29T06:21:21Z",
+      "uniqueContentCount": 118,
+      "lastActivityAt": "2026-05-29T12:43:14Z",
       "completedContentIds": [
+        "tt0965547",
         "tt2560140",
         "tt30460310",
-        "tt0965547",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 10,
+          "completed": true,
+          "maxProgressValue": 1389.5981843537415,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T12:43:14Z"
+        },
         "tt2560140": {
           "contentId": "tt2560140",
           "imdbId": "tt2560140",
@@ -204,18 +216,6 @@
           "maxProgressValue": 3775.326009272,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:09Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 9,
-          "completed": true,
-          "maxProgressValue": 1389.5981843537415,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T03:08:06Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1452,18 +1452,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T18:36:34Z"
-        },
-        "tt22022784": {
-          "contentId": "tt22022784",
-          "imdbId": "tt22022784",
-          "tmdbId": "",
-          "title": "My Dead Friend Zoe",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T18:22:24Z"
         }
       },
       "avgPlaybackProgress": 539.8389

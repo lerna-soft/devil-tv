@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-29T11:46:15.928Z",
+  "generatedAt": "2026-05-29T12:43:23.732Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 560,
-  "totalStarts": 209,
+  "totalStarts": 208,
   "totalCompletions": 73,
-  "overallCompletionRate": 0.3493,
-  "trackedTitles": 139,
+  "overallCompletionRate": 0.351,
+  "trackedTitles": 138,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -68,7 +68,7 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 9,
+      "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
     },

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T02:23:31.281Z",
+  "generatedAt": "2026-05-29T03:08:13.211Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T02:23:22Z",
+      "updatedAt": "2026-05-29T03:08:03Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 275091.66476991825,
+      "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 121,
-      "lastActivityAt": "2026-05-29T02:23:22Z",
+      "lastActivityAt": "2026-05-29T03:08:03Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -34,8 +34,7 @@
         "tt1615160",
         "tt1234721",
         "tt0865556",
-        "tt7068946",
-        "tt0032186"
+        "tt7068946"
       ],
       "content": {
         "15070": {
@@ -150,13 +149,13 @@
           "contentId": "1435734",
           "imdbId": "",
           "tmdbId": "1435734",
-          "title": "Altas capacidades",
+          "title": "1435734",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T13:34:00Z"
+          "lastSeenAt": "2026-05-29T03:08:03Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1484,14 +1483,14 @@
           "tmdbId": "",
           "title": "You're Missing the Point",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
-          "maxProgressValue": 5172.198298546031,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-16T14:01:26Z"
         }
       },
-      "avgPlaybackProgress": 550.1833
+      "avgPlaybackProgress": 539.8389
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

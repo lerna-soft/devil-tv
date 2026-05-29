@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T12:43:39.572Z",
+  "generatedAt": "2026-05-29T12:48:00.133Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2269,27 +2269,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 10,
-      "totalStarts": 3,
+      "totalEvents": 11,
+      "totalStarts": 4,
       "totalCompletions": 1,
       "totalPlaybackProgress": 2514.9755206527416,
       "uniqueUsers": 1,
-      "completionRate": 0.3333,
-      "lastActivityAt": "2026-05-29T12:43:14Z",
+      "completionRate": 0.25,
+      "lastActivityAt": "2026-05-29T12:47:45Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
+          "playCount": 11,
           "completedCount": 1,
-          "startedCount": 3,
+          "startedCount": 4,
           "totalPlaybackProgress": 2514.9755206527416,
-          "lastSeenAt": "2026-05-29T12:43:14Z",
+          "lastSeenAt": "2026-05-29T12:47:45Z",
           "lastSeason": 1,
-          "lastEpisode": 3
+          "lastEpisode": 4
         }
       },
       "episodes": {
+        "s1e4": {
+          "season": 1,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T12:47:45Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e3": {
           "season": 1,
           "episode": 3,
@@ -2333,7 +2347,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 251.4976
+      "avgPlaybackProgress": 228.6341
     },
     {
       "contentId": "tt30460310",
@@ -8115,50 +8129,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-16T18:38:54Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt6143796",
-      "imdbId": "tt6143796",
-      "tmdbId": "",
-      "title": "Workin' Moms",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-16T18:36:34Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-16T18:36:34Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-16T18:36:34Z",
           "users": {
             "henry8812@gmail.com": true
           },

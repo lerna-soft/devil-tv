@@ -2,10 +2,10 @@
   "imdbId": "tt0965547",
   "tmdbId": "42573",
   "lastSeason": 1,
-  "lastEpisode": 3,
+  "lastEpisode": 4,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-05-29T12:43:14Z",
+  "updatedAt": "2026-05-29T12:47:45Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-05-28T08:15:56.973Z",
@@ -21,9 +21,41 @@
       "startedAt": "2026-05-28T08:23:02.322Z",
       "completedAt": "",
       "lastProgress": 1125.377336299
+    },
+    "s1e4": {
+      "startedAt": "2026-05-29T12:47:45.046Z",
+      "completedAt": "",
+      "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e4:started:2026-05-29T12:47:45Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e4",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 4,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T12:47:45.046Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T12:47:45Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e3:started:2026-05-29T12:43:14Z",
       "contentId": "tt0965547",

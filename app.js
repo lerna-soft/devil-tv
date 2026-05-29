@@ -5207,7 +5207,11 @@ function renderAdminDashboardData({ payload, warnings, days: initialDays, userEm
 window.mepAdminCreateAgent = createAgentByAdmin;
 
 function getUniqueRenderableTitles(items) {
-  return dedupe(Array.isArray(items) ? items : [], { consolidateEquivalent: true });
+  // Filtra los títulos ocultados/baneados por el usuario antes de deduplicar.
+  // Punto central: TODOS los rails del inicio pasan por aquí, así que un título
+  // oculto no aparece en ninguna sección (ni se hidrata si era huérfano).
+  const filtered = filterBannedTitles(Array.isArray(items) ? items : []);
+  return dedupe(filtered, { consolidateEquivalent: true });
 }
 
 // Cache HTML por sección en localStorage. Patrón stale-while-revalidate:
@@ -5535,10 +5539,32 @@ function renderHomeCatalog(baseFiltered) {
     }
 
     saveHomeSectionCache(freshSectionsHtml);
+    renderHiddenItemsFooter(prefs);
     // Enriquecer entradas huérfanas (id crudo sin póster) desde TMDB para que
     // se vean bien en todos los rails, no solo al abrir el detalle.
     scheduleOrphanHydrationOnce();
   })();
+}
+
+// Footer discreto "Elementos ocultos (N)" que solo aparece cuando el usuario
+// tiene títulos ocultados. Da entrada a la vista de restauración (sectionKey
+// 'banned'). Se gestiona aparte del diff de secciones para no ser barrido.
+function renderHiddenItemsFooter(prefs = loadTitlePrefs()) {
+  const host = elements.items;
+  if (!host) return;
+  const existing = host.querySelector('#hiddenItemsFooter');
+  const count = getBannedKeySet(prefs).size;
+  if (!count || state.homeSectionView) {
+    if (existing) existing.remove();
+    return;
+  }
+  const html = `<button type="button" class="hidden-items-link" data-home-seeall="banned">🚫 Elementos ocultos (${count})</button>`;
+  if (existing) {
+    existing.outerHTML = `<div id="hiddenItemsFooter" class="hidden-items-footer">${html}</div>`;
+  } else {
+    host.insertAdjacentHTML('beforeend', `<div id="hiddenItemsFooter" class="hidden-items-footer">${html}</div>`);
+  }
+  bindHomeSectionEvents();
 }
 
 function buildSectionShellHtml(def, innerHtml) {
@@ -5592,6 +5618,15 @@ function renderHomeSectionList(baseFiltered, sectionKey) {
   } else if (sectionKey === 'continue') {
     title = 'Continuar viendo';
     items = resolveContinueWatchingItems(uniqueTitles, watch);
+  } else if (sectionKey === 'banned') {
+    title = 'Ocultos';
+    const bannedKeys = getBannedKeySet(prefs);
+    // Los baneados quedan FUERA de uniqueTitles (getUniqueRenderableTitles los
+    // filtra), así que se recuperan del pool deduplicado sin ese filtro.
+    const fullPool = dedupe(Array.isArray(baseFiltered) ? baseFiltered : [], { consolidateEquivalent: true });
+    items = fullPool
+      .filter((t) => getTitlePreferenceKeys(t).some((k) => bannedKeys.has(k)))
+      .sort((a, b) => Number(readTitlePreferenceValue(prefs.banned, b, 0) || 0) - Number(readTitlePreferenceValue(prefs.banned, a, 0) || 0));
   } else if (sectionKey === 'rewatch') {
     title = 'Volver a ver';
     items = sortTitles(uniqueTitles.filter((t) => watch.completedIds.has(getTitleId(t)))).sort((a, b) => (watch.scores[getTitleId(b)] || 0) - (watch.scores[getTitleId(a)] || 0));
@@ -6170,6 +6205,12 @@ function bindQuickActionButtons(root = document) {
       if (action === 'like' && state.homeSectionView === 'liked' && card && Number(readTitlePreferenceValue(prefs.likes, title, 0) || 0) < 1) {
         card.remove();
       }
+      if (action === 'ban' && card) {
+        const nowBanned = isTitleBanned(title, prefs);
+        // En la vista "Ocultos" la card se va al restaurar; en cualquier otro
+        // rail la card se va al ocultar (queda filtrada del catálogo).
+        if (state.homeSectionView === 'banned' ? !nowBanned : nowBanned) card.remove();
+      }
     });
     btn.addEventListener('click', stopCardNavigation, { passive: false });
   });
@@ -6707,11 +6748,12 @@ function getCurrentUserPrefsKey() {
 
 function loadTitlePrefs() {
   const key = getCurrentUserPrefsKey();
-  if (!key) return { likes: {}, watchLater: {} };
+  if (!key) return { likes: {}, watchLater: {}, banned: {} };
   const data = safeJson(localStorage.getItem(key)) || {};
   return {
     likes: data.likes && typeof data.likes === 'object' ? data.likes : {},
-    watchLater: data.watchLater && typeof data.watchLater === 'object' ? data.watchLater : {}
+    watchLater: data.watchLater && typeof data.watchLater === 'object' ? data.watchLater : {},
+    banned: data.banned && typeof data.banned === 'object' ? data.banned : {}
   };
 }
 
@@ -6721,8 +6763,29 @@ function saveTitlePrefs(next) {
   localStorage.setItem(key, JSON.stringify({
     likes: next?.likes || {},
     watchLater: next?.watchLater || {},
+    banned: next?.banned || {},
     updatedAt: new Date().toISOString()
   }));
+}
+
+// Sistema de baneo/ocultar: un título "baneado" desaparece de todos los rails
+// del inicio (se filtra en getUniqueRenderableTitles, el punto central). Se
+// guarda en el mismo objeto de prefs (key mep_title_prefs_{email}) con la misma
+// forma que likes/watchLater (id → timestamp), para reusar load/save y el sync.
+function isTitleBanned(title, prefs = loadTitlePrefs()) {
+  if (!title) return false;
+  return Boolean(readTitlePreferenceValue(prefs?.banned, title, false));
+}
+
+function getBannedKeySet(prefs = loadTitlePrefs()) {
+  const banned = prefs?.banned && typeof prefs.banned === 'object' ? prefs.banned : {};
+  return new Set(Object.keys(banned).filter((k) => banned[k]));
+}
+
+function filterBannedTitles(items, prefs = loadTitlePrefs()) {
+  const bannedKeys = getBannedKeySet(prefs);
+  if (!bannedKeys.size || !Array.isArray(items)) return Array.isArray(items) ? items : [];
+  return items.filter((t) => !getTitlePreferenceKeys(t).some((k) => bannedKeys.has(k)));
 }
 
 function getTitleFlags(title, prefs = loadTitlePrefs()) {
@@ -6741,13 +6804,18 @@ function getCardQuickActions(title, prefs = loadTitlePrefs(), options = {}) {
   const likedClass = flags.like >= 1 ? ' active-like' : '';
   const laterClass = flags.watchLater ? ' active-later' : '';
   const withLabels = options.labels === true;
+  const banned = isTitleBanned(title, prefs);
+  const bannedClass = banned ? ' active-ban' : '';
   const likeLabel = flags.like >= 1 ? 'Quitar me gusta' : 'Me gusta';
   const laterLabel = flags.watchLater ? 'Quitar de ver más tarde' : 'Ver más tarde';
+  const banLabel = banned ? 'Mostrar de nuevo' : 'Ocultar del catálogo';
   const likeContent = `❤${withLabels ? `<span class="quick-label">${escapeHtml(likeLabel)}</span>` : ''}`;
   const laterContent = `${flags.watchLater ? '✓' : '+'}${withLabels ? `<span class="quick-label">${escapeHtml(laterLabel)}</span>` : ''}`;
+  const banContent = `${banned ? '↺' : '🚫'}${withLabels ? `<span class="quick-label">${escapeHtml(banLabel)}</span>` : ''}`;
   return `<div class="item-quick-actions">
     <button class="item-quick-btn${likedClass}" type="button" data-pref-id="${prefId}" data-quick-action="like" aria-label="${escapeAttribute(likeLabel)}" aria-pressed="${flags.like >= 1 ? 'true' : 'false'}">${likeContent}</button>
     <button class="item-quick-btn${laterClass}" type="button" data-pref-id="${prefId}" data-quick-action="later" aria-label="${escapeAttribute(laterLabel)}" aria-pressed="${flags.watchLater ? 'true' : 'false'}">${laterContent}</button>
+    <button class="item-quick-btn item-quick-ban${bannedClass}" type="button" data-pref-id="${prefId}" data-quick-action="ban" aria-label="${escapeAttribute(banLabel)}" aria-pressed="${banned ? 'true' : 'false'}">${banContent}</button>
   </div>`;
 }
 
@@ -6761,7 +6829,18 @@ function updateQuickActionButtons(prefId) {
     .forEach((title) => getTitlePreferenceKeys(title).forEach((key) => relatedKeys.add(key)));
   const likeActive = [...relatedKeys].some((key) => Number(prefs?.likes?.[key] || 0) >= 1);
   const laterActive = [...relatedKeys].some((key) => Boolean(prefs?.watchLater?.[key]));
+  const banActive = [...relatedKeys].some((key) => Boolean(prefs?.banned?.[key]));
   for (const key of relatedKeys) {
+    document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="ban"]`)
+      .forEach((btn) => {
+        btn.classList.toggle('active-ban', banActive);
+        btn.setAttribute('aria-pressed', banActive ? 'true' : 'false');
+        const banLabel = banActive ? 'Mostrar de nuevo' : 'Ocultar del catálogo';
+        btn.setAttribute('aria-label', banLabel);
+        const label = btn.querySelector('.quick-label');
+        if (label) label.textContent = banLabel;
+        if (btn.firstChild && btn.firstChild.nodeType === Node.TEXT_NODE) btn.firstChild.textContent = banActive ? '↺' : '🚫';
+      });
     document.querySelectorAll(`.item-quick-btn[data-pref-id="${CSS.escape(key)}"][data-quick-action="like"]`)
       .forEach((btn) => {
         btn.classList.toggle('active-like', likeActive);
@@ -6826,7 +6905,8 @@ function setTitlePreference(title, action) {
   const prefs = loadTitlePrefs();
   const next = {
     likes: { ...(prefs.likes || {}) },
-    watchLater: { ...(prefs.watchLater || {}) }
+    watchLater: { ...(prefs.watchLater || {}) },
+    banned: { ...(prefs.banned || {}) }
   };
   // Valores guardados como timestamp (Date.now()) en vez de 1/true para poder
   // ordenar "Me gusta" y "Ver más tarde" por orden de adición (más reciente
@@ -6840,10 +6920,15 @@ function setTitlePreference(title, action) {
     const isLater = Boolean(readTitlePreferenceValue(next.watchLater, title, false));
     writeTitlePreferenceValue(next.watchLater, title, isLater ? false : Date.now());
   }
+  else if (action === 'ban') {
+    const isBanned = Boolean(readTitlePreferenceValue(next.banned, title, false));
+    writeTitlePreferenceValue(next.banned, title, isBanned ? false : Date.now());
+  }
   saveTitlePrefs(next);
   void queueTitlePreferenceSync(title, action, {
     liked: Number(readTitlePreferenceValue(next.likes, title, 0) || 0) >= 1,
-    watchLater: Boolean(readTitlePreferenceValue(next.watchLater, title, false))
+    watchLater: Boolean(readTitlePreferenceValue(next.watchLater, title, false)),
+    banned: Boolean(readTitlePreferenceValue(next.banned, title, false))
   });
 }
 

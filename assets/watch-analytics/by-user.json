@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T21:55:28.709Z",
+  "generatedAt": "2026-05-29T22:36:46.619Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1696,13 +1696,13 @@
       "userName": "Juan carlos Rios",
       "role": "viewer",
       "createdAt": "2026-05-10T02:42:47.785Z",
-      "updatedAt": "2026-05-23T18:25:39Z",
-      "totalEvents": 9,
-      "totalStarts": 5,
+      "updatedAt": "2026-05-29T22:36:38Z",
+      "totalEvents": 10,
+      "totalStarts": 6,
       "totalCompletions": 0,
       "totalPlaybackProgress": 8881.198863,
-      "uniqueContentCount": 5,
-      "lastActivityAt": "2026-05-23T18:25:39Z",
+      "uniqueContentCount": 6,
+      "lastActivityAt": "2026-05-29T22:36:38Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt11378946",
@@ -1711,6 +1711,18 @@
         "tt0480489"
       ],
       "content": {
+        "tt32362890": {
+          "contentId": "tt32362890",
+          "imdbId": "tt32362890",
+          "tmdbId": "1290417",
+          "title": "Embestida",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T22:36:38Z"
+        },
         "tt11378946": {
           "contentId": "tt11378946",
           "imdbId": "tt11378946",
@@ -1772,7 +1784,7 @@
           "lastSeenAt": "2026-05-13T17:00:31Z"
         }
       },
-      "avgPlaybackProgress": 986.7999
+      "avgPlaybackProgress": 888.1199
     },
     {
       "userEmail": "ornebe@hotmail.com",

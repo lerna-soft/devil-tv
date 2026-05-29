@@ -25,7 +25,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T21:01:51Z"
+      "updatedAt": "2026-05-14T21:01:51Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
@@ -44,7 +52,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T20:27:42Z"
+      "updatedAt": "2026-05-14T20:27:42Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     }
   ]
 }

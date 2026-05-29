@@ -25,7 +25,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T19:20:28Z"
+      "updatedAt": "2026-05-14T19:20:28Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     }
   ]
 }

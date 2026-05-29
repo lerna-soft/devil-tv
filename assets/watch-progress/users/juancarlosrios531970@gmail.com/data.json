@@ -1,7 +1,7 @@
 {
   "email": "juancarlosrios531970@gmail.com",
   "name": "Juan carlos Rios",
-  "updatedAt": "2026-05-23T18:25:39Z",
+  "updatedAt": "2026-05-29T22:36:38Z",
   "progress": {
     "tt0480489": {
       "imdbId": "tt0480489",
@@ -52,19 +52,62 @@
       "lastProgress": 2554.435513,
       "updatedAt": "2026-05-23T18:25:39Z",
       "watched": {}
+    },
+    "tt32362890": {
+      "imdbId": "tt32362890",
+      "tmdbId": "1290417",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-29T22:36:38Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-29T22:36:37.470Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {},
   "lastWatch": {
-    "imdbId": "tt11378946",
-    "tmdbId": "936075",
+    "imdbId": "tt32362890",
+    "tmdbId": "1290417",
     "season": 1,
     "episode": 1,
-    "progress": 2554.435513,
-    "updatedAt": "2026-05-23T18:25:39Z"
+    "progress": 0,
+    "updatedAt": "2026-05-29T22:36:38Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "juancarlosrios531970@gmail.com:tt32362890:s1e1:started:2026-05-29T22:36:38Z",
+      "contentId": "tt32362890",
+      "episodeKey": "s1e1",
+      "userEmail": "juancarlosrios531970@gmail.com",
+      "userName": "Juan carlos Rios",
+      "imdbId": "tt32362890",
+      "tmdbId": "1290417",
+      "title": "Embestida",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-29T22:36:37.470Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-29T22:36:38Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt11378946:s1e1:started:2026-05-23T18:25:39Z",
       "contentId": "tt11378946",
@@ -82,7 +125,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-23T17:55:34.290Z",
       "completedAt": "",
-      "updatedAt": "2026-05-23T18:25:39Z"
+      "updatedAt": "2026-05-23T18:25:39Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt11378946:s1e1:started:2026-05-23T17:55:36Z",
@@ -101,7 +152,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-23T17:55:34.290Z",
       "completedAt": "",
-      "updatedAt": "2026-05-23T17:55:36Z"
+      "updatedAt": "2026-05-23T17:55:36Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",
@@ -120,7 +179,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-19T04:28:10.666Z",
       "completedAt": "",
-      "updatedAt": "2026-05-19T05:28:17Z"
+      "updatedAt": "2026-05-19T05:28:17Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T04:58:14Z",
@@ -139,7 +206,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-19T04:28:10.666Z",
       "completedAt": "",
-      "updatedAt": "2026-05-19T04:58:14Z"
+      "updatedAt": "2026-05-19T04:58:14Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T04:28:11Z",
@@ -158,7 +233,15 @@
       "playerStatus": "playing",
       "startedAt": "2026-05-19T04:28:10.666Z",
       "completedAt": "",
-      "updatedAt": "2026-05-19T04:28:11Z"
+      "updatedAt": "2026-05-19T04:28:11Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T21:01:51Z",
@@ -177,7 +260,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T21:01:51Z"
+      "updatedAt": "2026-05-14T21:01:51Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt1630029:s1e1:playing:2026-05-14T20:27:42Z",
@@ -196,7 +287,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T20:27:42Z"
+      "updatedAt": "2026-05-14T20:27:42Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt10676052:s1e1:playing:2026-05-14T19:20:28Z",
@@ -215,7 +314,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-14T19:20:28Z"
+      "updatedAt": "2026-05-14T19:20:28Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     },
     {
       "eventId": "unknown:tt0480489:s1e2:playing:2026-05-13T17:00:31Z",
@@ -234,7 +341,15 @@
       "playerStatus": "playing",
       "startedAt": "",
       "completedAt": "",
-      "updatedAt": "2026-05-13T17:00:31Z"
+      "updatedAt": "2026-05-13T17:00:31Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T03:08:35.636Z",
+  "generatedAt": "2026-05-29T03:08:49.781Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2017,7 +2017,7 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 17,
+      "totalEvents": 16,
       "totalStarts": 7,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
@@ -2028,7 +2028,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
+          "playCount": 16,
           "completedCount": 2,
           "startedCount": 7,
           "totalPlaybackProgress": 5612.777192470997,
@@ -2125,7 +2125,7 @@
         "s1e7": {
           "season": 1,
           "episode": 7,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
@@ -2137,7 +2137,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 330.1634
+      "avgPlaybackProgress": 350.7986
     },
     {
       "contentId": "tt29552248",
@@ -3492,6 +3492,50 @@
       "avgPlaybackProgress": 1730.5124
     },
     {
+      "contentId": "tt12593682",
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "title": "Bullet Train",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-29T03:08:17Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-29T03:08:17Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-29T03:08:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt1878870",
       "imdbId": "tt1878870",
       "tmdbId": "376660",
@@ -4199,50 +4243,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-28T15:21:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt12593682",
-      "imdbId": "tt12593682",
-      "tmdbId": "718930",
-      "title": "Bullet Train",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-28T15:21:25Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-28T15:21:25Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T15:21:25Z",
           "users": {
             "henry8812@gmail.com": true
           },

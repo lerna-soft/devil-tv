@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-29T03:08:35.638Z",
+  "generatedAt": "2026-05-29T03:08:49.783Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T03:08:09Z",
+      "updatedAt": "2026-05-29T03:08:17Z",
       "totalEvents": 500,
       "totalStarts": 194,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
       "uniqueContentCount": 120,
-      "lastActivityAt": "2026-05-29T03:08:09Z",
+      "lastActivityAt": "2026-05-29T03:08:17Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt12593682": {
+          "contentId": "tt12593682",
+          "imdbId": "tt12593682",
+          "tmdbId": "718930",
+          "title": "Bullet Train",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-29T03:08:17Z"
+        },
         "tt0899043": {
           "contentId": "tt0899043",
           "imdbId": "tt0899043",
@@ -204,18 +216,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T15:21:27Z"
-        },
-        "tt12593682": {
-          "contentId": "tt12593682",
-          "imdbId": "tt12593682",
-          "tmdbId": "718930",
-          "title": "Bullet Train",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T15:21:25Z"
         },
         "tt0831387": {
           "contentId": "tt0831387",
@@ -1243,7 +1243,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 17,
+          "playCount": 16,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

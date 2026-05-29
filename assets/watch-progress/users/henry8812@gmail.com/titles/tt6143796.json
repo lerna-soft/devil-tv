@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-16T18:36:34Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt6143796:s1e1:preference:2026-05-16T18:36:34Z",
-      "contentId": "tt6143796",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt6143796",
-      "tmdbId": "",
-      "title": "Workin' Moms",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T18:36:34Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T04:31:55.490Z",
+  "generatedAt": "2026-05-30T05:02:01.659Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T04:31:45Z",
+      "updatedAt": "2026-05-30T05:01:51Z",
       "totalEvents": 500,
       "totalStarts": 198,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 269919.46647137223,
+      "totalPlaybackProgress": 273110.7532915229,
       "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-30T04:31:45Z",
+      "lastActivityAt": "2026-05-30T05:01:51Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -25,6 +25,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt12593682",
         "tt0899043",
         "tt21209876",
         "tt2294629",
@@ -91,7 +92,7 @@
           "tmdbId": "296232",
           "title": "Snowball Earth",
           "type": "series",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -163,11 +164,11 @@
           "tmdbId": "718930",
           "title": "Bullet Train",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 3191.2868201506662,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T04:31:45Z"
+          "lastSeenAt": "2026-05-30T05:01:51Z"
         },
         "tt9114286": {
           "contentId": "tt9114286",
@@ -1406,7 +1407,7 @@
           "lastSeenAt": "2026-05-17T03:38:04Z"
         }
       },
-      "avgPlaybackProgress": 539.8389
+      "avgPlaybackProgress": 546.2215
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

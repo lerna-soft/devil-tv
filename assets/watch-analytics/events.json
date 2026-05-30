@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-30T19:13:41.202Z",
+  "generatedAt": "2026-05-30T19:45:21.571Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt1757678:s1e1:preference:2026-05-30T19:45:11Z",
+      "contentId": "tt1757678",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt1757678",
+      "tmdbId": "83533",
+      "title": "Avatar: Fuego y ceniza",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:45:11Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21478426:s1e1:started:2026-05-30T19:13:30Z",
       "contentId": "tt21478426",

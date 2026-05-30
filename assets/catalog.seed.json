@@ -1,6 +1,6 @@
 {
-  "version": 318,
-  "generatedAt": "2026-05-30T19:12:32.146Z",
+  "version": 319,
+  "generatedAt": "2026-05-30T19:44:44.538Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52017,6 +52017,22 @@
       "releaseDate": null,
       "overview": "Carolina Miranda, Andrés Palacios",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2RkMTNiOTAtMmZmYy00NDM0LTg2MzctZDcxNDlmY2VmMGViXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "112150",
+      "imdbId": null,
+      "title": "Nivis: Amigos de otro mundo",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2019-07-20",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lnMr9NDLgmqhfDcanUR9OiTxj2L.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T05:31:59.984Z",
+  "generatedAt": "2026-05-30T05:39:26.445Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T05:31:52Z",
+      "updatedAt": "2026-05-30T05:39:18Z",
       "totalEvents": 500,
-      "totalStarts": 197,
+      "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 279972.3578537512,
       "uniqueContentCount": 113,
-      "lastActivityAt": "2026-05-30T05:31:52Z",
+      "lastActivityAt": "2026-05-30T05:39:18Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -25,8 +25,8 @@
       ],
       "inProgressContentIds": [
         "274870",
-        "tt12593682",
         "tt0899043",
+        "tt12593682",
         "tt21209876",
         "tt2294629",
         "tt33046197",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0899043": {
+          "contentId": "tt0899043",
+          "imdbId": "tt0899043",
+          "tmdbId": "1087891",
+          "title": "Amateur",
+          "type": "movie",
+          "playCount": 7,
+          "completed": false,
+          "maxProgressValue": 3775.326009272,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T05:39:18Z"
+        },
         "tt12593682": {
           "contentId": "tt12593682",
           "imdbId": "tt12593682",
@@ -217,18 +229,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-29T03:08:28Z"
-        },
-        "tt0899043": {
-          "contentId": "tt0899043",
-          "imdbId": "tt0899043",
-          "tmdbId": "1087891",
-          "title": "Amateur",
-          "type": "movie",
-          "playCount": 6,
-          "completed": false,
-          "maxProgressValue": 3775.326009272,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T03:08:09Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1388,7 +1388,7 @@
           "tmdbId": "",
           "title": "The Invitation",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

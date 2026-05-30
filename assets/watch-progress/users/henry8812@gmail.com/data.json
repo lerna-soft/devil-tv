@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-30T12:41:41Z",
+  "updatedAt": "2026-05-30T13:11:44Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2039,14 +2039,14 @@
       "tmdbId": "1087891",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 1992.261656347,
-      "lastProgress": 1992.261656347,
-      "updatedAt": "2026-05-30T12:41:41Z",
+      "progress": 4342.509256150672,
+      "lastProgress": 4342.509256150672,
+      "updatedAt": "2026-05-30T13:11:44Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-26T14:01:38.477Z",
           "completedAt": "",
-          "lastProgress": 1992.261656347
+          "lastProgress": 4342.509256150672
         }
       }
     },
@@ -2312,11 +2312,38 @@
     "tmdbId": "1087891",
     "season": 1,
     "episode": 1,
-    "progress": 1992.261656347,
-    "updatedAt": "2026-05-30T12:41:41Z"
+    "progress": 4342.509256150672,
+    "updatedAt": "2026-05-30T13:11:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-30T13:11:44Z",
+      "contentId": "tt0899043",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 4342.509256150672,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-26T14:01:38.477Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T13:11:44Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-30T12:41:41Z",
       "contentId": "tt0899043",
@@ -15781,33 +15808,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-18T03:44:08Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt17013106:s1e1:playing:2026-05-18T01:19:45Z",
-      "contentId": "tt17013106",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt17013106",
-      "tmdbId": "",
-      "title": "Black Knight",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-18T01:19:45Z",
       "country": "",
       "countryName": "",
       "city": "",

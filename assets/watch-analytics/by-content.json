@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T12:41:50.955Z",
+  "generatedAt": "2026-05-30T13:11:55.015Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2411,22 +2411,22 @@
       "tmdbId": "1087891",
       "title": "Amateur",
       "type": "movie",
-      "totalEvents": 8,
+      "totalEvents": 9,
       "totalStarts": 1,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 5767.587665619,
+      "totalPlaybackProgress": 10110.096921769673,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-30T12:41:41Z",
+      "lastActivityAt": "2026-05-30T13:11:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
+          "playCount": 9,
           "completedCount": 0,
           "startedCount": 1,
-          "totalPlaybackProgress": 5767.587665619,
-          "lastSeenAt": "2026-05-30T12:41:41Z",
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -2435,19 +2435,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 8,
+          "totalEvents": 9,
           "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 5767.587665619,
+          "totalPlaybackProgress": 10110.096921769673,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T12:41:41Z",
+          "lastActivityAt": "2026-05-30T13:11:44Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 720.9485
+      "avgPlaybackProgress": 1123.3441
     },
     {
       "contentId": "tt30460310",
@@ -7743,50 +7743,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-18T13:26:03Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt17013106",
-      "imdbId": "tt17013106",
-      "tmdbId": "",
-      "title": "Black Knight",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-18T01:19:45Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-18T01:19:45Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-18T01:19:45Z",
           "users": {
             "henry8812@gmail.com": true
           },

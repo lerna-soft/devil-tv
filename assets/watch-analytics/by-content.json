@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T14:00:24.123Z",
+  "generatedAt": "2026-05-30T14:07:41.985Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2287,7 +2287,7 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 15,
+      "totalEvents": 14,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
@@ -2298,7 +2298,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
+          "playCount": 7,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
@@ -2333,7 +2333,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 15,
+          "totalEvents": 14,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
@@ -2347,7 +2347,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1097.0549
+      "avgPlaybackProgress": 1175.416
     },
     {
       "contentId": "tt32897959",
@@ -3502,6 +3502,50 @@
       "avgPlaybackProgress": 1163.2529
     },
     {
+      "contentId": "tt8790086",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T14:07:33Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-30T14:07:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T14:07:33Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt32362890",
       "imdbId": "tt32362890",
       "tmdbId": "1290417",
@@ -4223,50 +4267,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-28T15:21:35Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt8790086",
-      "imdbId": "tt8790086",
-      "tmdbId": "539972",
-      "title": "Kraven the Hunter",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-28T15:21:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-28T15:21:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T15:21:27Z",
           "users": {
             "henry8812@gmail.com": true
           },

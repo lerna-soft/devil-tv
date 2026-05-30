@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T14:00:24.124Z",
+  "generatedAt": "2026-05-30T14:07:41.987Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T13:11:44Z",
+      "updatedAt": "2026-05-30T14:07:33Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
       "uniqueContentCount": 111,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "lastActivityAt": "2026-05-30T14:07:33Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt8790086": {
+          "contentId": "tt8790086",
+          "imdbId": "tt8790086",
+          "tmdbId": "539972",
+          "title": "Kraven the Hunter",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T14:07:33Z"
+        },
         "tt0899043": {
           "contentId": "tt0899043",
           "imdbId": "tt0899043",
@@ -229,18 +241,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-29T03:08:28Z"
-        },
-        "tt8790086": {
-          "contentId": "tt8790086",
-          "imdbId": "tt8790086",
-          "tmdbId": "539972",
-          "title": "Kraven the Hunter",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-28T15:21:27Z"
         },
         "tt0831387": {
           "contentId": "tt0831387",
@@ -944,7 +944,7 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 8,
+          "playCount": 7,
           "completed": false,
           "maxProgressValue": 4299.974232,
           "maxProgressPercent": 0,

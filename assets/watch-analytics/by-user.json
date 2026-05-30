@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T18:42:22.390Z",
+  "generatedAt": "2026-05-30T19:12:29.269Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T14:07:33Z",
+      "updatedAt": "2026-05-30T19:12:20Z",
       "totalEvents": 500,
-      "totalStarts": 196,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
-      "uniqueContentCount": 111,
-      "lastActivityAt": "2026-05-30T14:07:33Z",
+      "uniqueContentCount": 112,
+      "lastActivityAt": "2026-05-30T19:12:20Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -157,6 +157,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt21478426": {
+          "contentId": "tt21478426",
+          "imdbId": "tt21478426",
+          "tmdbId": "",
+          "title": "Life After Fighting",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T19:12:20Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1256,7 +1268,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 16,
+          "playCount": 15,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

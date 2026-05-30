@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T04:28:47.376Z",
+  "generatedAt": "2026-05-30T04:31:55.490Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-29T22:45:11Z",
+      "updatedAt": "2026-05-30T04:31:45Z",
       "totalEvents": 500,
-      "totalStarts": 197,
+      "totalStarts": 198,
       "totalCompletions": 72,
       "totalPlaybackProgress": 269919.46647137223,
-      "uniqueContentCount": 115,
-      "lastActivityAt": "2026-05-29T22:45:11Z",
+      "uniqueContentCount": 114,
+      "lastActivityAt": "2026-05-30T04:31:45Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -157,6 +157,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt12593682": {
+          "contentId": "tt12593682",
+          "imdbId": "tt12593682",
+          "tmdbId": "718930",
+          "title": "Bullet Train",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T04:31:45Z"
+        },
         "tt9114286": {
           "contentId": "tt9114286",
           "imdbId": "tt9114286",
@@ -204,18 +216,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-29T03:08:28Z"
-        },
-        "tt12593682": {
-          "contentId": "tt12593682",
-          "imdbId": "tt12593682",
-          "tmdbId": "718930",
-          "title": "Bullet Train",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T03:08:17Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1404,18 +1404,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-17T03:38:04Z"
-        },
-        "tt14966898": {
-          "contentId": "tt14966898",
-          "imdbId": "tt14966898",
-          "tmdbId": "",
-          "title": "Late Night with the Devil",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-16T21:01:53Z"
         }
       },
       "avgPlaybackProgress": 539.8389

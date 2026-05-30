@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-30T19:47:08Z",
+  "updatedAt": "2026-05-30T19:47:09Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -102,7 +102,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-30T19:47:08Z",
+      "updatedAt": "2026-05-30T19:47:09Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-30T19:47:08Z",
@@ -125,9 +125,10 @@
     "watchLater": {
       "tt33714084": true,
       "tt39333617": true,
-      "tt1757678": true
+      "tt1757678": true,
+      "tt14850054": true
     },
-    "updatedAt": "2026-05-30T19:47:08Z"
+    "updatedAt": "2026-05-30T19:47:09Z"
   },
   "lastWatch": {
     "imdbId": "tt14850054",
@@ -135,10 +136,37 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-30T19:47:08Z"
+    "updatedAt": "2026-05-30T19:47:09Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt14850054:s1e1:preference:2026-05-30T19:47:09Z",
+      "contentId": "tt14850054",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt14850054",
+      "tmdbId": "840464",
+      "title": "Greenland 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:47:09Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt14850054:s1e1:preference:2026-05-30T19:47:08Z",
       "contentId": "tt14850054",

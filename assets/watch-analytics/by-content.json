@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T05:02:01.657Z",
+  "generatedAt": "2026-05-30T05:31:59.982Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2878,6 +2878,50 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt12593682",
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "title": "Bullet Train",
+      "type": "movie",
+      "totalEvents": 5,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10052.891382379,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T05:31:52Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10052.891382379,
+          "lastSeenAt": "2026-05-30T05:31:52Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 5,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10052.891382379,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T05:31:52Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2010.5783
+    },
+    {
       "contentId": "tt9114286",
       "imdbId": "tt9114286",
       "tmdbId": "505642",
@@ -3020,50 +3064,6 @@
         }
       },
       "avgPlaybackProgress": 617.0725
-    },
-    {
-      "contentId": "tt12593682",
-      "imdbId": "tt12593682",
-      "tmdbId": "718930",
-      "title": "Bullet Train",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3191.2868201506662,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T05:01:51Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3191.2868201506662,
-          "lastSeenAt": "2026-05-30T05:01:51Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3191.2868201506662,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T05:01:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 797.8217
     },
     {
       "contentId": "tt0293662",
@@ -8009,50 +8009,6 @@
           "lastActivityAt": "2026-05-17T17:56:08Z",
           "users": {
             "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0441773",
-      "imdbId": "tt0441773",
-      "tmdbId": "9502",
-      "title": "Kung Fu Panda",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-17T03:38:04Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T03:38:04Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-17T03:38:04Z",
-          "users": {
-            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }

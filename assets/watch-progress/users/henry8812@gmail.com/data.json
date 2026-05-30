@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-30T13:11:44Z",
+  "updatedAt": "2026-05-30T14:07:33Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2140,10 +2140,10 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-28T15:21:27Z",
+      "updatedAt": "2026-05-30T14:07:33Z",
       "watched": {
         "s1e1": {
-          "startedAt": "2026-05-28T15:21:27Z",
+          "startedAt": "2026-05-30T14:07:32.769Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2308,15 +2308,42 @@
     "updatedAt": "2026-05-29T03:08:28Z"
   },
   "lastWatch": {
-    "imdbId": "tt0899043",
-    "tmdbId": "1087891",
+    "imdbId": "tt8790086",
+    "tmdbId": "539972",
     "season": 1,
     "episode": 1,
-    "progress": 4342.509256150672,
-    "updatedAt": "2026-05-30T13:11:44Z"
+    "progress": 0,
+    "updatedAt": "2026-05-30T14:07:33Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-30T14:07:33Z",
+      "contentId": "tt8790086",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T14:07:32.769Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T14:07:33Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-30T13:11:44Z",
       "contentId": "tt0899043",
@@ -15781,33 +15808,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-18T04:04:31Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-18T03:44:08Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-18T03:44:08Z",
       "country": "",
       "countryName": "",
       "city": "",

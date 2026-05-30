@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-30T14:00:24.120Z",
+  "generatedAt": "2026-05-30T14:07:41.981Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-30T14:07:33Z",
+      "contentId": "tt8790086",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T14:07:32.769Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T14:07:33Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0899043:s1e1:started:2026-05-30T13:11:44Z",
       "contentId": "tt0899043",
@@ -11214,27 +11235,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-18T04:04:31Z"
-    },
-    {
-      "eventId": "unknown:tt29552248:s1e1:preference:2026-05-18T03:44:08Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-18T03:44:08Z"
     },
     {
       "eventId": "unknown:tt26443616:s1e1:playing:2026-05-18T01:26:53Z",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T19:45:45.414Z",
+  "generatedAt": "2026-05-30T19:47:19.008Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1390,13 +1390,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-30T19:45:33Z",
-      "totalEvents": 26,
+      "updatedAt": "2026-05-30T19:47:08Z",
+      "totalEvents": 27,
       "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
-      "uniqueContentCount": 8,
-      "lastActivityAt": "2026-05-30T19:45:33Z",
+      "uniqueContentCount": 9,
+      "lastActivityAt": "2026-05-30T19:47:08Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt33046197",
@@ -1405,6 +1405,18 @@
         "tt32897959"
       ],
       "content": {
+        "tt14850054": {
+          "contentId": "tt14850054",
+          "imdbId": "tt14850054",
+          "tmdbId": "840464",
+          "title": "Greenland 2",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T19:47:08Z"
+        },
         "tt33046197": {
           "contentId": "tt33046197",
           "imdbId": "tt33046197",
@@ -1502,7 +1514,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1675.4741
+      "avgPlaybackProgress": 1613.4195
     },
     {
       "userEmail": "liz-munera@hotmail.com",

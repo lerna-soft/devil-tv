@@ -1,6 +1,6 @@
 {
-  "version": 314,
-  "generatedAt": "2026-05-29T22:45:13.400Z",
+  "version": 315,
+  "generatedAt": "2026-05-30T01:51:48.211Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51953,6 +51953,22 @@
       "releaseDate": null,
       "overview": "Ludwig Göransson, Ryan Coogler",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTE5ODc4MDQtZTY0Mi00YWUwLWI5NmMtMDllMmI1NTQzN2ZhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "278573",
+      "imdbId": "tt39333617",
+      "title": "Perfect Crown",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "En una Corea moderna con una monarquía constitucional, una heredera de Chaebol y un príncipe impotente contraen un matrimonio por contrato, descubriendo el amor y el coraje mientras enfrentan barreras sociales y cicatrices personales.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6CDHhHZ8lYkpSE3UkFKrqYeeSzz.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

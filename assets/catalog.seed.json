@@ -1,6 +1,6 @@
 {
-  "version": 316,
-  "generatedAt": "2026-05-30T01:53:21.830Z",
+  "version": 317,
+  "generatedAt": "2026-05-30T01:53:30.734Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -51985,6 +51985,22 @@
       "releaseDate": null,
       "overview": "En una Corea moderna con una monarquía constitucional, una heredera de Chaebol y un príncipe impotente contraen un matrimonio por contrato, descubriendo el amor y el coraje mientras enfrentan barreras sociales y cicatrices personales.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/6CDHhHZ8lYkpSE3UkFKrqYeeSzz.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt27419542",
+      "title": "Tierra de esperanza",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Carolina Miranda, Andrés Palacios",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2RkMTNiOTAtMmZmYy00NDM0LTg2MzctZDcxNDlmY2VmMGViXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

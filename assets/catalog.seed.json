@@ -1,6 +1,6 @@
 {
-  "version": 319,
-  "generatedAt": "2026-05-30T19:44:44.538Z",
+  "version": 320,
+  "generatedAt": "2026-05-30T19:44:56.440Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28161,6 +28161,22 @@
       "releaseDate": null,
       "overview": "Bren Foster, Cassie Howarth",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMWQ4MGJkMjctZjczNy00YTA0LTgxN2MtODAzNmVhZWJmYzAxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1474855",
+      "imdbId": null,
+      "title": "Trégua",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2023-10-12",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8V1uVjydskjr5C1W7fGpfjSMHdf.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

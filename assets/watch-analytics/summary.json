@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T19:12:29.266Z",
+  "generatedAt": "2026-05-30T19:13:41.202Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 563,
@@ -49,20 +49,20 @@
       "completionRate": 0.125
     },
     {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 15,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333
-    },
-    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 14,
       "uniqueUsers": 3,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt14452776",
+      "title": "The Bear",
+      "type": "series",
+      "totalEvents": 14,
+      "uniqueUsers": 1,
+      "completionRate": 0.4
     },
     {
       "contentId": "tt32897959",

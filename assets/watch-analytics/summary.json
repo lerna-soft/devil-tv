@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-05-30T22:06:25.898Z",
+  "generatedAt": "2026-05-30T22:07:09.968Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 568,
-  "totalStarts": 212,
+  "totalStarts": 213,
   "totalCompletions": 73,
-  "overallCompletionRate": 0.3443,
+  "overallCompletionRate": 0.3427,
   "trackedTitles": 133,
   "mostWatchedContent": [
     {
@@ -57,14 +57,6 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0.4
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
@@ -73,12 +65,20 @@
       "completionRate": 0.5
     },
     {
+      "contentId": "tt14452776",
+      "title": "The Bear",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.4
+    },
+    {
       "contentId": "tt30460310",
       "title": "Spider-Noir",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 11,
       "uniqueUsers": 1,
-      "completionRate": 0.5
+      "completionRate": 0.3333
     },
     {
       "contentId": "tt0899043",

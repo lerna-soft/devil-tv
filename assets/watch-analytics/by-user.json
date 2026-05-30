@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T22:06:25.902Z",
+  "generatedAt": "2026-05-30T22:07:09.974Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T22:06:16Z",
+      "updatedAt": "2026-05-30T22:06:58Z",
       "totalEvents": 500,
-      "totalStarts": 195,
+      "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
       "uniqueContentCount": 111,
-      "lastActivityAt": "2026-05-30T22:06:16Z",
+      "lastActivityAt": "2026-05-30T22:06:58Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -164,11 +164,11 @@
           "tmdbId": "220102",
           "title": "Spider-Noir",
           "type": "series",
-          "playCount": 10,
+          "playCount": 11,
           "completed": true,
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
-          "lastSeenAt": "2026-05-30T22:06:16Z"
+          "lastSeenAt": "2026-05-30T22:06:58Z"
         },
         "tt21478426": {
           "contentId": "tt21478426",
@@ -1268,7 +1268,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 13,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

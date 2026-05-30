@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T05:02:01.659Z",
+  "generatedAt": "2026-05-30T05:31:59.984Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T05:01:51Z",
+      "updatedAt": "2026-05-30T05:31:52Z",
       "totalEvents": 500,
-      "totalStarts": 198,
+      "totalStarts": 197,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 273110.7532915229,
-      "uniqueContentCount": 114,
-      "lastActivityAt": "2026-05-30T05:01:51Z",
+      "totalPlaybackProgress": 279972.3578537512,
+      "uniqueContentCount": 113,
+      "lastActivityAt": "2026-05-30T05:31:52Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -164,11 +164,11 @@
           "tmdbId": "718930",
           "title": "Bullet Train",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
-          "maxProgressValue": 3191.2868201506662,
+          "maxProgressValue": 6861.6045622283345,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T05:01:51Z"
+          "lastSeenAt": "2026-05-30T05:31:52Z"
         },
         "tt9114286": {
           "contentId": "tt9114286",
@@ -1393,21 +1393,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-17T07:16:34Z"
-        },
-        "tt0441773": {
-          "contentId": "tt0441773",
-          "imdbId": "tt0441773",
-          "tmdbId": "9502",
-          "title": "Kung Fu Panda",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-17T03:38:04Z"
         }
       },
-      "avgPlaybackProgress": 546.2215
+      "avgPlaybackProgress": 559.9447
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

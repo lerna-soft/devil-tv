@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-17T03:38:04Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt0441773:s1e1:playing:2026-05-17T03:38:04Z",
-      "contentId": "tt0441773",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt0441773",
-      "tmdbId": "9502",
-      "title": "Kung Fu Panda",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-17T03:38:04Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

@@ -3,11 +3,44 @@
   "tmdbId": "1168190",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 1411.466637,
-  "lastProgress": 1411.466637,
-  "updatedAt": "2026-05-23T01:07:52Z",
-  "watched": {},
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-30T19:45:33Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-05-30T19:45:33Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:preference:2026-05-30T19:45:33Z",
+      "contentId": "tt33046197",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:45:33Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:started:2026-05-23T01:07:52Z",
       "contentId": "tt33046197",

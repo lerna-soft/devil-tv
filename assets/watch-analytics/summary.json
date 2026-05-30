@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-30T12:05:06.348Z",
+  "generatedAt": "2026-05-30T12:41:50.952Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 563,
   "totalStarts": 213,
   "totalCompletions": 73,
   "overallCompletionRate": 0.3427,
-  "trackedTitles": 133,
+  "trackedTitles": 132,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -73,20 +73,20 @@
       "completionRate": 0.5
     },
     {
+      "contentId": "tt0899043",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt30460310",
       "title": "Spider-Noir",
       "type": "series",
       "totalEvents": 8,
       "uniqueUsers": 1,
       "completionRate": 0.5
-    },
-    {
-      "contentId": "tt21209876",
-      "title": "Solo Leveling",
-      "type": "series",
-      "totalEvents": 8,
-      "uniqueUsers": 1,
-      "completionRate": 0
     }
   ]
 }

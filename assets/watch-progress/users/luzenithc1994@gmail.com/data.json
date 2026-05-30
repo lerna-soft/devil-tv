@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-30T19:45:11Z",
+  "updatedAt": "2026-05-30T19:45:12Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -80,7 +80,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-30T19:45:11Z",
+      "updatedAt": "2026-05-30T19:45:12Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-30T19:45:11Z",
@@ -100,9 +100,10 @@
     },
     "watchLater": {
       "tt33714084": true,
-      "tt39333617": true
+      "tt39333617": true,
+      "tt1757678": true
     },
-    "updatedAt": "2026-05-30T19:45:11Z"
+    "updatedAt": "2026-05-30T19:45:12Z"
   },
   "lastWatch": {
     "imdbId": "tt1757678",
@@ -110,10 +111,37 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-30T19:45:11Z"
+    "updatedAt": "2026-05-30T19:45:12Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt1757678:s1e1:preference:2026-05-30T19:45:12Z",
+      "contentId": "tt1757678",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt1757678",
+      "tmdbId": "83533",
+      "title": "Avatar: Fuego y ceniza",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:45:12Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt1757678:s1e1:preference:2026-05-30T19:45:11Z",
       "contentId": "tt1757678",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T19:45:30.200Z",
+  "generatedAt": "2026-05-30T19:45:45.414Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1390,21 +1390,33 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-30T19:45:12Z",
-      "totalEvents": 25,
+      "updatedAt": "2026-05-30T19:45:33Z",
+      "totalEvents": 26,
       "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
       "uniqueContentCount": 8,
-      "lastActivityAt": "2026-05-30T19:45:12Z",
+      "lastActivityAt": "2026-05-30T19:45:33Z",
       "completedContentIds": [],
       "inProgressContentIds": [
-        "tt5311514",
         "tt33046197",
+        "tt5311514",
         "tt29552248",
         "tt32897959"
       ],
       "content": {
+        "tt33046197": {
+          "contentId": "tt33046197",
+          "imdbId": "tt33046197",
+          "tmdbId": "1168190",
+          "title": "Los hermanos demolición",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 1411.466637,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T19:45:33Z"
+        },
         "tt1757678": {
           "contentId": "tt1757678",
           "imdbId": "tt1757678",
@@ -1453,18 +1465,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-25T00:35:32Z"
         },
-        "tt33046197": {
-          "contentId": "tt33046197",
-          "imdbId": "tt33046197",
-          "tmdbId": "1168190",
-          "title": "Los hermanos demolición",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 1411.466637,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T01:07:52Z"
-        },
         "tt29552248": {
           "contentId": "tt29552248",
           "imdbId": "tt29552248",
@@ -1502,7 +1502,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1742.4931
+      "avgPlaybackProgress": 1675.4741
     },
     {
       "userEmail": "liz-munera@hotmail.com",

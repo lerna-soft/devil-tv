@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-30T19:45:30.196Z",
+  "generatedAt": "2026-05-30T19:45:45.408Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:preference:2026-05-30T19:45:33Z",
+      "contentId": "tt33046197",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:45:33Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt1757678:s1e1:preference:2026-05-30T19:45:12Z",
       "contentId": "tt1757678",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-30T04:31:45Z",
+  "updatedAt": "2026-05-30T05:01:51Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2122,14 +2122,14 @@
       "tmdbId": "718930",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-05-30T04:31:45Z",
+      "progress": 3191.2868201506662,
+      "lastProgress": 3191.2868201506662,
+      "updatedAt": "2026-05-30T05:01:51Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-30T04:31:44.487Z",
           "completedAt": "",
-          "lastProgress": 0
+          "lastProgress": 3191.2868201506662
         }
       }
     },
@@ -2312,11 +2312,38 @@
     "tmdbId": "718930",
     "season": 1,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-05-30T04:31:45Z"
+    "progress": 3191.2868201506662,
+    "updatedAt": "2026-05-30T05:01:51Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt12593682:s1e1:started:2026-05-30T05:01:51Z",
+      "contentId": "tt12593682",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt12593682",
+      "tmdbId": "718930",
+      "title": "Bullet Train",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 3191.2868201506662,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T04:31:44.487Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T05:01:51Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt12593682:s1e1:started:2026-05-30T04:31:45Z",
       "contentId": "tt12593682",
@@ -15781,33 +15808,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-17T03:38:04Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:296232:s1e7:playing:2026-05-16T21:35:06Z",
-      "contentId": "296232",
-      "episodeKey": "s1e7",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "",
-      "tmdbId": "296232",
-      "title": "Snowball Earth",
-      "type": "series",
-      "season": 1,
-      "episode": 7,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-16T21:35:06Z",
       "country": "",
       "countryName": "",
       "city": "",

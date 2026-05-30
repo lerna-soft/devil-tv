@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T22:38:30.661Z",
+  "generatedAt": "2026-05-30T23:36:38.878Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T22:06:58Z",
+      "updatedAt": "2026-05-30T23:36:27Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
-      "uniqueContentCount": 111,
-      "lastActivityAt": "2026-05-30T22:06:58Z",
+      "uniqueContentCount": 110,
+      "lastActivityAt": "2026-05-30T23:36:27Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt21478426": {
+          "contentId": "tt21478426",
+          "imdbId": "tt21478426",
+          "tmdbId": "1289601",
+          "title": "Life After Fighting",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-30T23:36:27Z"
+        },
         "tt30460310": {
           "contentId": "tt30460310",
           "imdbId": "tt30460310",
@@ -169,18 +181,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-30T22:06:58Z"
-        },
-        "tt21478426": {
-          "contentId": "tt21478426",
-          "imdbId": "tt21478426",
-          "tmdbId": "1289601",
-          "title": "Life After Fighting",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T19:13:30Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1357,18 +1357,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-18T14:55:34Z"
-        },
-        "tt3513548": {
-          "contentId": "tt3513548",
-          "imdbId": "tt3513548",
-          "tmdbId": "",
-          "title": "Richard Jewell",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T14:26:12Z"
         }
       },
       "avgPlaybackProgress": 572.6143

@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-30T19:45:33Z",
+  "updatedAt": "2026-05-30T19:47:08Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -94,6 +94,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt14850054": {
+      "imdbId": "tt14850054",
+      "tmdbId": "840464",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-05-30T19:47:08Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-05-30T19:47:08Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -103,25 +119,53 @@
       "tt5311514": 1,
       "tt39333617": 1,
       "tt1757678": 1,
-      "tt33046197": 1
+      "tt33046197": 1,
+      "tt14850054": 1
     },
     "watchLater": {
       "tt33714084": true,
       "tt39333617": true,
       "tt1757678": true
     },
-    "updatedAt": "2026-05-30T19:45:33Z"
+    "updatedAt": "2026-05-30T19:47:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt33046197",
-    "tmdbId": "1168190",
+    "imdbId": "tt14850054",
+    "tmdbId": "840464",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-05-30T19:45:33Z"
+    "updatedAt": "2026-05-30T19:47:08Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt14850054:s1e1:preference:2026-05-30T19:47:08Z",
+      "contentId": "tt14850054",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt14850054",
+      "tmdbId": "840464",
+      "title": "Greenland 2",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-05-30T19:47:08Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt33046197:s1e1:preference:2026-05-30T19:45:33Z",
       "contentId": "tt33046197",

@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-30T21:41:57.436Z",
+  "generatedAt": "2026-05-30T22:00:09.189Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T19:13:30Z",
+      "updatedAt": "2026-05-30T21:59:58Z",
       "totalEvents": 500,
       "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
       "uniqueContentCount": 112,
-      "lastActivityAt": "2026-05-30T19:13:30Z",
+      "lastActivityAt": "2026-05-30T21:59:58Z",
       "completedContentIds": [
+        "tt30460310",
         "tt0965547",
         "tt2560140",
-        "tt30460310",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt30460310": {
+          "contentId": "tt30460310",
+          "imdbId": "tt30460310",
+          "tmdbId": "220102",
+          "title": "Spider-Noir",
+          "type": "series",
+          "playCount": 9,
+          "completed": true,
+          "maxProgressValue": 2815.73,
+          "maxProgressPercent": 35.358218735,
+          "lastSeenAt": "2026-05-30T21:59:58Z"
+        },
         "tt21478426": {
           "contentId": "tt21478426",
           "imdbId": "tt21478426",
@@ -241,18 +253,6 @@
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
           "lastSeenAt": "2026-05-29T06:21:21Z"
-        },
-        "tt30460310": {
-          "contentId": "tt30460310",
-          "imdbId": "tt30460310",
-          "tmdbId": "220102",
-          "title": "Spider-Noir",
-          "type": "series",
-          "playCount": 8,
-          "completed": true,
-          "maxProgressValue": 2815.73,
-          "maxProgressPercent": 35.358218735,
-          "lastSeenAt": "2026-05-29T03:08:28Z"
         },
         "tt0831387": {
           "contentId": "tt0831387",
@@ -1268,7 +1268,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 14,
+          "playCount": 13,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

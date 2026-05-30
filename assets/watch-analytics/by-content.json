@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T21:41:57.434Z",
+  "generatedAt": "2026-05-30T22:00:09.188Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2227,7 +2227,7 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 14,
+      "totalEvents": 13,
       "totalStarts": 5,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
@@ -2238,7 +2238,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
+          "playCount": 13,
           "completedCount": 2,
           "startedCount": 5,
           "totalPlaybackProgress": 5612.777192470997,
@@ -2279,7 +2279,7 @@
         "s2e1": {
           "season": 2,
           "episode": 1,
-          "totalEvents": 6,
+          "totalEvents": 5,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1746.119,
@@ -2319,7 +2319,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 400.9127
+      "avgPlaybackProgress": 431.7521
     },
     {
       "contentId": "tt32897959",
@@ -2376,6 +2376,64 @@
         }
       },
       "avgPlaybackProgress": 1514.7235
+    },
+    {
+      "contentId": "tt30460310",
+      "imdbId": "tt30460310",
+      "tmdbId": "220102",
+      "title": "Spider-Noir",
+      "type": "series",
+      "totalEvents": 9,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 4706.626792373649,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-30T21:59:58Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 4706.626792373649,
+          "lastSeenAt": "2026-05-30T21:59:58Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4671.268573638648,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T21:59:58Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 35.358218735,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-28T00:57:35Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 522.9585
     },
     {
       "contentId": "tt0899043",
@@ -2488,64 +2546,6 @@
         }
       },
       "avgPlaybackProgress": 861.3589
-    },
-    {
-      "contentId": "tt30460310",
-      "imdbId": "tt30460310",
-      "tmdbId": "220102",
-      "title": "Spider-Noir",
-      "type": "series",
-      "totalEvents": 8,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 4706.626792373649,
-      "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-29T03:08:28Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 8,
-          "completedCount": 1,
-          "startedCount": 2,
-          "totalPlaybackProgress": 4706.626792373649,
-          "lastSeenAt": "2026-05-29T03:08:28Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 4671.268573638648,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-29T03:08:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 35.358218735,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-28T00:57:35Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 588.3283
     },
     {
       "contentId": "tt21209876",

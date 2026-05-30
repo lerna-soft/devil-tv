@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T19:45:21.576Z",
+  "generatedAt": "2026-05-30T19:45:30.200Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1390,13 +1390,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-05-30T19:45:11Z",
-      "totalEvents": 24,
+      "updatedAt": "2026-05-30T19:45:12Z",
+      "totalEvents": 25,
       "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
       "uniqueContentCount": 8,
-      "lastActivityAt": "2026-05-30T19:45:11Z",
+      "lastActivityAt": "2026-05-30T19:45:12Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt5311514",
@@ -1411,11 +1411,11 @@
           "tmdbId": "83533",
           "title": "Avatar: Fuego y ceniza",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T19:45:11Z"
+          "lastSeenAt": "2026-05-30T19:45:12Z"
         },
         "tt39333617": {
           "contentId": "tt39333617",
@@ -1502,7 +1502,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1815.097
+      "avgPlaybackProgress": 1742.4931
     },
     {
       "userEmail": "liz-munera@hotmail.com",

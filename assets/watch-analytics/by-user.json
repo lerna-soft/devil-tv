@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T12:05:06.354Z",
+  "generatedAt": "2026-05-30T12:41:50.956Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T05:39:18Z",
+      "updatedAt": "2026-05-30T12:41:41Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 279972.3578537512,
-      "uniqueContentCount": 113,
-      "lastActivityAt": "2026-05-30T05:39:18Z",
+      "totalPlaybackProgress": 281964.6195100982,
+      "uniqueContentCount": 112,
+      "lastActivityAt": "2026-05-30T12:41:41Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -164,11 +164,11 @@
           "tmdbId": "1087891",
           "title": "Amateur",
           "type": "movie",
-          "playCount": 7,
+          "playCount": 8,
           "completed": false,
           "maxProgressValue": 3775.326009272,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T05:39:18Z"
+          "lastSeenAt": "2026-05-30T12:41:41Z"
         },
         "tt12593682": {
           "contentId": "tt12593682",
@@ -1381,21 +1381,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-18T01:19:45Z"
-        },
-        "tt2400463": {
-          "contentId": "tt2400463",
-          "imdbId": "tt2400463",
-          "tmdbId": "",
-          "title": "The Invitation",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-17T07:16:34Z"
         }
       },
-      "avgPlaybackProgress": 559.9447
+      "avgPlaybackProgress": 563.9292
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

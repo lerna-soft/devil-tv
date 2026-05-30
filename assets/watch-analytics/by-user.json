@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-30T12:41:50.956Z",
+  "generatedAt": "2026-05-30T13:11:55.016Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T12:41:41Z",
+      "updatedAt": "2026-05-30T13:11:44Z",
       "totalEvents": 500,
-      "totalStarts": 196,
+      "totalStarts": 195,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 281964.6195100982,
-      "uniqueContentCount": 112,
-      "lastActivityAt": "2026-05-30T12:41:41Z",
+      "totalPlaybackProgress": 286307.1287662489,
+      "uniqueContentCount": 111,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -164,11 +164,11 @@
           "tmdbId": "1087891",
           "title": "Amateur",
           "type": "movie",
-          "playCount": 8,
+          "playCount": 9,
           "completed": false,
-          "maxProgressValue": 3775.326009272,
+          "maxProgressValue": 4342.509256150672,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T12:41:41Z"
+          "lastSeenAt": "2026-05-30T13:11:44Z"
         },
         "tt12593682": {
           "contentId": "tt12593682",
@@ -1369,21 +1369,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-18T13:26:03Z"
-        },
-        "tt17013106": {
-          "contentId": "tt17013106",
-          "imdbId": "tt17013106",
-          "tmdbId": "",
-          "title": "Black Knight",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T01:19:45Z"
         }
       },
-      "avgPlaybackProgress": 563.9292
+      "avgPlaybackProgress": 572.6143
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

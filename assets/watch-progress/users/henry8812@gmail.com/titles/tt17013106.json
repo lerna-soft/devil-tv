@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-18T01:19:45Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt17013106:s1e1:playing:2026-05-18T01:19:45Z",
-      "contentId": "tt17013106",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt17013106",
-      "tmdbId": "",
-      "title": "Black Knight",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-18T01:19:45Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

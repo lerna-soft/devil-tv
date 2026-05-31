@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-18T14:55:34Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt11570202:s1e1:preference:2026-05-18T14:55:34Z",
-      "contentId": "tt11570202",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt11570202",
-      "tmdbId": "",
-      "title": "The Silent Sea",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-18T14:55:34Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

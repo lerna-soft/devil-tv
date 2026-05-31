@@ -3,9 +3,9 @@
   "tmdbId": "539972",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 1903.92275,
-  "lastProgress": 1903.92275,
-  "updatedAt": "2026-05-31T05:43:26Z",
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-05-31T16:15:15Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-05-30T14:07:32.769Z",
@@ -14,6 +14,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T16:15:15Z",
+      "contentId": "tt8790086",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T14:07:32.769Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-31T16:15:15Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T05:43:26Z",
       "contentId": "tt8790086",

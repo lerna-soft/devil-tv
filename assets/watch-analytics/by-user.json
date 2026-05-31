@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-31T03:59:21.151Z",
+  "generatedAt": "2026-05-31T04:05:53.967Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-31T03:59:07Z",
+      "updatedAt": "2026-05-31T04:05:46Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 292597.58279884874,
-      "uniqueContentCount": 109,
-      "lastActivityAt": "2026-05-31T03:59:07Z",
+      "uniqueContentCount": 108,
+      "lastActivityAt": "2026-05-31T04:05:46Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -159,6 +159,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt8790086": {
+          "contentId": "tt8790086",
+          "imdbId": "tt8790086",
+          "tmdbId": "539972",
+          "title": "Kraven the Hunter",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-05-31T04:05:46Z"
+        },
         "tt21478426": {
           "contentId": "tt21478426",
           "imdbId": "tt21478426",
@@ -182,18 +194,6 @@
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,
           "lastSeenAt": "2026-05-30T22:06:58Z"
-        },
-        "tt8790086": {
-          "contentId": "tt8790086",
-          "imdbId": "tt8790086",
-          "tmdbId": "539972",
-          "title": "Kraven the Hunter",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T14:07:33Z"
         },
         "tt0899043": {
           "contentId": "tt0899043",
@@ -1334,18 +1334,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T01:58:08Z"
-        },
-        "tt9427166": {
-          "contentId": "tt9427166",
-          "imdbId": "tt9427166",
-          "tmdbId": "",
-          "title": "Father There Is Only One",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T01:58:06Z"
         }
       },
       "avgPlaybackProgress": 585.1952

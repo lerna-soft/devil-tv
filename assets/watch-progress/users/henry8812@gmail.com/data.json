@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-31T03:59:07Z",
+  "updatedAt": "2026-05-31T04:05:46Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2145,7 +2145,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-30T14:07:33Z",
+      "updatedAt": "2026-05-31T04:05:46Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-30T14:07:32.769Z",
@@ -2330,15 +2330,42 @@
     "updatedAt": "2026-05-30T19:12:20Z"
   },
   "lastWatch": {
-    "imdbId": "tt21478426",
-    "tmdbId": "1289601",
+    "imdbId": "tt8790086",
+    "tmdbId": "539972",
     "season": 1,
     "episode": 1,
-    "progress": 6290.4540326,
-    "updatedAt": "2026-05-31T03:59:07Z"
+    "progress": 0,
+    "updatedAt": "2026-05-31T04:05:46Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T04:05:46Z",
+      "contentId": "tt8790086",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T14:07:32.769Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-31T04:05:46Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt21478426:s1e1:started:2026-05-31T03:59:07Z",
       "contentId": "tt21478426",
@@ -15803,33 +15830,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-19T01:58:08Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt9427166:s1e1:preference:2026-05-19T01:58:06Z",
-      "contentId": "tt9427166",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt9427166",
-      "tmdbId": "",
-      "title": "Father There Is Only One",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T01:58:06Z",
       "country": "",
       "countryName": "",
       "city": "",

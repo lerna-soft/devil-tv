@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-31T16:45:55.937Z",
+  "generatedAt": "2026-05-31T17:39:36.014Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-31T16:45:30Z",
+      "updatedAt": "2026-05-31T17:39:22Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 300309.74264851573,
+      "totalPlaybackProgress": 307522.83941187087,
       "uniqueContentCount": 104,
-      "lastActivityAt": "2026-05-31T16:45:30Z",
+      "lastActivityAt": "2026-05-31T17:39:22Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -166,11 +166,11 @@
           "tmdbId": "539972",
           "title": "Kraven the Hunter",
           "type": "movie",
-          "playCount": 7,
+          "playCount": 8,
           "completed": false,
-          "maxProgressValue": 5808.237099667002,
+          "maxProgressValue": 7213.096763355,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-31T16:45:30Z"
+          "lastSeenAt": "2026-05-31T17:39:22Z"
         },
         "tt21478426": {
           "contentId": "tt21478426",
@@ -1270,7 +1270,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 12,
+          "playCount": 11,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,
@@ -1289,7 +1289,7 @@
           "lastSeenAt": "2026-05-19T03:08:28Z"
         }
       },
-      "avgPlaybackProgress": 600.6195
+      "avgPlaybackProgress": 615.0457
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

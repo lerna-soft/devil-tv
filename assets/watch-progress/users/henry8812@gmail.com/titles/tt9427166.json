@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-19T01:58:06Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "unknown:tt9427166:s1e1:preference:2026-05-19T01:58:06Z",
-      "contentId": "tt9427166",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt9427166",
-      "tmdbId": "",
-      "title": "Father There Is Only One",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T01:58:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

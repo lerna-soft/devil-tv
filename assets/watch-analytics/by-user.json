@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-31T01:51:00.940Z",
+  "generatedAt": "2026-05-31T03:25:21.892Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-30T23:36:27Z",
+      "updatedAt": "2026-05-31T03:25:10Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
       "totalPlaybackProgress": 286307.1287662489,
-      "uniqueContentCount": 110,
-      "lastActivityAt": "2026-05-30T23:36:27Z",
+      "uniqueContentCount": 109,
+      "lastActivityAt": "2026-05-31T03:25:10Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -164,11 +164,11 @@
           "tmdbId": "1289601",
           "title": "Life After Fighting",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T23:36:27Z"
+          "lastSeenAt": "2026-05-31T03:25:10Z"
         },
         "tt30460310": {
           "contentId": "tt30460310",
@@ -1345,18 +1345,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T01:58:06Z"
-        },
-        "tt11570202": {
-          "contentId": "tt11570202",
-          "imdbId": "tt11570202",
-          "tmdbId": "",
-          "title": "The Silent Sea",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-18T14:55:34Z"
         }
       },
       "avgPlaybackProgress": 572.6143

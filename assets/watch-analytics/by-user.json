@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-31T04:33:04.342Z",
+  "generatedAt": "2026-05-31T05:43:36.963Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-31T04:32:56Z",
+      "updatedAt": "2026-05-31T05:43:26Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 292597.58279884874,
-      "uniqueContentCount": 107,
-      "lastActivityAt": "2026-05-31T04:32:56Z",
+      "totalPlaybackProgress": 294501.50554884877,
+      "uniqueContentCount": 106,
+      "lastActivityAt": "2026-05-31T05:43:26Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -25,6 +25,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt8790086",
         "tt21478426",
         "tt0899043",
         "tt12593682",
@@ -165,11 +166,11 @@
           "tmdbId": "539972",
           "title": "Kraven the Hunter",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 1903.92275,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-31T04:32:56Z"
+          "lastSeenAt": "2026-05-31T05:43:26Z"
         },
         "tt21478426": {
           "contentId": "tt21478426",
@@ -1310,21 +1311,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T01:58:11Z"
-        },
-        "tt16452664": {
-          "contentId": "tt16452664",
-          "imdbId": "tt16452664",
-          "tmdbId": "",
-          "title": "Father There Is Only One 3",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T01:58:09Z"
         }
       },
-      "avgPlaybackProgress": 585.1952
+      "avgPlaybackProgress": 589.003
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

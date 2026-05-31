@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-05-31T04:33:04.338Z",
+  "generatedAt": "2026-05-31T05:43:36.957Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T05:43:26Z",
+      "contentId": "tt8790086",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 1903.92275,
+      "progressValue": 1903.92275,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-05-30T14:07:32.769Z",
+      "completedAt": "",
+      "updatedAt": "2026-05-31T05:43:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T04:32:56Z",
       "contentId": "tt8790086",
@@ -11088,27 +11109,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-19T01:58:11Z"
-    },
-    {
-      "eventId": "unknown:tt16452664:s1e1:preference:2026-05-19T01:58:09Z",
-      "contentId": "tt16452664",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16452664",
-      "tmdbId": "",
-      "title": "Father There Is Only One 3",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T01:58:09Z"
     },
     {
       "eventId": "unknown:tt29552248:s1e1:playing:2026-05-19T01:50:38Z",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T04:33:04.341Z",
+  "generatedAt": "2026-05-31T05:43:36.961Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2864,6 +2864,50 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt8790086",
+      "imdbId": "tt8790086",
+      "tmdbId": "539972",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "totalEvents": 5,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 1903.92275,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-31T05:43:26Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1903.92275,
+          "lastSeenAt": "2026-05-31T05:43:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 5,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1903.92275,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-31T05:43:26Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 380.7845
+    },
+    {
       "contentId": "tt21478426",
       "imdbId": "tt21478426",
       "tmdbId": "1289601",
@@ -3094,50 +3138,6 @@
         }
       },
       "avgPlaybackProgress": 617.0725
-    },
-    {
-      "contentId": "tt8790086",
-      "imdbId": "tt8790086",
-      "tmdbId": "539972",
-      "title": "Kraven the Hunter",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-31T04:32:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-31T04:32:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-31T04:32:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt14850054",
@@ -7553,50 +7553,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T01:58:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt16452664",
-      "imdbId": "tt16452664",
-      "tmdbId": "",
-      "title": "Father There Is Only One 3",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T01:58:09Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T01:58:09Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T01:58:09Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,6 +1,6 @@
 {
-  "version": 323,
-  "generatedAt": "2026-05-31T04:30:59.363Z",
+  "version": 324,
+  "generatedAt": "2026-05-31T04:31:13.914Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28193,6 +28193,22 @@
       "releaseDate": null,
       "overview": "Dirk Deitermann, Stephanie Fuchs",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZTMwODUxNzAtY2Y0OS00Yjg4LWExODktZDk5MTI2YjRiZTYyXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt3960748",
+      "title": "Spider-Man Versus Kraven the Hunter",
+      "year": 1974,
+      "releaseDate": null,
+      "overview": "Joe Ellison, A. Andrew Pastorio",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGM4MjBkNWMtMWUxYS00NGQ3LThjYTItMjlmNjhhZGFiNzkwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

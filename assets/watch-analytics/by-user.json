@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-31T16:45:19.404Z",
+  "generatedAt": "2026-05-31T16:45:38.092Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-31T16:15:15Z",
+      "updatedAt": "2026-05-31T16:45:30Z",
       "totalEvents": 500,
       "totalStarts": 196,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 294501.50554884877,
-      "uniqueContentCount": 105,
-      "lastActivityAt": "2026-05-31T16:15:15Z",
+      "totalPlaybackProgress": 300309.74264851573,
+      "uniqueContentCount": 104,
+      "lastActivityAt": "2026-05-31T16:45:30Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -166,11 +166,11 @@
           "tmdbId": "539972",
           "title": "Kraven the Hunter",
           "type": "movie",
-          "playCount": 6,
+          "playCount": 7,
           "completed": false,
-          "maxProgressValue": 1903.92275,
+          "maxProgressValue": 5808.237099667002,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-31T16:15:15Z"
+          "lastSeenAt": "2026-05-31T16:45:30Z"
         },
         "tt21478426": {
           "contentId": "tt21478426",
@@ -1287,21 +1287,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T03:08:28Z"
-        },
-        "tt34987195": {
-          "contentId": "tt34987195",
-          "imdbId": "tt34987195",
-          "tmdbId": "",
-          "title": "Father There is Only One 5",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T01:58:13Z"
         }
       },
-      "avgPlaybackProgress": 589.003
+      "avgPlaybackProgress": 600.6195
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

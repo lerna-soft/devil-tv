@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T16:45:19.402Z",
+  "generatedAt": "2026-05-31T16:45:38.090Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2725,22 +2725,22 @@
       "tmdbId": "539972",
       "title": "Kraven the Hunter",
       "type": "movie",
-      "totalEvents": 6,
+      "totalEvents": 7,
       "totalStarts": 1,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 1903.92275,
+      "totalPlaybackProgress": 7712.159849667002,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-31T16:15:15Z",
+      "lastActivityAt": "2026-05-31T16:45:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 6,
+          "playCount": 7,
           "completedCount": 0,
           "startedCount": 1,
-          "totalPlaybackProgress": 1903.92275,
-          "lastSeenAt": "2026-05-31T16:15:15Z",
+          "totalPlaybackProgress": 7712.159849667002,
+          "lastSeenAt": "2026-05-31T16:45:30Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -2749,19 +2749,19 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 6,
+          "totalEvents": 7,
           "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 1903.92275,
+          "totalPlaybackProgress": 7712.159849667002,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-31T16:15:15Z",
+          "lastActivityAt": "2026-05-31T16:45:30Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 317.3205
+      "avgPlaybackProgress": 1101.7371
     },
     {
       "contentId": "tt5311514",
@@ -7465,50 +7465,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T03:08:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt34987195",
-      "imdbId": "tt34987195",
-      "tmdbId": "",
-      "title": "Father There is Only One 5",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T01:58:13Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T01:58:13Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T01:58:13Z",
           "users": {
             "henry8812@gmail.com": true
           },

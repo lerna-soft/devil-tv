@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-01T03:32:06.801Z",
+  "generatedAt": "2026-06-01T03:44:18.439Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 570,
-  "totalStarts": 212,
+  "totalStarts": 213,
   "totalCompletions": 73,
-  "overallCompletionRate": 0.3443,
+  "overallCompletionRate": 0.3427,
   "trackedTitles": 126,
   "mostWatchedContent": [
     {
@@ -20,9 +20,9 @@
       "contentId": "tt2560140",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 92,
+      "totalEvents": 93,
       "uniqueUsers": 1,
-      "completionRate": 0.0833
+      "completionRate": 0.082
     },
     {
       "contentId": "tt21209804",
@@ -81,12 +81,12 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt14452776",
-      "title": "The Bear",
-      "type": "series",
-      "totalEvents": 9,
+      "contentId": "tt8790086",
+      "title": "Kraven the Hunter",
+      "type": "movie",
+      "totalEvents": 8,
       "uniqueUsers": 1,
-      "completionRate": 0.6667
+      "completionRate": 0
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-01T07:59:16Z",
+  "updatedAt": "2026-06-01T08:01:51Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1474,8 +1474,14 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-22T20:09:05Z",
-      "watched": {}
+      "updatedAt": "2026-06-01T08:01:51Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-01T08:01:51.185Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "tt3766354": {
       "imdbId": "tt3766354",
@@ -2418,15 +2424,42 @@
     "updatedAt": "2026-06-01T01:39:42Z"
   },
   "lastWatch": {
-    "imdbId": "tt0369610",
-    "tmdbId": "135397",
+    "imdbId": "tt4881806",
+    "tmdbId": "351286",
     "season": 1,
     "episode": 1,
-    "progress": 6598.436935677333,
-    "updatedAt": "2026-06-01T07:59:16Z"
+    "progress": 0,
+    "updatedAt": "2026-06-01T08:01:51Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4881806:s1e1:started:2026-06-01T08:01:51Z",
+      "contentId": "tt4881806",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T08:01:51.185Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T08:01:51Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0369610:s1e1:started:2026-06-01T07:59:16Z",
       "contentId": "tt0369610",
@@ -15891,33 +15924,6 @@
       "startedAt": "2026-05-19T05:10:43.985Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T05:40:46Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0388629:s1e5:started:2026-05-19T05:16:51Z",
-      "contentId": "tt0388629",
-      "episodeKey": "s1e5",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0388629",
-      "tmdbId": "",
-      "title": "One Piece",
-      "type": "series",
-      "season": 1,
-      "episode": 5,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T05:16:50.073Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T05:16:51Z",
       "country": "",
       "countryName": "",
       "city": "",

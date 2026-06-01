@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-01T07:59:27.823Z",
+  "generatedAt": "2026-06-01T08:02:01.036Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt4881806:s1e1:started:2026-06-01T08:01:51Z",
+      "contentId": "tt4881806",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T08:01:51.185Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T08:01:51Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0369610:s1e1:started:2026-06-01T07:59:16Z",
       "contentId": "tt0369610",
@@ -11025,27 +11046,6 @@
       "startedAt": "2026-05-19T04:28:10.666Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T05:28:17Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0388629:s1e5:started:2026-05-19T05:16:51Z",
-      "contentId": "tt0388629",
-      "episodeKey": "s1e5",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0388629",
-      "tmdbId": "",
-      "title": "One Piece",
-      "type": "series",
-      "season": 1,
-      "episode": 5,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T05:16:50.073Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T05:16:51Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T04:58:14Z",

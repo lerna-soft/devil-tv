@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T07:29:41.902Z",
+  "generatedAt": "2026-06-01T07:59:27.829Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T07:29:15Z",
+      "updatedAt": "2026-06-01T07:59:16Z",
       "totalEvents": 500,
-      "totalStarts": 200,
+      "totalStarts": 199,
       "totalCompletions": 70,
-      "totalPlaybackProgress": 304255.5304771938,
+      "totalPlaybackProgress": 310853.96741287125,
       "uniqueContentCount": 104,
-      "lastActivityAt": "2026-06-01T07:29:15Z",
+      "lastActivityAt": "2026-06-01T07:59:16Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -166,11 +166,11 @@
           "tmdbId": "135397",
           "title": "Jurassic World",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 2345.468257793998,
+          "maxProgressValue": 6598.436935677333,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-01T07:29:15Z"
+          "lastSeenAt": "2026-06-01T07:59:16Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1282,14 +1282,14 @@
           "tmdbId": "",
           "title": "One Piece",
           "type": "series",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T05:16:51Z"
         }
       },
-      "avgPlaybackProgress": 608.5111
+      "avgPlaybackProgress": 621.7079
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

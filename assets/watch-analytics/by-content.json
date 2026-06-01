@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T18:31:50.401Z",
+  "generatedAt": "2026-06-01T18:37:38.528Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1945,21 +1945,21 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 27,
+      "totalEvents": 26,
       "totalStarts": 12,
-      "totalCompletions": 10,
-      "totalPlaybackProgress": 37101.402714,
+      "totalCompletions": 9,
+      "totalPlaybackProgress": 33856.692715000005,
       "uniqueUsers": 1,
-      "completionRate": 0.8333,
+      "completionRate": 0.75,
       "lastActivityAt": "2026-05-19T17:04:21Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 27,
-          "completedCount": 10,
+          "playCount": 26,
+          "completedCount": 9,
           "startedCount": 12,
-          "totalPlaybackProgress": 37101.402714,
+          "totalPlaybackProgress": 33856.692715000005,
           "lastSeenAt": "2026-05-19T17:04:21Z",
           "lastSeason": 2,
           "lastEpisode": 6
@@ -2133,23 +2133,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 3244.709999,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T06:55:17Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1374.126
+      "avgPlaybackProgress": 1302.1805
     },
     {
       "contentId": "tt0965547",
@@ -2157,22 +2143,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 19,
+      "totalEvents": 20,
       "totalStarts": 9,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 3904.0396236527417,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 5293.103726652742,
       "uniqueUsers": 1,
-      "completionRate": 0.2222,
-      "lastActivityAt": "2026-06-01T18:31:30Z",
+      "completionRate": 0.3333,
+      "lastActivityAt": "2026-06-01T18:37:20Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 19,
-          "completedCount": 2,
+          "playCount": 20,
+          "completedCount": 3,
           "startedCount": 9,
-          "totalPlaybackProgress": 3904.0396236527417,
-          "lastSeenAt": "2026-06-01T18:31:30Z",
+          "totalPlaybackProgress": 5293.103726652742,
+          "lastSeenAt": "2026-06-01T18:37:20Z",
           "lastSeason": 1,
           "lastEpisode": 10
         }
@@ -2181,16 +2167,16 @@
         "s1e10": {
           "season": 1,
           "episode": 10,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1389.064103,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-01T18:31:30Z",
+          "lastActivityAt": "2026-06-01T18:37:20Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e9": {
           "season": 1,
@@ -2305,7 +2291,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 205.4758
+      "avgPlaybackProgress": 264.6552
     },
     {
       "contentId": "tt29552248",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T07:59:27.829Z",
+  "generatedAt": "2026-06-01T08:02:01.041Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T07:59:16Z",
+      "updatedAt": "2026-06-01T08:01:51Z",
       "totalEvents": 500,
       "totalStarts": 199,
       "totalCompletions": 70,
       "totalPlaybackProgress": 310853.96741287125,
-      "uniqueContentCount": 104,
-      "lastActivityAt": "2026-06-01T07:59:16Z",
+      "uniqueContentCount": 103,
+      "lastActivityAt": "2026-06-01T08:01:51Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt4881806": {
+          "contentId": "tt4881806",
+          "imdbId": "tt4881806",
+          "tmdbId": "351286",
+          "title": "Jurassic World: El reino caído",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T08:01:51Z"
         },
         "tt0369610": {
           "contentId": "tt0369610",
@@ -760,18 +772,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:09:09Z"
         },
-        "tt4881806": {
-          "contentId": "tt4881806",
-          "imdbId": "tt4881806",
-          "tmdbId": "351286",
-          "title": "Jurassic World: El reino caído",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:09:05Z"
-        },
         "tt6806448": {
           "contentId": "tt6806448",
           "imdbId": "tt6806448",
@@ -1275,18 +1275,6 @@
           "maxProgressValue": 3489.7588178220017,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T05:42:03Z"
-        },
-        "tt0388629": {
-          "contentId": "tt0388629",
-          "imdbId": "tt0388629",
-          "tmdbId": "",
-          "title": "One Piece",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:16:51Z"
         }
       },
       "avgPlaybackProgress": 621.7079

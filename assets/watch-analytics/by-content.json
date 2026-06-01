@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T07:59:27.827Z",
+  "generatedAt": "2026-06-01T08:02:01.039Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3602,6 +3602,50 @@
       "avgPlaybackProgress": 856.1757
     },
     {
+      "contentId": "tt4881806",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T08:01:51Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-01T08:01:51Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T08:01:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt1757678",
       "imdbId": "tt1757678",
       "tmdbId": "83533",
@@ -6180,50 +6224,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt4881806",
-      "imdbId": "tt4881806",
-      "tmdbId": "351286",
-      "title": "Jurassic World: El reino caído",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:09:05Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:09:05Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:09:05Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt6806448",
       "imdbId": "tt6806448",
       "tmdbId": "384018",
@@ -7491,50 +7491,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T05:57:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0388629",
-      "imdbId": "tt0388629",
-      "tmdbId": "",
-      "title": "One Piece",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T05:16:51Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T05:16:51Z",
-          "lastSeason": 1,
-          "lastEpisode": 5
-        }
-      },
-      "episodes": {
-        "s1e5": {
-          "season": 1,
-          "episode": 5,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T05:16:51Z",
           "users": {
             "henry8812@gmail.com": true
           },

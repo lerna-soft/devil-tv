@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T06:17:10.321Z",
+  "generatedAt": "2026-06-01T06:45:54.813Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T06:17:01Z",
+      "updatedAt": "2026-06-01T06:45:45Z",
       "totalEvents": 500,
       "totalStarts": 200,
       "totalCompletions": 70,
       "totalPlaybackProgress": 301910.06221939984,
       "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T06:17:01Z",
+      "lastActivityAt": "2026-06-01T06:45:45Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -165,11 +165,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 101,
+          "playCount": 102,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-06-01T06:17:01Z"
+          "lastSeenAt": "2026-06-01T06:45:45Z"
         },
         "tt4543708": {
           "contentId": "tt4543708",
@@ -1245,7 +1245,7 @@
           "tmdbId": "302946",
           "title": "El contable",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

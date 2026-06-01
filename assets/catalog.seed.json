@@ -1,6 +1,6 @@
 {
-  "version": 331,
-  "generatedAt": "2026-06-01T08:01:21.688Z",
+  "version": 332,
+  "generatedAt": "2026-06-01T15:04:18.448Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52193,6 +52193,22 @@
       "releaseDate": null,
       "overview": "Paul-Mikél Williams, Kausar Mohammed",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTg0OWM1YWEtMDUzMC00NmE1LWJhZGUtMzdkMDg4MTM0ZDI5XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "74145",
+      "imdbId": null,
+      "title": "Algo en que creer",
+      "year": 2017,
+      "releaseDate": null,
+      "overview": "Situada en la Dinamarca actual, la historia se centra en una familia liderada por un pastor perteneciente a una larga tradición de religiosos. Férreo creyente, Johannes es un ferviente y a veces agresivo ministro de la Iglesia de Dinamarca... Nueva serie del creador de la aclamada \"Borgen\". (FILMAFFINITY)",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xWkDz3zo7WETiKgz1Bn2tsvq63T.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

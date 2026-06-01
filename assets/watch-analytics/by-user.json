@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T00:17:14.437Z",
+  "generatedAt": "2026-06-01T01:39:50.137Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-05-31T17:39:22Z",
+      "updatedAt": "2026-06-01T01:39:42Z",
       "totalEvents": 500,
-      "totalStarts": 196,
+      "totalStarts": 195,
       "totalCompletions": 72,
       "totalPlaybackProgress": 307522.83941187087,
-      "uniqueContentCount": 104,
-      "lastActivityAt": "2026-05-31T17:39:22Z",
+      "uniqueContentCount": 105,
+      "lastActivityAt": "2026-06-01T01:39:42Z",
       "completedContentIds": [
         "tt30460310",
         "tt0965547",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt4543708": {
+          "contentId": "tt4543708",
+          "imdbId": "tt4543708",
+          "tmdbId": "62263",
+          "title": "Impastor",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T01:39:42Z"
         },
         "tt8790086": {
           "contentId": "tt8790086",
@@ -1270,7 +1282,7 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 11,
+          "playCount": 10,
           "completed": true,
           "maxProgressValue": 1799.798,
           "maxProgressPercent": 0,

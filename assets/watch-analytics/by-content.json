@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T00:17:14.435Z",
+  "generatedAt": "2026-06-01T01:39:50.136Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2355,20 +2355,20 @@
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 5,
+      "totalEvents": 10,
+      "totalStarts": 4,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
       "uniqueUsers": 1,
-      "completionRate": 0.4,
+      "completionRate": 0.5,
       "lastActivityAt": "2026-05-19T04:44:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
+          "playCount": 10,
           "completedCount": 2,
-          "startedCount": 5,
+          "startedCount": 4,
           "totalPlaybackProgress": 5612.777192470997,
           "lastSeenAt": "2026-05-19T04:44:02Z",
           "lastSeason": 2,
@@ -2431,23 +2431,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T03:03:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 510.2525
+      "avgPlaybackProgress": 561.2777
     },
     {
       "contentId": "tt0899043",
@@ -4304,6 +4290,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt4543708",
+      "imdbId": "tt4543708",
+      "tmdbId": "62263",
+      "title": "Impastor",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T01:39:42Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-01T01:39:42Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T01:39:42Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "405775",

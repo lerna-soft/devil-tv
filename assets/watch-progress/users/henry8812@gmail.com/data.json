@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-05-31T17:39:22Z",
+  "updatedAt": "2026-06-01T01:39:42Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2185,6 +2185,22 @@
           "lastProgress": 6290.4540326
         }
       }
+    },
+    "tt4543708": {
+      "imdbId": "tt4543708",
+      "tmdbId": "62263",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-01T01:39:42Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-01T01:39:42Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2325,20 +2341,48 @@
       "tt12593682": true,
       "tt8790086": true,
       "tt0899043": true,
-      "tt21478426": true
+      "tt21478426": true,
+      "tt4543708": true
     },
-    "updatedAt": "2026-05-30T19:12:20Z"
+    "updatedAt": "2026-06-01T01:39:42Z"
   },
   "lastWatch": {
-    "imdbId": "tt8790086",
-    "tmdbId": "539972",
+    "imdbId": "tt4543708",
+    "tmdbId": "62263",
     "season": 1,
     "episode": 1,
-    "progress": 7213.096763355,
-    "updatedAt": "2026-05-31T17:39:22Z"
+    "progress": 0,
+    "updatedAt": "2026-06-01T01:39:42Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4543708:s1e1:preference:2026-06-01T01:39:42Z",
+      "contentId": "tt4543708",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4543708",
+      "tmdbId": "62263",
+      "title": "Impastor",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T01:39:42Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:tt8790086:s1e1:started:2026-05-31T17:39:22Z",
       "contentId": "tt8790086",
@@ -15803,33 +15847,6 @@
       "startedAt": "2026-05-19T03:08:27.142Z",
       "completedAt": "PlayerStatus: playing",
       "updatedAt": "2026-05-19T03:08:28Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "unknown:tt14452776:s1e1:playing:2026-05-19T03:03:36Z",
-      "contentId": "tt14452776",
-      "episodeKey": "s1e1",
-      "userEmail": "",
-      "userName": "",
-      "imdbId": "tt14452776",
-      "tmdbId": "136315",
-      "title": "The Bear",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T03:03:36Z",
       "country": "",
       "countryName": "",
       "city": "",

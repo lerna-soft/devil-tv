@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-01T18:37:38.523Z",
+  "generatedAt": "2026-06-01T18:37:50.383Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 570,
   "totalStarts": 216,
   "totalCompletions": 71,
-  "overallCompletionRate": 0.3287,
+  "overallCompletionRate": 0.3241,
   "trackedTitles": 125,
   "mostWatchedContent": [
     {
@@ -36,17 +36,17 @@
       "contentId": "tt16030542",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 26,
+      "totalEvents": 25,
       "uniqueUsers": 1,
-      "completionRate": 0.75
+      "completionRate": 0.8182
     },
     {
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 20,
+      "totalEvents": 21,
       "uniqueUsers": 1,
-      "completionRate": 0.3333
+      "completionRate": 0.3
     },
     {
       "contentId": "tt29552248",

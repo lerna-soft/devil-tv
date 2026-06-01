@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T03:10:39.139Z",
+  "generatedAt": "2026-06-01T03:32:06.804Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,27 +723,41 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 91,
-      "totalStarts": 59,
+      "totalEvents": 92,
+      "totalStarts": 60,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
-      "completionRate": 0.0847,
-      "lastActivityAt": "2026-06-01T03:10:31Z",
+      "completionRate": 0.0833,
+      "lastActivityAt": "2026-06-01T03:31:58Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 91,
+          "playCount": 92,
           "completedCount": 5,
-          "startedCount": 59,
+          "startedCount": 60,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-06-01T03:10:31Z",
+          "lastSeenAt": "2026-06-01T03:31:58Z",
           "lastSeason": 4,
-          "lastEpisode": 1
+          "lastEpisode": 2
         }
       },
       "episodes": {
+        "s4e2": {
+          "season": 4,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T03:31:58Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s4e1": {
           "season": 4,
           "episode": 1,
@@ -1571,7 +1585,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 86.4478
+      "avgPlaybackProgress": 85.5082
     },
     {
       "contentId": "tt21209804",
@@ -2350,25 +2364,69 @@
       "avgPlaybackProgress": 427.8752
     },
     {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
+    },
+    {
       "contentId": "tt14452776",
       "imdbId": "tt14452776",
       "tmdbId": "136315",
       "title": "The Bear",
       "type": "series",
-      "totalEvents": 10,
-      "totalStarts": 4,
+      "totalEvents": 9,
+      "totalStarts": 3,
       "totalCompletions": 2,
       "totalPlaybackProgress": 5612.777192470997,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
+      "completionRate": 0.6667,
       "lastActivityAt": "2026-05-19T04:44:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
+          "playCount": 9,
           "completedCount": 2,
-          "startedCount": 4,
+          "startedCount": 3,
           "totalPlaybackProgress": 5612.777192470997,
           "lastSeenAt": "2026-05-19T04:44:02Z",
           "lastSeason": 2,
@@ -2417,67 +2475,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s1e5": {
-          "season": 1,
-          "episode": 5,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T03:09:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 561.2777
-    },
-    {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
+      "avgPlaybackProgress": 623.6419
     },
     {
       "contentId": "tt8790086",

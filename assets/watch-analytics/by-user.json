@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T10:34:29.926Z",
+  "generatedAt": "2026-06-01T15:04:35.229Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T09:12:31Z",
+      "updatedAt": "2026-06-01T15:04:22Z",
       "totalEvents": 500,
       "totalStarts": 199,
       "totalCompletions": 70,
       "totalPlaybackProgress": 316013.01830386167,
-      "uniqueContentCount": 102,
-      "lastActivityAt": "2026-06-01T09:12:31Z",
+      "uniqueContentCount": 103,
+      "lastActivityAt": "2026-06-01T15:04:22Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt31193547": {
+          "contentId": "tt31193547",
+          "imdbId": "tt31193547",
+          "tmdbId": "1252382",
+          "title": "Tyler Perry's Finding Joy",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T15:04:22Z"
         },
         "tt8041270": {
           "contentId": "tt8041270",
@@ -1258,7 +1270,7 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 31,
+          "playCount": 30,
           "completed": true,
           "maxProgressValue": 3486.708389,
           "maxProgressPercent": 0,

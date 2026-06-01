@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-01T18:43:10.881Z",
+  "generatedAt": "2026-06-01T18:59:29.503Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e13:completed:2026-06-01T18:59:15Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e13",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 13,
+      "progress": 1389.667822,
+      "progressValue": 1389.667822,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-01T18:42:43.782Z",
+      "completedAt": "2026-06-01T18:59:14.021Z",
+      "updatedAt": "2026-06-01T18:59:15Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e13:started:2026-06-01T18:42:44Z",
       "contentId": "tt0965547",
@@ -11004,27 +11025,6 @@
       "startedAt": "2026-05-19T07:59:03.229Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T07:59:04Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt16030542:s1e5:completed:2026-05-19T07:58:59Z",
-      "contentId": "tt16030542",
-      "episodeKey": "s1e5",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16030542",
-      "tmdbId": "",
-      "title": "The Recruit",
-      "type": "series",
-      "season": 1,
-      "episode": 5,
-      "progress": 3050.730497,
-      "progressValue": 3050.730497,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-19T07:51:40.116Z",
-      "completedAt": "2026-05-19T07:58:58.495Z",
-      "updatedAt": "2026-05-19T07:58:59Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

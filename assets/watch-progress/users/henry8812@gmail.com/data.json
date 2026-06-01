@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-01T01:39:42Z",
+  "updatedAt": "2026-06-01T03:10:31Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1810,7 +1810,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-29T06:21:21Z",
+      "updatedAt": "2026-06-01T03:10:31Z",
       "watched": {
         "s1e21": {
           "startedAt": "2026-05-27T01:39:53.746Z",
@@ -2013,7 +2013,7 @@
           "lastProgress": 0
         },
         "s4e1": {
-          "startedAt": "2026-05-28T17:28:34.406Z",
+          "startedAt": "2026-06-01T03:10:30.654Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2347,15 +2347,42 @@
     "updatedAt": "2026-06-01T01:39:42Z"
   },
   "lastWatch": {
-    "imdbId": "tt4543708",
-    "tmdbId": "62263",
-    "season": 1,
+    "imdbId": "tt2560140",
+    "tmdbId": "1429",
+    "season": 4,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-01T01:39:42Z"
+    "updatedAt": "2026-06-01T03:10:31Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2560140:s4e1:started:2026-06-01T03:10:31Z",
+      "contentId": "tt2560140",
+      "episodeKey": "s4e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2560140",
+      "tmdbId": "1429",
+      "title": "Attack on Titan",
+      "type": "series",
+      "season": 4,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T03:10:30.654Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T03:10:31Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt4543708:s1e1:preference:2026-06-01T01:39:42Z",
       "contentId": "tt4543708",
@@ -15820,33 +15847,6 @@
       "startedAt": "2026-05-15T18:38:57.815Z",
       "completedAt": "PlayerStatus: playing",
       "updatedAt": "2026-05-19T03:09:11Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1830617:s1e1:started:2026-05-19T03:08:28Z",
-      "contentId": "tt1830617",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1830617",
-      "tmdbId": "39351",
-      "title": "Grimm",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T03:08:27.142Z",
-      "completedAt": "PlayerStatus: playing",
-      "updatedAt": "2026-05-19T03:08:28Z",
       "country": "",
       "countryName": "",
       "city": "",

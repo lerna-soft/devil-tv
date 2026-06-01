@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T01:39:50.136Z",
+  "generatedAt": "2026-06-01T03:10:39.139Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -723,22 +723,22 @@
       "tmdbId": "1429",
       "title": "Attack on Titan",
       "type": "series",
-      "totalEvents": 90,
+      "totalEvents": 91,
       "totalStarts": 59,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7866.750147403975,
       "uniqueUsers": 1,
       "completionRate": 0.0847,
-      "lastActivityAt": "2026-05-29T06:21:21Z",
+      "lastActivityAt": "2026-06-01T03:10:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 90,
+          "playCount": 91,
           "completedCount": 5,
           "startedCount": 59,
           "totalPlaybackProgress": 7866.750147403975,
-          "lastSeenAt": "2026-05-29T06:21:21Z",
+          "lastSeenAt": "2026-06-01T03:10:31Z",
           "lastSeason": 4,
           "lastEpisode": 1
         }
@@ -747,12 +747,12 @@
         "s4e1": {
           "season": 4,
           "episode": 1,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-29T06:21:21Z",
+          "lastActivityAt": "2026-06-01T03:10:31Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1571,7 +1571,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 87.4083
+      "avgPlaybackProgress": 86.4478
     },
     {
       "contentId": "tt21209804",
@@ -7451,50 +7451,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T18:30:31Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1830617",
-      "imdbId": "tt1830617",
-      "tmdbId": "39351",
-      "title": "Grimm",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T03:08:28Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T03:08:28Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T03:08:28Z",
           "users": {
             "henry8812@gmail.com": true
           },

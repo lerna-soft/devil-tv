@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T08:02:01.041Z",
+  "generatedAt": "2026-06-01T08:32:10.230Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T08:01:51Z",
+      "updatedAt": "2026-06-01T08:31:58Z",
       "totalEvents": 500,
       "totalStarts": 199,
       "totalCompletions": 70,
-      "totalPlaybackProgress": 310853.96741287125,
+      "totalPlaybackProgress": 310387.2185122883,
       "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T08:01:51Z",
+      "lastActivityAt": "2026-06-01T08:31:58Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -24,6 +24,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt4881806",
         "tt0369610",
         "tt8790086",
         "tt21478426",
@@ -36,8 +37,7 @@
         "tt0293662",
         "tt1615160",
         "tt1234721",
-        "tt0865556",
-        "tt7068946"
+        "tt0865556"
       ],
       "content": {
         "15070": {
@@ -166,11 +166,11 @@
           "tmdbId": "351286",
           "title": "Jurassic World: El reino caído",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 3023.009917239003,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-01T08:01:51Z"
+          "lastSeenAt": "2026-06-01T08:31:58Z"
         },
         "tt0369610": {
           "contentId": "tt0369610",
@@ -1270,14 +1270,14 @@
           "tmdbId": "",
           "title": "The Accountant 2",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
-          "maxProgressValue": 3489.7588178220017,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T05:42:03Z"
         }
       },
-      "avgPlaybackProgress": 621.7079
+      "avgPlaybackProgress": 620.7744
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T04:46:59.962Z",
+  "generatedAt": "2026-06-01T05:01:40.933Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T04:46:47Z",
+      "updatedAt": "2026-06-01T05:01:32Z",
       "totalEvents": 500,
-      "totalStarts": 198,
-      "totalCompletions": 71,
-      "totalPlaybackProgress": 303984.8663249959,
+      "totalStarts": 199,
+      "totalCompletions": 70,
+      "totalPlaybackProgress": 302185.06832499587,
       "uniqueContentCount": 104,
-      "lastActivityAt": "2026-06-01T04:46:47Z",
+      "lastActivityAt": "2026-06-01T05:01:32Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -20,8 +20,7 @@
         "tt21209804",
         "tt0903747",
         "tt1190634",
-        "tt16030542",
-        "tt14452776"
+        "tt16030542"
       ],
       "inProgressContentIds": [
         "274870",
@@ -37,7 +36,8 @@
         "tt1615160",
         "tt1234721",
         "tt0865556",
-        "tt7068946"
+        "tt7068946",
+        "tt14452776"
       ],
       "content": {
         "15070": {
@@ -166,11 +166,11 @@
           "tmdbId": "1429",
           "title": "Attack on Titan",
           "type": "series",
-          "playCount": 98,
+          "playCount": 99,
           "completed": true,
           "maxProgressValue": 1435.1092795918366,
           "maxProgressPercent": 41.870621,
-          "lastSeenAt": "2026-06-01T04:46:47Z"
+          "lastSeenAt": "2026-06-01T05:01:32Z"
         },
         "tt4543708": {
           "contentId": "tt4543708",
@@ -1282,14 +1282,14 @@
           "tmdbId": "136315",
           "title": "The Bear",
           "type": "series",
-          "playCount": 3,
-          "completed": true,
-          "maxProgressValue": 1799.798,
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 275.00610559600005,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T04:44:02Z"
         }
       },
-      "avgPlaybackProgress": 607.9697
+      "avgPlaybackProgress": 604.3701
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

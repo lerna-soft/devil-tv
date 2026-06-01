@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T10:34:29.924Z",
+  "generatedAt": "2026-06-01T15:04:35.228Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1945,7 +1945,7 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 31,
+      "totalEvents": 30,
       "totalStarts": 14,
       "totalCompletions": 11,
       "totalPlaybackProgress": 40578.126499000005,
@@ -1956,7 +1956,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 31,
+          "playCount": 30,
           "completedCount": 11,
           "startedCount": 14,
           "totalPlaybackProgress": 40578.126499000005,
@@ -2067,7 +2067,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 3052.724858,
@@ -2163,7 +2163,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1308.9718
+      "avgPlaybackProgress": 1352.6042
     },
     {
       "contentId": "tt0965547",
@@ -4286,6 +4286,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt31193547",
+      "imdbId": "tt31193547",
+      "tmdbId": "1252382",
+      "title": "Tyler Perry's Finding Joy",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T15:04:22Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-01T15:04:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T15:04:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt8041270",

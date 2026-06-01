@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-01T10:34:29.920Z",
+  "generatedAt": "2026-06-01T15:04:35.224Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt31193547:s1e1:preference:2026-06-01T15:04:22Z",
+      "contentId": "tt31193547",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt31193547",
+      "tmdbId": "1252382",
+      "title": "Tyler Perry's Finding Joy",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T15:04:22Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt8041270:s1e1:started:2026-06-01T09:12:31Z",
       "contentId": "tt8041270",
@@ -11004,27 +11025,6 @@
       "startedAt": "2026-05-19T06:25:25.190Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T06:25:26Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt16030542:s1e1:started:2026-05-19T06:07:57Z",
-      "contentId": "tt16030542",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16030542",
-      "tmdbId": "",
-      "title": "The Recruit",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T06:07:56.058Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T06:07:57Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

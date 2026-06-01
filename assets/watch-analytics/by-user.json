@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-01T16:24:30.283Z",
+  "generatedAt": "2026-06-01T18:29:24.530Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T15:04:22Z",
+      "updatedAt": "2026-06-01T18:29:12Z",
       "totalEvents": 500,
-      "totalStarts": 199,
+      "totalStarts": 198,
       "totalCompletions": 70,
       "totalPlaybackProgress": 316013.01830386167,
       "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T15:04:22Z",
+      "lastActivityAt": "2026-06-01T18:29:12Z",
       "completedContentIds": [
+        "tt0965547",
         "tt2560140",
         "tt30460310",
-        "tt0965547",
         "tt21209804",
         "tt0903747",
         "tt1190634",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 17,
+          "completed": true,
+          "maxProgressValue": 1389.5981843537415,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T18:29:12Z"
         },
         "tt31193547": {
           "contentId": "tt31193547",
@@ -303,18 +315,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T22:45:11Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 16,
-          "completed": true,
-          "maxProgressValue": 1389.5981843537415,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T16:56:34Z"
         },
         "tt0831387": {
           "contentId": "tt0831387",
@@ -1270,7 +1270,7 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 30,
+          "playCount": 29,
           "completed": true,
           "maxProgressValue": 3486.708389,
           "maxProgressPercent": 0,

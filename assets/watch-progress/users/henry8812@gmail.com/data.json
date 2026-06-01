@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-01T18:59:29Z",
+  "updatedAt": "2026-06-01T21:12:36Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2121,9 +2121,9 @@
       "tmdbId": "42573",
       "lastSeason": 1,
       "lastEpisode": 14,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-01T18:59:29Z",
+      "progress": 785.417041,
+      "lastProgress": 785.417041,
+      "updatedAt": "2026-06-01T21:12:36Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2188,7 +2188,7 @@
         "s1e14": {
           "startedAt": "2026-06-01T18:59:28.912Z",
           "completedAt": "",
-          "lastProgress": 0
+          "lastProgress": 785.417041
         }
       }
     },
@@ -2486,11 +2486,38 @@
     "tmdbId": "42573",
     "season": 1,
     "episode": 14,
-    "progress": 0,
-    "updatedAt": "2026-06-01T18:59:29Z"
+    "progress": 785.417041,
+    "updatedAt": "2026-06-01T21:12:36Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e14:started:2026-06-01T21:12:36Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e14",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 14,
+      "progress": 785.417041,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T18:59:28.912Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T21:12:36Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e14:started:2026-06-01T18:59:29Z",
       "contentId": "tt0965547",
@@ -15955,33 +15982,6 @@
       "startedAt": "2026-05-19T08:12:19.138Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T08:12:20Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt16030542:s1e6:completed:2026-05-19T08:12:12Z",
-      "contentId": "tt16030542",
-      "episodeKey": "s1e6",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16030542",
-      "tmdbId": "",
-      "title": "The Recruit",
-      "type": "series",
-      "season": 1,
-      "episode": 6,
-      "progress": 3254.717799,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-19T07:59:03.229Z",
-      "completedAt": "2026-05-19T08:12:10.874Z",
-      "updatedAt": "2026-05-19T08:12:12Z",
       "country": "",
       "countryName": "",
       "city": "",

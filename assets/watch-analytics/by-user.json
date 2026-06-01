@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T18:59:29.508Z",
+  "generatedAt": "2026-06-01T18:59:40.321Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T18:59:15Z",
+      "updatedAt": "2026-06-01T18:59:29Z",
       "totalEvents": 500,
       "totalStarts": 199,
       "totalCompletions": 70,
       "totalPlaybackProgress": 308388.69975586166,
       "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T18:59:15Z",
+      "lastActivityAt": "2026-06-01T18:59:29Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 25,
+          "playCount": 26,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-01T18:59:15Z"
+          "lastSeenAt": "2026-06-01T18:59:29Z"
         },
         "tt31193547": {
           "contentId": "tt31193547",
@@ -1270,7 +1270,7 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 21,
+          "playCount": 20,
           "completed": true,
           "maxProgressValue": 3486.708389,
           "maxProgressPercent": 0,

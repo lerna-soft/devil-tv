@@ -1,6 +1,6 @@
 {
-  "version": 330,
-  "generatedAt": "2026-06-01T06:56:30.186Z",
+  "version": 331,
+  "generatedAt": "2026-06-01T08:01:21.688Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52177,6 +52177,22 @@
       "releaseDate": null,
       "overview": "Michael Rosenbaum, Sara Rue",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjAzMjgzNDcyNV5BMl5BanBnXkFtZTgwMDQwNDc4OTE@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt10436228",
+      "title": "Jurassic World: Camp Cretaceous",
+      "year": 2020,
+      "releaseDate": null,
+      "overview": "Paul-Mikél Williams, Kausar Mohammed",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTg0OWM1YWEtMDUzMC00NmE1LWJhZGUtMzdkMDg4MTM0ZDI5XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

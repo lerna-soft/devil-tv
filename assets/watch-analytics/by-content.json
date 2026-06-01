@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T08:32:10.229Z",
+  "generatedAt": "2026-06-01T09:02:11.769Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3194,6 +3194,50 @@
       "avgPlaybackProgress": 617.0725
     },
     {
+      "contentId": "tt4881806",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 8648.809708812334,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T09:02:02Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 8648.809708812334,
+          "lastSeenAt": "2026-06-01T09:02:02Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 8648.809708812334,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T09:02:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2162.2024
+    },
+    {
       "contentId": "tt14850054",
       "imdbId": "tt14850054",
       "tmdbId": "840464",
@@ -3280,50 +3324,6 @@
         }
       },
       "avgPlaybackProgress": 2199.1396
-    },
-    {
-      "contentId": "tt4881806",
-      "imdbId": "tt4881806",
-      "tmdbId": "351286",
-      "title": "Jurassic World: El reino caído",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3023.009917239003,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-01T08:31:58Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3023.009917239003,
-          "lastSeenAt": "2026-06-01T08:31:58Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3023.009917239003,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-01T08:31:58Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1007.67
     },
     {
       "contentId": "tt0369610",
@@ -7447,50 +7447,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T05:57:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt7068946",
-      "imdbId": "tt7068946",
-      "tmdbId": "",
-      "title": "The Accountant 2",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T05:42:03Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T05:42:03Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T05:42:03Z",
           "users": {
             "henry8812@gmail.com": true
           },

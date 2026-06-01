@@ -1,14 +1,14 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-01T06:45:45Z",
+  "updatedAt": "2026-06-01T06:59:05Z",
   "lastWatch": {
-    "imdbId": "tt2560140",
-    "tmdbId": "1429",
-    "season": 4,
-    "episode": 12,
+    "imdbId": "tt0369610",
+    "tmdbId": "135397",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-01T06:45:45Z"
+    "updatedAt": "2026-06-01T06:59:05Z"
   },
   "lastSelection": null,
   "preferences": {
@@ -193,6 +193,7 @@
     "tt0356910",
     "tt0360486",
     "tt0365847",
+    "tt0369610",
     "tt0386005",
     "tt0388629",
     "tt0398417",
@@ -685,6 +686,15 @@
       "progress": 0,
       "lastProgress": 0,
       "updatedAt": "2026-05-16T05:21:39Z"
+    },
+    "tt0369610": {
+      "imdbId": "tt0369610",
+      "tmdbId": "135397",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-01T06:59:05Z"
     },
     "tt0386005": {
       "imdbId": "tt0386005",

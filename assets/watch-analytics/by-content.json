@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T06:46:11.720Z",
+  "generatedAt": "2026-06-01T06:59:17.751Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3558,50 +3558,6 @@
       "avgPlaybackProgress": 856.1757
     },
     {
-      "contentId": "tt7068946",
-      "imdbId": "tt7068946",
-      "tmdbId": "",
-      "title": "The Accountant 2",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3489.7588178220017,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T05:42:03Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3489.7588178220017,
-          "lastSeenAt": "2026-05-19T05:42:03Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3489.7588178220017,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T05:42:03Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1163.2529
-    },
-    {
       "contentId": "tt0388629",
       "imdbId": "tt0388629",
       "tmdbId": "",
@@ -4172,6 +4128,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt7068946",
+      "imdbId": "tt7068946",
+      "tmdbId": "",
+      "title": "The Accountant 2",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3489.7588178220017,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-19T05:42:03Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3489.7588178220017,
+          "lastSeenAt": "2026-05-19T05:42:03Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3489.7588178220017,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T05:42:03Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1744.8794
+    },
+    {
       "contentId": "tt33612209",
       "imdbId": "tt33612209",
       "tmdbId": "1314481",
@@ -4314,6 +4314,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt0369610",
+      "imdbId": "tt0369610",
+      "tmdbId": "135397",
+      "title": "Jurassic World",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T06:59:05Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-01T06:59:05Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T06:59:05Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt4543708",

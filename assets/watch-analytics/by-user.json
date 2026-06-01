@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T06:46:11.722Z",
+  "generatedAt": "2026-06-01T06:59:17.752Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T06:45:45Z",
+      "updatedAt": "2026-06-01T06:59:05Z",
       "totalEvents": 500,
-      "totalStarts": 200,
+      "totalStarts": 201,
       "totalCompletions": 70,
       "totalPlaybackProgress": 301910.06221939984,
-      "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T06:45:45Z",
+      "uniqueContentCount": 104,
+      "lastActivityAt": "2026-06-01T06:59:05Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -158,6 +158,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt0369610": {
+          "contentId": "tt0369610",
+          "imdbId": "tt0369610",
+          "tmdbId": "135397",
+          "title": "Jurassic World",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T06:59:05Z"
         },
         "tt2560140": {
           "contentId": "tt2560140",
@@ -1257,7 +1269,7 @@
           "tmdbId": "",
           "title": "The Accountant 2",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 3489.7588178220017,
           "maxProgressPercent": 0,

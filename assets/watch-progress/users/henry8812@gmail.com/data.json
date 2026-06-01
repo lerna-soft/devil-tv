@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-01T08:31:58Z",
+  "updatedAt": "2026-06-01T09:02:02Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1472,14 +1472,14 @@
       "tmdbId": "351286",
       "lastSeason": 1,
       "lastEpisode": 1,
-      "progress": 3023.009917239003,
-      "lastProgress": 3023.009917239003,
-      "updatedAt": "2026-06-01T08:31:58Z",
+      "progress": 5625.799791573331,
+      "lastProgress": 5625.799791573331,
+      "updatedAt": "2026-06-01T09:02:02Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-01T08:01:51.185Z",
           "completedAt": "",
-          "lastProgress": 3023.009917239003
+          "lastProgress": 5625.799791573331
         }
       }
     },
@@ -2428,11 +2428,38 @@
     "tmdbId": "351286",
     "season": 1,
     "episode": 1,
-    "progress": 3023.009917239003,
-    "updatedAt": "2026-06-01T08:31:58Z"
+    "progress": 5625.799791573331,
+    "updatedAt": "2026-06-01T09:02:02Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4881806:s1e1:started:2026-06-01T09:02:02Z",
+      "contentId": "tt4881806",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 5625.799791573331,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T08:01:51.185Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T09:02:02Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt4881806:s1e1:started:2026-06-01T08:31:58Z",
       "contentId": "tt4881806",
@@ -15897,33 +15924,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-19T05:57:57Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt7068946:s1e1:started:2026-05-19T05:42:03Z",
-      "contentId": "tt7068946",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt7068946",
-      "tmdbId": "",
-      "title": "The Accountant 2",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T05:42:01.592Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T05:42:03Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T08:32:10.230Z",
+  "generatedAt": "2026-06-01T09:02:11.771Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T08:31:58Z",
+      "updatedAt": "2026-06-01T09:02:02Z",
       "totalEvents": 500,
-      "totalStarts": 199,
+      "totalStarts": 198,
       "totalCompletions": 70,
-      "totalPlaybackProgress": 310387.2185122883,
-      "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T08:31:58Z",
+      "totalPlaybackProgress": 316013.01830386167,
+      "uniqueContentCount": 102,
+      "lastActivityAt": "2026-06-01T09:02:02Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -166,11 +166,11 @@
           "tmdbId": "351286",
           "title": "Jurassic World: El reino caído",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
-          "maxProgressValue": 3023.009917239003,
+          "maxProgressValue": 5625.799791573331,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-01T08:31:58Z"
+          "lastSeenAt": "2026-06-01T09:02:02Z"
         },
         "tt0369610": {
           "contentId": "tt0369610",
@@ -1263,21 +1263,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T05:57:57Z"
-        },
-        "tt7068946": {
-          "contentId": "tt7068946",
-          "imdbId": "tt7068946",
-          "tmdbId": "",
-          "title": "The Accountant 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:42:03Z"
         }
       },
-      "avgPlaybackProgress": 620.7744
+      "avgPlaybackProgress": 632.026
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

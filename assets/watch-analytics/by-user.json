@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T09:02:11.771Z",
+  "generatedAt": "2026-06-01T09:12:41.436Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T09:02:02Z",
+      "updatedAt": "2026-06-01T09:12:31Z",
       "totalEvents": 500,
-      "totalStarts": 198,
+      "totalStarts": 199,
       "totalCompletions": 70,
       "totalPlaybackProgress": 316013.01830386167,
       "uniqueContentCount": 102,
-      "lastActivityAt": "2026-06-01T09:02:02Z",
+      "lastActivityAt": "2026-06-01T09:12:31Z",
       "completedContentIds": [
         "tt2560140",
         "tt30460310",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt8041270": {
+          "contentId": "tt8041270",
+          "imdbId": "tt8041270",
+          "tmdbId": "507086",
+          "title": "Jurassic World: Dominion",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-01T09:12:31Z"
         },
         "tt4881806": {
           "contentId": "tt4881806",
@@ -1251,18 +1263,6 @@
           "maxProgressValue": 3486.708389,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T17:04:21Z"
-        },
-        "tt2140479": {
-          "contentId": "tt2140479",
-          "imdbId": "tt2140479",
-          "tmdbId": "302946",
-          "title": "El contable",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T05:57:57Z"
         }
       },
       "avgPlaybackProgress": 632.026

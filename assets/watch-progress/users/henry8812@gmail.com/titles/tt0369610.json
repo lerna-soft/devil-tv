@@ -3,17 +3,44 @@
   "tmdbId": "135397",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 0,
-  "lastProgress": 0,
-  "updatedAt": "2026-06-01T06:59:05Z",
+  "progress": 2345.468257793998,
+  "lastProgress": 2345.468257793998,
+  "updatedAt": "2026-06-01T07:29:15Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-01T06:59:05.272Z",
       "completedAt": "",
-      "lastProgress": 0
+      "lastProgress": 2345.468257793998
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0369610:s1e1:started:2026-06-01T07:29:15Z",
+      "contentId": "tt0369610",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0369610",
+      "tmdbId": "135397",
+      "title": "Jurassic World",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 2345.468257793998,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-01T06:59:05.272Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-01T07:29:15Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Bogotá",
+      "region": "Bogota D.C.",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0369610:s1e1:started:2026-06-01T06:59:05Z",
       "contentId": "tt0369610",

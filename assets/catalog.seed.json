@@ -1,6 +1,6 @@
 {
-  "version": 334,
-  "generatedAt": "2026-06-02T02:42:53.095Z",
+  "version": 335,
+  "generatedAt": "2026-06-02T13:58:31.723Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28321,6 +28321,22 @@
       "releaseDate": null,
       "overview": "Superando a los matones y su propia mentalidad de perdedor, Bernie Dingledorf, de 10 años, debe destruir el diabólico Generador de Risa del Dr. Chuckles antes de que envíe al mundo a ataques de risa incontrolables.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/4hQpG7dJcFUFHXoDBUTV9YcyVk8.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "12626",
+      "imdbId": null,
+      "title": "Al filo de la noticia",
+      "year": 1987,
+      "releaseDate": null,
+      "overview": "En la redacción de informativos de una cadena de televisión de Washington, las prisas y los nervios condicionan la vida privada de sus empleados. Jane, la realizadora, vive obsesionada por controlar a todos los que están a su alrededor, incluid Tom, un atractivo locutor recién llegado y algo pretencioso, que representa para Jane todo lo que ella y su amigo Aaron han odiado siempre.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fKmrbKPaQtNymDQnk02YoOotbmb.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

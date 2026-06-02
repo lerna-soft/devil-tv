@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T19:46:32.318Z",
+  "generatedAt": "2026-06-02T19:55:20.166Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-02T19:46:15Z",
+      "updatedAt": "2026-06-02T19:55:02Z",
       "totalEvents": 500,
-      "totalStarts": 199,
+      "totalStarts": 198,
       "totalCompletions": 68,
       "totalPlaybackProgress": 309512.5110422335,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-06-02T19:46:15Z",
+      "lastActivityAt": "2026-06-02T19:55:02Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -160,6 +160,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt9114286": {
+          "contentId": "tt9114286",
+          "imdbId": "tt9114286",
+          "tmdbId": "505642",
+          "title": "Black Panther: Wakanda Forever",
+          "type": "movie",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-02T19:55:02Z"
         },
         "tt1825683": {
           "contentId": "tt1825683",
@@ -328,18 +340,6 @@
           "maxProgressValue": 6861.6045622283345,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-30T05:31:52Z"
-        },
-        "tt9114286": {
-          "contentId": "tt9114286",
-          "imdbId": "tt9114286",
-          "tmdbId": "505642",
-          "title": "Black Panther: Wakanda Forever",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-29T22:45:11Z"
         },
         "tt0831387": {
           "contentId": "tt0831387",
@@ -1295,7 +1295,7 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 8,
+          "playCount": 7,
           "completed": true,
           "maxProgressValue": 3013.880429,
           "maxProgressPercent": 0,

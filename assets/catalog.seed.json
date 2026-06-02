@@ -1,6 +1,6 @@
 {
-  "version": 336,
-  "generatedAt": "2026-06-02T13:58:45.886Z",
+  "version": 337,
+  "generatedAt": "2026-06-02T18:02:01.235Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28337,6 +28337,22 @@
       "releaseDate": null,
       "overview": "En la redacción de informativos de una cadena de televisión de Washington, las prisas y los nervios condicionan la vida privada de sus empleados. Jane, la realizadora, vive obsesionada por controlar a todos los que están a su alrededor, incluid Tom, un atractivo locutor recién llegado y algo pretencioso, que representa para Jane todo lo que ella y su amigo Aaron han odiado siempre.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/fKmrbKPaQtNymDQnk02YoOotbmb.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt2905856",
+      "title": "Black Panther",
+      "year": 2014,
+      "releaseDate": null,
+      "overview": "Lucy Wirth, Ole Jacobs",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTk1OTAyOTMxMV5BMl5BanBnXkFtZTgwMDc4NTI3ODE@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 335,
-  "generatedAt": "2026-06-02T13:58:31.723Z",
+  "version": 336,
+  "generatedAt": "2026-06-02T13:58:45.886Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52257,6 +52257,22 @@
       "releaseDate": null,
       "overview": "Situada en la Dinamarca actual, la historia se centra en una familia liderada por un pastor perteneciente a una larga tradición de religiosos. Férreo creyente, Johannes es un ferviente y a veces agresivo ministro de la Iglesia de Dinamarca... Nueva serie del creador de la aclamada \"Borgen\". (FILMAFFINITY)",
       "posterUrl": "https://image.tmdb.org/t/p/w500/xWkDz3zo7WETiKgz1Bn2tsvq63T.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "5367",
+      "imdbId": null,
+      "title": "Intriga en Hawai (Serie de TV)",
+      "year": 1959,
+      "releaseDate": null,
+      "overview": "Serie de TV (1959-1963) 134 episodios. Ambientada en los hermosos paisajes tropicales de Honolulu, Hawai, esta serie desarrolla los casos de una agencia de detectives privados: “Hawaiian Eye Private Investigations”, que dirigen Tom Lopaka (Robert Conrad) y Tracy Steele (Anthony Eisley), veterano de la guerra de Corea y ex-policía. Su oficina se encuentra dentro del Hawaiian Village Hotel, del cual también son custodios. Ocasionalmente los ayuda el taxista Kazuo Kim, con su sombrero de paja y estrafalarias camisas hawaianas, y su numerosa familia que está siempre dispuesta a colaborar cuando es necesario, añadiendo una cuota de humor. También los asiste la cantante y fotógrafa Cricket Blake (Connie Stevens) y después se une al grupo el sabueso Greg Mackenzie (Grant Williams).",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qWshJZOZTsEUho82d8YrCV9ariR.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

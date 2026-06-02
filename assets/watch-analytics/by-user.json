@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T20:17:44.791Z",
+  "generatedAt": "2026-06-02T20:25:19.751Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-02T19:55:02Z",
+      "updatedAt": "2026-06-02T20:25:05Z",
       "totalEvents": 500,
       "totalStarts": 198,
-      "totalCompletions": 68,
-      "totalPlaybackProgress": 309512.5110422335,
+      "totalCompletions": 67,
+      "totalPlaybackProgress": 308731.5144612941,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-06-02T19:55:02Z",
+      "lastActivityAt": "2026-06-02T20:25:05Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -24,6 +24,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt9114286",
         "tt1825683",
         "tt4881806",
         "tt0369610",
@@ -167,11 +168,11 @@
           "tmdbId": "505642",
           "title": "Black Panther: Wakanda Forever",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 2223.7584060606646,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-02T19:55:02Z"
+          "lastSeenAt": "2026-06-02T20:25:05Z"
         },
         "tt1825683": {
           "contentId": "tt1825683",
@@ -1295,14 +1296,14 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 7,
+          "playCount": 6,
           "completed": true,
           "maxProgressValue": 3013.880429,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T17:04:21Z"
         }
       },
-      "avgPlaybackProgress": 619.025
+      "avgPlaybackProgress": 617.463
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T21:55:25.828Z",
+  "generatedAt": "2026-06-02T22:08:58.419Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-02T21:55:14Z",
+      "updatedAt": "2026-06-02T22:08:50Z",
       "totalEvents": 500,
-      "totalStarts": 197,
+      "totalStarts": 196,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 330030.5474769398,
+      "totalPlaybackProgress": 328132.93842693977,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-06-02T21:55:14Z",
+      "lastActivityAt": "2026-06-02T22:08:50Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -162,6 +162,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 34,
+          "completed": true,
+          "maxProgressValue": 1389.667822,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-02T22:08:50Z"
+        },
         "tt9114286": {
           "contentId": "tt9114286",
           "imdbId": "tt9114286",
@@ -197,18 +209,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-02T05:47:47Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 33,
-          "completed": true,
-          "maxProgressValue": 1389.667822,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-01T21:42:51Z"
         },
         "tt31193547": {
           "contentId": "tt31193547",
@@ -1296,14 +1296,14 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 3,
+          "playCount": 2,
           "completed": true,
           "maxProgressValue": 3013.880429,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T17:04:21Z"
         }
       },
-      "avgPlaybackProgress": 660.0611
+      "avgPlaybackProgress": 656.2659
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

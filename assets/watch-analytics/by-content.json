@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T18:32:43.157Z",
+  "generatedAt": "2026-06-02T19:02:48.825Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2390,26 +2390,70 @@
       "avgPlaybackProgress": 427.8752
     },
     {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
+    },
+    {
       "contentId": "tt16030542",
       "imdbId": "tt16030542",
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 9,
       "totalStarts": 4,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 14262.374123,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 11001.665576,
       "uniqueUsers": 1,
-      "completionRate": 1,
+      "completionRate": 0.75,
       "lastActivityAt": "2026-05-19T17:04:21Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
-          "completedCount": 4,
+          "playCount": 9,
+          "completedCount": 3,
           "startedCount": 4,
-          "totalPlaybackProgress": 14262.374123,
+          "totalPlaybackProgress": 11001.665576,
           "lastSeenAt": "2026-05-19T17:04:21Z",
           "lastSeason": 2,
           "lastEpisode": 6
@@ -2485,67 +2529,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s2e1": {
-          "season": 2,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 3260.708547,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T08:49:29Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1426.2374
-    },
-    {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
+      "avgPlaybackProgress": 1222.4073
     },
     {
       "contentId": "tt8790086",
@@ -3326,6 +3312,50 @@
       "avgPlaybackProgress": 2199.1396
     },
     {
+      "contentId": "tt1825683",
+      "imdbId": "tt1825683",
+      "tmdbId": "284054",
+      "title": "Black Panther",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 9005.156041726661,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-02T19:02:32Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 9005.156041726661,
+          "lastSeenAt": "2026-06-02T19:02:32Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 9005.156041726661,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-02T19:02:32Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 3001.7187
+    },
+    {
       "contentId": "tt0369610",
       "imdbId": "tt0369610",
       "tmdbId": "135397",
@@ -3644,50 +3674,6 @@
         }
       },
       "avgPlaybackProgress": 856.1757
-    },
-    {
-      "contentId": "tt1825683",
-      "imdbId": "tt1825683",
-      "tmdbId": "284054",
-      "title": "Black Panther",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3574.36500565066,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-02T18:32:30Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3574.36500565066,
-          "lastSeenAt": "2026-06-02T18:32:30Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3574.36500565066,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-02T18:32:30Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1787.1825
     },
     {
       "contentId": "tt9140554",

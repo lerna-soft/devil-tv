@@ -1,6 +1,6 @@
 {
-  "version": 337,
-  "generatedAt": "2026-06-02T18:02:01.235Z",
+  "version": 338,
+  "generatedAt": "2026-06-02T18:02:14.422Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52289,6 +52289,22 @@
       "releaseDate": null,
       "overview": "Serie de TV (1959-1963) 134 episodios. Ambientada en los hermosos paisajes tropicales de Honolulu, Hawai, esta serie desarrolla los casos de una agencia de detectives privados: “Hawaiian Eye Private Investigations”, que dirigen Tom Lopaka (Robert Conrad) y Tracy Steele (Anthony Eisley), veterano de la guerra de Corea y ex-policía. Su oficina se encuentra dentro del Hawaiian Village Hotel, del cual también son custodios. Ocasionalmente los ayuda el taxista Kazuo Kim, con su sombrero de paja y estrafalarias camisas hawaianas, y su numerosa familia que está siempre dispuesta a colaborar cuando es necesario, añadiendo una cuota de humor. También los asiste la cantante y fotógrafa Cricket Blake (Connie Stevens) y después se une al grupo el sabueso Greg Mackenzie (Grant Williams).",
       "posterUrl": "https://image.tmdb.org/t/p/w500/qWshJZOZTsEUho82d8YrCV9ariR.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt1441105",
+      "title": "Black Panther",
+      "year": 2010,
+      "releaseDate": null,
+      "overview": "Djimon Hounsou, Jill Scott",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2VkMTMwZTAtZDVlNi00MDY3LTliMjQtMDk0MTc2ZTcwZjMzXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

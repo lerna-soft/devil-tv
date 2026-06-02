@@ -1,6 +1,6 @@
 {
-  "version": 333,
-  "generatedAt": "2026-06-02T02:42:43.615Z",
+  "version": 334,
+  "generatedAt": "2026-06-02T02:42:53.095Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28305,6 +28305,22 @@
       "releaseDate": null,
       "overview": "Isaac Saviñón, José Guillermo Cortines",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzg5YzgyMDItNDIzOC00OWE5LTkyYzItYjE3MjIzYWUzNmViXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "841651",
+      "imdbId": null,
+      "title": "Las aventuras del pequeño espia",
+      "year": 2021,
+      "releaseDate": null,
+      "overview": "Superando a los matones y su propia mentalidad de perdedor, Bernie Dingledorf, de 10 años, debe destruir el diabólico Generador de Risa del Dr. Chuckles antes de que envíe al mundo a ataques de risa incontrolables.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4hQpG7dJcFUFHXoDBUTV9YcyVk8.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T18:02:45.999Z",
+  "generatedAt": "2026-06-02T18:32:43.157Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2395,20 +2395,20 @@
       "tmdbId": "",
       "title": "The Recruit",
       "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 5,
+      "totalEvents": 10,
+      "totalStarts": 4,
       "totalCompletions": 4,
       "totalPlaybackProgress": 14262.374123,
       "uniqueUsers": 1,
-      "completionRate": 0.8,
+      "completionRate": 1,
       "lastActivityAt": "2026-05-19T17:04:21Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
+          "playCount": 10,
           "completedCount": 4,
-          "startedCount": 5,
+          "startedCount": 4,
           "totalPlaybackProgress": 14262.374123,
           "lastSeenAt": "2026-05-19T17:04:21Z",
           "lastSeason": 2,
@@ -2475,8 +2475,8 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3085.42111,
           "uniqueUsers": 1,
@@ -2484,7 +2484,7 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         },
         "s2e1": {
           "season": 2,
@@ -2501,7 +2501,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1296.5795
+      "avgPlaybackProgress": 1426.2374
     },
     {
       "contentId": "tt0899043",
@@ -3646,6 +3646,50 @@
       "avgPlaybackProgress": 856.1757
     },
     {
+      "contentId": "tt1825683",
+      "imdbId": "tt1825683",
+      "tmdbId": "284054",
+      "title": "Black Panther",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3574.36500565066,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-02T18:32:30Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3574.36500565066,
+          "lastSeenAt": "2026-06-02T18:32:30Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3574.36500565066,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-02T18:32:30Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1787.1825
+    },
+    {
       "contentId": "tt9140554",
       "imdbId": "tt9140554",
       "tmdbId": "84958",
@@ -4344,50 +4388,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "tt1825683",
-      "imdbId": "tt1825683",
-      "tmdbId": "284054",
-      "title": "Black Panther",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-02T18:02:26Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-02T18:02:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-02T18:02:26Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2953050",

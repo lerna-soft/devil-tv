@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-05-31T01:25:16Z",
+  "updatedAt": "2026-06-02T02:43:10Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -110,6 +110,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt9140554": {
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "lastSeason": 1,
+      "lastEpisode": 6,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-02T02:43:10Z",
+      "watched": {
+        "s1e6": {
+          "startedAt": "2026-06-02T02:43:08.749Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -131,15 +147,42 @@
     "updatedAt": "2026-05-30T19:47:09Z"
   },
   "lastWatch": {
-    "imdbId": "tt14850054",
-    "tmdbId": "840464",
+    "imdbId": "tt9140554",
+    "tmdbId": "84958",
     "season": 1,
-    "episode": 1,
+    "episode": 6,
     "progress": 0,
-    "updatedAt": "2026-05-31T01:25:16Z"
+    "updatedAt": "2026-06-02T02:43:10Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s1e6:started:2026-06-02T02:43:10Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s1e6",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 1,
+      "episode": 6,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-02T02:43:08.749Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-02T02:43:10Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt14850054:s1e1:started:2026-05-31T01:25:16Z",
       "contentId": "tt14850054",

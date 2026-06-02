@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T04:53:49.186Z",
+  "generatedAt": "2026-06-02T05:47:57.488Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-01T21:42:51Z",
+      "updatedAt": "2026-06-02T05:47:47Z",
       "totalEvents": 500,
       "totalStarts": 200,
       "totalCompletions": 70,
       "totalPlaybackProgress": 300206.99082786177,
-      "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-01T21:42:51Z",
+      "uniqueContentCount": 104,
+      "lastActivityAt": "2026-06-02T05:47:47Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -159,6 +159,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt2953050": {
+          "contentId": "tt2953050",
+          "imdbId": "tt2953050",
+          "tmdbId": "568124",
+          "title": "Encanto",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-02T05:47:47Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1270,7 +1282,7 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 13,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 3260.708547,
           "maxProgressPercent": 0,

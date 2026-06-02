@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-02T04:53:49.181Z",
+  "generatedAt": "2026-06-02T05:47:57.484Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 572,
   "totalStarts": 220,
   "totalCompletions": 71,
   "overallCompletionRate": 0.3227,
-  "trackedTitles": 126,
+  "trackedTitles": 127,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -49,20 +49,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0.5714
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.5
+    },
+    {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.6667
     },
     {
       "contentId": "tt30460310",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T19:02:48.826Z",
+  "generatedAt": "2026-06-02T19:46:32.318Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-02T19:02:32Z",
+      "updatedAt": "2026-06-02T19:46:15Z",
       "totalEvents": 500,
       "totalStarts": 199,
-      "totalCompletions": 69,
-      "totalPlaybackProgress": 305951.43832258845,
+      "totalCompletions": 68,
+      "totalPlaybackProgress": 309512.5110422335,
       "uniqueContentCount": 105,
-      "lastActivityAt": "2026-06-02T19:02:32Z",
+      "lastActivityAt": "2026-06-02T19:46:15Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -167,11 +167,11 @@
           "tmdbId": "284054",
           "title": "Black Panther",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
-          "maxProgressValue": 5430.791036076001,
+          "maxProgressValue": 6646.493829645,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-02T19:02:32Z"
+          "lastSeenAt": "2026-06-02T19:46:15Z"
         },
         "tt2953050": {
           "contentId": "tt2953050",
@@ -1295,14 +1295,14 @@
           "tmdbId": "",
           "title": "The Recruit",
           "type": "series",
-          "playCount": 9,
+          "playCount": 8,
           "completed": true,
-          "maxProgressValue": 3085.42111,
+          "maxProgressValue": 3013.880429,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T17:04:21Z"
         }
       },
-      "avgPlaybackProgress": 611.9029
+      "avgPlaybackProgress": 619.025
     },
     {
       "userEmail": "luzenithc1994@gmail.com",
@@ -1866,6 +1866,23 @@
       "role": "viewer",
       "createdAt": "2026-05-23T17:23:07.868Z",
       "updatedAt": "2026-05-23T17:23:07.868Z",
+      "totalEvents": 0,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 0,
+      "lastActivityAt": "",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {},
+      "avgPlaybackProgress": 0
+    },
+    {
+      "userEmail": "xrobinhox2012@gmail.com",
+      "userName": "binho",
+      "role": "viewer",
+      "createdAt": "2026-06-02T19:10:56.463Z",
+      "updatedAt": "2026-06-02T19:10:56.463Z",
       "totalEvents": 0,
       "totalStarts": 0,
       "totalCompletions": 0,

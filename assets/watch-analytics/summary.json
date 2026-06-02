@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-02T19:02:48.821Z",
-  "totalUsers": 11,
+  "generatedAt": "2026-06-02T19:46:32.313Z",
+  "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 572,
   "totalStarts": 219,
-  "totalCompletions": 70,
+  "totalCompletions": 69,
   "overallCompletionRate": 0.3151,
   "trackedTitles": 128,
   "mostWatchedContent": [
@@ -73,19 +73,19 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.75
-    },
-    {
       "contentId": "tt8790086",
       "title": "Kraven the Hunter",
       "type": "movie",
       "totalEvents": 8,
       "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
+      "contentId": "tt33046197",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 8,
+      "uniqueUsers": 3,
       "completionRate": 0
     }
   ]

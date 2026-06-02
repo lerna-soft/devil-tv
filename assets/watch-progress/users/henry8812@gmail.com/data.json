@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-02T05:47:47Z",
+  "updatedAt": "2026-06-02T18:02:26Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2366,6 +2366,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt1825683": {
+      "imdbId": "tt1825683",
+      "tmdbId": "284054",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-02T18:02:26Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-02T18:02:25.449Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2513,15 +2529,42 @@
     "updatedAt": "2026-06-01T15:04:22Z"
   },
   "lastWatch": {
-    "imdbId": "tt2953050",
-    "tmdbId": "568124",
+    "imdbId": "tt1825683",
+    "tmdbId": "284054",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-02T05:47:47Z"
+    "updatedAt": "2026-06-02T18:02:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt1825683:s1e1:started:2026-06-02T18:02:26Z",
+      "contentId": "tt1825683",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1825683",
+      "tmdbId": "284054",
+      "title": "Black Panther",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-02T18:02:25.449Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-02T18:02:26Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2953050:s1e1:started:2026-06-02T05:47:47Z",
       "contentId": "tt2953050",
@@ -15986,33 +16029,6 @@
       "startedAt": "2026-05-19T08:43:03.520Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T08:43:05Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt16030542:s2e1:started:2026-05-19T08:42:14Z",
-      "contentId": "tt16030542",
-      "episodeKey": "s2e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt16030542",
-      "tmdbId": "",
-      "title": "The Recruit",
-      "type": "series",
-      "season": 2,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T08:42:12.919Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T08:42:14Z",
       "country": "",
       "countryName": "",
       "city": "",

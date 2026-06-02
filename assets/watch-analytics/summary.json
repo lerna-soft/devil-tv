@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-02T17:10:10.832Z",
+  "generatedAt": "2026-06-02T18:02:45.996Z",
   "totalUsers": 11,
   "activeUsers": 6,
   "totalEvents": 572,
   "totalStarts": 220,
   "totalCompletions": 71,
-  "overallCompletionRate": 0.3227,
-  "trackedTitles": 127,
+  "overallCompletionRate": 0.3182,
+  "trackedTitles": 128,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -57,20 +57,20 @@
       "completionRate": 0.5
     },
     {
-      "contentId": "tt16030542",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 12,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667
-    },
-    {
       "contentId": "tt30460310",
       "title": "Spider-Noir",
       "type": "series",
       "totalEvents": 11,
       "uniqueUsers": 1,
       "completionRate": 0.3333
+    },
+    {
+      "contentId": "tt16030542",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 11,
+      "uniqueUsers": 1,
+      "completionRate": 0.8
     },
     {
       "contentId": "tt0899043",

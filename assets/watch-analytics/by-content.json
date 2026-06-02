@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T20:25:19.750Z",
+  "generatedAt": "2026-06-02T20:55:24.838Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2434,6 +2434,62 @@
       "avgPlaybackProgress": 1123.3441
     },
     {
+      "contentId": "tt9114286",
+      "imdbId": "tt9114286",
+      "tmdbId": "505642",
+      "title": "Black Panther: Wakanda Forever",
+      "type": "movie",
+      "totalEvents": 8,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 12660.336076360665,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-02T20:55:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 7468.799011360665,
+          "lastSeenAt": "2026-06-02T20:55:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "juancarlosrios531970@gmail.com": {
+          "userEmail": "juancarlosrios531970@gmail.com",
+          "userName": "Juan carlos Rios",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 5191.537065,
+          "lastSeenAt": "2026-05-29T22:39:53Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 8,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 12660.336076360665,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-02T20:55:08Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "juancarlosrios531970@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1582.542
+    },
+    {
       "contentId": "tt8790086",
       "imdbId": "tt8790086",
       "tmdbId": "539972",
@@ -2704,62 +2760,6 @@
       "avgPlaybackProgress": 853.6227
     },
     {
-      "contentId": "tt9114286",
-      "imdbId": "tt9114286",
-      "tmdbId": "505642",
-      "title": "Black Panther: Wakanda Forever",
-      "type": "movie",
-      "totalEvents": 7,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 7415.295471060665,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-02T20:25:05Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 2223.7584060606646,
-          "lastSeenAt": "2026-06-02T20:25:05Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "juancarlosrios531970@gmail.com": {
-          "userEmail": "juancarlosrios531970@gmail.com",
-          "userName": "Juan carlos Rios",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5191.537065,
-          "lastSeenAt": "2026-05-29T22:39:53Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 7415.295471060665,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-06-02T20:25:05Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "juancarlosrios531970@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1059.3279
-    },
-    {
       "contentId": "tt5311514",
       "imdbId": "tt5311514",
       "tmdbId": "372058",
@@ -2858,78 +2858,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt16030542",
-      "imdbId": "tt16030542",
-      "tmdbId": "",
-      "title": "The Recruit",
-      "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 3,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 4911.489479,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333,
-      "lastActivityAt": "2026-05-19T17:04:21Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 1,
-          "startedCount": 3,
-          "totalPlaybackProgress": 4911.489479,
-          "lastSeenAt": "2026-05-19T17:04:21Z",
-          "lastSeason": 2,
-          "lastEpisode": 6
-        }
-      },
-      "episodes": {
-        "s2e6": {
-          "season": 2,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T17:04:21Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s2e5": {
-          "season": 2,
-          "episode": 5,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 4911.489479,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T17:04:17Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s2e4": {
-          "season": 2,
-          "episode": 4,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T09:16:15Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 818.5816
     },
     {
       "contentId": "tt26443616",
@@ -3150,6 +3078,64 @@
         }
       },
       "avgPlaybackProgress": 617.0725
+    },
+    {
+      "contentId": "tt16030542",
+      "imdbId": "tt16030542",
+      "tmdbId": "",
+      "title": "The Recruit",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 4911.489479,
+      "uniqueUsers": 1,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-19T17:04:21Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 1,
+          "startedCount": 2,
+          "totalPlaybackProgress": 4911.489479,
+          "lastSeenAt": "2026-05-19T17:04:21Z",
+          "lastSeason": 2,
+          "lastEpisode": 6
+        }
+      },
+      "episodes": {
+        "s2e6": {
+          "season": 2,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T17:04:21Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s2e5": {
+          "season": 2,
+          "episode": 5,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 4911.489479,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-19T17:04:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 982.2979
     },
     {
       "contentId": "tt1825683",

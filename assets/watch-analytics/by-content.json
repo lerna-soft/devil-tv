@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T22:40:18.300Z",
+  "generatedAt": "2026-06-02T22:49:02.915Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 37,
-      "totalStarts": 19,
+      "totalEvents": 38,
+      "totalStarts": 20,
       "totalCompletions": 8,
       "totalPlaybackProgress": 13024.70042065274,
       "uniqueUsers": 1,
-      "completionRate": 0.4211,
-      "lastActivityAt": "2026-06-02T22:40:09Z",
+      "completionRate": 0.4,
+      "lastActivityAt": "2026-06-02T22:48:53Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 37,
+          "playCount": 38,
           "completedCount": 8,
-          "startedCount": 19,
+          "startedCount": 20,
           "totalPlaybackProgress": 13024.70042065274,
-          "lastSeenAt": "2026-06-02T22:40:09Z",
+          "lastSeenAt": "2026-06-02T22:48:53Z",
           "lastSeason": 1,
-          "lastEpisode": 20
+          "lastEpisode": 21
         }
       },
       "episodes": {
+        "s1e21": {
+          "season": 1,
+          "episode": 21,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-02T22:48:53Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e20": {
           "season": 1,
           "episode": 20,
@@ -2021,7 +2035,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 352.0189
+      "avgPlaybackProgress": 342.7553
     },
     {
       "contentId": "tt21209804",
@@ -3078,50 +3092,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt1234721",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
-      "totalEvents": 5,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3085.362560914,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T14:19:20Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3085.362560914,
-          "lastSeenAt": "2026-05-20T14:19:20Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3085.362560914,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T14:19:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 617.0725
-    },
-    {
       "contentId": "tt1825683",
       "imdbId": "tt1825683",
       "tmdbId": "284054",
@@ -3296,6 +3266,50 @@
         }
       },
       "avgPlaybackProgress": 2199.1396
+    },
+    {
+      "contentId": "tt1234721",
+      "imdbId": "tt1234721",
+      "tmdbId": "97020",
+      "title": "RoboCop",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3085.362560914,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-20T14:19:20Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3085.362560914,
+          "lastSeenAt": "2026-05-20T14:19:20Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3085.362560914,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T14:19:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 771.3406
     },
     {
       "contentId": "tt0369610",

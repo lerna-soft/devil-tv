@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T05:47:52.171Z",
+  "generatedAt": "2026-06-03T06:17:53.794Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T05:47:40Z",
+      "updatedAt": "2026-06-03T06:17:42Z",
       "totalEvents": 500,
-      "totalStarts": 211,
+      "totalStarts": 212,
       "totalCompletions": 67,
       "totalPlaybackProgress": 320854.04667170375,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-03T05:47:40Z",
+      "lastActivityAt": "2026-06-03T06:17:42Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -158,6 +158,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt26743760": {
+          "contentId": "tt26743760",
+          "imdbId": "tt26743760",
+          "tmdbId": "220542",
+          "title": "Los diarios de la boticaria",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T06:17:42Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1154,18 +1166,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:54:36Z"
-        },
-        "tt0294154": {
-          "contentId": "tt0294154",
-          "imdbId": "tt0294154",
-          "tmdbId": "",
-          "title": "Noir",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T06:40:28Z"
         }
       },
       "avgPlaybackProgress": 641.7081

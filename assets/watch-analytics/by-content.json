@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:38:41.184Z",
+  "generatedAt": "2026-06-03T22:38:49.680Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 71,
-      "totalStarts": 42,
+      "totalEvents": 72,
+      "totalStarts": 43,
       "totalCompletions": 12,
       "totalPlaybackProgress": 19704.628899330746,
       "uniqueUsers": 1,
-      "completionRate": 0.2857,
-      "lastActivityAt": "2026-06-03T22:38:32Z",
+      "completionRate": 0.2791,
+      "lastActivityAt": "2026-06-03T22:38:36Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 71,
+          "playCount": 72,
           "completedCount": 12,
-          "startedCount": 42,
+          "startedCount": 43,
           "totalPlaybackProgress": 19704.628899330746,
-          "lastSeenAt": "2026-06-03T22:38:32Z",
+          "lastSeenAt": "2026-06-03T22:38:36Z",
           "lastSeason": 1,
-          "lastEpisode": 43
+          "lastEpisode": 44
         }
       },
       "episodes": {
+        "s1e44": {
+          "season": 1,
+          "episode": 44,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:38:36Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e43": {
           "season": 1,
           "episode": 43,
@@ -2343,7 +2357,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 277.53
+      "avgPlaybackProgress": 273.6754
     },
     {
       "contentId": "tt21209804",
@@ -7373,50 +7387,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T04:41:21Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt33244668",
-      "imdbId": "tt33244668",
-      "tmdbId": "1234731",
-      "title": "Anaconda",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T04:41:15Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T04:41:15Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T04:41:15Z",
           "users": {
             "henry8812@gmail.com": true
           },

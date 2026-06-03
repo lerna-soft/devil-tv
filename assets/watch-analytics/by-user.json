@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:36:45.656Z",
+  "generatedAt": "2026-06-03T04:39:36.989Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:36:30Z",
+      "updatedAt": "2026-06-03T04:39:29Z",
       "totalEvents": 500,
-      "totalStarts": 209,
+      "totalStarts": 210,
       "totalCompletions": 67,
       "totalPlaybackProgress": 323422.5737987037,
       "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-03T04:36:30Z",
+      "lastActivityAt": "2026-06-03T04:39:29Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 50,
+          "playCount": 51,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:36:30Z"
+          "lastSeenAt": "2026-06-03T04:39:29Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1198,7 +1198,7 @@
           "tmdbId": "1729",
           "title": "El reino prohibido",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 2568.527129,
           "maxProgressPercent": 0,

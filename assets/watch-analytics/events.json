@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T17:32:20.297Z",
+  "generatedAt": "2026-06-03T17:49:38.110Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt3513548:s1e1:started:2026-06-03T17:49:21Z",
+      "contentId": "tt3513548",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt3513548",
+      "tmdbId": "292011",
+      "title": "Richard Jewell",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T17:49:20.998Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T17:49:21Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e40:started:2026-06-03T17:32:05Z",
       "contentId": "tt0965547",
@@ -11067,27 +11088,6 @@
       "startedAt": "2026-05-20T16:34:05.468Z",
       "completedAt": "",
       "updatedAt": "2026-05-20T17:34:14Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:started:2026-05-20T17:04:10Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 2091.639095,
-      "progressValue": 2091.639095,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T16:34:05.468Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T17:04:10Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-03T00:22:20Z",
+  "updatedAt": "2026-06-03T19:28:41Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -131,6 +131,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt7605074": {
+      "imdbId": "tt7605074",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-03T19:28:41Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-03T19:28:41Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -142,7 +158,8 @@
       "tt1757678": 1,
       "tt33046197": 1,
       "tt14850054": 1,
-      "tt9140554": 1
+      "tt9140554": 1,
+      "tt7605074": 1
     },
     "watchLater": {
       "tt33714084": true,
@@ -150,18 +167,45 @@
       "tt1757678": true,
       "tt14850054": true
     },
-    "updatedAt": "2026-06-03T00:22:20Z"
+    "updatedAt": "2026-06-03T19:28:41Z"
   },
   "lastWatch": {
-    "imdbId": "tt9140554",
-    "tmdbId": "84958",
+    "imdbId": "tt7605074",
+    "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-03T00:22:20Z"
+    "updatedAt": "2026-06-03T19:28:41Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt7605074:s1e1:preference:2026-06-03T19:28:41Z",
+      "contentId": "tt7605074",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt7605074",
+      "tmdbId": "",
+      "title": "The Wandering Earth",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T19:28:41Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s1e1:preference:2026-06-03T00:22:20Z",
       "contentId": "tt9140554",

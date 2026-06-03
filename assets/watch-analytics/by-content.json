@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:46:46.438Z",
+  "generatedAt": "2026-06-03T22:51:17.706Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,22 +1733,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 76,
+      "totalEvents": 77,
       "totalStarts": 45,
-      "totalCompletions": 14,
-      "totalPlaybackProgress": 22481.20136833075,
+      "totalCompletions": 15,
+      "totalPlaybackProgress": 23869.80107233075,
       "uniqueUsers": 1,
-      "completionRate": 0.3111,
-      "lastActivityAt": "2026-06-03T22:46:30Z",
+      "completionRate": 0.3333,
+      "lastActivityAt": "2026-06-03T22:51:06Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 76,
-          "completedCount": 14,
+          "playCount": 77,
+          "completedCount": 15,
           "startedCount": 45,
-          "totalPlaybackProgress": 22481.20136833075,
-          "lastSeenAt": "2026-06-03T22:46:30Z",
+          "totalPlaybackProgress": 23869.80107233075,
+          "lastSeenAt": "2026-06-03T22:51:06Z",
           "lastSeason": 1,
           "lastEpisode": 46
         }
@@ -1757,16 +1757,16 @@
         "s1e46": {
           "season": 1,
           "episode": 46,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1388.599704,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T22:46:30Z",
+          "lastActivityAt": "2026-06-03T22:51:06Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e45": {
           "season": 1,
@@ -2385,7 +2385,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 295.8053
+      "avgPlaybackProgress": 309.9974
     },
     {
       "contentId": "tt21209804",
@@ -4323,50 +4323,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T20:41:19Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "379149",
-      "imdbId": "",
-      "tmdbId": "379149",
-      "title": "El extranjero",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T04:55:29Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T04:55:29Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T04:55:29Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -7371,6 +7327,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T11:11:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "379149",
+      "imdbId": "",
+      "tmdbId": "379149",
+      "title": "El extranjero",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-21T04:55:29Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-21T04:55:29Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-21T04:55:29Z",
           "users": {
             "henry8812@gmail.com": true
           },

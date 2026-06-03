@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T19:29:55.752Z",
+  "generatedAt": "2026-06-03T19:30:15.604Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1163,13 +1163,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-03T19:28:50Z",
-      "totalEvents": 37,
+      "updatedAt": "2026-06-03T19:28:51Z",
+      "totalEvents": 38,
       "totalStarts": 8,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
-      "uniqueContentCount": 12,
-      "lastActivityAt": "2026-06-03T19:28:50Z",
+      "uniqueContentCount": 13,
+      "lastActivityAt": "2026-06-03T19:28:51Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt33046197",
@@ -1178,6 +1178,18 @@
         "tt32897959"
       ],
       "content": {
+        "tt32174149": {
+          "contentId": "tt32174149",
+          "imdbId": "tt32174149",
+          "tmdbId": "",
+          "title": "The Wandering Earth 3",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T19:28:51Z"
+        },
         "tt13539646": {
           "contentId": "tt13539646",
           "imdbId": "tt13539646",
@@ -1323,7 +1335,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1177.3602
+      "avgPlaybackProgress": 1146.377
     },
     {
       "userEmail": "liz-munera@hotmail.com",

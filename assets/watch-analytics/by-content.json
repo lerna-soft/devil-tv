@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T04:28:41.559Z",
+  "generatedAt": "2026-06-03T04:33:33.423Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 47,
-      "totalStarts": 28,
+      "totalEvents": 48,
+      "totalStarts": 29,
       "totalCompletions": 8,
       "totalPlaybackProgress": 13024.70042065274,
       "uniqueUsers": 1,
-      "completionRate": 0.2857,
-      "lastActivityAt": "2026-06-03T04:28:31Z",
+      "completionRate": 0.2759,
+      "lastActivityAt": "2026-06-03T04:33:23Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 47,
+          "playCount": 48,
           "completedCount": 8,
-          "startedCount": 28,
+          "startedCount": 29,
           "totalPlaybackProgress": 13024.70042065274,
-          "lastSeenAt": "2026-06-03T04:28:31Z",
+          "lastSeenAt": "2026-06-03T04:33:23Z",
           "lastSeason": 1,
-          "lastEpisode": 29
+          "lastEpisode": 30
         }
       },
       "episodes": {
+        "s1e30": {
+          "season": 1,
+          "episode": 30,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T04:33:23Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e29": {
           "season": 1,
           "episode": 29,
@@ -2147,7 +2161,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 277.1213
+      "avgPlaybackProgress": 271.3479
     },
     {
       "contentId": "tt21209804",
@@ -7383,50 +7397,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-20T05:29:51Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1869454",
-      "imdbId": "tt1869454",
-      "tmdbId": "",
-      "title": "Good Omens",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T02:00:42Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-20T02:00:42Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T02:00:42Z",
           "users": {
             "henry8812@gmail.com": true
           },

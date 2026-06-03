@@ -5,7 +5,7 @@
   "lastEpisode": 1,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-06-03T19:28:47Z",
+  "updatedAt": "2026-06-03T19:28:50Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-03T19:28:47Z",
@@ -14,6 +14,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt13539646:s1e1:preference:2026-06-03T19:28:50Z",
+      "contentId": "tt13539646",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt13539646",
+      "tmdbId": "",
+      "title": "The Wandering Earth II",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T19:28:50Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt13539646:s1e1:preference:2026-06-03T19:28:47Z",
       "contentId": "tt13539646",

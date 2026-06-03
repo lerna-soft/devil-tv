@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:41:04.944Z",
+  "generatedAt": "2026-06-03T04:42:08.109Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:40:55Z",
+      "updatedAt": "2026-06-03T04:41:58Z",
       "totalEvents": 500,
-      "totalStarts": 210,
+      "totalStarts": 211,
       "totalCompletions": 67,
       "totalPlaybackProgress": 320854.04666970373,
       "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-03T04:40:55Z",
+      "lastActivityAt": "2026-06-03T04:41:58Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -165,11 +165,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 53,
+          "playCount": 54,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:40:55Z"
+          "lastSeenAt": "2026-06-03T04:41:58Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1041,7 +1041,7 @@
           "tmdbId": "9637",
           "title": "Scooby-Doo",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T07:16:19.954Z",
+  "generatedAt": "2026-06-03T07:16:54.292Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T07:16:06Z",
+      "updatedAt": "2026-06-03T07:16:44Z",
       "totalEvents": 500,
       "totalStarts": 213,
       "totalCompletions": 67,
       "totalPlaybackProgress": 318013.3286562842,
-      "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-03T07:16:06Z",
+      "uniqueContentCount": 92,
+      "lastActivityAt": "2026-06-03T07:16:44Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 58,
+          "playCount": 59,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T07:16:06Z"
+          "lastSeenAt": "2026-06-03T07:16:44Z"
         },
         "tt26743760": {
           "contentId": "tt26743760",
@@ -1143,18 +1143,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T14:19:20Z"
-        },
-        "tt2948372": {
-          "contentId": "tt2948372",
-          "imdbId": "tt2948372",
-          "tmdbId": "508442",
-          "title": "Soul",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T06:54:38Z"
         }
       },
       "avgPlaybackProgress": 636.0267

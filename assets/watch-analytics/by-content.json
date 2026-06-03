@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T07:16:19.952Z",
+  "generatedAt": "2026-06-03T07:16:54.289Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 58,
+      "totalEvents": 59,
       "totalStarts": 35,
       "totalCompletions": 9,
       "totalPlaybackProgress": 14413.578784330744,
       "uniqueUsers": 1,
       "completionRate": 0.2571,
-      "lastActivityAt": "2026-06-03T07:16:06Z",
+      "lastActivityAt": "2026-06-03T07:16:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 58,
+          "playCount": 59,
           "completedCount": 9,
           "startedCount": 35,
           "totalPlaybackProgress": 14413.578784330744,
-          "lastSeenAt": "2026-06-03T07:16:06Z",
+          "lastSeenAt": "2026-06-03T07:16:44Z",
           "lastSeason": 1,
-          "lastEpisode": 1
+          "lastEpisode": 35
         }
       },
       "episodes": {
+        "s1e35": {
+          "season": 1,
+          "episode": 35,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T07:16:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -1777,20 +1791,6 @@
           "totalPlaybackProgress": 0.000002,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-03T07:15:55Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e35": {
-          "season": 1,
-          "episode": 35,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T04:41:58Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2245,7 +2245,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 248.51
+      "avgPlaybackProgress": 244.2979
     },
     {
       "contentId": "tt21209804",
@@ -7261,50 +7261,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-20T14:19:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2948372",
-      "imdbId": "tt2948372",
-      "tmdbId": "508442",
-      "title": "Soul",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T06:54:38Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-20T06:54:38Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:54:38Z",
           "users": {
             "henry8812@gmail.com": true
           },

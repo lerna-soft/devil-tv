@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T07:20:21.770Z",
+  "generatedAt": "2026-06-03T07:20:58.435Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T07:20:09Z",
+      "updatedAt": "2026-06-03T07:20:45Z",
       "totalEvents": 500,
       "totalStarts": 213,
       "totalCompletions": 67,
       "totalPlaybackProgress": 318013.3286562842,
-      "uniqueContentCount": 92,
-      "lastActivityAt": "2026-06-03T07:20:09Z",
+      "uniqueContentCount": 91,
+      "lastActivityAt": "2026-06-03T07:20:45Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 62,
+          "playCount": 63,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T07:20:09Z"
+          "lastSeenAt": "2026-06-03T07:20:45Z"
         },
         "tt26743760": {
           "contentId": "tt26743760",
@@ -1131,18 +1131,6 @@
           "maxProgressValue": 11.138896,
           "maxProgressPercent": 11.138896,
           "lastSeenAt": "2026-05-20T18:24:47Z"
-        },
-        "tt1234721": {
-          "contentId": "tt1234721",
-          "imdbId": "tt1234721",
-          "tmdbId": "97020",
-          "title": "RoboCop",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T14:19:20Z"
         }
       },
       "avgPlaybackProgress": 636.0267

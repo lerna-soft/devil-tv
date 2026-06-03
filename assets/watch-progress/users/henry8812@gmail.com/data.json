@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T07:20:09Z",
+  "updatedAt": "2026-06-03T07:20:45Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2137,10 +2137,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 39,
+      "lastEpisode": 40,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-03T07:20:09Z",
+      "updatedAt": "2026-06-03T07:20:45Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2329,6 +2329,11 @@
         },
         "s1e39": {
           "startedAt": "2026-06-03T07:20:08.567Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e40": {
+          "startedAt": "2026-06-03T07:20:45.313Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2675,12 +2680,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 39,
+    "episode": 40,
     "progress": 0,
-    "updatedAt": "2026-06-03T07:20:09Z"
+    "updatedAt": "2026-06-03T07:20:45Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e40:started:2026-06-03T07:20:45Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e40",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 40,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T07:20:45.313Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T07:20:45Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e39:started:2026-06-03T07:20:09Z",
       "contentId": "tt0965547",
@@ -16145,33 +16177,6 @@
       "startedAt": "2026-05-20T15:31:35.988Z",
       "completedAt": "",
       "updatedAt": "2026-05-20T15:31:36Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-20T14:19:20Z",
-      "contentId": "tt1234721",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T18:39:24.126Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T14:19:20Z",
       "country": "",
       "countryName": "",
       "city": "",

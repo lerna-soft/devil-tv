@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T02:29:57.173Z",
+  "generatedAt": "2026-06-03T04:09:48.621Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T02:29:46Z",
+      "updatedAt": "2026-06-03T04:09:38Z",
       "totalEvents": 500,
       "totalStarts": 201,
       "totalCompletions": 66,
       "totalPlaybackProgress": 325119.05799793976,
-      "uniqueContentCount": 102,
-      "lastActivityAt": "2026-06-03T02:29:46Z",
+      "uniqueContentCount": 101,
+      "lastActivityAt": "2026-06-03T04:09:38Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -161,6 +161,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 41,
+          "completed": true,
+          "maxProgressValue": 1389.667822,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T04:09:38Z"
+        },
         "tt29552248": {
           "contentId": "tt29552248",
           "imdbId": "tt29552248",
@@ -184,18 +196,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-03T00:11:23Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 40,
-          "completed": true,
-          "maxProgressValue": 1389.667822,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-02T23:03:34Z"
         },
         "tt9114286": {
           "contentId": "tt9114286",
@@ -1252,18 +1252,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T00:55:37Z"
-        },
-        "tt2883512": {
-          "contentId": "tt2883512",
-          "imdbId": "tt2883512",
-          "tmdbId": "",
-          "title": "Chef",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T18:31:25Z"
         }
       },
       "avgPlaybackProgress": 650.2381

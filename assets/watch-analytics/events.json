@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T02:29:57.167Z",
+  "generatedAt": "2026-06-03T04:09:48.617Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e23:started:2026-06-03T04:09:38Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e23",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 23,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-02T23:03:33.971Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T04:09:38Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt29552248:s1e1:started:2026-06-03T02:29:46Z",
       "contentId": "tt29552248",
@@ -11067,27 +11088,6 @@
       "startedAt": "2026-05-19T18:39:24.126Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T18:39:25Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt2883512:s1e1:preference:2026-05-19T18:31:25Z",
-      "contentId": "tt2883512",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2883512",
-      "tmdbId": "",
-      "title": "Chef",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T18:31:25Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

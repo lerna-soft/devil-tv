@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:56:38.809Z",
+  "generatedAt": "2026-06-03T23:09:15.578Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,22 +1733,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 82,
+      "totalEvents": 83,
       "totalStarts": 48,
-      "totalCompletions": 17,
-      "totalPlaybackProgress": 26646.768280330747,
+      "totalCompletions": 18,
+      "totalPlaybackProgress": 28035.019684330746,
       "uniqueUsers": 1,
-      "completionRate": 0.3542,
-      "lastActivityAt": "2026-06-03T22:56:23Z",
+      "completionRate": 0.375,
+      "lastActivityAt": "2026-06-03T23:09:03Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 82,
-          "completedCount": 17,
+          "playCount": 83,
+          "completedCount": 18,
           "startedCount": 48,
-          "totalPlaybackProgress": 26646.768280330747,
-          "lastSeenAt": "2026-06-03T22:56:23Z",
+          "totalPlaybackProgress": 28035.019684330746,
+          "lastSeenAt": "2026-06-03T23:09:03Z",
           "lastSeason": 1,
           "lastEpisode": 49
         }
@@ -1757,16 +1757,16 @@
         "s1e49": {
           "season": 1,
           "episode": 49,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1388.251404,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T22:56:23Z",
+          "lastActivityAt": "2026-06-03T23:09:03Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e48": {
           "season": 1,
@@ -2427,7 +2427,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 324.9606
+      "avgPlaybackProgress": 337.7713
     },
     {
       "contentId": "tt21209804",
@@ -7237,50 +7237,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T20:35:07Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2911666",
-      "imdbId": "tt2911666",
-      "tmdbId": "245891",
-      "title": "John Wick (Otro día para matar)",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T11:11:54Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T11:11:54Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T11:11:54Z",
           "users": {
             "henry8812@gmail.com": true
           },

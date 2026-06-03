@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T23:11:28.240Z",
+  "generatedAt": "2026-06-03T23:11:41.057Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 579,
-  "totalStarts": 240,
+  "totalStarts": 241,
   "totalCompletions": 78,
-  "overallCompletionRate": 0.325,
+  "overallCompletionRate": 0.3237,
   "trackedTitles": 111,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 122,
+      "totalEvents": 121,
       "uniqueUsers": 1,
       "completionRate": 0.9388
     },
@@ -28,9 +28,9 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 85,
+      "totalEvents": 86,
       "uniqueUsers": 1,
-      "completionRate": 0.3878
+      "completionRate": 0.38
     },
     {
       "contentId": "tt21209804",

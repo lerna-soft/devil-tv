@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T22:38:36Z",
+  "updatedAt": "2026-06-03T22:41:20Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2150,9 +2150,9 @@
       "tmdbId": "42573",
       "lastSeason": 1,
       "lastEpisode": 44,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-03T22:38:36Z",
+      "progress": 1388.390724,
+      "lastProgress": 1388.390724,
+      "updatedAt": "2026-06-03T22:41:20Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2366,8 +2366,8 @@
         },
         "s1e44": {
           "startedAt": "2026-06-03T22:38:35.274Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-06-03T22:41:18.625Z",
+          "lastProgress": 1388.390724
         }
       }
     },
@@ -2728,11 +2728,38 @@
     "tmdbId": "42573",
     "season": 1,
     "episode": 44,
-    "progress": 0,
-    "updatedAt": "2026-06-03T22:38:36Z"
+    "progress": 1388.390724,
+    "updatedAt": "2026-06-03T22:41:20Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e44:completed:2026-06-03T22:41:20Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e44",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 44,
+      "progress": 1388.390724,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-03T22:38:35.274Z",
+      "completedAt": "2026-06-03T22:41:18.625Z",
+      "updatedAt": "2026-06-03T22:41:20Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e44:started:2026-06-03T22:38:36Z",
       "contentId": "tt0965547",
@@ -16197,33 +16224,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-21T04:44:26Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0089374:s1e1:preference:2026-05-21T04:41:21Z",
-      "contentId": "tt0089374",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0089374",
-      "tmdbId": "9056",
-      "title": "Police Story",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T04:41:21Z",
       "country": "",
       "countryName": "",
       "city": "",

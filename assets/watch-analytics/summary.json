@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-03T23:09:26.224Z",
+  "generatedAt": "2026-06-03T23:11:28.240Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 579,
   "totalStarts": 240,
-  "totalCompletions": 77,
-  "overallCompletionRate": 0.3208,
+  "totalCompletions": 78,
+  "overallCompletionRate": 0.325,
   "trackedTitles": 111,
   "mostWatchedContent": [
     {
@@ -28,9 +28,9 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 84,
+      "totalEvents": 85,
       "uniqueUsers": 1,
-      "completionRate": 0.3673
+      "completionRate": 0.3878
     },
     {
       "contentId": "tt21209804",
@@ -65,19 +65,19 @@
       "completionRate": 0.3333
     },
     {
-      "contentId": "tt29552248",
-      "title": "Intercambiados",
-      "type": "movie",
-      "totalEvents": 9,
-      "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt0899043",
       "title": "Amateur",
       "type": "movie",
       "totalEvents": 9,
       "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
+      "contentId": "tt29552248",
+      "title": "Intercambiados",
+      "type": "movie",
+      "totalEvents": 8,
+      "uniqueUsers": 3,
       "completionRate": 0
     },
     {

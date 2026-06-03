@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T23:09:07Z",
+  "updatedAt": "2026-06-03T23:11:17Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2150,9 +2150,9 @@
       "tmdbId": "42573",
       "lastSeason": 1,
       "lastEpisode": 50,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-03T23:09:07Z",
+      "progress": 1387.345826,
+      "lastProgress": 1387.345826,
+      "updatedAt": "2026-06-03T23:11:17Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2396,8 +2396,8 @@
         },
         "s1e50": {
           "startedAt": "2026-06-03T23:09:06.268Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-06-03T23:11:15.936Z",
+          "lastProgress": 1387.345826
         }
       }
     },
@@ -2758,11 +2758,38 @@
     "tmdbId": "42573",
     "season": 1,
     "episode": 50,
-    "progress": 0,
-    "updatedAt": "2026-06-03T23:09:07Z"
+    "progress": 1387.345826,
+    "updatedAt": "2026-06-03T23:11:17Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e50:completed:2026-06-03T23:11:17Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e50",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 50,
+      "progress": 1387.345826,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-03T23:09:06.268Z",
+      "completedAt": "2026-06-03T23:11:15.936Z",
+      "updatedAt": "2026-06-03T23:11:17Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e50:started:2026-06-03T23:09:07Z",
       "contentId": "tt0965547",
@@ -16227,33 +16254,6 @@
       "startedAt": "2026-05-20T19:12:51.348Z",
       "completedAt": "",
       "updatedAt": "2026-05-21T12:28:13Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:preference:2026-05-21T11:32:15Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T11:32:15Z",
       "country": "",
       "countryName": "",
       "city": "",

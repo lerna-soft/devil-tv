@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T04:26:44Z",
+  "updatedAt": "2026-06-03T04:28:31Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2126,10 +2126,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 28,
+      "lastEpisode": 29,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-03T04:26:44Z",
+      "updatedAt": "2026-06-03T04:28:31Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2263,6 +2263,11 @@
         },
         "s1e28": {
           "startedAt": "2026-06-03T04:26:43.773Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e29": {
+          "startedAt": "2026-06-03T04:28:31.377Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -2609,12 +2614,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 28,
+    "episode": 29,
     "progress": 0,
-    "updatedAt": "2026-06-03T04:26:44Z"
+    "updatedAt": "2026-06-03T04:28:31Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e29:started:2026-06-03T04:28:31Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e29",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 29,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T04:28:31.377Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T04:28:31Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e28:started:2026-06-03T04:26:44Z",
       "contentId": "tt0965547",
@@ -16079,33 +16111,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-20T02:00:42Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0398808:s1e1:preference:2026-05-20T00:55:47Z",
-      "contentId": "tt0398808",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0398808",
-      "tmdbId": "1265",
-      "title": "Un puente hacia Terabithia",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T00:55:47Z",
       "country": "",
       "countryName": "",
       "city": "",

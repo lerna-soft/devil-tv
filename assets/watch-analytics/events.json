@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T04:39:36.983Z",
+  "generatedAt": "2026-06-03T04:40:33.952Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e33:started:2026-06-03T04:40:25Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e33",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 33,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T04:40:25.336Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T04:40:25Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e32:started:2026-06-03T04:39:29Z",
       "contentId": "tt0965547",
@@ -11067,27 +11088,6 @@
       "startedAt": "2026-05-20T05:29:49.216Z",
       "completedAt": "",
       "updatedAt": "2026-05-20T05:29:51Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0865556:s1e1:started:2026-05-20T04:11:38Z",
-      "contentId": "tt0865556",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0865556",
-      "tmdbId": "1729",
-      "title": "El reino prohibido",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 2568.527129,
-      "progressValue": 2568.527129,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T03:41:28.488Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T04:11:38Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

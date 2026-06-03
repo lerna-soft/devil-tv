@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-03T18:54:03.811Z",
+  "generatedAt": "2026-06-03T19:26:29.653Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 573,
-  "totalStarts": 234,
+  "totalStarts": 235,
   "totalCompletions": 68,
-  "overallCompletionRate": 0.2906,
-  "trackedTitles": 115,
+  "overallCompletionRate": 0.2894,
+  "trackedTitles": 116,
   "mostWatchedContent": [
     {
       "contentId": "tt0903747",
@@ -52,7 +52,7 @@
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 11,
+      "totalEvents": 10,
       "uniqueUsers": 3,
       "completionRate": 0
     },

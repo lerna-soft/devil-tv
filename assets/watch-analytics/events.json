@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T04:09:48.617Z",
+  "generatedAt": "2026-06-03T04:12:34.553Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e24:started:2026-06-03T04:12:25Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e24",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 24,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T04:12:25.283Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T04:12:25Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e23:started:2026-06-03T04:09:38Z",
       "contentId": "tt0965547",
@@ -11067,27 +11088,6 @@
       "startedAt": "2026-05-19T18:39:24.126Z",
       "completedAt": "",
       "updatedAt": "2026-05-19T21:02:46Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1234721:s1e1:started:2026-05-19T18:39:25Z",
-      "contentId": "tt1234721",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1234721",
-      "tmdbId": "97020",
-      "title": "RoboCop",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-19T18:39:24.126Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T18:39:25Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

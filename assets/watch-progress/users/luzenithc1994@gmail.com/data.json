@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-02T02:43:38Z",
+  "updatedAt": "2026-06-03T00:22:20Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -118,7 +118,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-02T02:43:38Z",
+      "updatedAt": "2026-06-03T00:22:20Z",
       "watched": {
         "s1e6": {
           "startedAt": "2026-06-02T02:43:08.749Z",
@@ -141,7 +141,8 @@
       "tt39333617": 1,
       "tt1757678": 1,
       "tt33046197": 1,
-      "tt14850054": 1
+      "tt14850054": 1,
+      "tt9140554": 1
     },
     "watchLater": {
       "tt33714084": true,
@@ -149,7 +150,7 @@
       "tt1757678": true,
       "tt14850054": true
     },
-    "updatedAt": "2026-05-30T19:47:09Z"
+    "updatedAt": "2026-06-03T00:22:20Z"
   },
   "lastWatch": {
     "imdbId": "tt9140554",
@@ -157,10 +158,37 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-02T02:43:38Z"
+    "updatedAt": "2026-06-03T00:22:20Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s1e1:preference:2026-06-03T00:22:20Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T00:22:20Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s1e1:started:2026-06-02T02:43:38Z",
       "contentId": "tt9140554",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T04:42:08.107Z",
+  "generatedAt": "2026-06-03T04:42:35.944Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 54,
-      "totalStarts": 34,
+      "totalEvents": 55,
+      "totalStarts": 35,
       "totalCompletions": 9,
       "totalPlaybackProgress": 14413.578782330746,
       "uniqueUsers": 1,
-      "completionRate": 0.2647,
-      "lastActivityAt": "2026-06-03T04:41:58Z",
+      "completionRate": 0.2571,
+      "lastActivityAt": "2026-06-03T04:42:26Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 54,
+          "playCount": 55,
           "completedCount": 9,
-          "startedCount": 34,
+          "startedCount": 35,
           "totalPlaybackProgress": 14413.578782330746,
-          "lastSeenAt": "2026-06-03T04:41:58Z",
+          "lastSeenAt": "2026-06-03T04:42:26Z",
           "lastSeason": 1,
-          "lastEpisode": 35
+          "lastEpisode": 36
         }
       },
       "episodes": {
+        "s1e36": {
+          "season": 1,
+          "episode": 36,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T04:42:26Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e35": {
           "season": 1,
           "episode": 35,
@@ -2231,7 +2245,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 266.9181
+      "avgPlaybackProgress": 262.0651
     },
     {
       "contentId": "tt21209804",
@@ -7335,50 +7349,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-20T06:40:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0899258",
-      "imdbId": "tt0899258",
-      "tmdbId": "34141",
-      "title": "D.Gray-man",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T06:09:13Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-20T06:09:13Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:09:13Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T19:26:18Z",
+  "updatedAt": "2026-06-03T21:56:37Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2150,9 +2150,9 @@
       "tmdbId": "42573",
       "lastSeason": 1,
       "lastEpisode": 40,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-03T17:32:05Z",
+      "progress": 1124.740164,
+      "lastProgress": 1124.740164,
+      "updatedAt": "2026-06-03T21:56:37Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2347,7 +2347,7 @@
         "s1e40": {
           "startedAt": "2026-06-03T17:32:04.630Z",
           "completedAt": "",
-          "lastProgress": 0
+          "lastProgress": 1124.740164
         }
       }
     },
@@ -2704,15 +2704,42 @@
     "updatedAt": "2026-06-03T13:28:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt7605074",
-    "tmdbId": "535167",
+    "imdbId": "tt0965547",
+    "tmdbId": "42573",
     "season": 1,
-    "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-06-03T19:26:18Z"
+    "episode": 40,
+    "progress": 1124.740164,
+    "updatedAt": "2026-06-03T21:56:37Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e40:started:2026-06-03T21:56:37Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e40",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 40,
+      "progress": 1124.740164,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T17:32:04.630Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T21:56:37Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt7605074:s1e1:started:2026-06-03T19:26:18Z",
       "contentId": "tt7605074",
@@ -16177,33 +16204,6 @@
       "startedAt": "2026-05-20T17:53:38.965Z",
       "completedAt": "",
       "updatedAt": "2026-05-20T18:24:47Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1615160:s1e1:started:2026-05-20T17:53:40Z",
-      "contentId": "tt1615160",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1615160",
-      "tmdbId": "379149",
-      "title": "The Foreigner",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T17:53:38.965Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T17:53:40Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T21:41:28.581Z",
+  "generatedAt": "2026-06-03T21:56:51.265Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T19:26:18Z",
+      "updatedAt": "2026-06-03T21:56:37Z",
       "totalEvents": 500,
       "totalStarts": 215,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 311621.7153292842,
+      "totalPlaybackProgress": 312746.4554932842,
       "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-03T19:26:18Z",
+      "lastActivityAt": "2026-06-03T21:56:37Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -159,6 +159,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 65,
+          "completed": true,
+          "maxProgressValue": 1389.667822,
+          "maxProgressPercent": 0.000002,
+          "lastSeenAt": "2026-06-03T21:56:37Z"
+        },
         "tt7605074": {
           "contentId": "tt7605074",
           "imdbId": "tt7605074",
@@ -182,18 +194,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-03T17:49:21Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 64,
-          "completed": true,
-          "maxProgressValue": 1389.667822,
-          "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T17:32:05Z"
         },
         "tt28650488": {
           "contentId": "tt28650488",
@@ -1149,14 +1149,14 @@
           "tmdbId": "379149",
           "title": "The Foreigner",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 11.138896,
           "maxProgressPercent": 11.138896,
           "lastSeenAt": "2026-05-20T18:24:47Z"
         }
       },
-      "avgPlaybackProgress": 623.2434
+      "avgPlaybackProgress": 625.4929
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

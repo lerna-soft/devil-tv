@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:39:36.989Z",
+  "generatedAt": "2026-06-03T04:40:33.957Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:39:29Z",
+      "updatedAt": "2026-06-03T04:40:25Z",
       "totalEvents": 500,
       "totalStarts": 210,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 323422.5737987037,
-      "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-03T04:39:29Z",
+      "totalPlaybackProgress": 320854.04666970373,
+      "uniqueContentCount": 96,
+      "lastActivityAt": "2026-06-03T04:40:25Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -36,8 +36,7 @@
         "tt2294629",
         "tt33046197",
         "tt0293662",
-        "tt1615160",
-        "tt0865556"
+        "tt1615160"
       ],
       "content": {
         "15070": {
@@ -166,11 +165,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 51,
+          "playCount": 52,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:39:29Z"
+          "lastSeenAt": "2026-06-03T04:40:25Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1191,21 +1190,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T05:29:51Z"
-        },
-        "tt0865556": {
-          "contentId": "tt0865556",
-          "imdbId": "tt0865556",
-          "tmdbId": "1729",
-          "title": "El reino prohibido",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 2568.527129,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T04:11:38Z"
         }
       },
-      "avgPlaybackProgress": 646.8451
+      "avgPlaybackProgress": 641.7081
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

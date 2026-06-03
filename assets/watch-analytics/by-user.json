@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T00:22:28.661Z",
+  "generatedAt": "2026-06-03T02:29:57.173Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T00:11:23Z",
+      "updatedAt": "2026-06-03T02:29:46Z",
       "totalEvents": 500,
       "totalStarts": 201,
       "totalCompletions": 66,
       "totalPlaybackProgress": 325119.05799793976,
-      "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-03T00:11:23Z",
+      "uniqueContentCount": 102,
+      "lastActivityAt": "2026-06-03T02:29:46Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -23,6 +23,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "tt29552248",
         "tt9114286",
         "tt1825683",
         "tt4881806",
@@ -34,7 +35,6 @@
         "tt21209876",
         "tt2294629",
         "tt33046197",
-        "tt29552248",
         "tt0293662",
         "tt1615160",
         "tt1234721",
@@ -160,6 +160,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt29552248": {
+          "contentId": "tt29552248",
+          "imdbId": "tt29552248",
+          "tmdbId": "1007757",
+          "title": "Intercambiados",
+          "type": "movie",
+          "playCount": 8,
+          "completed": false,
+          "maxProgressValue": 4299.974232,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T02:29:46Z"
         },
         "tt6495056": {
           "contentId": "tt6495056",
@@ -1037,18 +1049,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:35:38Z"
         },
-        "tt29552248": {
-          "contentId": "tt29552248",
-          "imdbId": "tt29552248",
-          "tmdbId": "1007757",
-          "title": "Intercambiados",
-          "type": "movie",
-          "playCount": 7,
-          "completed": false,
-          "maxProgressValue": 4299.974232,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T11:32:15Z"
-        },
         "tt2911666": {
           "contentId": "tt2911666",
           "imdbId": "tt2911666",
@@ -1264,18 +1264,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-19T18:31:25Z"
-        },
-        "tt31392119": {
-          "contentId": "tt31392119",
-          "imdbId": "tt31392119",
-          "tmdbId": "",
-          "title": "The Bad Guys: Breaking In",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T18:30:56Z"
         }
       },
       "avgPlaybackProgress": 650.2381

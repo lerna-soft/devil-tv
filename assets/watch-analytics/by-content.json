@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T00:22:28.659Z",
+  "generatedAt": "2026-06-03T02:29:57.171Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2283,22 +2283,22 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 14,
+      "totalEvents": 15,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
       "uniqueUsers": 3,
       "completionRate": 0,
-      "lastActivityAt": "2026-05-21T11:32:15Z",
+      "lastActivityAt": "2026-06-03T02:29:46Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 7,
+          "playCount": 8,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
-          "lastSeenAt": "2026-05-21T11:32:15Z",
+          "lastSeenAt": "2026-06-03T02:29:46Z",
           "lastSeason": 1,
           "lastEpisode": 1
         },
@@ -2329,12 +2329,12 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 14,
+          "totalEvents": 15,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
           "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-21T11:32:15Z",
+          "lastActivityAt": "2026-06-03T02:29:46Z",
           "users": {
             "henry8812@gmail.com": true,
             "luzenithc1994@gmail.com": true,
@@ -2343,7 +2343,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1175.416
+      "avgPlaybackProgress": 1097.0549
     },
     {
       "contentId": "tt32897959",
@@ -7519,50 +7519,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-19T18:31:25Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt31392119",
-      "imdbId": "tt31392119",
-      "tmdbId": "",
-      "title": "The Bad Guys: Breaking In",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T18:30:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T18:30:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T18:30:56Z",
           "users": {
             "henry8812@gmail.com": true
           },

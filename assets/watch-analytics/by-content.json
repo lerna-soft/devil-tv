@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T06:40:06.282Z",
+  "generatedAt": "2026-06-03T06:49:32.049Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2984,92 +2984,6 @@
       "avgPlaybackProgress": 2565.947
     },
     {
-      "contentId": "tt1190634",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 4,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 6828.981281833502,
-      "uniqueUsers": 1,
-      "completionRate": 0.25,
-      "lastActivityAt": "2026-05-22T23:10:41Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 1,
-          "startedCount": 4,
-          "totalPlaybackProgress": 6828.981281833502,
-          "lastSeenAt": "2026-05-22T23:10:41Z",
-          "lastSeason": 5,
-          "lastEpisode": 8
-        }
-      },
-      "episodes": {
-        "s5e8": {
-          "season": 5,
-          "episode": 8,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2618.228266414001,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T23:10:41Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s5e7": {
-          "season": 5,
-          "episode": 7,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 4210.753015419501,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T13:57:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e8": {
-          "season": 1,
-          "episode": 8,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T11:21:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s5e1": {
-          "season": 5,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T11:21:10Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1138.1635
-    },
-    {
       "contentId": "tt28650488",
       "imdbId": "tt28650488",
       "tmdbId": "1226863",
@@ -3302,6 +3216,92 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt1190634",
+      "imdbId": "tt1190634",
+      "tmdbId": "76479",
+      "title": "The Boys",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 4,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 2618.228266414001,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T23:10:41Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 4,
+          "totalPlaybackProgress": 2618.228266414001,
+          "lastSeenAt": "2026-05-22T23:10:41Z",
+          "lastSeason": 5,
+          "lastEpisode": 8
+        }
+      },
+      "episodes": {
+        "s5e8": {
+          "season": 5,
+          "episode": 8,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2618.228266414001,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T23:10:41Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s5e7": {
+          "season": 5,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T13:57:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T11:21:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s5e1": {
+          "season": 5,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-20T11:21:10Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 523.6457
+    },
+    {
       "contentId": "tt1825683",
       "imdbId": "tt1825683",
       "tmdbId": "284054",
@@ -3476,6 +3476,50 @@
         }
       },
       "avgPlaybackProgress": 2199.1396
+    },
+    {
+      "contentId": "tt26743760",
+      "imdbId": "tt26743760",
+      "tmdbId": "220542",
+      "title": "Los diarios de la boticaria",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1370.035,
+      "uniqueUsers": 1,
+      "completionRate": 1,
+      "lastActivityAt": "2026-06-03T06:49:22Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 1,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1370.035,
+          "lastSeenAt": "2026-06-03T06:49:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1370.035,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T06:49:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 456.6783
     },
     {
       "contentId": "tt9140554",
@@ -3810,50 +3854,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt26743760",
-      "imdbId": "tt26743760",
-      "tmdbId": "220542",
-      "title": "Los diarios de la boticaria",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1370.035,
-      "uniqueUsers": 1,
-      "completionRate": 1,
-      "lastActivityAt": "2026-06-03T06:39:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1370.035,
-          "lastSeenAt": "2026-06-03T06:39:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1370.035,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T06:39:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        }
-      },
-      "avgPlaybackProgress": 685.0175
     },
     {
       "contentId": "tt1757678",

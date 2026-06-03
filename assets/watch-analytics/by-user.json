@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:26:52.733Z",
+  "generatedAt": "2026-06-03T04:28:41.560Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:26:44Z",
+      "updatedAt": "2026-06-03T04:28:31Z",
       "totalEvents": 500,
-      "totalStarts": 206,
+      "totalStarts": 207,
       "totalCompletions": 66,
       "totalPlaybackProgress": 322033.69543702574,
-      "uniqueContentCount": 99,
-      "lastActivityAt": "2026-06-03T04:26:44Z",
+      "uniqueContentCount": 98,
+      "lastActivityAt": "2026-06-03T04:28:31Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 46,
+          "playCount": 47,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:26:44Z"
+          "lastSeenAt": "2026-06-03T04:28:31Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1215,18 +1215,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T02:00:42Z"
-        },
-        "tt0398808": {
-          "contentId": "tt0398808",
-          "imdbId": "tt0398808",
-          "tmdbId": "1265",
-          "title": "Un puente hacia Terabithia",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T00:55:47Z"
         }
       },
       "avgPlaybackProgress": 644.0674

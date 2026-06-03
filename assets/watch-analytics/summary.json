@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T15:02:46.972Z",
+  "generatedAt": "2026-06-03T17:32:20.297Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 573,
@@ -28,7 +28,7 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 63,
+      "totalEvents": 64,
       "uniqueUsers": 1,
       "completionRate": 0.2308
     },
@@ -41,20 +41,20 @@
       "completionRate": 0.3846
     },
     {
-      "contentId": "tt29552248",
-      "title": "Intercambiados",
-      "type": "movie",
-      "totalEvents": 13,
-      "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.5
+    },
+    {
+      "contentId": "tt29552248",
+      "title": "Intercambiados",
+      "type": "movie",
+      "totalEvents": 12,
+      "uniqueUsers": 3,
+      "completionRate": 0
     },
     {
       "contentId": "tt9114286",

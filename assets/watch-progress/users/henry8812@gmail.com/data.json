@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-02T23:03:34Z",
+  "updatedAt": "2026-06-03T00:11:23Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2412,6 +2412,22 @@
           "lastProgress": 6646.493829645
         }
       }
+    },
+    "tt6495056": {
+      "imdbId": "tt6495056",
+      "tmdbId": "940551",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-03T00:11:23Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-03T00:11:23.401Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2559,15 +2575,42 @@
     "updatedAt": "2026-06-01T15:04:22Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt6495056",
+    "tmdbId": "940551",
     "season": 1,
-    "episode": 23,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-02T23:03:34Z"
+    "updatedAt": "2026-06-03T00:11:23Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt6495056:s1e1:started:2026-06-03T00:11:23Z",
+      "contentId": "tt6495056",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt6495056",
+      "tmdbId": "940551",
+      "title": "Migración. Un viaje patas arriba",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T00:11:23.401Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T00:11:23Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e23:started:2026-06-02T23:03:34Z",
       "contentId": "tt0965547",
@@ -16024,33 +16067,6 @@
       "tmdbId": "",
       "title": "The Bad Guys: Breaking In",
       "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T18:30:56Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt9243946:s1e1:preference:2026-05-19T18:30:56Z",
-      "contentId": "tt9243946",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt9243946",
-      "tmdbId": "",
-      "title": "El Camino",
-      "type": "movie",
       "season": 1,
       "episode": 1,
       "progress": 0,

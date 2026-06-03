@@ -1,6 +1,6 @@
 {
-  "version": 343,
-  "generatedAt": "2026-06-03T05:48:06.192Z",
+  "version": 344,
+  "generatedAt": "2026-06-03T05:48:19.887Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52385,6 +52385,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2023-10-14",
       "posterUrl": "https://image.tmdb.org/t/p/w500/6xFxv18Bki2FfbZJxg551Ihl5jR.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "81381",
+      "imdbId": null,
+      "title": "チア☆ダン",
+      "year": 2018,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2018-07-13",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wuxDdBQi8IaGlnGYZe9RIhXKgu7.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

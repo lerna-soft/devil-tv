@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:41:30.586Z",
+  "generatedAt": "2026-06-03T22:41:42.181Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 73,
-      "totalStarts": 43,
+      "totalEvents": 74,
+      "totalStarts": 44,
       "totalCompletions": 13,
       "totalPlaybackProgress": 21093.019623330743,
       "uniqueUsers": 1,
-      "completionRate": 0.3023,
-      "lastActivityAt": "2026-06-03T22:41:20Z",
+      "completionRate": 0.2955,
+      "lastActivityAt": "2026-06-03T22:41:23Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 73,
+          "playCount": 74,
           "completedCount": 13,
-          "startedCount": 43,
+          "startedCount": 44,
           "totalPlaybackProgress": 21093.019623330743,
-          "lastSeenAt": "2026-06-03T22:41:20Z",
+          "lastSeenAt": "2026-06-03T22:41:23Z",
           "lastSeason": 1,
-          "lastEpisode": 44
+          "lastEpisode": 45
         }
       },
       "episodes": {
+        "s1e45": {
+          "season": 1,
+          "episode": 45,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:41:23Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e44": {
           "season": 1,
           "episode": 44,
@@ -2357,7 +2371,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 288.9455
+      "avgPlaybackProgress": 285.0408
     },
     {
       "contentId": "tt21209804",
@@ -2984,62 +2998,6 @@
       "avgPlaybackProgress": 301.5334
     },
     {
-      "contentId": "tt28650488",
-      "imdbId": "tt28650488",
-      "tmdbId": "1226863",
-      "title": "Super Mario Galaxy la película",
-      "type": "movie",
-      "totalEvents": 7,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-03T13:28:08Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-03T13:28:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "majandra955@gmail.com": {
-          "userEmail": "majandra955@gmail.com",
-          "userName": "Alejandra Burgos",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-12T23:59:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-06-03T13:28:08Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "majandra955@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt33046197",
       "imdbId": "tt33046197",
       "tmdbId": "1168190",
@@ -3106,6 +3064,62 @@
         }
       },
       "avgPlaybackProgress": 984.4102
+    },
+    {
+      "contentId": "tt28650488",
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "title": "Super Mario Galaxy la película",
+      "type": "movie",
+      "totalEvents": 6,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-03T13:28:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-03T13:28:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "majandra955@gmail.com": {
+          "userEmail": "majandra955@gmail.com",
+          "userName": "Alejandra Burgos",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-12T23:59:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-03T13:28:08Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "majandra955@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt5311514",

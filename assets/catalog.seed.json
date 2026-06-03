@@ -1,6 +1,6 @@
 {
-  "version": 341,
-  "generatedAt": "2026-06-03T00:23:00.750Z",
+  "version": 342,
+  "generatedAt": "2026-06-03T00:23:09.832Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28401,6 +28401,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2006-10-27",
       "posterUrl": "https://image.tmdb.org/t/p/w500/9V1aFKYeHpgxmKO8EJT8H31jqmE.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0051570",
+      "title": "The Spider",
+      "year": 1958,
+      "releaseDate": null,
+      "overview": "Ed Kemmer, June Kenney",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmI2M2M0NDEtZDA1NC00NTY2LTk0YTAtNjljYTYxZWRmOThhXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T22:56:28.656Z",
+  "generatedAt": "2026-06-03T22:56:38.811Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T22:56:19Z",
+      "updatedAt": "2026-06-03T22:56:23Z",
       "totalEvents": 500,
       "totalStarts": 220,
       "totalCompletions": 75,
       "totalPlaybackProgress": 315047.2074380649,
-      "uniqueContentCount": 88,
-      "lastActivityAt": "2026-06-03T22:56:19Z",
+      "uniqueContentCount": 87,
+      "lastActivityAt": "2026-06-03T22:56:23Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -151,11 +151,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 81,
+          "playCount": 82,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T22:56:19Z"
+          "lastSeenAt": "2026-06-03T22:56:23Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -1080,18 +1080,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T11:11:54Z"
-        },
-        "tt4425200": {
-          "contentId": "tt4425200",
-          "imdbId": "tt4425200",
-          "tmdbId": "324552",
-          "title": "John Wick: Pacto de sangre",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T11:11:27Z"
         }
       },
       "avgPlaybackProgress": 630.0944

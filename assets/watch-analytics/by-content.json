@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:56:28.654Z",
+  "generatedAt": "2026-06-03T22:56:38.809Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 81,
-      "totalStarts": 47,
+      "totalEvents": 82,
+      "totalStarts": 48,
       "totalCompletions": 17,
       "totalPlaybackProgress": 26646.768280330747,
       "uniqueUsers": 1,
-      "completionRate": 0.3617,
-      "lastActivityAt": "2026-06-03T22:56:19Z",
+      "completionRate": 0.3542,
+      "lastActivityAt": "2026-06-03T22:56:23Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 81,
+          "playCount": 82,
           "completedCount": 17,
-          "startedCount": 47,
+          "startedCount": 48,
           "totalPlaybackProgress": 26646.768280330747,
-          "lastSeenAt": "2026-06-03T22:56:19Z",
+          "lastSeenAt": "2026-06-03T22:56:23Z",
           "lastSeason": 1,
-          "lastEpisode": 48
+          "lastEpisode": 49
         }
       },
       "episodes": {
+        "s1e49": {
+          "season": 1,
+          "episode": 49,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:56:23Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e48": {
           "season": 1,
           "episode": 48,
@@ -2413,7 +2427,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 328.9724
+      "avgPlaybackProgress": 324.9606
     },
     {
       "contentId": "tt21209804",
@@ -7267,50 +7281,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T11:11:54Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt4425200",
-      "imdbId": "tt4425200",
-      "tmdbId": "324552",
-      "title": "John Wick: Pacto de sangre",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T11:11:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T11:11:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T11:11:27Z",
           "users": {
             "henry8812@gmail.com": true
           },

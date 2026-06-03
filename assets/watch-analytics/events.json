@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T22:56:28.650Z",
+  "generatedAt": "2026-06-03T22:56:38.807Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e49:started:2026-06-03T22:56:23Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e49",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 49,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T22:56:22.186Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T22:56:23Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e48:completed:2026-06-03T22:56:19Z",
       "contentId": "tt0965547",
@@ -11193,27 +11214,6 @@
       "startedAt": "2026-05-21T11:11:53.750Z",
       "completedAt": "",
       "updatedAt": "2026-05-21T11:11:54Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt4425200:s1e1:started:2026-05-21T11:11:27Z",
-      "contentId": "tt4425200",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt4425200",
-      "tmdbId": "324552",
-      "title": "John Wick: Pacto de sangre",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-21T11:11:27.217Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T11:11:27Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

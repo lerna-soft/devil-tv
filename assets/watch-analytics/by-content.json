@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T06:55:48.101Z",
+  "generatedAt": "2026-06-03T07:16:06.046Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,22 +1733,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 56,
+      "totalEvents": 57,
       "totalStarts": 35,
       "totalCompletions": 9,
       "totalPlaybackProgress": 14413.578784330744,
       "uniqueUsers": 1,
       "completionRate": 0.2571,
-      "lastActivityAt": "2026-06-03T05:47:40Z",
+      "lastActivityAt": "2026-06-03T07:15:55Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 56,
+          "playCount": 57,
           "completedCount": 9,
           "startedCount": 35,
           "totalPlaybackProgress": 14413.578784330744,
-          "lastSeenAt": "2026-06-03T05:47:40Z",
+          "lastSeenAt": "2026-06-03T07:15:55Z",
           "lastSeason": 1,
           "lastEpisode": 36
         }
@@ -1757,12 +1757,12 @@
         "s1e36": {
           "season": 1,
           "episode": 36,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0.000002,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T05:47:40Z",
+          "lastActivityAt": "2026-06-03T07:15:55Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2245,7 +2245,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 257.3853
+      "avgPlaybackProgress": 252.8698
     },
     {
       "contentId": "tt21209804",
@@ -2465,7 +2465,7 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 15,
+      "totalEvents": 14,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
@@ -2476,7 +2476,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
+          "playCount": 7,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
@@ -2511,7 +2511,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 15,
+          "totalEvents": 14,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
@@ -2525,7 +2525,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1097.0549
+      "avgPlaybackProgress": 1175.416
     },
     {
       "contentId": "tt32897959",

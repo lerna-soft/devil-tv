@@ -1,26 +1,25 @@
 {
-  "generatedAt": "2026-06-03T06:40:06.283Z",
+  "generatedAt": "2026-06-03T06:49:32.050Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T06:39:56Z",
+      "updatedAt": "2026-06-03T06:49:22Z",
       "totalEvents": 500,
       "totalStarts": 212,
-      "totalCompletions": 68,
-      "totalPlaybackProgress": 322224.0816717037,
+      "totalCompletions": 67,
+      "totalPlaybackProgress": 318013.3286562842,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-03T06:39:56Z",
+      "lastActivityAt": "2026-06-03T06:49:22Z",
       "completedContentIds": [
         "tt26743760",
         "tt0965547",
         "tt2560140",
         "tt30460310",
         "tt21209804",
-        "tt0903747",
-        "tt1190634"
+        "tt0903747"
       ],
       "inProgressContentIds": [
         "274870",
@@ -35,6 +34,7 @@
         "tt12593682",
         "tt21209876",
         "tt2294629",
+        "tt1190634",
         "tt33046197",
         "tt0293662",
         "tt1615160"
@@ -166,11 +166,11 @@
           "tmdbId": "220542",
           "title": "Los diarios de la boticaria",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": true,
           "maxProgressValue": 1370.035,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T06:39:56Z"
+          "lastSeenAt": "2026-06-03T06:49:22Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -790,9 +790,9 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 6,
-          "completed": true,
-          "maxProgressValue": 4210.753015419501,
+          "playCount": 5,
+          "completed": false,
+          "maxProgressValue": 2618.228266414001,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T23:10:41Z"
         },
@@ -1169,7 +1169,7 @@
           "lastSeenAt": "2026-05-20T06:54:36Z"
         }
       },
-      "avgPlaybackProgress": 644.4482
+      "avgPlaybackProgress": 636.0267
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,6 +1,6 @@
 {
-  "version": 342,
-  "generatedAt": "2026-06-03T00:23:09.832Z",
+  "version": 343,
+  "generatedAt": "2026-06-03T05:48:06.192Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52369,6 +52369,22 @@
       "releaseDate": null,
       "overview": "Djimon Hounsou, Jill Scott",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2VkMTMwZTAtZDVlNi00MDY3LTliMjQtMDk0MTc2ZTcwZjMzXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "233377",
+      "imdbId": null,
+      "title": "あたりのキッチン!",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2023-10-14",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6xFxv18Bki2FfbZJxg551Ihl5jR.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

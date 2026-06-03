@@ -1,14 +1,14 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-03T19:28:44Z",
+  "updatedAt": "2026-06-03T19:28:47Z",
   "lastWatch": {
-    "imdbId": "tt7605074",
+    "imdbId": "tt13539646",
     "tmdbId": "",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-03T19:28:44Z"
+    "updatedAt": "2026-06-03T19:28:47Z"
   },
   "lastSelection": null,
   "preferences": {
@@ -21,7 +21,8 @@
       "tt33046197": 1,
       "tt14850054": 1,
       "tt9140554": 1,
-      "tt7605074": 1
+      "tt7605074": 1,
+      "tt13539646": 1
     },
     "watchLater": {
       "tt33714084": true,
@@ -30,9 +31,10 @@
       "tt14850054": true,
       "tt7605074": true
     },
-    "updatedAt": "2026-06-03T19:28:44Z"
+    "updatedAt": "2026-06-03T19:28:47Z"
   },
   "titles": [
+    "tt13539646",
     "tt14850054",
     "tt1757678",
     "tt29552248",
@@ -46,6 +48,15 @@
     "tt9140554"
   ],
   "progress": {
+    "tt13539646": {
+      "imdbId": "tt13539646",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-03T19:28:47Z"
+    },
     "tt14850054": {
       "imdbId": "tt14850054",
       "tmdbId": "840464",

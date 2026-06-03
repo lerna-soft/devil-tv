@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T19:28:52.388Z",
+  "generatedAt": "2026-06-03T19:29:04.578Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt7605074:s1e1:preference:2026-06-03T19:28:44Z",
+      "contentId": "tt7605074",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt7605074",
+      "tmdbId": "",
+      "title": "The Wandering Earth",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T19:28:44Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt7605074:s1e1:preference:2026-06-03T19:28:41Z",
       "contentId": "tt7605074",

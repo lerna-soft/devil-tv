@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T17:32:20.300Z",
+  "generatedAt": "2026-06-03T17:49:38.113Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2577,10 +2577,10 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 12,
+      "totalEvents": 11,
       "totalStarts": 2,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 16455.823481,
+      "totalPlaybackProgress": 14364.184385999999,
       "uniqueUsers": 3,
       "completionRate": 0,
       "lastActivityAt": "2026-06-03T02:29:46Z",
@@ -2588,10 +2588,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 5,
+          "playCount": 4,
           "completedCount": 0,
           "startedCount": 1,
-          "totalPlaybackProgress": 6391.613326999999,
+          "totalPlaybackProgress": 4299.974232,
           "lastSeenAt": "2026-06-03T02:29:46Z",
           "lastSeason": 1,
           "lastEpisode": 1
@@ -2623,10 +2623,10 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 12,
+          "totalEvents": 11,
           "totalStarts": 2,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 16455.823481,
+          "totalPlaybackProgress": 14364.184385999999,
           "uniqueUsers": 3,
           "lastActivityAt": "2026-06-03T02:29:46Z",
           "users": {
@@ -2637,7 +2637,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1371.3186
+      "avgPlaybackProgress": 1305.8349
     },
     {
       "contentId": "tt9114286",
@@ -4378,6 +4378,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt3513548",
+      "imdbId": "tt3513548",
+      "tmdbId": "292011",
+      "title": "Richard Jewell",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-03T17:49:21Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-03T17:49:21Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T17:49:21Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt6495056",

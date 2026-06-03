@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T17:32:20.301Z",
+  "generatedAt": "2026-06-03T17:49:38.115Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T17:32:05Z",
+      "updatedAt": "2026-06-03T17:49:21Z",
       "totalEvents": 500,
-      "totalStarts": 213,
+      "totalStarts": 214,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 318013.3286562842,
-      "uniqueContentCount": 91,
-      "lastActivityAt": "2026-06-03T17:32:05Z",
+      "totalPlaybackProgress": 315921.6895612842,
+      "uniqueContentCount": 92,
+      "lastActivityAt": "2026-06-03T17:49:21Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -160,6 +160,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt3513548": {
+          "contentId": "tt3513548",
+          "imdbId": "tt3513548",
+          "tmdbId": "292011",
+          "title": "Richard Jewell",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T17:49:21Z"
+        },
         "tt0965547": {
           "contentId": "tt0965547",
           "imdbId": "tt0965547",
@@ -202,7 +214,7 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 5,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 4299.974232,
           "maxProgressPercent": 0,
@@ -1133,7 +1145,7 @@
           "lastSeenAt": "2026-05-20T18:24:47Z"
         }
       },
-      "avgPlaybackProgress": 636.0267
+      "avgPlaybackProgress": 631.8434
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T02:29:57.171Z",
+  "generatedAt": "2026-06-03T04:09:48.620Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,22 +1733,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 40,
+      "totalEvents": 41,
       "totalStarts": 22,
       "totalCompletions": 8,
       "totalPlaybackProgress": 13024.70042065274,
       "uniqueUsers": 1,
       "completionRate": 0.3636,
-      "lastActivityAt": "2026-06-02T23:03:34Z",
+      "lastActivityAt": "2026-06-03T04:09:38Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 40,
+          "playCount": 41,
           "completedCount": 8,
           "startedCount": 22,
           "totalPlaybackProgress": 13024.70042065274,
-          "lastSeenAt": "2026-06-02T23:03:34Z",
+          "lastSeenAt": "2026-06-03T04:09:38Z",
           "lastSeason": 1,
           "lastEpisode": 23
         }
@@ -1757,12 +1757,12 @@
         "s1e23": {
           "season": 1,
           "episode": 23,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-02T23:03:34Z",
+          "lastActivityAt": "2026-06-03T04:09:38Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2063,7 +2063,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 325.6175
+      "avgPlaybackProgress": 317.6756
     },
     {
       "contentId": "tt21209804",
@@ -7475,50 +7475,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-20T00:55:37Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2883512",
-      "imdbId": "tt2883512",
-      "tmdbId": "",
-      "title": "Chef",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-19T18:31:25Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-19T18:31:25Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-19T18:31:25Z",
           "users": {
             "henry8812@gmail.com": true
           },

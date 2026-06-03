@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T06:49:32.050Z",
+  "generatedAt": "2026-06-03T06:55:48.103Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T06:49:22Z",
+      "updatedAt": "2026-06-03T06:55:39Z",
       "totalEvents": 500,
-      "totalStarts": 212,
+      "totalStarts": 213,
       "totalCompletions": 67,
       "totalPlaybackProgress": 318013.3286562842,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-03T06:49:22Z",
+      "lastActivityAt": "2026-06-03T06:55:39Z",
       "completedContentIds": [
         "tt26743760",
         "tt0965547",
@@ -94,7 +94,7 @@
           "tmdbId": "296232",
           "title": "Snowball Earth",
           "type": "series",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -166,11 +166,11 @@
           "tmdbId": "220542",
           "title": "Los diarios de la boticaria",
           "type": "series",
-          "playCount": 3,
+          "playCount": 4,
           "completed": true,
           "maxProgressValue": 1370.035,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T06:49:22Z"
+          "lastSeenAt": "2026-06-03T06:55:39Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",

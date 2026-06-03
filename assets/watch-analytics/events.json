@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T04:42:08.105Z",
+  "generatedAt": "2026-06-03T04:42:35.941Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e36:started:2026-06-03T04:42:26Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e36",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 36,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T04:42:25.867Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T04:42:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e35:started:2026-06-03T04:41:58Z",
       "contentId": "tt0965547",
@@ -11067,27 +11088,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-20T06:40:24Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0899258:s1e1:started:2026-05-20T06:09:13Z",
-      "contentId": "tt0899258",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0899258",
-      "tmdbId": "34141",
-      "title": "D.Gray-man",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T06:09:11.993Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T06:09:13Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T22:41:42.182Z",
+  "generatedAt": "2026-06-03T22:46:37.145Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T22:41:23Z",
+      "updatedAt": "2026-06-03T22:46:27Z",
       "totalEvents": 500,
       "totalStarts": 218,
-      "totalCompletions": 71,
-      "totalPlaybackProgress": 318290.01727228425,
+      "totalCompletions": 72,
+      "totalPlaybackProgress": 319678.19901728426,
       "uniqueContentCount": 90,
-      "lastActivityAt": "2026-06-03T22:41:23Z",
+      "lastActivityAt": "2026-06-03T22:46:27Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -164,11 +164,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 74,
+          "playCount": 75,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T22:41:23Z"
+          "lastSeenAt": "2026-06-03T22:46:27Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -200,7 +200,7 @@
           "tmdbId": "1226863",
           "title": "Super Mario Galaxy la película",
           "type": "movie",
-          "playCount": 5,
+          "playCount": 4,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -1119,7 +1119,7 @@
           "lastSeenAt": "2026-05-21T10:49:04Z"
         }
       },
-      "avgPlaybackProgress": 636.58
+      "avgPlaybackProgress": 639.3564
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

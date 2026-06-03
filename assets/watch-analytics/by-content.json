@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:46:37.144Z",
+  "generatedAt": "2026-06-03T22:46:46.438Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 75,
-      "totalStarts": 44,
+      "totalEvents": 76,
+      "totalStarts": 45,
       "totalCompletions": 14,
       "totalPlaybackProgress": 22481.20136833075,
       "uniqueUsers": 1,
-      "completionRate": 0.3182,
-      "lastActivityAt": "2026-06-03T22:46:27Z",
+      "completionRate": 0.3111,
+      "lastActivityAt": "2026-06-03T22:46:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 75,
+          "playCount": 76,
           "completedCount": 14,
-          "startedCount": 44,
+          "startedCount": 45,
           "totalPlaybackProgress": 22481.20136833075,
-          "lastSeenAt": "2026-06-03T22:46:27Z",
+          "lastSeenAt": "2026-06-03T22:46:30Z",
           "lastSeason": 1,
-          "lastEpisode": 45
+          "lastEpisode": 46
         }
       },
       "episodes": {
+        "s1e46": {
+          "season": 1,
+          "episode": 46,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:46:30Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e45": {
           "season": 1,
           "episode": 45,
@@ -2371,7 +2385,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 299.7494
+      "avgPlaybackProgress": 295.8053
     },
     {
       "contentId": "tt21209804",
@@ -3003,7 +3017,7 @@
       "tmdbId": "1168190",
       "title": "Los hermanos demolición",
       "type": "movie",
-      "totalEvents": 7,
+      "totalEvents": 6,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 6890.871176,
@@ -3025,7 +3039,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 3,
+          "playCount": 2,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 5479.404539,
@@ -3049,7 +3063,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 7,
+          "totalEvents": 6,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 6890.871176,
@@ -3063,7 +3077,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 984.4102
+      "avgPlaybackProgress": 1148.4785
     },
     {
       "contentId": "tt5311514",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T10:10:25.315Z",
+  "generatedAt": "2026-06-03T13:28:25.104Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2521,7 +2521,7 @@
       "tmdbId": "1007757",
       "title": "Intercambiados",
       "type": "movie",
-      "totalEvents": 14,
+      "totalEvents": 13,
       "totalStarts": 2,
       "totalCompletions": 0,
       "totalPlaybackProgress": 16455.823481,
@@ -2532,7 +2532,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 7,
+          "playCount": 6,
           "completedCount": 0,
           "startedCount": 1,
           "totalPlaybackProgress": 6391.613326999999,
@@ -2567,7 +2567,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 14,
+          "totalEvents": 13,
           "totalStarts": 2,
           "totalCompletions": 0,
           "totalPlaybackProgress": 16455.823481,
@@ -2581,7 +2581,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1175.416
+      "avgPlaybackProgress": 1265.8326
     },
     {
       "contentId": "tt32897959",
@@ -2996,6 +2996,62 @@
       "avgPlaybackProgress": 301.5334
     },
     {
+      "contentId": "tt28650488",
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "title": "Super Mario Galaxy la película",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-03T13:28:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-03T13:28:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "majandra955@gmail.com": {
+          "userEmail": "majandra955@gmail.com",
+          "userName": "Alejandra Burgos",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-12T23:59:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-03T13:28:08Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "majandra955@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt5311514",
       "imdbId": "tt5311514",
       "tmdbId": "372058",
@@ -3038,62 +3094,6 @@
         }
       },
       "avgPlaybackProgress": 2565.947
-    },
-    {
-      "contentId": "tt28650488",
-      "imdbId": "tt28650488",
-      "tmdbId": "1226863",
-      "title": "Super Mario Galaxy la película",
-      "type": "movie",
-      "totalEvents": 6,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T21:33:53Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T21:33:53Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "majandra955@gmail.com": {
-          "userEmail": "majandra955@gmail.com",
-          "userName": "Alejandra Burgos",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-12T23:59:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 6,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-21T21:33:53Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "majandra955@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt26443616",

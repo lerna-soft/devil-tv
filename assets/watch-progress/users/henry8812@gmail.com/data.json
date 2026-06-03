@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T07:20:45Z",
+  "updatedAt": "2026-06-03T13:28:08Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -1331,8 +1331,14 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-05-21T21:33:53Z",
-      "watched": {}
+      "updatedAt": "2026-06-03T13:28:08Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-03T13:28:08Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "tt21209804": {
       "imdbId": "tt21209804",
@@ -2625,7 +2631,6 @@
       "tt0294154": true,
       "tt2948372": true,
       "tt33244668": true,
-      "tt28650488": true,
       "tt0096708": true,
       "tt21209804": true,
       "tt21692408": true,
@@ -2674,18 +2679,45 @@
       "tt4543708": true,
       "tt31193547": true
     },
-    "updatedAt": "2026-06-01T15:04:22Z"
+    "updatedAt": "2026-06-03T13:28:08Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt28650488",
+    "tmdbId": "1226863",
     "season": 1,
-    "episode": 40,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-03T07:20:45Z"
+    "updatedAt": "2026-06-03T13:28:08Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt28650488:s1e1:preference:2026-06-03T13:28:08Z",
+      "contentId": "tt28650488",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "title": "Super Mario Galaxy la película",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T13:28:08Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e40:started:2026-06-03T07:20:45Z",
       "contentId": "tt0965547",
@@ -16150,33 +16182,6 @@
       "startedAt": "2026-05-20T16:34:05.468Z",
       "completedAt": "",
       "updatedAt": "2026-05-20T16:34:07Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt29552248:s1e1:started:2026-05-20T15:31:36Z",
-      "contentId": "tt29552248",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt29552248",
-      "tmdbId": "1007757",
-      "title": "Intercambiados",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T15:31:35.988Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T15:31:36Z",
       "country": "",
       "countryName": "",
       "city": "",

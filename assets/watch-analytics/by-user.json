@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T10:10:25.318Z",
+  "generatedAt": "2026-06-03T13:28:25.106Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T07:20:45Z",
+      "updatedAt": "2026-06-03T13:28:08Z",
       "totalEvents": 500,
       "totalStarts": 213,
       "totalCompletions": 67,
       "totalPlaybackProgress": 318013.3286562842,
       "uniqueContentCount": 91,
-      "lastActivityAt": "2026-06-03T07:20:45Z",
+      "lastActivityAt": "2026-06-03T13:28:08Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -160,6 +160,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt28650488": {
+          "contentId": "tt28650488",
+          "imdbId": "tt28650488",
+          "tmdbId": "1226863",
+          "title": "Super Mario Galaxy la película",
+          "type": "movie",
+          "playCount": 6,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T13:28:08Z"
+        },
         "tt0965547": {
           "contentId": "tt0965547",
           "imdbId": "tt0965547",
@@ -190,7 +202,7 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 7,
+          "playCount": 6,
           "completed": false,
           "maxProgressValue": 4299.974232,
           "maxProgressPercent": 0,
@@ -1023,18 +1035,6 @@
           "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T19:39:26Z"
-        },
-        "tt28650488": {
-          "contentId": "tt28650488",
-          "imdbId": "tt28650488",
-          "tmdbId": "1226863",
-          "title": "Super Mario Galaxy la película",
-          "type": "movie",
-          "playCount": 5,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T21:33:53Z"
         },
         "tt0096708": {
           "contentId": "tt0096708",

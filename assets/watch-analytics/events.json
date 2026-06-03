@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T00:22:28.654Z",
+  "generatedAt": "2026-06-03T02:29:57.167Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt29552248:s1e1:started:2026-06-03T02:29:46Z",
+      "contentId": "tt29552248",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T02:29:46.345Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T02:29:46Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s1e1:preference:2026-06-03T00:22:20Z",
       "contentId": "tt9140554",
@@ -11067,27 +11088,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-19T18:31:25Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt31392119:s1e1:preference:2026-05-19T18:30:56Z",
-      "contentId": "tt31392119",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt31392119",
-      "tmdbId": "",
-      "title": "The Bad Guys: Breaking In",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-19T18:30:56Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

@@ -2,10 +2,10 @@
   "imdbId": "tt0965547",
   "tmdbId": "42573",
   "lastSeason": 1,
-  "lastEpisode": 46,
-  "progress": 1388.599704,
-  "lastProgress": 1388.599704,
-  "updatedAt": "2026-06-03T22:51:06Z",
+  "lastEpisode": 47,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-03T22:51:10Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-05-28T08:15:56.973Z",
@@ -231,9 +231,41 @@
       "startedAt": "2026-06-03T22:46:29.315Z",
       "completedAt": "2026-06-03T22:51:05.516Z",
       "lastProgress": 1388.599704
+    },
+    "s1e47": {
+      "startedAt": "2026-06-03T22:51:09.269Z",
+      "completedAt": "",
+      "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e47:started:2026-06-03T22:51:10Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e47",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 47,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T22:51:09.269Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T22:51:10Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e46:completed:2026-06-03T22:51:06Z",
       "contentId": "tt0965547",

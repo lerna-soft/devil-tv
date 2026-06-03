@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:51:17.706Z",
+  "generatedAt": "2026-06-03T22:51:28.737Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 77,
-      "totalStarts": 45,
+      "totalEvents": 78,
+      "totalStarts": 46,
       "totalCompletions": 15,
       "totalPlaybackProgress": 23869.80107233075,
       "uniqueUsers": 1,
-      "completionRate": 0.3333,
-      "lastActivityAt": "2026-06-03T22:51:06Z",
+      "completionRate": 0.3261,
+      "lastActivityAt": "2026-06-03T22:51:10Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 77,
+          "playCount": 78,
           "completedCount": 15,
-          "startedCount": 45,
+          "startedCount": 46,
           "totalPlaybackProgress": 23869.80107233075,
-          "lastSeenAt": "2026-06-03T22:51:06Z",
+          "lastSeenAt": "2026-06-03T22:51:10Z",
           "lastSeason": 1,
-          "lastEpisode": 46
+          "lastEpisode": 47
         }
       },
       "episodes": {
+        "s1e47": {
+          "season": 1,
+          "episode": 47,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:51:10Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e46": {
           "season": 1,
           "episode": 46,
@@ -2385,7 +2399,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 309.9974
+      "avgPlaybackProgress": 306.0231
     },
     {
       "contentId": "tt21209804",
@@ -7327,50 +7341,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T11:11:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "379149",
-      "imdbId": "",
-      "tmdbId": "379149",
-      "title": "El extranjero",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-21T04:55:29Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-21T04:55:29Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T04:55:29Z",
           "users": {
             "henry8812@gmail.com": true
           },

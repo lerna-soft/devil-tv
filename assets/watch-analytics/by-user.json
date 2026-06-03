@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-02T23:03:42.903Z",
+  "generatedAt": "2026-06-03T00:11:35.474Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-02T23:03:34Z",
+      "updatedAt": "2026-06-03T00:11:23Z",
       "totalEvents": 500,
-      "totalStarts": 200,
+      "totalStarts": 201,
       "totalCompletions": 66,
       "totalPlaybackProgress": 325119.05799793976,
       "uniqueContentCount": 103,
-      "lastActivityAt": "2026-06-02T23:03:34Z",
+      "lastActivityAt": "2026-06-03T00:11:23Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -160,6 +160,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt6495056": {
+          "contentId": "tt6495056",
+          "imdbId": "tt6495056",
+          "tmdbId": "940551",
+          "title": "Migración. Un viaje patas arriba",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-03T00:11:23Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -1259,18 +1271,6 @@
           "tmdbId": "",
           "title": "The Bad Guys: Breaking In",
           "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-19T18:30:56Z"
-        },
-        "tt9243946": {
-          "contentId": "tt9243946",
-          "imdbId": "tt9243946",
-          "tmdbId": "",
-          "title": "El Camino",
-          "type": "movie",
           "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,

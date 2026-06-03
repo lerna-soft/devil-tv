@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T06:18:11.029Z",
+  "generatedAt": "2026-06-03T06:40:06.279Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt26743760:s1e1:completed:2026-06-03T06:39:56Z",
+      "contentId": "tt26743760",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt26743760",
+      "tmdbId": "220542",
+      "title": "Los diarios de la boticaria",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 1370.035,
+      "progressValue": 1370.035,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-03T06:17:41.857Z",
+      "completedAt": "2026-06-03T06:39:55.446Z",
+      "updatedAt": "2026-06-03T06:39:56Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt26743760:s1e1:started:2026-06-03T06:17:42Z",
       "contentId": "tt26743760",
@@ -11067,27 +11088,6 @@
       "startedAt": "2026-05-20T02:08:07.075Z",
       "completedAt": "2026-05-20T06:53:08.127Z",
       "updatedAt": "2026-05-20T06:53:08Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e7:started:2026-05-20T06:52:38Z",
-      "contentId": "tt1190634",
-      "episodeKey": "s5e7",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "season": 5,
-      "episode": 7,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T02:08:07.075Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-20T06:52:38Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

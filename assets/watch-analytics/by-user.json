@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T23:09:26.228Z",
+  "generatedAt": "2026-06-03T23:11:28.245Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T23:09:07Z",
+      "updatedAt": "2026-06-03T23:11:17Z",
       "totalEvents": 500,
       "totalStarts": 220,
-      "totalCompletions": 76,
-      "totalPlaybackProgress": 316435.4588420649,
+      "totalCompletions": 77,
+      "totalPlaybackProgress": 317822.80466806487,
       "uniqueContentCount": 86,
-      "lastActivityAt": "2026-06-03T23:09:07Z",
+      "lastActivityAt": "2026-06-03T23:11:17Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -151,11 +151,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 84,
+          "playCount": 85,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T23:09:07Z"
+          "lastSeenAt": "2026-06-03T23:11:17Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -211,7 +211,7 @@
           "tmdbId": "1007757",
           "title": "Intercambiados",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -1070,7 +1070,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 632.8709
+      "avgPlaybackProgress": 635.6456
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T22:46:27Z",
+  "updatedAt": "2026-06-03T22:46:30Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2149,10 +2149,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 45,
-      "progress": 1388.181745,
-      "lastProgress": 1388.181745,
-      "updatedAt": "2026-06-03T22:46:27Z",
+      "lastEpisode": 46,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-03T22:46:30Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2373,6 +2373,11 @@
           "startedAt": "2026-06-03T22:41:22.175Z",
           "completedAt": "2026-06-03T22:46:25.865Z",
           "lastProgress": 1388.181745
+        },
+        "s1e46": {
+          "startedAt": "2026-06-03T22:46:29.315Z",
+          "completedAt": "",
+          "lastProgress": 0
         }
       }
     },
@@ -2732,12 +2737,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 45,
-    "progress": 1388.181745,
-    "updatedAt": "2026-06-03T22:46:27Z"
+    "episode": 46,
+    "progress": 0,
+    "updatedAt": "2026-06-03T22:46:30Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e46:started:2026-06-03T22:46:30Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e46",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 46,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T22:46:29.315Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T22:46:30Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e45:completed:2026-06-03T22:46:27Z",
       "contentId": "tt0965547",
@@ -16202,33 +16234,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-21T04:55:26Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt33046197:s1e1:preference:2026-05-21T04:49:52Z",
-      "contentId": "tt33046197",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T04:49:52Z",
       "country": "",
       "countryName": "",
       "city": "",

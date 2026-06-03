@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T07:16:06.046Z",
+  "generatedAt": "2026-06-03T07:16:19.952Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 57,
+      "totalEvents": 58,
       "totalStarts": 35,
       "totalCompletions": 9,
       "totalPlaybackProgress": 14413.578784330744,
       "uniqueUsers": 1,
       "completionRate": 0.2571,
-      "lastActivityAt": "2026-06-03T07:15:55Z",
+      "lastActivityAt": "2026-06-03T07:16:06Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 57,
+          "playCount": 58,
           "completedCount": 9,
           "startedCount": 35,
           "totalPlaybackProgress": 14413.578784330744,
-          "lastSeenAt": "2026-06-03T07:15:55Z",
+          "lastSeenAt": "2026-06-03T07:16:06Z",
           "lastSeason": 1,
-          "lastEpisode": 36
+          "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1389.5981843537415,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T07:16:06Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e36": {
           "season": 1,
           "episode": 36,
@@ -2146,20 +2160,6 @@
           },
           "completionRate": 1
         },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 6,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1389.5981843537415,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-29T16:56:34Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
         "s1e8": {
           "season": 1,
           "episode": 8,
@@ -2245,7 +2245,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 252.8698
+      "avgPlaybackProgress": 248.51
     },
     {
       "contentId": "tt21209804",
@@ -7305,50 +7305,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-20T06:54:38Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt26735622",
-      "imdbId": "tt26735622",
-      "tmdbId": "1084577",
-      "title": "Balls Up: Con un par",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T06:54:36Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-20T06:54:36Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T06:54:36Z",
           "users": {
             "henry8812@gmail.com": true
           },

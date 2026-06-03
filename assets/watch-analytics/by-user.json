@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:40:33.957Z",
+  "generatedAt": "2026-06-03T04:41:04.944Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:40:25Z",
+      "updatedAt": "2026-06-03T04:40:55Z",
       "totalEvents": 500,
       "totalStarts": 210,
       "totalCompletions": 67,
       "totalPlaybackProgress": 320854.04666970373,
-      "uniqueContentCount": 96,
-      "lastActivityAt": "2026-06-03T04:40:25Z",
+      "uniqueContentCount": 95,
+      "lastActivityAt": "2026-06-03T04:40:55Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -165,11 +165,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 52,
+          "playCount": 53,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:40:25Z"
+          "lastSeenAt": "2026-06-03T04:40:55Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -1178,18 +1178,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-20T06:09:13Z"
-        },
-        "tt0166792": {
-          "contentId": "tt0166792",
-          "imdbId": "tt0166792",
-          "tmdbId": "",
-          "title": "tt0166792",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-20T05:29:51Z"
         }
       },
       "avgPlaybackProgress": 641.7081

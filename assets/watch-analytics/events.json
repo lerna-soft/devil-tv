@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-03T19:30:15.598Z",
+  "generatedAt": "2026-06-03T19:32:14.744Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt32174149:s1e1:preference:2026-06-03T19:28:53Z",
+      "contentId": "tt32174149",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt32174149",
+      "tmdbId": "",
+      "title": "The Wandering Earth 3",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T19:28:53Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt32174149:s1e1:preference:2026-06-03T19:28:51Z",
       "contentId": "tt32174149",

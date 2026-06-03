@@ -1,6 +1,6 @@
 {
-  "version": 344,
-  "generatedAt": "2026-06-03T05:48:19.887Z",
+  "version": 345,
+  "generatedAt": "2026-06-03T05:49:07.994Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28417,6 +28417,22 @@
       "releaseDate": null,
       "overview": "Ed Kemmer, June Kenney",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZmI2M2M0NDEtZDA1NC00NTY2LTk0YTAtNjljYTYxZWRmOThhXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt37051817",
+      "title": "Samurai X: Trust & Betrayal - Director's Cut",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "Mayo Suzukaze, Junko Iwao",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZDFiMTE4YzItYzNiOS00OTQ4LWFlY2MtZWUzMzZiNjUzZjgwXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

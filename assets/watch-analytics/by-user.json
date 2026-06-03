@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T22:46:46.440Z",
+  "generatedAt": "2026-06-03T22:51:17.707Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T22:46:30Z",
+      "updatedAt": "2026-06-03T22:51:06Z",
       "totalEvents": 500,
       "totalStarts": 219,
-      "totalCompletions": 72,
-      "totalPlaybackProgress": 319678.19901728426,
+      "totalCompletions": 73,
+      "totalPlaybackProgress": 321066.7987212842,
       "uniqueContentCount": 90,
-      "lastActivityAt": "2026-06-03T22:46:30Z",
+      "lastActivityAt": "2026-06-03T22:51:06Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -104,7 +104,7 @@
           "tmdbId": "379149",
           "title": "El extranjero",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -164,11 +164,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 76,
+          "playCount": 77,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T22:46:30Z"
+          "lastSeenAt": "2026-06-03T22:51:06Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -1119,7 +1119,7 @@
           "lastSeenAt": "2026-05-21T10:49:04Z"
         }
       },
-      "avgPlaybackProgress": 639.3564
+      "avgPlaybackProgress": 642.1336
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

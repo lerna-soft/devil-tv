@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T19:28:52.393Z",
+  "generatedAt": "2026-06-03T19:29:04.583Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1163,13 +1163,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-03T19:28:41Z",
-      "totalEvents": 34,
+      "updatedAt": "2026-06-03T19:28:44Z",
+      "totalEvents": 35,
       "totalStarts": 8,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
       "uniqueContentCount": 11,
-      "lastActivityAt": "2026-06-03T19:28:41Z",
+      "lastActivityAt": "2026-06-03T19:28:44Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt33046197",
@@ -1184,11 +1184,11 @@
           "tmdbId": "",
           "title": "The Wandering Earth",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T19:28:41Z"
+          "lastSeenAt": "2026-06-03T19:28:44Z"
         },
         "tt9140554": {
           "contentId": "tt9140554",
@@ -1311,7 +1311,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1281.2449
+      "avgPlaybackProgress": 1244.6379
     },
     {
       "userEmail": "liz-munera@hotmail.com",

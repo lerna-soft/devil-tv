@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-03T19:28:41Z",
+  "updatedAt": "2026-06-03T19:28:44Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -139,7 +139,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-03T19:28:41Z",
+      "updatedAt": "2026-06-03T19:28:44Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-03T19:28:41Z",
@@ -165,9 +165,10 @@
       "tt33714084": true,
       "tt39333617": true,
       "tt1757678": true,
-      "tt14850054": true
+      "tt14850054": true,
+      "tt7605074": true
     },
-    "updatedAt": "2026-06-03T19:28:41Z"
+    "updatedAt": "2026-06-03T19:28:44Z"
   },
   "lastWatch": {
     "imdbId": "tt7605074",
@@ -175,10 +176,37 @@
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-03T19:28:41Z"
+    "updatedAt": "2026-06-03T19:28:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt7605074:s1e1:preference:2026-06-03T19:28:44Z",
+      "contentId": "tt7605074",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt7605074",
+      "tmdbId": "",
+      "title": "The Wandering Earth",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T19:28:44Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt7605074:s1e1:preference:2026-06-03T19:28:41Z",
       "contentId": "tt7605074",

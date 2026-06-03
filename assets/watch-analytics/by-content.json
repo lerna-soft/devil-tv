@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:06:14.377Z",
+  "generatedAt": "2026-06-03T22:19:58.012Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,22 +1733,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 68,
+      "totalEvents": 69,
       "totalStarts": 41,
-      "totalCompletions": 10,
-      "totalPlaybackProgress": 16926.988312330745,
+      "totalCompletions": 11,
+      "totalPlaybackProgress": 18315.541576330746,
       "uniqueUsers": 1,
-      "completionRate": 0.2439,
-      "lastActivityAt": "2026-06-03T22:05:55Z",
+      "completionRate": 0.2683,
+      "lastActivityAt": "2026-06-03T22:19:42Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 68,
-          "completedCount": 10,
+          "playCount": 69,
+          "completedCount": 11,
           "startedCount": 41,
-          "totalPlaybackProgress": 16926.988312330745,
-          "lastSeenAt": "2026-06-03T22:05:55Z",
+          "totalPlaybackProgress": 18315.541576330746,
+          "lastSeenAt": "2026-06-03T22:19:42Z",
           "lastSeason": 1,
           "lastEpisode": 42
         }
@@ -1757,16 +1757,16 @@
         "s1e42": {
           "season": 1,
           "episode": 42,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1388.553264,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T22:05:55Z",
+          "lastActivityAt": "2026-06-03T22:19:42Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e41": {
           "season": 1,
@@ -2329,7 +2329,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 248.9263
+      "avgPlaybackProgress": 265.4426
     },
     {
       "contentId": "tt21209804",
@@ -2884,74 +2884,6 @@
       "avgPlaybackProgress": 1865.6571
     },
     {
-      "contentId": "tt33046197",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "totalEvents": 8,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 6890.871176,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T19:45:33Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1411.466637,
-          "lastSeenAt": "2026-05-30T19:45:33Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5479.404539,
-          "lastSeenAt": "2026-05-22T19:39:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 8,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 6890.871176,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-30T19:45:33Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 861.3589
-    },
-    {
       "contentId": "tt21209876",
       "imdbId": "tt21209876",
       "tmdbId": "127532",
@@ -3078,6 +3010,74 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt33046197",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 6890.871176,
+      "uniqueUsers": 3,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T19:45:33Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1411.466637,
+          "lastSeenAt": "2026-05-30T19:45:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 5479.404539,
+          "lastSeenAt": "2026-05-22T19:39:26Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:14Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 2,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 6890.871176,
+          "uniqueUsers": 3,
+          "lastActivityAt": "2026-05-30T19:45:33Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "henry8812@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 984.4102
     },
     {
       "contentId": "tt5311514",

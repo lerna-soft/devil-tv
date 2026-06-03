@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T04:33:33.424Z",
+  "generatedAt": "2026-06-03T04:36:35.063Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:33:23Z",
+      "updatedAt": "2026-06-03T04:36:26Z",
       "totalEvents": 500,
       "totalStarts": 208,
-      "totalCompletions": 66,
-      "totalPlaybackProgress": 322033.69543702574,
+      "totalCompletions": 67,
+      "totalPlaybackProgress": 323422.5737987037,
       "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-03T04:33:23Z",
+      "lastActivityAt": "2026-06-03T04:36:26Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -166,11 +166,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 48,
+          "playCount": 49,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:33:23Z"
+          "lastSeenAt": "2026-06-03T04:36:26Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -778,7 +778,7 @@
           "tmdbId": "76479",
           "title": "The Boys",
           "type": "series",
-          "playCount": 8,
+          "playCount": 7,
           "completed": true,
           "maxProgressValue": 4210.753015419501,
           "maxProgressPercent": 0,
@@ -1205,7 +1205,7 @@
           "lastSeenAt": "2026-05-20T04:11:38Z"
         }
       },
-      "avgPlaybackProgress": 644.0674
+      "avgPlaybackProgress": 646.8451
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

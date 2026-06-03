@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T05:17:10.596Z",
+  "generatedAt": "2026-06-03T05:47:52.166Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 573,
@@ -28,7 +28,7 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 55,
+      "totalEvents": 56,
       "uniqueUsers": 1,
       "completionRate": 0.2571
     },
@@ -57,20 +57,20 @@
       "completionRate": 0.5
     },
     {
-      "contentId": "tt30460310",
-      "title": "Spider-Noir",
-      "type": "series",
-      "totalEvents": 11,
-      "uniqueUsers": 1,
-      "completionRate": 0.3333
-    },
-    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
       "totalEvents": 10,
       "uniqueUsers": 2,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt30460310",
+      "title": "Spider-Noir",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 1,
+      "completionRate": 0.3333
     },
     {
       "contentId": "tt0899043",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T05:17:10.602Z",
+  "generatedAt": "2026-06-03T05:47:52.171Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T04:42:26Z",
+      "updatedAt": "2026-06-03T05:47:40Z",
       "totalEvents": 500,
       "totalStarts": 211,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 320854.04666970373,
+      "totalPlaybackProgress": 320854.04667170375,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-03T04:42:26Z",
+      "lastActivityAt": "2026-06-03T05:47:40Z",
       "completedContentIds": [
         "tt0965547",
         "tt2560140",
@@ -165,11 +165,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 55,
+          "playCount": 56,
           "completed": true,
           "maxProgressValue": 1389.667822,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T04:42:26Z"
+          "maxProgressPercent": 0.000002,
+          "lastSeenAt": "2026-06-03T05:47:40Z"
         },
         "tt29552248": {
           "contentId": "tt29552248",
@@ -333,7 +333,7 @@
           "tmdbId": "220102",
           "title": "Spider-Noir",
           "type": "series",
-          "playCount": 11,
+          "playCount": 10,
           "completed": true,
           "maxProgressValue": 2815.73,
           "maxProgressPercent": 35.358218735,

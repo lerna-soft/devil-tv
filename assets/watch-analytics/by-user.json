@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T21:56:51.265Z",
+  "generatedAt": "2026-06-03T21:57:00.657Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T21:56:37Z",
+      "updatedAt": "2026-06-03T21:56:44Z",
       "totalEvents": 500,
       "totalStarts": 215,
       "totalCompletions": 67,
-      "totalPlaybackProgress": 312746.4554932842,
-      "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-03T21:56:37Z",
+      "totalPlaybackProgress": 312735.3165972842,
+      "uniqueContentCount": 92,
+      "lastActivityAt": "2026-06-03T21:56:44Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -35,8 +35,7 @@
         "tt2294629",
         "tt1190634",
         "tt33046197",
-        "tt0293662",
-        "tt1615160"
+        "tt0293662"
       ],
       "content": {
         "15070": {
@@ -165,11 +164,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 65,
+          "playCount": 66,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T21:56:37Z"
+          "lastSeenAt": "2026-06-03T21:56:44Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -1142,21 +1141,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T04:41:15Z"
-        },
-        "tt1615160": {
-          "contentId": "tt1615160",
-          "imdbId": "tt1615160",
-          "tmdbId": "379149",
-          "title": "The Foreigner",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 11.138896,
-          "maxProgressPercent": 11.138896,
-          "lastSeenAt": "2026-05-20T18:24:47Z"
         }
       },
-      "avgPlaybackProgress": 625.4929
+      "avgPlaybackProgress": 625.4706
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

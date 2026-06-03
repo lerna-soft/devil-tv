@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T21:56:51.263Z",
+  "generatedAt": "2026-06-03T21:57:00.655Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 65,
-      "totalStarts": 39,
+      "totalEvents": 66,
+      "totalStarts": 40,
       "totalCompletions": 9,
       "totalPlaybackProgress": 15538.318948330745,
       "uniqueUsers": 1,
-      "completionRate": 0.2308,
-      "lastActivityAt": "2026-06-03T21:56:37Z",
+      "completionRate": 0.225,
+      "lastActivityAt": "2026-06-03T21:56:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 65,
+          "playCount": 66,
           "completedCount": 9,
-          "startedCount": 39,
+          "startedCount": 40,
           "totalPlaybackProgress": 15538.318948330745,
-          "lastSeenAt": "2026-06-03T21:56:37Z",
+          "lastSeenAt": "2026-06-03T21:56:44Z",
           "lastSeason": 1,
-          "lastEpisode": 40
+          "lastEpisode": 41
         }
       },
       "episodes": {
+        "s1e41": {
+          "season": 1,
+          "episode": 41,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T21:56:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e40": {
           "season": 1,
           "episode": 40,
@@ -2301,7 +2315,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 239.0511
+      "avgPlaybackProgress": 235.4291
     },
     {
       "contentId": "tt21209804",
@@ -7382,50 +7396,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1615160",
-      "imdbId": "tt1615160",
-      "tmdbId": "379149",
-      "title": "The Foreigner",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 11.138896,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-20T18:24:47Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 11.138896,
-          "lastSeenAt": "2026-05-20T18:24:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 11.138896,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-20T18:24:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 11.1389
     },
     {
       "contentId": "tt33714084",

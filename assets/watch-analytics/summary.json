@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-03T23:09:15.575Z",
+  "generatedAt": "2026-06-03T23:09:26.224Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 579,
-  "totalStarts": 239,
+  "totalStarts": 240,
   "totalCompletions": 77,
-  "overallCompletionRate": 0.3222,
+  "overallCompletionRate": 0.3208,
   "trackedTitles": 111,
   "mostWatchedContent": [
     {
@@ -28,9 +28,9 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 83,
+      "totalEvents": 84,
       "uniqueUsers": 1,
-      "completionRate": 0.375
+      "completionRate": 0.3673
     },
     {
       "contentId": "tt21209804",
@@ -49,14 +49,6 @@
       "completionRate": 0.5
     },
     {
-      "contentId": "tt29552248",
-      "title": "Intercambiados",
-      "type": "movie",
-      "totalEvents": 10,
-      "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
@@ -71,6 +63,14 @@
       "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
+    },
+    {
+      "contentId": "tt29552248",
+      "title": "Intercambiados",
+      "type": "movie",
+      "totalEvents": 9,
+      "uniqueUsers": 3,
+      "completionRate": 0
     },
     {
       "contentId": "tt0899043",

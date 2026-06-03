@@ -1,6 +1,6 @@
 {
-  "version": 346,
-  "generatedAt": "2026-06-03T05:49:19.523Z",
+  "version": 347,
+  "generatedAt": "2026-06-03T05:49:30.219Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52433,6 +52433,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2018-07-13",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wuxDdBQi8IaGlnGYZe9RIhXKgu7.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0423731",
+      "title": "Samurai Champloo",
+      "year": 2004,
+      "releaseDate": null,
+      "overview": "Kazuya Nakai, Ginpei Sato",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjBhZTY4NzMtOGU3OC00ZDllLWE2ZjUtMGFjYTU5OWI0YTQ2XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

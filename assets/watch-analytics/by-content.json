@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T22:06:03.082Z",
+  "generatedAt": "2026-06-03T22:06:14.377Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,7 +7,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 124,
+      "totalEvents": 123,
       "totalStarts": 49,
       "totalCompletions": 46,
       "totalPlaybackProgress": 151881.12720567174,
@@ -18,7 +18,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 124,
+          "playCount": 123,
           "completedCount": 46,
           "startedCount": 49,
           "totalPlaybackProgress": 151881.12720567174,
@@ -73,7 +73,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 5,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3526.876511,
@@ -715,7 +715,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1224.8478
+      "avgPlaybackProgress": 1234.8059
     },
     {
       "contentId": "tt2560140",
@@ -1733,27 +1733,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 67,
-      "totalStarts": 40,
+      "totalEvents": 68,
+      "totalStarts": 41,
       "totalCompletions": 10,
       "totalPlaybackProgress": 16926.988312330745,
       "uniqueUsers": 1,
-      "completionRate": 0.25,
-      "lastActivityAt": "2026-06-03T22:05:51Z",
+      "completionRate": 0.2439,
+      "lastActivityAt": "2026-06-03T22:05:55Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 67,
+          "playCount": 68,
           "completedCount": 10,
-          "startedCount": 40,
+          "startedCount": 41,
           "totalPlaybackProgress": 16926.988312330745,
-          "lastSeenAt": "2026-06-03T22:05:51Z",
+          "lastSeenAt": "2026-06-03T22:05:55Z",
           "lastSeason": 1,
-          "lastEpisode": 41
+          "lastEpisode": 42
         }
       },
       "episodes": {
+        "s1e42": {
+          "season": 1,
+          "episode": 42,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T22:05:55Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e41": {
           "season": 1,
           "episode": 41,
@@ -2315,7 +2329,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 252.6416
+      "avgPlaybackProgress": 248.9263
     },
     {
       "contentId": "tt21209804",

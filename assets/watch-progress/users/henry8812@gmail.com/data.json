@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-03T22:56:19Z",
+  "updatedAt": "2026-06-03T22:56:23Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2149,10 +2149,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 48,
-      "progress": 1388.669364,
-      "lastProgress": 1388.669364,
-      "updatedAt": "2026-06-03T22:56:19Z",
+      "lastEpisode": 49,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-03T22:56:23Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T08:15:56.973Z",
@@ -2388,6 +2388,11 @@
           "startedAt": "2026-06-03T22:53:27.233Z",
           "completedAt": "2026-06-03T22:56:18.509Z",
           "lastProgress": 1388.669364
+        },
+        "s1e49": {
+          "startedAt": "2026-06-03T22:56:22.186Z",
+          "completedAt": "",
+          "lastProgress": 0
         }
       }
     },
@@ -2747,12 +2752,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 48,
-    "progress": 1388.669364,
-    "updatedAt": "2026-06-03T22:56:19Z"
+    "episode": 49,
+    "progress": 0,
+    "updatedAt": "2026-06-03T22:56:23Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e49:started:2026-06-03T22:56:23Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e49",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 49,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-03T22:56:22.186Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-03T22:56:23Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e48:completed:2026-06-03T22:56:19Z",
       "contentId": "tt0965547",
@@ -16217,33 +16249,6 @@
       "startedAt": "2026-05-21T11:11:53.750Z",
       "completedAt": "",
       "updatedAt": "2026-05-21T11:11:54Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt4425200:s1e1:started:2026-05-21T11:11:27Z",
-      "contentId": "tt4425200",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt4425200",
-      "tmdbId": "324552",
-      "title": "John Wick: Pacto de sangre",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-21T11:11:27.217Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T11:11:27Z",
       "country": "",
       "countryName": "",
       "city": "",

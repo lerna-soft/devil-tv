@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-03T22:51:28.739Z",
+  "generatedAt": "2026-06-03T22:53:33.837Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-03T22:51:10Z",
+      "updatedAt": "2026-06-03T22:53:25Z",
       "totalEvents": 500,
       "totalStarts": 220,
-      "totalCompletions": 73,
-      "totalPlaybackProgress": 321066.7987212842,
+      "totalCompletions": 74,
+      "totalPlaybackProgress": 322455.09656528424,
       "uniqueContentCount": 89,
-      "lastActivityAt": "2026-06-03T22:51:10Z",
+      "lastActivityAt": "2026-06-03T22:53:25Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -152,11 +152,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 78,
+          "playCount": 79,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 0.000002,
-          "lastSeenAt": "2026-06-03T22:51:10Z"
+          "lastSeenAt": "2026-06-03T22:53:25Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -1100,14 +1100,14 @@
           "tmdbId": "4108",
           "title": "Transporter",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 4461.4374871,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T10:49:04Z"
         }
       },
-      "avgPlaybackProgress": 642.1336
+      "avgPlaybackProgress": 644.9102
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

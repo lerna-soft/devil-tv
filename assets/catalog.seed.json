@@ -1,6 +1,6 @@
 {
-  "version": 355,
-  "generatedAt": "2026-06-04T10:29:00.453Z",
+  "version": 356,
+  "generatedAt": "2026-06-04T10:29:11.690Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52577,6 +52577,22 @@
       "releaseDate": null,
       "overview": "Jessy Schram, Aaron Hill",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTA0MjM4Njc2OTBeQTJeQWpwZ15BbWU4MDA4MzIwMDYx._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt15822846",
+      "title": "The Reluctant Traveler",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Eugene Levy, Héctor Bellerín",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYmFhNDVmZjktMjc4ZC00NWRhLTliZjMtZDVmOGJmOTY0OTU1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

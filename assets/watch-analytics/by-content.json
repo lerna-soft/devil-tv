@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T13:43:10.463Z",
+  "generatedAt": "2026-06-04T15:27:12.006Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,7 +7,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 116,
+      "totalEvents": 115,
       "totalStarts": 49,
       "totalCompletions": 44,
       "totalPlaybackProgress": 142583.53473367178,
@@ -18,7 +18,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 116,
+          "playCount": 115,
           "completedCount": 44,
           "startedCount": 49,
           "totalPlaybackProgress": 142583.53473367178,
@@ -661,7 +661,7 @@
         "s1e4": {
           "season": 1,
           "episode": 4,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2888.655214,
@@ -715,7 +715,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1229.1684
+      "avgPlaybackProgress": 1239.8568
     },
     {
       "contentId": "tt2560140",
@@ -3716,6 +3716,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt2032557",
+      "imdbId": "tt2032557",
+      "tmdbId": "121677",
+      "title": "The Reluctant Fundamentalist",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 1.702345702,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-04T15:26:58Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1.702345702,
+          "lastSeenAt": "2026-06-04T15:26:58Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1.702345702,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T15:26:58Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0.5674
+    },
+    {
       "contentId": "tt7605074",
       "imdbId": "tt7605074",
       "tmdbId": "",
@@ -4039,50 +4083,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:00Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2032557",
-      "imdbId": "tt2032557",
-      "tmdbId": "121677",
-      "title": "The Reluctant Fundamentalist",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-04T10:31:51Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-04T10:31:51Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T10:31:51Z",
           "users": {
             "henry8812@gmail.com": true
           },

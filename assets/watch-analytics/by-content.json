@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T16:51:45.287Z",
+  "generatedAt": "2026-06-04T17:03:49.643Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1705,27 +1705,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 97,
-      "totalStarts": 55,
+      "totalEvents": 98,
+      "totalStarts": 56,
       "totalCompletions": 21,
       "totalPlaybackProgress": 32366.06541433075,
       "uniqueUsers": 1,
-      "completionRate": 0.3818,
-      "lastActivityAt": "2026-06-04T16:51:27Z",
+      "completionRate": 0.375,
+      "lastActivityAt": "2026-06-04T17:03:31Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 97,
+          "playCount": 98,
           "completedCount": 21,
-          "startedCount": 55,
+          "startedCount": 56,
           "totalPlaybackProgress": 32366.06541433075,
-          "lastSeenAt": "2026-06-04T16:51:27Z",
+          "lastSeenAt": "2026-06-04T17:03:31Z",
           "lastSeason": 1,
-          "lastEpisode": 56
+          "lastEpisode": 57
         }
       },
       "episodes": {
+        "s1e57": {
+          "season": 1,
+          "episode": 57,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T17:03:31Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e56": {
           "season": 1,
           "episode": 56,
@@ -2497,7 +2511,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 333.6708
+      "avgPlaybackProgress": 330.266
     },
     {
       "contentId": "tt21209804",
@@ -2505,7 +2519,7 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 32,
+      "totalEvents": 31,
       "totalStarts": 13,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7652.20068749126,
@@ -2516,7 +2530,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 32,
+          "playCount": 31,
           "completedCount": 5,
           "startedCount": 13,
           "totalPlaybackProgress": 7652.20068749126,
@@ -2543,7 +2557,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 11,
+          "totalEvents": 10,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1420.1324260770975,
@@ -2709,7 +2723,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 239.1313
+      "avgPlaybackProgress": 246.8452
     },
     {
       "contentId": "tt32897959",

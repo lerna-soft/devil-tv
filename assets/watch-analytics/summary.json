@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-04T16:51:45.284Z",
+  "generatedAt": "2026-06-04T17:03:49.640Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 584,
-  "totalStarts": 247,
+  "totalStarts": 248,
   "totalCompletions": 75,
-  "overallCompletionRate": 0.3036,
+  "overallCompletionRate": 0.3024,
   "trackedTitles": 112,
   "mostWatchedContent": [
     {
@@ -28,15 +28,15 @@
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 97,
+      "totalEvents": 98,
       "uniqueUsers": 1,
-      "completionRate": 0.3818
+      "completionRate": 0.375
     },
     {
       "contentId": "tt21209804",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 32,
+      "totalEvents": 31,
       "uniqueUsers": 1,
       "completionRate": 0.3846
     },

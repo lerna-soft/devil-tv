@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T10:31:56.846Z",
+  "generatedAt": "2026-06-04T10:32:07.946Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,21 +7,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 117,
+      "totalEvents": 116,
       "totalStarts": 49,
-      "totalCompletions": 45,
-      "totalPlaybackProgress": 145468.47475467177,
+      "totalCompletions": 44,
+      "totalPlaybackProgress": 142583.53473367178,
       "uniqueUsers": 1,
-      "completionRate": 0.9184,
+      "completionRate": 0.898,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 117,
-          "completedCount": 45,
+          "playCount": 116,
+          "completedCount": 44,
           "startedCount": 49,
-          "totalPlaybackProgress": 145468.47475467177,
+          "totalPlaybackProgress": 142583.53473367178,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -633,16 +633,16 @@
         "s1e3": {
           "season": 1,
           "episode": 3,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2884.940021,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T22:02:05Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         },
         "s1e2": {
           "season": 1,
@@ -715,7 +715,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1243.3203
+      "avgPlaybackProgress": 1229.1684
     },
     {
       "contentId": "tt2560140",
@@ -4048,6 +4048,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt2032557",
+      "imdbId": "tt2032557",
+      "tmdbId": "121677",
+      "title": "The Reluctant Fundamentalist",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-04T10:31:51Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-04T10:31:51Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T10:31:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt32174149",
       "imdbId": "tt32174149",
       "tmdbId": "",
@@ -4542,50 +4586,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "tt2032557",
-      "imdbId": "tt2032557",
-      "tmdbId": "121677",
-      "title": "The Reluctant Fundamentalist",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-04T10:31:47Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-04T10:31:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T10:31:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt3513548",

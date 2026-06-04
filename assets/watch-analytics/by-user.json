@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-04T17:39:15.847Z",
+  "generatedAt": "2026-06-04T17:54:29.939Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-04T17:39:06Z",
+      "updatedAt": "2026-06-04T17:54:20Z",
       "totalEvents": 500,
-      "totalStarts": 226,
+      "totalStarts": 227,
       "totalCompletions": 74,
       "totalPlaybackProgress": 303009.5515407669,
       "uniqueContentCount": 87,
-      "lastActivityAt": "2026-06-04T17:39:06Z",
+      "lastActivityAt": "2026-06-04T17:54:20Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -152,11 +152,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 99,
+          "playCount": 100,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-04T17:39:06Z"
+          "lastSeenAt": "2026-06-04T17:54:20Z"
         },
         "tt2032557": {
           "contentId": "tt2032557",
@@ -440,7 +440,7 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 30,
+          "playCount": 29,
           "completed": true,
           "maxProgressValue": 1420.1324260770975,
           "maxProgressPercent": 0,

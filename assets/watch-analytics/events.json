@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-04T01:03:03.578Z",
+  "generatedAt": "2026-06-04T01:33:06.304Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:32:56Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 1543.188788,
+      "progressValue": 1543.188788,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-04T01:02:51.002Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T01:32:56Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:02:52Z",
       "contentId": "tt9140554",

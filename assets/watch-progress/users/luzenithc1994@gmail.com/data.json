@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-04T01:02:52Z",
+  "updatedAt": "2026-06-04T01:32:56Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -116,9 +116,9 @@
       "tmdbId": "84958",
       "lastSeason": 2,
       "lastEpisode": 1,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-04T01:02:52Z",
+      "progress": 1543.188788,
+      "lastProgress": 1543.188788,
+      "updatedAt": "2026-06-04T01:32:56Z",
       "watched": {
         "s1e6": {
           "startedAt": "2026-06-02T02:43:08.749Z",
@@ -133,7 +133,7 @@
         "s2e1": {
           "startedAt": "2026-06-04T01:02:51.002Z",
           "completedAt": "",
-          "lastProgress": 0
+          "lastProgress": 1543.188788
         }
       }
     },
@@ -216,11 +216,38 @@
     "tmdbId": "84958",
     "season": 2,
     "episode": 1,
-    "progress": 0,
-    "updatedAt": "2026-06-04T01:02:52Z"
+    "progress": 1543.188788,
+    "updatedAt": "2026-06-04T01:32:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:32:56Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 1543.188788,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-04T01:02:51.002Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T01:32:56Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:02:52Z",
       "contentId": "tt9140554",

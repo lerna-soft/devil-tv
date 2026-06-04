@@ -1,14 +1,14 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-04T03:21:20Z",
+  "updatedAt": "2026-06-04T10:31:47Z",
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt2032557",
+    "tmdbId": "121677",
     "season": 1,
-    "episode": 51,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-04T03:21:20Z"
+    "updatedAt": "2026-06-04T10:31:47Z"
   },
   "lastSelection": null,
   "preferences": {
@@ -150,9 +150,10 @@
       "tt0899043": true,
       "tt21478426": true,
       "tt4543708": true,
-      "tt31193547": true
+      "tt31193547": true,
+      "tt2032557": true
     },
-    "updatedAt": "2026-06-03T13:28:08Z"
+    "updatedAt": "2026-06-04T10:31:47Z"
   },
   "titles": [
     "1242265",
@@ -260,6 +261,7 @@
     "tt1870479",
     "tt1878870",
     "tt20215234",
+    "tt2032557",
     "tt2076298",
     "tt21028848",
     "tt21209804",
@@ -1295,6 +1297,15 @@
       "progress": 0,
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:07:04Z"
+    },
+    "tt2032557": {
+      "imdbId": "tt2032557",
+      "tmdbId": "121677",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-04T10:31:47Z"
     },
     "tt2076298": {
       "imdbId": "tt2076298",

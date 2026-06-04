@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt2032557",
+  "tmdbId": "121677",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-04T10:31:47Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-04T10:31:47Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2032557:s1e1:preference:2026-06-04T10:31:47Z",
+      "contentId": "tt2032557",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2032557",
+      "tmdbId": "121677",
+      "title": "The Reluctant Fundamentalist",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T10:31:47Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

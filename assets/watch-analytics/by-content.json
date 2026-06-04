@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T16:34:10.530Z",
+  "generatedAt": "2026-06-04T16:34:20.910Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -1705,27 +1705,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 95,
+      "totalEvents": 96,
       "totalStarts": 54,
       "totalCompletions": 21,
-      "totalPlaybackProgress": 32205.710428330753,
+      "totalPlaybackProgress": 32366.06541433075,
       "uniqueUsers": 1,
       "completionRate": 0.3889,
-      "lastActivityAt": "2026-06-04T16:33:56Z",
+      "lastActivityAt": "2026-06-04T16:34:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 95,
+          "playCount": 96,
           "completedCount": 21,
           "startedCount": 54,
-          "totalPlaybackProgress": 32205.710428330753,
-          "lastSeenAt": "2026-06-04T16:33:56Z",
+          "totalPlaybackProgress": 32366.06541433075,
+          "lastSeenAt": "2026-06-04T16:34:02Z",
           "lastSeason": 1,
-          "lastEpisode": 55
+          "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 8,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1549.9531703537416,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T16:34:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e55": {
           "season": 1,
           "episode": 55,
@@ -2005,20 +2019,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1389.5981843537415,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T07:16:06Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
         },
         "s1e36": {
           "season": 1,
@@ -2483,7 +2483,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 339.0075
+      "avgPlaybackProgress": 337.1465
     },
     {
       "contentId": "tt21209804",
@@ -2491,7 +2491,7 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 34,
+      "totalEvents": 33,
       "totalStarts": 13,
       "totalCompletions": 5,
       "totalPlaybackProgress": 7652.20068749126,
@@ -2502,7 +2502,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 34,
+          "playCount": 33,
           "completedCount": 5,
           "startedCount": 13,
           "totalPlaybackProgress": 7652.20068749126,
@@ -2529,7 +2529,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 13,
+          "totalEvents": 12,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1420.1324260770975,
@@ -2695,7 +2695,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 225.0647
+      "avgPlaybackProgress": 231.8849
     },
     {
       "contentId": "tt32897959",

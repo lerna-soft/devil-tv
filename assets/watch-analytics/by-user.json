@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T23:22:37.878Z",
+  "generatedAt": "2026-06-04T01:03:03.584Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1077,13 +1077,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-03T19:28:53Z",
-      "totalEvents": 39,
-      "totalStarts": 8,
+      "updatedAt": "2026-06-04T01:02:52Z",
+      "totalEvents": 40,
+      "totalStarts": 9,
       "totalCompletions": 0,
       "totalPlaybackProgress": 43562.327591,
       "uniqueContentCount": 13,
-      "lastActivityAt": "2026-06-03T19:28:53Z",
+      "lastActivityAt": "2026-06-04T01:02:52Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt33046197",
@@ -1092,6 +1092,18 @@
         "tt32897959"
       ],
       "content": {
+        "tt9140554": {
+          "contentId": "tt9140554",
+          "imdbId": "tt9140554",
+          "tmdbId": "84958",
+          "title": "Loki",
+          "type": "series",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-04T01:02:52Z"
+        },
         "tt32174149": {
           "contentId": "tt32174149",
           "imdbId": "tt32174149",
@@ -1127,18 +1139,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-03T19:28:44Z"
-        },
-        "tt9140554": {
-          "contentId": "tt9140554",
-          "imdbId": "tt9140554",
-          "tmdbId": "84958",
-          "title": "Loki",
-          "type": "series",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-03T00:22:20Z"
         },
         "tt14850054": {
           "contentId": "tt14850054",
@@ -1249,7 +1249,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 1116.9828
+      "avgPlaybackProgress": 1089.0582
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-04T10:30:52.641Z",
+  "generatedAt": "2026-06-04T10:31:56.847Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-04T03:21:20Z",
+      "updatedAt": "2026-06-04T10:31:47Z",
       "totalEvents": 500,
       "totalStarts": 222,
       "totalCompletions": 76,
       "totalPlaybackProgress": 311417.2265250649,
-      "uniqueContentCount": 86,
-      "lastActivityAt": "2026-06-04T03:21:20Z",
+      "uniqueContentCount": 87,
+      "lastActivityAt": "2026-06-04T10:31:47Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -144,6 +144,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt2032557": {
+          "contentId": "tt2032557",
+          "imdbId": "tt2032557",
+          "tmdbId": "121677",
+          "title": "The Reluctant Fundamentalist",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-04T10:31:47Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -487,7 +499,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 118,
+          "playCount": 117,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

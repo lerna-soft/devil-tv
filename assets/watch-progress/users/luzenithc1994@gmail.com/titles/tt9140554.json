@@ -3,9 +3,9 @@
   "tmdbId": "84958",
   "lastSeason": 2,
   "lastEpisode": 2,
-  "progress": 1732.038727,
-  "lastProgress": 1732.038727,
-  "updatedAt": "2026-06-04T02:16:31Z",
+  "progress": 2531.915728,
+  "lastProgress": 2531.915728,
+  "updatedAt": "2026-06-04T02:53:58Z",
   "watched": {
     "s1e6": {
       "startedAt": "2026-06-02T02:43:08.749Z",
@@ -25,10 +25,37 @@
     "s2e2": {
       "startedAt": "2026-06-04T01:46:24.234Z",
       "completedAt": "",
-      "lastProgress": 1732.038727
+      "lastProgress": 2531.915728
     }
   },
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e2:started:2026-06-04T02:53:58Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e2",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 2,
+      "progress": 2531.915728,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-04T01:46:24.234Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T02:53:58Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e2:started:2026-06-04T02:16:31Z",
       "contentId": "tt9140554",

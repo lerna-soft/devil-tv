@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-04T02:16:42.210Z",
+  "generatedAt": "2026-06-04T02:54:09.425Z",
   "totalUsers": 12,
   "activeUsers": 6,
-  "totalEvents": 583,
+  "totalEvents": 584,
   "totalStarts": 244,
   "totalCompletions": 77,
   "overallCompletionRate": 0.3156,
@@ -73,19 +73,19 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt9140554",
+      "title": "Loki",
+      "type": "series",
+      "totalEvents": 8,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt29552248",
       "title": "Intercambiados",
       "type": "movie",
       "totalEvents": 8,
       "uniqueUsers": 3,
-      "completionRate": 0
-    },
-    {
-      "contentId": "tt8790086",
-      "title": "Kraven the Hunter",
-      "type": "movie",
-      "totalEvents": 8,
-      "uniqueUsers": 1,
       "completionRate": 0
     }
   ]

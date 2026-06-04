@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-04T15:27:12.007Z",
+  "generatedAt": "2026-06-04T15:39:26.698Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-04T15:26:58Z",
+      "updatedAt": "2026-06-04T15:39:13Z",
       "totalEvents": 500,
       "totalStarts": 223,
-      "totalCompletions": 75,
-      "totalPlaybackProgress": 308533.9888497669,
+      "totalCompletions": 74,
+      "totalPlaybackProgress": 305645.3336357669,
       "uniqueContentCount": 87,
-      "lastActivityAt": "2026-06-04T15:26:58Z",
+      "lastActivityAt": "2026-06-04T15:39:13Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -146,6 +146,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0965547": {
+          "contentId": "tt0965547",
+          "imdbId": "tt0965547",
+          "tmdbId": "42573",
+          "title": "Slam Dunk",
+          "type": "series",
+          "playCount": 90,
+          "completed": true,
+          "maxProgressValue": 1389.667822,
+          "maxProgressPercent": 7.074308,
+          "lastSeenAt": "2026-06-04T15:39:13Z"
+        },
         "tt2032557": {
           "contentId": "tt2032557",
           "imdbId": "tt2032557",
@@ -157,18 +169,6 @@
           "maxProgressValue": 1.702345702,
           "maxProgressPercent": 1.702345702,
           "lastSeenAt": "2026-06-04T15:26:58Z"
-        },
-        "tt0965547": {
-          "contentId": "tt0965547",
-          "imdbId": "tt0965547",
-          "tmdbId": "42573",
-          "title": "Slam Dunk",
-          "type": "series",
-          "playCount": 89,
-          "completed": true,
-          "maxProgressValue": 1389.667822,
-          "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-04T03:21:20Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -500,7 +500,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 115,
+          "playCount": 114,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1083,7 +1083,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 617.068
+      "avgPlaybackProgress": 611.2907
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

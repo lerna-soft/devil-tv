@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-03T19:28:53Z",
+  "updatedAt": "2026-06-04T01:02:52Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -114,11 +114,11 @@
     "tt9140554": {
       "imdbId": "tt9140554",
       "tmdbId": "84958",
-      "lastSeason": 1,
+      "lastSeason": 2,
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-03T00:22:20Z",
+      "updatedAt": "2026-06-04T01:02:52Z",
       "watched": {
         "s1e6": {
           "startedAt": "2026-06-02T02:43:08.749Z",
@@ -127,6 +127,11 @@
         },
         "s1e1": {
           "startedAt": "2026-06-02T02:43:35.736Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s2e1": {
+          "startedAt": "2026-06-04T01:02:51.002Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -207,15 +212,42 @@
     "updatedAt": "2026-06-03T19:28:53Z"
   },
   "lastWatch": {
-    "imdbId": "tt32174149",
-    "tmdbId": "",
-    "season": 1,
+    "imdbId": "tt9140554",
+    "tmdbId": "84958",
+    "season": 2,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-03T19:28:53Z"
+    "updatedAt": "2026-06-04T01:02:52Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:02:52Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-04T01:02:51.002Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T01:02:52Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt32174149:s1e1:preference:2026-06-03T19:28:53Z",
       "contentId": "tt32174149",

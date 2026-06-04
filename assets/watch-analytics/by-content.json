@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T02:01:38.271Z",
+  "generatedAt": "2026-06-04T02:16:42.214Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3101,22 +3101,22 @@
       "tmdbId": "84958",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 6,
+      "totalEvents": 7,
       "totalStarts": 4,
       "totalCompletions": 0,
-      "totalPlaybackProgress": 1543.188788,
+      "totalPlaybackProgress": 3275.227515,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-04T01:46:27Z",
+      "lastActivityAt": "2026-06-04T02:16:31Z",
       "users": {
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
-          "playCount": 6,
+          "playCount": 7,
           "completedCount": 0,
           "startedCount": 4,
-          "totalPlaybackProgress": 1543.188788,
-          "lastSeenAt": "2026-06-04T01:46:27Z",
+          "totalPlaybackProgress": 3275.227515,
+          "lastSeenAt": "2026-06-04T02:16:31Z",
           "lastSeason": 2,
           "lastEpisode": 2
         }
@@ -3125,12 +3125,12 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalPlaybackProgress": 1732.038727,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T01:46:27Z",
+          "lastActivityAt": "2026-06-04T02:16:31Z",
           "users": {
             "luzenithc1994@gmail.com": true
           },
@@ -3179,7 +3179,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 257.1981
+      "avgPlaybackProgress": 467.8896
     },
     {
       "contentId": "tt33046197",

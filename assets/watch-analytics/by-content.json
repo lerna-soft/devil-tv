@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T01:33:06.308Z",
+  "generatedAt": "2026-06-04T01:46:36.451Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -3096,6 +3096,92 @@
       "avgPlaybackProgress": 301.5334
     },
     {
+      "contentId": "tt9140554",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "totalEvents": 6,
+      "totalStarts": 4,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 1543.188788,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-04T01:46:27Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 4,
+          "totalPlaybackProgress": 1543.188788,
+          "lastSeenAt": "2026-06-04T01:46:27Z",
+          "lastSeason": 2,
+          "lastEpisode": 2
+        }
+      },
+      "episodes": {
+        "s2e2": {
+          "season": 2,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T01:46:27Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s2e1": {
+          "season": 2,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1543.188788,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-04T01:32:56Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-03T00:22:20Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e6": {
+          "season": 1,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-02T02:43:10Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 257.1981
+    },
+    {
       "contentId": "tt33046197",
       "imdbId": "tt33046197",
       "tmdbId": "1168190",
@@ -3250,78 +3336,6 @@
         }
       },
       "avgPlaybackProgress": 2140.1599
-    },
-    {
-      "contentId": "tt9140554",
-      "imdbId": "tt9140554",
-      "tmdbId": "84958",
-      "title": "Loki",
-      "type": "series",
-      "totalEvents": 5,
-      "totalStarts": 3,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 1543.188788,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-04T01:32:56Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 5,
-          "completedCount": 0,
-          "startedCount": 3,
-          "totalPlaybackProgress": 1543.188788,
-          "lastSeenAt": "2026-06-04T01:32:56Z",
-          "lastSeason": 2,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s2e1": {
-          "season": 2,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1543.188788,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T01:32:56Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-03T00:22:20Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e6": {
-          "season": 1,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-02T02:43:10Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 308.6378
     },
     {
       "contentId": "tt28650488",

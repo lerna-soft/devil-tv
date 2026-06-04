@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-04T01:32:56Z",
+  "updatedAt": "2026-06-04T01:46:27Z",
   "progress": {
     "tt32897959": {
       "imdbId": "tt32897959",
@@ -115,10 +115,10 @@
       "imdbId": "tt9140554",
       "tmdbId": "84958",
       "lastSeason": 2,
-      "lastEpisode": 1,
-      "progress": 1543.188788,
-      "lastProgress": 1543.188788,
-      "updatedAt": "2026-06-04T01:32:56Z",
+      "lastEpisode": 2,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-04T01:46:27Z",
       "watched": {
         "s1e6": {
           "startedAt": "2026-06-02T02:43:08.749Z",
@@ -134,6 +134,11 @@
           "startedAt": "2026-06-04T01:02:51.002Z",
           "completedAt": "",
           "lastProgress": 1543.188788
+        },
+        "s2e2": {
+          "startedAt": "2026-06-04T01:46:24.234Z",
+          "completedAt": "",
+          "lastProgress": 0
         }
       }
     },
@@ -215,12 +220,39 @@
     "imdbId": "tt9140554",
     "tmdbId": "84958",
     "season": 2,
-    "episode": 1,
-    "progress": 1543.188788,
-    "updatedAt": "2026-06-04T01:32:56Z"
+    "episode": 2,
+    "progress": 0,
+    "updatedAt": "2026-06-04T01:46:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e2:started:2026-06-04T01:46:27Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e2",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 2,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-04T01:46:24.234Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-04T01:46:27Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e1:started:2026-06-04T01:32:56Z",
       "contentId": "tt9140554",

@@ -1,6 +1,6 @@
 {
-  "version": 371,
-  "generatedAt": "2026-06-05T15:41:05.483Z",
+  "version": 372,
+  "generatedAt": "2026-06-05T15:43:12.705Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28689,6 +28689,22 @@
       "releaseDate": null,
       "overview": "El plan de Shishio se lleva a cabo mientras Kenshin y Misao ayudan a defender la ciudad.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/ngGmYp35acBw38q43x79cQHWm8I.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "121677",
+      "imdbId": "tt2032557",
+      "title": "tt2032557",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yjhyDnVTvB5kefW3Gq5FA8LqE3W.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

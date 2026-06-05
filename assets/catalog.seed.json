@@ -1,6 +1,6 @@
 {
-  "version": 379,
-  "generatedAt": "2026-06-05T20:06:47.413Z",
+  "version": 380,
+  "generatedAt": "2026-06-05T20:07:00.181Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28769,6 +28769,22 @@
       "releaseDate": null,
       "overview": "Diana Elizabeth Torres, Yutaka Takeuchi",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjM1Nzc1MTM4MV5BMl5BanBnXkFtZTgwMjU0MTc2NjE@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "257245",
+      "imdbId": null,
+      "title": "East Side Sushi",
+      "year": 2014,
+      "releaseDate": null,
+      "overview": "Narra la historia de una migrante mexicana que anhela ser chef en un restaurante de sushi.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hyDJxhPooTZQ3F889qxHyAUzBfO.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

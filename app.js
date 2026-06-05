@@ -456,9 +456,14 @@ function youtubeProxyEmbed(playlist) {
 function youtubeNativeEmbed(playlist) {
   return `https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(playlist)}&rel=0&modestbranding=1`;
 }
+// Primario = embed nativo youtube-nocookie. Es el embed OFICIAL y estable: siempre
+// reproduce. Tiene anuncios (no bloqueables en iframe de otro dominio). Las
+// instancias Invidious sin-ads probadas resultaron poco fiables (yewtu.be rechazó
+// conexión 2026-06-05), por eso no se usan como primario. youtubeProxyEmbed queda
+// disponible por si en el futuro se valida una instancia estable.
 function buildYoutubeEmbed(entry) {
   const map = getCuratedYoutube(entry);
-  return map ? youtubeProxyEmbed(map.playlist) : '';
+  return map ? youtubeNativeEmbed(map.playlist) : '';
 }
 function youtubeFallbackUrls(entry) {
   const map = getCuratedYoutube(entry);
@@ -7392,7 +7397,7 @@ function openPlayerModal(embedUrl) {
   const finalEmbed = state.selected ? getCurrentEmbedUrl(buildEmbedUrl(state.selected)) : embedUrl;
   iframe.src = finalEmbed;
   if (activeProvider.id === 'youtube') {
-    scheduleYoutubeHealthFallback(state.selected);
+    clearPlayerFallback(); // embed nativo estable: sin fallback automático
   } else {
     schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(finalEmbed));
   }
@@ -8825,7 +8830,7 @@ function setActiveProvider(providerId) {
     preloadSubsAsync(provider, state.selected, state.playback.season, state.playback.episode);
     elements.playerIframe.src = newUrl;
     if (provider.id === 'youtube') {
-      scheduleYoutubeHealthFallback(state.selected);
+      clearPlayerFallback(); // embed nativo estable: sin fallback automático
     } else {
       schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
     }

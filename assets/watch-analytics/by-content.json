@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T15:43:35.572Z",
+  "generatedAt": "2026-06-05T16:34:29.393Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2533,10 +2533,10 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 25,
+      "totalEvents": 24,
       "totalStarts": 13,
       "totalCompletions": 4,
-      "totalPlaybackProgress": 6232.068261414163,
+      "totalPlaybackProgress": 5680.441222408163,
       "uniqueUsers": 1,
       "completionRate": 0.3077,
       "lastActivityAt": "2026-05-26T08:35:30Z",
@@ -2544,10 +2544,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 25,
+          "playCount": 24,
           "completedCount": 4,
           "startedCount": 13,
-          "totalPlaybackProgress": 6232.068261414163,
+          "totalPlaybackProgress": 5680.441222408163,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
           "lastEpisode": 13
@@ -2725,10 +2725,10 @@
         "s1e2": {
           "season": 1,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 1971.7594446749345,
+          "totalPlaybackProgress": 1420.1324056689343,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T04:13:44Z",
           "users": {
@@ -2737,7 +2737,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 249.2827
+      "avgPlaybackProgress": 236.6851
     },
     {
       "contentId": "tt32897959",
@@ -4139,6 +4139,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:00Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt0412142",
+      "imdbId": "tt0412142",
+      "tmdbId": "1408",
+      "title": "House",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T16:34:18Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T16:34:18Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T16:34:18Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -6175,50 +6219,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:24:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0412142",
-      "imdbId": "tt0412142",
-      "tmdbId": "1408",
-      "title": "House",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:23:57Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:23:57Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:23:57Z",
           "users": {
             "henry8812@gmail.com": true
           },

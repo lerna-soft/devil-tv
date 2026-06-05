@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T15:43:35.574Z",
+  "generatedAt": "2026-06-05T16:34:29.395Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T15:41:03Z",
+      "updatedAt": "2026-06-05T16:34:18Z",
       "totalEvents": 500,
-      "totalStarts": 230,
+      "totalStarts": 231,
       "totalCompletions": 73,
-      "totalPlaybackProgress": 301589.4191146898,
+      "totalPlaybackProgress": 301037.7920756838,
       "uniqueContentCount": 91,
-      "lastActivityAt": "2026-06-05T15:41:03Z",
+      "lastActivityAt": "2026-06-05T16:34:18Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -157,6 +157,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt0412142": {
+          "contentId": "tt0412142",
+          "imdbId": "tt0412142",
+          "tmdbId": "1408",
+          "title": "House",
+          "type": "series",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T16:34:18Z"
         },
         "tt0233127": {
           "contentId": "tt0233127",
@@ -488,7 +500,7 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 25,
+          "playCount": 24,
           "completed": true,
           "maxProgressValue": 1420.132414739229,
           "maxProgressPercent": 0,
@@ -781,18 +793,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:24:01Z"
-        },
-        "tt0412142": {
-          "contentId": "tt0412142",
-          "imdbId": "tt0412142",
-          "tmdbId": "1408",
-          "title": "House",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:23:57Z"
         },
         "tt0320691": {
           "contentId": "tt0320691",
@@ -1131,7 +1131,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 603.1788
+      "avgPlaybackProgress": 602.0756
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

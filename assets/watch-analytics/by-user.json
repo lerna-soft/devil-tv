@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T15:13:14.233Z",
+  "generatedAt": "2026-06-05T15:28:26.765Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T15:13:01Z",
+      "updatedAt": "2026-06-05T15:28:17Z",
       "totalEvents": 500,
-      "totalStarts": 228,
-      "totalCompletions": 74,
-      "totalPlaybackProgress": 303009.5515407669,
-      "uniqueContentCount": 89,
-      "lastActivityAt": "2026-06-05T15:13:01Z",
+      "totalStarts": 229,
+      "totalCompletions": 73,
+      "totalPlaybackProgress": 301589.4191146898,
+      "uniqueContentCount": 90,
+      "lastActivityAt": "2026-06-05T15:28:17Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -157,6 +157,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt0367409": {
+          "contentId": "tt0367409",
+          "imdbId": "tt0367409",
+          "tmdbId": "40143",
+          "title": "Shaman King",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T15:28:17Z"
         },
         "tt4047038": {
           "contentId": "tt4047038",
@@ -464,9 +476,9 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 27,
+          "playCount": 26,
           "completed": true,
-          "maxProgressValue": 1420.1324260770975,
+          "maxProgressValue": 1420.132414739229,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T08:35:30Z"
         },
@@ -1107,7 +1119,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 606.0191
+      "avgPlaybackProgress": 603.1788
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

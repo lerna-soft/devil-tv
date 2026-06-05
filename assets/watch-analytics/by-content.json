@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T15:13:14.232Z",
+  "generatedAt": "2026-06-05T15:28:26.763Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2533,21 +2533,21 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 27,
+      "totalEvents": 26,
       "totalStarts": 13,
-      "totalCompletions": 5,
-      "totalPlaybackProgress": 7652.20068749126,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 6232.068261414163,
       "uniqueUsers": 1,
-      "completionRate": 0.3846,
+      "completionRate": 0.3077,
       "lastActivityAt": "2026-05-26T08:35:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 27,
-          "completedCount": 5,
+          "playCount": 26,
+          "completedCount": 4,
           "startedCount": 13,
-          "totalPlaybackProgress": 7652.20068749126,
+          "totalPlaybackProgress": 6232.068261414163,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
           "lastEpisode": 13
@@ -2571,16 +2571,16 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 6,
+          "totalEvents": 5,
           "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.1324260770975,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-26T08:34:27Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         },
         "s1e11": {
           "season": 1,
@@ -2737,7 +2737,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 283.4148
+      "avgPlaybackProgress": 239.6949
     },
     {
       "contentId": "tt32897959",
@@ -4642,6 +4642,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt0367409",
+      "imdbId": "tt0367409",
+      "tmdbId": "40143",
+      "title": "Shaman King",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T15:28:17Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T15:28:17Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T15:28:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "100087",

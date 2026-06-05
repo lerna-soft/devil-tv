@@ -1,0 +1,45 @@
+{
+  "imdbId": "100087",
+  "tmdbId": "100087",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-05T15:13:01Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-05T15:13:00.328Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:100087:s1e1:started:2026-06-05T15:13:01Z",
+      "contentId": "100087",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "100087",
+      "title": "Hasta que la plata nos separe",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-05T15:13:00.328Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-05T15:13:01Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

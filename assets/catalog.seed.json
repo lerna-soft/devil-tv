@@ -1,6 +1,6 @@
 {
-  "version": 374,
-  "generatedAt": "2026-06-05T15:57:08.408Z",
+  "version": 375,
+  "generatedAt": "2026-06-05T15:59:20.217Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28721,6 +28721,22 @@
       "releaseDate": null,
       "overview": "Shrek propone a sus amigos que cada uno traiga una historia de miedo que contar en un castillo encantado.  Después, Ginormica y los Monstruos se enfrentan a las calabazas alienígenas.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/hrpbTlzf9oHxHSosYpwJqgIUJUA.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1368240",
+      "imdbId": null,
+      "title": "Employees From Hell",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1989-01-01",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rxsDBHTWj0t4ooUafgvnqyzvqQ2.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

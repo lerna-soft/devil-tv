@@ -1,8 +1,24 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-05T23:57:14Z",
+  "updatedAt": "2026-06-05T23:59:11Z",
   "progress": {
+    "842675": {
+      "imdbId": "",
+      "tmdbId": "842675",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-05T23:59:11Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-05T23:59:11Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
+    },
     "tt32897959": {
       "imdbId": "tt32897959",
       "tmdbId": "1316092",
@@ -193,6 +209,7 @@
   },
   "preferences": {
     "likes": {
+      "842675": 1,
       "tt32897959": 1,
       "tt29552248": 1,
       "tt5311514": 1,
@@ -214,18 +231,45 @@
       "tt13539646": true,
       "tt32174149": true
     },
-    "updatedAt": "2026-06-03T19:28:53Z"
+    "updatedAt": "2026-06-05T23:59:11Z"
   },
   "lastWatch": {
-    "imdbId": "tt9140554",
-    "tmdbId": "84958",
-    "season": 2,
-    "episode": 2,
+    "imdbId": "",
+    "tmdbId": "842675",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-05T23:57:14Z"
+    "updatedAt": "2026-06-05T23:59:11Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:842675:s1e1:preference:2026-06-05T23:59:11Z",
+      "contentId": "842675",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "",
+      "tmdbId": "842675",
+      "title": "La Tierra Errante II",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-05T23:59:11Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e2:started:2026-06-05T23:57:14Z",
       "contentId": "tt9140554",

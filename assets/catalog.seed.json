@@ -1,6 +1,6 @@
 {
-  "version": 378,
-  "generatedAt": "2026-06-05T17:55:51.050Z",
+  "version": 379,
+  "generatedAt": "2026-06-05T20:06:47.413Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28753,6 +28753,22 @@
       "releaseDate": null,
       "overview": "Alexa, una elegante relacionista pública, y Regina, una entrenadora de carácter fuerte y espíritu independiente, llevan vidas completamente opuestas hasta que un mismo hombre entra en su historia. Tras una coincidencia inesperada, ambas descubren que fueron engañadas por la misma persona y que sus caminos están más entrelazados de lo que imaginaban. Obligadas a unir fuerzas, Alexa y Regina pasarán de la desconfianza a una alianza improbable que pondrá a prueba sus diferencias, sus decisiones y su idea de lo que significa apoyarse entre mujeres.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/sr1Yoj6XLPTWYcbDoBy67xivW4I.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt2340650",
+      "title": "East Side Sushi",
+      "year": 2014,
+      "releaseDate": null,
+      "overview": "Diana Elizabeth Torres, Yutaka Takeuchi",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjM1Nzc1MTM4MV5BMl5BanBnXkFtZTgwMjU0MTc2NjE@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,21 +1,13 @@
 {
-  "generatedAt": "2026-06-05T19:27:11.322Z",
+  "generatedAt": "2026-06-05T20:40:25.963Z",
   "totalUsers": 12,
   "activeUsers": 6,
   "totalEvents": 584,
   "totalStarts": 253,
-  "totalCompletions": 72,
-  "overallCompletionRate": 0.2846,
-  "trackedTitles": 117,
+  "totalCompletions": 71,
+  "overallCompletionRate": 0.2806,
+  "trackedTitles": 118,
   "mostWatchedContent": [
-    {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 103,
-      "uniqueUsers": 1,
-      "completionRate": 0.8478
-    },
     {
       "contentId": "tt2560140",
       "title": "Attack on Titan",
@@ -23,6 +15,14 @@
       "totalEvents": 102,
       "uniqueUsers": 1,
       "completionRate": 0.0714
+    },
+    {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 102,
+      "uniqueUsers": 1,
+      "completionRate": 0.8261
     },
     {
       "contentId": "tt0965547",

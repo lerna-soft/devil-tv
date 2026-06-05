@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T19:27:11.327Z",
+  "generatedAt": "2026-06-05T20:40:25.968Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T19:27:02Z",
+      "updatedAt": "2026-06-05T20:40:15Z",
       "totalEvents": 500,
       "totalStarts": 231,
-      "totalCompletions": 71,
-      "totalPlaybackProgress": 301703.7839996657,
-      "uniqueContentCount": 92,
-      "lastActivityAt": "2026-06-05T19:27:02Z",
+      "totalCompletions": 70,
+      "totalPlaybackProgress": 298829.2000597564,
+      "uniqueContentCount": 93,
+      "lastActivityAt": "2026-06-05T20:40:15Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -170,6 +170,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt2340650": {
+          "contentId": "tt2340650",
+          "imdbId": "tt2340650",
+          "tmdbId": "257245",
+          "title": "East Side Sushi",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T20:40:15Z"
         },
         "tt0367409": {
           "contentId": "tt0367409",
@@ -573,7 +585,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 103,
+          "playCount": 102,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1144,7 +1156,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 603.4076
+      "avgPlaybackProgress": 597.6584
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

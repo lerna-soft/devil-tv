@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt2340650",
+  "tmdbId": "257245",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-05T20:40:15Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-05T20:40:15Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2340650:s1e1:preference:2026-06-05T20:40:15Z",
+      "contentId": "tt2340650",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2340650",
+      "tmdbId": "257245",
+      "title": "East Side Sushi",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-05T20:40:15Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T19:20:30.653Z",
+  "generatedAt": "2026-06-05T19:27:11.327Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T18:55:55Z",
+      "updatedAt": "2026-06-05T19:27:02Z",
       "totalEvents": 500,
       "totalStarts": 231,
       "totalCompletions": 71,
       "totalPlaybackProgress": 301703.7839996657,
       "uniqueContentCount": 92,
-      "lastActivityAt": "2026-06-05T18:55:55Z",
+      "lastActivityAt": "2026-06-05T19:27:02Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -177,11 +177,11 @@
           "tmdbId": "40143",
           "title": "Shaman King",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-05T16:48:20Z"
+          "lastSeenAt": "2026-06-05T19:27:02Z"
         },
         "tt0233127": {
           "contentId": "tt0233127",
@@ -573,7 +573,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 104,
+          "playCount": 103,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

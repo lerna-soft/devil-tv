@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-05T23:40:46.423Z",
+  "generatedAt": "2026-06-05T23:57:21.388Z",
   "totalUsers": 12,
   "activeUsers": 6,
-  "totalEvents": 584,
+  "totalEvents": 585,
   "totalStarts": 254,
   "totalCompletions": 71,
   "overallCompletionRate": 0.2795,
@@ -65,18 +65,18 @@
       "completionRate": 0.3333
     },
     {
-      "contentId": "tt0899043",
-      "title": "Amateur",
-      "type": "movie",
+      "contentId": "tt9140554",
+      "title": "Loki",
+      "type": "series",
       "totalEvents": 9,
       "uniqueUsers": 1,
       "completionRate": 0
     },
     {
-      "contentId": "tt9140554",
-      "title": "Loki",
-      "type": "series",
-      "totalEvents": 8,
+      "contentId": "tt0899043",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
       "uniqueUsers": 1,
       "completionRate": 0
     },

@@ -1,6 +1,6 @@
 {
-  "version": 361,
-  "generatedAt": "2026-06-05T15:02:01.917Z",
+  "version": 362,
+  "generatedAt": "2026-06-05T15:04:16.822Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28577,6 +28577,22 @@
       "releaseDate": null,
       "overview": "Yuki es una joven que busca venganza después de presenciar el asesinato de su madre el día de su cumpleaños. Ayudada por su padre y, convertida en una Gothic Lolita, no descansará hasta que los culpables paguen su deuda. ¿Quién mató a su madre? ¿Cuál es la verdad y el propósito que su padre conoce? Su terrible destino está a punto de suceder y tendrá que lidiar con la muerte.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/n3TFgicjJe6P1P3BaWlbTc35cTm.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "127533",
+      "imdbId": null,
+      "title": "Kenshin, el guerrero samurái",
+      "year": 2012,
+      "releaseDate": null,
+      "overview": "Kenshin Himura (Takeru Sato) es un famoso samurái conocido por su destreza con la katana y su frialdad a la hora de matar. En el pasado estuvo al servicio de los Ishin Shishi, un grupo de patriotas que luchaban para devolver el poder al Emperador, librando cientos de batallas y cobrándose muchas vidas. Pero tras terminar todos los enfrentamientos, jura no volver a matar y decide pasar al anonimato para dedicarse a viajar por el país como un vagabundo ayudando a quien lo necesite, como penitencia por todas las muertes que provocó. Diez años después, en 1878, Kenshin llega a Tokio donde conoce a Kaoru (Emi Takei), quien le invita a quedarse en su dojo hasta que decida volver a vagabundear. Sin embargo, el pasado que Kenshin intentó dejar atrás pronto volverá para cobrarse venganza contra él. Adaptación del manga de Nobuhiro Watsuki.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1xXl8FefyjfGk3TIPQhsHV40ulS.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

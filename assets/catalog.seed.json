@@ -1,6 +1,6 @@
 {
-  "version": 359,
-  "generatedAt": "2026-06-05T14:43:05.180Z",
+  "version": 360,
+  "generatedAt": "2026-06-05T15:01:49.263Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52641,6 +52641,22 @@
       "releaseDate": null,
       "overview": "Samuel Barnett, Elijah Wood",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTU3MDkzNzM5NF5BMl5BanBnXkFtZTgwMzEyNTgyMDI@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "230424",
+      "imdbId": null,
+      "title": "Betty la fea, la historia continúa",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Mientras una Betty más empoderada y sabia trabaja duro para reconstruir su relación con su hija adolescente Mila, su relación con Armando comienza a deteriorarse, haciéndola preguntarse si tomó la decisión correcta hace 20 años.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/s5KgN8QHo9tdCGAW8fYXvnUvHJZ.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

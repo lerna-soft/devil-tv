@@ -1,6 +1,6 @@
 {
-  "version": 362,
-  "generatedAt": "2026-06-05T15:04:16.822Z",
+  "version": 363,
+  "generatedAt": "2026-06-05T15:04:29.355Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28593,6 +28593,22 @@
       "releaseDate": null,
       "overview": "Kenshin Himura (Takeru Sato) es un famoso samurái conocido por su destreza con la katana y su frialdad a la hora de matar. En el pasado estuvo al servicio de los Ishin Shishi, un grupo de patriotas que luchaban para devolver el poder al Emperador, librando cientos de batallas y cobrándose muchas vidas. Pero tras terminar todos los enfrentamientos, jura no volver a matar y decide pasar al anonimato para dedicarse a viajar por el país como un vagabundo ayudando a quien lo necesite, como penitencia por todas las muertes que provocó. Diez años después, en 1878, Kenshin llega a Tokio donde conoce a Kaoru (Emi Takei), quien le invita a quedarse en su dojo hasta que decida volver a vagabundear. Sin embargo, el pasado que Kenshin intentó dejar atrás pronto volverá para cobrarse venganza contra él. Adaptación del manga de Nobuhiro Watsuki.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1xXl8FefyjfGk3TIPQhsHV40ulS.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "145675",
+      "imdbId": null,
+      "title": "Rurouni Kenshin: Shin Kyoto-Hen",
+      "year": 2011,
+      "releaseDate": null,
+      "overview": "Nueva serie de OVAs que readapta de nuevo el arco argumental de Kyoto, relatando la batalla entre Kenshin Himura y Makoto Shishio.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wJhEK3ajbqtL6mz3KC5fOCyAN1d.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

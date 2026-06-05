@@ -1,6 +1,6 @@
 {
-  "version": 363,
-  "generatedAt": "2026-06-05T15:04:29.355Z",
+  "version": 364,
+  "generatedAt": "2026-06-05T15:07:37.638Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28609,6 +28609,22 @@
       "releaseDate": null,
       "overview": "Nueva serie de OVAs que readapta de nuevo el arco argumental de Kyoto, relatando la batalla entre Kenshin Himura y Makoto Shishio.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wJhEK3ajbqtL6mz3KC5fOCyAN1d.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1516962",
+      "imdbId": null,
+      "title": "Cucha No Me Espere Que Me Fui a Rockiar",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "En la ciudad de Bogotá actualmente se esta gestando una nueva escena de música alternativa liderada por jóvenes y adolescentes, quienes serán documentados en base a sus proyectos, sus canciones, el recorrido que han afrontado como artistas independientes en esta fría pero diversa ciudad, y como algunos han logrado sobresalir con sus colectivos artísticos que mueven el circuito de bandas emergentes en la ciudad, filmado en su totalidad por medio del nostálgico estilo de las cintas de casette análogas y una Handycam.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/njlbZJjBHKeDxb0EV6oklrzMkIi.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

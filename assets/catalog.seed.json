@@ -1,6 +1,6 @@
 {
-  "version": 358,
-  "generatedAt": "2026-06-05T14:42:54.709Z",
+  "version": 359,
+  "generatedAt": "2026-06-05T14:43:05.180Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28561,6 +28561,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2017-03-24",
       "posterUrl": "https://image.tmdb.org/t/p/w500/fDxZ4D3FRNzqhWsGV5ZxuH9p1jM.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "69326",
+      "imdbId": null,
+      "title": "Gothic & Lolita Psycho",
+      "year": 2010,
+      "releaseDate": null,
+      "overview": "Yuki es una joven que busca venganza después de presenciar el asesinato de su madre el día de su cumpleaños. Ayudada por su padre y, convertida en una Gothic Lolita, no descansará hasta que los culpables paguen su deuda. ¿Quién mató a su madre? ¿Cuál es la verdad y el propósito que su padre conoce? Su terrible destino está a punto de suceder y tendrá que lidiar con la muerte.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/n3TFgicjJe6P1P3BaWlbTc35cTm.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

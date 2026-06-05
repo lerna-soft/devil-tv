@@ -7502,7 +7502,7 @@ function jumpEpisode(direction, baseEmbed) {
 async function searchViaListingsAndImdb(searchInput, typeFilter) {
   const search = typeof searchInput === 'string' ? parseSearchQuery(searchInput) : searchInput;
   const query = search?.term || '';
-  const [fromListings, fromImdb, fromPeople] = await Promise.all([
+  const [fromListings, fromImdb, fromPeople, fromTmdbTitles] = await Promise.all([
     (search.mode === 'text' || search.mode === 'name') ? searchVidapiListings(query, typeFilter) : Promise.resolve([]),
     (search.mode === 'text' || search.mode === 'name') ? searchImdbSuggestionsViaJina(query, typeFilter) : Promise.resolve([]),
     search.mode === 'actor'
@@ -7511,9 +7511,10 @@ async function searchViaListingsAndImdb(searchInput, typeFilter) {
         ? searchTmdbPeopleCredits(query, typeFilter, 'director')
         : search.mode === 'text'
           ? searchTmdbPeopleCredits(query, typeFilter, 'any')
-          : Promise.resolve([])
+          : Promise.resolve([]),
+    (search.mode === 'text' || search.mode === 'name') ? searchTmdbTitles(query, typeFilter) : Promise.resolve([])
   ]);
-  return [...fromListings, ...fromImdb, ...fromPeople].filter((item) => hasPosterAsset(item));
+  return [...fromListings, ...fromImdb, ...fromPeople, ...fromTmdbTitles].filter((item) => hasPosterAsset(item));
 }
 
 async function searchVidapiListings(query, typeFilter) {
@@ -7731,6 +7732,49 @@ async function searchImdbSuggestionsViaJina(query, typeFilter) {
       return { imdbId: item.id, tmdbId: '', title: item.l || '', year: Number(item.y) || null, type: isSeries ? 'series' : 'movie', posterUrl: item.i?.imageUrl || '', description: item.s || '' };
     })
     .filter((result) => typeFilter === 'all' || result.type === typeFilter);
+}
+
+// Direct TMDB title search. The seed only harvests popular titles from year 2000
+// onwards, so anything older (or niche, e.g. 90s anime) never makes it into the
+// static catalog. TMDB has deep coverage of those titles with posters, so we query
+// it live and surface the results alongside Vidapi/IMDb. media_type tells us
+// movie vs tv; person results are ignored (people are handled separately).
+async function searchTmdbTitles(query, typeFilter) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery || normalizedQuery.length < 3) return [];
+  try {
+    const data = await tmdbFetchJson('/search/multi', { query, language: 'es-ES', include_adult: false, page: 1 });
+    return (data?.results || [])
+      .map((entry) => {
+        const mediaType = String(entry?.media_type || '').trim().toLowerCase();
+        const type = mediaType === 'tv' ? 'series' : mediaType === 'movie' ? 'movie' : '';
+        if (!type) return null;
+        const title = String(entry?.title || entry?.name || '').trim();
+        if (!title) return null;
+        const posterUrl = entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '';
+        return {
+          imdbId: '',
+          tmdbId: entry?.id ? String(entry.id) : '',
+          title,
+          year: Number(String(entry?.first_air_date || entry?.release_date || '').slice(0, 4)) || null,
+          type,
+          posterUrl,
+          description: String(entry?.overview || '').trim(),
+          metadata: {
+            posterUrl,
+            releaseDate: entry?.first_air_date || entry?.release_date || null,
+            originalTitle: String(entry?.original_title || entry?.original_name || '').trim(),
+            genres: [],
+            cast: [],
+            directors: [],
+            backdropUrl: entry?.backdrop_path ? `https://image.tmdb.org/t/p/w780${entry.backdrop_path}` : null
+          }
+        };
+      })
+      .filter((result) => result && (typeFilter === 'all' || result.type === typeFilter));
+  } catch {
+    return [];
+  }
 }
 
 async function loadSeriesEpisodes(options = {}) {

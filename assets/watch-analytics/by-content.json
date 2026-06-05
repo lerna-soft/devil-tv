@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T20:40:25.966Z",
+  "generatedAt": "2026-06-05T20:41:33.437Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1017,7 +1017,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 102,
+      "totalEvents": 101,
       "totalStarts": 46,
       "totalCompletions": 38,
       "totalPlaybackProgress": 124687.01787674433,
@@ -1028,7 +1028,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 102,
+          "playCount": 101,
           "completedCount": 38,
           "startedCount": 46,
           "totalPlaybackProgress": 124687.01787674433,
@@ -1601,7 +1601,7 @@
         "s2e3": {
           "season": 2,
           "episode": 3,
-          "totalEvents": 4,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4897.928563472,
@@ -1683,7 +1683,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1222.4217
+      "avgPlaybackProgress": 1234.5249
     },
     {
       "contentId": "tt0965547",
@@ -4804,6 +4804,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt27391124",
+      "imdbId": "tt27391124",
+      "tmdbId": "1181678",
+      "title": "¿Quieres ser mi... hijo?",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T20:41:25Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T20:41:25Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T20:41:25Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2340650",

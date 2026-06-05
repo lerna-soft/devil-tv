@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-04T17:54:20Z",
+  "updatedAt": "2026-06-05T06:41:49Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2664,6 +2664,22 @@
           "lastProgress": 1.702345702
         }
       }
+    },
+    "tt4047038": {
+      "imdbId": "tt4047038",
+      "tmdbId": "",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-05T06:41:49Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-05T06:41:49Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2806,20 +2822,48 @@
       "tt21478426": true,
       "tt4543708": true,
       "tt31193547": true,
-      "tt2032557": true
+      "tt2032557": true,
+      "tt4047038": true
     },
-    "updatedAt": "2026-06-04T10:31:47Z"
+    "updatedAt": "2026-06-05T06:41:49Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt4047038",
+    "tmdbId": "",
     "season": 1,
-    "episode": 58,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-04T17:54:20Z"
+    "updatedAt": "2026-06-05T06:41:49Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt4047038:s1e1:preference:2026-06-05T06:41:49Z",
+      "contentId": "tt4047038",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt4047038",
+      "tmdbId": "",
+      "title": "Dirk Gently's Holistic Detective Agency",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-05T06:41:49Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e58:started:2026-06-04T17:54:20Z",
       "contentId": "tt0965547",
@@ -16284,33 +16328,6 @@
       "startedAt": "2026-05-21T13:43:20.273Z",
       "completedAt": "",
       "updatedAt": "2026-05-21T13:43:20Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e1:preference:2026-05-21T13:43:11Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T13:43:11Z",
       "country": "",
       "countryName": "",
       "city": "",

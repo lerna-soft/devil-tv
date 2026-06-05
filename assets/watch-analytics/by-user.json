@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T06:06:03.992Z",
+  "generatedAt": "2026-06-05T06:41:57.596Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-04T17:54:20Z",
+      "updatedAt": "2026-06-05T06:41:49Z",
       "totalEvents": 500,
       "totalStarts": 227,
       "totalCompletions": 74,
       "totalPlaybackProgress": 303009.5515407669,
-      "uniqueContentCount": 87,
-      "lastActivityAt": "2026-06-04T17:54:20Z",
+      "uniqueContentCount": 88,
+      "lastActivityAt": "2026-06-05T06:41:49Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -145,6 +145,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt4047038": {
+          "contentId": "tt4047038",
+          "imdbId": "tt4047038",
+          "tmdbId": "",
+          "title": "Dirk Gently's Holistic Detective Agency",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T06:41:49Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -440,7 +452,7 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 29,
+          "playCount": 28,
           "completed": true,
           "maxProgressValue": 1420.1324260770975,
           "maxProgressPercent": 0,

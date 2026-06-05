@@ -1,6 +1,6 @@
 {
-  "version": 373,
-  "generatedAt": "2026-06-05T15:56:55.726Z",
+  "version": 374,
+  "generatedAt": "2026-06-05T15:57:08.408Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28705,6 +28705,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/yjhyDnVTvB5kefW3Gq5FA8LqE3W.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "260720",
+      "imdbId": null,
+      "title": "Dreamworks Historias Espeluznantes",
+      "year": 2012,
+      "releaseDate": null,
+      "overview": "Shrek propone a sus amigos que cada uno traiga una historia de miedo que contar en un castillo encantado.  Después, Ginormica y los Monstruos se enfrentan a las calabazas alienígenas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hrpbTlzf9oHxHSosYpwJqgIUJUA.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

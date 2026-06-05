@@ -1,6 +1,6 @@
 {
-  "version": 357,
-  "generatedAt": "2026-06-05T06:41:59.156Z",
+  "version": 358,
+  "generatedAt": "2026-06-05T14:42:54.709Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28545,6 +28545,22 @@
       "releaseDate": null,
       "overview": "Machiko Kyô, Eiji Funakoshi",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzQxZTU3N2MtYmQ5MC00MTkzLWE5MTMtNTVlNGM1MmYwN2UxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1366751",
+      "imdbId": null,
+      "title": "グッバイエレジー",
+      "year": 2017,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2017-03-24",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fDxZ4D3FRNzqhWsGV5ZxuH9p1jM.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

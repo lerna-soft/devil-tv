@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T19:20:30.651Z",
+  "generatedAt": "2026-06-05T19:27:11.325Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,7 +7,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 104,
+      "totalEvents": 103,
       "totalStarts": 46,
       "totalCompletions": 39,
       "totalPlaybackProgress": 127561.60181665362,
@@ -18,7 +18,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 104,
+          "playCount": 103,
           "completedCount": 39,
           "startedCount": 46,
           "totalPlaybackProgress": 127561.60181665362,
@@ -605,7 +605,7 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2874.583939909297,
@@ -673,7 +673,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1226.5539
+      "avgPlaybackProgress": 1238.4622
     },
     {
       "contentId": "tt2560140",
@@ -3758,6 +3758,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt0367409",
+      "imdbId": "tt0367409",
+      "tmdbId": "40143",
+      "title": "Shaman King",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T19:27:02Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T19:27:02Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T19:27:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "1632181",
       "imdbId": "",
       "tmdbId": "1632181",
@@ -4169,50 +4213,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:00Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0367409",
-      "imdbId": "tt0367409",
-      "tmdbId": "40143",
-      "title": "Shaman King",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T16:48:20Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T16:48:20Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T16:48:20Z",
           "users": {
             "henry8812@gmail.com": true
           },

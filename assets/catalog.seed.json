@@ -1,6 +1,6 @@
 {
-  "version": 368,
-  "generatedAt": "2026-06-05T15:23:08.975Z",
+  "version": 369,
+  "generatedAt": "2026-06-05T15:23:22.304Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28673,6 +28673,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2017-02-03",
       "posterUrl": "https://image.tmdb.org/t/p/w500/5RUI2uC4l0NYdlbmYObAEwJTTCW.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "210227",
+      "imdbId": null,
+      "title": "Rurouni Kenshin: New Kyoto Arc: The Chirps of Light",
+      "year": 2012,
+      "releaseDate": null,
+      "overview": "El plan de Shishio se lleva a cabo mientras Kenshin y Misao ayudan a defender la ciudad.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ngGmYp35acBw38q43x79cQHWm8I.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

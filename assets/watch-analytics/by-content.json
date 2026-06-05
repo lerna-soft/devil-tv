@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T15:28:26.763Z",
+  "generatedAt": "2026-06-05T15:41:14.076Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -2533,7 +2533,7 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 26,
+      "totalEvents": 25,
       "totalStarts": 13,
       "totalCompletions": 4,
       "totalPlaybackProgress": 6232.068261414163,
@@ -2544,7 +2544,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 26,
+          "playCount": 25,
           "completedCount": 4,
           "startedCount": 13,
           "totalPlaybackProgress": 6232.068261414163,
@@ -2725,7 +2725,7 @@
         "s1e2": {
           "season": 1,
           "episode": 2,
-          "totalEvents": 4,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1971.7594446749345,
@@ -2737,7 +2737,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 239.6949
+      "avgPlaybackProgress": 249.2827
     },
     {
       "contentId": "tt32897959",
@@ -4642,6 +4642,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt0233127",
+      "imdbId": "tt0233127",
+      "tmdbId": "16286",
+      "title": "Ugly Betty",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T15:41:03Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T15:41:03Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T15:41:03Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0367409",

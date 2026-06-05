@@ -1,6 +1,6 @@
 {
-  "version": 380,
-  "generatedAt": "2026-06-05T20:07:00.181Z",
+  "version": 381,
+  "generatedAt": "2026-06-05T23:59:07.988Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28785,6 +28785,22 @@
       "releaseDate": null,
       "overview": "Narra la historia de una migrante mexicana que anhela ser chef en un restaurante de sushi.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/hyDJxhPooTZQ3F889qxHyAUzBfO.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "560709",
+      "imdbId": null,
+      "title": "Niña errante",
+      "year": 2018,
+      "releaseDate": null,
+      "overview": "Ángela tiene doce años y tres medio hermanas por parte de padre cerca de los treinta. Es precisamente la muerte del padre lo que hace que las cuatro se conozcan. Ángela, nunca vivió con nadie diferente a él y no recuerda a su madre. Sus hermanas la dejarán al otro lado del país con una tía para evitar que quede a cargo del Estado. Es en este viaje de duelo, en el que Ángela, en pleno despertar de su cuerpo, reconoce con cada una de sus hermanas la feminidad, la sensualidad, los misterios del placer y del dolor, el cuerpo, la desgracia y el reto de ser mujer en estos caminos.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/refUc2J81fjutiUEz7q1XAWbdIf.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

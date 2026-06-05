@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-05T06:41:49Z",
+  "updatedAt": "2026-06-05T15:13:01Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -32,6 +32,22 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T20:10:42Z",
       "watched": {}
+    },
+    "100087": {
+      "imdbId": "",
+      "tmdbId": "100087",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-05T15:13:01Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-05T15:13:00.328Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "274870": {
       "imdbId": "",
@@ -2828,15 +2844,42 @@
     "updatedAt": "2026-06-05T06:41:49Z"
   },
   "lastWatch": {
-    "imdbId": "tt4047038",
-    "tmdbId": "",
+    "imdbId": "",
+    "tmdbId": "100087",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-05T06:41:49Z"
+    "updatedAt": "2026-06-05T15:13:01Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:100087:s1e1:started:2026-06-05T15:13:01Z",
+      "contentId": "100087",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "100087",
+      "title": "Hasta que la plata nos separe",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-05T15:13:00.328Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-05T15:13:01Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt4047038:s1e1:preference:2026-06-05T06:41:49Z",
       "contentId": "tt4047038",
@@ -16301,33 +16344,6 @@
       "startedAt": "2026-05-21T13:43:20.273Z",
       "completedAt": "2026-05-21T13:46:05.365Z",
       "updatedAt": "2026-05-21T13:46:06Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e1:started:2026-05-21T13:43:20Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-21T13:43:20.273Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T13:43:20Z",
       "country": "",
       "countryName": "",
       "city": "",

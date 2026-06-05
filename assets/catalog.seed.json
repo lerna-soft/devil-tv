@@ -1,6 +1,6 @@
 {
-  "version": 372,
-  "generatedAt": "2026-06-05T15:43:12.705Z",
+  "version": 373,
+  "generatedAt": "2026-06-05T15:56:55.726Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52849,6 +52849,22 @@
       "releaseDate": null,
       "overview": "Alan Dale, Corinne Dekker",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjNkMjcxNDYtM2M0YS00OTY0LTgxZDItNTAyYzA3OWZkYWQ3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "296618",
+      "imdbId": null,
+      "title": "DreamWorks 6 Spooky Stories Collection",
+      "year": 2003,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2003-05-23",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/c2saDmXmynBi0hQD4g7YnWrQEEf.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

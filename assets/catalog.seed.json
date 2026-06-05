@@ -1,6 +1,6 @@
 {
-  "version": 376,
-  "generatedAt": "2026-06-05T15:59:33.388Z",
+  "version": 377,
+  "generatedAt": "2026-06-05T16:48:20.251Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52913,6 +52913,22 @@
       "releaseDate": null,
       "overview": "Fry (Stephen Fry, actor, escritor, humorista y guionista) y Laurie (Hugh Laurie, el famoso Doctor House) forman pareja cómica en esta locura de show que arrasó en el Reino Unido durante años. Se conocieron en la Universidad de Cambridge a través de la conocida actriz Emma Thompson cuando Fry buscaba pareja para una serie a base de sketches que se traía entre manos. Esa colaboración se prolongó durante años y \"Un poco de Fry y Laurie\" se tornó un clásico imperecedero lleno de momentos tronchantes.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/69vY25JVf3b34zAMFxlso78Lw82.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt30873755",
+      "title": "Shaman King: Flowers",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "Katsuyuki Konishi, Sumire Uesaka",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWM5MGZmZDMtNTcxYi00Njg3LThmMTctYzMzYzdlZTM3MzdmXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 375,
-  "generatedAt": "2026-06-05T15:59:20.217Z",
+  "version": 376,
+  "generatedAt": "2026-06-05T15:59:33.388Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52897,6 +52897,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2003-05-23",
       "posterUrl": "https://image.tmdb.org/t/p/w500/c2saDmXmynBi0hQD4g7YnWrQEEf.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "192",
+      "imdbId": null,
+      "title": "Un poco de Fry y Laurie",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "Fry (Stephen Fry, actor, escritor, humorista y guionista) y Laurie (Hugh Laurie, el famoso Doctor House) forman pareja cómica en esta locura de show que arrasó en el Reino Unido durante años. Se conocieron en la Universidad de Cambridge a través de la conocida actriz Emma Thompson cuando Fry buscaba pareja para una serie a base de sketches que se traía entre manos. Esa colaboración se prolongó durante años y \"Un poco de Fry y Laurie\" se tornó un clásico imperecedero lleno de momentos tronchantes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/69vY25JVf3b34zAMFxlso78Lw82.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

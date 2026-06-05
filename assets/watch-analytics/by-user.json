@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T16:36:05.868Z",
+  "generatedAt": "2026-06-05T16:48:32.120Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T16:35:56Z",
+      "updatedAt": "2026-06-05T16:48:20Z",
       "totalEvents": 500,
       "totalStarts": 231,
-      "totalCompletions": 73,
-      "totalPlaybackProgress": 300355.6671406838,
+      "totalCompletions": 72,
+      "totalPlaybackProgress": 297500.1468016838,
       "uniqueContentCount": 91,
-      "lastActivityAt": "2026-06-05T16:35:56Z",
+      "lastActivityAt": "2026-06-05T16:48:20Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -158,6 +158,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
         },
+        "tt0367409": {
+          "contentId": "tt0367409",
+          "imdbId": "tt0367409",
+          "tmdbId": "40143",
+          "title": "Shaman King",
+          "type": "series",
+          "playCount": 2,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T16:48:20Z"
+        },
         "tt0233127": {
           "contentId": "tt0233127",
           "imdbId": "tt0233127",
@@ -181,18 +193,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T16:34:18Z"
-        },
-        "tt0367409": {
-          "contentId": "tt0367409",
-          "imdbId": "tt0367409",
-          "tmdbId": "40143",
-          "title": "Shaman King",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-05T15:28:17Z"
         },
         "tt4047038": {
           "contentId": "tt4047038",
@@ -560,7 +560,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 108,
+          "playCount": 107,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1131,7 +1131,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 600.7113
+      "avgPlaybackProgress": 595.0003
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

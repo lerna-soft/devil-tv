@@ -1,6 +1,6 @@
 {
-  "version": 364,
-  "generatedAt": "2026-06-05T15:07:37.638Z",
+  "version": 365,
+  "generatedAt": "2026-06-05T15:12:12.467Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28625,6 +28625,22 @@
       "releaseDate": null,
       "overview": "En la ciudad de Bogotá actualmente se esta gestando una nueva escena de música alternativa liderada por jóvenes y adolescentes, quienes serán documentados en base a sus proyectos, sus canciones, el recorrido que han afrontado como artistas independientes en esta fría pero diversa ciudad, y como algunos han logrado sobresalir con sus colectivos artísticos que mueven el circuito de bandas emergentes en la ciudad, filmado en su totalidad por medio del nostálgico estilo de las cintas de casette análogas y una Handycam.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/njlbZJjBHKeDxb0EV6oklrzMkIi.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "219182",
+      "imdbId": null,
+      "title": "Altas esferas",
+      "year": 1989,
+      "releaseDate": null,
+      "overview": "Una bailarina de striptease se relaciona con un alto ejecutivo de Wall Street, viéndose envuelta en una peligrosa trama financiera en la que su hija será amenazada por un grupo mafioso.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cF0uZcuW5lKZxXCqGwlzswnH9CN.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

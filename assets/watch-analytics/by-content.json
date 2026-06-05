@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T17:56:15.134Z",
+  "generatedAt": "2026-06-05T18:26:05.231Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,20 +7,20 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 106,
-      "totalStarts": 47,
+      "totalEvents": 105,
+      "totalStarts": 46,
       "totalCompletions": 40,
       "totalPlaybackProgress": 130394.36662867176,
       "uniqueUsers": 1,
-      "completionRate": 0.8511,
+      "completionRate": 0.8696,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 106,
+          "playCount": 105,
           "completedCount": 40,
-          "startedCount": 47,
+          "startedCount": 46,
           "totalPlaybackProgress": 130394.36662867176,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
@@ -675,8 +675,8 @@
         "s2e1": {
           "season": 2,
           "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2832.7648120181407,
           "uniqueUsers": 1,
@@ -684,10 +684,10 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1230.1355
+      "avgPlaybackProgress": 1241.8511
     },
     {
       "contentId": "tt2560140",
@@ -4148,6 +4148,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "1632181",
+      "imdbId": "",
+      "tmdbId": "1632181",
+      "title": "Socias por accidente",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 2179.298518,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T18:25:54Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 2179.298518,
+          "lastSeenAt": "2026-06-05T18:25:54Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2179.298518,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T18:25:54Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1089.6493
+    },
+    {
       "contentId": "tt0367409",
       "imdbId": "tt0367409",
       "tmdbId": "40143",
@@ -4774,50 +4818,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "1632181",
-      "imdbId": "",
-      "tmdbId": "1632181",
-      "title": "Socias por accidente",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T17:55:50Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T17:55:50Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T17:55:50Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "100087",

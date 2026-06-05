@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T17:56:15.136Z",
+  "generatedAt": "2026-06-05T18:26:05.233Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T17:55:50Z",
+      "updatedAt": "2026-06-05T18:25:54Z",
       "totalEvents": 500,
-      "totalStarts": 232,
+      "totalStarts": 231,
       "totalCompletions": 72,
-      "totalPlaybackProgress": 297500.1468016838,
+      "totalPlaybackProgress": 299679.4453196838,
       "uniqueContentCount": 92,
-      "lastActivityAt": "2026-06-05T17:55:50Z",
+      "lastActivityAt": "2026-06-05T18:25:54Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -23,6 +23,7 @@
       ],
       "inProgressContentIds": [
         "274870",
+        "1632181",
         "tt2032557",
         "tt9114286",
         "tt1825683",
@@ -164,11 +165,11 @@
           "tmdbId": "1632181",
           "title": "Socias por accidente",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 2179.298518,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-05T17:55:50Z"
+          "lastSeenAt": "2026-06-05T18:25:54Z"
         },
         "tt0367409": {
           "contentId": "tt0367409",
@@ -572,7 +573,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 106,
+          "playCount": 105,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1143,7 +1144,7 @@
           "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
-      "avgPlaybackProgress": 595.0003
+      "avgPlaybackProgress": 599.3589
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

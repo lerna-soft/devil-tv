@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T15:28:26.765Z",
+  "generatedAt": "2026-06-05T15:41:14.077Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T15:28:17Z",
+      "updatedAt": "2026-06-05T15:41:03Z",
       "totalEvents": 500,
-      "totalStarts": 229,
+      "totalStarts": 230,
       "totalCompletions": 73,
       "totalPlaybackProgress": 301589.4191146898,
-      "uniqueContentCount": 90,
-      "lastActivityAt": "2026-06-05T15:28:17Z",
+      "uniqueContentCount": 91,
+      "lastActivityAt": "2026-06-05T15:41:03Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -157,6 +157,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-29T03:08:03Z"
+        },
+        "tt0233127": {
+          "contentId": "tt0233127",
+          "imdbId": "tt0233127",
+          "tmdbId": "16286",
+          "title": "Ugly Betty",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T15:41:03Z"
         },
         "tt0367409": {
           "contentId": "tt0367409",
@@ -476,7 +488,7 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 26,
+          "playCount": 25,
           "completed": true,
           "maxProgressValue": 1420.132414739229,
           "maxProgressPercent": 0,

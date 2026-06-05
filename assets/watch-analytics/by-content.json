@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T23:40:46.427Z",
+  "generatedAt": "2026-06-05T23:57:21.393Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2910,71 +2910,27 @@
       "avgPlaybackProgress": 470.6627
     },
     {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
-    },
-    {
       "contentId": "tt9140554",
       "imdbId": "tt9140554",
       "tmdbId": "84958",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 8,
+      "totalEvents": 9,
       "totalStarts": 4,
       "totalCompletions": 0,
       "totalPlaybackProgress": 5807.143243,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-04T02:53:58Z",
+      "lastActivityAt": "2026-06-05T23:57:14Z",
       "users": {
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
-          "playCount": 8,
+          "playCount": 9,
           "completedCount": 0,
           "startedCount": 4,
           "totalPlaybackProgress": 5807.143243,
-          "lastSeenAt": "2026-06-04T02:53:58Z",
+          "lastSeenAt": "2026-06-05T23:57:14Z",
           "lastSeason": 2,
           "lastEpisode": 2
         }
@@ -2983,12 +2939,12 @@
         "s2e2": {
           "season": 2,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 4263.954455,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T02:53:58Z",
+          "lastActivityAt": "2026-06-05T23:57:14Z",
           "users": {
             "luzenithc1994@gmail.com": true
           },
@@ -3037,7 +2993,51 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 725.8929
+      "avgPlaybackProgress": 645.2381
+    },
+    {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
     },
     {
       "contentId": "tt29552248",

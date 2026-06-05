@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T23:57:21.393Z",
+  "generatedAt": "2026-06-05T23:59:18.536Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -4848,6 +4848,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "842675",
+      "imdbId": "",
+      "tmdbId": "842675",
+      "title": "La Tierra Errante II",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T23:59:11Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T23:59:11Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T23:59:11Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt27391124",

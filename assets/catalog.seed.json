@@ -1,6 +1,6 @@
 {
-  "version": 367,
-  "generatedAt": "2026-06-05T15:13:07.712Z",
+  "version": 368,
+  "generatedAt": "2026-06-05T15:23:08.975Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28657,6 +28657,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 1974-02-13",
       "posterUrl": "https://image.tmdb.org/t/p/w500/Atql8rsz0g3TKJN3ZLY0rv3Y84P.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1533064",
+      "imdbId": null,
+      "title": "LEGO Ninjago : Samurai X Rising",
+      "year": 2017,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2017-02-03",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5RUI2uC4l0NYdlbmYObAEwJTTCW.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

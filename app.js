@@ -2083,8 +2083,12 @@ function matchesSearchFilters(title, search) {
   const cast = Array.isArray(title?.metadata?.cast) ? title.metadata.cast : [];
   const directors = Array.isArray(title?.metadata?.directors) ? title.metadata.directors : [];
   const year = String(title?.year || '').trim();
-  const titleHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.metadata?.originalTitle].join(' '));
-  const textHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.imdbId, title?.tmdbId, ...genres, ...cast, ...directors].join(' '));
+  // altTitles carries the same title in the other language (es/en) plus the
+  // original-language title, so a query in either language matches regardless of
+  // which localized label we ended up displaying on the card.
+  const altTitles = Array.isArray(title?.metadata?.altTitles) ? title.metadata.altTitles : [];
+  const titleHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.metadata?.originalTitle, ...altTitles].join(' '));
+  const textHaystack = normalizeSearchText([title?.title, title?.showTitle, title?.metadata?.originalTitle, ...altTitles, title?.imdbId, title?.tmdbId, ...genres, ...cast, ...directors].join(' '));
 
   if (type !== 'all' && title?.type !== type) return false;
   if (query.textTerm && !textHaystack.includes(normalizeSearchText(query.textTerm))) return false;
@@ -7743,35 +7747,73 @@ async function searchTmdbTitles(query, typeFilter) {
   const normalizedQuery = normalizeSearchText(query);
   if (!normalizedQuery || normalizedQuery.length < 3) return [];
   try {
-    const data = await tmdbFetchJson('/search/multi', { query, language: 'es-ES', include_adult: false, page: 1 });
-    return (data?.results || [])
-      .map((entry) => {
+    // Two passes (es-ES + en-US): TMDB localizes the SAME show with a different
+    // title per language (e.g. "Betty, mi fea bella" vs "Ugly Betty"). We display
+    // the Spanish title but keep BOTH as searchable aliases so a query in either
+    // language matches (some users search in español, others type the English
+    // title). The search itself is language-agnostic; only the result labels change.
+    const [esData, enData] = await Promise.all([
+      tmdbFetchJson('/search/multi', { query, language: 'es-ES', include_adult: false, page: 1 }).catch(() => null),
+      tmdbFetchJson('/search/multi', { query, language: 'en-US', include_adult: false, page: 1 }).catch(() => null)
+    ]);
+    const byId = new Map();
+    const ingest = (data, isSpanish) => {
+      for (const entry of (data?.results || [])) {
         const mediaType = String(entry?.media_type || '').trim().toLowerCase();
         const type = mediaType === 'tv' ? 'series' : mediaType === 'movie' ? 'movie' : '';
-        if (!type) return null;
-        const title = String(entry?.title || entry?.name || '').trim();
-        if (!title) return null;
-        const posterUrl = entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '';
+        if (!type || !entry?.id) continue;
+        const localized = String(entry?.title || entry?.name || '').trim();
+        const original = String(entry?.original_title || entry?.original_name || '').trim();
+        const key = `${type}:${entry.id}`;
+        const existing = byId.get(key);
+        if (existing) {
+          if (localized) existing.altTitles.add(localized);
+          if (original) existing.altTitles.add(original);
+          if (isSpanish && localized) existing.displayTitle = localized;
+          if (!existing.posterUrl && entry?.poster_path) existing.posterUrl = `https://image.tmdb.org/t/p/w500${entry.poster_path}`;
+          continue;
+        }
+        byId.set(key, {
+          id: entry.id,
+          type,
+          displayTitle: localized,
+          altTitles: new Set([localized, original].filter(Boolean)),
+          year: Number(String(entry?.first_air_date || entry?.release_date || '').slice(0, 4)) || null,
+          posterUrl: entry?.poster_path ? `https://image.tmdb.org/t/p/w500${entry.poster_path}` : '',
+          backdropUrl: entry?.backdrop_path ? `https://image.tmdb.org/t/p/w780${entry.backdrop_path}` : null,
+          description: String(entry?.overview || '').trim(),
+          releaseDate: entry?.first_air_date || entry?.release_date || null,
+          original
+        });
+      }
+    };
+    ingest(esData, true);
+    ingest(enData, false);
+    return [...byId.values()]
+      .filter((r) => typeFilter === 'all' || r.type === typeFilter)
+      .map((r) => {
+        const title = r.displayTitle || [...r.altTitles][0] || '';
         return {
           imdbId: '',
-          tmdbId: entry?.id ? String(entry.id) : '',
+          tmdbId: String(r.id),
           title,
-          year: Number(String(entry?.first_air_date || entry?.release_date || '').slice(0, 4)) || null,
-          type,
-          posterUrl,
-          description: String(entry?.overview || '').trim(),
+          year: r.year,
+          type: r.type,
+          posterUrl: r.posterUrl,
+          description: r.description,
           metadata: {
-            posterUrl,
-            releaseDate: entry?.first_air_date || entry?.release_date || null,
-            originalTitle: String(entry?.original_title || entry?.original_name || '').trim(),
+            posterUrl: r.posterUrl,
+            releaseDate: r.releaseDate,
+            originalTitle: r.original,
+            altTitles: [...r.altTitles],
             genres: [],
             cast: [],
             directors: [],
-            backdropUrl: entry?.backdrop_path ? `https://image.tmdb.org/t/p/w780${entry.backdrop_path}` : null
+            backdropUrl: r.backdropUrl
           }
         };
       })
-      .filter((result) => result && (typeFilter === 'all' || result.type === typeFilter));
+      .filter((r) => r.title);
   } catch {
     return [];
   }

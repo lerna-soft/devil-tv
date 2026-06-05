@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T17:31:47.945Z",
+  "generatedAt": "2026-06-05T17:56:01.275Z",
   "items": [
     {
       "contentId": "tt0903747",
@@ -7,7 +7,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 107,
+      "totalEvents": 106,
       "totalStarts": 47,
       "totalCompletions": 40,
       "totalPlaybackProgress": 130394.36662867176,
@@ -18,7 +18,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 107,
+          "playCount": 106,
           "completedCount": 40,
           "startedCount": 47,
           "totalPlaybackProgress": 130394.36662867176,
@@ -675,7 +675,7 @@
         "s2e1": {
           "season": 2,
           "episode": 1,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2832.7648120181407,
@@ -687,7 +687,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1218.6389
+      "avgPlaybackProgress": 1230.1355
     },
     {
       "contentId": "tt2560140",
@@ -4774,6 +4774,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "1632181",
+      "imdbId": "",
+      "tmdbId": "1632181",
+      "title": "Socias por accidente",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T17:55:50Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T17:55:50Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T17:55:50Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "100087",

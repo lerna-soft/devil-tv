@@ -1,6 +1,6 @@
 {
-  "version": 377,
-  "generatedAt": "2026-06-05T16:48:20.251Z",
+  "version": 378,
+  "generatedAt": "2026-06-05T17:55:51.050Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28737,6 +28737,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 1989-01-01",
       "posterUrl": "https://image.tmdb.org/t/p/w500/rxsDBHTWj0t4ooUafgvnqyzvqQ2.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1632181",
+      "imdbId": null,
+      "title": "Socias por accidente",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Alexa, una elegante relacionista pública, y Regina, una entrenadora de carácter fuerte y espíritu independiente, llevan vidas completamente opuestas hasta que un mismo hombre entra en su historia. Tras una coincidencia inesperada, ambas descubren que fueron engañadas por la misma persona y que sus caminos están más entrelazados de lo que imaginaban. Obligadas a unir fuerzas, Alexa y Regina pasarán de la desconfianza a una alianza improbable que pondrá a prueba sus diferencias, sus decisiones y su idea de lo que significa apoyarse entre mujeres.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sr1Yoj6XLPTWYcbDoBy67xivW4I.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

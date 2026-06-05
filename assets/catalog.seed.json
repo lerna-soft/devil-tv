@@ -1,6 +1,6 @@
 {
-  "version": 360,
-  "generatedAt": "2026-06-05T15:01:49.263Z",
+  "version": 361,
+  "generatedAt": "2026-06-05T15:02:01.917Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52657,6 +52657,22 @@
       "releaseDate": null,
       "overview": "Mientras una Betty más empoderada y sabia trabaja duro para reconstruir su relación con su hija adolescente Mila, su relación con Armando comienza a deteriorarse, haciéndola preguntarse si tomó la decisión correcta hace 20 años.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/s5KgN8QHo9tdCGAW8fYXvnUvHJZ.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "7379",
+      "imdbId": null,
+      "title": "I Love Betty La Fea",
+      "year": 2008,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2008-09-08",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6aEydiZi8cnoJYiDa1JYPtJfW7G.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

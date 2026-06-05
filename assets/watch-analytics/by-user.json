@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-05T20:40:25.968Z",
+  "generatedAt": "2026-06-05T20:41:33.439Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T20:40:15Z",
+      "updatedAt": "2026-06-05T20:41:25Z",
       "totalEvents": 500,
-      "totalStarts": 231,
+      "totalStarts": 232,
       "totalCompletions": 70,
       "totalPlaybackProgress": 298829.2000597564,
-      "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-05T20:40:15Z",
+      "uniqueContentCount": 94,
+      "lastActivityAt": "2026-06-05T20:41:25Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -170,6 +170,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt27391124": {
+          "contentId": "tt27391124",
+          "imdbId": "tt27391124",
+          "tmdbId": "1181678",
+          "title": "¿Quieres ser mi... hijo?",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-05T20:41:25Z"
         },
         "tt2340650": {
           "contentId": "tt2340650",
@@ -585,7 +597,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 102,
+          "playCount": 101,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

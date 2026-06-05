@@ -1,6 +1,6 @@
 {
-  "version": 366,
-  "generatedAt": "2026-06-05T15:12:29.450Z",
+  "version": 367,
+  "generatedAt": "2026-06-05T15:13:07.712Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -52753,6 +52753,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2008-09-08",
       "posterUrl": "https://image.tmdb.org/t/p/w500/6aEydiZi8cnoJYiDa1JYPtJfW7G.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "100087",
+      "imdbId": null,
+      "title": "Hasta que la plata nos separe",
+      "year": 2006,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2006-05-22",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vsg1BiSfwUP5ujM5zYMcXvYLwqR.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

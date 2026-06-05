@@ -412,8 +412,58 @@ const PLAYBACK_PROVIDERS = [
         ? `${base}?sub_url%5B%5D=${encodeURIComponent(subUrl)}&sub_label%5B%5D=${encodeURIComponent('Español')}`
         : base;
     }
+  },
+  {
+    // Servidor YouTube CURADO: solo aparece en títulos con playlist oficial
+    // mapeada a mano (ver YOUTUBE_CURATED). Pensado para telenovelas/contenido
+    // que los embeds por id de TMDB no tienen. Primario = Invidious (sin ads);
+    // si el proxy falla, el fallback del player cae al embed nativo de YouTube.
+    id: 'youtube',
+    label: 'YouTube (RCN)',
+    note: 'oficial · sin ads · capítulos en orden',
+    sandbox: null,
+    available: (entry) => Boolean(getCuratedYoutube(entry)),
+    movie: (id, entry) => buildYoutubeEmbed(entry),
+    tv: (id, s, e, entry) => buildYoutubeEmbed(entry)
   }
 ];
+
+// ── YouTube curado ────────────────────────────────────────────────────────
+// Mapeo VERIFICADO A MANO de título → playlist oficial de YouTube, para
+// contenido (telenovelas) sin cobertura en los embeds por id de TMDB/IMDB.
+// El "Servidor YouTube" SOLO aparece en los títulos listados aquí, así que no
+// hay riesgo de apuntar a un clip o a contenido equivocado. Clave: `tipo:id`
+// (imdb o tmdb). Para agregar otra novela: verificar su playlist oficial y
+// añadir su línea con ambos ids.
+const YOUTUBE_CURATED = {
+  // Yo soy Betty, la fea (1999) — playlist "Capítulos Completos" del Canal RCN oficial (@canalrcn)
+  'series:tt0233127': { playlist: 'PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5', source: 'Canal RCN oficial' },
+  'series:16286': { playlist: 'PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5', source: 'Canal RCN oficial' }
+};
+// Invidious = proxy de YouTube sin anuncios. Es de terceros e inestable; por eso
+// el player tiene fallback al embed nativo de YouTube (con ads) si no carga.
+const INVIDIOUS_BASE = 'https://yewtu.be';
+function getCuratedYoutube(entry) {
+  if (!entry) return null;
+  const type = entry.type === 'movie' ? 'movie' : 'series';
+  const keys = [entry.imdbId ? `${type}:${entry.imdbId}` : '', entry.tmdbId ? `${type}:${entry.tmdbId}` : ''].filter(Boolean);
+  for (const k of keys) { if (YOUTUBE_CURATED[k]) return YOUTUBE_CURATED[k]; }
+  return null;
+}
+function youtubeProxyEmbed(playlist) {
+  return `${INVIDIOUS_BASE}/embed/videoseries?list=${encodeURIComponent(playlist)}&local=true&autoplay=0`;
+}
+function youtubeNativeEmbed(playlist) {
+  return `https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(playlist)}&rel=0&modestbranding=1`;
+}
+function buildYoutubeEmbed(entry) {
+  const map = getCuratedYoutube(entry);
+  return map ? youtubeProxyEmbed(map.playlist) : '';
+}
+function youtubeFallbackUrls(entry) {
+  const map = getCuratedYoutube(entry);
+  return map ? [youtubeProxyEmbed(map.playlist), youtubeNativeEmbed(map.playlist)] : [];
+}
 
 const SECTION_CACHE_STORAGE_KEY = 'mep_section_cache_v1';
 
@@ -7323,11 +7373,13 @@ function openPlayerModal(embedUrl) {
     return;
   }
 
-  // Apertura fresca (modal estaba cerrado) → forzar Servidor 1 por defecto.
-  // Si entramos con el modal ya visible (jumpEpisode), conservamos el provider
-  // que el usuario haya elegido durante la sesión actual.
+  // Apertura fresca (modal estaba cerrado) → Servidor 1 por defecto, EXCEPTO si
+  // el título tiene versión oficial curada en YouTube: en novelas viejas los
+  // embeds por id (Servidores 1-5) no tienen el contenido, así que arrancamos en
+  // YouTube. Si entramos con el modal ya visible (jumpEpisode), conservamos el
+  // provider que el usuario haya elegido durante la sesión actual.
   if (modal.hidden) {
-    state.activeProviderId = PLAYBACK_PROVIDERS[0].id;
+    state.activeProviderId = getCuratedYoutube(state.selected) ? 'youtube' : PLAYBACK_PROVIDERS[0].id;
   }
 
   renderPlayerControls();
@@ -7335,8 +7387,15 @@ function openPlayerModal(embedUrl) {
   const activeProvider = getActiveProvider();
   applyProviderSandbox(activeProvider);
   preloadSubsAsync(activeProvider, state.selected, state.playback.season, state.playback.episode);
-  iframe.src = embedUrl;
-  schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(embedUrl));
+  // Recomputar el embed para el provider activo: el default puede haber cambiado
+  // a 'youtube' arriba después de que el caller calculó embedUrl con otro provider.
+  const finalEmbed = state.selected ? getCurrentEmbedUrl(buildEmbedUrl(state.selected)) : embedUrl;
+  iframe.src = finalEmbed;
+  if (activeProvider.id === 'youtube') {
+    scheduleYoutubeHealthFallback(state.selected);
+  } else {
+    schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(finalEmbed));
+  }
   modal.hidden = false;
   document.body.classList.add('player-active');
   updateFloatingReportButtonVisibility();
@@ -8322,11 +8381,19 @@ function getPlaybackCandidateIds(entry) {
   }
   return ids.filter(Boolean);
 }
+// Proveedores aplicables al título actual: los que no declaran `available` salen
+// siempre; los condicionales (YouTube curado) solo cuando hay mapeo verificado.
+function getVisibleProviders() {
+  return PLAYBACK_PROVIDERS.filter((p) => typeof p.available !== 'function' || p.available(state.selected));
+}
+
 function getActiveProvider() {
-  if (!state.activeProviderId) {
-    state.activeProviderId = PLAYBACK_PROVIDERS[0].id;
+  const visible = getVisibleProviders();
+  const list = visible.length ? visible : PLAYBACK_PROVIDERS;
+  if (!state.activeProviderId || !list.some((p) => p.id === state.activeProviderId)) {
+    state.activeProviderId = list[0].id;
   }
-  return PLAYBACK_PROVIDERS.find((p) => p.id === state.activeProviderId) || PLAYBACK_PROVIDERS[0];
+  return list.find((p) => p.id === state.activeProviderId) || list[0];
 }
 
 function buildEmbedUrlWithProvider(entry, provider) {
@@ -8342,6 +8409,9 @@ function buildEmbedUrl(entry) {
 
 function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   if (!state.selected) return [primaryUrl];
+  // YouTube usa su propio fallback por salud del proxy (scheduleYoutubeHealthFallback),
+  // NO el timer ciego genérico (que tumbaría el modo sin-ads a los 6.5s). Single url.
+  if (getActiveProvider().id === 'youtube') return [primaryUrl];
   const ids = getPlaybackCandidateIds(state.selected);
   if (!ids.length) return [primaryUrl];
   const provider = getActiveProvider();
@@ -8384,6 +8454,28 @@ function schedulePlayerFallback(urls) {
     });
     iframe.src = next;
   }, PLAYER_FALLBACK_DELAY_MS);
+}
+// Fallback de YouTube por SALUD del proxy (no por timer ciego): si la instancia
+// Invidious no responde en ~4s, cambia el iframe al embed nativo de YouTube
+// (con ads pero estable). Si responde, conserva el modo sin-ads.
+function scheduleYoutubeHealthFallback(entry) {
+  clearPlayerFallback();
+  const urls = youtubeFallbackUrls(entry);
+  if (urls.length < 2) return;
+  const nativeUrl = urls[1];
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 4000);
+  fetch(`${INVIDIOUS_BASE}/`, { mode: 'no-cors', signal: controller.signal })
+    .then(() => { /* proxy alcanzable → mantener sin-ads */ })
+    .catch(() => {
+      const iframe = elements.playerIframe;
+      if (!iframe || !elements.playerModal || elements.playerModal.hidden) return;
+      if (getActiveProvider().id !== 'youtube') return;
+      if (String(iframe.src) === nativeUrl) return;
+      showToast({ icon: 'warning', title: 'Reproductor sin anuncios no disponible; usando YouTube estándar.', timer: 4000 });
+      iframe.src = nativeUrl;
+    })
+    .finally(() => clearTimeout(timer));
 }
 function isSeriesLike(title) { return title.type === 'series' || title.type === 'episode'; }
 function getCurrentEmbedUrl(baseEmbed) {
@@ -8656,14 +8748,14 @@ function renderProviderTabs() {
   const container = elements.playerServerTabs;
   if (!container) return;
   // Con un solo provider no hay nada que escoger: ocultar tabs.
-  if (PLAYBACK_PROVIDERS.length <= 1) {
+  if (getVisibleProviders().length <= 1) {
     container.innerHTML = '';
     container.hidden = true;
     return;
   }
   container.hidden = false;
   const active = getActiveProvider();
-  container.innerHTML = PLAYBACK_PROVIDERS.map((provider) => {
+  container.innerHTML = getVisibleProviders().map((provider) => {
     const isActive = provider.id === active.id;
     return `
       <button type="button"
@@ -8732,7 +8824,11 @@ function setActiveProvider(providerId) {
     applyProviderSandbox(provider);
     preloadSubsAsync(provider, state.selected, state.playback.season, state.playback.episode);
     elements.playerIframe.src = newUrl;
-    schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
+    if (provider.id === 'youtube') {
+      scheduleYoutubeHealthFallback(state.selected);
+    } else {
+      schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(newUrl));
+    }
   }
 }
 

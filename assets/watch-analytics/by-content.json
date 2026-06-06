@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T19:55:35.716Z",
+  "generatedAt": "2026-06-06T20:00:33.346Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 92,
+      "totalEvents": 91,
       "totalStarts": 40,
-      "totalCompletions": 37,
-      "totalPlaybackProgress": 119717.14231327233,
+      "totalCompletions": 36,
+      "totalPlaybackProgress": 116903.33131327233,
       "uniqueUsers": 1,
-      "completionRate": 0.925,
+      "completionRate": 0.9,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 92,
-          "completedCount": 37,
+          "playCount": 91,
+          "completedCount": 36,
           "startedCount": 40,
-          "totalPlaybackProgress": 119717.14231327233,
+          "totalPlaybackProgress": 116903.33131327233,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2425,23 +2425,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s2e3": {
-          "season": 2,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2813.811,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T22:15:23Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1301.2733
+      "avgPlaybackProgress": 1284.652
     },
     {
       "contentId": "tt21209804",
@@ -2661,45 +2647,45 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 14,
+      "totalEvents": 15,
       "totalStarts": 9,
       "totalCompletions": 2,
       "totalPlaybackProgress": 2,
       "uniqueUsers": 1,
       "completionRate": 0.2222,
-      "lastActivityAt": "2026-06-06T19:55:15Z",
+      "lastActivityAt": "2026-06-06T20:00:22Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
+          "playCount": 15,
           "completedCount": 2,
           "startedCount": 9,
           "totalPlaybackProgress": 2,
-          "lastSeenAt": "2026-06-06T19:55:15Z",
+          "lastSeenAt": "2026-06-06T20:00:22Z",
           "lastSeason": 1,
           "lastEpisode": 9
         }
       },
       "episodes": {
-        "s1e8": {
+        "s1e9": {
           "season": 1,
-          "episode": 8,
-          "totalEvents": 4,
+          "episode": 9,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T19:55:15Z",
+          "lastActivityAt": "2026-06-06T20:00:22Z",
           "users": {
             "henry8812@gmail.com": true
           },
           "completionRate": 1
         },
-        "s1e9": {
+        "s1e8": {
           "season": 1,
-          "episode": 9,
-          "totalEvents": 2,
+          "episode": 8,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1,
@@ -2809,7 +2795,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.1429
+      "avgPlaybackProgress": 0.1333
     },
     {
       "contentId": "tt32897959",

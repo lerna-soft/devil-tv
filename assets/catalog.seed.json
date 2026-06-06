@@ -1,6 +1,6 @@
 {
-  "version": 390,
-  "generatedAt": "2026-06-06T22:39:08.316Z",
+  "version": 391,
+  "generatedAt": "2026-06-06T22:39:17.441Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53137,6 +53137,22 @@
       "releaseDate": null,
       "overview": "Action & Adventure, Drama, Comedy",
       "posterUrl": "https://image.tmdb.org/t/p/w500/gN7Tq35raryabkPGcKlb4ZKeutm.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "317885",
+      "imdbId": null,
+      "title": "るろうに剣心 -明治剣客浪漫譚- 追憶編",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1999-02-20",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xPu5caNX8TMujoPvQkep0rImPVX.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 383,
-  "generatedAt": "2026-06-06T03:07:55.741Z",
+  "version": 384,
+  "generatedAt": "2026-06-06T03:13:17.334Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28817,6 +28817,22 @@
       "releaseDate": null,
       "overview": "La Tierra se ve sacudida por una serie incontrolable de seísmos y catástrofes naturales. Los científicos buscan desesperados una explicación, hasta que una base espacial localiza un planeta errante de enorme gravedad que parece ser el causante de todo. Así pues, los astronautas organizarán una misión para destruir el planeta y salvar a la Tierra.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/n58gPdXQePcHEgDDWDhUkih1dDt.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "15255",
+      "imdbId": null,
+      "title": "Invicto 2",
+      "year": 2006,
+      "releaseDate": null,
+      "overview": "Un boxeador ex campeón del mundo, pero venido a menos y lleno de deudas viaja a Rusia con su agente para ganarse unos pesos grabando comerciales de Vodka, pero una vez allá caerá en manos de la mafia, que desea meterlo preso y enfrentarlo al campeón reinante de un torneo para reclusos que mueve muchísimo dinero. Es así como “Ice man” deberá vérselas con todos los reclusos y el corrupto mundo que ahí se vive.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dQYWGpcEZ6ZLVoW87tjr2FbgSx8.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

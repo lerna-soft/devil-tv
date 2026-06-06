@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-06T12:57:42.553Z",
+  "generatedAt": "2026-06-06T13:04:04.290Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:535167:s1e1:started:2026-06-06T13:03:51Z",
+      "contentId": "535167",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "",
+      "tmdbId": "535167",
+      "title": "La Tierra Errante",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-05T23:59:48.393Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T13:03:51Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34809853:s1e7:started:2026-06-06T05:56:46Z",
       "contentId": "tt34809853",

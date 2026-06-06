@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-06T13:11:27.063Z",
+  "generatedAt": "2026-06-06T13:28:23.523Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-06T05:56:46Z",
+      "updatedAt": "2026-06-06T13:28:12Z",
       "totalEvents": 500,
       "totalStarts": 238,
       "totalCompletions": 70,
       "totalPlaybackProgress": 296745.0824962844,
       "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-06T05:56:46Z",
+      "lastActivityAt": "2026-06-06T13:28:12Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -165,11 +165,11 @@
           "tmdbId": "276161",
           "title": "Teach You a Lesson",
           "type": "series",
-          "playCount": 7,
+          "playCount": 8,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-06T05:56:46Z"
+          "lastSeenAt": "2026-06-06T13:28:12Z"
         },
         "tt27391124": {
           "contentId": "tt27391124",
@@ -309,7 +309,7 @@
           "tmdbId": "1226863",
           "title": "Super Mario Galaxy la película",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

@@ -5,7 +5,7 @@
   "lastEpisode": 7,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-06-06T05:56:46Z",
+  "updatedAt": "2026-06-06T13:28:12Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-06T03:39:47.357Z",
@@ -38,12 +38,39 @@
       "lastProgress": 0
     },
     "s1e7": {
-      "startedAt": "2026-06-06T05:56:46.168Z",
+      "startedAt": "2026-06-06T13:28:10.522Z",
       "completedAt": "",
       "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34809853:s1e7:started:2026-06-06T13:28:12Z",
+      "contentId": "tt34809853",
+      "episodeKey": "s1e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "season": 1,
+      "episode": 7,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-06T13:28:10.522Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T13:28:12Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34809853:s1e7:started:2026-06-06T05:56:46Z",
       "contentId": "tt34809853",

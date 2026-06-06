@@ -1,6 +1,6 @@
 {
-  "version": 382,
-  "generatedAt": "2026-06-05T23:59:20.715Z",
+  "version": 383,
+  "generatedAt": "2026-06-06T03:07:55.741Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53009,6 +53009,22 @@
       "releaseDate": null,
       "overview": "Katsuyuki Konishi, Sumire Uesaka",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BNWM5MGZmZDMtNTcxYi00Njg3LThmMTctYzMzYzdlZTM3MzdmXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "215720",
+      "imdbId": null,
+      "title": "La reina de las lágrimas",
+      "year": 2024,
+      "releaseDate": null,
+      "overview": "La reina de los grandes almacenes y su marido de pueblo atraviesan una crisis matrimonial hasta que, por arte de magia, el amor vuelve a florecer.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yfJ2erY2SJiov0LaRhlSMhSPqYx.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

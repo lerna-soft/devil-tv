@@ -1,6 +1,6 @@
 {
-  "version": 384,
-  "generatedAt": "2026-06-06T03:13:17.334Z",
+  "version": 385,
+  "generatedAt": "2026-06-06T03:13:26.722Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28833,6 +28833,22 @@
       "releaseDate": null,
       "overview": "Un boxeador ex campeón del mundo, pero venido a menos y lleno de deudas viaja a Rusia con su agente para ganarse unos pesos grabando comerciales de Vodka, pero una vez allá caerá en manos de la mafia, que desea meterlo preso y enfrentarlo al campeón reinante de un torneo para reclusos que mueve muchísimo dinero. Es así como “Ice man” deberá vérselas con todos los reclusos y el corrupto mundo que ahí se vive.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/dQYWGpcEZ6ZLVoW87tjr2FbgSx8.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "780065",
+      "imdbId": null,
+      "title": "Invicto2",
+      "year": 2020,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2020-12-25",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vnYsdv7fYywcSRQi9Ij9N8qpKE4.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

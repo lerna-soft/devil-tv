@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T03:09:16.381Z",
+  "generatedAt": "2026-06-06T03:10:09.126Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2519,7 +2519,7 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 24,
+      "totalEvents": 23,
       "totalStarts": 13,
       "totalCompletions": 4,
       "totalPlaybackProgress": 5680.441222408163,
@@ -2530,7 +2530,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 24,
+          "playCount": 23,
           "completedCount": 4,
           "startedCount": 13,
           "totalPlaybackProgress": 5680.441222408163,
@@ -2557,7 +2557,7 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 5,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
@@ -2723,7 +2723,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 236.6851
+      "avgPlaybackProgress": 246.9757
     },
     {
       "contentId": "tt32897959",
@@ -4266,6 +4266,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt27391124",
+      "imdbId": "tt27391124",
+      "tmdbId": "1181678",
+      "title": "¿Quieres ser mi... hijo?",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-06T03:10:02Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-06T03:10:02Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T03:10:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt8036976",
       "imdbId": "tt8036976",
       "tmdbId": "1198994",
@@ -4992,50 +5036,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "tt27391124",
-      "imdbId": "tt27391124",
-      "tmdbId": "1181678",
-      "title": "¿Quieres ser mi... hijo?",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T20:41:25Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T20:41:25Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T20:41:25Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2340650",

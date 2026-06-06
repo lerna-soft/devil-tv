@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-06T01:32:59.113Z",
+  "generatedAt": "2026-06-06T03:09:16.383Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-05T20:50:27Z",
+      "updatedAt": "2026-06-06T03:09:09Z",
       "totalEvents": 500,
       "totalStarts": 232,
       "totalCompletions": 70,
       "totalPlaybackProgress": 296745.0824962844,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-05T20:50:27Z",
+      "lastActivityAt": "2026-06-06T03:09:09Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -123,18 +123,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-28T15:21:41Z"
         },
-        "800158": {
-          "contentId": "800158",
-          "imdbId": "",
-          "tmdbId": "800158",
-          "title": "El asesino",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T20:35:07Z"
-        },
         "1242265": {
           "contentId": "1242265",
           "imdbId": "",
@@ -170,6 +158,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt8036976": {
+          "contentId": "tt8036976",
+          "imdbId": "tt8036976",
+          "tmdbId": "1198994",
+          "title": "SEND HELP (Enviad ayuda)",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-06T03:09:09Z"
         },
         "tt27391124": {
           "contentId": "tt27391124",

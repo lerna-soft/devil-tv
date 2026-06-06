@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T05:56:54.606Z",
+  "generatedAt": "2026-06-06T05:57:36.550Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,7 +1845,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 99,
+      "totalEvents": 98,
       "totalStarts": 45,
       "totalCompletions": 38,
       "totalPlaybackProgress": 122602.90031327233,
@@ -1856,7 +1856,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 99,
+          "playCount": 98,
           "completedCount": 38,
           "startedCount": 45,
           "totalPlaybackProgress": 122602.90031327233,
@@ -2485,7 +2485,7 @@
         "s1e2": {
           "season": 1,
           "episode": 2,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2885.758,
@@ -2497,7 +2497,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1238.4131
+      "avgPlaybackProgress": 1251.05
     },
     {
       "contentId": "tt21209804",
@@ -3215,27 +3215,41 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 6,
+      "totalEvents": 7,
+      "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-06T05:56:42Z",
+      "lastActivityAt": "2026-06-06T05:56:46Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 6,
+          "playCount": 7,
           "completedCount": 0,
-          "startedCount": 6,
+          "startedCount": 7,
           "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-06T05:56:42Z",
+          "lastSeenAt": "2026-06-06T05:56:46Z",
           "lastSeason": 1,
-          "lastEpisode": 6
+          "lastEpisode": 7
         }
       },
       "episodes": {
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T05:56:46Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e6": {
           "season": 1,
           "episode": 6,

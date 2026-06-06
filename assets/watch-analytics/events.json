@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-06T13:11:27.058Z",
+  "generatedAt": "2026-06-06T13:28:23.517Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt34809853:s1e7:started:2026-06-06T13:28:12Z",
+      "contentId": "tt34809853",
+      "episodeKey": "s1e7",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "season": 1,
+      "episode": 7,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-06T13:28:10.522Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T13:28:12Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s1e1:started:2026-06-06T13:10:59Z",
       "contentId": "tt9140554",
@@ -11487,27 +11508,6 @@
       "startedAt": "2026-05-21T22:01:56.736Z",
       "completedAt": "",
       "updatedAt": "2026-05-21T22:01:58Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt28650488:s1e1:preference:2026-05-21T21:33:53Z",
-      "contentId": "tt28650488",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt28650488",
-      "tmdbId": "1226863",
-      "title": "Super Mario Galaxy la película",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T21:33:53Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

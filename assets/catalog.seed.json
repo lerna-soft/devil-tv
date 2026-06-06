@@ -1,6 +1,6 @@
 {
-  "version": 386,
-  "generatedAt": "2026-06-06T03:39:51.559Z",
+  "version": 387,
+  "generatedAt": "2026-06-06T13:03:58.616Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28849,6 +28849,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2020-12-25",
       "posterUrl": "https://image.tmdb.org/t/p/w500/vnYsdv7fYywcSRQi9Ij9N8qpKE4.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "535167",
+      "imdbId": null,
+      "title": "La Tierra Errante",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "Cuando el Sol comienza a expandirse de tal manera que inevitablemente engullirá y destruirá la Tierra en cien años, la humanidad unida encuentra una manera de evitar su extinción propulsando el planeta fuera del Sistema Solar usando motores gigantescos, moviéndolo a un nuevo hogar ubicado a cuatro años luz de distancia, un viaje épico que durará miles de años.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gBxyQTHMLJvODAQ4gB8FpGcujhp.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

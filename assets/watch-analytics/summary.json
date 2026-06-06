@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-06T13:30:30.256Z",
+  "generatedAt": "2026-06-06T14:09:01.900Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 593,
   "totalStarts": 262,
-  "totalCompletions": 71,
+  "totalCompletions": 70,
   "overallCompletionRate": 0.2672,
   "trackedTitles": 119,
   "mostWatchedContent": [
@@ -28,9 +28,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 97,
+      "totalEvents": 96,
       "uniqueUsers": 1,
-      "completionRate": 0.8636
+      "completionRate": 0.8409
     },
     {
       "contentId": "tt21209804",
@@ -57,6 +57,14 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt34809853",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
@@ -71,14 +79,6 @@
       "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
-    },
-    {
-      "contentId": "tt34809853",
-      "title": "Teach You a Lesson",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0
     },
     {
       "contentId": "tt0899043",

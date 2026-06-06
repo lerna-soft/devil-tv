@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-06T22:38:45.977Z",
+  "generatedAt": "2026-06-06T22:45:06.287Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-06T22:38:21Z",
+      "updatedAt": "2026-06-06T22:44:55Z",
       "totalEvents": 500,
       "totalStarts": 234,
       "totalCompletions": 70,
-      "totalPlaybackProgress": 288210.59385913704,
-      "uniqueContentCount": 93,
-      "lastActivityAt": "2026-06-06T22:38:21Z",
+      "totalPlaybackProgress": 288210.593858137,
+      "uniqueContentCount": 94,
+      "lastActivityAt": "2026-06-06T22:44:55Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -159,6 +159,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt0182629": {
+          "contentId": "tt0182629",
+          "imdbId": "tt0182629",
+          "tmdbId": "28136",
+          "title": "Rurouni Kenshin",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-06T22:44:55Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -610,7 +622,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 88,
+          "playCount": 87,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

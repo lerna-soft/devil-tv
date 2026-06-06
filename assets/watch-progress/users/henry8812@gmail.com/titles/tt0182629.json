@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt0182629",
+  "tmdbId": "28136",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-06T22:44:55Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-06T22:44:54.578Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0182629:s1e1:started:2026-06-06T22:44:55Z",
+      "contentId": "tt0182629",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0182629",
+      "tmdbId": "28136",
+      "title": "Rurouni Kenshin",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-06T22:44:54.578Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T22:44:55Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

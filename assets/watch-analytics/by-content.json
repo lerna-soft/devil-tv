@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T00:00:35.424Z",
+  "generatedAt": "2026-06-06T00:02:33.624Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -3758,6 +3758,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "535167",
+      "imdbId": "",
+      "tmdbId": "535167",
+      "title": "La Tierra Errante",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-05T23:59:49Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-05T23:59:49Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-05T23:59:49Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt0367409",
       "imdbId": "tt0367409",
       "tmdbId": "40143",
@@ -4215,50 +4259,6 @@
           "lastActivityAt": "2026-05-22T20:07:00Z",
           "users": {
             "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "535167",
-      "imdbId": "",
-      "tmdbId": "535167",
-      "title": "La Tierra Errante",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T23:59:18Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T23:59:18Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T23:59:18Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
           },
           "completionRate": 0
         }

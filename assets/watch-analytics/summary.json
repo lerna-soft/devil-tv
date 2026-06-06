@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T15:55:53.527Z",
+  "generatedAt": "2026-06-06T16:36:38.792Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 593,
@@ -28,9 +28,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 96,
+      "totalEvents": 95,
       "uniqueUsers": 1,
-      "completionRate": 0.8409
+      "completionRate": 0.8605
     },
     {
       "contentId": "tt21209804",
@@ -49,18 +49,18 @@
       "completionRate": 0.5
     },
     {
-      "contentId": "tt9140554",
-      "title": "Loki",
+      "contentId": "tt34809853",
+      "title": "Teach You a Lesson",
       "type": "series",
       "totalEvents": 11,
       "uniqueUsers": 1,
       "completionRate": 0
     },
     {
-      "contentId": "tt34809853",
-      "title": "Teach You a Lesson",
+      "contentId": "tt9140554",
+      "title": "Loki",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 11,
       "uniqueUsers": 1,
       "completionRate": 0
     },

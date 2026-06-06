@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-06T03:13:30.253Z",
+  "generatedAt": "2026-06-06T03:39:55.244Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-06T03:13:20Z",
+      "updatedAt": "2026-06-06T03:39:47Z",
       "totalEvents": 500,
-      "totalStarts": 233,
+      "totalStarts": 234,
       "totalCompletions": 70,
       "totalPlaybackProgress": 296745.0824962844,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-06T03:13:20Z",
+      "lastActivityAt": "2026-06-06T03:39:47Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -158,6 +158,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt34809853": {
+          "contentId": "tt34809853",
+          "imdbId": "tt34809853",
+          "tmdbId": "276161",
+          "title": "Teach You a Lesson",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-06T03:39:47Z"
         },
         "tt27391124": {
           "contentId": "tt27391124",
@@ -1154,18 +1166,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-21T20:41:19Z"
-        },
-        "tt0267913": {
-          "contentId": "tt0267913",
-          "imdbId": "tt0267913",
-          "tmdbId": "9637",
-          "title": "Scooby-Doo",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-21T20:35:38Z"
         }
       },
       "avgPlaybackProgress": 593.4902

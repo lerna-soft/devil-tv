@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-06T03:13:20Z",
+  "updatedAt": "2026-06-06T03:39:47Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2804,6 +2804,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt34809853": {
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-06T03:39:47Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-06T03:39:47.357Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -2954,15 +2970,42 @@
     "updatedAt": "2026-06-06T03:09:09Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "15070",
+    "imdbId": "tt34809853",
+    "tmdbId": "276161",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-06T03:13:20Z"
+    "updatedAt": "2026-06-06T03:39:47Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34809853:s1e1:started:2026-06-06T03:39:47Z",
+      "contentId": "tt34809853",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-06T03:39:47.357Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T03:39:47Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:15070:s1e1:started:2026-06-06T03:13:20Z",
       "contentId": "15070",
@@ -16427,33 +16470,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-21T20:41:12Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0267913:s1e1:preference:2026-05-21T20:35:38Z",
-      "contentId": "tt0267913",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0267913",
-      "tmdbId": "9637",
-      "title": "Scooby-Doo",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T20:35:38Z",
       "country": "",
       "countryName": "",
       "city": "",

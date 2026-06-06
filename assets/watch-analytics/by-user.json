@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-06T03:10:09.127Z",
+  "generatedAt": "2026-06-06T03:13:30.253Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-06T03:10:02Z",
+      "updatedAt": "2026-06-06T03:13:20Z",
       "totalEvents": 500,
-      "totalStarts": 232,
+      "totalStarts": 233,
       "totalCompletions": 70,
       "totalPlaybackProgress": 296745.0824962844,
       "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-06T03:10:02Z",
+      "lastActivityAt": "2026-06-06T03:13:20Z",
       "completedContentIds": [
         "tt0965547",
         "tt26743760",
@@ -45,11 +45,11 @@
           "tmdbId": "15070",
           "title": "Invicto",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:14:56Z"
+          "lastSeenAt": "2026-06-06T03:13:20Z"
         },
         "15255": {
           "contentId": "15255",
@@ -297,7 +297,7 @@
           "tmdbId": "1226863",
           "title": "Super Mario Galaxy la película",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,

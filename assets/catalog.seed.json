@@ -1,6 +1,6 @@
 {
-  "version": 385,
-  "generatedAt": "2026-06-06T03:13:26.722Z",
+  "version": 386,
+  "generatedAt": "2026-06-06T03:39:51.559Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53057,6 +53057,22 @@
       "releaseDate": null,
       "overview": "La reina de los grandes almacenes y su marido de pueblo atraviesan una crisis matrimonial hasta que, por arte de magia, el amor vuelve a florecer.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/yfJ2erY2SJiov0LaRhlSMhSPqYx.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "276161",
+      "imdbId": null,
+      "title": "Teach You a Lesson",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "Action & Adventure, Drama, Comedy",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gN7Tq35raryabkPGcKlb4ZKeutm.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

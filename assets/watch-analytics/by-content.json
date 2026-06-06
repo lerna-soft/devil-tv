@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-06T05:43:44.087Z",
+  "generatedAt": "2026-06-06T05:56:46.071Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -3380,6 +3380,106 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt34809853",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "totalEvents": 5,
+      "totalStarts": 5,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-06T05:56:37Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 5,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-06T05:56:37Z",
+          "lastSeason": 1,
+          "lastEpisode": 5
+        }
+      },
+      "episodes": {
+        "s1e5": {
+          "season": 1,
+          "episode": 5,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T05:56:37Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e4": {
+          "season": 1,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T05:43:36Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e3": {
+          "season": 1,
+          "episode": 3,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T05:03:04Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T04:28:23Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T03:39:47Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt21478426",
       "imdbId": "tt21478426",
       "tmdbId": "1289601",
@@ -3505,148 +3605,6 @@
           "lastActivityAt": "2026-05-26T03:17:40Z",
           "users": {
             "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt34809853",
-      "imdbId": "tt34809853",
-      "tmdbId": "276161",
-      "title": "Teach You a Lesson",
-      "type": "series",
-      "totalEvents": 4,
-      "totalStarts": 4,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-06T05:43:36Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 4,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-06T05:43:36Z",
-          "lastSeason": 1,
-          "lastEpisode": 4
-        }
-      },
-      "episodes": {
-        "s1e4": {
-          "season": 1,
-          "episode": 4,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T05:43:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T05:03:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T04:28:23Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T03:39:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt28650488",
-      "imdbId": "tt28650488",
-      "tmdbId": "1226863",
-      "title": "Super Mario Galaxy la película",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-03T13:28:08Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-03T13:28:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "majandra955@gmail.com": {
-          "userEmail": "majandra955@gmail.com",
-          "userName": "Alejandra Burgos",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-12T23:59:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-06-03T13:28:08Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "majandra955@gmail.com": true
           },
           "completionRate": 0
         }
@@ -4069,6 +4027,62 @@
           "users": {
             "luzenithc1994@gmail.com": true,
             "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt28650488",
+      "imdbId": "tt28650488",
+      "tmdbId": "1226863",
+      "title": "Super Mario Galaxy la película",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-03T13:28:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-03T13:28:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "majandra955@gmail.com": {
+          "userEmail": "majandra955@gmail.com",
+          "userName": "Alejandra Burgos",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-12T23:59:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-03T13:28:08Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "majandra955@gmail.com": true
           },
           "completionRate": 0
         }

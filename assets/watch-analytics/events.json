@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-06T01:32:59.108Z",
+  "generatedAt": "2026-06-06T03:09:16.377Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt8036976:s1e1:preference:2026-06-06T03:09:09Z",
+      "contentId": "tt8036976",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt8036976",
+      "tmdbId": "1198994",
+      "title": "SEND HELP (Enviad ayuda)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-06T03:09:09Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:535167:s1e1:started:2026-06-05T23:59:49Z",
       "contentId": "535167",
@@ -11424,27 +11445,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-21T20:35:27Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:800158:s1e1:preference:2026-05-21T20:35:07Z",
-      "contentId": "800158",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "",
-      "tmdbId": "800158",
-      "title": "El asesino",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-21T20:35:07Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

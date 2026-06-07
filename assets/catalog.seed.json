@@ -1,6 +1,6 @@
 {
-  "version": 391,
-  "generatedAt": "2026-06-06T22:39:17.441Z",
+  "version": 392,
+  "generatedAt": "2026-06-07T05:19:07.410Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53153,6 +53153,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 1999-02-20",
       "posterUrl": "https://image.tmdb.org/t/p/w500/xPu5caNX8TMujoPvQkep0rImPVX.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "211224",
+      "imdbId": null,
+      "title": "The Nice Guy",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "Seok-cheol, the eldest son in a family of three generations of gangsters, navigates the tumultuous ups and downs of life with tears and laughter, all to protect his family, career, and love.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mVOKlZ6Ix5OfXHsyuaQp4nEDE6n.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

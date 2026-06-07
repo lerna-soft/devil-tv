@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T02:01:23.808Z",
+  "generatedAt": "2026-06-07T05:25:27.933Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 87,
+      "totalEvents": 86,
       "totalStarts": 37,
-      "totalCompletions": 35,
-      "totalPlaybackProgress": 114065.41167512495,
+      "totalCompletions": 34,
+      "totalPlaybackProgress": 111230.8589334016,
       "uniqueUsers": 1,
-      "completionRate": 0.9459,
+      "completionRate": 0.9189,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 87,
-          "completedCount": 35,
+          "playCount": 86,
+          "completedCount": 34,
           "startedCount": 37,
-          "totalPlaybackProgress": 114065.41167512495,
+          "totalPlaybackProgress": 111230.8589334016,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2383,23 +2383,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s2e6": {
-          "season": 2,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2834.552741723356,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T22:24:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1311.0967
+      "avgPlaybackProgress": 1293.3821
     },
     {
       "contentId": "tt21209804",
@@ -5136,6 +5122,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt2091935",
+      "imdbId": "tt2091935",
+      "tmdbId": "345664",
+      "title": "Mr. Right",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-07T05:25:16Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-07T05:25:16Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-07T05:25:16Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0182629",

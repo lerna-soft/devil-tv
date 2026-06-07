@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-07T02:01:23.810Z",
+  "generatedAt": "2026-06-07T05:25:27.935Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-06T22:44:55Z",
+      "updatedAt": "2026-06-07T05:25:16Z",
       "totalEvents": 500,
-      "totalStarts": 234,
-      "totalCompletions": 70,
-      "totalPlaybackProgress": 288210.593858137,
-      "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-06T22:44:55Z",
+      "totalStarts": 235,
+      "totalCompletions": 69,
+      "totalPlaybackProgress": 285376.04111641366,
+      "uniqueContentCount": 95,
+      "lastActivityAt": "2026-06-07T05:25:16Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -159,6 +159,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt2091935": {
+          "contentId": "tt2091935",
+          "imdbId": "tt2091935",
+          "tmdbId": "345664",
+          "title": "Mr. Right",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-07T05:25:16Z"
         },
         "tt0182629": {
           "contentId": "tt0182629",
@@ -622,7 +634,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 87,
+          "playCount": 86,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1169,7 +1181,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 576.4212
+      "avgPlaybackProgress": 570.7521
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

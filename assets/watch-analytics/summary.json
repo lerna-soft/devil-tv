@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T01:58:27.057Z",
+  "generatedAt": "2026-06-07T01:59:03.930Z",
   "totalUsers": 13,
   "activeUsers": 6,
-  "totalEvents": 595,
-  "totalStarts": 259,
+  "totalEvents": 596,
+  "totalStarts": 260,
   "totalCompletions": 71,
-  "overallCompletionRate": 0.2703,
+  "overallCompletionRate": 0.2692,
   "trackedTitles": 120,
   "mostWatchedContent": [
     {
@@ -52,7 +52,7 @@
       "contentId": "tt9140554",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 13,
+      "totalEvents": 14,
       "uniqueUsers": 1,
       "completionRate": 0
     },

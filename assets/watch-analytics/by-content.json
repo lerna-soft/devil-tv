@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:58:27.061Z",
+  "generatedAt": "2026-06-07T01:59:03.934Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2789,27 +2789,41 @@
       "tmdbId": "84958",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 6,
+      "totalEvents": 14,
+      "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 6129.908947,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-07T01:58:16Z",
+      "lastActivityAt": "2026-06-07T01:58:56Z",
       "users": {
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
-          "playCount": 13,
+          "playCount": 14,
           "completedCount": 0,
-          "startedCount": 6,
+          "startedCount": 7,
           "totalPlaybackProgress": 6129.908947,
-          "lastSeenAt": "2026-06-07T01:58:16Z",
-          "lastSeason": 2,
+          "lastSeenAt": "2026-06-07T01:58:56Z",
+          "lastSeason": 1,
           "lastEpisode": 4
         }
       },
       "episodes": {
+        "s1e4": {
+          "season": 1,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-07T01:58:56Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s2e4": {
           "season": 2,
           "episode": 4,
@@ -2895,7 +2909,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 471.5315
+      "avgPlaybackProgress": 437.8506
     },
     {
       "contentId": "tt32897959",

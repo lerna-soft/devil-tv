@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T05:25:27.933Z",
+  "generatedAt": "2026-06-07T05:55:33.745Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,10 +1845,10 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 86,
+      "totalEvents": 85,
       "totalStarts": 37,
       "totalCompletions": 34,
-      "totalPlaybackProgress": 111230.8589334016,
+      "totalPlaybackProgress": 111230.8589324016,
       "uniqueUsers": 1,
       "completionRate": 0.9189,
       "lastActivityAt": "2026-05-23T17:26:28Z",
@@ -1856,10 +1856,10 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 86,
+          "playCount": 85,
           "completedCount": 34,
           "startedCount": 37,
-          "totalPlaybackProgress": 111230.8589334016,
+          "totalPlaybackProgress": 111230.8589324016,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2373,10 +2373,10 @@
         "s2e7": {
           "season": 2,
           "episode": 7,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 2834.8777999999998,
+          "totalPlaybackProgress": 2834.877799,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-21T23:07:36Z",
           "users": {
@@ -2385,7 +2385,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1293.3821
+      "avgPlaybackProgress": 1308.5983
     },
     {
       "contentId": "tt21209804",
@@ -4296,6 +4296,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt2091935",
+      "imdbId": "tt2091935",
+      "tmdbId": "345664",
+      "title": "Mr. Right",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 2448.63746,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-07T05:55:22Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 2448.63746,
+          "lastSeenAt": "2026-06-07T05:55:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 2448.63746,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-07T05:55:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1224.3187
+    },
+    {
       "contentId": "15070",
       "imdbId": "",
       "tmdbId": "15070",
@@ -5122,50 +5166,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "tt2091935",
-      "imdbId": "tt2091935",
-      "tmdbId": "345664",
-      "title": "Mr. Right",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-07T05:25:16Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-07T05:25:16Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-07T05:25:16Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt0182629",

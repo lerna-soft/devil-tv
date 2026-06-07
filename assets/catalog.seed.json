@@ -1,6 +1,6 @@
 {
-  "version": 394,
-  "generatedAt": "2026-06-07T05:19:34.719Z",
+  "version": 395,
+  "generatedAt": "2026-06-07T05:19:51.438Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28945,6 +28945,22 @@
       "releaseDate": null,
       "overview": "Jackie Chan, Richard Norton",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzYzNGIwOWYtNGI4Yy00ZWUzLWE5NTQtZTA2NzNhMjk1YWVlXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "66115",
+      "imdbId": null,
+      "title": "Los chicos buenos duermen solos",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "Un chico sensible y educado ve cómo todas sus citas amorosas fracasan debido a su carácter, así que decide transformarse en un tipo duro, del estilo de los que siempre triunfan con las chicas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rJMiCJbNKZpbR7f6xgamLuTq5Tw.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

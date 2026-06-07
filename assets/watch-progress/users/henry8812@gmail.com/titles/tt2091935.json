@@ -1,19 +1,46 @@
 {
   "imdbId": "tt2091935",
-  "tmdbId": "345664",
+  "tmdbId": "333385",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 3375.046954,
-  "lastProgress": 3375.046954,
-  "updatedAt": "2026-06-07T06:57:09Z",
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-07T12:34:46Z",
   "watched": {
     "s1e1": {
-      "startedAt": "2026-06-07T05:25:14.883Z",
+      "startedAt": "2026-06-07T12:34:45.913Z",
       "completedAt": "",
       "lastProgress": 3375.046954
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2091935:s1e1:started:2026-06-07T12:34:46Z",
+      "contentId": "tt2091935",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2091935",
+      "tmdbId": "333385",
+      "title": "Mr. Right",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-07T12:34:45.913Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-07T12:34:46Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt2091935:s1e1:started:2026-06-07T06:57:09Z",
       "contentId": "tt2091935",

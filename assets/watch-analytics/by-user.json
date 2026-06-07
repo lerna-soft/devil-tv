@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-07T18:55:12.251Z",
+  "generatedAt": "2026-06-07T19:23:21.825Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-07T13:34:00Z",
+      "updatedAt": "2026-06-07T19:23:14Z",
       "totalEvents": 500,
-      "totalStarts": 233,
+      "totalStarts": 232,
       "totalCompletions": 67,
       "totalPlaybackProgress": 288902.35217741365,
       "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-07T13:34:00Z",
+      "lastActivityAt": "2026-06-07T19:23:14Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -25,8 +25,8 @@
       "inProgressContentIds": [
         "274870",
         "1632181",
-        "tt2091935",
         "tt2032557",
+        "tt2091935",
         "tt9114286",
         "tt1825683",
         "tt4881806",
@@ -161,6 +161,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt2032557": {
+          "contentId": "tt2032557",
+          "imdbId": "tt2032557",
+          "tmdbId": "121677",
+          "title": "El fundamentalista reticente",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 1.702345702,
+          "maxProgressPercent": 1.702345702,
+          "lastSeenAt": "2026-06-07T19:23:14Z"
+        },
         "tt2091935": {
           "contentId": "tt2091935",
           "imdbId": "tt2091935",
@@ -292,18 +304,6 @@
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
           "lastSeenAt": "2026-06-04T17:54:20Z"
-        },
-        "tt2032557": {
-          "contentId": "tt2032557",
-          "imdbId": "tt2032557",
-          "tmdbId": "121677",
-          "title": "The Reluctant Fundamentalist",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 1.702345702,
-          "maxProgressPercent": 1.702345702,
-          "lastSeenAt": "2026-06-04T15:26:58Z"
         },
         "tt7605074": {
           "contentId": "tt7605074",
@@ -635,7 +635,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 81,
+          "playCount": 80,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

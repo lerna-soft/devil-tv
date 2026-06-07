@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T01:58:15.197Z",
+  "generatedAt": "2026-06-07T01:58:27.057Z",
   "totalUsers": 13,
   "activeUsers": 6,
-  "totalEvents": 594,
-  "totalStarts": 258,
+  "totalEvents": 595,
+  "totalStarts": 259,
   "totalCompletions": 71,
-  "overallCompletionRate": 0.2713,
+  "overallCompletionRate": 0.2703,
   "trackedTitles": 120,
   "mostWatchedContent": [
     {
@@ -49,20 +49,20 @@
       "completionRate": 0.3
     },
     {
+      "contentId": "tt9140554",
+      "title": "Loki",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 1,
+      "completionRate": 0
+    },
+    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.5
-    },
-    {
-      "contentId": "tt9140554",
-      "title": "Loki",
-      "type": "series",
-      "totalEvents": 12,
-      "uniqueUsers": 1,
-      "completionRate": 0
     },
     {
       "contentId": "tt9114286",

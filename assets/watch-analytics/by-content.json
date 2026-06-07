@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T01:58:03.288Z",
+  "generatedAt": "2026-06-07T01:58:15.201Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2845,27 +2845,41 @@
       "tmdbId": "84958",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 11,
+      "totalEvents": 12,
       "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 6129.908947,
       "uniqueUsers": 1,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-06T13:10:59Z",
+      "lastActivityAt": "2026-06-07T01:58:07Z",
       "users": {
         "luzenithc1994@gmail.com": {
           "userEmail": "luzenithc1994@gmail.com",
           "userName": "Luz Enith Campo",
-          "playCount": 11,
+          "playCount": 12,
           "completedCount": 0,
           "startedCount": 5,
           "totalPlaybackProgress": 6129.908947,
-          "lastSeenAt": "2026-06-06T13:10:59Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
+          "lastSeenAt": "2026-06-07T01:58:07Z",
+          "lastSeason": 2,
+          "lastEpisode": 3
         }
       },
       "episodes": {
+        "s2e3": {
+          "season": 2,
+          "episode": 3,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-07T01:58:07Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -2875,20 +2889,6 @@
           "totalPlaybackProgress": 322.765704,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-06T13:10:59Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s2e3": {
-          "season": 2,
-          "episode": 3,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T13:04:27Z",
           "users": {
             "luzenithc1994@gmail.com": true
           },
@@ -2937,7 +2937,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 557.2644
+      "avgPlaybackProgress": 510.8257
     },
     {
       "contentId": "tt9114286",

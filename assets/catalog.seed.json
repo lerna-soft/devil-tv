@@ -1,6 +1,6 @@
 {
-  "version": 395,
-  "generatedAt": "2026-06-07T05:19:51.438Z",
+  "version": 396,
+  "generatedAt": "2026-06-07T05:25:04.412Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28961,6 +28961,22 @@
       "releaseDate": null,
       "overview": "Un chico sensible y educado ve cómo todas sus citas amorosas fracasan debido a su carácter, así que decide transformarse en un tipo duro, del estilo de los que siempre triunfan con las chicas.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/rJMiCJbNKZpbR7f6xgamLuTq5Tw.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "326399",
+      "imdbId": null,
+      "title": "Sexwork, Love & Mr Right",
+      "year": 2013,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2013-10-01",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oCRVo2EXkLyAalwVAidtCGydBiF.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T21:22:50.563Z",
+  "generatedAt": "2026-06-07T21:43:50.607Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 80,
+      "totalEvents": 79,
       "totalStarts": 34,
-      "totalCompletions": 32,
-      "totalPlaybackProgress": 105561.54451340162,
+      "totalCompletions": 31,
+      "totalPlaybackProgress": 102726.41129440162,
       "uniqueUsers": 1,
-      "completionRate": 0.9412,
+      "completionRate": 0.9118,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 80,
-          "completedCount": 32,
+          "playCount": 79,
+          "completedCount": 31,
           "startedCount": 34,
-          "totalPlaybackProgress": 105561.54451340162,
+          "totalPlaybackProgress": 102726.41129440162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2341,23 +2341,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s2e9": {
-          "season": 2,
-          "episode": 9,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2835.133219,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-21T23:35:15Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1319.5193
+      "avgPlaybackProgress": 1300.3343
     },
     {
       "contentId": "tt21209804",
@@ -3526,6 +3512,50 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt2032557",
+      "imdbId": "tt2032557",
+      "tmdbId": "121677",
+      "title": "El fundamentalista reticente",
+      "type": "movie",
+      "totalEvents": 5,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 1.702345702,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-07T21:43:41Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1.702345702,
+          "lastSeenAt": "2026-06-07T21:43:41Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 5,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1.702345702,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-07T21:43:41Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0.3405
+    },
+    {
       "contentId": "tt21478426",
       "imdbId": "tt21478426",
       "tmdbId": "1289601",
@@ -3656,50 +3686,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2032557",
-      "imdbId": "tt2032557",
-      "tmdbId": "121677",
-      "title": "El fundamentalista reticente",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 1.702345702,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-07T19:23:14Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1.702345702,
-          "lastSeenAt": "2026-06-07T19:23:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 1.702345702,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-07T19:23:14Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0.4256
     },
     {
       "contentId": "tt26743760",

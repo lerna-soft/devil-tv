@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-07T21:22:50.565Z",
+  "generatedAt": "2026-06-07T21:43:50.609Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-07T19:23:14Z",
+      "updatedAt": "2026-06-07T21:43:41Z",
       "totalEvents": 500,
       "totalStarts": 232,
-      "totalCompletions": 67,
-      "totalPlaybackProgress": 288902.35217741365,
+      "totalCompletions": 66,
+      "totalPlaybackProgress": 286067.21895841364,
       "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-07T19:23:14Z",
+      "lastActivityAt": "2026-06-07T21:43:41Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -167,11 +167,11 @@
           "tmdbId": "121677",
           "title": "El fundamentalista reticente",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
           "maxProgressValue": 1.702345702,
           "maxProgressPercent": 1.702345702,
-          "lastSeenAt": "2026-06-07T19:23:14Z"
+          "lastSeenAt": "2026-06-07T21:43:41Z"
         },
         "tt2091935": {
           "contentId": "tt2091935",
@@ -635,7 +635,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 80,
+          "playCount": 79,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1182,7 +1182,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 577.8047
+      "avgPlaybackProgress": 572.1344
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

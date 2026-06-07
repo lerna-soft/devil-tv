@@ -1,6 +1,6 @@
 {
-  "version": 392,
-  "generatedAt": "2026-06-07T05:19:07.410Z",
+  "version": 393,
+  "generatedAt": "2026-06-07T05:19:19.679Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28913,6 +28913,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2024-09-28",
       "posterUrl": "https://image.tmdb.org/t/p/w500/3USwaqkLW6etkwhAN4hvDYDR2F8.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1688871",
+      "imdbId": null,
+      "title": "No More Mister Nice Guy",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2026-03-25",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ctQiQohR0Ygd18IhdUDBVA6TN8h.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

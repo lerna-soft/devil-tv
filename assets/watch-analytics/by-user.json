@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T17:40:15.779Z",
+  "generatedAt": "2026-06-07T17:49:19.543Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1189,13 +1189,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-07T02:01:15Z",
-      "totalEvents": 57,
+      "updatedAt": "2026-06-07T17:49:08Z",
+      "totalEvents": 58,
       "totalStarts": 14,
       "totalCompletions": 0,
       "totalPlaybackProgress": 49692.236538000005,
       "uniqueContentCount": 15,
-      "lastActivityAt": "2026-06-07T02:01:15Z",
+      "lastActivityAt": "2026-06-07T17:49:08Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9140554",
@@ -1211,11 +1211,11 @@
           "tmdbId": "535167",
           "title": "La Tierra Errante",
           "type": "movie",
-          "playCount": 5,
+          "playCount": 6,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-07T02:01:15Z"
+          "lastSeenAt": "2026-06-07T17:49:08Z"
         },
         "842675": {
           "contentId": "842675",
@@ -1386,7 +1386,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 871.7936
+      "avgPlaybackProgress": 856.7627
     },
     {
       "userEmail": "liz-munera@hotmail.com",

@@ -1,11 +1,11 @@
 {
   "imdbId": "tt9140554",
   "tmdbId": "84958",
-  "lastSeason": 1,
+  "lastSeason": 2,
   "lastEpisode": 4,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-06-07T01:58:56Z",
+  "updatedAt": "2026-06-08T00:15:50Z",
   "watched": {
     "s1e6": {
       "startedAt": "2026-06-02T02:43:08.749Z",
@@ -44,6 +44,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt9140554:s2e4:started:2026-06-08T00:15:50Z",
+      "contentId": "tt9140554",
+      "episodeKey": "s2e4",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt9140554",
+      "tmdbId": "84958",
+      "title": "Loki",
+      "type": "series",
+      "season": 2,
+      "episode": 4,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-07T01:58:15.760Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-08T00:15:50Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s1e4:started:2026-06-07T01:58:56Z",
       "contentId": "tt9140554",

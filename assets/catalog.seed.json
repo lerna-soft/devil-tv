@@ -1,6 +1,6 @@
 {
-  "version": 399,
-  "generatedAt": "2026-06-08T00:12:14.707Z",
+  "version": 400,
+  "generatedAt": "2026-06-08T13:23:43.059Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28993,6 +28993,22 @@
       "releaseDate": null,
       "overview": "Después de descubrir que el Sol se está apagando rápidamente, la humanidad emprende una búsqueda para evitar la extinción. En un intento desesperado por impulsar la Tierra hacia un nuevo sistema solar, se construyen enormes motores en la superficie terrestre. En una carrera a contrarreloj, se deja el destino de la humanidad en manos de aquellos lo suficientemente valientes como para aceptar la peligrosa misión.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/dCDAPDbySxYewfSzWGvQssy04sW.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "333385",
+      "imdbId": "tt2091935",
+      "title": "Mr. Right",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ea5Ertb4iBAoSZb9ZFFUmjwFRRX.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

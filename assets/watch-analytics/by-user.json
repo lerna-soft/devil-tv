@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-08T11:31:14.021Z",
+  "generatedAt": "2026-06-08T13:24:31.863Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-07T21:43:41Z",
+      "updatedAt": "2026-06-08T13:24:20Z",
       "totalEvents": 500,
       "totalStarts": 232,
       "totalCompletions": 66,
       "totalPlaybackProgress": 286067.21895841364,
-      "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-07T21:43:41Z",
+      "uniqueContentCount": 96,
+      "lastActivityAt": "2026-06-08T13:24:20Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -160,6 +160,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt32357218": {
+          "contentId": "tt32357218",
+          "imdbId": "tt32357218",
+          "tmdbId": "1290821",
+          "title": "Shelter: El Protector",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-08T13:24:20Z"
         },
         "tt2032557": {
           "contentId": "tt2032557",
@@ -635,7 +647,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 79,
+          "playCount": 78,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

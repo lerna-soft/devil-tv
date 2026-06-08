@@ -5,15 +5,42 @@
   "lastEpisode": 1,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-06-05T23:59:14Z",
+  "updatedAt": "2026-06-08T00:12:12Z",
   "watched": {
     "s1e1": {
-      "startedAt": "2026-06-05T23:59:11Z",
+      "startedAt": "2026-06-08T00:12:11.430Z",
       "completedAt": "",
       "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:842675:s1e1:started:2026-06-08T00:12:12Z",
+      "contentId": "842675",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "",
+      "tmdbId": "842675",
+      "title": "La Tierra Errante II",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-08T00:12:11.430Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-08T00:12:12Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:842675:s1e1:preference:2026-06-05T23:59:14Z",
       "contentId": "842675",

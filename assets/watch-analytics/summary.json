@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-08T00:16:04.218Z",
+  "generatedAt": "2026-06-08T00:19:24.930Z",
   "totalUsers": 13,
   "activeUsers": 6,
-  "totalEvents": 600,
+  "totalEvents": 601,
   "totalStarts": 259,
   "totalCompletions": 67,
   "overallCompletionRate": 0.2587,
@@ -52,7 +52,7 @@
       "contentId": "tt9140554",
       "title": "Loki",
       "type": "series",
-      "totalEvents": 15,
+      "totalEvents": 16,
       "uniqueUsers": 1,
       "completionRate": 0
     },

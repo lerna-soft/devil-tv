@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T00:16:04.224Z",
+  "generatedAt": "2026-06-08T00:19:24.935Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1189,13 +1189,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-08T00:15:50Z",
-      "totalEvents": 60,
+      "updatedAt": "2026-06-08T00:19:16Z",
+      "totalEvents": 61,
       "totalStarts": 15,
       "totalCompletions": 0,
       "totalPlaybackProgress": 49692.236538000005,
       "uniqueContentCount": 15,
-      "lastActivityAt": "2026-06-08T00:15:50Z",
+      "lastActivityAt": "2026-06-08T00:19:16Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9140554",
@@ -1235,11 +1235,11 @@
           "tmdbId": "84958",
           "title": "Loki",
           "type": "series",
-          "playCount": 15,
+          "playCount": 16,
           "completed": false,
           "maxProgressValue": 2531.915728,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-08T00:15:50Z"
+          "lastSeenAt": "2026-06-08T00:19:16Z"
         },
         "tt32174149": {
           "contentId": "tt32174149",
@@ -1386,7 +1386,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 828.2039
+      "avgPlaybackProgress": 814.6268
     },
     {
       "userEmail": "liz-munera@hotmail.com",

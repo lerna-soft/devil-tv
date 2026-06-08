@@ -1,6 +1,6 @@
 {
-  "version": 397,
-  "generatedAt": "2026-06-07T05:25:15.435Z",
+  "version": 398,
+  "generatedAt": "2026-06-08T00:12:01.875Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -28977,6 +28977,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2013-10-01",
       "posterUrl": "https://image.tmdb.org/t/p/w500/oCRVo2EXkLyAalwVAidtCGydBiF.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "842675",
+      "imdbId": null,
+      "title": "La Tierra Errante II",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Después de descubrir que el Sol se está apagando rápidamente, la humanidad emprende una búsqueda para evitar la extinción. En un intento desesperado por impulsar la Tierra hacia un nuevo sistema solar, se construyen enormes motores en la superficie terrestre. En una carrera a contrarreloj, se deja el destino de la humanidad en manos de aquellos lo suficientemente valientes como para aceptar la peligrosa misión.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dCDAPDbySxYewfSzWGvQssy04sW.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

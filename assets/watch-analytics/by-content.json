@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T22:43:45.865Z",
+  "generatedAt": "2026-06-09T22:46:18.556Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2323,7 +2323,7 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 33,
+      "totalEvents": 34,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
@@ -2334,13 +2334,13 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 33,
+          "playCount": 34,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
           "lastSeenAt": "2026-06-09T22:42:57Z",
           "lastSeason": 1,
-          "lastEpisode": 10
+          "lastEpisode": 9
         }
       },
       "episodes": {
@@ -2348,6 +2348,20 @@
           "season": 1,
           "episode": 10,
           "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-09T22:42:57Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s1e9": {
+          "season": 1,
+          "episode": 9,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 1,
@@ -2469,23 +2483,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e9": {
-          "season": 1,
-          "episode": 9,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T20:00:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 0.0909
+      "avgPlaybackProgress": 0.0882
     },
     {
       "contentId": "tt9140554",
@@ -2616,25 +2616,81 @@
       "avgPlaybackProgress": 379.7216
     },
     {
+      "contentId": "tt32897959",
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "totalEvents": 13,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 19691.405951855024,
+      "uniqueUsers": 2,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-18T19:40:47Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 16690.969082000003,
+          "lastSeenAt": "2026-05-18T19:40:47Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "ornebe@hotmail.com": {
+          "userEmail": "ornebe@hotmail.com",
+          "userName": "Orfinelly",
+          "playCount": 7,
+          "completedCount": 1,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3000.4368698550247,
+          "lastSeenAt": "2026-05-11T21:06:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 13,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 19691.405951855024,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-18T19:40:47Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "ornebe@hotmail.com": true
+          },
+          "completionRate": 0.5
+        }
+      },
+      "avgPlaybackProgress": 1514.7235
+    },
+    {
       "contentId": "tt21209804",
       "imdbId": "tt21209804",
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 8,
+      "totalEvents": 12,
+      "totalStarts": 7,
       "totalCompletions": 1,
       "totalPlaybackProgress": 1420.132402,
       "uniqueUsers": 1,
-      "completionRate": 0.125,
+      "completionRate": 0.1429,
       "lastActivityAt": "2026-05-26T08:35:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 12,
           "completedCount": 1,
-          "startedCount": 8,
+          "startedCount": 7,
           "totalPlaybackProgress": 1420.132402,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
@@ -2739,79 +2795,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e7": {
-          "season": 1,
-          "episode": 7,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:45:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 109.241
-    },
-    {
-      "contentId": "tt32897959",
-      "imdbId": "tt32897959",
-      "tmdbId": "1316092",
-      "title": "“Cumbres Borrascosas”",
-      "type": "movie",
-      "totalEvents": 13,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 19691.405951855024,
-      "uniqueUsers": 2,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-18T19:40:47Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 16690.969082000003,
-          "lastSeenAt": "2026-05-18T19:40:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "ornebe@hotmail.com": {
-          "userEmail": "ornebe@hotmail.com",
-          "userName": "Orfinelly",
-          "playCount": 7,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3000.4368698550247,
-          "lastSeenAt": "2026-05-11T21:06:22Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 13,
-          "totalStarts": 2,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 19691.405951855024,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-18T19:40:47Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "ornebe@hotmail.com": true
-          },
-          "completionRate": 0.5
-        }
-      },
-      "avgPlaybackProgress": 1514.7235
+      "avgPlaybackProgress": 118.3444
     },
     {
       "contentId": "tt9114286",

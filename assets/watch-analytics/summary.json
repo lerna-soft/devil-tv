@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-09T22:43:45.861Z",
+  "generatedAt": "2026-06-09T22:46:18.552Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 602,
-  "totalStarts": 252,
+  "totalStarts": 251,
   "totalCompletions": 62,
-  "overallCompletionRate": 0.246,
+  "overallCompletionRate": 0.247,
   "trackedTitles": 121,
   "mostWatchedContent": [
     {
@@ -36,7 +36,7 @@
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 33,
+      "totalEvents": 34,
       "uniqueUsers": 1,
       "completionRate": 0.3
     },
@@ -49,20 +49,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0.125
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.5
+    },
+    {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
+      "completionRate": 0.1429
     },
     {
       "contentId": "tt9114286",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T07:16:50.738Z",
+  "generatedAt": "2026-06-09T07:42:53.323Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 602,
@@ -28,9 +28,17 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 75,
+      "totalEvents": 74,
       "uniqueUsers": 1,
       "completionRate": 0.9063
+    },
+    {
+      "contentId": "tt34809853",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "totalEvents": 22,
+      "uniqueUsers": 1,
+      "completionRate": 0.3
     },
     {
       "contentId": "tt21209804",
@@ -39,14 +47,6 @@
       "totalEvents": 22,
       "uniqueUsers": 1,
       "completionRate": 0.3077
-    },
-    {
-      "contentId": "tt34809853",
-      "title": "Teach You a Lesson",
-      "type": "series",
-      "totalEvents": 21,
-      "uniqueUsers": 1,
-      "completionRate": 0.3
     },
     {
       "contentId": "tt9140554",

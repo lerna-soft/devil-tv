@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T20:33:42.390Z",
+  "generatedAt": "2026-06-09T21:47:31.861Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2323,22 +2323,22 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 26,
+      "totalEvents": 27,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
       "uniqueUsers": 1,
       "completionRate": 0.3,
-      "lastActivityAt": "2026-06-09T17:59:07Z",
+      "lastActivityAt": "2026-06-09T21:47:15Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 26,
+          "playCount": 27,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
-          "lastSeenAt": "2026-06-09T17:59:07Z",
+          "lastSeenAt": "2026-06-09T21:47:15Z",
           "lastSeason": 1,
           "lastEpisode": 7
         }
@@ -2347,12 +2347,12 @@
         "s1e7": {
           "season": 1,
           "episode": 7,
-          "totalEvents": 3,
+          "totalEvents": 4,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-09T17:59:07Z",
+          "lastActivityAt": "2026-06-09T21:47:15Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2485,7 +2485,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 0.1154
+      "avgPlaybackProgress": 0.1111
     },
     {
       "contentId": "tt21209804",
@@ -2493,21 +2493,21 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 20,
+      "totalEvents": 19,
       "totalStarts": 12,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 5680.441222408163,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 4260.308816739229,
       "uniqueUsers": 1,
-      "completionRate": 0.3333,
+      "completionRate": 0.25,
       "lastActivityAt": "2026-05-26T08:35:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 20,
-          "completedCount": 4,
+          "playCount": 19,
+          "completedCount": 3,
           "startedCount": 12,
-          "totalPlaybackProgress": 5680.441222408163,
+          "totalPlaybackProgress": 4260.308816739229,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
           "lastEpisode": 13
@@ -2681,23 +2681,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.1324056689343,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:13:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 284.0221
+      "avgPlaybackProgress": 224.2268
     },
     {
       "contentId": "tt9140554",

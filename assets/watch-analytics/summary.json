@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-09T21:47:31.857Z",
+  "generatedAt": "2026-06-09T21:48:23.396Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 602,
-  "totalStarts": 256,
+  "totalStarts": 255,
   "totalCompletions": 64,
-  "overallCompletionRate": 0.25,
+  "overallCompletionRate": 0.251,
   "trackedTitles": 121,
   "mostWatchedContent": [
     {
@@ -36,7 +36,7 @@
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 27,
+      "totalEvents": 28,
       "uniqueUsers": 1,
       "completionRate": 0.3
     },
@@ -44,9 +44,9 @@
       "contentId": "tt21209804",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 19,
+      "totalEvents": 18,
       "uniqueUsers": 1,
-      "completionRate": 0.25
+      "completionRate": 0.2727
     },
     {
       "contentId": "tt9140554",

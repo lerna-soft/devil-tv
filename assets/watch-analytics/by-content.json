@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T22:43:09.512Z",
+  "generatedAt": "2026-06-09T22:43:45.865Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2323,27 +2323,41 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 32,
+      "totalEvents": 33,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
       "uniqueUsers": 1,
       "completionRate": 0.3,
-      "lastActivityAt": "2026-06-09T22:42:56Z",
+      "lastActivityAt": "2026-06-09T22:42:57Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 32,
+          "playCount": 33,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
-          "lastSeenAt": "2026-06-09T22:42:56Z",
+          "lastSeenAt": "2026-06-09T22:42:57Z",
           "lastSeason": 1,
-          "lastEpisode": 8
+          "lastEpisode": 10
         }
       },
       "episodes": {
+        "s1e10": {
+          "season": 1,
+          "episode": 10,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-09T22:42:57Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e8": {
           "season": 1,
           "episode": 8,
@@ -2456,20 +2470,6 @@
           },
           "completionRate": 0
         },
-        "s1e10": {
-          "season": 1,
-          "episode": 10,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T22:36:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
         "s1e9": {
           "season": 1,
           "episode": 9,
@@ -2485,7 +2485,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 0.0938
+      "avgPlaybackProgress": 0.0909
     },
     {
       "contentId": "tt9140554",
@@ -2621,21 +2621,21 @@
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 14,
+      "totalEvents": 13,
       "totalStarts": 8,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 2840.176402,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1420.132402,
       "uniqueUsers": 1,
-      "completionRate": 0.25,
+      "completionRate": 0.125,
       "lastActivityAt": "2026-05-26T08:35:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
-          "completedCount": 2,
+          "playCount": 13,
+          "completedCount": 1,
           "startedCount": 8,
-          "totalPlaybackProgress": 2840.176402,
+          "totalPlaybackProgress": 1420.132402,
           "lastSeenAt": "2026-05-26T08:35:30Z",
           "lastSeason": 1,
           "lastEpisode": 13
@@ -2753,23 +2753,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e6": {
-          "season": 1,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.044,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:45:31Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 202.8697
+      "avgPlaybackProgress": 109.241
     },
     {
       "contentId": "tt32897959",

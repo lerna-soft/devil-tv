@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-09T14:01:35.709Z",
+  "generatedAt": "2026-06-09T14:11:53.529Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-09T08:01:17Z",
+      "updatedAt": "2026-06-09T14:11:39Z",
       "totalEvents": 500,
-      "totalStarts": 231,
+      "totalStarts": 230,
       "totalCompletions": 64,
       "totalPlaybackProgress": 280396.23270241363,
-      "uniqueContentCount": 96,
-      "lastActivityAt": "2026-06-09T08:01:17Z",
+      "uniqueContentCount": 95,
+      "lastActivityAt": "2026-06-09T14:11:39Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -101,18 +101,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T21:10:08Z"
         },
-        "296232": {
-          "contentId": "296232",
-          "imdbId": "",
-          "tmdbId": "296232",
-          "title": "Snowball Earth",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T03:53:13Z"
-        },
         "405775": {
           "contentId": "405775",
           "imdbId": "",
@@ -167,11 +155,11 @@
           "tmdbId": "276161",
           "title": "Teach You a Lesson",
           "type": "series",
-          "playCount": 23,
+          "playCount": 24,
           "completed": true,
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
-          "lastSeenAt": "2026-06-09T08:01:17Z"
+          "lastSeenAt": "2026-06-09T14:11:39Z"
         },
         "tt32357218": {
           "contentId": "tt32357218",

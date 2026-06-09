@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-09T22:43:09.509Z",
+  "generatedAt": "2026-06-09T22:43:45.862Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt34809853:s1e10:started:2026-06-09T22:42:57Z",
+      "contentId": "tt34809853",
+      "episodeKey": "s1e10",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "season": 1,
+      "episode": 10,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-09T22:42:56.817Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-09T22:42:57Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34809853:s1e8:started:2026-06-09T22:42:56Z",
       "contentId": "tt34809853",
@@ -11676,27 +11697,6 @@
       "startedAt": "2026-05-22T04:45:35.281Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T04:45:36Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e6:completed:2026-05-22T04:45:31Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e6",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 6,
-      "progress": 1420.044,
-      "progressValue": 1420.044,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-22T04:38:53.115Z",
-      "completedAt": "2026-05-22T04:45:29.719Z",
-      "updatedAt": "2026-05-22T04:45:31Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

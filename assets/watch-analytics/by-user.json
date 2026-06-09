@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-09T22:42:29.359Z",
+  "generatedAt": "2026-06-09T22:42:46.235Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-09T22:42:19Z",
+      "updatedAt": "2026-06-09T22:42:35Z",
       "totalEvents": 500,
       "totalStarts": 227,
-      "totalCompletions": 63,
-      "totalPlaybackProgress": 278976.10029674467,
+      "totalCompletions": 62,
+      "totalPlaybackProgress": 277555.96788200544,
       "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-09T22:42:19Z",
+      "lastActivityAt": "2026-06-09T22:42:35Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -155,11 +155,11 @@
           "tmdbId": "276161",
           "title": "Teach You a Lesson",
           "type": "series",
-          "playCount": 29,
+          "playCount": 30,
           "completed": true,
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
-          "lastSeenAt": "2026-06-09T22:42:19Z"
+          "lastSeenAt": "2026-06-09T22:42:35Z"
         },
         "tt32357218": {
           "contentId": "tt32357218",
@@ -575,9 +575,9 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 17,
+          "playCount": 16,
           "completed": true,
-          "maxProgressValue": 1420.132414739229,
+          "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T08:35:30Z"
         },
@@ -1182,7 +1182,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 557.9522
+      "avgPlaybackProgress": 555.1119
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-09T06:38:43.917Z",
+  "generatedAt": "2026-06-09T07:16:50.743Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-09T06:38:34Z",
+      "updatedAt": "2026-06-09T07:16:41Z",
       "totalEvents": 500,
       "totalStarts": 231,
-      "totalCompletions": 65,
-      "totalPlaybackProgress": 283231.36592141364,
+      "totalCompletions": 64,
+      "totalPlaybackProgress": 280396.23270241363,
       "uniqueContentCount": 96,
-      "lastActivityAt": "2026-06-09T06:38:34Z",
+      "lastActivityAt": "2026-06-09T07:16:41Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -167,11 +167,11 @@
           "tmdbId": "276161",
           "title": "Teach You a Lesson",
           "type": "series",
-          "playCount": 20,
+          "playCount": 21,
           "completed": true,
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
-          "lastSeenAt": "2026-06-09T06:38:34Z"
+          "lastSeenAt": "2026-06-09T07:16:41Z"
         },
         "tt32357218": {
           "contentId": "tt32357218",
@@ -647,7 +647,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 76,
+          "playCount": 75,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1194,7 +1194,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 566.4627
+      "avgPlaybackProgress": 560.7925
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

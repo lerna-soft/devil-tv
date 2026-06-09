@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-09T14:01:35.704Z",
+  "generatedAt": "2026-06-09T14:11:53.524Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 602,
-  "totalStarts": 258,
+  "totalStarts": 257,
   "totalCompletions": 65,
-  "overallCompletionRate": 0.2519,
-  "trackedTitles": 122,
+  "overallCompletionRate": 0.2529,
+  "trackedTitles": 121,
   "mostWatchedContent": [
     {
       "contentId": "tt2560140",
@@ -36,7 +36,7 @@
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 23,
+      "totalEvents": 24,
       "uniqueUsers": 1,
       "completionRate": 0.3
     },

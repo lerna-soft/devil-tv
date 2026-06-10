@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T10:21:44.866Z",
+  "generatedAt": "2026-06-10T12:23:01.959Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2323,22 +2323,22 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 35,
+      "totalEvents": 36,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
       "uniqueUsers": 1,
       "completionRate": 0.3,
-      "lastActivityAt": "2026-06-10T02:38:16Z",
+      "lastActivityAt": "2026-06-10T12:22:40Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 35,
+          "playCount": 36,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
-          "lastSeenAt": "2026-06-10T02:38:16Z",
+          "lastSeenAt": "2026-06-10T12:22:40Z",
           "lastSeason": 1,
           "lastEpisode": 7
         }
@@ -2347,12 +2347,12 @@
         "s1e7": {
           "season": 1,
           "episode": 7,
-          "totalEvents": 6,
+          "totalEvents": 7,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-10T02:38:16Z",
+          "lastActivityAt": "2026-06-10T12:22:40Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2485,7 +2485,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.0857
+      "avgPlaybackProgress": 0.0833
     },
     {
       "contentId": "tt9140554",
@@ -2672,120 +2672,6 @@
       "avgPlaybackProgress": 1514.7235
     },
     {
-      "contentId": "tt21209804",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 6,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1420.132402,
-      "uniqueUsers": 1,
-      "completionRate": 0.1667,
-      "lastActivityAt": "2026-05-26T08:35:30Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 11,
-          "completedCount": 1,
-          "startedCount": 6,
-          "totalPlaybackProgress": 1420.132402,
-          "lastSeenAt": "2026-05-26T08:35:30Z",
-          "lastSeason": 1,
-          "lastEpisode": 13
-        }
-      },
-      "episodes": {
-        "s1e13": {
-          "season": 1,
-          "episode": 13,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T08:35:30Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T08:34:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e11": {
-          "season": 1,
-          "episode": 11,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T08:23:33Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e12": {
-          "season": 1,
-          "episode": 12,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.132402,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T08:22:32Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e10": {
-          "season": 1,
-          "episode": 10,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T10:55:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e9": {
-          "season": 1,
-          "episode": 9,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T04:58:46Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 129.1029
-    },
-    {
       "contentId": "tt9114286",
       "imdbId": "tt9114286",
       "tmdbId": "505642",
@@ -2912,6 +2798,106 @@
         }
       },
       "avgPlaybackProgress": 470.6627
+    },
+    {
+      "contentId": "tt21209804",
+      "imdbId": "tt21209804",
+      "tmdbId": "204832",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 10,
+      "totalStarts": 5,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1420.132402,
+      "uniqueUsers": 1,
+      "completionRate": 0.2,
+      "lastActivityAt": "2026-05-26T08:35:30Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 10,
+          "completedCount": 1,
+          "startedCount": 5,
+          "totalPlaybackProgress": 1420.132402,
+          "lastSeenAt": "2026-05-26T08:35:30Z",
+          "lastSeason": 1,
+          "lastEpisode": 13
+        }
+      },
+      "episodes": {
+        "s1e13": {
+          "season": 1,
+          "episode": 13,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:35:30Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:34:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:23:33Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e12": {
+          "season": 1,
+          "episode": 12,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.132402,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T08:22:32Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s1e10": {
+          "season": 1,
+          "episode": 10,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T10:55:20Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 142.0132
     },
     {
       "contentId": "tt0899043",

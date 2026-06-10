@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-10T10:21:44.863Z",
+  "generatedAt": "2026-06-10T12:23:01.955Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 602,
-  "totalStarts": 250,
+  "totalStarts": 249,
   "totalCompletions": 62,
-  "overallCompletionRate": 0.248,
+  "overallCompletionRate": 0.249,
   "trackedTitles": 121,
   "mostWatchedContent": [
     {
@@ -36,7 +36,7 @@
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 35,
+      "totalEvents": 36,
       "uniqueUsers": 1,
       "completionRate": 0.3
     },
@@ -57,14 +57,6 @@
       "completionRate": 0.5
     },
     {
-      "contentId": "tt21209804",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "totalEvents": 11,
-      "uniqueUsers": 1,
-      "completionRate": 0.1667
-    },
-    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
@@ -79,6 +71,14 @@
       "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
+    },
+    {
+      "contentId": "tt21209804",
+      "title": "MASHLE: MAGIC AND MUSCLES",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 1,
+      "completionRate": 0.2
     },
     {
       "contentId": "tt0899043",

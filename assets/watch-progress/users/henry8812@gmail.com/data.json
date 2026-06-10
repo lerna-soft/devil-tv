@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-10T12:22:40Z",
+  "updatedAt": "2026-06-10T13:21:44Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2809,10 +2809,10 @@
       "imdbId": "tt34809853",
       "tmdbId": "276161",
       "lastSeason": 1,
-      "lastEpisode": 7,
+      "lastEpisode": 8,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-10T12:22:40Z",
+      "updatedAt": "2026-06-10T13:21:44Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-06T03:39:47.357Z",
@@ -2850,7 +2850,7 @@
           "lastProgress": 0
         },
         "s1e8": {
-          "startedAt": "2026-06-09T22:42:56.329Z",
+          "startedAt": "2026-06-10T13:21:42.601Z",
           "completedAt": "2026-06-06T16:36:30.407Z",
           "lastProgress": 1
         },
@@ -3067,12 +3067,39 @@
     "imdbId": "tt34809853",
     "tmdbId": "276161",
     "season": 1,
-    "episode": 7,
+    "episode": 8,
     "progress": 0,
-    "updatedAt": "2026-06-10T12:22:40Z"
+    "updatedAt": "2026-06-10T13:21:44Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34809853:s1e8:started:2026-06-10T13:21:44Z",
+      "contentId": "tt34809853",
+      "episodeKey": "s1e8",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34809853",
+      "tmdbId": "276161",
+      "title": "Teach You a Lesson",
+      "type": "series",
+      "season": 1,
+      "episode": 8,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-10T13:21:42.601Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-10T13:21:44Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Firefox",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34809853:s1e7:started:2026-06-10T12:22:40Z",
       "contentId": "tt34809853",
@@ -16537,33 +16564,6 @@
       "startedAt": "2026-05-22T04:59:49.062Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T10:55:20Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e10:started:2026-05-22T04:59:50Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e10",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 10,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T04:59:49.062Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T04:59:50Z",
       "country": "",
       "countryName": "",
       "city": "",

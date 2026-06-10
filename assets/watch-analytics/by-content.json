@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T12:23:01.959Z",
+  "generatedAt": "2026-06-10T13:21:58.068Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2323,27 +2323,41 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 36,
+      "totalEvents": 37,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
       "uniqueUsers": 1,
       "completionRate": 0.3,
-      "lastActivityAt": "2026-06-10T12:22:40Z",
+      "lastActivityAt": "2026-06-10T13:21:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 36,
+          "playCount": 37,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
-          "lastSeenAt": "2026-06-10T12:22:40Z",
+          "lastSeenAt": "2026-06-10T13:21:44Z",
           "lastSeason": 1,
-          "lastEpisode": 7
+          "lastEpisode": 8
         }
       },
       "episodes": {
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-10T13:21:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e7": {
           "season": 1,
           "episode": 7,
@@ -2381,20 +2395,6 @@
           "totalPlaybackProgress": 1,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-09T22:42:57Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e8": {
-          "season": 1,
-          "episode": 8,
-          "totalEvents": 5,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-09T22:42:56Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2485,7 +2485,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.0833
+      "avgPlaybackProgress": 0.0811
     },
     {
       "contentId": "tt9140554",
@@ -2800,12 +2800,56 @@
       "avgPlaybackProgress": 470.6627
     },
     {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
+    },
+    {
       "contentId": "tt21209804",
       "imdbId": "tt21209804",
       "tmdbId": "204832",
       "title": "MASHLE: MAGIC AND MUSCLES",
       "type": "series",
-      "totalEvents": 10,
+      "totalEvents": 9,
       "totalStarts": 5,
       "totalCompletions": 1,
       "totalPlaybackProgress": 1420.132402,
@@ -2816,7 +2860,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 10,
+          "playCount": 9,
           "completedCount": 1,
           "startedCount": 5,
           "totalPlaybackProgress": 1420.132402,
@@ -2885,7 +2929,7 @@
         "s1e10": {
           "season": 1,
           "episode": 10,
-          "totalEvents": 2,
+          "totalEvents": 1,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
@@ -2897,51 +2941,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 142.0132
-    },
-    {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
+      "avgPlaybackProgress": 157.7925
     },
     {
       "contentId": "tt29552248",

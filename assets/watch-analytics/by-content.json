@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:46:25.242Z",
+  "generatedAt": "2026-06-11T03:47:45.355Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,7 +1845,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 72,
+      "totalEvents": 71,
       "totalStarts": 31,
       "totalCompletions": 29,
       "totalPlaybackProgress": 94251.77710840163,
@@ -1856,7 +1856,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 72,
+          "playCount": 71,
           "completedCount": 29,
           "startedCount": 31,
           "totalPlaybackProgress": 94251.77710840163,
@@ -2289,7 +2289,7 @@
         "s2e13": {
           "season": 2,
           "episode": 13,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 4940.605833,
@@ -2301,7 +2301,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1309.0525
+      "avgPlaybackProgress": 1327.4898
     },
     {
       "contentId": "tt34809853",
@@ -3710,6 +3710,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt0233127",
+      "imdbId": "tt0233127",
+      "tmdbId": "16286",
+      "title": "Ugly Betty",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-11T03:47:38Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-11T03:47:38Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-11T03:47:38Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "842675",
       "imdbId": "",
       "tmdbId": "842675",
@@ -4397,50 +4441,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-05T20:50:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0233127",
-      "imdbId": "tt0233127",
-      "tmdbId": "16286",
-      "title": "Ugly Betty",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T16:35:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T16:35:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T16:35:56Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T03:48:04.162Z",
+  "generatedAt": "2026-06-11T03:48:18.364Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T03:47:38Z",
+      "updatedAt": "2026-06-11T03:48:09Z",
       "totalEvents": 500,
-      "totalStarts": 222,
+      "totalStarts": 221,
       "totalCompletions": 60,
-      "totalPlaybackProgress": 271912.14355000545,
+      "totalPlaybackProgress": 269819.85987000546,
       "uniqueContentCount": 98,
-      "lastActivityAt": "2026-06-11T03:47:38Z",
+      "lastActivityAt": "2026-06-11T03:48:09Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -94,11 +94,11 @@
           "tmdbId": "136228",
           "title": "Pa Quererte",
           "type": "series",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-11T02:30:36Z"
+          "lastSeenAt": "2026-06-11T03:48:09Z"
         },
         "274870": {
           "contentId": "274870",
@@ -670,7 +670,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 71,
+          "playCount": 70,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1217,7 +1217,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 543.8243
+      "avgPlaybackProgress": 539.6397
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

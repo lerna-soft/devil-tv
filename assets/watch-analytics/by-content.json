@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:20:56.776Z",
+  "generatedAt": "2026-06-11T03:46:25.242Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 73,
-      "totalStarts": 32,
+      "totalEvents": 72,
+      "totalStarts": 31,
       "totalCompletions": 29,
-      "totalPlaybackProgress": 97055.42503840163,
+      "totalPlaybackProgress": 94251.77710840163,
       "uniqueUsers": 1,
-      "completionRate": 0.9063,
+      "completionRate": 0.9355,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 73,
+          "playCount": 72,
           "completedCount": 29,
-          "startedCount": 32,
-          "totalPlaybackProgress": 97055.42503840163,
+          "startedCount": 31,
+          "totalPlaybackProgress": 94251.77710840163,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2299,23 +2299,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s2e12": {
-          "season": 2,
-          "episode": 12,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 2803.64793,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T14:35:02Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1329.5264
+      "avgPlaybackProgress": 1309.0525
     },
     {
       "contentId": "tt34809853",
@@ -4188,6 +4174,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt11612120",
+      "imdbId": "tt11612120",
+      "tmdbId": "96648",
+      "title": "Sweet Home",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-11T03:46:15Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-11T03:46:15Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-11T03:46:15Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "15070",
       "imdbId": "",
       "tmdbId": "15070",
@@ -4970,50 +5000,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "tt11612120",
-      "imdbId": "tt11612120",
-      "tmdbId": "96648",
-      "title": "Sweet Home",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-11T03:20:47Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-11T03:20:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-11T03:20:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "136228",

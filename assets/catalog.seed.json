@@ -1,6 +1,6 @@
 {
-  "version": 410,
-  "generatedAt": "2026-06-11T03:47:09.973Z",
+  "version": 411,
+  "generatedAt": "2026-06-11T03:47:24.453Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53441,6 +53441,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGFhZjVlOWQtYWE2MC00NWQ5LWE2MTQtNTRmMjZhZTk0YjI1XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "117678",
+      "imdbId": null,
+      "title": "La isla Calavera",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Un grupo de exploradores naufraga en una isla del Pacífico Sur habitada por una colección de aterradoras criaturas sobre las que reina Kong, un simio gigante.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/deu6bg0MMhDSA8qgpDFJuzjB4y6.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,6 @@
 {
-  "version": 413,
-  "generatedAt": "2026-06-11T03:47:47.122Z",
+  "version": 414,
+  "generatedAt": "2026-06-11T03:49:26.162Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53489,6 +53489,22 @@
       "releaseDate": null,
       "overview": "Ana María Orozco, Jorge Enrique Abello",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjhmNjYwNGEtYmNhZi00YzBmLThjNTMtOTAyNGJjNzc5YmJiXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "196614",
+      "imdbId": null,
+      "title": "Hasta que la plata nos separe",
+      "year": 2022,
+      "releaseDate": null,
+      "overview": "Alejandra y Rafael, de mundos completamente distintos, terminan unidos por un accidente que cambia sus vidas para siempre. Una deuda millonaria los obliga a mantenerse cerca, desencadenando una relación llena de conflictos, pasión y sentimientos inesperados. Entre celos, desilusiones y un destino caprichoso, su historia toma giros inesperados que pondrán a prueba su conexión.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wWlPY4zmuJDelcOwb4ph9lGo5Ew.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

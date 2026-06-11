@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-11T02:30:44.457Z",
+  "generatedAt": "2026-06-11T03:20:56.773Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt11612120:s1e1:started:2026-06-11T03:20:47Z",
+      "contentId": "tt11612120",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt11612120",
+      "tmdbId": "96648",
+      "title": "Sweet Home",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T03:20:46.715Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T03:20:47Z"
+    },
     {
       "eventId": "henry8812@gmail.com:136228:s1e1:started:2026-06-11T02:30:36Z",
       "contentId": "136228",
@@ -11676,27 +11697,6 @@
       "startedAt": "2026-05-21T23:49:17.898Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T14:35:02Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e12:completed:2026-05-22T14:34:09Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e12",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 12,
-      "progress": 1420.132402,
-      "progressValue": 1420.132402,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-22T14:20:08.204Z",
-      "completedAt": "2026-05-22T14:34:06.627Z",
-      "updatedAt": "2026-05-22T14:34:09Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

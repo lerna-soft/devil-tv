@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt11612120",
+  "tmdbId": "96648",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-11T03:20:47Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-11T03:20:46.715Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt11612120:s1e1:started:2026-06-11T03:20:47Z",
+      "contentId": "tt11612120",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt11612120",
+      "tmdbId": "96648",
+      "title": "Sweet Home",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T03:20:46.715Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T03:20:47Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Firefox",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

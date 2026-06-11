@@ -1,25 +1,24 @@
 {
-  "generatedAt": "2026-06-11T02:30:44.463Z",
+  "generatedAt": "2026-06-11T03:20:56.778Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T02:30:36Z",
+      "updatedAt": "2026-06-11T03:20:47Z",
       "totalEvents": 500,
-      "totalStarts": 222,
-      "totalCompletions": 61,
-      "totalPlaybackProgress": 276135.92388200545,
-      "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-11T02:30:36Z",
+      "totalStarts": 223,
+      "totalCompletions": 60,
+      "totalPlaybackProgress": 274715.7914800054,
+      "uniqueContentCount": 98,
+      "lastActivityAt": "2026-06-11T03:20:47Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
         "tt26743760",
         "tt2560140",
         "tt30460310",
-        "tt21209804",
         "tt0903747"
       ],
       "inProgressContentIds": [
@@ -172,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt11612120": {
+          "contentId": "tt11612120",
+          "imdbId": "tt11612120",
+          "tmdbId": "96648",
+          "title": "Sweet Home",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-11T03:20:47Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -599,9 +610,9 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 5,
-          "completed": true,
-          "maxProgressValue": 1420.132402,
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-26T08:35:30Z"
         },
@@ -1206,7 +1217,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 552.2718
+      "avgPlaybackProgress": 549.4316
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

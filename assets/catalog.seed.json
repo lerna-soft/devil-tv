@@ -1,6 +1,6 @@
 {
-  "version": 409,
-  "generatedAt": "2026-06-11T03:46:58.042Z",
+  "version": 410,
+  "generatedAt": "2026-06-11T03:47:09.973Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53425,6 +53425,22 @@
       "releaseDate": null,
       "overview": "Mauricio, Octavio, Jorge y Toño son exitosos hombres de negocios que deben enfrentarse a un nuevo desafío: la paternidad.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/yVq9cbegB2Ft9o8VDMiHcc0BnkV.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt5473128",
+      "title": "Kids Who Kill: the evolution of the juvenile justice system",
+      "year": 2015,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGFhZjVlOWQtYWE2MC00NWQ5LWE2MTQtNTRmMjZhZTk0YjI1XkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

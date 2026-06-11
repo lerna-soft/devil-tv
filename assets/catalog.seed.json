@@ -1,6 +1,6 @@
 {
-  "version": 411,
-  "generatedAt": "2026-06-11T03:47:24.453Z",
+  "version": 412,
+  "generatedAt": "2026-06-11T03:47:35.022Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29121,6 +29121,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BN2U1MzlkNTUtZjJkYi00ODZjLWExOGMtOTFlYzYxODFkYzEwXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "522518",
+      "imdbId": null,
+      "title": "Tu mejor amigo: Un nuevo viaje",
+      "year": 2019,
+      "releaseDate": null,
+      "overview": "Narra la historia de Bailey, un perro leal que encuentra el significado de su propia existencia a través de la vida de los humanos a los que les enseña a reír y amar.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cq7oRDzpSSldtyUuhW8aDL53OCV.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

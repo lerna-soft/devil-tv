@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:48:18.363Z",
+  "generatedAt": "2026-06-11T03:49:30.088Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 70,
+      "totalEvents": 69,
       "totalStarts": 30,
-      "totalCompletions": 29,
-      "totalPlaybackProgress": 92159.49342840163,
+      "totalCompletions": 28,
+      "totalPlaybackProgress": 89311.17127540163,
       "uniqueUsers": 1,
-      "completionRate": 0.9667,
+      "completionRate": 0.9333,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 70,
-          "completedCount": 29,
+          "playCount": 69,
+          "completedCount": 28,
           "startedCount": 30,
-          "totalPlaybackProgress": 92159.49342840163,
+          "totalPlaybackProgress": 89311.17127540163,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2285,23 +2285,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s2e13": {
-          "season": 2,
-          "episode": 13,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2848.322153,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T15:13:42Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1316.5642
+      "avgPlaybackProgress": 1294.3648
     },
     {
       "contentId": "tt34809853",
@@ -3710,6 +3696,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "100087",
+      "imdbId": "",
+      "tmdbId": "100087",
+      "title": "Hasta que la plata nos separe",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-11T03:49:23Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-11T03:49:23Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-11T03:49:23Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt0233127",
       "imdbId": "tt0233127",
       "tmdbId": "16286",
@@ -4443,50 +4473,6 @@
           "users": {
             "henry8812@gmail.com": true,
             "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "100087",
-      "imdbId": "",
-      "tmdbId": "100087",
-      "title": "Hasta que la plata nos separe",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-05T20:50:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-05T20:50:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-05T20:50:27Z",
-          "users": {
-            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }

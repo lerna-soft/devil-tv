@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T03:48:18.364Z",
+  "generatedAt": "2026-06-11T03:49:30.089Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T03:48:09Z",
+      "updatedAt": "2026-06-11T03:49:23Z",
       "totalEvents": 500,
       "totalStarts": 221,
-      "totalCompletions": 60,
-      "totalPlaybackProgress": 269819.85987000546,
+      "totalCompletions": 59,
+      "totalPlaybackProgress": 266971.53771700547,
       "uniqueContentCount": 98,
-      "lastActivityAt": "2026-06-11T03:48:09Z",
+      "lastActivityAt": "2026-06-11T03:49:23Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -82,11 +82,11 @@
           "tmdbId": "100087",
           "title": "Hasta que la plata nos separe",
           "type": "series",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-05T20:50:27Z"
+          "lastSeenAt": "2026-06-11T03:49:23Z"
         },
         "136228": {
           "contentId": "136228",
@@ -670,7 +670,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 70,
+          "playCount": 69,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1217,7 +1217,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 539.6397
+      "avgPlaybackProgress": 533.9431
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

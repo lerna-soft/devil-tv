@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-11T03:48:09Z",
+  "updatedAt": "2026-06-11T03:49:23Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -46,10 +46,10 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-05T20:50:27Z",
+      "updatedAt": "2026-06-11T03:49:23Z",
       "watched": {
         "s1e1": {
-          "startedAt": "2026-06-05T15:13:00.328Z",
+          "startedAt": "2026-06-11T03:49:21.987Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3115,14 +3115,41 @@
   },
   "lastWatch": {
     "imdbId": "",
-    "tmdbId": "136228",
+    "tmdbId": "100087",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-11T03:48:09Z"
+    "updatedAt": "2026-06-11T03:49:23Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:100087:s1e1:started:2026-06-11T03:49:23Z",
+      "contentId": "100087",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "100087",
+      "title": "Hasta que la plata nos separe",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T03:49:21.987Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T03:49:23Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Firefox",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:136228:s1e1:started:2026-06-11T03:48:09Z",
       "contentId": "136228",
@@ -16587,33 +16614,6 @@
       "startedAt": "2026-05-22T15:13:43.324Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T15:13:45Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s2e13:completed:2026-05-22T15:13:42Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s2e13",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 2,
-      "episode": 13,
-      "progress": 2848.322153,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-22T14:36:16.564Z",
-      "completedAt": "2026-05-22T15:13:39.775Z",
-      "updatedAt": "2026-05-22T15:13:42Z",
       "country": "",
       "countryName": "",
       "city": "",

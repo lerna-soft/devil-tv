@@ -1,6 +1,6 @@
 {
-  "version": 406,
-  "generatedAt": "2026-06-10T23:42:09.688Z",
+  "version": 407,
+  "generatedAt": "2026-06-11T02:24:35.993Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53377,6 +53377,22 @@
       "releaseDate": null,
       "overview": "Famosa serie documental española sobre la fauna ibérica, creada y presentada por el carismático Félix Rodríguez de la Fuente, un médico con pasión por la zoología y con una gran capacidad didáctica y divulgativa. La serie, de gran éxito en España, analizaba en profundidad todo tipo de animales de la península ibérica, extendiéndose en los últimos años a la de países americanos como Venezuela y Canadá, hasta que Rodríguez de la Fuente encontró la muerte en un trágico accidente de avioneta en Alaska, en marzo de 1980, lo que provocó el final de la serie. Detallista, emocionante, sorprendente, salvaje... \"El hombre y la Tierra\" ofrecía cada semana un documento inédito y fascinante de la vida natural de la tierra en que vivíamos, un conjunto de episodios clave en la televisión española de la recién iniciada Transición, y que impulsó el conocimiento y el amor por la fauna de la península ibérica de toda una generación.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/57yc0WRhboS36PJ9PehlqRdjS7A.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "136228",
+      "imdbId": null,
+      "title": "Pa Quererte",
+      "year": 2020,
+      "releaseDate": null,
+      "overview": "Mauricio, Octavio, Jorge y Toño son exitosos hombres de negocios que deben enfrentarse a un nuevo desafío: la paternidad.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yVq9cbegB2Ft9o8VDMiHcc0BnkV.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

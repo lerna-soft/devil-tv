@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T03:52:52.580Z",
+  "generatedAt": "2026-06-11T04:06:52.894Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T03:52:44Z",
+      "updatedAt": "2026-06-11T04:06:40Z",
       "totalEvents": 500,
-      "totalStarts": 220,
-      "totalCompletions": 59,
-      "totalPlaybackProgress": 266971.53771700547,
-      "uniqueContentCount": 98,
-      "lastActivityAt": "2026-06-11T03:52:44Z",
+      "totalStarts": 221,
+      "totalCompletions": 58,
+      "totalPlaybackProgress": 264139.5624120055,
+      "uniqueContentCount": 99,
+      "lastActivityAt": "2026-06-11T04:06:40Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -171,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt2096673": {
+          "contentId": "tt2096673",
+          "imdbId": "tt2096673",
+          "tmdbId": "150540",
+          "title": "Del revés (Inside Out)",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-11T04:06:40Z"
         },
         "tt0233127": {
           "contentId": "tt0233127",
@@ -670,7 +682,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 68,
+          "playCount": 67,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1217,7 +1229,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 533.9431
+      "avgPlaybackProgress": 528.2791
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

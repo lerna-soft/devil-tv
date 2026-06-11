@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-11T02:30:36Z",
+  "updatedAt": "2026-06-11T03:20:47Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2945,6 +2945,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt11612120": {
+      "imdbId": "tt11612120",
+      "tmdbId": "96648",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-11T03:20:47Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-11T03:20:46.715Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -3097,15 +3113,42 @@
     "updatedAt": "2026-06-10T23:42:03Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "136228",
+    "imdbId": "tt11612120",
+    "tmdbId": "96648",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-11T02:30:36Z"
+    "updatedAt": "2026-06-11T03:20:47Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt11612120:s1e1:started:2026-06-11T03:20:47Z",
+      "contentId": "tt11612120",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt11612120",
+      "tmdbId": "96648",
+      "title": "Sweet Home",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T03:20:46.715Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T03:20:47Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Firefox",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:136228:s1e1:started:2026-06-11T02:30:36Z",
       "contentId": "136228",
@@ -16570,33 +16613,6 @@
       "startedAt": "2026-05-21T23:49:17.898Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T14:35:02Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt21209804:s1e12:completed:2026-05-22T14:34:09Z",
-      "contentId": "tt21209804",
-      "episodeKey": "s1e12",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt21209804",
-      "tmdbId": "204832",
-      "title": "MASHLE: MAGIC AND MUSCLES",
-      "type": "series",
-      "season": 1,
-      "episode": 12,
-      "progress": 1420.132402,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-22T14:20:08.204Z",
-      "completedAt": "2026-05-22T14:34:06.627Z",
-      "updatedAt": "2026-05-22T14:34:09Z",
       "country": "",
       "countryName": "",
       "city": "",

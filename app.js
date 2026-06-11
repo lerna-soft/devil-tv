@@ -414,13 +414,26 @@ const PLAYBACK_PROVIDERS = [
     }
   },
   {
+    // Servidor RCN sin ads (devil-stream): backend propio que pipea el stream
+    // oficial en vivo, sin anuncios y con índice de capítulos. Solo aparece si
+    // (a) el título tiene playlist curada Y (b) el backend está disponible
+    // (STREAM_BASE cargado desde stream-endpoint.json). Ver buildRcnStreamEmbed.
+    id: 'rcn',
+    label: 'RCN (sin ads)',
+    note: 'oficial · sin ads · capítulos en orden',
+    sandbox: null,
+    available: (entry) => Boolean(STREAM_BASE && getCuratedYoutube(entry)),
+    movie: (id, entry) => buildRcnStreamEmbed(entry),
+    tv: (id, s, e, entry) => buildRcnStreamEmbed(entry)
+  },
+  {
     // Servidor YouTube CURADO: solo aparece en títulos con playlist oficial
     // mapeada a mano (ver YOUTUBE_CURATED). Pensado para telenovelas/contenido
     // que los embeds por id de TMDB no tienen. Primario = Invidious (sin ads);
     // si el proxy falla, el fallback del player cae al embed nativo de YouTube.
     id: 'youtube',
     label: 'YouTube (RCN)',
-    note: 'oficial · sin ads · capítulos en orden',
+    note: 'oficial · con ads · capítulos en orden',
     sandbox: null,
     available: (entry) => Boolean(getCuratedYoutube(entry)),
     movie: (id, entry) => buildYoutubeEmbed(entry),
@@ -438,7 +451,13 @@ const PLAYBACK_PROVIDERS = [
 const YOUTUBE_CURATED = {
   // Yo soy Betty, la fea (1999) — playlist "Capítulos Completos" del Canal RCN oficial (@canalrcn)
   'series:tt0233127': { playlist: 'PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5', source: 'Canal RCN oficial' },
-  'series:16286': { playlist: 'PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5', source: 'Canal RCN oficial' }
+  'series:16286': { playlist: 'PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5', source: 'Canal RCN oficial' },
+  // Hasta que la plata nos separe (2006) — 163 capítulos completos del Canal RCN oficial
+  'series:tt0815736': { playlist: 'PLCHczc0wdeEjL4ZY24YlcHxxC6QMNKgdz', source: 'Canal RCN oficial' },
+  'series:100087': { playlist: 'PLCHczc0wdeEjL4ZY24YlcHxxC6QMNKgdz', source: 'Canal RCN oficial' },
+  // Pa' Quererte — ~30 capítulos completos del Canal RCN oficial (RCN solo publicó esos en abierto)
+  'series:tt12014840': { playlist: 'PLCHczc0wdeEhGjGVw7RaOEMPAOzxI2-Qt', source: 'Canal RCN oficial' },
+  'series:136228': { playlist: 'PLCHczc0wdeEhGjGVw7RaOEMPAOzxI2-Qt', source: 'Canal RCN oficial' }
 };
 // Invidious = proxy de YouTube sin anuncios. Es de terceros e inestable; por eso
 // el player tiene fallback al embed nativo de YouTube (con ads) si no carga.
@@ -468,6 +487,27 @@ function buildYoutubeEmbed(entry) {
 function youtubeFallbackUrls(entry) {
   const map = getCuratedYoutube(entry);
   return map ? [youtubeProxyEmbed(map.playlist), youtubeNativeEmbed(map.playlist)] : [];
+}
+
+// ── devil-stream: proxy propio sin ads (capítulos en orden) ───────────────
+// Backend que pipea el stream de YouTube en vivo (sin ads, con índice de
+// capítulos), servido por un tunnel Cloudflare VOLÁTIL. Como la URL del tunnel
+// cambia en cada reinicio, NO se hardcodea: se lee de ./stream-endpoint.json
+// (un script del stack lo actualiza y hace push). Si el archivo no existe o el
+// backend está caído, STREAM_BASE queda vacío → el provider 'rcn' no aparece y
+// el título cae al provider 'youtube' (nativo con ads). Degradación limpia.
+let STREAM_BASE = '';
+async function loadStreamBase() {
+  try {
+    const r = await fetch('./stream-endpoint.json', { cache: 'no-store' });
+    if (!r.ok) return;
+    const d = await r.json();
+    STREAM_BASE = String(d.url || '').replace(/\/+$/, '');
+  } catch (_) { /* sin backend: el provider 'rcn' simplemente no se ofrece */ }
+}
+function buildRcnStreamEmbed(entry) {
+  const map = getCuratedYoutube(entry);
+  return (STREAM_BASE && map) ? `${STREAM_BASE}/player?list=${encodeURIComponent(map.playlist)}` : '';
 }
 
 const SECTION_CACHE_STORAGE_KEY = 'mep_section_cache_v1';
@@ -1798,6 +1838,7 @@ bindDetailEpisodeEvents();
 primeCatalogHydrationStatus();
 handleRouteChange();
 scheduleSeedStartupWork();
+loadStreamBase(); // descubre la URL del backend devil-stream (tunnel volátil) para el provider 'rcn'
 
 if (isAuthenticated()) hideAuthGate();
 else showAuthGate();
@@ -7384,7 +7425,13 @@ function openPlayerModal(embedUrl) {
   // YouTube. Si entramos con el modal ya visible (jumpEpisode), conservamos el
   // provider que el usuario haya elegido durante la sesión actual.
   if (modal.hidden) {
-    state.activeProviderId = getCuratedYoutube(state.selected) ? 'youtube' : PLAYBACK_PROVIDERS[0].id;
+    if (getCuratedYoutube(state.selected)) {
+      // Novela curada: preferir el proxy propio sin ads ('rcn') si el backend
+      // está vivo; si no, el embed nativo de YouTube ('youtube', con ads).
+      state.activeProviderId = (STREAM_BASE && buildRcnStreamEmbed(state.selected)) ? 'rcn' : 'youtube';
+    } else {
+      state.activeProviderId = PLAYBACK_PROVIDERS[0].id;
+    }
   }
 
   renderPlayerControls();
@@ -7396,8 +7443,8 @@ function openPlayerModal(embedUrl) {
   // a 'youtube' arriba después de que el caller calculó embedUrl con otro provider.
   const finalEmbed = state.selected ? getCurrentEmbedUrl(buildEmbedUrl(state.selected)) : embedUrl;
   iframe.src = finalEmbed;
-  if (activeProvider.id === 'youtube') {
-    clearPlayerFallback(); // embed nativo estable: sin fallback automático
+  if (activeProvider.id === 'youtube' || activeProvider.id === 'rcn') {
+    clearPlayerFallback(); // embed estable (nativo YT o proxy propio): sin fallback automático
   } else {
     schedulePlayerFallback(getPlaybackUrlsForCurrentSelection(finalEmbed));
   }
@@ -8416,7 +8463,7 @@ function getPlaybackUrlsForCurrentSelection(primaryUrl) {
   if (!state.selected) return [primaryUrl];
   // YouTube usa su propio fallback por salud del proxy (scheduleYoutubeHealthFallback),
   // NO el timer ciego genérico (que tumbaría el modo sin-ads a los 6.5s). Single url.
-  if (getActiveProvider().id === 'youtube') return [primaryUrl];
+  if (['youtube', 'rcn'].includes(getActiveProvider().id)) return [primaryUrl];
   const ids = getPlaybackCandidateIds(state.selected);
   if (!ids.length) return [primaryUrl];
   const provider = getActiveProvider();

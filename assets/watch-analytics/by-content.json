@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T03:48:04.160Z",
+  "generatedAt": "2026-06-11T03:48:18.363Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 71,
-      "totalStarts": 31,
+      "totalEvents": 70,
+      "totalStarts": 30,
       "totalCompletions": 29,
-      "totalPlaybackProgress": 94251.77710840163,
+      "totalPlaybackProgress": 92159.49342840163,
       "uniqueUsers": 1,
-      "completionRate": 0.9355,
+      "completionRate": 0.9667,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 71,
+          "playCount": 70,
           "completedCount": 29,
-          "startedCount": 31,
-          "totalPlaybackProgress": 94251.77710840163,
+          "startedCount": 30,
+          "totalPlaybackProgress": 92159.49342840163,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2289,19 +2289,19 @@
         "s2e13": {
           "season": 2,
           "episode": 13,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 4940.605833,
+          "totalPlaybackProgress": 2848.322153,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T15:13:42Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1327.4898
+      "avgPlaybackProgress": 1316.5642
     },
     {
       "contentId": "tt34809853",
@@ -4218,6 +4218,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "136228",
+      "imdbId": "",
+      "tmdbId": "136228",
+      "title": "Pa Quererte",
+      "type": "series",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-11T03:48:09Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-11T03:48:09Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-11T03:48:09Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt11612120",
       "imdbId": "tt11612120",
       "tmdbId": "96648",
@@ -5000,50 +5044,6 @@
         }
       },
       "avgPlaybackProgress": 80.4523
-    },
-    {
-      "contentId": "136228",
-      "imdbId": "",
-      "tmdbId": "136228",
-      "title": "Pa Quererte",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-11T02:30:36Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-11T02:30:36Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-11T02:30:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "438348",

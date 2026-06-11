@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-11T03:48:04.156Z",
+  "generatedAt": "2026-06-11T03:48:18.359Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:136228:s1e1:started:2026-06-11T03:48:09Z",
+      "contentId": "136228",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "136228",
+      "title": "Pa Quererte",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T03:48:08.457Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T03:48:09Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0233127:s1e1:started:2026-06-11T03:47:38Z",
       "contentId": "tt0233127",
@@ -11676,27 +11697,6 @@
       "startedAt": "2026-05-22T14:36:16.564Z",
       "completedAt": "2026-05-22T15:13:39.775Z",
       "updatedAt": "2026-05-22T15:13:42Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s2e13:started:2026-05-22T15:06:21Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s2e13",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 2,
-      "episode": 13,
-      "progress": 2092.28368,
-      "progressValue": 2092.28368,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T14:36:16.564Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T15:06:21Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

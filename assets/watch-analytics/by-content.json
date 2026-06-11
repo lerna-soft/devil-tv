@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T14:51:32.957Z",
+  "generatedAt": "2026-06-11T16:04:36.219Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 66,
+      "totalEvents": 65,
       "totalStarts": 28,
-      "totalCompletions": 27,
-      "totalPlaybackProgress": 86479.19597040163,
+      "totalCompletions": 26,
+      "totalPlaybackProgress": 83650.93585840163,
       "uniqueUsers": 1,
-      "completionRate": 0.9643,
+      "completionRate": 0.9286,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 66,
-          "completedCount": 27,
+          "playCount": 65,
+          "completedCount": 26,
           "startedCount": 28,
-          "totalPlaybackProgress": 86479.19597040163,
+          "totalPlaybackProgress": 83650.93585840163,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2257,23 +2257,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s3e2": {
-          "season": 3,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2828.260112,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T15:55:33Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1310.2908
+      "avgPlaybackProgress": 1286.9375
     },
     {
       "contentId": "tt34809853",
@@ -3726,6 +3712,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt27391124",
+      "imdbId": "tt27391124",
+      "tmdbId": "1181678",
+      "title": "¿Quieres ser mi... hijo?",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-11T16:04:19Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-11T16:04:19Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-11T16:04:19Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt0233127",
       "imdbId": "tt0233127",
       "tmdbId": "16286",
@@ -4357,50 +4387,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-06T03:13:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt27391124",
-      "imdbId": "tt27391124",
-      "tmdbId": "1181678",
-      "title": "¿Quieres ser mi... hijo?",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-06T03:10:02Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-06T03:10:02Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T03:10:02Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T14:51:32.959Z",
+  "generatedAt": "2026-06-11T16:04:36.220Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T05:09:55Z",
+      "updatedAt": "2026-06-11T16:04:19Z",
       "totalEvents": 500,
       "totalStarts": 220,
-      "totalCompletions": 58,
-      "totalPlaybackProgress": 264139.5624120055,
+      "totalCompletions": 57,
+      "totalPlaybackProgress": 261311.30230000548,
       "uniqueContentCount": 99,
-      "lastActivityAt": "2026-06-11T05:09:55Z",
+      "lastActivityAt": "2026-06-11T16:04:19Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -172,6 +172,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt27391124": {
+          "contentId": "tt27391124",
+          "imdbId": "tt27391124",
+          "tmdbId": "1181678",
+          "title": "¿Quieres ser mi... hijo?",
+          "type": "movie",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-11T16:04:19Z"
+        },
         "tt2096673": {
           "contentId": "tt2096673",
           "imdbId": "tt2096673",
@@ -267,18 +279,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-06T22:44:55Z"
-        },
-        "tt27391124": {
-          "contentId": "tt27391124",
-          "imdbId": "tt27391124",
-          "tmdbId": "1181678",
-          "title": "¿Quieres ser mi... hijo?",
-          "type": "movie",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-06T03:10:02Z"
         },
         "tt8036976": {
           "contentId": "tt8036976",
@@ -682,7 +682,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 66,
+          "playCount": 65,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1229,7 +1229,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 528.2791
+      "avgPlaybackProgress": 522.6226
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

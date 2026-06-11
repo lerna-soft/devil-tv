@@ -510,6 +510,50 @@ function buildRcnStreamEmbed(entry) {
   return (STREAM_BASE && map) ? `${STREAM_BASE}/player?list=${encodeURIComponent(map.playlist)}` : '';
 }
 
+// ── Puente al backend devil-stream (auth + datos en Postgres) ─────────────
+// MODO PRUEBA: mejora progresiva. Si el backend está disponible (STREAM_BASE),
+// login/registro y datos van a Postgres; si no responde, todo cae al flujo
+// local de siempre (localStorage + issues). No rompe a los usuarios actuales.
+const BACKEND_TOKEN_KEY = 'mep_backend_token_v1';
+function getBackendToken() { try { return localStorage.getItem(BACKEND_TOKEN_KEY) || ''; } catch { return ''; } }
+function setBackendToken(t) { try { t ? localStorage.setItem(BACKEND_TOKEN_KEY, t) : localStorage.removeItem(BACKEND_TOKEN_KEY); } catch {} }
+async function backendFetch(path, { method = 'GET', body, auth = false, timeout = 8000 } = {}) {
+  if (!STREAM_BASE) return null;
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeout);
+  try {
+    const headers = {};
+    if (body) headers['Content-Type'] = 'application/json';
+    if (auth) { const t = getBackendToken(); if (t) headers['Authorization'] = `Bearer ${t}`; }
+    const r = await fetch(`${STREAM_BASE}${path}`, {
+      method, headers, body: body ? JSON.stringify(body) : undefined, signal: ctrl.signal
+    });
+    return await r.json().catch(() => ({}));
+  } catch { return null; } finally { clearTimeout(timer); }
+}
+// Best-effort: empuja una entrada de progreso al backend (no bloquea la UI).
+function backendSyncProgress(entry) {
+  if (!STREAM_BASE || !getBackendToken() || !entry) return;
+  const tmdb = String(entry.tmdbId || '').trim();
+  if (!tmdb) return;
+  backendFetch('/me/progress', { method: 'POST', auth: true, body: {
+    tmdb_id: tmdb, type: entry.lastSeason ? 'series' : 'movie',
+    season: Number(entry.lastSeason || 1), episode: Number(entry.lastEpisode || 1),
+    position_sec: Number(entry.lastProgress || entry.progress || 0),
+    duration_sec: Number(entry.duration || 0), completed: Boolean(entry.completed)
+  }});
+}
+// Best-effort: me gusta / ver más tarde.
+function backendSyncList(list, entry, on) {
+  if (!STREAM_BASE || !getBackendToken() || !entry) return;
+  const tmdb = String(entry.tmdbId || '').trim();
+  if (!tmdb) return;
+  const path = list === 'favorites' ? '/me/favorites' : '/me/watch-later';
+  backendFetch(path, { method: on ? 'POST' : 'DELETE', auth: true, body: {
+    tmdb_id: tmdb, imdb_id: String(entry.imdbId || ''), type: String(entry.type || '')
+  }});
+}
+
 const SECTION_CACHE_STORAGE_KEY = 'mep_section_cache_v1';
 
 const WATCH_PROGRESS_SYNC_LABEL = 'watch-progress-sync';
@@ -882,6 +926,8 @@ function saveAuthSession(user) {
     localStorage.removeItem(AUTH_SESSION_KEY);
     sessionStorage.removeItem(AUTH_SESSION_KEY);
     localStorage.removeItem(AUTH_SESSION_LEGACY_KEY);
+    if (STREAM_BASE && getBackendToken()) backendFetch('/auth/logout', { method: 'POST', auth: true });
+    setBackendToken('');
     return;
   }
   const payload = JSON.stringify({
@@ -1102,6 +1148,16 @@ async function hashPassword(password, salt) {
 async function registerAuthUser({ name, email, password }) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!name || !normalizedEmail || !password) return { ok: false, error: 'Completa todos los campos.' };
+  // Backend-first (Postgres). Si responde, manda; si no, cae al flujo local+issue.
+  if (STREAM_BASE) {
+    const r = await backendFetch('/auth/register', { method: 'POST', body: { name, email: normalizedEmail, password } });
+    if (r && r.ok && r.token) {
+      setBackendToken(r.token);
+      return { ok: true, user: { name, email: normalizedEmail, role: r.user?.role || 'viewer' } };
+    }
+    if (r && r.ok === false && r.error) return { ok: false, error: r.error };
+    // r === null → backend caído: seguimos al fallback local.
+  }
   const salt = makeSalt();
   const passwordHash = await hashPassword(password, salt);
   const existing = await loadUserRecord(normalizedEmail).catch(() => null);
@@ -1125,6 +1181,16 @@ async function registerAuthUser({ name, email, password }) {
 
 async function validateAuthUser(email, password) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
+  // Backend-first (Postgres). Si responde, manda; si no, cae al flujo local.
+  if (STREAM_BASE) {
+    const r = await backendFetch('/auth/login', { method: 'POST', body: { email: normalizedEmail, password } });
+    if (r && r.ok && r.token) {
+      setBackendToken(r.token);
+      return { ok: true, user: { name: r.user?.name, email: normalizedEmail, role: r.user?.role || 'viewer', mustChangePassword: false } };
+    }
+    if (r && r.ok === false && r.error) return { ok: false, error: r.error };
+    // r === null → backend caído: seguimos al fallback local.
+  }
   const localUsers = loadLocalAuthUsers();
   const localUser = localUsers[normalizedEmail];
   if (localUser?.salt && localUser?.passwordHash) {
@@ -1395,6 +1461,7 @@ function loadLocalWatchProgress(email) {
   }
 }
 
+const _backendProgressSnapshot = {};
 function saveLocalWatchProgress(email, progress) {
   const normalizedEmail = String(email || '').trim().toLowerCase();
   if (!normalizedEmail) return;
@@ -1403,6 +1470,16 @@ function saveLocalWatchProgress(email, progress) {
     invalidateWatchInsights();
   } catch {
     // ignore storage write issues
+  }
+  // Write-through al backend: solo entradas que cambiaron desde la última sync.
+  if (STREAM_BASE && getBackendToken() && progress && typeof progress === 'object') {
+    for (const [k, entry] of Object.entries(progress)) {
+      const sig = JSON.stringify(entry);
+      if (_backendProgressSnapshot[k] !== sig) {
+        _backendProgressSnapshot[k] = sig;
+        backendSyncProgress(entry);
+      }
+    }
   }
 }
 
@@ -7038,6 +7115,13 @@ async function queueTitlePreferenceSync(title, action, stateFlags) {
   if (!email || !title || !['like', 'later'].includes(String(action || ''))) return;
   const titleId = String(title?.imdbId || title?.tmdbId || '').trim();
   if (!titleId) return;
+  // Backend-first: persistir en Postgres y NO crear issue. Fallback al issue si
+  // el backend no está disponible (sin sesión de backend o sin STREAM_BASE).
+  if (STREAM_BASE && getBackendToken()) {
+    if (action === 'like') backendSyncList('favorites', title, Boolean(stateFlags?.liked));
+    else if (action === 'later') backendSyncList('watch_later', title, Boolean(stateFlags?.watchLater));
+    return;
+  }
   const issueBody = [
     'WATCH_PROGRESS_SYNC_REQUEST',
     `Email: ${email}`,

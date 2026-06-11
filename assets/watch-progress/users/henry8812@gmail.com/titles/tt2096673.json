@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt2096673",
+  "tmdbId": "150540",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-11T04:06:40Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-06-11T04:06:32.567Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt2096673:s1e1:started:2026-06-11T04:06:40Z",
+      "contentId": "tt2096673",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2096673",
+      "tmdbId": "150540",
+      "title": "Del revés (Inside Out)",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-11T04:06:32.567Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-11T04:06:40Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Firefox",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

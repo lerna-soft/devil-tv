@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T03:46:25.244Z",
+  "generatedAt": "2026-06-11T03:47:45.357Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T03:46:15Z",
+      "updatedAt": "2026-06-11T03:47:38Z",
       "totalEvents": 500,
       "totalStarts": 222,
       "totalCompletions": 60,
       "totalPlaybackProgress": 271912.14355000545,
       "uniqueContentCount": 98,
-      "lastActivityAt": "2026-06-11T03:46:15Z",
+      "lastActivityAt": "2026-06-11T03:47:38Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -172,6 +172,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt0233127": {
+          "contentId": "tt0233127",
+          "imdbId": "tt0233127",
+          "tmdbId": "16286",
+          "title": "Ugly Betty",
+          "type": "series",
+          "playCount": 3,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-11T03:47:38Z"
+        },
         "tt11612120": {
           "contentId": "tt11612120",
           "imdbId": "tt11612120",
@@ -291,18 +303,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T19:27:02Z"
-        },
-        "tt0233127": {
-          "contentId": "tt0233127",
-          "imdbId": "tt0233127",
-          "tmdbId": "16286",
-          "title": "Ugly Betty",
-          "type": "series",
-          "playCount": 2,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-05T16:35:56Z"
         },
         "tt0412142": {
           "contentId": "tt0412142",
@@ -670,7 +670,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 72,
+          "playCount": 71,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-11T01:39:51.401Z",
+  "generatedAt": "2026-06-11T02:30:44.463Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-10T23:42:03Z",
+      "updatedAt": "2026-06-11T02:30:36Z",
       "totalEvents": 500,
-      "totalStarts": 221,
+      "totalStarts": 222,
       "totalCompletions": 61,
       "totalPlaybackProgress": 276135.92388200545,
-      "uniqueContentCount": 96,
-      "lastActivityAt": "2026-06-10T23:42:03Z",
+      "uniqueContentCount": 97,
+      "lastActivityAt": "2026-06-11T02:30:36Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -88,6 +88,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T20:50:27Z"
+        },
+        "136228": {
+          "contentId": "136228",
+          "imdbId": "",
+          "tmdbId": "136228",
+          "title": "Pa Quererte",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-11T02:30:36Z"
         },
         "274870": {
           "contentId": "274870",
@@ -587,7 +599,7 @@
           "tmdbId": "204832",
           "title": "MASHLE: MAGIC AND MUSCLES",
           "type": "series",
-          "playCount": 6,
+          "playCount": 5,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,

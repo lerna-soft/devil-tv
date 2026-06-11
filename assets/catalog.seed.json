@@ -1,6 +1,6 @@
 {
-  "version": 412,
-  "generatedAt": "2026-06-11T03:47:35.022Z",
+  "version": 413,
+  "generatedAt": "2026-06-11T03:47:47.122Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53473,6 +53473,22 @@
       "releaseDate": null,
       "overview": "Un grupo de exploradores naufraga en una isla del Pacífico Sur habitada por una colección de aterradoras criaturas sobre las que reina Kong, un simio gigante.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/deu6bg0MMhDSA8qgpDFJuzjB4y6.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt0233127",
+      "title": "Ugly Betty",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "Ana María Orozco, Jorge Enrique Abello",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYjhmNjYwNGEtYmNhZi00YzBmLThjNTMtOTAyNGJjNzc5YmJiXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

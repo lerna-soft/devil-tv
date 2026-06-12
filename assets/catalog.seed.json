@@ -1,6 +1,6 @@
 {
-  "version": 415,
-  "generatedAt": "2026-06-12T04:51:18.391Z",
+  "version": 416,
+  "generatedAt": "2026-06-12T04:51:32.324Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53521,6 +53521,22 @@
       "releaseDate": null,
       "overview": "Ayumu Murase, Jade Kelly",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGVhZTI3NzAtZTNhNy00ZmFhLTgwNTYtYjE0OGQzMzczZjUxXkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "195459",
+      "imdbId": null,
+      "title": "Ragna Crimson",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "En un mundo donde los dragones gobiernan el cielo, el mar y la tierra, aquellos que quieran luchar contra ellos y ganar deben superar los límites de la fuerza humana normal. Decidido a conseguir la victoria a cualquier precio, el cazador de dragones Ragna une fuerzas con el misterioso Crimson. Las motivaciones de Crimson pueden ser oscuras, pero su objetivo es el mismo: destruir a los monarcas dragón.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dKfCiNed9kF2pRkVrTvaKIqkNej.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

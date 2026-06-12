@@ -1,6 +1,6 @@
 {
-  "version": 414,
-  "generatedAt": "2026-06-11T03:49:26.162Z",
+  "version": 415,
+  "generatedAt": "2026-06-12T04:51:18.391Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53505,6 +53505,22 @@
       "releaseDate": null,
       "overview": "Alejandra y Rafael, de mundos completamente distintos, terminan unidos por un accidente que cambia sus vidas para siempre. Una deuda millonaria los obliga a mantenerse cerca, desencadenando una relación llena de conflictos, pasión y sentimientos inesperados. Entre celos, desilusiones y un destino caprichoso, su historia toma giros inesperados que pondrán a prueba su conexión.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wWlPY4zmuJDelcOwb4ph9lGo5Ew.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt28685470",
+      "title": "Ragna Crimson",
+      "year": 2023,
+      "releaseDate": null,
+      "overview": "Ayumu Murase, Jade Kelly",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGVhZTI3NzAtZTNhNy00ZmFhLTgwNTYtYjE0OGQzMzczZjUxXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

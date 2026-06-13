@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-13T12:12:58.129Z",
+  "generatedAt": "2026-06-13T13:07:49.997Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt2654620:s1e1:preference:2026-06-13T13:07:40Z",
+      "contentId": "tt2654620",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt2654620",
+      "tmdbId": "47640",
+      "title": "The Strain",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-13T13:07:40Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt27391124:s1e1:started:2026-06-11T16:04:19Z",
       "contentId": "tt27391124",
@@ -11676,27 +11697,6 @@
       "startedAt": "2026-05-22T15:55:33.932Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T16:27:19Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s3e3:started:2026-05-22T15:55:36Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s3e3",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 3,
-      "episode": 3,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T15:55:33.932Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T15:55:36Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

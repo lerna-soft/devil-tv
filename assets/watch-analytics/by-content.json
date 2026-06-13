@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T12:12:58.134Z",
+  "generatedAt": "2026-06-13T13:07:50.000Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,7 +1845,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 65,
+      "totalEvents": 64,
       "totalStarts": 28,
       "totalCompletions": 26,
       "totalPlaybackProgress": 83650.93585840163,
@@ -1856,7 +1856,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 65,
+          "playCount": 64,
           "completedCount": 26,
           "startedCount": 28,
           "totalPlaybackProgress": 83650.93585840163,
@@ -2247,7 +2247,7 @@
         "s3e3": {
           "season": 3,
           "episode": 3,
-          "totalEvents": 3,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 3559.866578,
@@ -2259,7 +2259,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1286.9375
+      "avgPlaybackProgress": 1307.0459
     },
     {
       "contentId": "tt34809853",
@@ -5002,6 +5002,50 @@
         }
       },
       "avgPlaybackProgress": 80.4523
+    },
+    {
+      "contentId": "tt2654620",
+      "imdbId": "tt2654620",
+      "tmdbId": "47640",
+      "title": "The Strain",
+      "type": "series",
+      "totalEvents": 1,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-13T13:07:40Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-13T13:07:40Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-13T13:07:40Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt2096673",

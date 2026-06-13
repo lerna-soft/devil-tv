@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-13T12:12:58.136Z",
+  "generatedAt": "2026-06-13T13:07:50.002Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-11T16:04:19Z",
+      "updatedAt": "2026-06-13T13:07:40Z",
       "totalEvents": 500,
       "totalStarts": 220,
       "totalCompletions": 57,
       "totalPlaybackProgress": 261311.30230000548,
-      "uniqueContentCount": 99,
-      "lastActivityAt": "2026-06-11T16:04:19Z",
+      "uniqueContentCount": 100,
+      "lastActivityAt": "2026-06-13T13:07:40Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -171,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt2654620": {
+          "contentId": "tt2654620",
+          "imdbId": "tt2654620",
+          "tmdbId": "47640",
+          "title": "The Strain",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-13T13:07:40Z"
         },
         "tt27391124": {
           "contentId": "tt27391124",
@@ -682,7 +694,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 65,
+          "playCount": 64,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

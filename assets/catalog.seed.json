@@ -1,6 +1,6 @@
 {
-  "version": 416,
-  "generatedAt": "2026-06-12T04:51:32.324Z",
+  "version": 417,
+  "generatedAt": "2026-06-13T13:07:34.387Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29137,6 +29137,22 @@
       "releaseDate": null,
       "overview": "Narra la historia de Bailey, un perro leal que encuentra el significado de su propia existencia a través de la vida de los humanos a los que les enseña a reír y amar.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/cq7oRDzpSSldtyUuhW8aDL53OCV.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "1483004",
+      "imdbId": null,
+      "title": "Strain Andromeda The",
+      "year": 1992,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1992-01-01",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1aZSsxyWjJQZXY2OxjZi2a9DNQl.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

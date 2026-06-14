@@ -1,6 +1,6 @@
 {
-  "version": 417,
-  "generatedAt": "2026-06-13T13:07:34.387Z",
+  "version": 418,
+  "generatedAt": "2026-06-14T01:39:58.804Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29153,6 +29153,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 1992-01-01",
       "posterUrl": "https://image.tmdb.org/t/p/w500/1aZSsxyWjJQZXY2OxjZi2a9DNQl.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "755782",
+      "imdbId": null,
+      "title": "Castillo de naipes",
+      "year": 1943,
+      "releaseDate": null,
+      "overview": "Luis Guzmán, un arquitecto argentino, llega a Portugal en un hidroavión. Al trasladarse en coche a Sevilla choca con un carromato de gentes que iban a la romería del Rocío y resulta herido en la cabeza. Carmen, una de las ocupantes, lo lleva hasta su imponente castillo de Piedras Albas. Cuando se despierta, Luis reivindica como suyo el caserón por pertenecerle en herencia. Tanto Carmen como su abuela y el mayordomo de la mansión creen que el accidente lo ha dejado perturbado. Pero poco después el notario y el abogado de la familia, confirman las palabras del hombre: el abuelo vendió el castillo por deudas de juego y, a los treinta años, debe pasar a manos de Luis. Sus intenciones pasan entonces por restaurarlo y abrir un moderno hotel, lo que acrecienta el enfado de la familia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6jbX6fQQqk71pS3wZNDuLNPYZIy.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

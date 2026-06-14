@@ -1,6 +1,6 @@
 {
-  "version": 418,
-  "generatedAt": "2026-06-14T01:39:58.804Z",
+  "version": 419,
+  "generatedAt": "2026-06-14T22:29:43.308Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53569,6 +53569,22 @@
       "releaseDate": null,
       "overview": "En un mundo donde los dragones gobiernan el cielo, el mar y la tierra, aquellos que quieran luchar contra ellos y ganar deben superar los límites de la fuerza humana normal. Decidido a conseguir la victoria a cualquier precio, el cazador de dragones Ragna une fuerzas con el misterioso Crimson. Las motivaciones de Crimson pueden ser oscuras, pero su objetivo es el mismo: destruir a los monarcas dragón.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/dKfCiNed9kF2pRkVrTvaKIqkNej.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "233219",
+      "imdbId": null,
+      "title": "ONE: 하이스쿨 히어로즈",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 2025-05-30",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7jIZaNtpZlEwNLWGaj0dXl4sDSq.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

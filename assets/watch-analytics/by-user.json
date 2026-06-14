@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-14T21:43:32.991Z",
+  "generatedAt": "2026-06-14T22:29:46.728Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-13T13:07:40Z",
+      "updatedAt": "2026-06-14T22:29:38Z",
       "totalEvents": 500,
-      "totalStarts": 220,
+      "totalStarts": 219,
       "totalCompletions": 57,
-      "totalPlaybackProgress": 261311.30230000548,
-      "uniqueContentCount": 100,
-      "lastActivityAt": "2026-06-13T13:07:40Z",
+      "totalPlaybackProgress": 260580.97293100547,
+      "uniqueContentCount": 101,
+      "lastActivityAt": "2026-06-14T22:29:38Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -171,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt34622123": {
+          "contentId": "tt34622123",
+          "imdbId": "tt34622123",
+          "tmdbId": "",
+          "title": "ONE: High School Heroes",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-14T22:29:38Z"
         },
         "tt2654620": {
           "contentId": "tt2654620",
@@ -694,7 +706,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 64,
+          "playCount": 63,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1241,7 +1253,7 @@
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 522.6226
+      "avgPlaybackProgress": 521.1619
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,6 +1,6 @@
 {
-  "version": 419,
-  "generatedAt": "2026-06-14T22:29:43.308Z",
+  "version": 420,
+  "generatedAt": "2026-06-15T01:28:31.408Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29169,6 +29169,22 @@
       "releaseDate": null,
       "overview": "Luis Guzmán, un arquitecto argentino, llega a Portugal en un hidroavión. Al trasladarse en coche a Sevilla choca con un carromato de gentes que iban a la romería del Rocío y resulta herido en la cabeza. Carmen, una de las ocupantes, lo lleva hasta su imponente castillo de Piedras Albas. Cuando se despierta, Luis reivindica como suyo el caserón por pertenecerle en herencia. Tanto Carmen como su abuela y el mayordomo de la mansión creen que el accidente lo ha dejado perturbado. Pero poco después el notario y el abogado de la familia, confirman las palabras del hombre: el abuelo vendió el castillo por deudas de juego y, a los treinta años, debe pasar a manos de Luis. Sus intenciones pasan entonces por restaurarlo y abrir un moderno hotel, lo que acrecienta el enfado de la familia.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/6jbX6fQQqk71pS3wZNDuLNPYZIy.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "517907",
+      "imdbId": null,
+      "title": "La Manière Nègre ou Aimé Césaire, Chemin Faisant",
+      "year": 1991,
+      "releaseDate": null,
+      "overview": "ReleaseDate: 1991-01-01",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/14a92cVaKZEC8GCfiCPFlCyUsV8.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-15T01:25:46Z",
+  "updatedAt": "2026-06-15T01:26:33Z",
   "progress": {
     "535167": {
       "imdbId": "",
@@ -10,7 +10,7 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-07T17:49:08Z",
+      "updatedAt": "2026-06-15T01:26:33Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-05T23:59:48.393Z",
@@ -268,15 +268,42 @@
     "updatedAt": "2026-06-05T23:59:18Z"
   },
   "lastWatch": {
-    "imdbId": "tt9140554",
-    "tmdbId": "84958",
-    "season": 2,
-    "episode": 4,
+    "imdbId": "",
+    "tmdbId": "535167",
+    "season": 1,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-15T01:25:46Z"
+    "updatedAt": "2026-06-15T01:26:33Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:535167:s1e1:started:2026-06-15T01:26:33Z",
+      "contentId": "535167",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "",
+      "tmdbId": "535167",
+      "title": "La Tierra Errante",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-05T23:59:48.393Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-15T01:26:33Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt9140554:s2e4:started:2026-06-15T01:25:46Z",
       "contentId": "tt9140554",

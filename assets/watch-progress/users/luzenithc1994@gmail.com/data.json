@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-15T01:31:51Z",
+  "updatedAt": "2026-06-15T01:32:03Z",
   "progress": {
     "535167": {
       "imdbId": "",
@@ -268,6 +268,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt31036941": {
+      "imdbId": "tt31036941",
+      "tmdbId": "1234821",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-15T01:32:03Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-15T01:31:55.953Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -303,15 +319,42 @@
     "updatedAt": "2026-06-15T01:31:51Z"
   },
   "lastWatch": {
-    "imdbId": "tt13654226",
-    "tmdbId": "950396",
+    "imdbId": "tt31036941",
+    "tmdbId": "1234821",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-15T01:31:51Z"
+    "updatedAt": "2026-06-15T01:32:03Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt31036941:s1e1:started:2026-06-15T01:32:03Z",
+      "contentId": "tt31036941",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt31036941",
+      "tmdbId": "1234821",
+      "title": "Jurassic World: El renacer",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-15T01:31:55.953Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-15T01:32:03Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-ES",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:tt13654226:s1e1:preference:2026-06-15T01:31:51Z",
       "contentId": "tt13654226",

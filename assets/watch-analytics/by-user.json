@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T01:32:22.000Z",
+  "generatedAt": "2026-06-15T01:37:07.536Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1260,13 +1260,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-15T01:31:51Z",
-      "totalEvents": 67,
-      "totalStarts": 15,
+      "updatedAt": "2026-06-15T01:32:03Z",
+      "totalEvents": 68,
+      "totalStarts": 16,
       "totalCompletions": 0,
       "totalPlaybackProgress": 50017.595532,
-      "uniqueContentCount": 17,
-      "lastActivityAt": "2026-06-15T01:31:51Z",
+      "uniqueContentCount": 18,
+      "lastActivityAt": "2026-06-15T01:32:03Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9140554",
@@ -1299,6 +1299,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-08T00:12:12Z"
+        },
+        "tt31036941": {
+          "contentId": "tt31036941",
+          "imdbId": "tt31036941",
+          "tmdbId": "1234821",
+          "title": "Jurassic World: El renacer",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-15T01:32:03Z"
         },
         "tt13654226": {
           "contentId": "tt13654226",
@@ -1481,7 +1493,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 746.5313
+      "avgPlaybackProgress": 735.5529
     },
     {
       "userEmail": "liz-munera@hotmail.com",

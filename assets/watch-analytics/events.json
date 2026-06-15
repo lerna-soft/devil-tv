@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-15T01:26:42.877Z",
+  "generatedAt": "2026-06-15T01:31:53.829Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt10676052:s1e1:preference:2026-06-15T01:31:40Z",
+      "contentId": "tt10676052",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "title": "Los Cuatro Fantásticos: Primeros pasos",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-15T01:31:40Z"
+    },
     {
       "eventId": "luzenithc1994@gmail.com:535167:s1e1:started:2026-06-15T01:26:33Z",
       "contentId": "535167",

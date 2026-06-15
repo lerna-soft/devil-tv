@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T01:26:42.880Z",
+  "generatedAt": "2026-06-15T01:31:53.863Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -4264,6 +4264,62 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt10676052",
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "title": "Los Cuatro Fantásticos: Primeros pasos",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-15T01:31:40Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-15T01:31:40Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "juancarlosrios531970@gmail.com": {
+          "userEmail": "juancarlosrios531970@gmail.com",
+          "userName": "Juan carlos Rios",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-14T19:20:28Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-15T01:31:40Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "juancarlosrios531970@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "136228",
       "imdbId": "",
       "tmdbId": "136228",
@@ -8077,50 +8133,6 @@
           "lastActivityAt": "2026-05-17T17:56:08Z",
           "users": {
             "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt10676052",
-      "imdbId": "tt10676052",
-      "tmdbId": "617126",
-      "title": "Los Cuatro Fantásticos: Primeros pasos",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-14T19:20:28Z",
-      "users": {
-        "juancarlosrios531970@gmail.com": {
-          "userEmail": "juancarlosrios531970@gmail.com",
-          "userName": "Juan carlos Rios",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-14T19:20:28Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-14T19:20:28Z",
-          "users": {
-            "juancarlosrios531970@gmail.com": true
           },
           "completionRate": 0
         }

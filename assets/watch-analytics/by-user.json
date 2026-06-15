@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T01:26:42.882Z",
+  "generatedAt": "2026-06-15T01:31:53.865Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1260,13 +1260,13 @@
       "userName": "Luz Enith Campo",
       "role": "viewer",
       "createdAt": "2026-05-18T17:16:22.004Z",
-      "updatedAt": "2026-06-15T01:26:33Z",
-      "totalEvents": 65,
+      "updatedAt": "2026-06-15T01:31:40Z",
+      "totalEvents": 66,
       "totalStarts": 15,
       "totalCompletions": 0,
       "totalPlaybackProgress": 50017.595532,
-      "uniqueContentCount": 15,
-      "lastActivityAt": "2026-06-15T01:26:33Z",
+      "uniqueContentCount": 16,
+      "lastActivityAt": "2026-06-15T01:31:40Z",
       "completedContentIds": [],
       "inProgressContentIds": [
         "tt9140554",
@@ -1299,6 +1299,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-08T00:12:12Z"
+        },
+        "tt10676052": {
+          "contentId": "tt10676052",
+          "imdbId": "tt10676052",
+          "tmdbId": "617126",
+          "title": "Los Cuatro Fantásticos: Primeros pasos",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-15T01:31:40Z"
         },
         "tt9140554": {
           "contentId": "tt9140554",
@@ -1457,7 +1469,7 @@
           "lastSeenAt": "2026-05-18T19:40:47Z"
         }
       },
-      "avgPlaybackProgress": 769.5015
+      "avgPlaybackProgress": 757.8424
     },
     {
       "userEmail": "liz-munera@hotmail.com",

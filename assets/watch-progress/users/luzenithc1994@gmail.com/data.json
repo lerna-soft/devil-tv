@@ -1,7 +1,7 @@
 {
   "email": "luzenithc1994@gmail.com",
   "name": "Luz Enith Campo",
-  "updatedAt": "2026-06-15T01:26:33Z",
+  "updatedAt": "2026-06-15T01:31:40Z",
   "progress": {
     "535167": {
       "imdbId": "",
@@ -236,6 +236,22 @@
           "lastProgress": 0
         }
       }
+    },
+    "tt10676052": {
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-15T01:31:40Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-15T01:31:40Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -252,7 +268,8 @@
       "tt9140554": 1,
       "tt7605074": 1,
       "tt13539646": 1,
-      "tt32174149": 1
+      "tt32174149": 1,
+      "tt10676052": 1
     },
     "watchLater": {
       "535167": true,
@@ -265,18 +282,45 @@
       "tt13539646": true,
       "tt32174149": true
     },
-    "updatedAt": "2026-06-05T23:59:18Z"
+    "updatedAt": "2026-06-15T01:31:40Z"
   },
   "lastWatch": {
-    "imdbId": "",
-    "tmdbId": "535167",
+    "imdbId": "tt10676052",
+    "tmdbId": "617126",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-15T01:26:33Z"
+    "updatedAt": "2026-06-15T01:31:40Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt10676052:s1e1:preference:2026-06-15T01:31:40Z",
+      "contentId": "tt10676052",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt10676052",
+      "tmdbId": "617126",
+      "title": "Los Cuatro Fantásticos: Primeros pasos",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "progress",
+      "playerStatus": "preference",
+      "startedAt": "",
+      "completedAt": "",
+      "updatedAt": "2026-06-15T01:31:40Z",
+      "country": "",
+      "countryName": "",
+      "city": "",
+      "region": "",
+      "device": "",
+      "browser": "",
+      "locale": "",
+      "timezone": ""
+    },
     {
       "eventId": "luzenithc1994@gmail.com:535167:s1e1:started:2026-06-15T01:26:33Z",
       "contentId": "535167",

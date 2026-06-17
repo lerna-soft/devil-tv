@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-17T10:10:07.973Z",
+  "generatedAt": "2026-06-17T13:41:14.380Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
   "totalStarts": 247,
-  "totalCompletions": 58,
+  "totalCompletions": 57,
   "overallCompletionRate": 0.2308,
   "trackedTitles": 129,
   "mostWatchedContent": [
@@ -28,15 +28,15 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 63,
+      "totalEvents": 62,
       "uniqueUsers": 1,
-      "completionRate": 0.963
+      "completionRate": 0.9259
     },
     {
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 39,
+      "totalEvents": 40,
       "uniqueUsers": 1,
       "completionRate": 0.3
     },

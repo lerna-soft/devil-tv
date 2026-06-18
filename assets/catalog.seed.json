@@ -1,6 +1,6 @@
 {
-  "version": 421,
-  "generatedAt": "2026-06-15T01:28:44.107Z",
+  "version": 422,
+  "generatedAt": "2026-06-18T16:36:14.972Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29201,6 +29201,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2010-02-12",
       "posterUrl": "https://image.tmdb.org/t/p/w500/aBCj953HKdoiHBaKTIPDYeNpo1Y.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": null,
+      "imdbId": "tt0219483",
+      "title": "Aladdin's Arabian Adventures: Magic Makers",
+      "year": 1995,
+      "releaseDate": null,
+      "overview": "Scott Weinger, Linda Larkin",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMWY2MzAyMTAtNzIxOC00YzZlLTg3YjctNWMzYzdjMGI4NzZlXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

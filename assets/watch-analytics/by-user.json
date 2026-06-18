@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-18T16:02:29.998Z",
+  "generatedAt": "2026-06-18T16:36:23.173Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-17T13:41:01Z",
+      "updatedAt": "2026-06-18T16:36:12Z",
       "totalEvents": 500,
       "totalStarts": 219,
       "totalCompletions": 56,
       "totalPlaybackProgress": 257751.43572200547,
-      "uniqueContentCount": 101,
-      "lastActivityAt": "2026-06-17T13:41:01Z",
+      "uniqueContentCount": 102,
+      "lastActivityAt": "2026-06-18T16:36:12Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -171,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt34621291": {
+          "contentId": "tt34621291",
+          "imdbId": "tt34621291",
+          "tmdbId": "258912",
+          "title": "Magic Maker: How to Create Magic in Another World",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-18T16:36:12Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -706,7 +718,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 62,
+          "playCount": 61,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

@@ -1,6 +1,6 @@
 {
-  "version": 422,
-  "generatedAt": "2026-06-18T16:36:14.972Z",
+  "version": 423,
+  "generatedAt": "2026-06-19T13:42:16.148Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53633,6 +53633,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate: 2025-05-30",
       "posterUrl": "https://image.tmdb.org/t/p/w500/7jIZaNtpZlEwNLWGaj0dXl4sDSq.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "2085",
+      "imdbId": null,
+      "title": "Agallas, el perro cobarde",
+      "year": 1999,
+      "releaseDate": null,
+      "overview": "La historia trata sobre un perro llamado Agallas y sus dueños: Muriel, una vieja mujer escocesa, y Eustaquio, un viejo agricultor gruñón. Este perro vive para salvarles la vida de tenebrosos monstruos, extraterrestres y otras criaturas míticas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6GgsPD43JYdQT1IdwByItdIrr5f.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

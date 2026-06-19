@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-19T00:49:38.848Z",
+  "generatedAt": "2026-06-19T01:12:22.707Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e5:completed:2026-06-19T01:12:14Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e5",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 5,
+      "progress": 1420.062742,
+      "progressValue": 1420.062742,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-19T00:49:20.655Z",
+      "completedAt": "2026-06-19T01:12:12.666Z",
+      "updatedAt": "2026-06-19T01:12:14Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e5:started:2026-06-19T00:49:22Z",
       "contentId": "tt34621291",
@@ -11802,27 +11823,6 @@
       "startedAt": "2026-05-20T19:30:43.376Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T19:39:26Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt33046197:s1e1:started:2026-05-22T19:09:24Z",
-      "contentId": "tt33046197",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 1225.846536,
-      "progressValue": 1225.846536,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-20T19:30:43.376Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T19:09:24Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

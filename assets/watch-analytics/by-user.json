@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T00:49:38.852Z",
+  "generatedAt": "2026-06-19T01:12:22.712Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T00:49:22Z",
+      "updatedAt": "2026-06-19T01:12:14Z",
       "totalEvents": 500,
       "totalStarts": 220,
-      "totalCompletions": 55,
-      "totalPlaybackProgress": 248915.40876800547,
+      "totalCompletions": 56,
+      "totalPlaybackProgress": 249109.62497400545,
       "uniqueContentCount": 102,
-      "lastActivityAt": "2026-06-19T00:49:22Z",
+      "lastActivityAt": "2026-06-19T01:12:14Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -179,11 +179,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 10,
+          "playCount": 11,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T00:49:22Z"
+          "lastSeenAt": "2026-06-19T01:12:14Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1259,14 +1259,14 @@
           "tmdbId": "1168190",
           "title": "Los hermanos demolición",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 4253.558003,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 497.8308
+      "avgPlaybackProgress": 498.2192
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

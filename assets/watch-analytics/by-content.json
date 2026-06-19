@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:12:22.710Z",
+  "generatedAt": "2026-06-19T01:12:31.788Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2551,27 +2551,41 @@
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 11,
-      "totalStarts": 5,
+      "totalEvents": 12,
+      "totalStarts": 6,
       "totalCompletions": 4,
       "totalPlaybackProgress": 5680.343848,
       "uniqueUsers": 1,
-      "completionRate": 0.8,
-      "lastActivityAt": "2026-06-19T01:12:14Z",
+      "completionRate": 0.6667,
+      "lastActivityAt": "2026-06-19T01:12:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 11,
+          "playCount": 12,
           "completedCount": 4,
-          "startedCount": 5,
+          "startedCount": 6,
           "totalPlaybackProgress": 5680.343848,
-          "lastSeenAt": "2026-06-19T01:12:14Z",
+          "lastSeenAt": "2026-06-19T01:12:17Z",
           "lastSeason": 1,
-          "lastEpisode": 5
+          "lastEpisode": 6
         }
       },
       "episodes": {
+        "s1e6": {
+          "season": 1,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:12:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e5": {
           "season": 1,
           "episode": 5,
@@ -2643,7 +2657,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 516.3949
+      "avgPlaybackProgress": 473.362
     },
     {
       "contentId": "tt9114286",
@@ -3310,74 +3324,6 @@
       "avgPlaybackProgress": 1258.0908
     },
     {
-      "contentId": "tt33046197",
-      "imdbId": "tt33046197",
-      "tmdbId": "1168190",
-      "title": "Los hermanos demolición",
-      "type": "movie",
-      "totalEvents": 5,
-      "totalStarts": 2,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 5665.02464,
-      "uniqueUsers": 3,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T19:45:33Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 1411.466637,
-          "lastSeenAt": "2026-05-30T19:45:33Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 4253.558003,
-          "lastSeenAt": "2026-05-22T19:39:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-17T17:57:14Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 5,
-          "totalStarts": 2,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 5665.02464,
-          "uniqueUsers": 3,
-          "lastActivityAt": "2026-05-30T19:45:33Z",
-          "users": {
-            "luzenithc1994@gmail.com": true,
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1133.0049
-    },
-    {
       "contentId": "tt12593682",
       "imdbId": "tt12593682",
       "tmdbId": "718930",
@@ -3654,6 +3600,62 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt33046197",
+      "imdbId": "tt33046197",
+      "tmdbId": "1168190",
+      "title": "Los hermanos demolición",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 1411.466637,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T19:45:33Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 1411.466637,
+          "lastSeenAt": "2026-05-30T19:45:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-17T17:57:14Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1411.466637,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-30T19:45:33Z",
+          "users": {
+            "luzenithc1994@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 352.8667
     },
     {
       "contentId": "tt21209804",

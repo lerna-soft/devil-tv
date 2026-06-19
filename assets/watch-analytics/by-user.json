@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T01:12:22.712Z",
+  "generatedAt": "2026-06-19T01:12:31.790Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:12:14Z",
+      "updatedAt": "2026-06-19T01:12:17Z",
       "totalEvents": 500,
       "totalStarts": 220,
       "totalCompletions": 56,
-      "totalPlaybackProgress": 249109.62497400545,
-      "uniqueContentCount": 102,
-      "lastActivityAt": "2026-06-19T01:12:14Z",
+      "totalPlaybackProgress": 244856.06697100544,
+      "uniqueContentCount": 101,
+      "lastActivityAt": "2026-06-19T01:12:17Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -37,8 +37,7 @@
         "tt12593682",
         "tt21209876",
         "tt2294629",
-        "tt1190634",
-        "tt33046197"
+        "tt1190634"
       ],
       "content": {
         "15070": {
@@ -179,11 +178,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 11,
+          "playCount": 12,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T01:12:14Z"
+          "lastSeenAt": "2026-06-19T01:12:17Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1252,21 +1251,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:06:48Z"
-        },
-        "tt33046197": {
-          "contentId": "tt33046197",
-          "imdbId": "tt33046197",
-          "tmdbId": "1168190",
-          "title": "Los hermanos demolición",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 4253.558003,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T19:39:26Z"
         }
       },
-      "avgPlaybackProgress": 498.2192
+      "avgPlaybackProgress": 489.7121
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

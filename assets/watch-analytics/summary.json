@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-19T00:49:28.045Z",
+  "generatedAt": "2026-06-19T00:49:38.847Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 247,
+  "totalStarts": 248,
   "totalCompletions": 56,
-  "overallCompletionRate": 0.2267,
+  "overallCompletionRate": 0.2258,
   "trackedTitles": 130,
   "mostWatchedContent": [
     {
@@ -28,7 +28,7 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 53,
+      "totalEvents": 52,
       "uniqueUsers": 1,
       "completionRate": 0.913
     },
@@ -57,6 +57,14 @@
       "completionRate": 0.5
     },
     {
+      "contentId": "tt34621291",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 1,
+      "completionRate": 0.6
+    },
+    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
@@ -71,14 +79,6 @@
       "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
-    },
-    {
-      "contentId": "tt34621291",
-      "title": "Magic Maker: How to Create Magic in Another World",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 1,
-      "completionRate": 0.75
     },
     {
       "contentId": "tt0899043",

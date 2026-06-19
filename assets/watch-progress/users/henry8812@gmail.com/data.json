@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-19T01:14:44Z",
+  "updatedAt": "2026-06-19T01:14:46Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -3014,10 +3014,10 @@
       "imdbId": "tt34621291",
       "tmdbId": "258912",
       "lastSeason": 1,
-      "lastEpisode": 8,
+      "lastEpisode": 9,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-19T01:14:44Z",
+      "updatedAt": "2026-06-19T01:14:46Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-18T16:36:11.087Z",
@@ -3056,6 +3056,11 @@
         },
         "s1e8": {
           "startedAt": "2026-06-19T01:14:42.660Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e9": {
+          "startedAt": "2026-06-19T01:14:44.985Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3219,12 +3224,39 @@
     "imdbId": "tt34621291",
     "tmdbId": "258912",
     "season": 1,
-    "episode": 8,
+    "episode": 9,
     "progress": 0,
-    "updatedAt": "2026-06-19T01:14:44Z"
+    "updatedAt": "2026-06-19T01:14:46Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e9:started:2026-06-19T01:14:46Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e9",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 9,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-19T01:14:44.985Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-19T01:14:46Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e8:started:2026-06-19T01:14:44Z",
       "contentId": "tt34621291",
@@ -16689,33 +16721,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:07:00Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt15314262:s1e1:preference:2026-05-22T20:06:57Z",
-      "contentId": "tt15314262",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt15314262",
-      "tmdbId": "866398",
-      "title": "Beekeeper: El protector",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:06:57Z",
       "country": "",
       "countryName": "",
       "city": "",

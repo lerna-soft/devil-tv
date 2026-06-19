@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T01:12:31.790Z",
+  "generatedAt": "2026-06-19T01:14:05.327Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:12:17Z",
+      "updatedAt": "2026-06-19T01:13:56Z",
       "totalEvents": 500,
       "totalStarts": 220,
       "totalCompletions": 56,
-      "totalPlaybackProgress": 244856.06697100544,
+      "totalPlaybackProgress": 246221.34157700546,
       "uniqueContentCount": 101,
-      "lastActivityAt": "2026-06-19T01:12:17Z",
+      "lastActivityAt": "2026-06-19T01:13:56Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -106,7 +106,7 @@
           "tmdbId": "274870",
           "title": "Passengers",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 4959.358091,
           "maxProgressPercent": 0,
@@ -178,11 +178,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 12,
+          "playCount": 13,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T01:12:17Z"
+          "lastSeenAt": "2026-06-19T01:13:56Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1253,7 +1253,7 @@
           "lastSeenAt": "2026-05-22T20:06:48Z"
         }
       },
-      "avgPlaybackProgress": 489.7121
+      "avgPlaybackProgress": 492.4427
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

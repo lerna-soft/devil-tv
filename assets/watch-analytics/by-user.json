@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T13:42:42.559Z",
+  "generatedAt": "2026-06-19T14:12:37.842Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T13:42:18Z",
+      "updatedAt": "2026-06-19T14:12:27Z",
       "totalEvents": 500,
       "totalStarts": 226,
       "totalCompletions": 57,
-      "totalPlaybackProgress": 247641.40431900544,
-      "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-19T13:42:18Z",
+      "totalPlaybackProgress": 247958.64613500543,
+      "uniqueContentCount": 96,
+      "lastActivityAt": "2026-06-19T14:12:27Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -25,6 +25,7 @@
       "inProgressContentIds": [
         "274870",
         "1632181",
+        "tt1630036",
         "tt2032557",
         "tt2091935",
         "tt9114286",
@@ -178,11 +179,11 @@
           "tmdbId": "72213",
           "title": "Courageous",
           "type": "movie",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
-          "maxProgressValue": 0,
+          "maxProgressValue": 317.241816,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T13:42:18Z"
+          "lastSeenAt": "2026-06-19T14:12:27Z"
         },
         "tt34621291": {
           "contentId": "tt34621291",
@@ -1191,21 +1192,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:07:26Z"
-        },
-        "tt17024450": {
-          "contentId": "tt17024450",
-          "imdbId": "tt17024450",
-          "tmdbId": "926393",
-          "title": "The Equalizer 3",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:07:16Z"
         }
       },
-      "avgPlaybackProgress": 495.2828
+      "avgPlaybackProgress": 495.9173
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

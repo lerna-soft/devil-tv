@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-19T00:24:18Z",
+  "updatedAt": "2026-06-19T00:28:10Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -3015,9 +3015,9 @@
       "tmdbId": "258912",
       "lastSeason": 1,
       "lastEpisode": 2,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-19T00:24:18Z",
+      "progress": 1420.132402,
+      "lastProgress": 1420.132402,
+      "updatedAt": "2026-06-19T00:28:10Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-18T16:36:11.087Z",
@@ -3026,8 +3026,8 @@
         },
         "s1e2": {
           "startedAt": "2026-06-18T16:51:46.851Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-06-19T00:28:09.528Z",
+          "lastProgress": 1420.132402
         }
       }
     }
@@ -3190,11 +3190,38 @@
     "tmdbId": "258912",
     "season": 1,
     "episode": 2,
-    "progress": 0,
-    "updatedAt": "2026-06-19T00:24:18Z"
+    "progress": 1420.132402,
+    "updatedAt": "2026-06-19T00:28:10Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e2:completed:2026-06-19T00:28:10Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e2",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 2,
+      "progress": 1420.132402,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-18T16:51:46.851Z",
+      "completedAt": "2026-06-19T00:28:09.528Z",
+      "updatedAt": "2026-06-19T00:28:10Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e2:started:2026-06-19T00:24:18Z",
       "contentId": "tt34621291",
@@ -16659,33 +16686,6 @@
       "startedAt": "2026-05-22T16:55:03.420Z",
       "completedAt": "2026-05-22T17:18:34.375Z",
       "updatedAt": "2026-05-22T17:18:36Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s3e6:started:2026-05-22T16:55:05Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s3e6",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 3,
-      "episode": 6,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T16:55:03.420Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T16:55:05Z",
       "country": "",
       "countryName": "",
       "city": "",

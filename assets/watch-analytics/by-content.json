@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:14:52.807Z",
+  "generatedAt": "2026-06-19T01:15:04.461Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2495,27 +2495,41 @@
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 14,
-      "totalStarts": 7,
+      "totalEvents": 15,
+      "totalStarts": 8,
       "totalCompletions": 4,
       "totalPlaybackProgress": 7045.618454,
       "uniqueUsers": 1,
-      "completionRate": 0.5714,
-      "lastActivityAt": "2026-06-19T01:14:42Z",
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-06-19T01:14:44Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 14,
+          "playCount": 15,
           "completedCount": 4,
-          "startedCount": 7,
+          "startedCount": 8,
           "totalPlaybackProgress": 7045.618454,
-          "lastSeenAt": "2026-06-19T01:14:42Z",
+          "lastSeenAt": "2026-06-19T01:14:44Z",
           "lastSeason": 1,
-          "lastEpisode": 7
+          "lastEpisode": 8
         }
       },
       "episodes": {
+        "s1e8": {
+          "season": 1,
+          "episode": 8,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:14:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e7": {
           "season": 1,
           "episode": 7,
@@ -2615,7 +2629,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 503.2585
+      "avgPlaybackProgress": 469.7079
     },
     {
       "contentId": "tt32897959",
@@ -8045,50 +8059,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt21692408",
-      "imdbId": "tt21692408",
-      "tmdbId": "1011985",
-      "title": "Kung Fu Panda 4",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:06:48Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:06:48Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:06:48Z",
           "users": {
             "henry8812@gmail.com": true
           },

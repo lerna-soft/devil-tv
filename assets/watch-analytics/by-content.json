@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:12:31.788Z",
+  "generatedAt": "2026-06-19T01:14:05.325Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2490,38 +2490,27 @@
       "avgPlaybackProgress": 339.7509
     },
     {
-      "contentId": "tt32897959",
-      "imdbId": "tt32897959",
-      "tmdbId": "1316092",
-      "title": "“Cumbres Borrascosas”",
-      "type": "movie",
+      "contentId": "tt34621291",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
       "totalEvents": 13,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 19691.405951855024,
-      "uniqueUsers": 2,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-05-18T19:40:47Z",
+      "totalStarts": 6,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 7045.618454,
+      "uniqueUsers": 1,
+      "completionRate": 0.6667,
+      "lastActivityAt": "2026-06-19T01:13:56Z",
       "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 16690.969082000003,
-          "lastSeenAt": "2026-05-18T19:40:47Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "ornebe@hotmail.com": {
-          "userEmail": "ornebe@hotmail.com",
-          "userName": "Orfinelly",
-          "playCount": 7,
-          "completedCount": 1,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3000.4368698550247,
-          "lastSeenAt": "2026-05-11T21:06:22Z",
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 13,
+          "completedCount": 4,
+          "startedCount": 6,
+          "totalPlaybackProgress": 7045.618454,
+          "lastSeenAt": "2026-06-19T01:13:56Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -2530,48 +2519,17 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 13,
-          "totalStarts": 2,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 19691.405951855024,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-05-18T19:40:47Z",
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 1365.274606,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:13:56Z",
           "users": {
-            "luzenithc1994@gmail.com": true,
-            "ornebe@hotmail.com": true
+            "henry8812@gmail.com": true
           },
-          "completionRate": 0.5
-        }
-      },
-      "avgPlaybackProgress": 1514.7235
-    },
-    {
-      "contentId": "tt34621291",
-      "imdbId": "tt34621291",
-      "tmdbId": "258912",
-      "title": "Magic Maker: How to Create Magic in Another World",
-      "type": "series",
-      "totalEvents": 12,
-      "totalStarts": 6,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 5680.343848,
-      "uniqueUsers": 1,
-      "completionRate": 0.6667,
-      "lastActivityAt": "2026-06-19T01:12:17Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 12,
-          "completedCount": 4,
-          "startedCount": 6,
-          "totalPlaybackProgress": 5680.343848,
-          "lastSeenAt": "2026-06-19T01:12:17Z",
-          "lastSeason": 1,
-          "lastEpisode": 6
-        }
-      },
-      "episodes": {
+          "completionRate": 0
+        },
         "s1e6": {
           "season": 1,
           "episode": 6,
@@ -2641,23 +2599,65 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 541.9707
+    },
+    {
+      "contentId": "tt32897959",
+      "imdbId": "tt32897959",
+      "tmdbId": "1316092",
+      "title": "“Cumbres Borrascosas”",
+      "type": "movie",
+      "totalEvents": 13,
+      "totalStarts": 2,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 19691.405951855024,
+      "uniqueUsers": 2,
+      "completionRate": 0.5,
+      "lastActivityAt": "2026-05-18T19:40:47Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 6,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 16690.969082000003,
+          "lastSeenAt": "2026-05-18T19:40:47Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
         },
+        "ornebe@hotmail.com": {
+          "userEmail": "ornebe@hotmail.com",
+          "userName": "Orfinelly",
+          "playCount": 7,
+          "completedCount": 1,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3000.4368698550247,
+          "lastSeenAt": "2026-05-11T21:06:22Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T00:24:07Z",
+          "totalEvents": 13,
+          "totalStarts": 2,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 19691.405951855024,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-05-18T19:40:47Z",
           "users": {
-            "henry8812@gmail.com": true
+            "luzenithc1994@gmail.com": true,
+            "ornebe@hotmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 0.5
         }
       },
-      "avgPlaybackProgress": 473.362
+      "avgPlaybackProgress": 1514.7235
     },
     {
       "contentId": "tt9114286",
@@ -4208,50 +4208,6 @@
       "avgPlaybackProgress": 851.4785
     },
     {
-      "contentId": "274870",
-      "imdbId": "",
-      "tmdbId": "274870",
-      "title": "Passengers",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 5916.63411,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T21:10:08Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5916.63411,
-          "lastSeenAt": "2026-05-22T21:10:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 5916.63411,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T21:10:08Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1972.2114
-    },
-    {
       "contentId": "tt15314262",
       "imdbId": "tt15314262",
       "tmdbId": "866398",
@@ -4946,6 +4902,50 @@
         }
       },
       "avgPlaybackProgress": 1309.1141
+    },
+    {
+      "contentId": "274870",
+      "imdbId": "",
+      "tmdbId": "274870",
+      "title": "Passengers",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 5916.63411,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T21:10:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 5916.63411,
+          "lastSeenAt": "2026-05-22T21:10:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 5916.63411,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T21:10:08Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2958.3171
     },
     {
       "contentId": "tt33612209",

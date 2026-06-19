@@ -3,9 +3,9 @@
   "tmdbId": "258912",
   "lastSeason": 1,
   "lastEpisode": 2,
-  "progress": 0,
-  "lastProgress": 0,
-  "updatedAt": "2026-06-19T00:24:18Z",
+  "progress": 1420.132402,
+  "lastProgress": 1420.132402,
+  "updatedAt": "2026-06-19T00:28:10Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-18T16:36:11.087Z",
@@ -14,11 +14,38 @@
     },
     "s1e2": {
       "startedAt": "2026-06-18T16:51:46.851Z",
-      "completedAt": "",
-      "lastProgress": 0
+      "completedAt": "2026-06-19T00:28:09.528Z",
+      "lastProgress": 1420.132402
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e2:completed:2026-06-19T00:28:10Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e2",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 2,
+      "progress": 1420.132402,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-18T16:51:46.851Z",
+      "completedAt": "2026-06-19T00:28:09.528Z",
+      "updatedAt": "2026-06-19T00:28:10Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e2:started:2026-06-19T00:24:18Z",
       "contentId": "tt34621291",

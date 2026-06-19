@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:14:05.325Z",
+  "generatedAt": "2026-06-19T01:14:52.807Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2495,27 +2495,41 @@
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 6,
+      "totalEvents": 14,
+      "totalStarts": 7,
       "totalCompletions": 4,
       "totalPlaybackProgress": 7045.618454,
       "uniqueUsers": 1,
-      "completionRate": 0.6667,
-      "lastActivityAt": "2026-06-19T01:13:56Z",
+      "completionRate": 0.5714,
+      "lastActivityAt": "2026-06-19T01:14:42Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 13,
+          "playCount": 14,
           "completedCount": 4,
-          "startedCount": 6,
+          "startedCount": 7,
           "totalPlaybackProgress": 7045.618454,
-          "lastSeenAt": "2026-06-19T01:13:56Z",
+          "lastSeenAt": "2026-06-19T01:14:42Z",
           "lastSeason": 1,
-          "lastEpisode": 1
+          "lastEpisode": 7
         }
       },
       "episodes": {
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:14:42Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e1": {
           "season": 1,
           "episode": 1,
@@ -2601,7 +2615,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 541.9707
+      "avgPlaybackProgress": 503.2585
     },
     {
       "contentId": "tt32897959",
@@ -4208,50 +4222,6 @@
       "avgPlaybackProgress": 851.4785
     },
     {
-      "contentId": "tt15314262",
-      "imdbId": "tt15314262",
-      "tmdbId": "866398",
-      "title": "Beekeeper: El protector",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:07:00Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:07:00Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:07:00Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt10676052",
       "imdbId": "tt10676052",
       "tmdbId": "617126",
@@ -4946,6 +4916,50 @@
         }
       },
       "avgPlaybackProgress": 2958.3171
+    },
+    {
+      "contentId": "tt15314262",
+      "imdbId": "tt15314262",
+      "tmdbId": "866398",
+      "title": "Beekeeper: El protector",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 0,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T20:07:00Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-22T20:07:00Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 0,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T20:07:00Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt33612209",

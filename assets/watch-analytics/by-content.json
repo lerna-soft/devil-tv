@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:17:34.860Z",
+  "generatedAt": "2026-06-19T01:19:33.786Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2495,27 +2495,41 @@
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 17,
-      "totalStarts": 10,
+      "totalEvents": 18,
+      "totalStarts": 11,
       "totalCompletions": 4,
       "totalPlaybackProgress": 7045.618454,
       "uniqueUsers": 1,
-      "completionRate": 0.4,
-      "lastActivityAt": "2026-06-19T01:14:47Z",
+      "completionRate": 0.3636,
+      "lastActivityAt": "2026-06-19T01:14:48Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 17,
+          "playCount": 18,
           "completedCount": 4,
-          "startedCount": 10,
+          "startedCount": 11,
           "totalPlaybackProgress": 7045.618454,
-          "lastSeenAt": "2026-06-19T01:14:47Z",
+          "lastSeenAt": "2026-06-19T01:14:48Z",
           "lastSeason": 1,
-          "lastEpisode": 10
+          "lastEpisode": 11
         }
       },
       "episodes": {
+        "s1e11": {
+          "season": 1,
+          "episode": 11,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:14:48Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e10": {
           "season": 1,
           "episode": 10,
@@ -2657,7 +2671,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 414.4481
+      "avgPlaybackProgress": 391.4232
     },
     {
       "contentId": "tt32897959",
@@ -7999,50 +8013,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:04Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt16366836",
-      "imdbId": "tt16366836",
-      "tmdbId": "912649",
-      "title": "Venom: El último baile",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:07:01Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:07:01Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:07:01Z",
           "users": {
             "henry8812@gmail.com": true
           },

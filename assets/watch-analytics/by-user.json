@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T01:15:35.472Z",
+  "generatedAt": "2026-06-19T01:17:34.862Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:14:46Z",
+      "updatedAt": "2026-06-19T01:14:47Z",
       "totalEvents": 500,
-      "totalStarts": 223,
+      "totalStarts": 224,
       "totalCompletions": 56,
       "totalPlaybackProgress": 246221.34157700546,
-      "uniqueContentCount": 100,
-      "lastActivityAt": "2026-06-19T01:14:46Z",
+      "uniqueContentCount": 99,
+      "lastActivityAt": "2026-06-19T01:14:47Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -178,11 +178,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 16,
+          "playCount": 17,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T01:14:46Z"
+          "lastSeenAt": "2026-06-19T01:14:47Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1227,18 +1227,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:07:01Z"
-        },
-        "tt15314262": {
-          "contentId": "tt15314262",
-          "imdbId": "tt15314262",
-          "tmdbId": "866398",
-          "title": "Beekeeper: El protector",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:07:00Z"
         }
       },
       "avgPlaybackProgress": 492.4427

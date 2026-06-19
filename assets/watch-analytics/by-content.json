@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T01:15:35.469Z",
+  "generatedAt": "2026-06-19T01:17:34.860Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -2495,27 +2495,41 @@
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 16,
-      "totalStarts": 9,
+      "totalEvents": 17,
+      "totalStarts": 10,
       "totalCompletions": 4,
       "totalPlaybackProgress": 7045.618454,
       "uniqueUsers": 1,
-      "completionRate": 0.4444,
-      "lastActivityAt": "2026-06-19T01:14:46Z",
+      "completionRate": 0.4,
+      "lastActivityAt": "2026-06-19T01:14:47Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 16,
+          "playCount": 17,
           "completedCount": 4,
-          "startedCount": 9,
+          "startedCount": 10,
           "totalPlaybackProgress": 7045.618454,
-          "lastSeenAt": "2026-06-19T01:14:46Z",
+          "lastSeenAt": "2026-06-19T01:14:47Z",
           "lastSeason": 1,
-          "lastEpisode": 9
+          "lastEpisode": 10
         }
       },
       "episodes": {
+        "s1e10": {
+          "season": 1,
+          "episode": 10,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T01:14:47Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e9": {
           "season": 1,
           "episode": 9,
@@ -2643,7 +2657,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 440.3512
+      "avgPlaybackProgress": 414.4481
     },
     {
       "contentId": "tt32897959",
@@ -8029,50 +8043,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:07:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt15314262",
-      "imdbId": "tt15314262",
-      "tmdbId": "866398",
-      "title": "Beekeeper: El protector",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:07:00Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:07:00Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:07:00Z",
           "users": {
             "henry8812@gmail.com": true
           },

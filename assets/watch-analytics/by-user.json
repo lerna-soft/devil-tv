@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T11:07:59.800Z",
+  "generatedAt": "2026-06-19T13:42:27.541Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:19:25Z",
+      "updatedAt": "2026-06-19T13:42:18Z",
       "totalEvents": 500,
-      "totalStarts": 225,
+      "totalStarts": 226,
       "totalCompletions": 57,
       "totalPlaybackProgress": 247641.40431900544,
       "uniqueContentCount": 97,
-      "lastActivityAt": "2026-06-19T01:19:25Z",
+      "lastActivityAt": "2026-06-19T13:42:18Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -171,6 +171,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt1630036": {
+          "contentId": "tt1630036",
+          "imdbId": "tt1630036",
+          "tmdbId": "72213",
+          "title": "Courageous",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-19T13:42:18Z"
         },
         "tt34621291": {
           "contentId": "tt34621291",
@@ -1191,18 +1203,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:07:16Z"
-        },
-        "tt26047818": {
-          "contentId": "tt26047818",
-          "imdbId": "tt26047818",
-          "tmdbId": "1072790",
-          "title": "Cualquiera menos tú",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:07:13Z"
         }
       },
       "avgPlaybackProgress": 495.2828

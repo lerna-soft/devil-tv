@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T00:28:19.517Z",
+  "generatedAt": "2026-06-19T00:28:29.187Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,21 +1845,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 57,
+      "totalEvents": 56,
       "totalStarts": 24,
-      "totalCompletions": 23,
-      "totalPlaybackProgress": 74427.51341040163,
+      "totalCompletions": 22,
+      "totalPlaybackProgress": 71595.58454540164,
       "uniqueUsers": 1,
-      "completionRate": 0.9583,
+      "completionRate": 0.9167,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 57,
-          "completedCount": 23,
+          "playCount": 56,
+          "completedCount": 22,
           "startedCount": 24,
-          "totalPlaybackProgress": 74427.51341040163,
+          "totalPlaybackProgress": 71595.58454540164,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2201,23 +2201,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s3e6": {
-          "season": 3,
-          "episode": 6,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2831.928865,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T17:18:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1305.7458
+      "avgPlaybackProgress": 1278.4926
     },
     {
       "contentId": "tt34809853",
@@ -2974,6 +2960,78 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt34621291",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "totalEvents": 6,
+      "totalStarts": 3,
+      "totalCompletions": 1,
+      "totalPlaybackProgress": 1420.132402,
+      "uniqueUsers": 1,
+      "completionRate": 0.3333,
+      "lastActivityAt": "2026-06-19T00:28:15Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 6,
+          "completedCount": 1,
+          "startedCount": 3,
+          "totalPlaybackProgress": 1420.132402,
+          "lastSeenAt": "2026-06-19T00:28:15Z",
+          "lastSeason": 1,
+          "lastEpisode": 3
+        }
+      },
+      "episodes": {
+        "s1e3": {
+          "season": 1,
+          "episode": 3,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T00:28:15Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.132402,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T00:28:10Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T00:24:07Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 236.6887
+    },
+    {
       "contentId": "tt2091935",
       "imdbId": "tt2091935",
       "tmdbId": "333385",
@@ -3172,64 +3230,6 @@
         }
       },
       "avgPlaybackProgress": 2140.1599
-    },
-    {
-      "contentId": "tt34621291",
-      "imdbId": "tt34621291",
-      "tmdbId": "258912",
-      "title": "Magic Maker: How to Create Magic in Another World",
-      "type": "series",
-      "totalEvents": 5,
-      "totalStarts": 2,
-      "totalCompletions": 1,
-      "totalPlaybackProgress": 1420.132402,
-      "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-06-19T00:28:10Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 5,
-          "completedCount": 1,
-          "startedCount": 2,
-          "totalPlaybackProgress": 1420.132402,
-          "lastSeenAt": "2026-06-19T00:28:10Z",
-          "lastSeason": 1,
-          "lastEpisode": 2
-        }
-      },
-      "episodes": {
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1420.132402,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T00:28:10Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T00:24:07Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 284.0265
     },
     {
       "contentId": "100087",

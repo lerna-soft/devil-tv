@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T14:19:59.728Z",
+  "generatedAt": "2026-06-19T14:42:36.319Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -3814,6 +3814,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt1630036",
+      "imdbId": "tt1630036",
+      "tmdbId": "72213",
+      "title": "Courageous",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 3559.275025,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-19T14:42:27Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 3559.275025,
+          "lastSeenAt": "2026-06-19T14:42:27Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 3559.275025,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T14:42:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1186.425
+    },
+    {
       "contentId": "tt27391124",
       "imdbId": "tt27391124",
       "tmdbId": "1181678",
@@ -4276,50 +4320,6 @@
         }
       },
       "avgPlaybackProgress": 851.4785
-    },
-    {
-      "contentId": "tt1630036",
-      "imdbId": "tt1630036",
-      "tmdbId": "72213",
-      "title": "Courageous",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 317.241816,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-19T14:12:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 317.241816,
-          "lastSeenAt": "2026-06-19T14:12:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 317.241816,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T14:12:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 158.6209
     },
     {
       "contentId": "tt10676052",
@@ -7881,50 +7881,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:08:01Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt9764362",
-      "imdbId": "tt9764362",
-      "tmdbId": "593643",
-      "title": "El menú",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:07:26Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:07:26Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:07:26Z",
           "users": {
             "henry8812@gmail.com": true
           },

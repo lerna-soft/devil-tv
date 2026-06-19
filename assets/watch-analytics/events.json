@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-19T01:19:33.783Z",
+  "generatedAt": "2026-06-19T01:20:04.205Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e6:completed:2026-06-19T01:19:25Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e6",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 6,
+      "progress": 1420.062742,
+      "progressValue": 1420.062742,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-19T01:12:15.665Z",
+      "completedAt": "2026-06-19T01:19:24.117Z",
+      "updatedAt": "2026-06-19T01:19:25Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e11:started:2026-06-19T01:14:48Z",
       "contentId": "tt34621291",
@@ -11802,27 +11823,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:07:13Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt20215234:s1e1:preference:2026-05-22T20:07:04Z",
-      "contentId": "tt20215234",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt20215234",
-      "tmdbId": "974576",
-      "title": "Cónclave",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:07:04Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

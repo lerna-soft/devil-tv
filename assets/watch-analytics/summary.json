@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-19T01:19:33.783Z",
+  "generatedAt": "2026-06-19T01:20:04.205Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
   "totalStarts": 253,
-  "totalCompletions": 57,
-  "overallCompletionRate": 0.2253,
-  "trackedTitles": 127,
+  "totalCompletions": 58,
+  "overallCompletionRate": 0.2292,
+  "trackedTitles": 126,
   "mostWatchedContent": [
     {
       "contentId": "tt2560140",
@@ -41,20 +41,20 @@
       "completionRate": 0.3
     },
     {
+      "contentId": "tt34621291",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "totalEvents": 19,
+      "uniqueUsers": 1,
+      "completionRate": 0.4545
+    },
+    {
       "contentId": "tt9140554",
       "title": "Loki",
       "type": "series",
       "totalEvents": 19,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt34621291",
-      "title": "Magic Maker: How to Create Magic in Another World",
-      "type": "series",
-      "totalEvents": 18,
-      "uniqueUsers": 1,
-      "completionRate": 0.3636
     },
     {
       "contentId": "tt32897959",

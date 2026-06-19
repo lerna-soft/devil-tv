@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T01:14:52.808Z",
+  "generatedAt": "2026-06-19T01:15:04.463Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:14:42Z",
+      "updatedAt": "2026-06-19T01:14:44Z",
       "totalEvents": 500,
-      "totalStarts": 221,
+      "totalStarts": 222,
       "totalCompletions": 56,
       "totalPlaybackProgress": 246221.34157700546,
-      "uniqueContentCount": 101,
-      "lastActivityAt": "2026-06-19T01:14:42Z",
+      "uniqueContentCount": 100,
+      "lastActivityAt": "2026-06-19T01:14:44Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -178,11 +178,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 14,
+          "playCount": 15,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T01:14:42Z"
+          "lastSeenAt": "2026-06-19T01:14:44Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1239,18 +1239,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:07:00Z"
-        },
-        "tt21692408": {
-          "contentId": "tt21692408",
-          "imdbId": "tt21692408",
-          "tmdbId": "1011985",
-          "title": "Kung Fu Panda 4",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:06:48Z"
         }
       },
       "avgPlaybackProgress": 492.4427

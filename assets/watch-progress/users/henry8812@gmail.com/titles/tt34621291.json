@@ -2,10 +2,10 @@
   "imdbId": "tt34621291",
   "tmdbId": "258912",
   "lastSeason": 1,
-  "lastEpisode": 2,
+  "lastEpisode": 1,
   "progress": 0,
   "lastProgress": 0,
-  "updatedAt": "2026-06-18T16:51:48Z",
+  "updatedAt": "2026-06-19T00:24:07Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-18T16:36:11.087Z",
@@ -19,6 +19,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt34621291:s1e1:started:2026-06-19T00:24:07Z",
+      "contentId": "tt34621291",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt34621291",
+      "tmdbId": "258912",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-18T16:36:11.087Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-19T00:24:07Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt34621291:s1e2:started:2026-06-18T16:51:48Z",
       "contentId": "tt34621291",

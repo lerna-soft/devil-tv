@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T14:42:36.320Z",
+  "generatedAt": "2026-06-19T15:15:51.382Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T14:42:27Z",
+      "updatedAt": "2026-06-19T15:15:42Z",
       "totalEvents": 500,
       "totalStarts": 226,
       "totalCompletions": 57,
-      "totalPlaybackProgress": 251200.67934400545,
-      "uniqueContentCount": 95,
-      "lastActivityAt": "2026-06-19T14:42:27Z",
+      "totalPlaybackProgress": 255387.30149000545,
+      "uniqueContentCount": 94,
+      "lastActivityAt": "2026-06-19T15:15:42Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -179,11 +179,11 @@
           "tmdbId": "72213",
           "title": "Courageous",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
-          "maxProgressValue": 3242.033209,
+          "maxProgressValue": 4186.622146,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T14:42:27Z"
+          "lastSeenAt": "2026-06-19T15:15:42Z"
         },
         "tt34621291": {
           "contentId": "tt34621291",
@@ -1168,21 +1168,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:08:15Z"
-        },
-        "tt9777666": {
-          "contentId": "tt9777666",
-          "imdbId": "tt9777666",
-          "tmdbId": "588228",
-          "title": "La guerra del mañana",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:08:01Z"
         }
       },
-      "avgPlaybackProgress": 502.4014
+      "avgPlaybackProgress": 510.7746
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

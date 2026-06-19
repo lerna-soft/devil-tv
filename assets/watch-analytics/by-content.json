@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T14:42:36.319Z",
+  "generatedAt": "2026-06-19T15:15:51.380Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -3482,6 +3482,50 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt1630036",
+      "imdbId": "tt1630036",
+      "tmdbId": "72213",
+      "title": "Courageous",
+      "type": "movie",
+      "totalEvents": 4,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 7745.897171,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-19T15:15:42Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 4,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 7745.897171,
+          "lastSeenAt": "2026-06-19T15:15:42Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 7745.897171,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-19T15:15:42Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1936.4743
+    },
+    {
       "contentId": "tt26743760",
       "imdbId": "tt26743760",
       "tmdbId": "220542",
@@ -3812,50 +3856,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1630036",
-      "imdbId": "tt1630036",
-      "tmdbId": "72213",
-      "title": "Courageous",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 3559.275025,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-19T14:42:27Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 3559.275025,
-          "lastSeenAt": "2026-06-19T14:42:27Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 3559.275025,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T14:42:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1186.425
     },
     {
       "contentId": "tt27391124",
@@ -7837,50 +7837,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:08:15Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt9777666",
-      "imdbId": "tt9777666",
-      "tmdbId": "588228",
-      "title": "La guerra del mañana",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:08:01Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:08:01Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:08:01Z",
           "users": {
             "henry8812@gmail.com": true
           },

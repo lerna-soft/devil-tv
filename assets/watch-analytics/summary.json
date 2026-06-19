@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-19T01:15:04.457Z",
+  "generatedAt": "2026-06-19T01:15:35.465Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 250,
+  "totalStarts": 251,
   "totalCompletions": 57,
-  "overallCompletionRate": 0.228,
+  "overallCompletionRate": 0.2271,
   "trackedTitles": 129,
   "mostWatchedContent": [
     {
@@ -52,9 +52,9 @@
       "contentId": "tt34621291",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 15,
+      "totalEvents": 16,
       "uniqueUsers": 1,
-      "completionRate": 0.5
+      "completionRate": 0.4444
     },
     {
       "contentId": "tt32897959",

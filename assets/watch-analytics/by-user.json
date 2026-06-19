@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-19T01:17:34.862Z",
+  "generatedAt": "2026-06-19T01:19:33.787Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T01:14:47Z",
+      "updatedAt": "2026-06-19T01:14:48Z",
       "totalEvents": 500,
-      "totalStarts": 224,
+      "totalStarts": 225,
       "totalCompletions": 56,
       "totalPlaybackProgress": 246221.34157700546,
-      "uniqueContentCount": 99,
-      "lastActivityAt": "2026-06-19T01:14:47Z",
+      "uniqueContentCount": 98,
+      "lastActivityAt": "2026-06-19T01:14:48Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -178,11 +178,11 @@
           "tmdbId": "258912",
           "title": "Magic Maker: How to Create Magic in Another World",
           "type": "series",
-          "playCount": 17,
+          "playCount": 18,
           "completed": true,
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T01:14:47Z"
+          "lastSeenAt": "2026-06-19T01:14:48Z"
         },
         "tt34809853": {
           "contentId": "tt34809853",
@@ -1215,18 +1215,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:07:04Z"
-        },
-        "tt16366836": {
-          "contentId": "tt16366836",
-          "imdbId": "tt16366836",
-          "tmdbId": "912649",
-          "title": "Venom: El último baile",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:07:01Z"
         }
       },
       "avgPlaybackProgress": 492.4427

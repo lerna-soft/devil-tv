@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T00:37:11.521Z",
+  "generatedAt": "2026-06-19T00:49:28.048Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1845,7 +1845,7 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 54,
+      "totalEvents": 53,
       "totalStarts": 23,
       "totalCompletions": 21,
       "totalPlaybackProgress": 68763.86466040164,
@@ -1856,7 +1856,7 @@
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 54,
+          "playCount": 53,
           "completedCount": 21,
           "startedCount": 23,
           "totalPlaybackProgress": 68763.86466040164,
@@ -2177,7 +2177,7 @@
         "s3e8": {
           "season": 3,
           "episode": 8,
-          "totalEvents": 4,
+          "totalEvents": 3,
           "totalStarts": 1,
           "totalCompletions": 1,
           "totalPlaybackProgress": 6372.504164999999,
@@ -2189,7 +2189,7 @@
           "completionRate": 1
         }
       },
-      "avgPlaybackProgress": 1273.4049
+      "avgPlaybackProgress": 1297.4314
     },
     {
       "contentId": "tt34809853",
@@ -2674,71 +2674,27 @@
       "avgPlaybackProgress": 470.6627
     },
     {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
-    },
-    {
       "contentId": "tt34621291",
       "imdbId": "tt34621291",
       "tmdbId": "258912",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
-      "totalEvents": 8,
+      "totalEvents": 9,
       "totalStarts": 4,
-      "totalCompletions": 2,
-      "totalPlaybackProgress": 2840.264804,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 4260.281106,
       "uniqueUsers": 1,
-      "completionRate": 0.5,
-      "lastActivityAt": "2026-06-19T00:36:58Z",
+      "completionRate": 0.75,
+      "lastActivityAt": "2026-06-19T00:49:19Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 8,
-          "completedCount": 2,
+          "playCount": 9,
+          "completedCount": 3,
           "startedCount": 4,
-          "totalPlaybackProgress": 2840.264804,
-          "lastSeenAt": "2026-06-19T00:36:58Z",
+          "totalPlaybackProgress": 4260.281106,
+          "lastSeenAt": "2026-06-19T00:49:19Z",
           "lastSeason": 1,
           "lastEpisode": 4
         }
@@ -2747,16 +2703,16 @@
         "s1e4": {
           "season": 1,
           "episode": 4,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1420.016302,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-19T00:36:58Z",
+          "lastActivityAt": "2026-06-19T00:49:19Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e3": {
           "season": 1,
@@ -2801,7 +2757,51 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 355.0331
+      "avgPlaybackProgress": 473.3646
+    },
+    {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
     },
     {
       "contentId": "tt29552248",

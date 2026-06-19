@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-19T00:37:11.517Z",
+  "generatedAt": "2026-06-19T00:49:28.045Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
   "totalStarts": 247,
-  "totalCompletions": 55,
-  "overallCompletionRate": 0.2227,
+  "totalCompletions": 56,
+  "overallCompletionRate": 0.2267,
   "trackedTitles": 130,
   "mostWatchedContent": [
     {
@@ -28,7 +28,7 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 54,
+      "totalEvents": 53,
       "uniqueUsers": 1,
       "completionRate": 0.913
     },
@@ -73,20 +73,20 @@
       "completionRate": 0.3333
     },
     {
+      "contentId": "tt34621291",
+      "title": "Magic Maker: How to Create Magic in Another World",
+      "type": "series",
+      "totalEvents": 9,
+      "uniqueUsers": 1,
+      "completionRate": 0.75
+    },
+    {
       "contentId": "tt0899043",
       "title": "Amateur",
       "type": "movie",
       "totalEvents": 9,
       "uniqueUsers": 1,
       "completionRate": 0
-    },
-    {
-      "contentId": "tt34621291",
-      "title": "Magic Maker: How to Create Magic in Another World",
-      "type": "series",
-      "totalEvents": 8,
-      "uniqueUsers": 1,
-      "completionRate": 0.5
     }
   ]
 }

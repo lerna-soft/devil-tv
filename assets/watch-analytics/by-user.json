@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-21T01:42:51.601Z",
+  "generatedAt": "2026-06-21T05:21:13.177Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-19T15:15:42Z",
+      "updatedAt": "2026-06-21T05:21:03Z",
       "totalEvents": 500,
       "totalStarts": 226,
       "totalCompletions": 57,
       "totalPlaybackProgress": 255387.30149000545,
-      "uniqueContentCount": 94,
-      "lastActivityAt": "2026-06-19T15:15:42Z",
+      "uniqueContentCount": 93,
+      "lastActivityAt": "2026-06-21T05:21:03Z",
       "completedContentIds": [
         "tt34621291",
         "tt34809853",
@@ -177,13 +177,13 @@
           "contentId": "tt1630036",
           "imdbId": "tt1630036",
           "tmdbId": "72213",
-          "title": "Courageous",
+          "title": "La fuerza del honor",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
           "maxProgressValue": 4186.622146,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-19T15:15:42Z"
+          "lastSeenAt": "2026-06-21T05:21:03Z"
         },
         "tt34621291": {
           "contentId": "tt34621291",
@@ -1156,18 +1156,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:08:35Z"
-        },
-        "tt8367814": {
-          "contentId": "tt8367814",
-          "imdbId": "tt8367814",
-          "tmdbId": "522627",
-          "title": "The Gentlemen: Los señores de la mafia",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:08:15Z"
         }
       },
       "avgPlaybackProgress": 510.7746

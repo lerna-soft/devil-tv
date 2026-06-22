@@ -1,13 +1,21 @@
 {
-  "generatedAt": "2026-06-22T05:07:47.419Z",
+  "generatedAt": "2026-06-22T05:08:29.822Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 254,
+  "totalStarts": 255,
   "totalCompletions": 58,
-  "overallCompletionRate": 0.2283,
-  "trackedTitles": 120,
+  "overallCompletionRate": 0.2275,
+  "trackedTitles": 119,
   "mostWatchedContent": [
+    {
+      "contentId": "tt0965547",
+      "title": "Slam Dunk",
+      "type": "series",
+      "totalEvents": 102,
+      "uniqueUsers": 1,
+      "completionRate": 0.3621
+    },
     {
       "contentId": "tt2560140",
       "title": "Attack on Titan",
@@ -15,14 +23,6 @@
       "totalEvents": 102,
       "uniqueUsers": 1,
       "completionRate": 0.0714
-    },
-    {
-      "contentId": "tt0965547",
-      "title": "Slam Dunk",
-      "type": "series",
-      "totalEvents": 101,
-      "uniqueUsers": 1,
-      "completionRate": 0.3684
     },
     {
       "contentId": "tt0903747",

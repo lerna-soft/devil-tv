@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-22T07:37:06.956Z",
+  "generatedAt": "2026-06-22T12:59:00.282Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:818397:s1e1:started:2026-06-22T12:58:49Z",
+      "contentId": "818397",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "818397",
+      "title": "La memoria de un asesino",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T12:58:49.249Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T12:58:49Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e83:started:2026-06-22T06:48:05Z",
       "contentId": "tt0965547",
@@ -11802,27 +11823,6 @@
       "startedAt": "2026-05-23T00:37:47.772Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T00:37:50Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e8:started:2026-05-22T23:10:41Z",
-      "contentId": "tt1190634",
-      "episodeKey": "s5e8",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "season": 5,
-      "episode": 8,
-      "progress": 2618.228266414001,
-      "progressValue": 2618.228266414001,
-      "progressPercent": null,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T22:40:36.867Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T23:10:41Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

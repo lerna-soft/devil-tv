@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T06:12:15.070Z",
+  "generatedAt": "2026-06-22T06:25:39.360Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T06:12:05Z",
+      "updatedAt": "2026-06-22T06:25:30Z",
       "totalEvents": 500,
       "totalStarts": 238,
       "totalCompletions": 55,
       "totalPlaybackProgress": 239295.8964230054,
       "uniqueContentCount": 81,
-      "lastActivityAt": "2026-06-22T06:12:05Z",
+      "lastActivityAt": "2026-06-22T06:25:30Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -142,11 +142,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 122,
+          "playCount": 123,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T06:12:05Z"
+          "lastSeenAt": "2026-06-22T06:25:30Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -694,7 +694,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 44,
+          "playCount": 43,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

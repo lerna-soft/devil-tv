@@ -1,6 +1,6 @@
 {
-  "version": 430,
-  "generatedAt": "2026-06-22T13:39:43.478Z",
+  "version": 431,
+  "generatedAt": "2026-06-22T13:39:55.439Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29313,6 +29313,22 @@
       "releaseDate": null,
       "overview": "Un antiguo asesino en serie con Alzheimer lucha para proteger a su hija de su novio psicótico.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/lUC5ljVVAuf2d2hoonmBzK6aOlW.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "339396",
+      "imdbId": null,
+      "title": "Memorias de un asesino internacional",
+      "year": 2016,
+      "releaseDate": null,
+      "overview": "Sam Larson (Kevin James), un apacible escritor, es confundido con un sicario cuando su novela de ficción sobre un asesino internacional se publica como una historia real. Cuando el libro se convierte en un éxito, Sam Larson es secuestrado, trasladado fuera del país e involucrado en un caso de asesinato.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wYxl8QJo5R8NiEeXgtzhLgHPzhS.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

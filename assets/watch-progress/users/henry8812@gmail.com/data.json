@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T05:24:40Z",
+  "updatedAt": "2026-06-22T05:24:56Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 66,
-      "progress": 0,
-      "lastProgress": 0,
-      "updatedAt": "2026-06-22T05:24:40Z",
+      "lastEpisode": 64,
+      "progress": 1373.344194,
+      "lastProgress": 1373.344194,
+      "updatedAt": "2026-06-22T05:24:56Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2542,8 +2542,8 @@
         },
         "s1e64": {
           "startedAt": "2026-06-22T05:23:05.787Z",
-          "completedAt": "",
-          "lastProgress": 0
+          "completedAt": "2026-06-22T05:24:54.799Z",
+          "lastProgress": 1373.344194
         },
         "s1e65": {
           "startedAt": "2026-06-22T05:24:25.439Z",
@@ -3290,12 +3290,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 66,
-    "progress": 0,
-    "updatedAt": "2026-06-22T05:24:40Z"
+    "episode": 64,
+    "progress": 1373.344194,
+    "updatedAt": "2026-06-22T05:24:56Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e64:completed:2026-06-22T05:24:56Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e64",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 64,
+      "progress": 1373.344194,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-22T05:23:05.787Z",
+      "completedAt": "2026-06-22T05:24:54.799Z",
+      "updatedAt": "2026-06-22T05:24:56Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e66:started:2026-06-22T05:24:40Z",
       "contentId": "tt0965547",
@@ -16760,33 +16787,6 @@
       "startedAt": "2026-05-22T20:31:55.007Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:31:56Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:15070:s1e1:preference:2026-05-22T20:14:56Z",
-      "contentId": "15070",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "",
-      "tmdbId": "15070",
-      "title": "Invicto",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:14:56Z",
       "country": "",
       "countryName": "",
       "city": "",

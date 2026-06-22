@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-22T06:47:47.631Z",
+  "generatedAt": "2026-06-22T06:48:18.602Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e83:started:2026-06-22T06:48:05Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e83",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 83,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T06:48:04.316Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T06:48:05Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e82:started:2026-06-22T06:47:37Z",
       "contentId": "tt0965547",
@@ -11802,27 +11823,6 @@
       "startedAt": "2026-05-22T22:40:36.867Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T23:10:41Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e8:started:2026-05-22T22:40:38Z",
-      "contentId": "tt1190634",
-      "episodeKey": "s5e8",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "season": 5,
-      "episode": 8,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T22:40:36.867Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T22:40:38Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

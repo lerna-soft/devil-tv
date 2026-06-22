@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-22T06:34:15.568Z",
+  "generatedAt": "2026-06-22T06:37:21.159Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 267,
-  "totalCompletions": 55,
-  "overallCompletionRate": 0.2022,
+  "totalStarts": 268,
+  "totalCompletions": 54,
+  "overallCompletionRate": 0.2015,
   "trackedTitles": 110,
   "mostWatchedContent": [
     {
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 125,
+      "totalEvents": 126,
       "uniqueUsers": 1,
-      "completionRate": 0.2949
+      "completionRate": 0.2911
     },
     {
       "contentId": "tt2560140",
@@ -25,20 +25,20 @@
       "completionRate": 0.0714
     },
     {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 41,
-      "uniqueUsers": 1,
-      "completionRate": 0.9412
-    },
-    {
       "contentId": "tt34809853",
       "title": "Teach You a Lesson",
       "type": "series",
       "totalEvents": 40,
       "uniqueUsers": 1,
       "completionRate": 0.3
+    },
+    {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 40,
+      "uniqueUsers": 1,
+      "completionRate": 0.8824
     },
     {
       "contentId": "tt34621291",

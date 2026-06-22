@@ -1,6 +1,6 @@
 {
-  "version": 428,
-  "generatedAt": "2026-06-22T12:58:44.009Z",
+  "version": 429,
+  "generatedAt": "2026-06-22T12:58:56.341Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29281,6 +29281,22 @@
       "releaseDate": null,
       "overview": "Alex, un asesino a sueldo, descubre que se ha convertido en un objetivo después de que se niega a completar un trabajo para una peligrosa organización criminal. Con el sindicato del crimen y el FBI persiguiéndolo, Alex tiene las habilidades para mantenerse a la vanguardia, excepto por una cosa: está luchando con una pérdida de memoria severa que afecta todos sus movimientos. Alex debe cuestionar cada una de sus acciones y en quién puede confiar en última instancia.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/zUa7VyFnt4Wj3NYIlh8fn8xkVqq.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "669125",
+      "imdbId": null,
+      "title": "La Memoria de un Asesino",
+      "year": 2020,
+      "releaseDate": null,
+      "overview": "La historia tiene lugar en el año 945 d.C., cuando el enviado especial Pang Cunyi fue a las Llanuras Centrales para negociar la paz y luego regresó a Changlefu para el salón de culto de Fujian. Inesperadamente, el Asesino Tang del Sur aprovechó la oportunidad para colarse en la Mansión Changle para matar, y el Reino de Fujian fue destruido de la noche a la mañana. En un momento crítico, Pang Cunyi fue rescatada por la chica que recogía té, Mo Ji. Pang Cunyi, que ha perdido la memoria, usa el seudónimo de \"Anónimo\", y conoció y se hizo hermano de Ajiu, un asistente de tienda de té, y Ma Shi, un médico descalzo. Recuerdos esporádicos destellaban en la mente de \"sin nombre\" de vez en cuando.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/o6ybMP6f6iDU2wcTI9zL3ZqGg4Z.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

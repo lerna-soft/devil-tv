@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:11:44.273Z",
+  "generatedAt": "2026-06-22T05:22:38.872Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 106,
-      "totalStarts": 61,
+      "totalEvents": 107,
+      "totalStarts": 62,
       "totalCompletions": 22,
       "totalPlaybackProgress": 33944.08014633075,
       "uniqueUsers": 1,
-      "completionRate": 0.3607,
-      "lastActivityAt": "2026-06-22T05:11:33Z",
+      "completionRate": 0.3548,
+      "lastActivityAt": "2026-06-22T05:22:30Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 106,
+          "playCount": 107,
           "completedCount": 22,
-          "startedCount": 61,
+          "startedCount": 62,
           "totalPlaybackProgress": 33944.08014633075,
-          "lastSeenAt": "2026-06-22T05:11:33Z",
+          "lastSeenAt": "2026-06-22T05:22:30Z",
           "lastSeason": 1,
-          "lastEpisode": 62
+          "lastEpisode": 63
         }
       },
       "episodes": {
+        "s1e63": {
+          "season": 1,
+          "episode": 63,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:22:30Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e62": {
           "season": 1,
           "episode": 62,
@@ -883,7 +897,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 320.2272
+      "avgPlaybackProgress": 317.2344
     },
     {
       "contentId": "tt2560140",
@@ -7541,50 +7555,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:09:23Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2345759",
-      "imdbId": "tt2345759",
-      "tmdbId": "282035",
-      "title": "La momia",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:09:21Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:09:21Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:09:21Z",
           "users": {
             "henry8812@gmail.com": true
           },

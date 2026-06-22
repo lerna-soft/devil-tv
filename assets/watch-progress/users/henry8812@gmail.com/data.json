@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T05:11:33Z",
+  "updatedAt": "2026-06-22T05:22:30Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 62,
+      "lastEpisode": 63,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-22T05:11:33Z",
+      "updatedAt": "2026-06-22T05:22:30Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2532,6 +2532,11 @@
         },
         "s1e62": {
           "startedAt": "2026-06-22T05:11:32.147Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e63": {
+          "startedAt": "2026-06-22T05:22:28.863Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3270,12 +3275,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 62,
+    "episode": 63,
     "progress": 0,
-    "updatedAt": "2026-06-22T05:11:33Z"
+    "updatedAt": "2026-06-22T05:22:30Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e63:started:2026-06-22T05:22:30Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e63",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 63,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T05:22:28.863Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T05:22:30Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e62:started:2026-06-22T05:11:33Z",
       "contentId": "tt0965547",
@@ -16740,33 +16772,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:09:23Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt2345759:s1e1:preference:2026-05-22T20:09:21Z",
-      "contentId": "tt2345759",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2345759",
-      "tmdbId": "282035",
-      "title": "La momia",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:09:21Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:24:48.619Z",
+  "generatedAt": "2026-06-22T05:25:06.269Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 110,
+      "totalEvents": 111,
       "totalStarts": 65,
-      "totalCompletions": 22,
-      "totalPlaybackProgress": 33944.08014633075,
+      "totalCompletions": 23,
+      "totalPlaybackProgress": 35317.424340330756,
       "uniqueUsers": 1,
-      "completionRate": 0.3385,
-      "lastActivityAt": "2026-06-22T05:24:40Z",
+      "completionRate": 0.3538,
+      "lastActivityAt": "2026-06-22T05:24:56Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 110,
-          "completedCount": 22,
+          "playCount": 111,
+          "completedCount": 23,
           "startedCount": 65,
-          "totalPlaybackProgress": 33944.08014633075,
-          "lastSeenAt": "2026-06-22T05:24:40Z",
+          "totalPlaybackProgress": 35317.424340330756,
+          "lastSeenAt": "2026-06-22T05:24:56Z",
           "lastSeason": 1,
-          "lastEpisode": 66
+          "lastEpisode": 64
         }
       },
       "episodes": {
+        "s1e64": {
+          "season": 1,
+          "episode": 64,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1373.344194,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:24:56Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e66": {
           "season": 1,
           "episode": 66,
@@ -51,20 +65,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-22T05:24:27Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e64": {
-          "season": 1,
-          "episode": 64,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-22T05:23:07Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -939,7 +939,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 308.5825
+      "avgPlaybackProgress": 318.175
     },
     {
       "contentId": "tt2560140",
@@ -4578,50 +4578,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "15070",
-      "imdbId": "",
-      "tmdbId": "15070",
-      "title": "Invicto",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-06T03:13:20Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-06T03:13:20Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-06T03:13:20Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt8036976",
       "imdbId": "tt8036976",
       "tmdbId": "1198994",
@@ -5617,6 +5573,50 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-06T22:44:55Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "15070",
+      "imdbId": "",
+      "tmdbId": "15070",
+      "title": "Invicto",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-06T03:13:20Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-06T03:13:20Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-06T03:13:20Z",
           "users": {
             "henry8812@gmail.com": true
           },

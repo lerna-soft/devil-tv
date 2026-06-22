@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:24:48.621Z",
+  "generatedAt": "2026-06-22T05:25:06.271Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:24:40Z",
+      "updatedAt": "2026-06-22T05:24:56Z",
       "totalEvents": 500,
       "totalStarts": 234,
-      "totalCompletions": 58,
-      "totalPlaybackProgress": 256774.85629600546,
+      "totalCompletions": 59,
+      "totalPlaybackProgress": 258148.20049000546,
       "uniqueContentCount": 83,
-      "lastActivityAt": "2026-06-22T05:24:40Z",
+      "lastActivityAt": "2026-06-22T05:24:56Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -47,7 +47,7 @@
           "tmdbId": "15070",
           "title": "Invicto",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -155,11 +155,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 110,
+          "playCount": 111,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:24:40Z"
+          "lastSeenAt": "2026-06-22T05:24:56Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1038,7 +1038,7 @@
           "lastSeenAt": "2026-05-22T20:31:56Z"
         }
       },
-      "avgPlaybackProgress": 513.5497
+      "avgPlaybackProgress": 516.2964
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

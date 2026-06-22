@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:36:21.993Z",
+  "generatedAt": "2026-06-22T05:39:17.429Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:36:12Z",
+      "updatedAt": "2026-06-22T05:39:08Z",
       "totalEvents": 500,
       "totalStarts": 234,
       "totalCompletions": 59,
-      "totalPlaybackProgress": 257353.44337500544,
-      "uniqueContentCount": 82,
-      "lastActivityAt": "2026-06-22T05:36:12Z",
+      "totalPlaybackProgress": 252394.08528400544,
+      "uniqueContentCount": 81,
+      "lastActivityAt": "2026-06-22T05:39:08Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -23,7 +23,6 @@
         "tt0903747"
       ],
       "inProgressContentIds": [
-        "274870",
         "1632181",
         "tt1630036",
         "tt2032557",
@@ -76,18 +75,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-11T03:48:09Z"
-        },
-        "274870": {
-          "contentId": "274870",
-          "imdbId": "",
-          "tmdbId": "274870",
-          "title": "Passengers",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 4959.358091,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T21:10:08Z"
         },
         "405775": {
           "contentId": "405775",
@@ -155,11 +142,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 113,
+          "playCount": 114,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:36:12Z"
+          "lastSeenAt": "2026-06-22T05:39:08Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1026,7 +1013,7 @@
           "lastSeenAt": "2026-05-22T23:10:41Z"
         }
       },
-      "avgPlaybackProgress": 514.7069
+      "avgPlaybackProgress": 504.7882
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

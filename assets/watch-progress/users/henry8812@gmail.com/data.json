@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T06:47:37Z",
+  "updatedAt": "2026-06-22T06:48:05Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 82,
+      "lastEpisode": 83,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-22T06:47:37Z",
+      "updatedAt": "2026-06-22T06:48:05Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2632,6 +2632,11 @@
         },
         "s1e82": {
           "startedAt": "2026-06-22T06:47:36.348Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e83": {
+          "startedAt": "2026-06-22T06:48:04.316Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3370,12 +3375,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 82,
+    "episode": 83,
     "progress": 0,
-    "updatedAt": "2026-06-22T06:47:37Z"
+    "updatedAt": "2026-06-22T06:48:05Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e83:started:2026-06-22T06:48:05Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e83",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 83,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T06:48:04.316Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T06:48:05Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e82:started:2026-06-22T06:47:37Z",
       "contentId": "tt0965547",
@@ -16840,33 +16872,6 @@
       "startedAt": "2026-05-22T22:40:36.867Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T23:10:41Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1190634:s5e8:started:2026-05-22T22:40:38Z",
-      "contentId": "tt1190634",
-      "episodeKey": "s5e8",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1190634",
-      "tmdbId": "76479",
-      "title": "The Boys",
-      "type": "series",
-      "season": 5,
-      "episode": 8,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T22:40:36.867Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T22:40:38Z",
       "country": "",
       "countryName": "",
       "city": "",

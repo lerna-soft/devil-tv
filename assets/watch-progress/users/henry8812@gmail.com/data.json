@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T05:24:56Z",
+  "updatedAt": "2026-06-22T05:31:26Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 64,
-      "progress": 1373.344194,
-      "lastProgress": 1373.344194,
-      "updatedAt": "2026-06-22T05:24:56Z",
+      "lastEpisode": 67,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-22T05:31:26Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2552,6 +2552,11 @@
         },
         "s1e66": {
           "startedAt": "2026-06-22T05:24:39.235Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e67": {
+          "startedAt": "2026-06-22T05:31:25.287Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3290,12 +3295,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 64,
-    "progress": 1373.344194,
-    "updatedAt": "2026-06-22T05:24:56Z"
+    "episode": 67,
+    "progress": 0,
+    "updatedAt": "2026-06-22T05:31:26Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e67:started:2026-06-22T05:31:26Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e67",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 67,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T05:31:25.287Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T05:31:26Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e64:completed:2026-06-22T05:24:56Z",
       "contentId": "tt0965547",
@@ -16760,33 +16792,6 @@
       "startedAt": "2026-05-22T19:53:53.953Z",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:40:04Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt7784604:s1e1:started:2026-05-22T20:31:56Z",
-      "contentId": "tt7784604",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt7784604",
-      "tmdbId": "493922",
-      "title": "Hereditary",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T20:31:55.007Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:31:56Z",
       "country": "",
       "countryName": "",
       "city": "",

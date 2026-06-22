@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:08:29.825Z",
+  "generatedAt": "2026-06-22T05:09:23.497Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 102,
-      "totalStarts": 58,
+      "totalEvents": 103,
+      "totalStarts": 59,
       "totalCompletions": 21,
       "totalPlaybackProgress": 32556.525340330747,
       "uniqueUsers": 1,
-      "completionRate": 0.3621,
-      "lastActivityAt": "2026-06-22T05:08:21Z",
+      "completionRate": 0.3559,
+      "lastActivityAt": "2026-06-22T05:09:11Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 102,
+          "playCount": 103,
           "completedCount": 21,
-          "startedCount": 58,
+          "startedCount": 59,
           "totalPlaybackProgress": 32556.525340330747,
-          "lastSeenAt": "2026-06-22T05:08:21Z",
+          "lastSeenAt": "2026-06-22T05:09:11Z",
           "lastSeason": 1,
-          "lastEpisode": 59
+          "lastEpisode": 60
         }
       },
       "episodes": {
+        "s1e60": {
+          "season": 1,
+          "episode": 60,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:09:11Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e59": {
           "season": 1,
           "episode": 59,
@@ -841,7 +855,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 319.1816
+      "avgPlaybackProgress": 316.0828
     },
     {
       "contentId": "tt2560140",
@@ -7631,50 +7645,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:09:09Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt6806448",
-      "imdbId": "tt6806448",
-      "tmdbId": "384018",
-      "title": "Fast & Furious: Hobbs & Shaw",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:08:52Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:08:52Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:08:52Z",
           "users": {
             "henry8812@gmail.com": true
           },

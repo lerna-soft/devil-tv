@@ -1,6 +1,6 @@
 {
-  "version": 429,
-  "generatedAt": "2026-06-22T12:58:56.341Z",
+  "version": 430,
+  "generatedAt": "2026-06-22T13:39:43.478Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29297,6 +29297,22 @@
       "releaseDate": null,
       "overview": "La historia tiene lugar en el año 945 d.C., cuando el enviado especial Pang Cunyi fue a las Llanuras Centrales para negociar la paz y luego regresó a Changlefu para el salón de culto de Fujian. Inesperadamente, el Asesino Tang del Sur aprovechó la oportunidad para colarse en la Mansión Changle para matar, y el Reino de Fujian fue destruido de la noche a la mañana. En un momento crítico, Pang Cunyi fue rescatada por la chica que recogía té, Mo Ji. Pang Cunyi, que ha perdido la memoria, usa el seudónimo de \"Anónimo\", y conoció y se hizo hermano de Ajiu, un asistente de tienda de té, y Ma Shi, un médico descalzo. Recuerdos esporádicos destellaban en la mente de \"sin nombre\" de vez en cuando.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/o6ybMP6f6iDU2wcTI9zL3ZqGg4Z.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "432836",
+      "imdbId": null,
+      "title": "Memorias de un asesino",
+      "year": 2017,
+      "releaseDate": null,
+      "overview": "Un antiguo asesino en serie con Alzheimer lucha para proteger a su hija de su novio psicótico.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/lUC5ljVVAuf2d2hoonmBzK6aOlW.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:31:39.841Z",
+  "generatedAt": "2026-06-22T05:36:21.991Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 112,
+      "totalEvents": 113,
       "totalStarts": 66,
       "totalCompletions": 23,
-      "totalPlaybackProgress": 35317.424340330756,
+      "totalPlaybackProgress": 35479.94324433075,
       "uniqueUsers": 1,
       "completionRate": 0.3485,
-      "lastActivityAt": "2026-06-22T05:31:26Z",
+      "lastActivityAt": "2026-06-22T05:36:12Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 112,
+          "playCount": 113,
           "completedCount": 23,
           "startedCount": 66,
-          "totalPlaybackProgress": 35317.424340330756,
-          "lastSeenAt": "2026-06-22T05:31:26Z",
+          "totalPlaybackProgress": 35479.94324433075,
+          "lastSeenAt": "2026-06-22T05:36:12Z",
           "lastSeason": 1,
-          "lastEpisode": 67
+          "lastEpisode": 1
         }
       },
       "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1712.4720743537414,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:36:12Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e67": {
           "season": 1,
           "episode": 67,
@@ -195,20 +209,6 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 8,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 1549.9531703537416,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T16:34:02Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
         },
         "s1e55": {
           "season": 1,
@@ -953,7 +953,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 315.3341
+      "avgPlaybackProgress": 313.9818
     },
     {
       "contentId": "tt2560140",
@@ -5056,50 +5056,6 @@
       "avgPlaybackProgress": 1309.1141
     },
     {
-      "contentId": "274870",
-      "imdbId": "",
-      "tmdbId": "274870",
-      "title": "Passengers",
-      "type": "movie",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 5916.63411,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T21:10:08Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 2,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 5916.63411,
-          "lastSeenAt": "2026-05-22T21:10:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 5916.63411,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T21:10:08Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 2958.3171
-    },
-    {
       "contentId": "tt33612209",
       "imdbId": "tt33612209",
       "tmdbId": "1314481",
@@ -7442,6 +7398,50 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "274870",
+      "imdbId": "",
+      "tmdbId": "274870",
+      "title": "Passengers",
+      "type": "movie",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 4959.358091,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-22T21:10:08Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 4959.358091,
+          "lastSeenAt": "2026-05-22T21:10:08Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 4959.358091,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-22T21:10:08Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 4959.3581
     },
     {
       "contentId": "tt33714084",

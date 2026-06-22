@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:31:39.842Z",
+  "generatedAt": "2026-06-22T05:36:21.993Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:31:26Z",
+      "updatedAt": "2026-06-22T05:36:12Z",
       "totalEvents": 500,
       "totalStarts": 234,
       "totalCompletions": 59,
-      "totalPlaybackProgress": 258148.20049000546,
+      "totalPlaybackProgress": 257353.44337500544,
       "uniqueContentCount": 82,
-      "lastActivityAt": "2026-06-22T05:31:26Z",
+      "lastActivityAt": "2026-06-22T05:36:12Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -83,7 +83,7 @@
           "tmdbId": "274870",
           "title": "Passengers",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 4959.358091,
           "maxProgressPercent": 0,
@@ -155,11 +155,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 112,
+          "playCount": 113,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:31:26Z"
+          "lastSeenAt": "2026-06-22T05:36:12Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1026,7 +1026,7 @@
           "lastSeenAt": "2026-05-22T23:10:41Z"
         }
       },
-      "avgPlaybackProgress": 516.2964
+      "avgPlaybackProgress": 514.7069
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

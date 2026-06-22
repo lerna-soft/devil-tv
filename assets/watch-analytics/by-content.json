@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T13:40:55.098Z",
+  "generatedAt": "2026-06-22T14:02:33.509Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2365,21 +2365,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 37,
-      "totalStarts": 16,
+      "totalEvents": 36,
+      "totalStarts": 15,
       "totalCompletions": 14,
-      "totalPlaybackProgress": 45401.96995940162,
+      "totalPlaybackProgress": 42687.28817440162,
       "uniqueUsers": 1,
-      "completionRate": 0.875,
+      "completionRate": 0.9333,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 37,
+          "playCount": 36,
           "completedCount": 14,
-          "startedCount": 16,
-          "totalPlaybackProgress": 45401.96995940162,
+          "startedCount": 15,
+          "totalPlaybackProgress": 42687.28817440162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2599,19 +2599,19 @@
         "s4e2": {
           "season": 4,
           "episode": 2,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
-          "totalPlaybackProgress": 5471.703076,
+          "totalPlaybackProgress": 2757.021291,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T05:05:04Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1227.0803
+      "avgPlaybackProgress": 1185.758
     },
     {
       "contentId": "tt34621291",
@@ -4066,6 +4066,76 @@
       "avgPlaybackProgress": 0
     },
     {
+      "contentId": "tt35707374",
+      "imdbId": "tt35707374",
+      "tmdbId": "291339",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "totalEvents": 3,
+      "totalStarts": 2,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-22T14:02:21Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 2,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-22T14:02:21Z",
+          "lastSeason": 1,
+          "lastEpisode": 2
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T12:12:49Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T14:02:21Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-22T13:40:43Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt27391124",
       "imdbId": "tt27391124",
       "tmdbId": "1181678",
@@ -4572,62 +4642,6 @@
         }
       },
       "avgPlaybackProgress": 851.4785
-    },
-    {
-      "contentId": "tt35707374",
-      "imdbId": "tt35707374",
-      "tmdbId": "291339",
-      "title": "Memoria de un Asesino",
-      "type": "series",
-      "totalEvents": 2,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-22T13:40:43Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-22T13:40:43Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T12:12:49Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-06-22T13:40:43Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "tt10676052",

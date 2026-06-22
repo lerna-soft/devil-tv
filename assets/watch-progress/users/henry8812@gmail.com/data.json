@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T06:00:19Z",
+  "updatedAt": "2026-06-22T06:00:21Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 74,
+      "lastEpisode": 75,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-22T06:00:19Z",
+      "updatedAt": "2026-06-22T06:00:21Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2592,6 +2592,11 @@
         },
         "s1e74": {
           "startedAt": "2026-06-22T06:00:18.004Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e75": {
+          "startedAt": "2026-06-22T06:00:19.631Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3330,12 +3335,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 74,
+    "episode": 75,
     "progress": 0,
-    "updatedAt": "2026-06-22T06:00:19Z"
+    "updatedAt": "2026-06-22T06:00:21Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e75:started:2026-06-22T06:00:21Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e75",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 75,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T06:00:19.631Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T06:00:21Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e74:started:2026-06-22T06:00:19Z",
       "contentId": "tt0965547",
@@ -16800,33 +16832,6 @@
       "startedAt": "2026-05-22T22:02:52.606Z",
       "completedAt": "2026-05-22T22:05:34.699Z",
       "updatedAt": "2026-05-22T22:05:37Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s3e11:started:2026-05-22T22:02:54Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s3e11",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 3,
-      "episode": 11,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-22T22:02:52.606Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T22:02:54Z",
       "country": "",
       "countryName": "",
       "city": "",

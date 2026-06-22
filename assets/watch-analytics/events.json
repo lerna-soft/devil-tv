@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-22T05:09:43.447Z",
+  "generatedAt": "2026-06-22T05:11:44.270Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e62:started:2026-06-22T05:11:33Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e62",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 62,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T05:11:32.147Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T05:11:33Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e59:completed:2026-06-22T05:09:26Z",
       "contentId": "tt0965547",
@@ -11802,27 +11823,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:09:21Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt4972582:s1e1:preference:2026-05-22T20:09:16Z",
-      "contentId": "tt4972582",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt4972582",
-      "tmdbId": "381288",
-      "title": "Múltiple",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:09:16Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:07:47.425Z",
+  "generatedAt": "2026-06-22T05:08:29.827Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:07:34Z",
+      "updatedAt": "2026-06-22T05:08:21Z",
       "totalEvents": 500,
-      "totalStarts": 226,
+      "totalStarts": 227,
       "totalCompletions": 57,
       "totalPlaybackProgress": 255387.30149000545,
-      "uniqueContentCount": 91,
-      "lastActivityAt": "2026-06-22T05:07:34Z",
+      "uniqueContentCount": 90,
+      "lastActivityAt": "2026-06-22T05:08:21Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -179,11 +179,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 101,
+          "playCount": 102,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:07:34Z"
+          "lastSeenAt": "2026-06-22T05:08:21Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1120,18 +1120,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:08:52Z"
-        },
-        "tt6966692": {
-          "contentId": "tt6966692",
-          "imdbId": "tt6966692",
-          "tmdbId": "490132",
-          "title": "Green Book",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:08:47Z"
         }
       },
       "avgPlaybackProgress": 510.7746

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T04:56:49.698Z",
+  "generatedAt": "2026-06-22T05:07:47.423Z",
   "items": [
     {
       "contentId": "tt2560140",
@@ -1017,22 +1017,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 100,
+      "totalEvents": 101,
       "totalStarts": 57,
       "totalCompletions": 21,
       "totalPlaybackProgress": 32556.525340330747,
       "uniqueUsers": 1,
       "completionRate": 0.3684,
-      "lastActivityAt": "2026-06-04T17:54:20Z",
+      "lastActivityAt": "2026-06-22T05:07:34Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 100,
+          "playCount": 101,
           "completedCount": 21,
           "startedCount": 57,
           "totalPlaybackProgress": 32556.525340330747,
-          "lastSeenAt": "2026-06-04T17:54:20Z",
+          "lastSeenAt": "2026-06-22T05:07:34Z",
           "lastSeason": 1,
           "lastEpisode": 58
         }
@@ -1041,12 +1041,12 @@
         "s1e58": {
           "season": 1,
           "episode": 58,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-04T17:54:20Z",
+          "lastActivityAt": "2026-06-22T05:07:34Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1837,7 +1837,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 325.5653
+      "avgPlaybackProgress": 322.3418
     },
     {
       "contentId": "tt0903747",
@@ -7705,50 +7705,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:08:47Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt2386490",
-      "imdbId": "tt2386490",
-      "tmdbId": "166428",
-      "title": "Cómo entrenar a tu dragón 3",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:08:39Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:08:39Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:08:39Z",
           "users": {
             "henry8812@gmail.com": true
           },

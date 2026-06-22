@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:09:32.585Z",
+  "generatedAt": "2026-06-22T05:09:43.450Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 104,
+      "totalEvents": 105,
       "totalStarts": 60,
-      "totalCompletions": 21,
-      "totalPlaybackProgress": 32556.525340330747,
+      "totalCompletions": 22,
+      "totalPlaybackProgress": 33944.08014633075,
       "uniqueUsers": 1,
-      "completionRate": 0.35,
-      "lastActivityAt": "2026-06-22T05:09:17Z",
+      "completionRate": 0.3667,
+      "lastActivityAt": "2026-06-22T05:09:26Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 104,
-          "completedCount": 21,
+          "playCount": 105,
+          "completedCount": 22,
           "startedCount": 60,
-          "totalPlaybackProgress": 32556.525340330747,
-          "lastSeenAt": "2026-06-22T05:09:17Z",
+          "totalPlaybackProgress": 33944.08014633075,
+          "lastSeenAt": "2026-06-22T05:09:26Z",
           "lastSeason": 1,
-          "lastEpisode": 61
+          "lastEpisode": 59
         }
       },
       "episodes": {
+        "s1e59": {
+          "season": 1,
+          "episode": 59,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1387.554806,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:09:26Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e61": {
           "season": 1,
           "episode": 61,
@@ -51,20 +65,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-22T05:09:11Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e59": {
-          "season": 1,
-          "episode": 59,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-22T05:08:21Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -869,7 +869,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 313.0435
+      "avgPlaybackProgress": 323.277
     },
     {
       "contentId": "tt2560140",
@@ -7615,50 +7615,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:09:16Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt3766354",
-      "imdbId": "tt3766354",
-      "tmdbId": "345887",
-      "title": "The Equalizer 2",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:09:09Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:09:09Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:09:09Z",
           "users": {
             "henry8812@gmail.com": true
           },

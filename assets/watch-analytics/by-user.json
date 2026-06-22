@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:09:32.587Z",
+  "generatedAt": "2026-06-22T05:09:43.452Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:09:17Z",
+      "updatedAt": "2026-06-22T05:09:26Z",
       "totalEvents": 500,
       "totalStarts": 229,
-      "totalCompletions": 57,
-      "totalPlaybackProgress": 255387.30149000545,
-      "uniqueContentCount": 89,
-      "lastActivityAt": "2026-06-22T05:09:17Z",
+      "totalCompletions": 58,
+      "totalPlaybackProgress": 256774.85629600546,
+      "uniqueContentCount": 88,
+      "lastActivityAt": "2026-06-22T05:09:26Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -179,11 +179,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 104,
+          "playCount": 105,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:09:17Z"
+          "lastSeenAt": "2026-06-22T05:09:26Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1096,21 +1096,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:09:16Z"
-        },
-        "tt3766354": {
-          "contentId": "tt3766354",
-          "imdbId": "tt3766354",
-          "tmdbId": "345887",
-          "title": "The Equalizer 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:09:09Z"
         }
       },
-      "avgPlaybackProgress": 510.7746
+      "avgPlaybackProgress": 513.5497
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

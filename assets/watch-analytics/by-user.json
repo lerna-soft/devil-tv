@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:22:38.874Z",
+  "generatedAt": "2026-06-22T05:23:19.583Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:22:30Z",
+      "updatedAt": "2026-06-22T05:23:07Z",
       "totalEvents": 500,
-      "totalStarts": 231,
+      "totalStarts": 232,
       "totalCompletions": 58,
       "totalPlaybackProgress": 256774.85629600546,
-      "uniqueContentCount": 86,
-      "lastActivityAt": "2026-06-22T05:22:30Z",
+      "uniqueContentCount": 85,
+      "lastActivityAt": "2026-06-22T05:23:07Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -179,11 +179,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 107,
+          "playCount": 108,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:22:30Z"
+          "lastSeenAt": "2026-06-22T05:23:07Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1060,18 +1060,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T20:31:56Z"
-        },
-        "tt3344680": {
-          "contentId": "tt3344680",
-          "imdbId": "tt3344680",
-          "tmdbId": "348893",
-          "title": "Boyka: Invicto IV",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:09:23Z"
         }
       },
       "avgPlaybackProgress": 513.5497

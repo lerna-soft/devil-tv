@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-22T05:22:30Z",
+  "updatedAt": "2026-06-22T05:23:07Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2225,10 +2225,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 63,
+      "lastEpisode": 64,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-22T05:22:30Z",
+      "updatedAt": "2026-06-22T05:23:07Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2537,6 +2537,11 @@
         },
         "s1e63": {
           "startedAt": "2026-06-22T05:22:28.863Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e64": {
+          "startedAt": "2026-06-22T05:23:05.787Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3275,12 +3280,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 63,
+    "episode": 64,
     "progress": 0,
-    "updatedAt": "2026-06-22T05:22:30Z"
+    "updatedAt": "2026-06-22T05:23:07Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e64:started:2026-06-22T05:23:07Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e64",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 64,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-22T05:23:05.787Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T05:23:07Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e63:started:2026-06-22T05:22:30Z",
       "contentId": "tt0965547",
@@ -16745,33 +16777,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:10:40Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt3344680:s1e1:preference:2026-05-22T20:09:23Z",
-      "contentId": "tt3344680",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt3344680",
-      "tmdbId": "348893",
-      "title": "Boyka: Invicto IV",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:09:23Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:22:38.872Z",
+  "generatedAt": "2026-06-22T05:23:19.581Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 107,
-      "totalStarts": 62,
+      "totalEvents": 108,
+      "totalStarts": 63,
       "totalCompletions": 22,
       "totalPlaybackProgress": 33944.08014633075,
       "uniqueUsers": 1,
-      "completionRate": 0.3548,
-      "lastActivityAt": "2026-06-22T05:22:30Z",
+      "completionRate": 0.3492,
+      "lastActivityAt": "2026-06-22T05:23:07Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 107,
+          "playCount": 108,
           "completedCount": 22,
-          "startedCount": 62,
+          "startedCount": 63,
           "totalPlaybackProgress": 33944.08014633075,
-          "lastSeenAt": "2026-06-22T05:22:30Z",
+          "lastSeenAt": "2026-06-22T05:23:07Z",
           "lastSeason": 1,
-          "lastEpisode": 63
+          "lastEpisode": 64
         }
       },
       "episodes": {
+        "s1e64": {
+          "season": 1,
+          "episode": 64,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:23:07Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e63": {
           "season": 1,
           "episode": 63,
@@ -897,7 +911,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 317.2344
+      "avgPlaybackProgress": 314.297
     },
     {
       "contentId": "tt2560140",
@@ -7511,50 +7525,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:10:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt3344680",
-      "imdbId": "tt3344680",
-      "tmdbId": "348893",
-      "title": "Boyka: Invicto IV",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:09:23Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:09:23Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:09:23Z",
           "users": {
             "henry8812@gmail.com": true
           },

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-22T02:07:18.579Z",
+  "generatedAt": "2026-06-22T04:56:49.694Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt1630036:s1e1:started:2026-06-22T04:56:41Z",
+      "contentId": "tt1630036",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt1630036",
+      "tmdbId": "72213",
+      "title": "Courageous",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-19T13:42:16.430Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-22T04:56:41Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1630036:s1e1:started:2026-06-21T05:21:03Z",
       "contentId": "tt1630036",
@@ -11802,27 +11823,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-22T20:08:39Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt3741700:s1e1:preference:2026-05-22T20:08:35Z",
-      "contentId": "tt3741700",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt3741700",
-      "tmdbId": "373571",
-      "title": "Godzilla: Rey de los Monstruos",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-22T20:08:35Z"
     },
     {
       "eventId": "juancarlosrios531970@gmail.com:tt9114286:s1e1:started:2026-05-19T05:28:17Z",

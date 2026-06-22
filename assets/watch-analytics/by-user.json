@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:25:06.271Z",
+  "generatedAt": "2026-06-22T05:31:39.842Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:24:56Z",
+      "updatedAt": "2026-06-22T05:31:26Z",
       "totalEvents": 500,
       "totalStarts": 234,
       "totalCompletions": 59,
       "totalPlaybackProgress": 258148.20049000546,
-      "uniqueContentCount": 83,
-      "lastActivityAt": "2026-06-22T05:24:56Z",
+      "uniqueContentCount": 82,
+      "lastActivityAt": "2026-06-22T05:31:26Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -155,11 +155,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 111,
+          "playCount": 112,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:24:56Z"
+          "lastSeenAt": "2026-06-22T05:31:26Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -1024,18 +1024,6 @@
           "maxProgressValue": 2618.228266414001,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-22T23:10:41Z"
-        },
-        "tt7784604": {
-          "contentId": "tt7784604",
-          "imdbId": "tt7784604",
-          "tmdbId": "493922",
-          "title": "Hereditary",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:31:56Z"
         }
       },
       "avgPlaybackProgress": 516.2964

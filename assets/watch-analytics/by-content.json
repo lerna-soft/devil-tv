@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:25:06.269Z",
+  "generatedAt": "2026-06-22T05:31:39.841Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 111,
-      "totalStarts": 65,
+      "totalEvents": 112,
+      "totalStarts": 66,
       "totalCompletions": 23,
       "totalPlaybackProgress": 35317.424340330756,
       "uniqueUsers": 1,
-      "completionRate": 0.3538,
-      "lastActivityAt": "2026-06-22T05:24:56Z",
+      "completionRate": 0.3485,
+      "lastActivityAt": "2026-06-22T05:31:26Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 111,
+          "playCount": 112,
           "completedCount": 23,
-          "startedCount": 65,
+          "startedCount": 66,
           "totalPlaybackProgress": 35317.424340330756,
-          "lastSeenAt": "2026-06-22T05:24:56Z",
+          "lastSeenAt": "2026-06-22T05:31:26Z",
           "lastSeason": 1,
-          "lastEpisode": 64
+          "lastEpisode": 67
         }
       },
       "episodes": {
+        "s1e67": {
+          "season": 1,
+          "episode": 67,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:31:26Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e64": {
           "season": 1,
           "episode": 64,
@@ -939,7 +953,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 318.175
+      "avgPlaybackProgress": 315.3341
     },
     {
       "contentId": "tt2560140",
@@ -7421,50 +7435,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T02:18:39Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt7784604",
-      "imdbId": "tt7784604",
-      "tmdbId": "493922",
-      "title": "Hereditary",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:31:56Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:31:56Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:31:56Z",
           "users": {
             "henry8812@gmail.com": true
           },

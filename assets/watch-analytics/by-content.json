@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:09:23.497Z",
+  "generatedAt": "2026-06-22T05:09:32.585Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 103,
-      "totalStarts": 59,
+      "totalEvents": 104,
+      "totalStarts": 60,
       "totalCompletions": 21,
       "totalPlaybackProgress": 32556.525340330747,
       "uniqueUsers": 1,
-      "completionRate": 0.3559,
-      "lastActivityAt": "2026-06-22T05:09:11Z",
+      "completionRate": 0.35,
+      "lastActivityAt": "2026-06-22T05:09:17Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 103,
+          "playCount": 104,
           "completedCount": 21,
-          "startedCount": 59,
+          "startedCount": 60,
           "totalPlaybackProgress": 32556.525340330747,
-          "lastSeenAt": "2026-06-22T05:09:11Z",
+          "lastSeenAt": "2026-06-22T05:09:17Z",
           "lastSeason": 1,
-          "lastEpisode": 60
+          "lastEpisode": 61
         }
       },
       "episodes": {
+        "s1e61": {
+          "season": 1,
+          "episode": 61,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:09:17Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e60": {
           "season": 1,
           "episode": 60,
@@ -855,7 +869,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 316.0828
+      "avgPlaybackProgress": 313.0435
     },
     {
       "contentId": "tt2560140",
@@ -3656,50 +3670,6 @@
       "avgPlaybackProgress": 3912.9125
     },
     {
-      "contentId": "tt4881806",
-      "imdbId": "tt4881806",
-      "tmdbId": "351286",
-      "title": "Jurassic World: El reino caído",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 8648.809708812334,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-01T09:02:02Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 8648.809708812334,
-          "lastSeenAt": "2026-06-01T09:02:02Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 8648.809708812334,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-01T09:02:02Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 2162.2024
-    },
-    {
       "contentId": "tt14850054",
       "imdbId": "tt14850054",
       "tmdbId": "840464",
@@ -4160,6 +4130,50 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt4881806",
+      "imdbId": "tt4881806",
+      "tmdbId": "351286",
+      "title": "Jurassic World: El reino caído",
+      "type": "movie",
+      "totalEvents": 3,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 8648.809708812334,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-01T09:02:02Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 3,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 8648.809708812334,
+          "lastSeenAt": "2026-06-01T09:02:02Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 3,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 8648.809708812334,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-01T09:02:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2882.9366
     },
     {
       "contentId": "tt0369610",

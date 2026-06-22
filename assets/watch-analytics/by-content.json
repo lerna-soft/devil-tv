@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T05:24:37.956Z",
+  "generatedAt": "2026-06-22T05:24:48.619Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 109,
-      "totalStarts": 64,
+      "totalEvents": 110,
+      "totalStarts": 65,
       "totalCompletions": 22,
       "totalPlaybackProgress": 33944.08014633075,
       "uniqueUsers": 1,
-      "completionRate": 0.3438,
-      "lastActivityAt": "2026-06-22T05:24:27Z",
+      "completionRate": 0.3385,
+      "lastActivityAt": "2026-06-22T05:24:40Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 109,
+          "playCount": 110,
           "completedCount": 22,
-          "startedCount": 64,
+          "startedCount": 65,
           "totalPlaybackProgress": 33944.08014633075,
-          "lastSeenAt": "2026-06-22T05:24:27Z",
+          "lastSeenAt": "2026-06-22T05:24:40Z",
           "lastSeason": 1,
-          "lastEpisode": 65
+          "lastEpisode": 66
         }
       },
       "episodes": {
+        "s1e66": {
+          "season": 1,
+          "episode": 66,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T05:24:40Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e65": {
           "season": 1,
           "episode": 65,
@@ -925,7 +939,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 311.4136
+      "avgPlaybackProgress": 308.5825
     },
     {
       "contentId": "tt2560140",
@@ -7451,50 +7465,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-22T20:31:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "38234",
-      "imdbId": "",
-      "tmdbId": "38234",
-      "title": "Invicto 3: Redención",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-22T20:10:42Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-22T20:10:42Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-22T20:10:42Z",
           "users": {
             "henry8812@gmail.com": true
           },

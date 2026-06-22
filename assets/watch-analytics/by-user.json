@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-22T05:24:37.958Z",
+  "generatedAt": "2026-06-22T05:24:48.621Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T05:24:27Z",
+      "updatedAt": "2026-06-22T05:24:40Z",
       "totalEvents": 500,
-      "totalStarts": 233,
+      "totalStarts": 234,
       "totalCompletions": 58,
       "totalPlaybackProgress": 256774.85629600546,
-      "uniqueContentCount": 84,
-      "lastActivityAt": "2026-06-22T05:24:27Z",
+      "uniqueContentCount": 83,
+      "lastActivityAt": "2026-06-22T05:24:40Z",
       "completedContentIds": [
         "tt0965547",
         "tt34621291",
@@ -52,18 +52,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-06T03:13:20Z"
-        },
-        "38234": {
-          "contentId": "38234",
-          "imdbId": "",
-          "tmdbId": "38234",
-          "title": "Invicto 3: Redención",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-22T20:10:42Z"
         },
         "100087": {
           "contentId": "100087",
@@ -167,11 +155,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 109,
+          "playCount": 110,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-22T05:24:27Z"
+          "lastSeenAt": "2026-06-22T05:24:40Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",

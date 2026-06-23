@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T20:41:59.188Z",
+  "generatedAt": "2026-06-23T21:00:14.925Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T20:41:47Z",
+      "updatedAt": "2026-06-23T21:00:04Z",
       "totalEvents": 500,
-      "totalStarts": 252,
+      "totalStarts": 253,
       "totalCompletions": 47,
       "totalPlaybackProgress": 197141.7855935914,
       "uniqueContentCount": 72,
-      "lastActivityAt": "2026-06-23T20:41:47Z",
+      "lastActivityAt": "2026-06-23T21:00:04Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -75,6 +75,18 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-11T03:48:09Z"
+        },
+        "338379": {
+          "contentId": "338379",
+          "imdbId": "",
+          "tmdbId": "338379",
+          "title": "Slam Dunk",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-23T21:00:04Z"
         },
         "405775": {
           "contentId": "405775",
@@ -891,18 +903,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:25:39Z"
-        },
-        "tt1196946": {
-          "contentId": "tt1196946",
-          "imdbId": "tt1196946",
-          "tmdbId": "5920",
-          "title": "El mentalista",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:24:43Z"
         }
       },
       "avgPlaybackProgress": 394.2836

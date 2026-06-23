@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T05:54:14.778Z",
+  "generatedAt": "2026-06-23T06:14:08.687Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2365,21 +2365,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 32,
+      "totalEvents": 31,
       "totalStarts": 13,
-      "totalCompletions": 12,
-      "totalPlaybackProgress": 37158.52414140162,
+      "totalCompletions": 11,
+      "totalPlaybackProgress": 34446.59600240162,
       "uniqueUsers": 1,
-      "completionRate": 0.9231,
+      "completionRate": 0.8462,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 32,
-          "completedCount": 12,
+          "playCount": 31,
+          "completedCount": 11,
           "startedCount": 13,
-          "totalPlaybackProgress": 37158.52414140162,
+          "totalPlaybackProgress": 34446.59600240162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2567,23 +2567,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s4e4": {
-          "season": 4,
-          "episode": 4,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2711.928139,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T05:38:40Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1161.2039
+      "avgPlaybackProgress": 1111.1805
     },
     {
       "contentId": "tt34621291",
@@ -3310,73 +3296,29 @@
       "avgPlaybackProgress": 301.5334
     },
     {
-      "contentId": "535167",
-      "imdbId": "",
-      "tmdbId": "535167",
-      "title": "La Tierra Errante",
-      "type": "movie",
-      "totalEvents": 7,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-15T01:26:33Z",
-      "users": {
-        "luzenithc1994@gmail.com": {
-          "userEmail": "luzenithc1994@gmail.com",
-          "userName": "Luz Enith Campo",
-          "playCount": 7,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-15T01:26:33Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 7,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-15T01:26:33Z",
-          "users": {
-            "luzenithc1994@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt35707374",
       "imdbId": "tt35707374",
       "tmdbId": "291339",
       "title": "Memoria de un Asesino",
       "type": "series",
-      "totalEvents": 6,
-      "totalStarts": 4,
+      "totalEvents": 7,
+      "totalStarts": 5,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 2,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-23T05:49:12Z",
+      "lastActivityAt": "2026-06-23T06:13:59Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 5,
+          "playCount": 6,
           "completedCount": 0,
-          "startedCount": 4,
+          "startedCount": 5,
           "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-23T05:49:12Z",
+          "lastSeenAt": "2026-06-23T06:13:59Z",
           "lastSeason": 1,
-          "lastEpisode": 4
+          "lastEpisode": 5
         },
         "liz-munera@hotmail.com": {
           "userEmail": "liz-munera@hotmail.com",
@@ -3391,6 +3333,20 @@
         }
       },
       "episodes": {
+        "s1e5": {
+          "season": 1,
+          "episode": 5,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T06:13:59Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e4": {
           "season": 1,
           "episode": 4,
@@ -3445,6 +3401,50 @@
           "users": {
             "henry8812@gmail.com": true,
             "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "535167",
+      "imdbId": "",
+      "tmdbId": "535167",
+      "title": "La Tierra Errante",
+      "type": "movie",
+      "totalEvents": 7,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-15T01:26:33Z",
+      "users": {
+        "luzenithc1994@gmail.com": {
+          "userEmail": "luzenithc1994@gmail.com",
+          "userName": "Luz Enith Campo",
+          "playCount": 7,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-15T01:26:33Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 7,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-15T01:26:33Z",
+          "users": {
+            "luzenithc1994@gmail.com": true
           },
           "completionRate": 0
         }

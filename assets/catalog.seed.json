@@ -1,6 +1,6 @@
 {
-  "version": 436,
-  "generatedAt": "2026-06-23T21:16:51.303Z",
+  "version": 437,
+  "generatedAt": "2026-06-23T21:17:02.521Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53857,6 +53857,22 @@
       "releaseDate": null,
       "overview": "Las desventuras del personal familiar del Shady Rest Hotel y sus vecinos de Hooterville.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/2kTGzz870hmdmQ074CYTdKFRqSm.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "13859",
+      "imdbId": null,
+      "title": "El hombre del rifle",
+      "year": 1958,
+      "releaseDate": null,
+      "overview": "Serie de TV (1958-1963). 169 episodios. Lucas McCain es un viudo que vive con su pequeño hijo Mark en un rancho cerca de North Fork. Gracias a su gran habilidad con el Winchester ayuda al sheriff del pueblo a mantener el orden.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tYf5Sc83chWG2nBlo5xKdpBBwlI.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

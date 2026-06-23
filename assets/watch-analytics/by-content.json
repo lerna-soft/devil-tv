@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T06:14:08.687Z",
+  "generatedAt": "2026-06-23T06:34:00.948Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2365,20 +2365,20 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 31,
-      "totalStarts": 13,
+      "totalEvents": 30,
+      "totalStarts": 12,
       "totalCompletions": 11,
       "totalPlaybackProgress": 34446.59600240162,
       "uniqueUsers": 1,
-      "completionRate": 0.8462,
+      "completionRate": 0.9167,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 31,
+          "playCount": 30,
           "completedCount": 11,
-          "startedCount": 13,
+          "startedCount": 12,
           "totalPlaybackProgress": 34446.59600240162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
@@ -2557,8 +2557,8 @@
         "s4e5": {
           "season": 4,
           "episode": 5,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2830.048048,
           "uniqueUsers": 1,
@@ -2566,10 +2566,10 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1111.1805
+      "avgPlaybackProgress": 1148.2199
     },
     {
       "contentId": "tt34621291",
@@ -3112,6 +3112,132 @@
       "avgPlaybackProgress": 1123.3441
     },
     {
+      "contentId": "tt35707374",
+      "imdbId": "tt35707374",
+      "tmdbId": "291339",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "totalEvents": 8,
+      "totalStarts": 6,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 2,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-23T06:33:49Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 7,
+          "completedCount": 0,
+          "startedCount": 6,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-06-23T06:33:49Z",
+          "lastSeason": 1,
+          "lastEpisode": 6
+        },
+        "liz-munera@hotmail.com": {
+          "userEmail": "liz-munera@hotmail.com",
+          "userName": "Lizeth Munera",
+          "playCount": 1,
+          "completedCount": 0,
+          "startedCount": 0,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-23T12:12:49Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e6": {
+          "season": 1,
+          "episode": 6,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T06:33:49Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e5": {
+          "season": 1,
+          "episode": 5,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T06:13:59Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e4": {
+          "season": 1,
+          "episode": 4,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T05:49:12Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e3": {
+          "season": 1,
+          "episode": 3,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T05:27:24Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e2": {
+          "season": 1,
+          "episode": 2,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-22T14:02:21Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 2,
+          "lastActivityAt": "2026-06-22T13:40:43Z",
+          "users": {
+            "henry8812@gmail.com": true,
+            "liz-munera@hotmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "contentId": "tt29552248",
       "imdbId": "tt29552248",
       "tmdbId": "1007757",
@@ -3294,118 +3420,6 @@
         }
       },
       "avgPlaybackProgress": 301.5334
-    },
-    {
-      "contentId": "tt35707374",
-      "imdbId": "tt35707374",
-      "tmdbId": "291339",
-      "title": "Memoria de un Asesino",
-      "type": "series",
-      "totalEvents": 7,
-      "totalStarts": 5,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 2,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-23T06:13:59Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 6,
-          "completedCount": 0,
-          "startedCount": 5,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-23T06:13:59Z",
-          "lastSeason": 1,
-          "lastEpisode": 5
-        },
-        "liz-munera@hotmail.com": {
-          "userEmail": "liz-munera@hotmail.com",
-          "userName": "Lizeth Munera",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T12:12:49Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e5": {
-          "season": 1,
-          "episode": 5,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T06:13:59Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e4": {
-          "season": 1,
-          "episode": 4,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T05:49:12Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e3": {
-          "season": 1,
-          "episode": 3,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T05:27:24Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e2": {
-          "season": 1,
-          "episode": 2,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-22T14:02:21Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 2,
-          "lastActivityAt": "2026-06-22T13:40:43Z",
-          "users": {
-            "henry8812@gmail.com": true,
-            "liz-munera@hotmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
     },
     {
       "contentId": "535167",

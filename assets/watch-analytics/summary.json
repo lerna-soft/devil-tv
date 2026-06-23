@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-23T08:56:37.572Z",
+  "generatedAt": "2026-06-23T08:57:41.238Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 274,
+  "totalStarts": 275,
   "totalCompletions": 47,
-  "overallCompletionRate": 0.1715,
+  "overallCompletionRate": 0.1709,
   "trackedTitles": 109,
   "mostWatchedContent": [
     {
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 140,
+      "totalEvents": 141,
       "uniqueUsers": 1,
-      "completionRate": 0.2921
+      "completionRate": 0.2889
     },
     {
       "contentId": "tt2560140",
@@ -57,19 +57,19 @@
       "completionRate": 0.3
     },
     {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 13,
-      "uniqueUsers": 1,
-      "completionRate": 0.5
-    },
-    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
+      "completionRate": 0.5
+    },
+    {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 12,
+      "uniqueUsers": 1,
       "completionRate": 0.5
     },
     {

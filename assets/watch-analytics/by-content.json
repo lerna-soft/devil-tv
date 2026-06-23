@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T20:00:39.983Z",
+  "generatedAt": "2026-06-23T20:10:23.193Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 147,
-      "totalStarts": 94,
+      "totalEvents": 148,
+      "totalStarts": 95,
       "totalCompletions": 27,
       "totalPlaybackProgress": 40971.97326233074,
       "uniqueUsers": 1,
-      "completionRate": 0.2872,
-      "lastActivityAt": "2026-06-23T20:00:26Z",
+      "completionRate": 0.2842,
+      "lastActivityAt": "2026-06-23T20:10:09Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 147,
+          "playCount": 148,
           "completedCount": 27,
-          "startedCount": 94,
+          "startedCount": 95,
           "totalPlaybackProgress": 40971.97326233074,
-          "lastSeenAt": "2026-06-23T20:00:26Z",
+          "lastSeenAt": "2026-06-23T20:10:09Z",
           "lastSeason": 1,
-          "lastEpisode": 97
+          "lastEpisode": 98
         }
       },
       "episodes": {
+        "s1e98": {
+          "season": 1,
+          "episode": 98,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T20:10:09Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e97": {
           "season": 1,
           "episode": 97,
@@ -1345,7 +1359,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 278.7209
+      "avgPlaybackProgress": 276.8377
     },
     {
       "contentId": "tt2560140",
@@ -7259,50 +7273,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:24:07Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0360486",
-      "imdbId": "tt0360486",
-      "tmdbId": "561",
-      "title": "Constantine",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:24:01Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:24:01Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:24:01Z",
           "users": {
             "henry8812@gmail.com": true
           },

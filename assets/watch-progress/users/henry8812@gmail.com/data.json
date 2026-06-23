@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-23T05:27:24Z",
+  "updatedAt": "2026-06-23T05:49:12Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -3237,10 +3237,10 @@
       "imdbId": "tt35707374",
       "tmdbId": "291339",
       "lastSeason": 1,
-      "lastEpisode": 3,
+      "lastEpisode": 4,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-23T05:27:24Z",
+      "updatedAt": "2026-06-23T05:49:12Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-06-22T13:40:41.704Z",
@@ -3254,6 +3254,11 @@
         },
         "s1e3": {
           "startedAt": "2026-06-22T15:29:04.733Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e4": {
+          "startedAt": "2026-06-23T05:49:10.869Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3417,12 +3422,39 @@
     "imdbId": "tt35707374",
     "tmdbId": "291339",
     "season": 1,
-    "episode": 3,
+    "episode": 4,
     "progress": 0,
-    "updatedAt": "2026-06-23T05:27:24Z"
+    "updatedAt": "2026-06-23T05:49:12Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt35707374:s1e4:started:2026-06-23T05:49:12Z",
+      "contentId": "tt35707374",
+      "episodeKey": "s1e4",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt35707374",
+      "tmdbId": "291339",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "season": 1,
+      "episode": 4,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T05:49:10.869Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T05:49:12Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt35707374:s1e3:started:2026-06-23T05:27:24Z",
       "contentId": "tt35707374",
@@ -16887,33 +16919,6 @@
       "startedAt": "2026-05-23T05:28:19.486Z",
       "completedAt": "2026-05-23T05:38:38.049Z",
       "updatedAt": "2026-05-23T05:38:40Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s4e4:started:2026-05-23T05:28:21Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s4e4",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 4,
-      "episode": 4,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-23T05:28:19.486Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T05:28:21Z",
       "country": "",
       "countryName": "",
       "city": "",

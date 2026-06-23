@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-23T20:41:47Z",
+  "updatedAt": "2026-06-23T21:00:04Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -90,6 +90,22 @@
       "lastProgress": 0,
       "updatedAt": "2026-05-22T03:53:13Z",
       "watched": {}
+    },
+    "338379": {
+      "imdbId": "",
+      "tmdbId": "338379",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-23T21:00:04Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-23T21:00:03.313Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     },
     "379149": {
       "imdbId": "",
@@ -3529,15 +3545,42 @@
     "updatedAt": "2026-06-14T22:29:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "",
+    "tmdbId": "338379",
     "season": 1,
-    "episode": 101,
+    "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-23T20:41:47Z"
+    "updatedAt": "2026-06-23T21:00:04Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:338379:s1e1:started:2026-06-23T21:00:04Z",
+      "contentId": "338379",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "",
+      "tmdbId": "338379",
+      "title": "Slam Dunk",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T21:00:03.313Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T21:00:04Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e101:started:2026-06-23T20:41:47Z",
       "contentId": "tt0965547",
@@ -17002,33 +17045,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:25:39Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1196946:s1e1:preference:2026-05-23T06:24:43Z",
-      "contentId": "tt1196946",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1196946",
-      "tmdbId": "5920",
-      "title": "El mentalista",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:24:43Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-23T06:25:42Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "henry8812@gmail.com:tt1037705:s1e1:preference:2026-05-23T06:25:42Z",
-      "contentId": "tt1037705",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1037705",
-      "tmdbId": "20504",
-      "title": "El libro de Eli",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:25:42Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

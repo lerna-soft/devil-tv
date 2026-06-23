@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-23T19:21:40.500Z",
+  "generatedAt": "2026-06-23T20:00:39.979Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e97:started:2026-06-23T20:00:26Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e97",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 97,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T09:09:47.598Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T20:00:26Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e97:started:2026-06-23T09:09:48Z",
       "contentId": "tt0965547",
@@ -11718,27 +11739,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:24:01Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0412142:s1e1:preference:2026-05-23T06:23:57Z",
-      "contentId": "tt0412142",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0412142",
-      "tmdbId": "1408",
-      "title": "House",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:23:57Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

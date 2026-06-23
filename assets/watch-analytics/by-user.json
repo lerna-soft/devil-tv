@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T05:25:34.922Z",
+  "generatedAt": "2026-06-23T05:27:32.361Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T05:25:22Z",
+      "updatedAt": "2026-06-23T05:27:24Z",
       "totalEvents": 500,
       "totalStarts": 242,
-      "totalCompletions": 52,
-      "totalPlaybackProgress": 224083.1743575914,
+      "totalCompletions": 51,
+      "totalPlaybackProgress": 221311.4316155914,
       "uniqueContentCount": 81,
-      "lastActivityAt": "2026-06-23T05:25:22Z",
+      "lastActivityAt": "2026-06-23T05:27:24Z",
       "completedContentIds": [
         "tt34809853",
         "tt0965547",
@@ -147,6 +147,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt35707374": {
+          "contentId": "tt35707374",
+          "imdbId": "tt35707374",
+          "tmdbId": "291339",
+          "title": "Memoria de un Asesino",
+          "type": "series",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-23T05:27:24Z"
+        },
         "tt34809853": {
           "contentId": "tt34809853",
           "imdbId": "tt34809853",
@@ -158,18 +170,6 @@
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
           "lastSeenAt": "2026-06-23T05:25:22Z"
-        },
-        "tt35707374": {
-          "contentId": "tt35707374",
-          "imdbId": "tt35707374",
-          "tmdbId": "291339",
-          "title": "Memoria de un Asesino",
-          "type": "series",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-22T15:29:05Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -717,7 +717,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 34,
+          "playCount": 33,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1012,7 +1012,7 @@
           "lastSeenAt": "2026-05-23T06:17:58Z"
         }
       },
-      "avgPlaybackProgress": 448.1663
+      "avgPlaybackProgress": 442.6229
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

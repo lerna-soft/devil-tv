@@ -1,6 +1,6 @@
 {
-  "version": 434,
-  "generatedAt": "2026-06-23T20:59:41.844Z",
+  "version": 435,
+  "generatedAt": "2026-06-23T21:00:07.249Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29361,6 +29361,22 @@
       "releaseDate": null,
       "overview": "ReleaseDate:",
       "posterUrl": "https://image.tmdb.org/t/p/w500/UAsOM7n3jtKM3MnBuRbwjxKUKf.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "39129",
+      "imdbId": null,
+      "title": "Slam Dunk Ernest",
+      "year": 1995,
+      "releaseDate": null,
+      "overview": "Ernest P. Worrell se convierte en una estrella del baloncesto después de que un ángel con un extraño parecido con Kareem Abdul-Jabbar le regale un par de zapatillas mágicas.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nFNiv2hqmkcxnSRjjaiOsO1VucB.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

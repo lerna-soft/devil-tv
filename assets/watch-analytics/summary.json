@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-23T08:45:55.578Z",
+  "generatedAt": "2026-06-23T08:51:09.818Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 272,
-  "totalCompletions": 49,
-  "overallCompletionRate": 0.1765,
+  "totalStarts": 273,
+  "totalCompletions": 48,
+  "overallCompletionRate": 0.1758,
   "trackedTitles": 109,
   "mostWatchedContent": [
     {
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 133,
+      "totalEvents": 134,
       "uniqueUsers": 1,
-      "completionRate": 0.2857
+      "completionRate": 0.2824
     },
     {
       "contentId": "tt2560140",
@@ -33,14 +33,6 @@
       "completionRate": 0.3
     },
     {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 20,
-      "uniqueUsers": 1,
-      "completionRate": 0.8571
-    },
-    {
       "contentId": "tt34621291",
       "title": "Magic Maker: How to Create Magic in Another World",
       "type": "series",
@@ -55,6 +47,14 @@
       "totalEvents": 19,
       "uniqueUsers": 1,
       "completionRate": 0
+    },
+    {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 19,
+      "uniqueUsers": 1,
+      "completionRate": 0.7143
     },
     {
       "contentId": "tt35707374",

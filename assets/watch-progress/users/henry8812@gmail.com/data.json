@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-23T08:57:29Z",
+  "updatedAt": "2026-06-23T08:59:27Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2241,10 +2241,10 @@
       "imdbId": "tt0965547",
       "tmdbId": "42573",
       "lastSeason": 1,
-      "lastEpisode": 92,
+      "lastEpisode": 93,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-23T08:57:29Z",
+      "updatedAt": "2026-06-23T08:59:27Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2693,6 +2693,11 @@
         },
         "s1e92": {
           "startedAt": "2026-06-23T08:57:29.285Z",
+          "completedAt": "",
+          "lastProgress": 0
+        },
+        "s1e93": {
+          "startedAt": "2026-06-23T08:59:26.909Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3492,12 +3497,39 @@
     "imdbId": "tt0965547",
     "tmdbId": "42573",
     "season": 1,
-    "episode": 92,
+    "episode": 93,
     "progress": 0,
-    "updatedAt": "2026-06-23T08:57:29Z"
+    "updatedAt": "2026-06-23T08:59:27Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e93:started:2026-06-23T08:59:27Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e93",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 93,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T08:59:26.909Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T08:59:27Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e92:started:2026-06-23T08:57:29Z",
       "contentId": "tt0965547",
@@ -16962,33 +16994,6 @@
       "startedAt": "2026-05-23T06:20:16.589Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:20:18Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0093773:s1e1:started:2026-05-23T06:17:58Z",
-      "contentId": "tt0093773",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0093773",
-      "tmdbId": "106",
-      "title": "Predator",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-23T06:17:55.721Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:17:58Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T08:58:48.088Z",
+  "generatedAt": "2026-06-23T08:59:39.599Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T08:57:29Z",
+      "updatedAt": "2026-06-23T08:59:27Z",
       "totalEvents": 500,
       "totalStarts": 247,
       "totalCompletions": 46,
       "totalPlaybackProgress": 195768.55749959138,
-      "uniqueContentCount": 81,
-      "lastActivityAt": "2026-06-23T08:57:29Z",
+      "uniqueContentCount": 80,
+      "lastActivityAt": "2026-06-23T08:59:27Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -154,11 +154,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 141,
+          "playCount": 142,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-23T08:57:29Z"
+          "lastSeenAt": "2026-06-23T08:59:27Z"
         },
         "tt35707374": {
           "contentId": "tt35707374",
@@ -999,18 +999,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:20:18Z"
-        },
-        "tt0093773": {
-          "contentId": "tt0093773",
-          "imdbId": "tt0093773",
-          "tmdbId": "106",
-          "title": "Predator",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:17:58Z"
         }
       },
       "avgPlaybackProgress": 391.5371

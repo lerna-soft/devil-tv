@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T08:58:48.086Z",
+  "generatedAt": "2026-06-23T08:59:39.598Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 141,
-      "totalStarts": 90,
+      "totalEvents": 142,
+      "totalStarts": 91,
       "totalCompletions": 26,
       "totalPlaybackProgress": 39598.745168330744,
       "uniqueUsers": 1,
-      "completionRate": 0.2889,
-      "lastActivityAt": "2026-06-23T08:57:29Z",
+      "completionRate": 0.2857,
+      "lastActivityAt": "2026-06-23T08:59:27Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 141,
+          "playCount": 142,
           "completedCount": 26,
-          "startedCount": 90,
+          "startedCount": 91,
           "totalPlaybackProgress": 39598.745168330744,
-          "lastSeenAt": "2026-06-23T08:57:29Z",
+          "lastSeenAt": "2026-06-23T08:59:27Z",
           "lastSeason": 1,
-          "lastEpisode": 92
+          "lastEpisode": 93
         }
       },
       "episodes": {
+        "s1e93": {
+          "season": 1,
+          "episode": 93,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T08:59:27Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e92": {
           "season": 1,
           "episode": 92,
@@ -1289,7 +1303,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 280.8422
+      "avgPlaybackProgress": 278.8644
     },
     {
       "contentId": "tt2560140",
@@ -7423,50 +7437,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:20:18Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt0093773",
-      "imdbId": "tt0093773",
-      "tmdbId": "106",
-      "title": "Predator",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:17:58Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:17:58Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:17:58Z",
           "users": {
             "henry8812@gmail.com": true
           },

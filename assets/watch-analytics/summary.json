@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-23T07:32:13.179Z",
+  "generatedAt": "2026-06-23T07:45:58.104Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 271,
-  "totalCompletions": 51,
-  "overallCompletionRate": 0.1845,
+  "totalStarts": 272,
+  "totalCompletions": 50,
+  "overallCompletionRate": 0.1838,
   "trackedTitles": 109,
   "mostWatchedContent": [
     {
@@ -36,9 +36,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 26,
+      "totalEvents": 25,
       "uniqueUsers": 1,
-      "completionRate": 0.9
+      "completionRate": 0.8
     },
     {
       "contentId": "tt34621291",
@@ -57,20 +57,20 @@
       "completionRate": 0
     },
     {
+      "contentId": "tt35707374",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "totalEvents": 13,
+      "uniqueUsers": 2,
+      "completionRate": 0.2222
+    },
+    {
       "contentId": "tt32897959",
       "title": "“Cumbres Borrascosas”",
       "type": "movie",
       "totalEvents": 13,
       "uniqueUsers": 2,
       "completionRate": 0.5
-    },
-    {
-      "contentId": "tt35707374",
-      "title": "Memoria de un Asesino",
-      "type": "series",
-      "totalEvents": 12,
-      "uniqueUsers": 2,
-      "completionRate": 0.25
     },
     {
       "contentId": "tt9114286",

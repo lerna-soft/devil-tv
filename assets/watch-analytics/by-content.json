@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T08:53:52.181Z",
+  "generatedAt": "2026-06-23T08:54:01.146Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 135,
-      "totalStarts": 85,
+      "totalEvents": 136,
+      "totalStarts": 86,
       "totalCompletions": 25,
       "totalPlaybackProgress": 38224.98301533075,
       "uniqueUsers": 1,
-      "completionRate": 0.2941,
-      "lastActivityAt": "2026-06-23T08:53:41Z",
+      "completionRate": 0.2907,
+      "lastActivityAt": "2026-06-23T08:53:51Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 135,
+          "playCount": 136,
           "completedCount": 25,
-          "startedCount": 85,
+          "startedCount": 86,
           "totalPlaybackProgress": 38224.98301533075,
-          "lastSeenAt": "2026-06-23T08:53:41Z",
+          "lastSeenAt": "2026-06-23T08:53:51Z",
           "lastSeason": 1,
-          "lastEpisode": 86
+          "lastEpisode": 87
         }
       },
       "episodes": {
+        "s1e87": {
+          "season": 1,
+          "episode": 87,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T08:53:51Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e86": {
           "season": 1,
           "episode": 86,
@@ -1219,7 +1233,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 283.148
+      "avgPlaybackProgress": 281.0661
     },
     {
       "contentId": "tt2560140",
@@ -2719,21 +2733,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 18,
+      "totalEvents": 17,
       "totalStarts": 6,
-      "totalCompletions": 5,
-      "totalPlaybackProgress": 17461.315398401617,
+      "totalCompletions": 4,
+      "totalPlaybackProgress": 14645.454742401618,
       "uniqueUsers": 1,
-      "completionRate": 0.8333,
+      "completionRate": 0.6667,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 18,
-          "completedCount": 5,
+          "playCount": 17,
+          "completedCount": 4,
           "startedCount": 6,
-          "totalPlaybackProgress": 17461.315398401617,
+          "totalPlaybackProgress": 14645.454742401618,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2823,23 +2837,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s4e11": {
-          "season": 4,
-          "episode": 11,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2815.860656,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:02:49Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 970.0731
+      "avgPlaybackProgress": 861.4973
     },
     {
       "contentId": "tt35707374",

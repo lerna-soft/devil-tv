@@ -1,6 +1,6 @@
 {
-  "version": 431,
-  "generatedAt": "2026-06-22T13:39:55.439Z",
+  "version": 432,
+  "generatedAt": "2026-06-23T05:25:06.623Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53777,6 +53777,22 @@
       "releaseDate": null,
       "overview": "Jung Jae-Hyung, Lee Mi-joo",
       "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjBkMjMzMzAtZDRmZi00ZDM4LTk5MWItMTRlZTI2NTJkMjU3XkEyXkFqcGc@._V1_.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": "258912",
+      "imdbId": "tt34621291",
+      "title": "Magic Maker: How to Make Magic in Another World",
+      "year": 2025,
+      "releaseDate": null,
+      "overview": "La noche de su trigésimo cumpleaños, los sueños de usar la magia de un hombre se hacen realidad tras fallecer de forma inesperada. Al despertar se encuentra convertido en Sion, un niño de otro mundo. Él y su hermana mayor, Marie, son hijos de una familia noble de clase baja que gobierna su región. Tras recibir mensajes contradictorios de su padre, Sion y Marie emprenden una aventura para descubrir la magia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cCIfi6M0Y4OjQLAaikrUdcBiE3.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-23T20:18:20.167Z",
+  "generatedAt": "2026-06-23T20:33:08.307Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e100:started:2026-06-23T20:32:38Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e100",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 100,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T20:32:36.751Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T20:32:38Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e99:started:2026-06-23T20:18:04Z",
       "contentId": "tt0965547",
@@ -11718,27 +11739,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:24:38Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0259324:s1e1:preference:2026-05-23T06:24:29Z",
-      "contentId": "tt0259324",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0259324",
-      "tmdbId": "1250",
-      "title": "Ghost Rider: El motorista fantasma",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:24:29Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

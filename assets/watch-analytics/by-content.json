@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T06:34:00.948Z",
+  "generatedAt": "2026-06-23T07:03:54.910Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2365,21 +2365,21 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 30,
+      "totalEvents": 29,
       "totalStarts": 12,
-      "totalCompletions": 11,
-      "totalPlaybackProgress": 34446.59600240162,
+      "totalCompletions": 10,
+      "totalPlaybackProgress": 31616.54795440162,
       "uniqueUsers": 1,
-      "completionRate": 0.9167,
+      "completionRate": 0.8333,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 30,
-          "completedCount": 11,
+          "playCount": 29,
+          "completedCount": 10,
           "startedCount": 12,
-          "totalPlaybackProgress": 34446.59600240162,
+          "totalPlaybackProgress": 31616.54795440162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
           "lastEpisode": 3
@@ -2553,23 +2553,9 @@
             "henry8812@gmail.com": true
           },
           "completionRate": 1
-        },
-        "s4e5": {
-          "season": 4,
-          "episode": 5,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2830.048048,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T05:40:31Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1148.2199
+      "avgPlaybackProgress": 1090.2258
     },
     {
       "contentId": "tt34621291",
@@ -3068,73 +3054,29 @@
       "avgPlaybackProgress": 470.6627
     },
     {
-      "contentId": "tt0899043",
-      "imdbId": "tt0899043",
-      "tmdbId": "1087891",
-      "title": "Amateur",
-      "type": "movie",
-      "totalEvents": 9,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 10110.096921769673,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-30T13:11:44Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 9,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 10110.096921769673,
-          "lastSeenAt": "2026-05-30T13:11:44Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 9,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 10110.096921769673,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-30T13:11:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1123.3441
-    },
-    {
       "contentId": "tt35707374",
       "imdbId": "tt35707374",
       "tmdbId": "291339",
       "title": "Memoria de un Asesino",
       "type": "series",
-      "totalEvents": 8,
-      "totalStarts": 6,
+      "totalEvents": 9,
+      "totalStarts": 7,
       "totalCompletions": 0,
       "totalPlaybackProgress": 0,
       "uniqueUsers": 2,
       "completionRate": 0,
-      "lastActivityAt": "2026-06-23T06:33:49Z",
+      "lastActivityAt": "2026-06-23T07:03:43Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 7,
+          "playCount": 8,
           "completedCount": 0,
-          "startedCount": 6,
+          "startedCount": 7,
           "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-06-23T06:33:49Z",
+          "lastSeenAt": "2026-06-23T07:03:43Z",
           "lastSeason": 1,
-          "lastEpisode": 6
+          "lastEpisode": 7
         },
         "liz-munera@hotmail.com": {
           "userEmail": "liz-munera@hotmail.com",
@@ -3149,6 +3091,20 @@
         }
       },
       "episodes": {
+        "s1e7": {
+          "season": 1,
+          "episode": 7,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T07:03:43Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e6": {
           "season": 1,
           "episode": 6,
@@ -3236,6 +3192,50 @@
         }
       },
       "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt0899043",
+      "imdbId": "tt0899043",
+      "tmdbId": "1087891",
+      "title": "Amateur",
+      "type": "movie",
+      "totalEvents": 9,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 10110.096921769673,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-30T13:11:44Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 9,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 10110.096921769673,
+          "lastSeenAt": "2026-05-30T13:11:44Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 9,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 10110.096921769673,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-30T13:11:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 1123.3441
     },
     {
       "contentId": "tt29552248",

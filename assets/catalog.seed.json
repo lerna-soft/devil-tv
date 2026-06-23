@@ -1,6 +1,6 @@
 {
-  "version": 432,
-  "generatedAt": "2026-06-23T05:25:06.623Z",
+  "version": 433,
+  "generatedAt": "2026-06-23T20:00:31.113Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -29329,6 +29329,22 @@
       "releaseDate": null,
       "overview": "Sam Larson (Kevin James), un apacible escritor, es confundido con un sicario cuando su novela de ficción sobre un asesino internacional se publica como una historia real. Cuando el libro se convierte en un éxito, Sam Larson es secuestrado, trasladado fuera del país e involucrado en un caso de asesinato.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/wYxl8QJo5R8NiEeXgtzhLgHPzhS.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "movie",
+      "tmdbId": "291339",
+      "imdbId": "tt35707374",
+      "title": "tt35707374",
+      "year": null,
+      "releaseDate": null,
+      "overview": "ReleaseDate:",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8vMdceCNpVRlYf3R60JVCsveMVO.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

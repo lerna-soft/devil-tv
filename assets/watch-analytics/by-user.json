@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T08:15:22.607Z",
+  "generatedAt": "2026-06-23T08:15:35.821Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -10,7 +10,7 @@
       "totalEvents": 500,
       "totalStarts": 244,
       "totalCompletions": 49,
-      "totalPlaybackProgress": 210109.7339345914,
+      "totalPlaybackProgress": 207279.8964075914,
       "uniqueContentCount": 81,
       "lastActivityAt": "2026-06-23T08:15:05Z",
       "completedContentIds": [
@@ -154,7 +154,7 @@
           "tmdbId": "291339",
           "title": "Memoria de un Asesino",
           "type": "series",
-          "playCount": 13,
+          "playCount": 14,
           "completed": true,
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
@@ -718,7 +718,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 24,
+          "playCount": 23,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,
@@ -1013,7 +1013,7 @@
           "lastSeenAt": "2026-05-23T06:17:58Z"
         }
       },
-      "avgPlaybackProgress": 420.2195
+      "avgPlaybackProgress": 414.5598
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

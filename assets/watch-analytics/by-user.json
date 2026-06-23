@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T20:33:08.313Z",
+  "generatedAt": "2026-06-23T20:41:59.188Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T20:32:38Z",
+      "updatedAt": "2026-06-23T20:41:47Z",
       "totalEvents": 500,
-      "totalStarts": 251,
+      "totalStarts": 252,
       "totalCompletions": 47,
       "totalPlaybackProgress": 197141.7855935914,
-      "uniqueContentCount": 73,
-      "lastActivityAt": "2026-06-23T20:32:38Z",
+      "uniqueContentCount": 72,
+      "lastActivityAt": "2026-06-23T20:41:47Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -154,11 +154,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 150,
+          "playCount": 151,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-23T20:32:38Z"
+          "lastSeenAt": "2026-06-23T20:41:47Z"
         },
         "tt35707374": {
           "contentId": "tt35707374",
@@ -903,18 +903,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:24:43Z"
-        },
-        "tt0898266": {
-          "contentId": "tt0898266",
-          "imdbId": "tt0898266",
-          "tmdbId": "1418",
-          "title": "Big Bang",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:24:38Z"
         }
       },
       "avgPlaybackProgress": 394.2836

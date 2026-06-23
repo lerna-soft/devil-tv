@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-23T07:03:54.907Z",
+  "generatedAt": "2026-06-23T07:04:07.797Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
-  "totalStarts": 272,
-  "totalCompletions": 50,
-  "overallCompletionRate": 0.1838,
+  "totalStarts": 271,
+  "totalCompletions": 51,
+  "overallCompletionRate": 0.1845,
   "trackedTitles": 109,
   "mostWatchedContent": [
     {
@@ -36,9 +36,9 @@
       "contentId": "tt0903747",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 29,
+      "totalEvents": 28,
       "uniqueUsers": 1,
-      "completionRate": 0.8333
+      "completionRate": 0.9091
     },
     {
       "contentId": "tt34621291",
@@ -65,6 +65,14 @@
       "completionRate": 0.5
     },
     {
+      "contentId": "tt35707374",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "totalEvents": 10,
+      "uniqueUsers": 2,
+      "completionRate": 0.1429
+    },
+    {
       "contentId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
       "type": "movie",
@@ -79,14 +87,6 @@
       "totalEvents": 10,
       "uniqueUsers": 1,
       "completionRate": 0.3333
-    },
-    {
-      "contentId": "tt35707374",
-      "title": "Memoria de un Asesino",
-      "type": "series",
-      "totalEvents": 9,
-      "uniqueUsers": 2,
-      "completionRate": 0
     }
   ]
 }

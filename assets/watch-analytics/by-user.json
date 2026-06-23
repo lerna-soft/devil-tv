@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T09:09:56.056Z",
+  "generatedAt": "2026-06-23T09:10:07.345Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T09:09:45Z",
+      "updatedAt": "2026-06-23T09:09:48Z",
       "totalEvents": 500,
-      "totalStarts": 247,
+      "totalStarts": 248,
       "totalCompletions": 47,
       "totalPlaybackProgress": 197141.7855935914,
-      "uniqueContentCount": 77,
-      "lastActivityAt": "2026-06-23T09:09:45Z",
+      "uniqueContentCount": 76,
+      "lastActivityAt": "2026-06-23T09:09:48Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -154,11 +154,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 145,
+          "playCount": 146,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-23T09:09:45Z"
+          "lastSeenAt": "2026-06-23T09:09:48Z"
         },
         "tt35707374": {
           "contentId": "tt35707374",
@@ -951,18 +951,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:24:01Z"
-        },
-        "tt0320691": {
-          "contentId": "tt0320691",
-          "imdbId": "tt0320691",
-          "tmdbId": "277",
-          "title": "Underworld",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:23:37Z"
         }
       },
       "avgPlaybackProgress": 394.2836

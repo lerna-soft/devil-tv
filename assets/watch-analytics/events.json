@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-23T08:55:57.521Z",
+  "generatedAt": "2026-06-23T08:56:17.320Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e87:completed:2026-06-23T08:56:02Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e87",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 87,
+      "progress": 1373.762153,
+      "progressValue": 1373.762153,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-23T08:53:51.060Z",
+      "completedAt": "2026-06-23T08:56:02.014Z",
+      "updatedAt": "2026-06-23T08:56:02Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e88:started:2026-06-23T08:55:45Z",
       "contentId": "tt0965547",
@@ -11718,27 +11739,6 @@
       "startedAt": "2026-05-23T06:10:25.105Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:10:27Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0903747:s4e12:completed:2026-05-23T06:10:25Z",
-      "contentId": "tt0903747",
-      "episodeKey": "s4e12",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "season": 4,
-      "episode": 12,
-      "progress": 2756.765872,
-      "progressValue": 2756.765872,
-      "progressPercent": null,
-      "eventType": "completed",
-      "playerStatus": "completed",
-      "startedAt": "2026-05-23T06:02:49.864Z",
-      "completedAt": "2026-05-23T06:10:22.560Z",
-      "updatedAt": "2026-05-23T06:10:25Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

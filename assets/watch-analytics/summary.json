@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-23T08:55:57.521Z",
+  "generatedAt": "2026-06-23T08:56:17.320Z",
   "totalUsers": 13,
   "activeUsers": 6,
   "totalEvents": 608,
   "totalStarts": 273,
   "totalCompletions": 48,
-  "overallCompletionRate": 0.1722,
+  "overallCompletionRate": 0.1758,
   "trackedTitles": 109,
   "mostWatchedContent": [
     {
       "contentId": "tt0965547",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 137,
+      "totalEvents": 138,
       "uniqueUsers": 1,
-      "completionRate": 0.2874
+      "completionRate": 0.2989
     },
     {
       "contentId": "tt2560140",
@@ -49,20 +49,20 @@
       "completionRate": 0
     },
     {
-      "contentId": "tt0903747",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 16,
-      "uniqueUsers": 1,
-      "completionRate": 0.8
-    },
-    {
       "contentId": "tt35707374",
       "title": "Memoria de un Asesino",
       "type": "series",
       "totalEvents": 15,
       "uniqueUsers": 2,
       "completionRate": 0.3
+    },
+    {
+      "contentId": "tt0903747",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 15,
+      "uniqueUsers": 1,
+      "completionRate": 0.6
     },
     {
       "contentId": "tt32897959",

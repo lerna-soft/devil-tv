@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T20:18:20.172Z",
+  "generatedAt": "2026-06-23T20:33:08.313Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T20:18:04Z",
+      "updatedAt": "2026-06-23T20:32:38Z",
       "totalEvents": 500,
-      "totalStarts": 250,
+      "totalStarts": 251,
       "totalCompletions": 47,
       "totalPlaybackProgress": 197141.7855935914,
-      "uniqueContentCount": 74,
-      "lastActivityAt": "2026-06-23T20:18:04Z",
+      "uniqueContentCount": 73,
+      "lastActivityAt": "2026-06-23T20:32:38Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -154,11 +154,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 149,
+          "playCount": 150,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-23T20:18:04Z"
+          "lastSeenAt": "2026-06-23T20:32:38Z"
         },
         "tt35707374": {
           "contentId": "tt35707374",
@@ -915,18 +915,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:24:38Z"
-        },
-        "tt0259324": {
-          "contentId": "tt0259324",
-          "imdbId": "tt0259324",
-          "tmdbId": "1250",
-          "title": "Ghost Rider: El motorista fantasma",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:24:29Z"
         }
       },
       "avgPlaybackProgress": 394.2836

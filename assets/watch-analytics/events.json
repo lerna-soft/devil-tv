@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-23T09:09:56.051Z",
+  "generatedAt": "2026-06-23T09:10:07.340Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e97:started:2026-06-23T09:09:48Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e97",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 97,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T09:09:47.598Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T09:09:48Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e94:completed:2026-06-23T09:09:45Z",
       "contentId": "tt0965547",
@@ -11718,27 +11739,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:23:57Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0320691:s1e1:preference:2026-05-23T06:23:37Z",
-      "contentId": "tt0320691",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0320691",
-      "tmdbId": "277",
-      "title": "Underworld",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:23:37Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

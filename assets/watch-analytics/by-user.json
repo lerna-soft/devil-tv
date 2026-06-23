@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T09:09:29.081Z",
+  "generatedAt": "2026-06-23T09:09:56.056Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T09:09:18Z",
+      "updatedAt": "2026-06-23T09:09:45Z",
       "totalEvents": 500,
       "totalStarts": 247,
-      "totalCompletions": 46,
-      "totalPlaybackProgress": 195768.55749959138,
-      "uniqueContentCount": 78,
-      "lastActivityAt": "2026-06-23T09:09:18Z",
+      "totalCompletions": 47,
+      "totalPlaybackProgress": 197141.7855935914,
+      "uniqueContentCount": 77,
+      "lastActivityAt": "2026-06-23T09:09:45Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -154,11 +154,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 144,
+          "playCount": 145,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-06-23T09:09:18Z"
+          "lastSeenAt": "2026-06-23T09:09:45Z"
         },
         "tt35707374": {
           "contentId": "tt35707374",
@@ -963,21 +963,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:23:37Z"
-        },
-        "tt0292800": {
-          "contentId": "tt0292800",
-          "imdbId": "tt0292800",
-          "tmdbId": "897",
-          "title": "Las macabras aventuras de Billy y Mandy",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:23:26Z"
         }
       },
-      "avgPlaybackProgress": 391.5371
+      "avgPlaybackProgress": 394.2836
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T08:55:57.524Z",
+  "generatedAt": "2026-06-23T08:56:17.324Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,27 +7,41 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 137,
+      "totalEvents": 138,
       "totalStarts": 87,
-      "totalCompletions": 25,
-      "totalPlaybackProgress": 38224.98301533075,
+      "totalCompletions": 26,
+      "totalPlaybackProgress": 39598.745168330744,
       "uniqueUsers": 1,
-      "completionRate": 0.2874,
-      "lastActivityAt": "2026-06-23T08:55:45Z",
+      "completionRate": 0.2989,
+      "lastActivityAt": "2026-06-23T08:56:02Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 137,
-          "completedCount": 25,
+          "playCount": 138,
+          "completedCount": 26,
           "startedCount": 87,
-          "totalPlaybackProgress": 38224.98301533075,
-          "lastSeenAt": "2026-06-23T08:55:45Z",
+          "totalPlaybackProgress": 39598.745168330744,
+          "lastSeenAt": "2026-06-23T08:56:02Z",
           "lastSeason": 1,
-          "lastEpisode": 88
+          "lastEpisode": 87
         }
       },
       "episodes": {
+        "s1e87": {
+          "season": 1,
+          "episode": 87,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1373.762153,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T08:56:02Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
         "s1e88": {
           "season": 1,
           "episode": 88,
@@ -37,20 +51,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-06-23T08:55:45Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s1e87": {
-          "season": 1,
-          "episode": 87,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T08:53:51Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1247,7 +1247,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 279.0145
+      "avgPlaybackProgress": 286.9474
     },
     {
       "contentId": "tt2560140",
@@ -2742,120 +2742,6 @@
       "avgPlaybackProgress": 339.7509
     },
     {
-      "contentId": "tt0903747",
-      "imdbId": "tt0903747",
-      "tmdbId": "1396",
-      "title": "Breaking Bad",
-      "type": "series",
-      "totalEvents": 16,
-      "totalStarts": 5,
-      "totalCompletions": 4,
-      "totalPlaybackProgress": 14645.454742401618,
-      "uniqueUsers": 1,
-      "completionRate": 0.8,
-      "lastActivityAt": "2026-05-23T17:26:28Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 16,
-          "completedCount": 4,
-          "startedCount": 5,
-          "totalPlaybackProgress": 14645.454742401618,
-          "lastSeenAt": "2026-05-23T17:26:28Z",
-          "lastSeason": 5,
-          "lastEpisode": 3
-        }
-      },
-      "episodes": {
-        "s5e3": {
-          "season": 5,
-          "episode": 3,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 795.626826729,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T17:26:28Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s5e2": {
-          "season": 5,
-          "episode": 2,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2847.5471294095782,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:55:44Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s5e1": {
-          "season": 5,
-          "episode": 1,
-          "totalEvents": 6,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 5222.485822263038,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:11:36Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T16:08:22Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        },
-        "s4e13": {
-          "season": 4,
-          "episode": 13,
-          "totalEvents": 2,
-          "totalStarts": 1,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 3023.029092,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:13:52Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 1
-        },
-        "s4e12": {
-          "season": 4,
-          "episode": 12,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 1,
-          "totalPlaybackProgress": 2756.765872,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:10:25Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 915.3409
-    },
-    {
       "contentId": "tt35707374",
       "imdbId": "tt35707374",
       "tmdbId": "291339",
@@ -3036,6 +2922,106 @@
         }
       },
       "avgPlaybackProgress": 0.2
+    },
+    {
+      "contentId": "tt0903747",
+      "imdbId": "tt0903747",
+      "tmdbId": "1396",
+      "title": "Breaking Bad",
+      "type": "series",
+      "totalEvents": 15,
+      "totalStarts": 5,
+      "totalCompletions": 3,
+      "totalPlaybackProgress": 11888.688870401618,
+      "uniqueUsers": 1,
+      "completionRate": 0.6,
+      "lastActivityAt": "2026-05-23T17:26:28Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 15,
+          "completedCount": 3,
+          "startedCount": 5,
+          "totalPlaybackProgress": 11888.688870401618,
+          "lastSeenAt": "2026-05-23T17:26:28Z",
+          "lastSeason": 5,
+          "lastEpisode": 3
+        }
+      },
+      "episodes": {
+        "s5e3": {
+          "season": 5,
+          "episode": 3,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 795.626826729,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T17:26:28Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s5e2": {
+          "season": 5,
+          "episode": 2,
+          "totalEvents": 4,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 2847.5471294095782,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:55:44Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s5e1": {
+          "season": 5,
+          "episode": 1,
+          "totalEvents": 6,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 5222.485822263038,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:11:36Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        },
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T16:08:22Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
+        "s4e13": {
+          "season": 4,
+          "episode": 13,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 3023.029092,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-23T06:13:52Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 1
+        }
+      },
+      "avgPlaybackProgress": 792.5793
     },
     {
       "contentId": "tt32897959",

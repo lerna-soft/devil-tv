@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T07:45:58.111Z",
+  "generatedAt": "2026-06-23T08:15:22.606Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2365,20 +2365,20 @@
       "tmdbId": "1396",
       "title": "Breaking Bad",
       "type": "series",
-      "totalEvents": 25,
-      "totalStarts": 10,
+      "totalEvents": 24,
+      "totalStarts": 9,
       "totalCompletions": 8,
       "totalPlaybackProgress": 25954.82646040162,
       "uniqueUsers": 1,
-      "completionRate": 0.8,
+      "completionRate": 0.8889,
       "lastActivityAt": "2026-05-23T17:26:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 25,
+          "playCount": 24,
           "completedCount": 8,
-          "startedCount": 10,
+          "startedCount": 9,
           "totalPlaybackProgress": 25954.82646040162,
           "lastSeenAt": "2026-05-23T17:26:28Z",
           "lastSeason": 5,
@@ -2515,8 +2515,8 @@
         "s4e8": {
           "season": 4,
           "episode": 8,
-          "totalEvents": 2,
-          "totalStarts": 1,
+          "totalEvents": 1,
+          "totalStarts": 0,
           "totalCompletions": 1,
           "totalPlaybackProgress": 2830.837527,
           "uniqueUsers": 1,
@@ -2524,10 +2524,10 @@
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 1
+          "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 1038.1931
+      "avgPlaybackProgress": 1081.4511
     },
     {
       "contentId": "tt34621291",
@@ -2847,24 +2847,24 @@
       "tmdbId": "291339",
       "title": "Memoria de un Asesino",
       "type": "series",
-      "totalEvents": 13,
-      "totalStarts": 9,
+      "totalEvents": 14,
+      "totalStarts": 10,
       "totalCompletions": 2,
       "totalPlaybackProgress": 2,
       "uniqueUsers": 2,
-      "completionRate": 0.2222,
-      "lastActivityAt": "2026-06-23T07:45:45Z",
+      "completionRate": 0.2,
+      "lastActivityAt": "2026-06-23T08:15:05Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 12,
+          "playCount": 13,
           "completedCount": 2,
-          "startedCount": 9,
+          "startedCount": 10,
           "totalPlaybackProgress": 2,
-          "lastSeenAt": "2026-06-23T07:45:45Z",
+          "lastSeenAt": "2026-06-23T08:15:05Z",
           "lastSeason": 1,
-          "lastEpisode": 9
+          "lastEpisode": 10
         },
         "liz-munera@hotmail.com": {
           "userEmail": "liz-munera@hotmail.com",
@@ -2879,6 +2879,20 @@
         }
       },
       "episodes": {
+        "s1e10": {
+          "season": 1,
+          "episode": 10,
+          "totalEvents": 1,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-23T08:15:05Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        },
         "s1e9": {
           "season": 1,
           "episode": 9,
@@ -3007,7 +3021,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.1538
+      "avgPlaybackProgress": 0.1429
     },
     {
       "contentId": "tt32897959",

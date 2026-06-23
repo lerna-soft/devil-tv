@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T23:37:47.119Z",
+  "generatedAt": "2026-06-23T23:52:46.785Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T22:07:45Z",
+      "updatedAt": "2026-06-23T23:52:36Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 47,
-      "totalPlaybackProgress": 198513.27895259138,
-      "uniqueContentCount": 71,
-      "lastActivityAt": "2026-06-23T22:07:45Z",
+      "totalPlaybackProgress": 200398.5245885914,
+      "uniqueContentCount": 70,
+      "lastActivityAt": "2026-06-23T23:52:36Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -167,11 +167,11 @@
           "tmdbId": "453395",
           "title": "Doctor Strange en el multiverso de la locura",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 3,
           "completed": false,
-          "maxProgressValue": 1371.493359,
+          "maxProgressValue": 1885.245636,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-23T22:07:45Z"
+          "lastSeenAt": "2026-06-23T23:52:36Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -880,21 +880,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:25:50Z"
-        },
-        "tt0979432": {
-          "contentId": "tt0979432",
-          "imdbId": "tt0979432",
-          "tmdbId": "1621",
-          "title": "Boardwalk Empire",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:25:44Z"
         }
       },
-      "avgPlaybackProgress": 397.0266
+      "avgPlaybackProgress": 400.797
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

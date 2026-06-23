@@ -2,10 +2,10 @@
   "imdbId": "tt35707374",
   "tmdbId": "291339",
   "lastSeason": 1,
-  "lastEpisode": 6,
-  "progress": 1,
-  "lastProgress": 1,
-  "updatedAt": "2026-06-23T07:03:43Z",
+  "lastEpisode": 8,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-23T07:31:47Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-22T13:40:41.704Z",
@@ -41,9 +41,41 @@
       "startedAt": "2026-06-23T07:03:41.568Z",
       "completedAt": "",
       "lastProgress": 0
+    },
+    "s1e8": {
+      "startedAt": "2026-06-23T07:31:45.472Z",
+      "completedAt": "",
+      "lastProgress": 0
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt35707374:s1e8:started:2026-06-23T07:31:47Z",
+      "contentId": "tt35707374",
+      "episodeKey": "s1e8",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt35707374",
+      "tmdbId": "291339",
+      "title": "Memoria de un Asesino",
+      "type": "series",
+      "season": 1,
+      "episode": 8,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T07:31:45.472Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-23T07:31:47Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt35707374:s1e7:started:2026-06-23T07:03:43Z",
       "contentId": "tt35707374",

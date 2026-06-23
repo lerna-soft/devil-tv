@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-23T01:48:47.022Z",
+  "generatedAt": "2026-06-23T05:25:34.922Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-22T15:29:05Z",
+      "updatedAt": "2026-06-23T05:25:22Z",
       "totalEvents": 500,
-      "totalStarts": 243,
+      "totalStarts": 242,
       "totalCompletions": 52,
       "totalPlaybackProgress": 224083.1743575914,
       "uniqueContentCount": 81,
-      "lastActivityAt": "2026-06-22T15:29:05Z",
+      "lastActivityAt": "2026-06-23T05:25:22Z",
       "completedContentIds": [
+        "tt34809853",
         "tt0965547",
         "tt34621291",
-        "tt34809853",
         "tt26743760",
         "tt2560140",
         "tt30460310",
@@ -147,6 +147,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt34809853": {
+          "contentId": "tt34809853",
+          "imdbId": "tt34809853",
+          "tmdbId": "276161",
+          "title": "Teach You a Lesson",
+          "type": "series",
+          "playCount": 41,
+          "completed": true,
+          "maxProgressValue": 1,
+          "maxProgressPercent": 1,
+          "lastSeenAt": "2026-06-23T05:25:22Z"
+        },
         "tt35707374": {
           "contentId": "tt35707374",
           "imdbId": "tt35707374",
@@ -194,18 +206,6 @@
           "maxProgressValue": 1420.132402,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-19T01:19:25Z"
-        },
-        "tt34809853": {
-          "contentId": "tt34809853",
-          "imdbId": "tt34809853",
-          "tmdbId": "276161",
-          "title": "Teach You a Lesson",
-          "type": "series",
-          "playCount": 40,
-          "completed": true,
-          "maxProgressValue": 1,
-          "maxProgressPercent": 1,
-          "lastSeenAt": "2026-06-17T13:41:01Z"
         },
         "tt34622123": {
           "contentId": "tt34622123",
@@ -717,7 +717,7 @@
           "tmdbId": "1396",
           "title": "Breaking Bad",
           "type": "series",
-          "playCount": 35,
+          "playCount": 34,
           "completed": true,
           "maxProgressValue": 3023.029092,
           "maxProgressPercent": 72.392792,

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-24T00:22:51.135Z",
+  "generatedAt": "2026-06-24T00:52:51.012Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-24T00:22:41Z",
+      "updatedAt": "2026-06-24T00:52:42Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 47,
-      "totalPlaybackProgress": 204218.47453059137,
-      "uniqueContentCount": 69,
-      "lastActivityAt": "2026-06-24T00:22:41Z",
+      "totalPlaybackProgress": 211117.0474945914,
+      "uniqueContentCount": 68,
+      "lastActivityAt": "2026-06-24T00:52:42Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -167,11 +167,11 @@
           "tmdbId": "453395",
           "title": "Doctor Strange en el multiverso de la locura",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
-          "maxProgressValue": 3819.949942,
+          "maxProgressValue": 6898.572964,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-24T00:22:41Z"
+          "lastSeenAt": "2026-06-24T00:52:42Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -856,21 +856,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:25:56Z"
-        },
-        "tt1570728": {
-          "contentId": "tt1570728",
-          "imdbId": "tt1570728",
-          "tmdbId": "50646",
-          "title": "Crazy, Stupid, Love.",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:25:52Z"
         }
       },
-      "avgPlaybackProgress": 408.4369
+      "avgPlaybackProgress": 422.2341
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

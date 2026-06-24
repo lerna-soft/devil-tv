@@ -1,19 +1,20 @@
 {
-  "generatedAt": "2026-06-24T00:52:51.012Z",
+  "generatedAt": "2026-06-24T01:04:24.353Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-24T00:52:42Z",
+      "updatedAt": "2026-06-24T01:04:15Z",
       "totalEvents": 500,
       "totalStarts": 254,
-      "totalCompletions": 47,
-      "totalPlaybackProgress": 211117.0474945914,
-      "uniqueContentCount": 68,
-      "lastActivityAt": "2026-06-24T00:52:42Z",
+      "totalCompletions": 48,
+      "totalPlaybackProgress": 218708.30080359138,
+      "uniqueContentCount": 67,
+      "lastActivityAt": "2026-06-24T01:04:15Z",
       "completedContentIds": [
+        "tt9419884",
         "tt0965547",
         "tt35707374",
         "tt34809853",
@@ -25,7 +26,6 @@
       ],
       "inProgressContentIds": [
         "1632181",
-        "tt9419884",
         "tt1630036",
         "tt2032557",
         "tt2091935",
@@ -167,11 +167,11 @@
           "tmdbId": "453395",
           "title": "Doctor Strange en el multiverso de la locura",
           "type": "movie",
-          "playCount": 5,
-          "completed": false,
-          "maxProgressValue": 6898.572964,
+          "playCount": 6,
+          "completed": true,
+          "maxProgressValue": 7591.253309,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-24T00:52:42Z"
+          "lastSeenAt": "2026-06-24T01:04:15Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -844,21 +844,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:25:58Z"
-        },
-        "tt0944947": {
-          "contentId": "tt0944947",
-          "imdbId": "tt0944947",
-          "tmdbId": "1399",
-          "title": "Juego de tronos",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:25:56Z"
         }
       },
-      "avgPlaybackProgress": 422.2341
+      "avgPlaybackProgress": 437.4166
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-24T00:52:51.007Z",
+  "generatedAt": "2026-06-24T01:04:24.349Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt9419884:s1e1:completed:2026-06-24T01:04:15Z",
+      "contentId": "tt9419884",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9419884",
+      "tmdbId": "453395",
+      "title": "Doctor Strange en el multiverso de la locura",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 7591.253309,
+      "progressValue": 7591.253309,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-06-23T21:18:02.174Z",
+      "completedAt": "2026-06-24T01:04:13.932Z",
+      "updatedAt": "2026-06-24T01:04:15Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9419884:s1e1:started:2026-06-24T00:52:42Z",
       "contentId": "tt9419884",
@@ -11718,27 +11739,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:25:58Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0944947:s1e1:preference:2026-05-23T06:25:56Z",
-      "contentId": "tt0944947",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0944947",
-      "tmdbId": "1399",
-      "title": "Juego de tronos",
-      "type": "series",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:25:56Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

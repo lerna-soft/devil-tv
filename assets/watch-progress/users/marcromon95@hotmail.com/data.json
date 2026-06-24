@@ -1,0 +1,62 @@
+{
+  "email": "marcromon95@hotmail.com",
+  "name": "Marcela",
+  "updatedAt": "2026-06-24T01:13:31Z",
+  "progress": {
+    "tt1979376": {
+      "imdbId": "tt1979376",
+      "tmdbId": "301528",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-06-24T01:13:31Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-06-24T01:13:30.272Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
+    }
+  },
+  "preferences": {},
+  "lastWatch": {
+    "imdbId": "tt1979376",
+    "tmdbId": "301528",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-06-24T01:13:31Z"
+  },
+  "lastSelection": null,
+  "history": [
+    {
+      "eventId": "marcromon95@hotmail.com:tt1979376:s1e1:started:2026-06-24T01:13:31Z",
+      "contentId": "tt1979376",
+      "episodeKey": "s1e1",
+      "userEmail": "marcromon95@hotmail.com",
+      "userName": "Marcela",
+      "imdbId": "tt1979376",
+      "tmdbId": "301528",
+      "title": "Toy Story 4",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-24T01:13:30.272Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-24T01:13:31Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    }
+  ]
+}

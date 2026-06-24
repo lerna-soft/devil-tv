@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-24T01:04:24.349Z",
+  "generatedAt": "2026-06-24T01:13:39.528Z",
   "events": [
+    {
+      "eventId": "marcromon95@hotmail.com:tt1979376:s1e1:started:2026-06-24T01:13:31Z",
+      "contentId": "tt1979376",
+      "episodeKey": "s1e1",
+      "userEmail": "marcromon95@hotmail.com",
+      "userName": "Marcela",
+      "imdbId": "tt1979376",
+      "tmdbId": "301528",
+      "title": "Toy Story 4",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-24T01:13:30.272Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-24T01:13:31Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9419884:s1e1:completed:2026-06-24T01:04:15Z",
       "contentId": "tt9419884",

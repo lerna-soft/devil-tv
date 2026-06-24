@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T01:04:24.353Z",
+  "generatedAt": "2026-06-24T01:13:39.533Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1434,6 +1434,36 @@
       "avgPlaybackProgress": 0
     },
     {
+      "userEmail": "marcromon95@hotmail.com",
+      "userName": "Marcela",
+      "role": "viewer",
+      "createdAt": "2026-06-06T04:16:33.260Z",
+      "updatedAt": "2026-06-24T01:13:31Z",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 1,
+      "lastActivityAt": "2026-06-24T01:13:31Z",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {
+        "tt1979376": {
+          "contentId": "tt1979376",
+          "imdbId": "tt1979376",
+          "tmdbId": "301528",
+          "title": "Toy Story 4",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-24T01:13:31Z"
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
       "userEmail": "admin@lerna.com",
       "userName": "Lerna Admin",
       "role": "admin",
@@ -1507,23 +1537,6 @@
       "role": "viewer",
       "createdAt": "2026-05-23T17:23:07.868Z",
       "updatedAt": "2026-05-23T17:23:07.868Z",
-      "totalEvents": 0,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueContentCount": 0,
-      "lastActivityAt": "",
-      "completedContentIds": [],
-      "inProgressContentIds": [],
-      "content": {},
-      "avgPlaybackProgress": 0
-    },
-    {
-      "userEmail": "marcromon95@hotmail.com",
-      "userName": "Marcela",
-      "role": "viewer",
-      "createdAt": "2026-06-06T04:16:33.260Z",
-      "updatedAt": "2026-06-06T04:16:33.260Z",
       "totalEvents": 0,
       "totalStarts": 0,
       "totalCompletions": 0,

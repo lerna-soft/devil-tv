@@ -3,9 +3,9 @@
   "tmdbId": "453395",
   "lastSeason": 1,
   "lastEpisode": 1,
-  "progress": 7591.253309,
-  "lastProgress": 7591.253309,
-  "updatedAt": "2026-06-24T01:04:15Z",
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-06-24T01:39:11Z",
   "watched": {
     "s1e1": {
       "startedAt": "2026-06-23T21:18:02.174Z",
@@ -14,6 +14,33 @@
     }
   },
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt9419884:s1e1:started:2026-06-24T01:39:11Z",
+      "contentId": "tt9419884",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9419884",
+      "tmdbId": "453395",
+      "title": "Doctor Strange en el multiverso de la locura",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T21:18:02.174Z",
+      "completedAt": "2026-06-24T01:04:13.932Z",
+      "updatedAt": "2026-06-24T01:39:11Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "es-419",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9419884:s1e1:completed:2026-06-24T01:04:15Z",
       "contentId": "tt9419884",

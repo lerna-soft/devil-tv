@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-24T01:28:30.755Z",
+  "generatedAt": "2026-06-24T01:39:21.874Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-24T01:04:15Z",
+      "updatedAt": "2026-06-24T01:39:11Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 48,
       "totalPlaybackProgress": 218708.30080359138,
-      "uniqueContentCount": 67,
-      "lastActivityAt": "2026-06-24T01:04:15Z",
+      "uniqueContentCount": 66,
+      "lastActivityAt": "2026-06-24T01:39:11Z",
       "completedContentIds": [
         "tt9419884",
         "tt0965547",
@@ -167,11 +167,11 @@
           "tmdbId": "453395",
           "title": "Doctor Strange en el multiverso de la locura",
           "type": "movie",
-          "playCount": 6,
+          "playCount": 7,
           "completed": true,
           "maxProgressValue": 7591.253309,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-24T01:04:15Z"
+          "lastSeenAt": "2026-06-24T01:39:11Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -832,18 +832,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:26:08Z"
-        },
-        "tt1845307": {
-          "contentId": "tt1845307",
-          "imdbId": "tt1845307",
-          "tmdbId": "39340",
-          "title": "Dos chicas sin blanca",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:25:58Z"
         }
       },
       "avgPlaybackProgress": 437.4166

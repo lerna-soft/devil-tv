@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-23T23:52:46.785Z",
+  "generatedAt": "2026-06-24T00:22:51.135Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-23T23:52:36Z",
+      "updatedAt": "2026-06-24T00:22:41Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 47,
-      "totalPlaybackProgress": 200398.5245885914,
-      "uniqueContentCount": 70,
-      "lastActivityAt": "2026-06-23T23:52:36Z",
+      "totalPlaybackProgress": 204218.47453059137,
+      "uniqueContentCount": 69,
+      "lastActivityAt": "2026-06-24T00:22:41Z",
       "completedContentIds": [
         "tt0965547",
         "tt35707374",
@@ -167,11 +167,11 @@
           "tmdbId": "453395",
           "title": "Doctor Strange en el multiverso de la locura",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 4,
           "completed": false,
-          "maxProgressValue": 1885.245636,
+          "maxProgressValue": 3819.949942,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-23T23:52:36Z"
+          "lastSeenAt": "2026-06-24T00:22:41Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -868,21 +868,9 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:25:52Z"
-        },
-        "tt1219289": {
-          "contentId": "tt1219289",
-          "imdbId": "tt1219289",
-          "tmdbId": "51876",
-          "title": "Sin límites",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:25:50Z"
         }
       },
-      "avgPlaybackProgress": 400.797
+      "avgPlaybackProgress": 408.4369
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

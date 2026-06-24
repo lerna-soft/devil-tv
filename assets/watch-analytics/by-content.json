@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T00:22:51.134Z",
+  "generatedAt": "2026-06-24T00:52:51.010Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -3796,6 +3796,50 @@
       "avgPlaybackProgress": 2140.1599
     },
     {
+      "contentId": "tt9419884",
+      "imdbId": "tt9419884",
+      "tmdbId": "453395",
+      "title": "Doctor Strange en el multiverso de la locura",
+      "type": "movie",
+      "totalEvents": 5,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 13975.261901,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-06-24T00:52:42Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 5,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 13975.261901,
+          "lastSeenAt": "2026-06-24T00:52:42Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 5,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 13975.261901,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-06-24T00:52:42Z",
+          "users": {
+            "henry8812@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 2795.0524
+    },
+    {
       "contentId": "100087",
       "imdbId": "",
       "tmdbId": "100087",
@@ -4014,50 +4058,6 @@
         }
       },
       "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt9419884",
-      "imdbId": "tt9419884",
-      "tmdbId": "453395",
-      "title": "Doctor Strange en el multiverso de la locura",
-      "type": "movie",
-      "totalEvents": 4,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 7076.688937000001,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-06-24T00:22:41Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 4,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 7076.688937000001,
-          "lastSeenAt": "2026-06-24T00:22:41Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 4,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 7076.688937000001,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-24T00:22:41Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 1769.1722
     },
     {
       "contentId": "tt26743760",
@@ -7007,50 +7007,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:25:56Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1570728",
-      "imdbId": "tt1570728",
-      "tmdbId": "50646",
-      "title": "Crazy, Stupid, Love.",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:25:52Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:25:52Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:25:52Z",
           "users": {
             "henry8812@gmail.com": true
           },

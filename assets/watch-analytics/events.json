@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-23T23:52:46.781Z",
+  "generatedAt": "2026-06-24T00:22:51.131Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt9419884:s1e1:started:2026-06-24T00:22:41Z",
+      "contentId": "tt9419884",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt9419884",
+      "tmdbId": "453395",
+      "title": "Doctor Strange en el multiverso de la locura",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 3819.949942,
+      "progressValue": 3819.949942,
+      "progressPercent": null,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-23T21:18:02.174Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-24T00:22:41Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt9419884:s1e1:started:2026-06-23T23:52:36Z",
       "contentId": "tt9419884",
@@ -11718,27 +11739,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:25:52Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1219289:s1e1:preference:2026-05-23T06:25:50Z",
-      "contentId": "tt1219289",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1219289",
-      "tmdbId": "51876",
-      "title": "Sin límites",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:25:50Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

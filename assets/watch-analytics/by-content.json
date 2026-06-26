@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T14:20:01.468Z",
+  "generatedAt": "2026-06-26T15:14:48.242Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -2419,22 +2419,22 @@
       "tmdbId": "276161",
       "title": "Teach You a Lesson",
       "type": "series",
-      "totalEvents": 41,
+      "totalEvents": 42,
       "totalStarts": 10,
       "totalCompletions": 3,
       "totalPlaybackProgress": 3,
       "uniqueUsers": 1,
       "completionRate": 0.3,
-      "lastActivityAt": "2026-06-23T05:25:22Z",
+      "lastActivityAt": "2026-06-26T15:14:38Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 41,
+          "playCount": 42,
           "completedCount": 3,
           "startedCount": 10,
           "totalPlaybackProgress": 3,
-          "lastSeenAt": "2026-06-23T05:25:22Z",
+          "lastSeenAt": "2026-06-26T15:14:38Z",
           "lastSeason": 1,
           "lastEpisode": 1
         }
@@ -2443,12 +2443,12 @@
         "s1e1": {
           "season": 1,
           "episode": 1,
-          "totalEvents": 6,
+          "totalEvents": 7,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T05:25:22Z",
+          "lastActivityAt": "2026-06-26T15:14:38Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -2581,7 +2581,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 0.0732
+      "avgPlaybackProgress": 0.0714
     },
     {
       "contentId": "tt34621291",
@@ -6919,50 +6919,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:26:24Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1870479",
-      "imdbId": "tt1870479",
-      "tmdbId": "15621",
-      "title": "The Newsroom",
-      "type": "series",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:26:08Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:26:08Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:26:08Z",
           "users": {
             "henry8812@gmail.com": true
           },

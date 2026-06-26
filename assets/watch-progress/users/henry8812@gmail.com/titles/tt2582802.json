@@ -7,33 +7,5 @@
   "lastProgress": 0,
   "updatedAt": "2026-05-23T06:26:24Z",
   "watched": {},
-  "history": [
-    {
-      "eventId": "henry8812@gmail.com:tt2582802:s1e1:preference:2026-05-23T06:26:24Z",
-      "contentId": "tt2582802",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2582802",
-      "tmdbId": "244786",
-      "title": "Whiplash",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:26:24Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    }
-  ]
+  "history": []
 }

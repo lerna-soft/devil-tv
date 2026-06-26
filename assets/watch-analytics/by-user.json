@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-06-26T14:20:01.470Z",
+  "generatedAt": "2026-06-26T15:14:48.244Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-24T01:39:11Z",
+      "updatedAt": "2026-06-26T15:14:38Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 48,
       "totalPlaybackProgress": 218708.30080359138,
-      "uniqueContentCount": 66,
-      "lastActivityAt": "2026-06-24T01:39:11Z",
+      "uniqueContentCount": 65,
+      "lastActivityAt": "2026-06-26T15:14:38Z",
       "completedContentIds": [
+        "tt34809853",
         "tt9419884",
         "tt0965547",
         "tt35707374",
-        "tt34809853",
         "tt34621291",
         "tt26743760",
         "tt2560140",
@@ -161,6 +161,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt34809853": {
+          "contentId": "tt34809853",
+          "imdbId": "tt34809853",
+          "tmdbId": "276161",
+          "title": "Teach You a Lesson",
+          "type": "series",
+          "playCount": 42,
+          "completed": true,
+          "maxProgressValue": 1,
+          "maxProgressPercent": 1,
+          "lastSeenAt": "2026-06-26T15:14:38Z"
+        },
         "tt9419884": {
           "contentId": "tt9419884",
           "imdbId": "tt9419884",
@@ -196,18 +208,6 @@
           "maxProgressValue": 1,
           "maxProgressPercent": 1,
           "lastSeenAt": "2026-06-23T08:15:05Z"
-        },
-        "tt34809853": {
-          "contentId": "tt34809853",
-          "imdbId": "tt34809853",
-          "tmdbId": "276161",
-          "title": "Teach You a Lesson",
-          "type": "series",
-          "playCount": 41,
-          "completed": true,
-          "maxProgressValue": 1,
-          "maxProgressPercent": 1,
-          "lastSeenAt": "2026-06-23T05:25:22Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -820,18 +820,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:26:24Z"
-        },
-        "tt1870479": {
-          "contentId": "tt1870479",
-          "imdbId": "tt1870479",
-          "tmdbId": "15621",
-          "title": "The Newsroom",
-          "type": "series",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:26:08Z"
         }
       },
       "avgPlaybackProgress": 437.4166

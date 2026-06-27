@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-06-27T20:42:06.571Z",
+  "generatedAt": "2026-06-27T21:14:29.029Z",
   "events": [
+    {
+      "eventId": "luzenithc1994@gmail.com:tt31036941:s1e1:started:2026-06-27T21:14:16Z",
+      "contentId": "tt31036941",
+      "episodeKey": "s1e1",
+      "userEmail": "luzenithc1994@gmail.com",
+      "userName": "Luz Enith Campo",
+      "imdbId": "tt31036941",
+      "tmdbId": "1234821",
+      "title": "Jurassic World: El renacer",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-15T01:31:55.953Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-27T21:14:16Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt27391124:s1e1:started:2026-06-27T15:43:34Z",
       "contentId": "tt27391124",

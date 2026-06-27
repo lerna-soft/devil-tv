@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-27T14:47:04.511Z",
+  "generatedAt": "2026-06-27T15:43:43.162Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-27T05:12:55Z",
+      "updatedAt": "2026-06-27T15:43:34Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 48,
       "totalPlaybackProgress": 218708.30080359138,
-      "uniqueContentCount": 63,
-      "lastActivityAt": "2026-06-27T05:12:55Z",
+      "uniqueContentCount": 62,
+      "lastActivityAt": "2026-06-27T15:43:34Z",
       "completedContentIds": [
         "tt34809853",
         "tt9419884",
@@ -167,11 +167,11 @@
           "tmdbId": "1181678",
           "title": "¿Quieres ser mi... hijo?",
           "type": "movie",
-          "playCount": 4,
+          "playCount": 5,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-27T05:12:55Z"
+          "lastSeenAt": "2026-06-27T15:43:34Z"
         },
         "tt1630036": {
           "contentId": "tt1630036",
@@ -784,18 +784,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:26:35Z"
-        },
-        "tt1646971": {
-          "contentId": "tt1646971",
-          "imdbId": "tt1646971",
-          "tmdbId": "82702",
-          "title": "Cómo entrenar a tu dragón 2",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:26:32Z"
         }
       },
       "avgPlaybackProgress": 437.4166

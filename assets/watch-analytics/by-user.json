@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-27T01:46:33.546Z",
+  "generatedAt": "2026-06-27T05:13:07.181Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-06-26T15:14:46Z",
+      "updatedAt": "2026-06-27T05:12:55Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 48,
       "totalPlaybackProgress": 218708.30080359138,
-      "uniqueContentCount": 64,
-      "lastActivityAt": "2026-06-26T15:14:46Z",
+      "uniqueContentCount": 63,
+      "lastActivityAt": "2026-06-27T05:12:55Z",
       "completedContentIds": [
         "tt34809853",
         "tt9419884",
@@ -161,6 +161,18 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
         },
+        "tt27391124": {
+          "contentId": "tt27391124",
+          "imdbId": "tt27391124",
+          "tmdbId": "1181678",
+          "title": "¿Quieres ser mi... hijo?",
+          "type": "movie",
+          "playCount": 4,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-06-27T05:12:55Z"
+        },
         "tt1630036": {
           "contentId": "tt1630036",
           "imdbId": "tt1630036",
@@ -256,18 +268,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-13T13:07:40Z"
-        },
-        "tt27391124": {
-          "contentId": "tt27391124",
-          "imdbId": "tt27391124",
-          "tmdbId": "1181678",
-          "title": "¿Quieres ser mi... hijo?",
-          "type": "movie",
-          "playCount": 3,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-06-11T16:04:19Z"
         },
         "tt2096673": {
           "contentId": "tt2096673",
@@ -796,18 +796,6 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T06:26:32Z"
-        },
-        "tt0455944": {
-          "contentId": "tt0455944",
-          "imdbId": "tt0455944",
-          "tmdbId": "156022",
-          "title": "The equalizer (El protector)",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:26:26Z"
         }
       },
       "avgPlaybackProgress": 437.4166

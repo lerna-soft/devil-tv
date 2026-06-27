@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-26T15:14:46Z",
+  "updatedAt": "2026-06-27T05:12:55Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -3049,10 +3049,10 @@
       "lastEpisode": 1,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-11T16:04:19Z",
+      "updatedAt": "2026-06-27T05:12:55Z",
       "watched": {
         "s1e1": {
-          "startedAt": "2026-06-05T20:41:24.593Z",
+          "startedAt": "2026-06-06T03:10:01.747Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3561,15 +3561,42 @@
     "updatedAt": "2026-06-14T22:29:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt1630036",
-    "tmdbId": "72213",
+    "imdbId": "tt27391124",
+    "tmdbId": "1181678",
     "season": 1,
     "episode": 1,
     "progress": 0,
-    "updatedAt": "2026-06-26T15:14:46Z"
+    "updatedAt": "2026-06-27T05:12:55Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt27391124:s1e1:started:2026-06-27T05:12:55Z",
+      "contentId": "tt27391124",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt27391124",
+      "tmdbId": "1181678",
+      "title": "¿Quieres ser mi... hijo?",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-06-06T03:10:01.747Z",
+      "completedAt": "",
+      "updatedAt": "2026-06-27T05:12:55Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt1630036:s1e1:started:2026-06-26T15:14:46Z",
       "contentId": "tt1630036",
@@ -17034,33 +17061,6 @@
       "startedAt": "",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:26:32Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt0455944:s1e1:preference:2026-05-23T06:26:26Z",
-      "contentId": "tt0455944",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt0455944",
-      "tmdbId": "156022",
-      "title": "The equalizer (El protector)",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:26:26Z",
       "country": "",
       "countryName": "",
       "city": "",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T05:07:38.147Z",
+  "generatedAt": "2026-07-05T05:09:08.924Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,22 +7,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 152,
+      "totalEvents": 153,
       "totalStarts": 98,
-      "totalCompletions": 27,
-      "totalPlaybackProgress": 40971.97326233074,
+      "totalCompletions": 28,
+      "totalPlaybackProgress": 41979.41076233075,
       "uniqueUsers": 1,
-      "completionRate": 0.2755,
-      "lastActivityAt": "2026-07-05T05:07:28Z",
+      "completionRate": 0.2857,
+      "lastActivityAt": "2026-07-05T05:08:59Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 152,
-          "completedCount": 27,
+          "playCount": 153,
+          "completedCount": 28,
           "startedCount": 98,
-          "totalPlaybackProgress": 40971.97326233074,
-          "lastSeenAt": "2026-07-05T05:07:28Z",
+          "totalPlaybackProgress": 41979.41076233075,
+          "lastSeenAt": "2026-07-05T05:08:59Z",
           "lastSeason": 1,
           "lastEpisode": 101
         }
@@ -31,16 +31,16 @@
         "s1e101": {
           "season": 1,
           "episode": 101,
-          "totalEvents": 2,
+          "totalEvents": 3,
           "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
+          "totalCompletions": 1,
+          "totalPlaybackProgress": 1007.4375,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-07-05T05:07:28Z",
+          "lastActivityAt": "2026-07-05T05:08:59Z",
           "users": {
             "henry8812@gmail.com": true
           },
-          "completionRate": 0
+          "completionRate": 1
         },
         "s1e100": {
           "season": 1,
@@ -1401,7 +1401,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 269.5525
+      "avgPlaybackProgress": 274.3752
     },
     {
       "contentId": "tt2560140",
@@ -4756,50 +4756,6 @@
       "avgPlaybackProgress": 0
     },
     {
-      "contentId": "tt32820897",
-      "imdbId": "tt32820897",
-      "tmdbId": "1311031",
-      "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
-      "type": "movie",
-      "totalEvents": 3,
-      "totalStarts": 1,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-26T22:14:46Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 3,
-          "completedCount": 0,
-          "startedCount": 1,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-26T22:14:46Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 3,
-          "totalStarts": 1,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-26T22:14:46Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
       "contentId": "tt11378946",
       "imdbId": "tt11378946",
       "tmdbId": "936075",
@@ -5325,6 +5281,50 @@
           "lastActivityAt": "2026-05-29T23:40:15Z",
           "users": {
             "juancarlosrios531970@gmail.com": true
+          },
+          "completionRate": 0
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "contentId": "tt32820897",
+      "imdbId": "tt32820897",
+      "tmdbId": "1311031",
+      "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+      "type": "movie",
+      "totalEvents": 2,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueUsers": 1,
+      "completionRate": 0,
+      "lastActivityAt": "2026-05-26T22:14:46Z",
+      "users": {
+        "henry8812@gmail.com": {
+          "userEmail": "henry8812@gmail.com",
+          "userName": "Henry Gomez",
+          "playCount": 2,
+          "completedCount": 0,
+          "startedCount": 1,
+          "totalPlaybackProgress": 0,
+          "lastSeenAt": "2026-05-26T22:14:46Z",
+          "lastSeason": 1,
+          "lastEpisode": 1
+        }
+      },
+      "episodes": {
+        "s1e1": {
+          "season": 1,
+          "episode": 1,
+          "totalEvents": 2,
+          "totalStarts": 1,
+          "totalCompletions": 0,
+          "totalPlaybackProgress": 0,
+          "uniqueUsers": 1,
+          "lastActivityAt": "2026-05-26T22:14:46Z",
+          "users": {
+            "henry8812@gmail.com": true
           },
           "completionRate": 0
         }

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-05T05:07:38.148Z",
+  "generatedAt": "2026-07-05T05:09:08.925Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-07-05T05:07:28Z",
+      "updatedAt": "2026-07-05T05:08:59Z",
       "totalEvents": 500,
       "totalStarts": 254,
-      "totalCompletions": 48,
-      "totalPlaybackProgress": 218708.30080359138,
+      "totalCompletions": 49,
+      "totalPlaybackProgress": 219715.73830359138,
       "uniqueContentCount": 61,
-      "lastActivityAt": "2026-07-05T05:07:28Z",
+      "lastActivityAt": "2026-07-05T05:08:59Z",
       "completedContentIds": [
         "tt0965547",
         "tt34809853",
@@ -167,11 +167,11 @@
           "tmdbId": "42573",
           "title": "Slam Dunk",
           "type": "series",
-          "playCount": 152,
+          "playCount": 153,
           "completed": true,
           "maxProgressValue": 1389.667822,
           "maxProgressPercent": 7.074308,
-          "lastSeenAt": "2026-07-05T05:07:28Z"
+          "lastSeenAt": "2026-07-05T05:08:59Z"
         },
         "tt27391124": {
           "contentId": "tt27391124",
@@ -671,7 +671,7 @@
           "tmdbId": "1311031",
           "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
           "type": "movie",
-          "playCount": 3,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
@@ -774,7 +774,7 @@
           "lastSeenAt": "2026-05-23T06:41:50Z"
         }
       },
-      "avgPlaybackProgress": 437.4166
+      "avgPlaybackProgress": 439.4315
     },
     {
       "userEmail": "luzenithc1994@gmail.com",

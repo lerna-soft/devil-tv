@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-07-05T05:07:38.143Z",
+  "generatedAt": "2026-07-05T05:09:08.920Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e101:completed:2026-07-05T05:08:59Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e101",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 101,
+      "progress": 1007.4375,
+      "progressValue": 1007.4375,
+      "progressPercent": null,
+      "eventType": "completed",
+      "playerStatus": "completed",
+      "startedAt": "2026-07-05T05:07:28.340Z",
+      "completedAt": "2026-07-05T05:08:58.868Z",
+      "updatedAt": "2026-07-05T05:08:59Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e101:started:2026-07-05T05:07:28Z",
       "contentId": "tt0965547",
@@ -11760,27 +11781,6 @@
       "startedAt": "2026-05-23T06:41:49.672Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:41:50Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt32820897:s1e1:started:2026-05-23T06:41:22Z",
-      "contentId": "tt32820897",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt32820897",
-      "tmdbId": "1311031",
-      "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-23T06:41:21.347Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:41:22Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

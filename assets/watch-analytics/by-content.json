@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T01:21:28.437Z",
+  "generatedAt": "2026-07-05T05:07:38.147Z",
   "items": [
     {
       "contentId": "tt0965547",
@@ -7,22 +7,22 @@
       "tmdbId": "42573",
       "title": "Slam Dunk",
       "type": "series",
-      "totalEvents": 151,
+      "totalEvents": 152,
       "totalStarts": 98,
       "totalCompletions": 27,
       "totalPlaybackProgress": 40971.97326233074,
       "uniqueUsers": 1,
       "completionRate": 0.2755,
-      "lastActivityAt": "2026-06-23T20:41:47Z",
+      "lastActivityAt": "2026-07-05T05:07:28Z",
       "users": {
         "henry8812@gmail.com": {
           "userEmail": "henry8812@gmail.com",
           "userName": "Henry Gomez",
-          "playCount": 151,
+          "playCount": 152,
           "completedCount": 27,
           "startedCount": 98,
           "totalPlaybackProgress": 40971.97326233074,
-          "lastSeenAt": "2026-06-23T20:41:47Z",
+          "lastSeenAt": "2026-07-05T05:07:28Z",
           "lastSeason": 1,
           "lastEpisode": 101
         }
@@ -31,12 +31,12 @@
         "s1e101": {
           "season": 1,
           "episode": 101,
-          "totalEvents": 1,
+          "totalEvents": 2,
           "totalStarts": 1,
           "totalCompletions": 0,
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
-          "lastActivityAt": "2026-06-23T20:41:47Z",
+          "lastActivityAt": "2026-07-05T05:07:28Z",
           "users": {
             "henry8812@gmail.com": true
           },
@@ -1401,7 +1401,7 @@
           "completionRate": 0
         }
       },
-      "avgPlaybackProgress": 271.3376
+      "avgPlaybackProgress": 269.5525
     },
     {
       "contentId": "tt2560140",
@@ -6743,50 +6743,6 @@
           "totalPlaybackProgress": 0,
           "uniqueUsers": 1,
           "lastActivityAt": "2026-05-23T06:41:50Z",
-          "users": {
-            "henry8812@gmail.com": true
-          },
-          "completionRate": 0
-        }
-      },
-      "avgPlaybackProgress": 0
-    },
-    {
-      "contentId": "tt1631867",
-      "imdbId": "tt1631867",
-      "tmdbId": "137113",
-      "title": "Al filo del mañana",
-      "type": "movie",
-      "totalEvents": 1,
-      "totalStarts": 0,
-      "totalCompletions": 0,
-      "totalPlaybackProgress": 0,
-      "uniqueUsers": 1,
-      "completionRate": 0,
-      "lastActivityAt": "2026-05-23T06:26:35Z",
-      "users": {
-        "henry8812@gmail.com": {
-          "userEmail": "henry8812@gmail.com",
-          "userName": "Henry Gomez",
-          "playCount": 1,
-          "completedCount": 0,
-          "startedCount": 0,
-          "totalPlaybackProgress": 0,
-          "lastSeenAt": "2026-05-23T06:26:35Z",
-          "lastSeason": 1,
-          "lastEpisode": 1
-        }
-      },
-      "episodes": {
-        "s1e1": {
-          "season": 1,
-          "episode": 1,
-          "totalEvents": 1,
-          "totalStarts": 0,
-          "totalCompletions": 0,
-          "totalPlaybackProgress": 0,
-          "uniqueUsers": 1,
-          "lastActivityAt": "2026-05-23T06:26:35Z",
           "users": {
             "henry8812@gmail.com": true
           },

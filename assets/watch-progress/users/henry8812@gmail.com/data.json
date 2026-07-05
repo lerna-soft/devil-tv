@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-06-27T15:43:34Z",
+  "updatedAt": "2026-07-05T05:07:28Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -2260,7 +2260,7 @@
       "lastEpisode": 101,
       "progress": 0,
       "lastProgress": 0,
-      "updatedAt": "2026-06-23T20:41:47Z",
+      "updatedAt": "2026-07-05T05:07:28Z",
       "watched": {
         "s1e1": {
           "startedAt": "2026-05-28T17:47:34.932Z",
@@ -2748,7 +2748,7 @@
           "lastProgress": 0
         },
         "s1e101": {
-          "startedAt": "2026-06-23T20:41:45.797Z",
+          "startedAt": "2026-07-05T05:07:28.340Z",
           "completedAt": "",
           "lastProgress": 0
         }
@@ -3561,15 +3561,42 @@
     "updatedAt": "2026-06-14T22:29:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt27391124",
-    "tmdbId": "1181678",
+    "imdbId": "tt0965547",
+    "tmdbId": "42573",
     "season": 1,
-    "episode": 1,
+    "episode": 101,
     "progress": 0,
-    "updatedAt": "2026-06-27T15:43:34Z"
+    "updatedAt": "2026-07-05T05:07:28Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt0965547:s1e101:started:2026-07-05T05:07:28Z",
+      "contentId": "tt0965547",
+      "episodeKey": "s1e101",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt0965547",
+      "tmdbId": "42573",
+      "title": "Slam Dunk",
+      "type": "series",
+      "season": 1,
+      "episode": 101,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-07-05T05:07:28.340Z",
+      "completedAt": "",
+      "updatedAt": "2026-07-05T05:07:28Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt27391124:s1e1:started:2026-06-27T15:43:34Z",
       "contentId": "tt27391124",
@@ -17034,33 +17061,6 @@
       "startedAt": "2026-05-23T06:41:21.347Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:41:22Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt1631867:s1e1:preference:2026-05-23T06:26:35Z",
-      "contentId": "tt1631867",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt1631867",
-      "tmdbId": "137113",
-      "title": "Al filo del mañana",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "progress",
-      "playerStatus": "preference",
-      "startedAt": "",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:26:35Z",
       "country": "",
       "countryName": "",
       "city": "",

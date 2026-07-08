@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-08T06:16:11.419Z",
+  "generatedAt": "2026-07-08T07:25:46.116Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-07-05T05:08:59Z",
+      "updatedAt": "2026-07-08T07:25:35Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 49,
       "totalPlaybackProgress": 219715.73830359138,
       "uniqueContentCount": 61,
-      "lastActivityAt": "2026-07-05T05:08:59Z",
+      "lastActivityAt": "2026-07-08T07:25:35Z",
       "completedContentIds": [
         "tt0965547",
         "tt34809853",
@@ -160,6 +160,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt42127457": {
+          "contentId": "tt42127457",
+          "imdbId": "tt42127457",
+          "tmdbId": "296206",
+          "title": "Agent Kim Reactivated",
+          "type": "series",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-07-08T07:25:35Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -760,18 +772,6 @@
           "maxProgressValue": 351.309775247,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-23T11:46:05Z"
-        },
-        "tt33428606": {
-          "contentId": "tt33428606",
-          "imdbId": "tt33428606",
-          "tmdbId": "1357633",
-          "title": "Solo Leveling: ReAwakening",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 0,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T06:41:50Z"
         }
       },
       "avgPlaybackProgress": 439.4315

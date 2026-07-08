@@ -1,7 +1,7 @@
 {
   "email": "henry8812@gmail.com",
   "name": "Henry Gomez",
-  "updatedAt": "2026-07-05T05:08:59Z",
+  "updatedAt": "2026-07-08T07:25:35Z",
   "progress": {
     "15070": {
       "imdbId": "",
@@ -3405,6 +3405,22 @@
           "lastProgress": 7591.253309
         }
       }
+    },
+    "tt42127457": {
+      "imdbId": "tt42127457",
+      "tmdbId": "296206",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-07-08T07:25:35Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-07-08T07:25:34.472Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
     }
   },
   "preferences": {
@@ -3561,15 +3577,42 @@
     "updatedAt": "2026-06-14T22:29:38Z"
   },
   "lastWatch": {
-    "imdbId": "tt0965547",
-    "tmdbId": "42573",
+    "imdbId": "tt42127457",
+    "tmdbId": "296206",
     "season": 1,
-    "episode": 101,
-    "progress": 1007.4375,
-    "updatedAt": "2026-07-05T05:08:59Z"
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-07-08T07:25:35Z"
   },
   "lastSelection": null,
   "history": [
+    {
+      "eventId": "henry8812@gmail.com:tt42127457:s1e1:started:2026-07-08T07:25:35Z",
+      "contentId": "tt42127457",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt42127457",
+      "tmdbId": "296206",
+      "title": "Agent Kim Reactivated",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-07-08T07:25:34.472Z",
+      "completedAt": "",
+      "updatedAt": "2026-07-08T07:25:35Z",
+      "country": "CO",
+      "countryName": "Colombia",
+      "city": "Cali",
+      "region": "Valle del Cauca Department",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "en-US",
+      "timezone": "America/Bogota"
+    },
     {
       "eventId": "henry8812@gmail.com:tt0965547:s1e101:completed:2026-07-05T05:08:59Z",
       "contentId": "tt0965547",
@@ -17034,33 +17077,6 @@
       "startedAt": "2026-05-23T06:43:00.375Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T06:43:01Z",
-      "country": "",
-      "countryName": "",
-      "city": "",
-      "region": "",
-      "device": "",
-      "browser": "",
-      "locale": "",
-      "timezone": ""
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt33428606:s1e1:started:2026-05-23T06:41:50Z",
-      "contentId": "tt33428606",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt33428606",
-      "tmdbId": "1357633",
-      "title": "Solo Leveling: ReAwakening",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-23T06:41:49.672Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:41:50Z",
       "country": "",
       "countryName": "",
       "city": "",

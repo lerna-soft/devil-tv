@@ -1,6 +1,6 @@
 {
-  "version": 439,
-  "generatedAt": "2026-06-26T15:15:00.465Z",
+  "version": 440,
+  "generatedAt": "2026-07-08T07:25:42.935Z",
   "source": {
     "provider": "tmdb",
     "strategy": "top_per_year",
@@ -53889,6 +53889,22 @@
       "releaseDate": null,
       "overview": "Serie de TV (1958-1963). 169 episodios. Lucas McCain es un viudo que vive con su pequeño hijo Mark en un rancho cerca de North Fork. Gracias a su gran habilidad con el Winchester ayuda al sheriff del pueblo a mantener el orden.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/tYf5Sc83chWG2nBlo5xKdpBBwlI.jpg",
+      "backdropUrl": null,
+      "genres": [],
+      "watchProviders": {
+        "region": "CO",
+        "flatrate": []
+      }
+    },
+    {
+      "type": "series",
+      "tmdbId": null,
+      "imdbId": "tt42127457",
+      "title": "Agent Kim Reactivated",
+      "year": 2026,
+      "releaseDate": null,
+      "overview": "So Ji-sub, Choi Dae-hoon",
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BYzRhMDlmN2ItNTcyZi00MzRhLTkyNWYtY2E0MTU0YTk0YWFiXkEyXkFqcGc@._V1_.jpg",
       "backdropUrl": null,
       "genres": [],
       "watchProviders": {

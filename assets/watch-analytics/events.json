@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-07-08T14:37:28.080Z",
+  "generatedAt": "2026-07-08T14:46:02.589Z",
   "events": [
+    {
+      "eventId": "henry8812@gmail.com:tt42127457:s1e1:started:2026-07-08T14:45:51Z",
+      "contentId": "tt42127457",
+      "episodeKey": "s1e1",
+      "userEmail": "henry8812@gmail.com",
+      "userName": "Henry Gomez",
+      "imdbId": "tt42127457",
+      "tmdbId": "296206",
+      "title": "Agent Kim Reactivated",
+      "type": "series",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-07-08T07:25:34.472Z",
+      "completedAt": "",
+      "updatedAt": "2026-07-08T14:45:51Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt42127457:s1e1:started:2026-07-08T07:25:35Z",
       "contentId": "tt42127457",
@@ -11760,27 +11781,6 @@
       "startedAt": "2026-05-23T06:43:00.375Z",
       "completedAt": "",
       "updatedAt": "2026-05-23T11:46:05Z"
-    },
-    {
-      "eventId": "henry8812@gmail.com:tt2294629:s1e1:started:2026-05-23T06:43:01Z",
-      "contentId": "tt2294629",
-      "episodeKey": "s1e1",
-      "userEmail": "henry8812@gmail.com",
-      "userName": "Henry Gomez",
-      "imdbId": "tt2294629",
-      "tmdbId": "109445",
-      "title": "Frozen: El reino del hielo",
-      "type": "movie",
-      "season": 1,
-      "episode": 1,
-      "progress": 0,
-      "progressValue": 0,
-      "progressPercent": 0,
-      "eventType": "started",
-      "playerStatus": "playing",
-      "startedAt": "2026-05-23T06:43:00.375Z",
-      "completedAt": "",
-      "updatedAt": "2026-05-23T06:43:01Z"
     },
     {
       "eventId": "liz-munera@hotmail.com:tt32430579:s1e1:preference:2026-05-23T02:47:39Z",

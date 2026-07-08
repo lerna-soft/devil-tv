@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-08T14:37:28.085Z",
+  "generatedAt": "2026-07-08T14:46:02.593Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-07-08T07:25:35Z",
+      "updatedAt": "2026-07-08T14:45:51Z",
       "totalEvents": 500,
       "totalStarts": 254,
       "totalCompletions": 49,
       "totalPlaybackProgress": 219715.73830359138,
       "uniqueContentCount": 61,
-      "lastActivityAt": "2026-07-08T07:25:35Z",
+      "lastActivityAt": "2026-07-08T14:45:51Z",
       "completedContentIds": [
         "tt0965547",
         "tt34809853",
@@ -167,11 +167,11 @@
           "tmdbId": "296206",
           "title": "Agent Kim Reactivated",
           "type": "series",
-          "playCount": 1,
+          "playCount": 2,
           "completed": false,
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
-          "lastSeenAt": "2026-07-08T07:25:35Z"
+          "lastSeenAt": "2026-07-08T14:45:51Z"
         },
         "tt0965547": {
           "contentId": "tt0965547",
@@ -767,7 +767,7 @@
           "tmdbId": "109445",
           "title": "Frozen: El reino del hielo",
           "type": "movie",
-          "playCount": 2,
+          "playCount": 1,
           "completed": false,
           "maxProgressValue": 351.309775247,
           "maxProgressPercent": 0,

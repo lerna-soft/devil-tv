@@ -1,0 +1,45 @@
+{
+  "imdbId": "tt29552248",
+  "tmdbId": "1007757",
+  "lastSeason": 1,
+  "lastEpisode": 1,
+  "progress": 0,
+  "lastProgress": 0,
+  "updatedAt": "2026-07-11T18:09:01Z",
+  "watched": {
+    "s1e1": {
+      "startedAt": "2026-07-11T18:09:00.400Z",
+      "completedAt": "",
+      "lastProgress": 0
+    }
+  },
+  "history": [
+    {
+      "eventId": "icislsloe@gmail.com:tt29552248:s1e1:started:2026-07-11T18:09:01Z",
+      "contentId": "tt29552248",
+      "episodeKey": "s1e1",
+      "userEmail": "icislsloe@gmail.com",
+      "userName": "icic",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-07-11T18:09:00.400Z",
+      "completedAt": "",
+      "updatedAt": "2026-07-11T18:09:01Z",
+      "country": "ID",
+      "countryName": "Indonesia",
+      "city": "Tanjungraja",
+      "region": "South Sumatra",
+      "device": "mobile",
+      "browser": "Safari",
+      "locale": "id-ID",
+      "timezone": "Asia/Jakarta"
+    }
+  ]
+}

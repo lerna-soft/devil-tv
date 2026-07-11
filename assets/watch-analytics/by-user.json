@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T18:06:21.042Z",
+  "generatedAt": "2026-07-11T18:09:10.584Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1357,6 +1357,36 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T23:59:08Z"
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "userEmail": "icislsloe@gmail.com",
+      "userName": "icic",
+      "role": "viewer",
+      "createdAt": "2026-07-11T18:08:34.608Z",
+      "updatedAt": "2026-07-11T18:09:01Z",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 1,
+      "lastActivityAt": "2026-07-11T18:09:01Z",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {
+        "tt29552248": {
+          "contentId": "tt29552248",
+          "imdbId": "tt29552248",
+          "tmdbId": "1007757",
+          "title": "Intercambiados",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-07-11T18:09:01Z"
         }
       },
       "avgPlaybackProgress": 0

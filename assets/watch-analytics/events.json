@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-07-11T18:06:21.034Z",
+  "generatedAt": "2026-07-11T18:09:10.578Z",
   "events": [
+    {
+      "eventId": "icislsloe@gmail.com:tt29552248:s1e1:started:2026-07-11T18:09:01Z",
+      "contentId": "tt29552248",
+      "episodeKey": "s1e1",
+      "userEmail": "icislsloe@gmail.com",
+      "userName": "icic",
+      "imdbId": "tt29552248",
+      "tmdbId": "1007757",
+      "title": "Intercambiados",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-07-11T18:09:00.400Z",
+      "completedAt": "",
+      "updatedAt": "2026-07-11T18:09:01Z"
+    },
     {
       "eventId": "henry8812@gmail.com:tt42127457:s1e1:started:2026-07-08T14:45:51Z",
       "contentId": "tt42127457",

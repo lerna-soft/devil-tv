@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T18:06:21.029Z",
+  "generatedAt": "2026-07-11T18:09:10.575Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -48,6 +48,14 @@
       "statementCount": 2,
       "lastStatementAt": "2026-05-14T17:42:32Z",
       "file": "users/majandra955@gmail.com.json"
+    },
+    {
+      "userEmail": "icislsloe@gmail.com",
+      "userName": "icic",
+      "role": "viewer",
+      "statementCount": 1,
+      "lastStatementAt": "2026-07-11T18:09:01Z",
+      "file": "users/icislsloe@gmail.com.json"
     },
     {
       "userEmail": "marcromon95@hotmail.com",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:37:23.036Z",
+  "generatedAt": "2026-10-25T20:29:17.070Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -1357,6 +1357,36 @@
           "maxProgressValue": 0,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-12T23:59:08Z"
+        }
+      },
+      "avgPlaybackProgress": 0
+    },
+    {
+      "userEmail": "contact.zestflix@protonmail.com",
+      "userName": "zestflix",
+      "role": "viewer",
+      "createdAt": "2026-10-25T20:29:09.358Z",
+      "updatedAt": "2026-10-25T20:29:09.358Z",
+      "totalEvents": 1,
+      "totalStarts": 1,
+      "totalCompletions": 0,
+      "totalPlaybackProgress": 0,
+      "uniqueContentCount": 1,
+      "lastActivityAt": "2026-10-25T20:29:08Z",
+      "completedContentIds": [],
+      "inProgressContentIds": [],
+      "content": {
+        "tt16431404": {
+          "contentId": "tt16431404",
+          "imdbId": "tt16431404",
+          "tmdbId": "1318447",
+          "title": "Depredador dominante",
+          "type": "movie",
+          "playCount": 1,
+          "completed": false,
+          "maxProgressValue": 0,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-10-25T20:29:08Z"
         }
       },
       "avgPlaybackProgress": 0

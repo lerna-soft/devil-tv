@@ -1,0 +1,62 @@
+{
+  "email": "contact.zestflix@protonmail.com",
+  "name": "zestflix",
+  "updatedAt": "2026-10-25T20:29:08Z",
+  "progress": {
+    "tt16431404": {
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-10-25T20:29:08Z",
+      "watched": {
+        "s1e1": {
+          "startedAt": "2026-10-25T20:29:08.193Z",
+          "completedAt": "",
+          "lastProgress": 0
+        }
+      }
+    }
+  },
+  "preferences": {},
+  "lastWatch": {
+    "imdbId": "tt16431404",
+    "tmdbId": "1318447",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-10-25T20:29:08Z"
+  },
+  "lastSelection": null,
+  "history": [
+    {
+      "eventId": "contact.zestflix@protonmail.com:tt16431404:s1e1:started:2026-10-25T20:29:08Z",
+      "contentId": "tt16431404",
+      "episodeKey": "s1e1",
+      "userEmail": "contact.zestflix@protonmail.com",
+      "userName": "zestflix",
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "title": "Depredador dominante",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-10-25T20:29:08.193Z",
+      "completedAt": "",
+      "updatedAt": "2026-10-25T20:29:08Z",
+      "country": "FR",
+      "countryName": "France",
+      "city": "Vinay",
+      "region": "Auvergne-Rhone-Alpes",
+      "device": "desktop",
+      "browser": "Chrome",
+      "locale": "fr-FR",
+      "timezone": "Europe/Paris"
+    }
+  ]
+}

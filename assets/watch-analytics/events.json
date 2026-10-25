@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-10-25T18:37:23.031Z",
+  "generatedAt": "2026-10-25T20:29:17.065Z",
   "events": [
+    {
+      "eventId": "contact.zestflix@protonmail.com:tt16431404:s1e1:started:2026-10-25T20:29:08Z",
+      "contentId": "tt16431404",
+      "episodeKey": "s1e1",
+      "userEmail": "contact.zestflix@protonmail.com",
+      "userName": "zestflix",
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "title": "Depredador dominante",
+      "type": "movie",
+      "season": 1,
+      "episode": 1,
+      "progress": 0,
+      "progressValue": 0,
+      "progressPercent": 0,
+      "eventType": "started",
+      "playerStatus": "playing",
+      "startedAt": "2026-10-25T20:29:08.193Z",
+      "completedAt": "",
+      "updatedAt": "2026-10-25T20:29:08Z"
+    },
     {
       "eventId": "icislsloe@gmail.com:tt29552248:s1e1:started:2026-07-11T18:09:01Z",
       "contentId": "tt29552248",

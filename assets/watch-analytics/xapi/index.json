@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:37:23.024Z",
+  "generatedAt": "2026-10-25T20:29:17.062Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
@@ -48,6 +48,14 @@
       "statementCount": 2,
       "lastStatementAt": "2026-05-14T17:42:32Z",
       "file": "users/majandra955@gmail.com.json"
+    },
+    {
+      "userEmail": "contact.zestflix@protonmail.com",
+      "userName": "zestflix",
+      "role": "viewer",
+      "statementCount": 1,
+      "lastStatementAt": "2026-10-25T20:29:08Z",
+      "file": "users/contact.zestflix@protonmail.com.json"
     },
     {
       "userEmail": "icislsloe@gmail.com",

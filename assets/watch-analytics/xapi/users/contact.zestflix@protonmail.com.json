@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-10-25T20:29:17.062Z",
+  "actor": {
+    "objectType": "Agent",
+    "name": "zestflix",
+    "mbox": "mailto:contact.zestflix@protonmail.com"
+  },
+  "statementCount": 1,
+  "statements": [
+    {
+      "id": "urn:uuid:contact-zestflix-protonmail-com:tt16431404:s1e1:started:2026-10-25T20:29:08Z",
+      "actor": {
+        "objectType": "Agent",
+        "name": "zestflix",
+        "mbox": "mailto:contact.zestflix@protonmail.com"
+      },
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+          "en-US": "initialized"
+        }
+      },
+      "object": {
+        "id": "https://deviltv.local/xapi/movie/tt16431404",
+        "objectType": "Activity",
+        "definition": {
+          "name": {
+            "en-US": "Depredador dominante"
+          },
+          "type": "https://w3id.org/xapi/video/activity-type/movie",
+          "extensions": {
+            "https://lerna.dev/xapi/extensions/content-id": "tt16431404",
+            "https://lerna.dev/xapi/extensions/imdb-id": "tt16431404",
+            "https://lerna.dev/xapi/extensions/tmdb-id": "1318447",
+            "https://lerna.dev/xapi/extensions/episode-key": "s1e1"
+          }
+        }
+      },
+      "result": {
+        "completion": false,
+        "success": false,
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/progress-value": 0,
+          "https://lerna.dev/xapi/extensions/progress-percent": 0,
+          "https://lerna.dev/xapi/extensions/player-status": "playing",
+          "https://lerna.dev/xapi/extensions/event-type": "started"
+        }
+      },
+      "context": {
+        "platform": "Media Evaluation Platform Static",
+        "contextActivities": {
+          "category": [
+            {
+              "id": "https://lerna.dev/xapi/categories/media-analytics"
+            }
+          ]
+        },
+        "extensions": {
+          "https://lerna.dev/xapi/extensions/season": 1,
+          "https://lerna.dev/xapi/extensions/episode": 1,
+          "https://lerna.dev/xapi/extensions/started-at": "2026-10-25T20:29:08.193Z",
+          "https://lerna.dev/xapi/extensions/completed-at": ""
+        }
+      },
+      "timestamp": "2026-10-25T20:29:08Z",
+      "stored": "2026-10-25T20:29:17.064Z"
+    }
+  ]
+}

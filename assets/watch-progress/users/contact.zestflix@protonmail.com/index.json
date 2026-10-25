@@ -1,0 +1,29 @@
+{
+  "email": "contact.zestflix@protonmail.com",
+  "name": "zestflix",
+  "updatedAt": "2026-10-25T20:29:08Z",
+  "lastWatch": {
+    "imdbId": "tt16431404",
+    "tmdbId": "1318447",
+    "season": 1,
+    "episode": 1,
+    "progress": 0,
+    "updatedAt": "2026-10-25T20:29:08Z"
+  },
+  "lastSelection": null,
+  "preferences": {},
+  "titles": [
+    "tt16431404"
+  ],
+  "progress": {
+    "tt16431404": {
+      "imdbId": "tt16431404",
+      "tmdbId": "1318447",
+      "lastSeason": 1,
+      "lastEpisode": 1,
+      "progress": 0,
+      "lastProgress": 0,
+      "updatedAt": "2026-10-25T20:29:08Z"
+    }
+  }
+}

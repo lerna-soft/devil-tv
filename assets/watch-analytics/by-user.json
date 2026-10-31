@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-31T21:00:47.616Z",
+  "generatedAt": "2026-10-31T22:11:32.435Z",
   "users": [
     {
       "userEmail": "henry8812@gmail.com",
       "userName": "Henry Gomez",
       "role": "viewer",
       "createdAt": "2026-05-09T02:17:38.980Z",
-      "updatedAt": "2026-07-08T14:45:51Z",
+      "updatedAt": "2026-10-31T22:11:22Z",
       "totalEvents": 500,
-      "totalStarts": 254,
+      "totalStarts": 253,
       "totalCompletions": 49,
-      "totalPlaybackProgress": 219715.73830359138,
-      "uniqueContentCount": 61,
-      "lastActivityAt": "2026-07-08T14:45:51Z",
+      "totalPlaybackProgress": 219364.42852834438,
+      "uniqueContentCount": 60,
+      "lastActivityAt": "2026-10-31T22:11:22Z",
       "completedContentIds": [
         "tt0965547",
         "tt34809853",
@@ -26,6 +26,7 @@
       ],
       "inProgressContentIds": [
         "1632181",
+        "tt12593682",
         "tt1630036",
         "tt2032557",
         "tt2091935",
@@ -36,9 +37,7 @@
         "tt8790086",
         "tt21478426",
         "tt0899043",
-        "tt12593682",
-        "tt21209876",
-        "tt2294629"
+        "tt21209876"
       ],
       "content": {
         "15070": {
@@ -160,6 +159,18 @@
           "maxProgressValue": 4857.103492,
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-06-05T18:55:55Z"
+        },
+        "tt12593682": {
+          "contentId": "tt12593682",
+          "imdbId": "tt12593682",
+          "tmdbId": "718930",
+          "title": "Bullet Train",
+          "type": "movie",
+          "playCount": 6,
+          "completed": false,
+          "maxProgressValue": 6861.6045622283345,
+          "maxProgressPercent": 0,
+          "lastSeenAt": "2026-10-31T22:11:22Z"
         },
         "tt42127457": {
           "contentId": "tt42127457",
@@ -653,18 +664,6 @@
           "maxProgressPercent": 0,
           "lastSeenAt": "2026-05-30T13:11:44Z"
         },
-        "tt12593682": {
-          "contentId": "tt12593682",
-          "imdbId": "tt12593682",
-          "tmdbId": "718930",
-          "title": "Bullet Train",
-          "type": "movie",
-          "playCount": 5,
-          "completed": false,
-          "maxProgressValue": 6861.6045622283345,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-30T05:31:52Z"
-        },
         "tt0831387": {
           "contentId": "tt0831387",
           "imdbId": "tt0831387",
@@ -760,21 +759,9 @@
           "maxProgressValue": 2830.048063945578,
           "maxProgressPercent": 72.392792,
           "lastSeenAt": "2026-05-23T17:26:28Z"
-        },
-        "tt2294629": {
-          "contentId": "tt2294629",
-          "imdbId": "tt2294629",
-          "tmdbId": "109445",
-          "title": "Frozen: El reino del hielo",
-          "type": "movie",
-          "playCount": 1,
-          "completed": false,
-          "maxProgressValue": 351.309775247,
-          "maxProgressPercent": 0,
-          "lastSeenAt": "2026-05-23T11:46:05Z"
         }
       },
-      "avgPlaybackProgress": 439.4315
+      "avgPlaybackProgress": 438.7289
     },
     {
       "userEmail": "luzenithc1994@gmail.com",
